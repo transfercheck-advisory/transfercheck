@@ -1629,8 +1629,44 @@ textarea:focus {
 
 /* Media Queries */
 @media (max-width: 1040px) {
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    gap: 12px 0;
+    min-height: auto;
+  }
+
+  .site-header > div:first-of-type {
+    order: 1;
+  }
+
+  .site-header > div:last-of-type {
+    order: 2;
+  }
+
   .site-nav {
-    display: none;
+    order: 3;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 8px 0 2px;
+    border-top: 1px solid var(--line);
+    justify-content: flex-start;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
   }
 
   .hero,
@@ -1654,24 +1690,44 @@ textarea:focus {
 
 @media (max-width: 680px) {
   .site-header {
-    position: static;
-    align-items: stretch;
-    flex-direction: column;
-    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    padding: 8px 12px;
+    gap: 8px 0;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 
   .auth-actions {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: auto;
+    gap: 6px;
   }
 
-  .auth-actions .auth-btn {
-    flex: 1;
+  .auth-actions span {
+    display: none; /* Hide 'Guest' status to save horizontal space on mobile */
+  }
+
+  .auth-btn {
+    min-height: 32px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  #langSelector {
+    padding: 4px 6px;
+    font-size: 11px;
   }
 
   .hero {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 
   .hero-actions,
@@ -1684,20 +1740,79 @@ textarea:focus {
     width: 100%;
   }
 
-  .hero-proof,
+  .hero-proof {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    gap: 12px !important;
+    padding-bottom: 8px !important;
+    scrollbar-width: none;
+    width: 100% !important;
+    margin-top: 32px !important;
+    grid-template-columns: none;
+  }
+
+  .hero-proof::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-proof div {
+    flex: 0 0 250px !important;
+    white-space: normal !important; /* Allow description to wrap inside card */
+  }
+
   .feature-grid,
-  .tab-list,
   .english-fields,
   .search-bar {
     grid-template-columns: 1fr;
   }
 
+  .tab-list {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    grid-template-columns: none !important;
+    padding: 6px !important;
+    gap: 6px !important;
+    scrollbar-width: none;
+  }
+
+  .tab-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-button {
+    flex: 0 0 auto !important;
+    padding: 0 14px !important;
+    font-size: 13px !important;
+  }
+
   .course-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 12px !important;
+    align-items: center !important;
   }
 
   .target-search-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 32px 1fr !important;
+    gap: 10px !important;
+  }
+
+  .panel {
+    padding: 18px !important;
+  }
+
+  .term-card {
+    padding: 16px !important;
+  }
+
+  .term-courses {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
