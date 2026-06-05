@@ -1,0 +1,573 @@
+school,major,priority,likely_issue,required_courses,recommended_courses,gpa,credits,english,note,action
+"UC San Diego","Bioengineering — Bioengineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D (Differential Equations) | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2BL (lab) + PHYS 2CL (lab) | 필수 화학: CHEM 6A + CHEM 6B","BILD 1 | MAE 8 (MATLAB) | MATH 18 (Linear Algebra) | MATH 20E | PHYS 2C | CHEM 7L","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: PHYS 2BL+2CL(실험) 필수 포함 | PHYS 2C는 권장만","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Bioengineering — Bioinformatics","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D | 필수 물리: PHYS 2A + PHYS 2B | 필수 화학: CHEM 6A + CHEM 6B","BILD 1 | BILD 3 | BILD 4 | CSE 11 | CSE 12 | MATH 18 | MATH 20E","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: PHYS 2C 불필요 | CS 과목 권장만","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Bioengineering — BioSystems","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D | 필수 물리: PHYS 2A + PHYS 2B | 필수 화학: CHEM 6A + CHEM 6B","BILD 1 | MAE 8 or BENG 2 | MATH 18 | MATH 20E | PHYS 2BL | PHYS 2C","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: PHYS 2C 권장만 | 실험 없음","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Bioengineering — Biotechnology","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2CL (lab) | 필수 화학: CHEM 6A + CHEM 6B","BILD 1 | BILD 3 | CHEM 6C | CHEM 7L | CHEM 41A/B | MAE 8 | MATH 18 | MATH 20E | PHYS 2C","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: PHYS 2CL(실험) 필수 | CHEM 6C 권장만","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Chemical & NanoEngineering — Chemical Engineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D + ★ MATH 18 (Fall 2026 추가 필수) | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C + PHYS 2CL (lab) | 필수 화학: CHEM 6A + CHEM 6B + CHEM 6C","","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: ★ EFFECTIVE FALL 2026: MATH 18 Linear Algebra 추가 필수","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Chemical & NanoEngineering — NanoEngineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D + ★ MATH 18 (Fall 2026 추가 필수) | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C (실험 없음) | 필수 화학: CHEM 6A + CHEM 6B + CHEM 6C","","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: ★ EFFECTIVE FALL 2026: MATH 18 추가 필수 | PHYS 실험 불필요","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Computer Science & Engineering — Computer Engineering (CSE dept)","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C | 화학: Chemistry 불필요 | 필수 CS/프로그래밍: CSE 11 + CSE 12","CSE 30 (권장 — 졸업 요건이기도 함)","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: Chemistry 불필요","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Computer Science & Engineering — Computer Science","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 (MATH 20D 불필요) | 필수 물리: PHYS 2A/2B/2C/2D/4A/4B OR CHEM 6A/6B OR BILD 1/2/3 등 목록에서 1과목 선택 | 필수 화학: 위 Physics 항목에서 CHEM으로 선택 가능 | 필수 CS/프로그래밍: CSE 11 + CSE 12 + CSE 20","","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: MATH 20D 불필요 | 자연과학 1과목 = PHYS/CHEM/BIOL 목록에서 선택","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Computer Science & Engineering — CS Bioinformatics","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 (MATH 20D 불필요) | 물리: Physics 불필요 | 필수 화학: CHEM 6A | 필수 CS/프로그래밍: CSE 11 + CSE 12 | 기타 필수: BILD 1 or BILD 3 (필수)","","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: Physics 불필요 | BILD 필수","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Computer Science & Engineering — Artificial Intelligence","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 (MATH 20D 불필요) | 필수 물리: PHYS 2A/2B/2C/2D/4A/4B OR CHEM 6A/6B OR BILD 등에서 1과목 선택 | 필수 화학: 위 항목에서 선택 가능 | 필수 CS/프로그래밍: CSE 11 + CSE 12 + CSE 20","","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: ★★ FALL 2026 TRANSFER 불가 — 공식 명시: 'Major is not accepting transfer applications for Fall 2026 admission'","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Electrical & Computer Engineering — Computer Engineering (ECE dept)","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C | 화학: Chemistry 불필요 | 필수 CS/프로그래밍: CSE 11 + CSE 12","CSE 30","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: CSE dept의 Computer Engineering과 동일 요건","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Electrical & Computer Engineering — Electrical Engineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C | 화학: Chemistry 불필요 (CHEM 6A 권장만) | 필수 CS/프로그래밍: Java/C/C++ 프로그래밍 1과목 (CSE 8A, 8B, or 11 상당)","CHEM 6A","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: Chemistry 권장만 | Programming 1과목 필수","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Electrical & Computer Engineering — EE & Society","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C | 화학: Chemistry 불필요 (CHEM 6A 권장만) | 필수 CS/프로그래밍: Java/C/C++ 프로그래밍 1과목","CHEM 6A","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: EE와 동일 요건","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Electrical & Computer Engineering — Engineering Physics","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C | 화학: Chemistry 불필요 (CHEM 6A 권장만) | 필수 CS/프로그래밍: Java/C/C++ 프로그래밍 1과목","CHEM 6A","2.4 (CA) / 2.8 (비CA)
+Screening: ★ 3.0 이상 (Physics 전공만 별도 기준)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: EE와 동일 요건","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Mechanical & Aerospace Engineering — Aerospace Engineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C + PHYS 2CL (lab) | 필수 화학: CHEM 6A (1과목만)","MAE 8 (MATLAB)","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: PHYS 2CL(실험) 필수 | Chemistry 1과목만","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Mechanical & Aerospace Engineering — Mechanical Engineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C (실험 없음) | 필수 화학: CHEM 6A (1과목만)","MAE 8 | MAE 20 | MAE 40","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: Physics 실험 불필요 | Chemistry 1과목만","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Structural Engineering — Structural Engineering","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C + PHYS 2BL (lab) | 필수 화학: CHEM 6A (1과목만)","SE 9 | SE 101A","2.4 (CA) / 2.8 (비CA)
+Screening: C 이상 (전 과목)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: PHYS 2BL(실험) 필수 | Chemistry 1과목만","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC San Diego","Physics (Jacobs School) — Physics","HIGH","Separate campus common requirements from major-specific requirements","MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20A + MATH 20B + MATH 20C (MATH 20D 불필요) | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C (권장, screening 필수 아님) | 화학: Chemistry 불필요","MATH 20D | PHYS 2CL | PHYS 2D | PHYS 2DL | Programming 1과목","2.4 (CA) / 2.8 (비CA)
+Screening: ★ 3.0 이상 (Physics 전공만 별도 기준)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+
+점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정","Source: admissions.ucsd.edu/transfer/transfer-major-preparation.html ✅ Verified May 2026
+공통: Min 60 sem/90 qtr UC-transferable units | Fall only (Nov 1-30)
+Selective Major — 모든 screening 과목 Spring 종료 전 완료 필수
+Min GPA: CA 거주자 2.4 / 비거주자 2.8 (실제 합격자는 훨씬 높음)
+대안 전공(non-selective) 기재 강력 권장
+특이사항: ★ EFFECTIVE FALL 2025: Screening GPA 최소 3.0 (이 전공만) | PHYS는 screening 필수 아님 — 권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Berkeley — College of Engineering","HIGH","ASSIST major-by-major cross-check needed","ASSIST.org 필수 (학과별 공식 목록 미게시) | 공통 필수로 알려진 것: English Composition (R1A+R1B, C- 이상) | Calculus 1+2+3 | Differential Equations | Linear Algebra | Physics 3-series | Chemistry 1 | IGETC 강력 비권장 (공식: 'strongly discourages') | IGETC 사용 시 lower-division GE 미충족 가능 | R1A+R1B = Berkeley 고유 English Composition 시퀀스 (C- 이상)","","3.5 (avg admitted ~3.86)","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+❌ TAG 없음 | Major change 불가 | Fall only
+TOEFL: 80+ (선호 100) / IELTS: 6.5+ / DET: 115+
+Source: engineering.berkeley.edu/admissions ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UCLA — Henry Samueli School of Engineering (HSSEAS)","HIGH","Separate campus common requirements from major-specific requirements","공식 페이지에 학과별 과목 게시됨 (admission.ucla.edu/apply/transfer 확인 필요) | 공통 필수로 알려진 것: English Composition 2과목 | Calculus 1+2+3 | Linear Algebra | Physics 3-series + 학과별 추가 | IGETC 불인정 (partial IGETC도 불인정) | Alternate major 옵션 없음 | CS/AE/ME 전공은 전공 변경 불가","","3.4 (competitive avg 3.8+)","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+❌ TAG 없음 | Fall only
+TOEFL: 100+ (신척도 5+, sub 5+) / IELTS: 7.5+ / DET: 135+
+Source: admission.ucla.edu/apply/transfer ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Davis — College of Engineering","HIGH","Separate campus common requirements from major-specific requirements","공식 페이지에 학과별 과목 게시됨 (ucdavis.edu/admissions/transfer/major-requirements-college-engineering) | 공통 필수: Calculus 1+2+3+4 (MAT 21A/B/C/D) | Diff Eq + Linear Alg (MAT 22A/B) | Physics 3-series (PHY 9A/B/C) + 학과별 추가 | CS: 각 시리즈 GPA 3.40+ 필수 | Fall 2027~: CS에 MAT 22A (Linear Algebra) 추가 필수 예정","","Min 2.80 (전체 최소)
+비TAG: 3.10 cumulative + 3.20 major prereqs
+TAG: 3.50
+CS: 각 시리즈 3.40+","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+✅ TAG (CS 제외) | Fall only
+TOEFL: 80+ (신척도 4.5+) / IELTS: 6.5+ / DET: 115+
+Source: ucdavis.edu/admissions/transfer/major-requirements-college-engineering ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Santa Barbara — Robert Mehrabian College of Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: Calculus 2학기 + Differential Equations + Linear Algebra | 학과별 추가 (공식 페이지 확인 필요): | ChemE: Physics 3-series+lab | Gen Chem 1년+lab | MATLAB | CompE: Physics 3-series+lab | C/C++ Programming | Data Structures in C++ | CS: C/C++ Programming | Discrete Math (★ FALL 2024~: Physics 더 이상 필수 아님) | EE: Physics 3-series+lab | C/C++/Python 1과목 | ME: Physics 3-series+lab | Gen Chem 1과목+lab | Statics | 전공 변경 불가 (transfer 후) | Physics/Chemistry 시리즈는 동일 학교에서 이수 권장","","공식 최소 미명시 (holistic)
+TAG: 3.0~3.5 (전공별 상이)","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+✅ TAG | Fall only
+TOEFL: 80+ / IELTS: 6.5+ / DET: 115+
+영어 면제: C 이상 (B 아님)
+Source: engineering.ucsb.edu/undergraduate/admissions/transfer-preparation ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Irvine — Henry Samueli School of Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: Calculus 1+2 (1년) | Multivariable Calculus | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | MATLAB or programming (학과별 상이) | + 학과별 Physics / Chemistry 추가 (UCI 별도 시트 참조) | CS&E: 최소 성적 B (다른 학과 C와 다름) | CS&E: Diff Eq / Linear Alg 불필요 / 1yr OOP 필수 (C/C#/VB 불인정)","","3.0 cumulative
++ 3.0 in major prereqs (별도)
+TAG: 3.4 (CS&E 제외)","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+✅ TAG (CS&E 제외) | Fall only
+TOEFL: 80+ / IELTS: 6.5+ / DET: 115+
+Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Santa Cruz — Jack Baskin School of Engineering","HIGH","ASSIST major-by-major cross-check needed","CS (Impacted): CSE 12 + CSE 16 + CSE 30 + MATH 19A + MATH 19B — 5과목 합산 GPA 3.0+ | CS는 반드시 CS로 지원해야 함 (입학 후 변경 불가) | EE: MATH 19A+19B + Linear Alg + Diff Eq + Physics 3-series+labs (GPA 2.8+) | EFFECTIVE FALL 2026: EE에 CSE 12 추가 필수 | 기타 전공: UCSC 카탈로그 및 ASSIST.org 확인","","CS: 3.0+ (5과목 합산)
+EE: 2.8+ (해당 과목 합산)
+TAG: 3.0 (CS 제외)","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+✅ TAG (CS 제외) | Fall & Winter 입학 (유일한 UC)
+TOEFL: 4.5+ (신척도) / IELTS: 6.5+ / DET: 115+
+영어 면제: B 이상 필요
+Source: catalog.ucsc.edu (2025-2026) ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Riverside — BCOE","HIGH","ASSIST major-by-major cross-check needed","ASSIST.org 필수 — UCR은 학과별 필수과목 목록을 공식 웹에 게시하지 않음 | 공식: 'Use ASSIST.org to see the prerequisites' | 학과별 세부 과목은 ASSIST.org에서 학교-BCOE 아티큘레이션 확인","","2.8 cumulative
++ 2.5 Calc 시리즈
++ 2.5 추가 전공과목 시리즈","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+✅ TAG | Fall only
+TOEFL: 80+ / IELTS: 6.5+ / DET: 115+
+Source: admissions.ucr.edu/transfer ✅
+⚠️ 공식 과목 목록 없음 — ASSIST.org 필수","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC System","UC Merced — School of Engineering","MEDIUM","Official source re-check needed","공통: CHEM 002 + MATH 021+022+023+024 + Physics 008+008L + Physics 009+009L | CSE 추가: CSE 020+021 (B 이상 필수) + CSE 030 | IGETC 강력 비권장 | English Composition: 1과목 C 이상으로 충족 (다른 UC 2과목과 다름)","","2.4 (CA) / 2.8 (비CA)
+TAG: 3.0
+⚠️ CSE: CSE 020+021에서 B 이상","60 sem / 90 qtr UC-transferable
+Fall only (UCSC/UCM 예외)","UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+
+IELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년
+★ 캠퍼스별 더 높은 기준:
+UCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+
+UCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+
+UCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+","Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026
+✅ TAG | Fall & Spring 입학 (유일한 2학기 UC)
+TOEFL: 80+ / IELTS: 6.5+ / DET: 115+
+Source: admissions.ucmerced.edu/transfer/major-preparation-schools ✅","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Aerospace Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목: Mechanics + E&M + Waves/Optics/Modern) | Gen Chemistry 1과목+lab | MATLAB or engineering programming 1과목","Statics | Circuit Analysis+lab | Materials Science | (공식 원문: 'not required for transfer consideration, however the degree cannot be completed in two years without them')","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Biomedical Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Gen Chemistry 1년 (2과목)+lab | MATLAB or engineering programming 1과목","Engineering Graphics | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Biomedical Engineering: Premedical","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Gen Chemistry 1년 (2과목)+lab | Organic Chemistry 1년 (2과목)+lab | MATLAB or engineering programming 1과목 | UCI 공대 내 Organic Chemistry 필수 유일한 전공 | (공식 원문: 'One year of organic chemistry with labs')","Engineering Graphics | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Chemical Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2 + lab (2과목 only — Waves/Optics 3번째 불필요) | Gen Chemistry 1년 (2과목)+lab | MATLAB or engineering programming 1과목 | (공식 원문: 'Two calculus-based physics courses with labs: mechanics, electricity and magnetism')","","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Civil Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2 + lab (2과목 only) | Gen Chemistry 1년 (2과목)+lab | MATLAB or engineering programming 1과목","Statistics | Statics | Engineering Graphics | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Computer Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Chemistry 불필요 | Programming Concepts & Methodology 1과목 | Circuit Analysis 1과목 | Circuit Analysis 필수 (공식 원문: 'One course in circuit analysis')","Programming Concepts II | Computer Architecture | Digital Systems/Logic | OOP | Circuit Analysis lab | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Computer Science & Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Calculus 1+2만 (Diff Eq & Linear Alg 불필요) | Physics 1+2 + lab (2과목) | Chemistry 불필요 | OOP 1년 (Python/Java/C++ — B 이상 필수) | Advanced course 1개 (Data Structures/SWE/Discrete Math/Boolean Algebra/Linear Alg/Multivariable Calc 중 택1 — B 이상) | 최소 성적 B (다른 학과 C와 다름) | Diff Eq & Linear Alg 불필요 | C, C#, VB 불인정 / intro CS 과목 불인정 | TAG 미참여 (최소 GPA 3.0만 적용) | (공식 원문: 'One year of computer programming courses in a single object-language (Python, Java, or C++)')","","3.0 cumulative
+3.0 in major prereqs
+(CS&E: TAG 미참여)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Electrical Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Chemistry 불필요 | Programming Concepts & Methodology 1과목 | Circuit Analysis 1과목 | Circuit Analysis 필수","Circuit Analysis lab | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Environmental Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2 + lab (2과목 only) | Gen Chemistry 1년 (2과목)+lab | MATLAB or engineering programming 1과목","Statistics | Statics | Engineering Graphics | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Materials Science & Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Gen Chemistry 1년 (2과목)+lab | MATLAB or engineering programming 1과목 | (공식 원문: 'One year of general chemistry with labs')","Statics | MSE intro 과목 | Circuit Analysis+lab | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Irvine","Mechanical Engineering","HIGH","Separate campus common requirements from major-specific requirements","전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Gen Chemistry 1과목+lab (1년 아님) | MATLAB or engineering programming 1과목 | Gen Chem 1과목 (Aerospace와 동일 — 1년/2과목 아님) | (공식 원문: 'One course in general chemistry with lab')","Statics | Engineering Graphics | Circuit Analysis+lab | (2년 졸업 위해 필요)","3.0 cumulative
+3.0 in major prereqs
+(TAG: 3.4)","60 sem / 90 qtr UC-transferable","TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+
+AP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정
+제출 마감: December | 유효기간: 2년","Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026
+Min GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지
+TAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units
+모든 prereqs Spring 종료 전 완료 필수
+IGETC 허용 — 단 engineering/math/science 전공에 비권장","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Bioengineering (BioE)","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: BioE/MSE 조인트 전공으로 입학 1학기 후 변경 가능 (3학기 전까지)
+★ Chemical Engineering은 COE 소속 아님 — College of Chemistry 별도 지원 필요","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Civil & Environmental Engineering","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: ⚠️ Environmental Engineering: 2025-2026 Change of College 불가 (공식 별도 공지)","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","EECS (Electrical Engineering & Computer Science)","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: ★ Change of College로 EECS 진입 불가 (공식 명시)
+EECS/MSE, EECS/NE 조인트 가능 (1학기 후)
+EECS→ECE: Fall 2025 입학자만 첫 2학기 내 가능 (복귀 불가)","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Industrial Engineering & Operations Research (IEOR)","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: Engineering Science 학부 산하","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Materials Science & Engineering (MSE)","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: MSE/ME, MSE/NE, BioE/MSE 조인트 가능 (1학기 후)","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Mechanical Engineering (ME)","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: Aerospace Engineering concentration 포함
+ME/NE, MSE/ME 조인트 가능 (1학기 후)","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Nuclear Engineering (NE)","HIGH","ASSIST major-by-major cross-check needed","COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수","ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']","3.5 (전 학과 동일)
+예외: overall<3.5, major GPA≥3.5 → 이메일 문의","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅
+engineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅
+Verified May 2026
+Fall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units
+Min GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)
+예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의
+Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92
+(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students
+(13.9% of applicants), who had an average GPA of 3.92')
+❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)
+❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가
+⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)
+⚠️ 커뮤니티칼리지 최대 70학점 이전 가능
+⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가
+특이사항: Engineering Science 학부 산하
+EECS/NE, MSE/NE, ME/NE 조인트 가능 (1학기 후)","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"
+"UC Berkeley (COE)","Chemical Engineering ★ College of Chemistry 소속 (COE 아님)","HIGH","ASSIST major-by-major cross-check needed","Chemical Engineering은 College of Engineering(COE) 소속이 아닌 | College of Chemistry(COC) 소속 — COE와 별도 규정 적용 | (공식: 'Note: Chemical Engineering is in the College of Chemistry') | COC 공식 게시 ChemE 편입 필수과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission): | Chemistry 1A + 1AL + 1B (General Chemistry + Lab sequence) | Mathematics 51 + 52 + 53 + 54 (Multivariable Calc + Linear Algebra/ODE) | Physics 7A + 7B (2학기 물리 — 7B 포함) | English R1A (Reading & Composition Part A — ChemE는 R1A만 필수, R1B 불필요) | 최소 성적: 수학/과학 과목 B 이상 강력 권장 | (공식: 'Transfer applicants need grades of B or A in math and science courses') | 입학 전 수강 과목은 고려되지 않음 (summer before enrollment 불인정) | [Source: chemistry.berkeley.edu/ugrad/prospective-students/admission]","공식 권장과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission): | Biology 1A (General Biology Lecture) | CHEM 3A + 3AL + 3B + 3BL (Organic Chemistry lecture + lab sequence) | — grades of B or better in organic chemistry 권장 | (공식: 'encouraged to complete...CHEM 3A, 3AL, 3B, 3BL')","3.0 (COE의 3.5와 다름)
+(공식: 'Minimum 3.0 UC-transferable GPA')","60 sem / 90 qtr UC-transferable","English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요
+(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed
+when completing the English composition courses')
+
+제출 시 기준:
+TOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)
+TOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점
+IELTS: 최소 6.5점
+Duolingo English Test: 최소 115점
+AP English (Language or Literature): 3점 이상
+IB English (SL Language A): 6–7점 | (HL Language A): 5–7점
+ACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상
+점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년
+ETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정
+[Source: admissions.berkeley.edu/requirements-for-international-students/]","Source: chemistry.berkeley.edu/ugrad/prospective-students/admission
+COC 별도 규정 적용 (COE와 다름)
+GPA 3.0 (COE 3.5와 다름) | 2nd Bachelor's: Chemistry/Chemical Biology만 허용
+⚠️ CORRECTED (May 2026): REQ를 'ASSIST.org 참조'에서 공식 chemistry.berkeley.edu 게시 과목 목록으로 교체 — Chem 1A/1AL/1B + Math 51-54 + Physics 7A-7B + English R1A (R1B 불필요). REC에 Organic Chemistry 추가.","Reclassify each item as required, recommended, optional, or unknown using official campus page and ASSIST when applicable"

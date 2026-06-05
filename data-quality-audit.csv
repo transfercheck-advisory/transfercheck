@@ -1,0 +1,415 @@
+school,major,risk_level,source_present,official_source_type,required_recommended_mixed,numeric_score_suspect,gpa_suspect,credit_suspect,same_requirements_as_other_majors,needs_official_check,notes
+University of Washington,Aeronautics & Astronautics,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Bioengineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Computer Engineering (Allen School),verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Electrical & Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Washington,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Computer Science (CoE),verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Earth Systems Science & Eng.,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Engineering Physics,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Industrial & Operations Eng.,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Naval Architecture & Marine Eng.,verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Nuclear Eng. & Radiological Sci.,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Applied Physics / Applied Mathematics,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Civil Engineering & Engineering Mechanics,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Earth & Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Engineering (Undecided / General),verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Industrial Engineering & Operations Research,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Columbia University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Computer Science & Engineering (Eng.),verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Computer & Information Science (A&S),verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Electrical & Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,"Food, Ag & Biological Engineering",verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Industrial & Systems Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Welding Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Engineering Physics,verified,true,official_site,false,false,false,false,false,false,None
+Ohio State University,Aviation Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Agricultural & Biological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Bioengineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Computer Science (BS),verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Engineering Mechanics,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Neural Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,"Nuclear, Plasma & Radiological Eng. (NPRE)",verified,true,official_site,false,false,false,false,false,false,None
+UIUC,NPRE + Data Science (dual degree),verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Physics (Engineering Physics),verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Systems Engineering & Design,verified,true,official_site,false,false,false,false,false,false,None
+UIUC,CS + Bioengineering (dual degree),verified,true,official_site,false,false,false,false,false,false,None
+UIUC,CS + Physics (dual degree),verified,true,official_site,false,false,false,false,false,false,None
+UIUC,Chemical Engineering (LAS — NOT Grainger),verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Applied Physics, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Biomolecular Science, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Business & Technology Management, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Chemical & Biomolecular Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Civil Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Computer Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Computer Science, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Electrical Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Electrical & Computer Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Environmental Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Integrated Design & Media, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Mathematics, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Mathematics & Physics, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+NYU Tandon,"Mechanical Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Architectural Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Computer Science (BS),verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Computer Science (BA),verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Interdisciplinary Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Manufacturing & Mechanical Engineering Technology (MMET),verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Nuclear Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Texas A&M,Petroleum Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Bioengineering — Bioengineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Bioengineering — Bioinformatics,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Bioengineering — BioSystems,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Bioengineering — Biotechnology,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Chemical & NanoEngineering — Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Chemical & NanoEngineering — NanoEngineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Computer Science & Engineering — Computer Engineering (CSE dept),verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Computer Science & Engineering — Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Computer Science & Engineering — CS Bioinformatics,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Computer Science & Engineering — Artificial Intelligence,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Electrical & Computer Engineering — Computer Engineering (ECE dept),verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Electrical & Computer Engineering — Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Electrical & Computer Engineering — EE & Society,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Electrical & Computer Engineering — Engineering Physics,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Mechanical & Aerospace Engineering — Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Mechanical & Aerospace Engineering — Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Structural Engineering — Structural Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC San Diego,Physics (Jacobs School) — Physics,verified,true,official_site,false,false,false,false,false,false,None
+UC System,UC Berkeley — College of Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC System,UCLA — Henry Samueli School of Engineering (HSSEAS),verified,true,official_site,false,false,false,false,false,false,None
+UC System,UC Davis — College of Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC System,UC Santa Barbara — Robert Mehrabian College of Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC System,UC Irvine — Henry Samueli School of Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC System,UC Santa Cruz — Jack Baskin School of Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC System,UC Riverside — BCOE,verified,true,assist,false,false,false,false,false,false,None
+UC System,UC Merced — School of Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Biomedical Engineering: Premedical,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Computer Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Irvine,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Biological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Earth and Atmospheric Sciences,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Electrical & Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Engineering Physics,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cornell (Duffield),Operations Research & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Engineering Mechanics (+ Aerospace Engineering Option),verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Engineering Physics,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Geological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Materials Science and Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UW-Madison,Nuclear Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Architectural Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Computational Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Electrical & Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Geosystems Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UT Austin (Cockrell),Petroleum Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Aeronautical & Astronautical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Agricultural Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Biological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Construction Engineering & Management (CEM),verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Environmental & Ecological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Environmental & Natural Resources Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Interdisciplinary Engineering (IDES),verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Motorsports Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Multidisciplinary Engineering (MDE),verified,true,official_site,false,false,false,false,false,false,None
+Purdue,Nuclear Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Chemical & Biomolecular Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Georgia Tech,Nuclear & Radiological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),Bioengineering (BioE),verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),Civil & Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),EECS (Electrical Engineering & Computer Science),verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),Industrial Engineering & Operations Research (IEOR),verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),Materials Science & Engineering (MSE),verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),Mechanical Engineering (ME),verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),Nuclear Engineering (NE),verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley (COE),"Chemical Engineering
+★ College of Chemistry 소속 (COE 아님)",verified,true,assist,false,false,false,false,false,false,None
+Penn State,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Architectural Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Artificial Intelligence Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Biological Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Computer Science (비UP: Beaver/Brandywine/Hazelton),verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Computer Science (University Park),verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Data Sciences,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Engineering (General),verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Engineering Science,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Mechanical Engineering (비UP: Scranton),verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Mechanical Engineering (University Park),verified,true,official_site,false,false,false,false,false,false,None
+Penn State,Nuclear Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Biological Systems Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Building Construction,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Construction Engineering & Management,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Industrial & Systems Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Mining Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Virginia Tech,Ocean Engineering (BSAOE),verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Aerospace Engineering (MAE),verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Computer Engineering (ECE),verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Computer Science (BSCS),verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Electrical Engineering (ECE),verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Engineering Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Mechanical Engineering (MAE),verified,true,official_site,false,false,false,false,false,false,None
+University of Virginia (UVA),Systems Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Computer Science + Economics,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Computer Science + Math,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Data Science,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Business + Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Systems Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Washington University in St. Louis (WashU),Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UNC Chapel Hill,Applied Sciences BS -- Materials Engineering track,verified,true,official_site,false,false,false,false,false,false,None
+UNC Chapel Hill,Applied Sciences BS -- Environmental Engineering track,verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Aeronautics & Astronautics (Course 16)
+SB: Aerospace Engineering (16)
+SB: Engineering flexible (16-ENG)",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Biological Engineering (Course 20)
+SB: Biological Engineering (20)",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Chemical Engineering (Course 10)
+SB: Chemical Engineering (10)
+SB: Chemical-Biological Engineering (10-B)
+SB: Chemical Engineering advanced (10-C)
+SB: Engineering flexible (10-ENG)",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Civil & Environmental Engineering (Course 1)
+SB: General Engineering (1-ENG)
+학제간 SB: Climate System Science & Engineering (1-12)*
+(*interdisciplinary — Course 1과 Course 12 공동)",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Electrical Engineering & Computer Science (Course 6) — MIT 최대 학과
+SB: Electrical Science & Engineering (6-1)
+SB: Electrical Eng & Computer Science (6-2)
+SB: Computer Science & Engineering (6-3)
+SB: AI & Decision Making (6-4)
+SB: Electrical Engineering with Computing (6-5)
+학제간 SB: CS & Molecular Biology (6-7)*
+학제간 SB: Computation & Cognition (6-9)*
+학제간 SB: CS, Economics & Data Science (6-14)*",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Materials Science & Engineering (Course 3)
+SB: Materials Science & Engineering (3)
+SB: Materials Science & Engineering flexible (3-A)
+SB: Archaeology & Materials (3-C)",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Mechanical Engineering (Course 2)
+SB: Mechanical Engineering (2)
+SB: Mechanical & Ocean Engineering (2-OE)
+SB: Engineering flexible (2-A)",verified,true,official_site,false,false,false,false,false,false,None
+MIT,"Nuclear Science & Engineering (Course 22)
+SB: Nuclear Science & Engineering (22)
+SB: Engineering flexible (22-ENG)",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Aeronautics & Astronautics (AA-BS)
+Department: Aeronautics & Astronautics",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Bioengineering (BIOE-BS)
+Department: Bioengineering",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Chemical Engineering (CHEMENG-BS)
+Department: Chemical Engineering",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Civil Engineering (CEE-BS)
+Department: Civil & Environmental Engineering
+※ 같은 학과에서 Environmental Engineering도 제공",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Environmental Engineering (CEE 학과 소속 — BS)
+Department: Civil & Environmental Engineering
+※ Civil Engineering과 같은 학과; 별도 BS 학위",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Computer Science (CS-BS)
+Department: Computer Science",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Electrical Engineering (EE-BS)
+Department: Electrical Engineering",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Management Science & Engineering (MS&E-BS)
+Department: Management Science & Engineering",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Materials Science & Engineering (MATSCI-BS)
+Department: Materials Science & Engineering",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Mechanical Engineering (ME-BS)
+Department: Mechanical Engineering",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Engineering — Atmosphere & Energy (ENGR-BS subplan)
+학제간 BS in Engineering, School of Engineering 직속",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Engineering — Biomechanical Engineering (ENGR-BS subplan)
+학제간 BS in Engineering, School of Engineering 직속",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Engineering — Biomedical Computation (ENGR-BS subplan)
+학제간 BS in Engineering, School of Engineering 직속",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Engineering — Engineering Physics (ENGR-BS subplan)
+학제간 BS in Engineering, School of Engineering 직속",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Engineering — Sustainable Architecture & Engineering (ENGR-BS subplan)
+학제간 BS in Engineering, School of Engineering 직속
+※ Architectural Design subplan: 2023년 이전 입학자만 (현재 신입 없음)",verified,true,official_site,false,false,false,false,false,false,None
+Stanford University,"Individually Designed Major in Engineering (IDMEN-BS)
+※ 위 16개 defined 전공에 해당하지 않는 분야 지망자가 교수 2인과 설계하는 자체 전공. 입학 후 junior 말까지 신청.",verified,true,official_site,false,false,false,false,false,false,None
+Yale University,"Applied Mathematics (BA or BS)
+※ SEAS 소속; engineering 입학 지침 적용",verified,true,official_site,false,false,false,false,false,false,None
+Yale University,Applied Physics (BS),verified,true,official_site,false,false,false,false,false,false,None
+Yale University,Biomedical Engineering (BS + combined BS/MS 가능),verified,true,official_site,false,false,false,false,false,false,None
+Yale University,"Chemical Engineering
+BS (ABET 인증) | BS: Engineering Sciences—Chemical",verified,true,official_site,false,false,false,false,false,false,None
+Yale University,"Computer Science
+BS or BA | BS: CS+Economics | BS: CS+Mathematics | BA: CS+Psychology | BA/BS: Computing & Linguistics | BA: Computing & Arts",verified,true,official_site,false,false,false,false,false,false,None
+Yale University,"Electrical Engineering
+BS (ABET 인증, 실질적으로 'Electrical & Computer Engineering') | BS/BA: Engineering Sciences—Electrical",verified,true,official_site,false,false,false,false,false,false,None
+Yale University,"Environmental Engineering
+BS | BS/BA: Engineering Sciences—Environmental",verified,true,official_site,false,false,false,false,false,false,None
+Yale University,"Mechanical Engineering
+BS (ABET 인증) | BS/BA: Engineering Sciences—Mechanical",verified,true,official_site,false,false,false,false,false,false,None
+Harvard University,"Applied Mathematics (AB or AB/SM)
+※ Harvard는 'concentration' 사용
+Secondary Field(minor) 별도 제공",verified,true,official_site,false,false,false,false,false,false,None
+Harvard University,"Bioengineering (AB or SB)
+SB = 'Engineering Sciences SB (Bioengineering track)'
+AB = 'Biomedical Engineering AB' (구어 표현)
+※ 'Biomedical Engineering' 독립 전공 없음 — seas.harvard.edu 확인",verified,true,official_site,false,false,false,false,false,false,None
+Harvard University,"Computer Science (AB or AB/SM)
+Secondary Field(minor) 별도 제공",verified,true,official_site,false,false,false,false,false,false,None
+Harvard University,"Electrical Engineering (AB or SB)
+SB = 'Electrical Engineering SB'
+AB = 'Engineering Sciences AB (Electrical & Computer Engineering track)'",verified,true,official_site,false,false,false,false,false,false,None
+Harvard University,"Environmental Science & Engineering (AB or SB)
+SB = 'Engineering Sciences SB (Environmental Science & Eng track)'
+AB = 'Environmental Science & Engineering AB'",verified,true,official_site,false,false,false,false,false,false,None
+Harvard University,"Materials Science & Mechanical Engineering (AB or SB)
+SB = 'Materials Science & Mechanical Engineering SB'
+AB = 'Engineering Sciences AB (Mechanical & Materials Science & Eng track)'
+※ Mechanical Engineering과 Materials Science가 통합 전공",verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Applied Mathematics,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Industrial Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northwestern University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Chicago,Molecular Engineering (Bioengineering Track),verified,true,official_site,false,false,false,false,false,false,None
+University of Chicago,Molecular Engineering (Chemical Track),verified,true,official_site,false,false,false,false,false,false,None
+University of Chicago,Molecular Engineering (Quantum Track),verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Notre Dame,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Vanderbilt University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Aerospace Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Biomedical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Civil Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Environmental Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Industrial & Systems Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Florida,Nuclear Engineering,verified,true,official_site,false,false,false,false,false,false,None

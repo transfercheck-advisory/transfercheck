@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="site_title">TransferChek | Engineering Transfer Strategy Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260531-2" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a class="brand" href="#top" aria-label="TransferChek home">
+          <span class="brand-mark">TC</span>
+          <span>
+            <strong>TransferChek</strong>
+            <small data-i18n="site_subtitle">Engineering Transfer Advisory</small>
+          </span>
+        </a>
+      </div>
+      
+      <nav class="site-nav" aria-label="Website Menu">
+        <a href="#solution" data-i18n="nav_solution">Features</a>
+        <a href="javascript:void(0)" onclick="openFeatureAd('eligibility')" data-i18n="nav_statcompass">01. 지원 가능 판단</a>
+        <a href="javascript:void(0)" onclick="openFeatureAd('requirements')" data-i18n="nav_reqradar">02. 학교 학과별 편입 요건 파악</a>
+        <a href="javascript:void(0)" onclick="openFeatureAd('roadmap')" data-i18n="nav_pathfinder">03. 수강 로드맵 생성</a>
+        <a href="javascript:void(0)" onclick="openFeatureAd('essay')" data-i18n="nav_essayai">04. EssayAI</a>
+        <a href="#demo" id="openPricingBtn" style="color: var(--gold); font-weight: 800; animation: pulse 2s infinite;" data-i18n="nav_pricing">Subscription Plans</a>
+        <a href="#feedback" data-i18n="nav_feedback">Feedback</a>
+      </nav>
+      
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <select id="langSelector" style="background: rgba(255,255,255,0.05); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; color: #ffffff; width: auto; font-size: 12px; font-weight: 700; cursor: pointer; outline: none;">
+          <option value="en">English</option>
+          <option value="ko">한국어</option>
+          <option value="zh">中文</option>
+        </select>
+        <div class="auth-actions" id="authActions">
+          <span id="authStatus">Guest</span>
+          <button class="secondary-btn auth-btn" id="loginOpenBtn" type="button" data-i18n="btn_login">Log in</button>
+          <button class="primary-btn auth-btn" id="signupOpenBtn" type="button" data-i18n="btn_signup">Sign up</button>
+          <button class="secondary-btn auth-btn hidden" id="logoutBtn" type="button" data-i18n="btn_logout">Log out</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Data-driven transfer admissions platform</p>
+          <h1 data-i18n="hero_title">The Ultimate End-to-End Strategy Engine for Top-Tier Engineering Transfer</h1>
+          <p class="hero-lead" data-i18n="hero_lead">
+            From cross-referencing program prerequisites and building course roadmaps to structuring winning essays—everything you need for a successful transfer in one premium platform.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#demo" data-i18n="hero_cta_demo">View Strategy Engine</a>
+            <a class="secondary-btn" href="#solution" data-i18n="hero_cta_solution">Explore Features</a>
+          </div>
+          <div class="hero-proof" aria-label="Platform advantages">
+            <div>
+              <strong data-i18n="hero_proof_regret">Regret Prevention</strong>
+              <span data-i18n="hero_proof_regret_desc">Discover hidden transfer opportunities matchable to your current stats.</span>
+            </div>
+            <div>
+              <strong data-i18n="hero_proof_time">Save Time</strong>
+              <span data-i18n="hero_proof_time_desc">Cut down hundreds of hours navigating complex program prerequisites.</span>
+            </div>
+            <div>
+              <strong data-i18n="hero_proof_cost">Optimize Tuition</strong>
+              <span data-i18n="hero_proof_cost_desc">Focus only on required courses to prevent wasting time and money.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legal Liability Warning Banner -->
+      <section class="legal-note" aria-label="Important Legal Disclaimer">
+        <strong style="color: #ef4444;" data-i18n="disclaimer_title">⚠️ IMPORTANT LEGAL DISCLAIMER & SERVICE LIMITATION NOTICE</strong>
+        <p data-i18n="disclaimer_body" style="font-size: 13.5px; line-height: 1.65; margin-top: 6px;">
+          TransferChek is strictly a reference tool. THIS SERVICE DOES NOT GUARANTEE ADMISSION, ACCEPTANCE, OR SPECIFIC ACADEMIC OUTCOMES. All GPA thresholds, prerequisite course lists, credit limits, and English requirements are automatically parsed or collected from public materials and may contain discrepancies or become outdated. Users MUST independently verify all requirements, deadlines, and course equivalencies directly on the official university admissions website before applying. By using this service, you agree that TransferChek shall not be held liable for any admissions decisions, academic planning errors, or financial losses.
+        </p>
+      </section>
+
+      <section class="school-coverage" aria-label="Covered universities">
+        <div class="coverage-copy">
+          <div>
+            <p class="eyebrow" data-i18n="coverage_eyebrow">Covered universities</p>
+            <h2 data-i18n="coverage_title">Access prerequisite requirements for top engineering programs in one place.</h2>
+          </div>
+          <p data-i18n="coverage_desc">
+            Compare target program qualifications, course roadmaps, required exam scores, and requirement coverage ratings dynamically based on active database profiles.
+          </p>
+        </div>
+        <div class="coverage-summary" id="schoolCoverageSummary"></div>
+        <div class="school-chip-list" id="schoolCoverageList"></div>
+      </section>
+
+      <section class="section" id="solution">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="feature_eyebrow">Why TransferChek?</p>
+          <h2 data-i18n="feature_heading">The most expensive transfer mistake is taking course credits that do not transfer.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">01 • Eligibility Diagnostics</span>
+            <h3 data-i18n="feature1_title" style="margin-top: 8px;">Prerequisite Eligibility Analyzer</h3>
+            <p data-i18n="feature1_body">Don't let regret be your final grade. Instantly analyze your GPA and completed courses against official database profiles to discover hidden top-tier transfer options you didn't even know you qualified for.</p>
+          </article>
+          <article>
+            <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">02 • Prerequisite Finder</span>
+            <h3 data-i18n="feature2_title" style="margin-top: 8px;">Prerequisite Finder</h3>
+            <p data-i18n="feature2_body">Skip the endless hunt through confusing university catalog sites and broken PDF guides. Search any school or engineering major to load canonical prerequisite lists and grade thresholds instantly.</p>
+          </article>
+          <article>
+            <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">03 • Roadmap Builder</span>
+            <h3 data-i18n="feature3_title" style="margin-top: 8px;">Optimized Roadmap Builder</h3>
+            <p data-i18n="feature3_body">Perfect for early planning 1-2 years ahead. Build prerequisite-compliant, term-by-term course paths to protect your GPA and ensure every single credit transfers without wasting tuition.</p>
+          </article>
+          <article>
+            <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">04 • Essay Strategist</span>
+            <h3 data-i18n="feature4_title" style="margin-top: 8px;">AI Essay Strategist</h3>
+            <p data-i18n="feature4_body">Convert your personal projects, robotics club activities, or coding achievements into a cohesive academic story. Generate an admissions-aligned, 3-paragraph strategy essay outline instantly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-section" id="demo">
+        <div class="product-frame">
+          <div class="product-header">
+            <div>
+              <p class="eyebrow" data-i18n="demo_eyebrow">Interactive product dashboard</p>
+              <h2 id="pageTitle" data-i18n="demo_title">Prerequisite Eligibility Analyzer</h2>
+            </div>
+            <nav class="tab-list" aria-label="Product Features">
+              <button class="tab-button active" data-tab="eligibility" type="button" data-i18n="tab_eligibility">Eligibility Diagnostics</button>
+              <button class="tab-button" data-tab="requirements" type="button" data-i18n="tab_requirements">Prerequisite Finder</button>
+              <button class="tab-button" data-tab="roadmap" type="button" data-i18n="tab_roadmap">Roadmap Builder</button>
+              <button class="tab-button" data-tab="essay" type="button" data-i18n="tab_essay">AI Essay Strategist</button>
+            </nav>
+          </div>
+
+          <!-- Tab 1: StatCompass -->
+          <section class="tab-panel active" id="eligibility">
+            <div class="section-grid two-col">
+              <form class="panel form-panel" id="profileForm">
+                <div class="panel-heading">
+                  <span class="step">01</span>
+                  <div>
+                    <h3 data-i18n="profile_title">Academic Profile</h3>
+                    <p data-i18n="profile_desc">Input your current GPA, credits, residency status, and completed courses.</p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <label for="gpaInput" data-i18n="label_gpa">Current college GPA</label>
+                  <input id="gpaInput" type="number" min="0" max="4" step="0.01" value="3.72" />
+                </div>
+
+                <div class="form-row">
+                  <label for="creditsInput" data-i18n="label_credits">Completed Semester Credits</label>
+                  <input id="creditsInput" type="number" min="0" step="1" value="48" />
+                </div>
+
+                <div class="switch-row">
+                  <span data-i18n="label_international">International Applicant</span>
+                  <label class="switch">
+                    <input id="internationalInput" type="checkbox" checked />
+                    <span></span>
+                  </label>
+                </div>
+
+                <div class="switch-row" id="englishWaiverRow">
+                  <span data-i18n="label_english_waiver">English Exam Waiver (Coursework/SAT/ACT)</span>
+                  <label class="switch">
+                    <input id="englishWaiverInput" type="checkbox" />
+                    <span></span>
+                  </label>
+                </div>
+
+                <div class="english-fields" id="englishFields">
+                  <div class="form-row">
+                    <label for="englishTypeInput" data-i18n="label_english_type">Exam Type</label>
+                    <select id="englishTypeInput">
+                      <option value="TOEFL">TOEFL iBT</option>
+                      <option value="TOEFL_2026">TOEFL 2026 Revised</option>
+                      <option value="IELTS">IELTS</option>
+                      <option value="Duolingo">Duolingo DET</option>
+                    </select>
+                  </div>
+                  <div class="form-row">
+                    <label for="englishScoreInput" data-i18n="label_english_score">Score</label>
+                    <input id="englishScoreInput" type="number" min="0" value="98" />
+                  </div>
+                </div>
+
+                <div>
+                  <div class="field-title-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <div class="field-title" data-i18n="label_completed_courses" style="margin: 0;">Completed Core Courses</div>
+                    <button type="button" id="clearCoursesBtn" class="link-btn" data-i18n="btn_clear_courses" style="background: none; border: none; color: #818cf8; font-size: 12px; font-weight: 700; cursor: pointer; padding: 0; text-decoration: underline;">Clear All</button>
+                  </div>
+                  <div class="course-groups" id="courseGroups"></div>
+                </div>
+              </form>
+
+              <div class="panel">
+                <div class="panel-heading">
+                  <span class="step">02</span>
+                  <div>
+                    <h3 data-i18n="target_title">Select Targets</h3>
+                    <p data-i18n="target_desc">Search and select target programs (Free Plan: max 5 targets).</p>
+                  </div>
+                </div>
+                <div class="target-picker" id="targetPicker"></div>
+                <div class="button-row">
+                  <button class="primary-btn" id="checkEligibilityBtn" type="button" data-i18n="btn_check_eligibility">Analyze Coverage</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="results-grid" id="eligibilityResults"></div>
+          </section>
+
+          <!-- Tab 2: ReqRadar -->
+          <section class="tab-panel" id="requirements">
+            <div class="panel">
+              <div class="panel-heading">
+                <span class="step">03</span>
+                <div>
+                  <h3 data-i18n="req_title">Prerequisite Finder Search</h3>
+                  <p data-i18n="req_desc">Search top engineering programs to instantly load official prerequisite criteria.</p>
+                </div>
+              </div>
+              <div class="search-bar">
+                <div class="form-row search-field requirement-search-field">
+                  <label for="requirementSearch" data-i18n="label_search_school">Search School or Major</label>
+                  <input id="requirementSearch" type="search" placeholder="Type school name or engineering major..." autocomplete="off" />
+                  <div class="search-menu requirement-menu" id="requirementMenu"></div>
+                </div>
+                <select id="requirementSelect" class="visually-hidden" aria-label="Selected target"></select>
+              </div>
+            </div>
+            <div class="requirement-detail" id="requirementDetail"></div>
+          </section>
+
+          <!-- Tab 3: Pathfinder -->
+          <section class="tab-panel" id="roadmap">
+            <div class="section-grid roadmap-layout">
+              <div class="panel">
+                <div class="panel-heading">
+                  <span class="step">04</span>
+                  <div>
+                    <h3 data-i18n="roadmap_title">Optimized Roadmap Builder Planner</h3>
+                    <p data-i18n="roadmap_desc">Generate a semester roadmap ensuring no wasted time, credits, or GPA.</p>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="admissionYear" data-i18n="label_admission_year">Expected Admission Year</label>
+                  <select id="admissionYear">
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                    <option>2031</option>
+                    <option>2032</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="admissionTerm" data-i18n="label_admission_term">Expected Term</label>
+                  <select id="admissionTerm">
+                    <option value="Fall">Fall</option>
+                    <option value="Spring">Spring</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label style="font-weight: 800; text-transform: uppercase; font-size: 12px; color: var(--muted); display: block; margin-bottom: 8px;" data-i18n="roadmap_targets_label">Roadmap Target Programs (Max 7)</label>
+                  <div class="target-picker" id="roadmapTargetPicker"></div>
+                </div>
+                <div class="verification-alert" style="margin-bottom: 20px;">
+                  <span id="roadmapNoticeWarning" style="font-size: 12.5px; display: block; font-weight: 700; color: #fbbf24; line-height: 1.6;" data-i18n="roadmap_multi_warning">Selecting more target schools may increase the required duration of coursework.</span>
+                </div>
+                <button class="primary-btn full" id="buildRoadmapBtn" type="button" data-i18n="btn_build_roadmap">Generate Efficiency Roadmap</button>
+              </div>
+
+              <div class="timeline" id="roadmapTimeline"></div>
+            </div>
+          </section>
+
+          <!-- Tab 4: EssayAI -->
+          <section class="tab-panel" id="essay">
+            <div class="section-grid two-col">
+              <form class="panel form-panel" id="essayForm">
+                <div class="panel-heading">
+                  <span class="step">05</span>
+                  <div>
+                    <h3 data-i18n="essay_title">EssayAI Planner</h3>
+                    <p data-i18n="essay_desc">Input your key achievements to generate an admissions-focused essay blueprint.</p>
+                  </div>
+                </div>
+                <div id="essayCreditsBadge" style="margin-bottom: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; font-size: 13px;">
+                  <span>
+                    <span data-i18n="essay_credits_remaining">Remaining Credits:</span> 
+                    <strong id="essayCreditsCount" style="font-weight: 800; color: #ffffff; margin-left: 4px;">5</strong>
+                  </span>
+                  <button type="button" id="buyEssayCreditsBtn" style="background: var(--gold); border: none; border-radius: 4px; padding: 4px 10px; font-size: 11px; font-weight: 800; color: #000000; cursor: pointer; transition: opacity 0.2s;" onclick="buyStandaloneEssayPass()" data-i18n="btn_buy_credits">
+                    Buy 5 Credits ($6.99)
+                  </button>
+                </div>
+                <div class="verification-alert" style="margin-top: 0; margin-bottom: 20px; border-color: rgba(99, 102, 241, 0.35); background: rgba(99, 102, 241, 0.05); color: #a5b4fc;">
+                  <strong data-i18n="essay_info_banner_title" style="color: #c7d2fe; font-weight: 800; font-size: 13.5px; display: flex; align-items: center; gap: 6px;">💡 AI Knowledge Base & Policy Notice</strong>
+                  <span data-i18n="essay_info_banner_body" style="color: #cbd5e1; font-size: 12px; line-height: 1.6; margin-top: 6px; display: block; font-weight: 500;">
+                    Our AI engine is calibrated with admissions criteria and transfer essay style guides for 30 top engineering schools (349 programs in our local database). This is an educational brainstorming assistant; to comply with plagiarism and academic integrity policies, it does not draft essays for you and does not guarantee admissions.
+                  </span>
+                </div>
+                <div class="form-row">
+                  <label for="essayTargetSchool" data-i18n="label_essay_target">Target University & Program</label>
+                  <select id="essayTargetSchool">
+                    <!-- Options populated via JS -->
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="essayQuestion" data-i18n="label_essay_question">Essay Question / Prompt</label>
+                  <textarea id="essayQuestion" rows="3" placeholder="Paste the university essay question or prompt here..." data-i18n-placeholder="essay_question_placeholder"></textarea>
+                </div>
+                <div class="form-row">
+                  <label for="essayLimit" data-i18n="label_essay_limit">Word Limit / Length</label>
+                  <input id="essayLimit" type="text" placeholder="E.g., 350 words, 500 words, 1 page..." data-i18n-placeholder="essay_limit_placeholder" />
+                </div>
+                <!-- Input Mode Switcher -->
+                <div class="essay-mode-switcher" style="display: flex; gap: 8px; margin-top: 14px; margin-bottom: 12px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+                  <button type="button" class="mode-tab active" id="modeTabDirect" style="flex: 1; padding: 8px; border: none; border-radius: 6px; background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_direct">Direct Input</button>
+                  <button type="button" class="mode-tab" id="modeTabInterview" style="flex: 1; padding: 8px; border: none; border-radius: 6px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_interview">AI Interview Guide</button>
+                </div>
+
+                <!-- Mode 1: Direct Input -->
+                <div class="form-row" id="essayDirectInputWrapper">
+                  <label for="essayActivity" data-i18n="label_essay_activity">Core Activities & Projects</label>
+                  <textarea id="essayActivity" placeholder="E.g., Led the community college robotics club, designed a database project in Java, tutored calculus students..."></textarea>
+                </div>
+
+                <!-- Mode 2: AI Interview -->
+                <div id="essayInterviewWrapper" class="hidden" style="display: flex; flex-direction: column; gap: 12px; background: rgba(6, 9, 19, 0.4); border: 1px solid var(--line); border-radius: 10px; padding: 16px;">
+                  <!-- Start Screen -->
+                  <div id="interviewStartScreen" style="text-align: center; padding: 12px 0;">
+                    <p style="font-size: 13px; color: #cbd5e1; margin-bottom: 14px; line-height: 1.55;" data-i18n="interview_start_desc">
+                      Answer 5 tailored questions based on your target program to extract your key engineering experiences and fit.
+                    </p>
+                    <button type="button" class="primary-btn" id="startInterviewBtn" style="font-size: 12.5px; padding: 8px 16px;" data-i18n="btn_start_interview">Start AI Interview</button>
+                  </div>
+
+                  <!-- Active Interview Screen -->
+                  <div id="interviewActiveScreen" class="hidden">
+                    <!-- Progress Bar -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                      <span style="font-size: 11px; font-weight: 800; color: #a5b4fc; text-transform: uppercase;" id="interviewStepLabel">Step 1 of 5</span>
+                      <span style="font-size: 11px; color: var(--muted); font-weight: 700;" id="interviewStepPercent">20%</span>
+                    </div>
+                    <div style="height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; margin-bottom: 14px; overflow: hidden;">
+                      <div id="interviewProgressBar" style="width: 20%; height: 100%; background: linear-gradient(90deg, #6366f1 0%, #10b981 100%); transition: width 0.3s ease;"></div>
+                    </div>
+
+                    <!-- Question box -->
+                    <div style="margin-bottom: 12px;">
+                      <strong id="interviewQuestionText" style="font-size: 13.5px; color: #ffffff; display: block; margin-bottom: 8px; line-height: 1.5;">Question text goes here...</strong>
+                      <textarea id="interviewAnswerInput" rows="3" placeholder="Type your answer here..." style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 10px; font-size: 13px; outline: none; transition: border-color 0.2s;" data-i18n-placeholder="interview_answer_placeholder"></textarea>
+                    </div>
+
+                    <!-- Navigation controls -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px;">
+                      <button type="button" class="secondary-btn" id="prevInterviewBtn" style="font-size: 12px; padding: 6px 12px; min-height: 32px;" data-i18n="btn_prev">Previous</button>
+                      <button type="button" class="primary-btn" id="nextInterviewBtn" style="font-size: 12px; padding: 6px 12px; min-height: 32px;" data-i18n="btn_next">Next</button>
+                    </div>
+                  </div>
+                </div>
+                <button class="primary-btn full" id="generateEssayBtn" type="button" data-i18n="btn_generate_essay">Generate Essay Storyline Guide</button>
+              </form>
+
+              <div class="panel" id="essayResultPanel">
+                <div class="panel-heading compact">
+                  <span class="step">✓</span>
+                  <div>
+                    <h3 data-i18n="essay_outline_title">AI Essay Blueprint</h3>
+                    <p data-i18n="essay_outline_desc">Tailored paragraph structure connecting your activities to school goals.</p>
+                  </div>
+                </div>
+                <div class="essay-outline" id="essayOutlineContent">
+                  <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0;">
+                    <p data-i18n="essay_placeholder">Enter your activities on the left and click generate to build your custom outline guide.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Feedback -->
+      <section class="feedback-section" id="feedback" aria-label="Anonymous feedback">
+        <div class="feedback-copy">
+          <p class="eyebrow" data-i18n="feedback_eyebrow">Feedback</p>
+          <h2 data-i18n="feedback_title">Help improve TransferChek.</h2>
+          <p data-i18n="feedback_desc">Your comments are anonymous and stored locally on your browser. Used for dashboard review purposes.</p>
+        </div>
+        <form class="feedback-form" id="feedbackForm">
+          <label for="feedbackInput" data-i18n="label_feedback_input">Anonymous Feedback</label>
+          <textarea
+            id="feedbackInput"
+            rows="5"
+            placeholder="Share feature requests, dataset errors, visual design advice, or suggestions..."
+          ></textarea>
+          <div class="feedback-actions">
+            <button class="primary-btn" type="submit" data-i18n="btn_submit_feedback">Submit Feedback</button>
+            <button class="secondary-btn" id="feedbackInboxToggle" type="button" data-i18n="btn_inbox">Owner Inbox</button>
+          </div>
+          <p class="feedback-status" id="feedbackStatus" aria-live="polite"></p>
+        </form>
+        <div class="feedback-inbox hidden" id="feedbackInbox">
+          <div class="feedback-inbox-head">
+            <h3 data-i18n="inbox_title">Private Feedback Inbox</h3>
+            <button class="secondary-btn" id="clearFeedbackBtn" type="button" data-i18n="btn_clear">Clear</button>
+          </div>
+          <div id="feedbackList"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <div class="auth-card">
+        <button class="auth-close" id="authCloseBtn" type="button" aria-label="Close">x</button>
+        <p class="eyebrow" id="authModeLabel">Account</p>
+        <h2 id="authTitle">Log in</h2>
+        <p class="auth-note" data-i18n="auth_note">
+          Demo accounts are simulated in this browser session. Official security configurations require secure database sync.
+        </p>
+        <form class="auth-form" id="authForm">
+          <div class="form-row">
+            <label for="authEmail" data-i18n="label_email">Email</label>
+            <input id="authEmail" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-row">
+            <label for="authPassword" data-i18n="label_password">Password</label>
+            <input id="authPassword" type="password" autocomplete="current-password" required />
+          </div>
+          <div class="form-row hidden" id="authConsentRow" style="display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; margin-bottom: 14px;">
+            <input id="authConsent" type="checkbox" style="width: auto; margin-top: 4px; cursor: pointer;" />
+            <label for="authConsent" style="font-size: 12.5px; color: #cbd5e1; cursor: pointer; line-height: 1.5; text-align: left; user-select: none;">
+              <span data-i18n="auth_consent_text">I agree to the Terms of Service and Privacy Policy.</span>
+              <a href="./terms-privacy-pricing.html" target="_blank" style="color: #818cf8; text-decoration: underline; font-weight: 700; margin-left: 4px;" data-i18n="auth_consent_link">Read details</a>
+            </label>
+          </div>
+          <button class="primary-btn full" id="authSubmitBtn" type="submit">Log in</button>
+          <p class="feedback-status" id="authMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Pricing / Subscription Modal -->
+    <div class="auth-modal hidden" id="pricingModal" role="dialog" aria-modal="true" aria-labelledby="pricingTitle">
+      <div class="auth-card" style="width: min(920px, 100%); max-height: 90vh; overflow-y: auto;">
+        <button class="auth-close" id="pricingCloseBtn" type="button" aria-label="Close">x</button>
+        <p class="eyebrow" data-i18n="pricing_modal_title">Subscription Plans</p>
+        <h2 id="pricingTitle" data-i18n="pricing_modal_upgrade">Upgrade Your Access</h2>
+        <p class="auth-note" data-i18n="pricing_modal_subtitle">
+          Select the best plan to optimize your engineering transfer path. Upgrade anytime.
+        </p>
+
+        <!-- Free Beta Promo Banner -->
+        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; color: #10b981; font-weight: 700; font-size: 14px; text-align: center; line-height: 1.5;" data-i18n="pricing_free_beta_notice">
+          현재 무료로 제공 중입니다. 원하시는 모델을 선택하신 후 바로 사용하시면 됩니다.
+        </div>
+        
+        <!-- Active Plan Status -->
+        <div style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 13px; font-weight: 700; color: #cbd5e1;" data-i18n="active_plan_label">Your Current Plan:</span>
+          <strong id="activePlanLabel" style="font-size: 14px; text-transform: uppercase; color: #10b981; letter-spacing: 0.05em;">Free Plan</strong>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px;">
+          <!-- Free Plan -->
+          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(6, 9, 19, 0.3); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
+            <div>
+              <h3 data-i18n="tier_free_name">Free Plan</h3>
+              <strong style="font-size: 28px; color: #ffffff; display: block; margin: 10px 0;" data-i18n="tier_free_price">$0</strong>
+              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_free_desc">For initial exploration</p>
+              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+                <li data-i18n="tier_free_feature1">Analyze up to 5 target programs in StatCompass</li>
+                <li data-i18n="tier_free_feature2">No access to ReqRadar, Pathfinder, or EssayAI</li>
+              </ul>
+            </div>
+            <button class="secondary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="selectUserPlan('Free')" data-i18n="btn_free_action">Select Free</button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(6, 9, 19, 0.3); padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 data-i18n="tier_pro_name">Pro Plan</h3>
+              <strong style="font-size: 28px; color: #ffffff; display: block; margin: 10px 0;" data-i18n="tier_pro_price">$9.99/mo</strong>
+              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_pro_desc">Unlimited feasibility analyzer</p>
+              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+                <li data-i18n="tier_pro_feature1">Unlimited target evaluations in StatCompass</li>
+                <li data-i18n="tier_pro_feature2">No access to ReqRadar, Pathfinder, or EssayAI</li>
+              </ul>
+            </div>
+            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="selectUserPlan('Pro')" data-i18n="btn_pro_action">Subscribe Pro</button>
+          </div>
+
+          <!-- Premium Plan -->
+          <div style="border: 1px solid rgba(99, 102, 241, 0.45); border-radius: 14px; background: rgba(99, 102, 241, 0.04); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <span style="position: absolute; top: -10px; right: 14px; background: #6366f1; color: white; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Best Value</span>
+            <div>
+              <h3 data-i18n="tier_premium_name">Premium Plan</h3>
+              <strong style="font-size: 28px; color: #10b981; display: block; margin: 10px 0;" data-i18n="tier_premium_price">$29.99/mo</strong>
+              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_premium_desc">Full transfer planner suite</p>
+              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+                <li data-i18n="tier_premium_feature1">Unlimited access to StatCompass, ReqRadar & Pathfinder</li>
+                <li data-i18n="tier_premium_feature2">5 EssayAI outline generations included</li>
+              </ul>
+            </div>
+            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px; background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);" onclick="selectUserPlan('Premium')" data-i18n="btn_premium_action">Subscribe Premium</button>
+          </div>
+
+          <!-- Standalone Essay Pass -->
+          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(6, 9, 19, 0.3); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
+            <div>
+              <h3 data-i18n="tier_essay_pass_name">Standalone Essay Pass</h3>
+              <strong style="font-size: 28px; color: #ffffff; display: block; margin: 10px 0;" data-i18n="tier_essay_pass_price">$6.99</strong>
+              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_essay_pass_desc">Single addon package</p>
+              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+                <li data-i18n="tier_essay_pass_feature1">5 uses of EssayAI essay strategizer</li>
+                <li data-i18n="tier_essay_pass_feature2">Can be purchased on any plan</li>
+              </ul>
+            </div>
+            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="buyStandaloneEssayPass()" data-i18n="btn_essay_pass_action">Buy Essay Pass</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data scripts -->
+    <script src="./transfer-data.js?v=20260531-2"></script>
+    <script src="./course-catalog.js?v=20260531-2"></script>
+    <script src="./app.js?v=20260531-2"></script>
+
+    <!-- Feature Ad Modal -->
+    <div class="auth-modal hidden" id="featureAdModal" role="dialog" aria-modal="true" aria-labelledby="adModalTitle">
+      <div class="auth-card" style="width: min(540px, 100%); padding: 36px; border: 1px solid rgba(99, 102, 241, 0.3); background: rgba(10, 15, 30, 0.95); backdrop-filter: blur(16px); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);">
+        <button class="auth-close" onclick="closeFeatureAd()" type="button" aria-label="Close">x</button>
+        <span id="adModalTitle" style="font-size: 11px; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Feature Title</span>
+        <h2 id="adModalHeadline" style="font-size: 22px; font-weight: 800; color: #ffffff; line-height: 1.4; margin-bottom: 24px;">Feature Headline</h2>
+        <ul id="adModalBullets" style="margin-left: 20px; margin-bottom: 32px; font-size: 14px; color: #cbd5e1; display: grid; gap: 14px; line-height: 1.6; list-style-type: disc;">
+          <!-- Bullet points loaded via JS -->
+        </ul>
+        <button class="primary-btn full" id="adModalCta" type="button" style="background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);">Try Feature Now</button>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,91 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model University {
+  id                 String               @id @default(uuid())
+  name               String               @unique
+  websiteUrl         String?
+  transferPolicyUrl  String?
+  majors             Major[]
+  englishRequirements EnglishRequirement[]
+  rawMappings        RawCourseMapping[]
+}
+
+model Major {
+  id                 String               @id @default(uuid())
+  universityId       String
+  university         University           @relation(fields: [universityId], references: [id], onDelete: Cascade)
+  name               String
+  description        String?
+  gpaRequirement     Float?               // Minimum GPA requirement for this major
+  courseRequirements CourseRequirement[]
+  englishRequirements EnglishRequirement[]
+  
+  @@unique([universityId, name])
+}
+
+model EnglishRequirement {
+  id                  String     @id @default(uuid())
+  universityId        String
+  university          University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+  majorId             String?    // Null if university-wide requirement
+  major               Major?     @relation(fields: [majorId], references: [id], onDelete: Cascade)
+  waiverType          String     // E.g., "US_HIGH_SCHOOL", "ACT_SAT", "MINIMUM_CREDITS", "IELTS", "TOEFL"
+  minimumGrade        String?    // E.g., "C", "7.0", "100"
+  rawQuote            String?    // Direct raw quote about this English requirement
+  officialSourceQuote String?    // Section v4 traceability
+  sourceUrl           String?    // Section v4 traceability
+  lastVerifiedDate    DateTime   @default(now())
+  verified            Boolean    @default(false)
+}
+
+model CourseRequirement {
+  id                     String     @id @default(uuid())
+  majorId                String
+  major                  Major      @relation(fields: [majorId], references: [id], onDelete: Cascade)
+  canonicalName          String     // Section 0 canonical course name
+  category               String     // E.g., "MATHEMATICS", "PHYSICS", etc.
+  requiredForEligibility Boolean    @default(true) // RULE 2
+  manualReviewRequired   Boolean    @default(false) // RULE 2
+  logicGroup             String?    // E.g., "MATH_OR_1" for representing "Calc 3 OR Linear Algebra"
+  officialSourceQuote    String?    // RULE 4
+  sourceUrl              String?    // RULE 4
+  lastVerifiedDate       DateTime   @default(now()) // RULE 4
+  verified               Boolean    @default(false) // RULE 4
+  hash                   String     // Integrity hash to detect drifts
+  dataVersion            Int        @default(1)    // Version tracker
+  status                 String     @default("VERIFIED") // E.g., "VERIFIED", "AUTO_UPDATED"
+}
+
+model HistoricalRequirementLog {
+  id                     String     @id @default(uuid())
+  courseRequirementId    String
+  majorId                String
+  canonicalName          String
+  category               String
+  requiredForEligibility Boolean
+  manualReviewRequired   Boolean
+  logicGroup             String?
+  officialSourceQuote    String?
+  sourceUrl              String?
+  archivedAt             DateTime   @default(now())
+  dataVersion            Int
+}
+
+
+model RawCourseMapping {
+  id               String     @id @default(uuid())
+  universityId     String
+  university       University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+  localCourseCode  String     // E.g., "MATH 231"
+  localCourseName  String     // E.g., "Calculus I"
+  canonicalName    String     // Section 0 canonical course name
+  
+  @@unique([universityId, localCourseCode])
+}

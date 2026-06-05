@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransferChek | Legal & Pricing Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-dark: #0f2f44;
+      --primary: #174a7c;
+      --accent: #155e75;
+      --accent-light: #e6f4f8;
+      --gold: #b39256;
+      --ink: #0f172a;
+      --muted: #475467;
+      --bg: #fafbfc;
+      --card-bg: #ffffff;
+      --line: #e2e8f0;
+      --shadow-soft: 0 4px 20px rgba(15, 47, 68, 0.04);
+      --shadow-premium: 0 20px 40px rgba(15, 47, 68, 0.08);
+      --font-main: 'Inter', 'Noto Sans KR', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* Site Header */
+    .site-header {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand-mark {
+      background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+      color: white;
+      font-weight: 900;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .brand strong {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      display: block;
+    }
+
+    .brand small {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .site-nav button {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .site-nav button.active,
+    .site-nav button:hover {
+      color: var(--primary);
+      background: var(--accent-light);
+    }
+
+    .back-home {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .back-home:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Tab Panels */
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Headings */
+    .section-header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .section-header h1 {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Legal Content Styling */
+    .legal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .legal-section {
+      margin-bottom: 36px;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      border-left: 4px solid var(--gold);
+      padding-left: 12px;
+    }
+
+    .legal-section p {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .legal-section ul {
+      margin-left: 20px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #334155;
+    }
+
+    .legal-section li {
+      margin-bottom: 8px;
+    }
+
+    /* Notice box */
+    .disclaimer-box {
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #78350f;
+    }
+
+    .disclaimer-box strong {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+
+    /* Pricing Grid */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .price-card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .price-card.popular {
+      border: 2px solid var(--primary);
+      box-shadow: var(--shadow-premium);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .price-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .plan-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .plan-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .price-tag {
+      margin-bottom: 24px;
+    }
+
+    .price-tag .amount {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .price-tag .period {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .plan-desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 30px;
+      min-height: 48px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 40px;
+      flex-grow: 1;
+    }
+
+    .feature-list li {
+      font-size: 14px;
+      color: #334155;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .feature-list li.disabled {
+      color: #94a3b8;
+      text-decoration: line-through;
+    }
+
+    .feature-list li.disabled::before {
+      content: "✕";
+      color: #cbd5e1;
+    }
+
+    .btn-pricing {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-pricing-secondary {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .btn-pricing-secondary:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-pricing-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: 0 4px 14px rgba(23, 74, 124, 0.25);
+    }
+
+    .btn-pricing-primary:hover {
+      opacity: 0.95;
+      box-shadow: 0 6px 20px rgba(23, 74, 124, 0.35);
+    }
+
+    /* Subscription Cancellation Dashboard Flow */
+    .cancellation-dashboard {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+      margin-top: 24px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .status-active {
+      background: #e6f8f2;
+      color: #0d9488;
+    }
+
+    .status-cancelled {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .dashboard-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+    }
+
+    .dashboard-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .dashboard-row strong {
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .dashboard-row span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn-danger:hover {
+      background: #dc2626;
+    }
+
+    /* Cancellation Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: none;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.open {
+      display: grid;
+    }
+
+    .cancel-modal {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      padding: 30px;
+      width: min(100%, 480px);
+      box-shadow: var(--shadow-premium);
+      animation: modalSlide 0.3s ease;
+    }
+
+    @keyframes modalSlide {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .cancel-modal h3 {
+      font-size: 20px;
+      font-weight: 850;
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+    }
+
+    .cancel-modal p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .cancel-reasons {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .cancel-reasons label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      padding: 12px;
+      border-radius: 8px;
+      transition: background 0.15s ease;
+    }
+
+    .cancel-reasons label:hover {
+      background: #f8fafc;
+    }
+
+    .cancel-reasons input {
+      accent-color: #ef4444;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .modal-actions button {
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .btn-keep {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .btn-keep:hover {
+      background: #d0ebf4;
+    }
+
+    .btn-confirm-cancel {
+      background: #ef4444;
+      color: white;
+    }
+
+    .btn-confirm-cancel:hover {
+      background: #dc2626;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark">TC</span>
+      <span>
+        <strong>TransferChek</strong>
+        <small>Advisory Portal</small>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <button class="active" onclick="switchTab('pricing')">가격 정책</button>
+      <button onclick="switchTab('terms')">서비스 이용약관</button>
+      <button onclick="switchTab('privacy')">개인정보 처리방침</button>
+      <button onclick="switchTab('refund')">환불 및 해지 방침</button>
+    </nav>
+    <a class="back-home" href="./index.html#demo">앱으로 돌아가기</a>
+  </header>
+
+  <main class="container">
+
+    <!-- TAB: PRICING -->
+    <section class="tab-panel active" id="pricing">
+      <div class="section-header">
+        <h1>합리적인 유료 요금 플랜</h1>
+        <p>TransferChek의 심층 리스크 엔진과 체계적인 수강 로드맵으로 복잡한 편입 준비 과정을 단순화하세요.</p>
+      </div>
+
+      <!-- Free Beta Notice Banner -->
+      <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; color: #10b981; font-weight: 700; font-size: 15px; text-align: center; line-height: 1.5;">
+        현재 무료로 제공 중입니다. 원하시는 모델을 선택하신 후 바로 사용하시면 됩니다.
+      </div>
+
+      <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <!-- Free Plan -->
+        <div class="price-card">
+          <div class="plan-name">Free Plan</div>
+          <div class="plan-title">무료 계정</div>
+          <div class="price-tag">
+            <span class="amount">$0</span>
+            <span class="period">/ 평생 무료</span>
+          </div>
+          <p class="plan-desc">기본적인 편입 정보 탐색과 필수 요건 필터링 기능을 제공합니다.</p>
+          <ul class="feature-list">
+            <li>동시 비교 대상 대학 최대 5개 (지원 가능 판단)</li>
+            <li>대학 요구사항 탐색 및 필수 과목 필터</li>
+            <li class="disabled">선수과목 통합 검색기 (학교 학과별 편입 요건 파악)</li>
+            <li class="disabled">학기별 맞춤 수강 계획 자동 배치 로드맵 (수강 로드맵 생성)</li>
+            <li class="disabled">AI 에세이 전략 가이드 맵핑 (EssayAI)</li>
+          </ul>
+          <button class="btn-pricing btn-pricing-secondary" onclick="alert('현재 무료 등급 상태입니다.')">무료 이용 중</button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="price-card">
+          <div class="plan-name">Pro Plan</div>
+          <div class="plan-title">프로 플랜</div>
+          <div class="price-tag">
+            <span class="amount">$9.99</span>
+            <span class="period">/ 월간 구독</span>
+          </div>
+          <p class="plan-desc">지원 자격 분석기를 무제한으로 이용하고 수강 이수 요건을 탐색합니다.</p>
+          <ul class="feature-list">
+            <li>동시 비교 대상 대학 무제한 확장 (지원 가능 판단)</li>
+            <li class="disabled">선수과목 통합 검색기 (학교 학과별 편입 요건 파악)</li>
+            <li class="disabled">학기별 맞춤 수강 계획 자동 배치 로드맵 (수강 로드맵 생성)</li>
+            <li class="disabled">AI 에세이 전략 가이드 맵핑 (EssayAI)</li>
+          </ul>
+          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Pro', '$9.99')">Pro 구독하기</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="price-card popular">
+          <div class="popular-badge">추천 플랜</div>
+          <div class="plan-name">Premium</div>
+          <div class="plan-title">프리미엄 플랜</div>
+          <div class="price-tag">
+            <span class="amount">$29.99</span>
+            <span class="period">/ 월간 구독</span>
+          </div>
+          <p class="plan-desc">진단, 선수과목 검색, 로드맵을 모두 제공하고 AI 에세이 서비스 5회권을 포함합니다.</p>
+          <ul class="feature-list">
+            <li>동시 비교 대상 대학 무제한 (지원 가능 판단)</li>
+            <li>선수과목 통합 검색기 (학교 학과별 편입 요건 파악) 완전 개방</li>
+            <li>최적화 수강 로드맵 빌더 (수강 로드맵 생성) 완전 개방</li>
+            <li>AI 에세이 전략가 (EssayAI) 5회 이용 가능</li>
+          </ul>
+          <button class="btn-pricing btn-pricing-primary" style="background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);" onclick="simulateSubscribe('Premium', '$29.99')">Premium 구독하기</button>
+        </div>
+
+        <!-- Standalone Essay Pass -->
+        <div class="price-card">
+          <div class="plan-name">Essay Pass</div>
+          <div class="plan-title">에세이 단독 패스</div>
+          <div class="price-tag">
+            <span class="amount">$6.99</span>
+            <span class="period">/ 일회성 결제</span>
+          </div>
+          <p class="plan-desc">4번 서비스(EssayAI)를 5회 이용할 수 있는 단독 패키지입니다.</p>
+          <ul class="feature-list">
+            <li>AI 에세이 전략가 (EssayAI) 5회 이용</li>
+            <li>모든 구독 플랜에서 구매 가능</li>
+            <li>이용권 개수 누적 가능</li>
+          </ul>
+          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Essay Pass', '$6.99')">Essay Pass 구매하기</button>
+        </div>
+      </div>
+
+      <!-- Subscription Management Demo Console -->
+      <div class="cancellation-dashboard">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+          <div>
+            <h2 style="font-size: 18px; font-weight: 800; color: var(--primary-dark);">구독 관리 데모 콘솔</h2>
+            <p style="font-size: 13px; color: var(--muted); margin-top: 4px;">구독 변경, 갱신 주기 확인 및 즉시 해지 신청이 가능한 구독자 대시보드입니다.</p>
+          </div>
+          <div id="subStatusBadge" class="status-badge status-active">Active (구독 중)</div>
+        </div>
+
+        <div class="dashboard-row">
+          <strong>현재 요금제</strong>
+          <span id="subPlanText">Premium Plan ($29.99/월)</span>
+        </div>
+        <div class="dashboard-row">
+          <strong>다음 결제일</strong>
+          <span id="nextBillingDate">2026년 6월 30일</span>
+        </div>
+        <div class="dashboard-row">
+          <strong>결제 수단</strong>
+          <span>Visa •••• 4242 (자동 갱신 결제)</span>
+        </div>
+        <div class="dashboard-row" style="margin-top: 12px; border: none; padding: 0; display: flex; justify-content: flex-end;">
+          <button class="btn-danger" id="cancelSubBtn" onclick="openCancelModal()">구독 해지 신청</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: TERMS OF SERVICE -->
+    <section class="tab-panel" id="terms">
+      <div class="legal-card">
+        <div class="section-header">
+          <h1>서비스 이용약관</h1>
+          <p>TransferChek 웹 플랫폼 및 어드바이저 데이터 엔진 이용 규칙입니다.</p>
+        </div>
+
+        <div class="disclaimer-box">
+          <strong>⚠️ 공식 정보 확인 면책 고지 (Official Source Verification Disclaimer)</strong>
+          본 어플리케이션이 제공하는 요구 사항, 선수 과목, 영어 기준 및 GPA 가이드 등 모든 편입 정보는 공개 자료를 수집·가공한 '참고용 가이드'입니다. 본 서비스는 대학 입학을 보장하거나 결과를 정확히 예측하는 보증 서비스가 아니며, 최종 지원서 작성 전 공식 홈페이지를 통해 직접 더블 체크해야 하는 최종 확인 책임은 이용자 본인에게 있습니다.
+        </div>
+
+        <div class="legal-content">
+          <div class="legal-section">
+            <h2>제 1 조 (목적)</h2>
+            <p>본 약관은 TransferChek(이하 '회사' 또는 '서비스')가 제공하는 대학 편입 전략 비교 정보 서비스 및 이에 부수하는 모든 도구(로드맵 빌더, 데이터 조회 등)를 이용자가 사용하는 조건 및 제반 사항을 규정합니다.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>제 2 조 (이용 자격 및 미성년자 규정)</h2>
+            <p>이용자는 만 13세 이상이거나 법정대리인의 동의를 득한 경우에만 계정을 생성하고 서비스를 이용할 수 있습니다. 13세 미만의 아동은 본 서비스를 단독으로 이용할 수 없으며 이용 시 개인정보 수집 제한 원칙에 의거 계정이 삭제될 수 있습니다.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>제 3 조 (보증의 부인 및 책임의 한계)</h2>
+            <p>1. 회사는 대학별 전공 요건 데이터의 오기입, 지연 또는 누락에 대해 법적 책임을 지지 않습니다. 신뢰도 배지(Verified, Needs Review 등)는 데이터 상태의 내부 판독치에 불과하며, 무오류성을 보증하지 않습니다.</p>
+            <p>2. 이용자는 본 서비스가 편입 합격을 보장하는 용도로 사용되어서는 안 됨을 이해하며, 모든 합격/불합격 관련 예측 또는 진단 문구는 마케팅적 또는 예측적 성격이 없음을 승인합니다.</p>
+            <p>3. 본 서비스에 언급된 모든 대학명, 캠퍼스명, 학과명은 각 해당 대학 및 교육기관의 등록 상표입니다. 본 서비스는 이용 편의를 위해 공식적으로 공개된 정보만을 텍스트 형태로 단순 인용하고 있으며, 해당 기관들의 저작권 및 상표권을 존중합니다. 본 서비스는 이들 대학과 어떠한 제휴, 후원, 공식 협력 또는 보증 관계도 맺고 있지 않음을 명시합니다.</p>
+            <p>4. AI 에세이 전략가(EssayAI)가 제공하는 가이드는 대규모 언어 모델 및 공개된 각 대학 입학처 가이드를 기반으로 구성된 단순 참고용 브레인스토밍 도구입니다. 본 서비스는 대학 입학처의 표절 및 학업 진실성(Academic Integrity) 위반 정책을 준수하기 위해 대필 또는 작성 대행 서비스를 일절 제공하지 않으며, 사용자가 이를 바탕으로 작성한 에세이의 합격 여부 또는 표절 판정 결과에 대해 어떠한 법적 책임도 지지 않습니다.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>제 4 조 (구독 결제 및 자동 갱신)</h2>
+            <p>유료 정기 구독 플랜은 월 정기 또는 6개월 시즌 결제 방식으로 청구되며, 이용자가 결제 주기 마감 24시간 전에 정기 결제를 명시적으로 해지하지 않을 경우 동일한 기간과 요금으로 자동 갱신됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: PRIVACY POLICY -->
+    <section class="tab-panel" id="privacy">
+      <div class="legal-card">
+        <div class="section-header">
+          <h1>개인정보 처리방침</h1>
+          <p>TransferChek는 이용자의 스펙 정보와 개인 식별 정보를 안전하게 보호합니다.</p>
+        </div>
+
+        <div class="legal-content">
+          <div class="legal-section">
+            <h2>1. 수집하는 개인정보 항목</h2>
+            <p>회사는 서비스 가입 및 편입 요건 진단을 위해 아래의 최소 정보를 수집합니다:</p>
+            <ul>
+              <li>계정 관리: 이메일 주소, 비밀번호(암호화 해시 상태 저장)</li>
+              <li>편입 분석: GPA 성적, 취득 학점, 이수 과목 정보, 공인 영어 성적(TOEFL, IELTS, Duolingo)</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2>2. 개인정보의 보관 및 암호화</h2>
+            <p>가입 시 설정하는 패스워드는 브라우저 보안 규격(SHA-256)을 이용해 암호학적 원방향 해시 처리를 거쳐 로컬 브라우저 세션 및 전용 DB에만 저장됩니다. 어떠한 경우에도 원문 비밀번호는 평문 전송되지 않습니다.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>3. 정보의 보존 기간 및 삭제</h2>
+            <p>이용자는 언제든지 탈퇴 또는 서비스 내 저장소 비우기 기능을 통해 브라우저 캐시 및 서버 데이터베이스에 저장된 스펙 관련 개인정보를 완전히 파기할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: REFUND POLICY -->
+    <section class="tab-panel" id="refund">
+      <div class="legal-card">
+        <div class="section-header">
+          <h1>환불 및 해지 정책</h1>
+          <p>TransferChek의 유료 구독 요금 환불 기준 및 구독 해지 세부 규정입니다.</p>
+        </div>
+
+        <div class="legal-content">
+          <div class="legal-section">
+            <h2>1. 구독 정기결제 해지 방식</h2>
+            <p>이용자는 별도의 상담원 연결이나 복잡한 절차 없이, 언제든지 본 Legal & Pricing 페이지의 '구독 관리 데모 콘솔' 또는 앱의 설정 메뉴에서 단 한 번의 클릭으로 즉시 자동 갱신을 정지할 수 있습니다. 갱신 정지 시 결제 완료된 당기 주기의 잔여 기간 동안은 Pro 기능을 제한 없이 유지하여 사용할 수 있습니다.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>2. 환불 규정</h2>
+            <p>디지털 데이터 라이선스 및 편입 데이터베이스 상시 열람 서비스의 특성상 결제 발생 후 Pro 기능의 데이터 열람 실적이 1회 이상 발생한 경우 원칙적으로 해당 월 요금의 중도 일할 환불은 불가합니다. 단, 시스템적 결제 중복 오류 또는 서비스의 기술적 장애로 열람이 원천 차단된 경우는 당사 귀책사유로 전액 환불 조치합니다.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>3. 청약 철회 기간</h2>
+            <p>결제 후 Pro 기능을 전혀 사용하지 않은 회원은 결제일로부터 7일 이내에 청약 철회(전액 환불)를 요청할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cancellation Modal -->
+  <div class="modal-overlay" id="cancelModalOverlay">
+    <div class="cancel-modal">
+      <h3>유료 멤버십 구독 해지 신청</h3>
+      <p>구독을 취소하시면 다음 결제일부터 요금이 청구되지 않으며, 무제한 대학 분석 및 학기별 로드맵 배치 등 결제 등급별 유료 기능들이 모두 제한됩니다. 정말 해지하시겠습니까?</p>
+      
+      <div class="cancel-reasons">
+        <strong style="font-size: 12px; color: var(--muted); text-transform: uppercase;">해지 사유를 알려주세요 (중복선택 가능)</strong>
+        <label><input type="checkbox"> 원하는 전공/대학 정보가 부족함</label>
+        <label><input type="checkbox"> 이미 편입 지원이 완료됨</label>
+        <label><input type="checkbox"> 데이터 업데이트가 느린 것 같음</label>
+        <label><input type="checkbox"> 이용 빈도가 낮음</label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-keep" onclick="closeCancelModal()">구독 유지하기</button>
+        <button class="btn-confirm-cancel" onclick="confirmCancellation()">구독 해지 확정</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.querySelectorAll('.site-nav button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+      const eventTarget = [...document.querySelectorAll('.site-nav button')].find(btn => btn.textContent === event.target.textContent);
+      if (eventTarget) {
+        eventTarget.classList.add('active');
+      }
+    }
+
+    function simulateSubscribe(planName, price) {
+      if (planName === 'Essay Pass') {
+        alert('에세이 5회 단독 이용권($6.99) 결제 시뮬레이션을 진행합니다!');
+        const badge = document.getElementById('subStatusBadge');
+        badge.textContent = 'Active';
+        badge.className = 'status-badge status-active';
+        document.getElementById('subPlanText').textContent = 'Essay Pass (5회 이용권 - $6.99)';
+        document.getElementById('nextBillingDate').textContent = '해당 없음 (일회성 구매)';
+        document.getElementById('cancelSubBtn').setAttribute('disabled', 'true');
+        document.getElementById('cancelSubBtn').style.opacity = '0.5';
+      } else {
+        alert(planName + ' 요금제 정기 구독 시뮬레이션을 진행합니다! 데모 콘솔 상태가 Active로 활성화됩니다.');
+        const badge = document.getElementById('subStatusBadge');
+        badge.textContent = 'Active (구독 중)';
+        badge.className = 'status-badge status-active';
+        document.getElementById('subPlanText').textContent = planName + ' Plan (' + price + '/월)';
+        document.getElementById('nextBillingDate').textContent = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+        document.getElementById('cancelSubBtn').removeAttribute('disabled');
+        document.getElementById('cancelSubBtn').style.opacity = '1';
+      }
+    }
+
+    function openCancelModal() {
+      document.getElementById('cancelModalOverlay').classList.add('open');
+    }
+
+    function closeCancelModal() {
+      document.getElementById('cancelModalOverlay').classList.remove('open');
+    }
+
+    function confirmCancellation() {
+      alert('구독 해지 처리가 완료되었습니다. 당기 만료일까지만 유료 기능이 유지되며 이후 자동 갱신되지 않습니다.');
+      closeCancelModal();
+
+      const badge = document.getElementById('subStatusBadge');
+      badge.textContent = 'Cancelled (해지됨)';
+      badge.className = 'status-badge status-cancelled';
+      document.getElementById('nextBillingDate').textContent = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' }) + ' (만료 예정)';
+      document.getElementById('cancelSubBtn').setAttribute('disabled', 'true');
+      document.getElementById('cancelSubBtn').style.opacity = '0.5';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "transfer-check-backend",
+  "version": "1.0.0",
+  "description": "Engineering Transfer Academic Strategy Engine Backend",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "echo nobuild",
+    "test": "ts-node src/test_run.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "prisma": "^5.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

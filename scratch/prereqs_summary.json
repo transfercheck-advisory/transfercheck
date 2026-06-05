@@ -1,0 +1,4997 @@
+[
+  {
+    "school": "University of Washington",
+    "major": "Aeronautics & Astronautics",
+    "reqCount": 16,
+    "reqs": [
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "MATH 207 - Introduction to Differential Equations",
+      "MATH 208 - Matrix Algebra",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "PHYS 123 - Waves, Light, and Heat",
+      "CHEM 142 - General Chemistry",
+      "A A 210 - Engineering Statics",
+      "CEE 220 - Introduction to Mechanics of Materials",
+      "M E 230 - Kinematics and Dynamics",
+      "A A 260 - Thermodynamics",
+      "MATH 224 - Advanced Multivariable Calculus I",
+      "AMATH 301 - Beginning Scientific Computing",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Bioengineering",
+    "reqCount": 12,
+    "reqs": [
+      "MATH 124 - Calculus with Analytic Geometry I",
+      "MATH 125 - Calculus with Analytic Geometry II",
+      "MATH 126 - Calculus with Analytic Geometry III",
+      "CHEM 142 - General Chemistry",
+      "CHEM 152 - General Chemistry",
+      "CHEM 162 - General Chemistry",
+      "CHEM 223 or CHEM 237 - Organic Chemistry",
+      "BIOL 180 - Introductory Biology",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 or PHYS 142 - Electromagnetism",
+      "AMATH 301 - Beginning Scientific Computing (or CSE 121/122/123/142/160 & BIOEN 217)",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Chemical Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "CHEM 142 - General Chemistry",
+      "CHEM 152 - General Chemistry",
+      "CHEM 162 - General Chemistry",
+      "CHEM 237 - Organic Chemistry",
+      "CHEM 238 - Organic Chemistry",
+      "CHEM E 310 - Material and Energy Balance",
+      "CHEM E 375 - Chemical Engineering Computer Skills",
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "MATH 207 - Introduction to Differential Equations",
+      "MATH 208 - Matrix Algebra with Applications",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "PHYS 123 - Waves, Light, and Heat",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Civil Engineering",
+    "reqCount": 12,
+    "reqs": [
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "MATH 208 - Matrix Algebra",
+      "CHEM 142 - General Chemistry",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "AMATH 301 - Beginning Scientific Computing (or CSE 121/122/123/142/160)",
+      "A A 210 - Engineering Statics",
+      "CEE 220 - Intro Mechanics of Materials",
+      "M E 230 - Kinematics and Dynamics",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Computer Engineering (Allen School)",
+    "reqCount": 6,
+    "reqs": [
+      "CSE 123 - Introduction to Computer Programming III (or CSE 143)",
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "PHYS 121 - Mechanics (or PHYS 141)",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Electrical & Computer Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "CSE 122 - Introduction to Computer Programming II (or CSE 142)",
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "English Composition",
+      "CSE 123 - Introduction to Computer Programming III (or CSE 143)",
+      "MATH 207 - Introduction to Differential Equations",
+      "Pick two courses from: BIOL 130, BIOL 180, BIOL 220, CHEM 142, MATH 208, MATH 224, PHYS 123"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Environmental Engineering",
+    "reqCount": 12,
+    "reqs": [
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "MATH 207 - Introduction to Differential Equations (or AMATH 351)",
+      "BIOL 180 - Intro Biology",
+      "CHEM 142 - General Chemistry I",
+      "CHEM 152 - General Chemistry II",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "AMATH 301 - Beginning Scientific Computing (or CSE 121/122/123/142/160)",
+      "A A 210 - Engineering Statics",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Industrial Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "CHEM 142 - General Chemistry",
+      "CHEM 152 - General Chemistry",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "PHYS 123 - Waves, Light, and Heat",
+      "A A 210 - Engineering Statics",
+      "CEE 220 - Intro Mechanics of Materials (or M E 230)",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Materials Science & Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "CHEM 142 - General Chemistry",
+      "CHEM 152 - General Chemistry",
+      "AMATH 301 - Beginning Scientific Computing (or CSE 122/123/142)",
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "MATH 207 - Intro to Diff Equations",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "MSE 170 - Fundamentals of Materials Science",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Washington",
+    "major": "Mechanical Engineering",
+    "reqCount": 12,
+    "reqs": [
+      "MATH 124 - Calculus Analytic Geometry I",
+      "MATH 125 - Calculus Analytic Geometry II",
+      "MATH 126 - Calculus Analytic Geometry III",
+      "CHEM 142 - General Chemistry",
+      "CHEM 152 - General Chemistry",
+      "PHYS 121 - Mechanics",
+      "PHYS 122 - Electromagnetism",
+      "PHYS 123 - Waves, Light, and Heat",
+      "A A 210 - Engineering Statics",
+      "CEE 220 - Introduction to Mechanics of Materials",
+      "M E 230 - Kinematics and Dynamics",
+      "English Composition"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Aerospace Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Biomedical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Chemical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Civil Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Computer Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Computer Science (CoE)",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Earth Systems Science & Eng.",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Electrical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Engineering Physics",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Environmental Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Industrial & Operations Eng.",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Materials Science & Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Mechanical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Naval Architecture & Marine Eng.",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "University of Michigan",
+    "major": "Nuclear Eng. & Radiological Sci.",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 115)",
+      "Calculus II (MATH 116)",
+      "General Chemistry 1 + Lab (CHEM 130 + CHEM 125/126 or CHEM 210/211)",
+      "General Physics I with Lab (PHYS 140 + PHYS 141)",
+      "General Physics II with Lab (PHYS 240 + PHYS 241)",
+      "Computing (EECS 183 or ENGR 101)",
+      "English Composition (ENGL 125 or First-Year Writing course)",
+      "If AP credit awarded for Calculus I or II, one advanced math course is required (e.g. MATH 215/216/217)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Applied Physics / Applied Mathematics",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Calculus IV (MATH UN1202)",
+      "Ordinary Differential Equations (MATH UN2030)",
+      "Physics III: Classical & Quantum Waves (PHYS UN1403)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Biomedical Engineering",
+    "reqCount": 14,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "General Chemistry II (CHEM UN1404)",
+      "Introductory Biology I (BIOL UN2005)",
+      "Introductory Biology II (BIOL UN2006)",
+      "Ordinary Differential Equations & Linear Algebra (APMA E2101)",
+      "Physics III: Classical & Quantum Waves (PHYS UN1403)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Chemical Engineering",
+    "reqCount": 13,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "General Chemistry II (CHEM UN1404)",
+      "Organic Chemistry I (CHEM UN2443)",
+      "Organic Chemistry Lab (CHEM UN2543)",
+      "Ordinary Differential Equations & Linear Algebra (APMA E2101)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Civil Engineering & Engineering Mechanics",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Ordinary Differential Equations (MATH UN2030)",
+      "Linear Algebra (MATH UN2010)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Computer Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Discrete Mathematics (COMS W3203)",
+      "Linear Algebra (MATH UN2010)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Computer Science",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Discrete Mathematics (COMS W3203)",
+      "Data Structures in Java (COMS W3134 or COMS W3136)",
+      "Linear Algebra (MATH UN2010)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Earth & Environmental Engineering",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "General Chemistry II (CHEM UN1404)",
+      "Organic Chemistry I (CHEM UN2443)",
+      "Ordinary Differential Equations (MATH UN2030)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Electrical Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Ordinary Differential Equations & Linear Algebra (APMA E2101)",
+      "Physics III: Classical & Quantum Waves (PHYS UN1403)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Engineering (Undecided / General)",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Ordinary Differential Equations (MATH UN2030)",
+      "Linear Algebra (MATH UN2010)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Industrial Engineering & Operations Research",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Linear Algebra (MATH UN2010)",
+      "Probability & Statistics (STAT GU4001)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Materials Science & Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Ordinary Differential Equations (MATH UN2030)",
+      "Linear Algebra (MATH UN2010)"
+    ]
+  },
+  {
+    "school": "Columbia University",
+    "major": "Mechanical Engineering",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus I (MATH UN1101)",
+      "Calculus II (MATH UN1102)",
+      "Multivariable Calculus (MATH UN1201)",
+      "General Chemistry I with Lab (CHEM UN1403 + CHEM UN1500)",
+      "Physics I: Mechanics & Relativity with Lab (PHYS UN1401 + PHYS UN1493)",
+      "Physics II: E&M & Waves with Lab (PHYS UN1402 + PHYS UN1494)",
+      "Introduction to Computer Science and Programming (COMS W1004 or ENGI E1006)",
+      "Principles of Economics (ECON UN1105)",
+      "English Composition (ENGL CC1010 University Writing)",
+      "Ordinary Differential Equations (MATH UN2030)",
+      "Linear Algebra (MATH UN2010)",
+      "Physics III: Classical & Quantum Waves (PHYS UN1403)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Aerospace Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Biomedical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Chemical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Civil Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Computer Science & Engineering (Eng.)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Computer & Information Science (A&S)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Electrical & Computer Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Environmental Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Food, Ag & Biological Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Industrial & Systems Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Materials Science & Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Mechanical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Welding Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Engineering Physics",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "Ohio State University",
+    "major": "Aviation Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus II (MATH 1172 or MATH 1152)",
+      "General Chemistry I (CHEM 1210 or CHEM 1250)",
+      "General Physics I: Mechanics & Thermal (PHYSICS 1250)",
+      "Fundamentals of Engineering I (ENGR 1181) — must be completed at Ohio State (not transferable)",
+      "Fundamentals of Engineering II (ENGR 1182) — must be completed at Ohio State (not transferable)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Aerospace Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Agricultural & Biological Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)",
+      "[ADDED — was missing from previous version]"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Bioengineering",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ One of: Intro Computing (CS 101/124) OR Molecular & Cellular Biology (MCB 150)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Civil Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Computer Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro CS 1 (CS 124) OR Electronics (ECE 110) OR Circuits (ECE 205)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Computer Science (BS)",
+    "reqCount": 9,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ Intro CS 1 (CS 124) [mandatory — no substitute]",
+      "Must have completed coursework in 2 of: Python, Java, C++",
+      "2nd bachelor's in CS unlikely"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Electrical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro CS 1 (CS 124) OR Electronics (ECE 110) OR Circuits (ECE 205)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Engineering Mechanics",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Environmental Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)",
+      "Min 5 semesters at UIUC required"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Industrial Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Materials Science & Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ Intro Computing (CS 101/124) [mandatory, no substitute]"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Mechanical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)",
+      "2nd bachelor's in ME unlikely"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Neural Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ One of: Intro Computing (CS 101/124) OR Molecular & Cellular Biology (MCB 150)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Nuclear, Plasma & Radiological Eng. (NPRE)",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ Intro Computing (CS 101/124) [mandatory, no substitute]"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "NPRE + Data Science (dual degree)",
+    "reqCount": 9,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Data Science Discovery (STAT 107) OR Linear Algebra for Data Science (MATH 227) OR Linear Algebra (MATH 257)",
+      "CS 101/124 may substitute for STAT 107 for admission but NOT for graduation",
+      "[ADDED — was missing from previous version]"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Physics (Engineering Physics)",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Systems Engineering & Design",
+    "reqCount": 7,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ One of: Intro Computing (CS 101/124) OR Engineering Graphics (SE 101/ME 170)"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "CS + Bioengineering (dual degree)",
+    "reqCount": 9,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ General Chemistry 2 + Lab (CHEM 104+105)",
+      "+ Intro CS 1 (CS 124) [mandatory]",
+      "Both CS and Bioengineering requirements apply"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "CS + Physics (dual degree)",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "+ Intro CS 1 (CS 124) [mandatory]",
+      "Both CS and Physics requirements apply"
+    ]
+  },
+  {
+    "school": "UIUC",
+    "major": "Chemical Engineering (LAS — NOT Grainger)",
+    "reqCount": 8,
+    "reqs": [
+      "General Chemistry 1 + Lab (CHEM 102+103)",
+      "Calculus 1 (MATH 220/221)",
+      "Calculus 2 (MATH 231)",
+      "Calculus 3 (MATH 241)",
+      "Physics 1: Mechanics (PHYS 211)",
+      "Physics 2: E&M (PHYS 212)",
+      "LAS (Liberal Arts & Sciences) college — NOT Grainger Engineering",
+      "Separate rules apply; Grainger admits cannot switch to Chem E later"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Applied Physics, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Biomolecular Science, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Business & Technology Management, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Chemical & Biomolecular Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Civil Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Computer Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Computer Science, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Electrical Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Electrical & Computer Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Environmental Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Integrated Design & Media, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Mathematics, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Mathematics & Physics, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "NYU Tandon",
+    "major": "Mechanical Engineering, B.S.",
+    "reqCount": 3,
+    "reqs": [
+      "Calculus I (Calculus sequence or equivalent)",
+      "General Physics I with Lab (or equivalent)",
+      "General Chemistry I with Lab (or equivalent)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Aerospace Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "English Composition (ENGL 103 or 104/ENGL 1301 or 1302)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Architectural Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "Chemistry for Engineers (CHEM 107/117/CHEM 1409 or 1412)",
+      "English Composition (ENGL 103 or 104)",
+      "Essay MUST convey desire to pursue Architectural Engineering degree"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Biomedical Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry 1 (CHEM 119/CHEM 1411)",
+      "Chemistry 2 (CHEM 120/CHEM 1412)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "English Composition (ENGL 103 or 104)",
+      "PHYS 207: Fall 지원 = 완료 or in-progress OK",
+      "Spring 지원 = 반드시 완료",
+      "최소 이수 학점 25 (다른 학과 24와 다름)",
+      "모든 전편입생 3년 이상 소요 예상"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Chemical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry 1 (CHEM 119/CHEM 1411)",
+      "Chemistry 2 (CHEM 120/CHEM 1412)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "English Composition (ENGL 103 or 104)",
+      "PHYS 207: in-progress OK at application",
+      "3년 이상 소요 예상 (degree plan 특성상)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Civil Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "English Composition (ENGL 103 ONLY/ENGL 1301)",
+      "Physics 2 NOT required",
+      "ENGL 103만 (ENGL 104 불가)",
+      "64학점 상한",
+      "현재 civil engineering program에 등록 중인 지원자는 preference 낮음"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Computer Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "English Composition (ENGL 103 or 104)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Computer Science (BS)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Chemistry for Engineers or Fundamentals of Chemistry 1 (CHEM 107/117 or CHEM 119/CHEM 1409 or 1411)",
+      "Physics 2 NOT required (Science elective 사용)",
+      "2nd choice eligible"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Computer Science (BA)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "9 credit hours core curriculum science (from core.tamu.edu list)",
+      "BA version — BS보다 기술 요건 적음",
+      "Physics 2 NOT required"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Electrical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "English Composition (ENGL 103 or 104)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Environmental Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "English Composition (ENGL 103 or 104)",
+      "Physics 2 NOT in required course list (2nd year plan에만 등장)",
+      "반드시 Environmental Engineering이 1st choice major여야 함"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Industrial Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "Physics 1 (PHYS 206 or PHYS 218/PHYS 2425 or 2325)",
+      "Physics 2 NOT required",
+      "Math GPA 3.5: 반복 수강 포함 ALL math coursework 기준으로 별도 계산"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Interdisciplinary Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry for Engineers (CHEM 107/117/CHEM 1409 or 1412)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "English Composition (ENGL 103 or 104)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Manufacturing & Mechanical Engineering Technology (MMET)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 NOT in required list",
+      "최소 성적 C (다른 학과 대부분 B와 다름)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Materials Science & Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326) — in-progress OK",
+      "Chemistry for Engineers or Chem 1 (CHEM 107/117 or CHEM 119/CHEM 1409 or 1411)",
+      "PHYS 207: in-progress OK at application",
+      "(Chemistry 2 is NOT in required list — confirmed from 2024-25 PDF)"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Nuclear Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 or 2325)",
+      "Physics 2 (PHYS 207/PHYS 2426 or 2326)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "English Composition (ENGL 103 or 104)",
+      "CHEM 1410이 Nuclear 전용 PDF에 명시 (다른 학과의 CHEM 1409와 다름)",
+      "Max 100 transfer hrs"
+    ]
+  },
+  {
+    "school": "Texas A&M",
+    "major": "Petroleum Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus 1 (MATH 151/MATH 2413)",
+      "Calculus 2 (MATH 152/MATH 2414)",
+      "Physics 1 (PHYS 206/PHYS 2425 — 4 credit hrs)",
+      "Chemistry for Engineers (CHEM 107/117 or CHEM 120/CHEM 1409 or 1412)",
+      "English Composition (ENGL 103 or 104)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Bioengineering — Bioengineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Bioengineering — Bioinformatics",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Bioengineering — BioSystems",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Bioengineering — Biotechnology",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Chemical & NanoEngineering — Chemical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Chemical & NanoEngineering — NanoEngineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Computer Science & Engineering — Computer Engineering (CSE dept)",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Computer Science & Engineering — Computer Science",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Computer Science & Engineering — CS Bioinformatics",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Computer Science & Engineering — Artificial Intelligence",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Electrical & Computer Engineering — Computer Engineering (ECE dept)",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Electrical & Computer Engineering — Electrical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Electrical & Computer Engineering — EE & Society",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Electrical & Computer Engineering — Engineering Physics",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Mechanical & Aerospace Engineering — Aerospace Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Mechanical & Aerospace Engineering — Mechanical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Structural Engineering — Structural Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC San Diego",
+    "major": "Physics (Jacobs School) — Physics",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus I (MATH 20A)",
+      "Calculus II (MATH 20B)",
+      "Calculus III (MATH 20C)",
+      "Differential Equations (MATH 20D) or Linear Algebra (MATH 18)",
+      "Physics I: Mechanics (PHYS 2A)",
+      "Physics II: Electricity & Magnetism (PHYS 2B)",
+      "General Chemistry I (CHEM 6A)"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Berkeley — College of Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "ASSIST.org 필수 (학과별 공식 목록 미게시)",
+      "Calculus 1+2+3",
+      "Differential Equations",
+      "Linear Algebra",
+      "Physics 3-series",
+      "Chemistry 1",
+      "IGETC strongly discouraged (공식: 'strongly discourages')",
+      "IGETC 사용 시 lower-division GE 미충족 가능",
+      "R1A+R1B = Berkeley 고유 English Composition 시퀀스 (C- 이상)"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UCLA — Henry Samueli School of Engineering (HSSEAS)",
+    "reqCount": 7,
+    "reqs": [
+      "공식 페이지에 학과별 과목 게시됨 (admission.ucla.edu/apply/transfer 확인 필요)",
+      "Calculus 1+2+3",
+      "Linear Algebra",
+      "Physics 3-series + 학과별 추가",
+      "IGETC 불인정 (partial IGETC도 불인정)",
+      "Alternate major 옵션 없음",
+      "CS/AE/ME 전공은 전공 변경 불가"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Davis — College of Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "공식 페이지에 학과별 과목 게시됨 (ucdavis.edu/admissions/transfer/major-requirements-college-engineering)",
+      "Diff Eq + Linear Alg (MAT 22A/B)",
+      "Physics 3-series (PHY 9A/B/C) + 학과별 추가",
+      "CS: 각 시리즈 GPA 3.40+ 필수",
+      "Fall 2027~: CS에 MAT 22A (Linear Algebra) 추가 필수 예정"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Santa Barbara — Robert Mehrabian College of Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "학과별 추가 (공식 페이지 확인 필요):",
+      "ChemE: Physics 3-series+lab",
+      "Gen Chem 1년+lab",
+      "MATLAB",
+      "CompE: Physics 3-series+lab",
+      "C/C++ Programming",
+      "Data Structures in C++",
+      "CS: C/C++ Programming",
+      "Discrete Math (★ FALL 2024~: Physics 더 이상 필수 아님)",
+      "EE: Physics 3-series+lab",
+      "C/C++/Python 1과목",
+      "ME: Physics 3-series+lab",
+      "Gen Chem 1과목+lab",
+      "Statics",
+      "전공 변경 불가 (transfer 후)",
+      "Physics/Chemistry 시리즈는 동일 학교에서 must be completed at a single institution"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Irvine — Henry Samueli School of Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Multivariable Calculus",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "MATLAB or programming (학과별 상이)",
+      "+ 학과별 Physics / Chemistry 추가 (UCI 별도 시트 참조)",
+      "CS&E: 최소 성적 B (다른 학과 C와 다름)"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Santa Cruz — Jack Baskin School of Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "CS (Impacted): CSE 12 + CSE 16 + CSE 30 + MATH 19A + MATH 19B — 5과목 합산 GPA 3.0+",
+      "CS는 반드시 CS로 지원해야 함 (입학 후 변경 불가)",
+      "EE: MATH 19A+19B + Linear Alg + Diff Eq + Physics 3-series+labs (GPA 2.8+)",
+      "EFFECTIVE FALL 2026: EE에 CSE 12 추가 필수",
+      "기타 전공: UCSC 카탈로그 및 ASSIST.org 확인"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Riverside — BCOE",
+    "reqCount": 3,
+    "reqs": [
+      "ASSIST.org 필수 — UCR은 학과별 필수과목 목록을 공식 웹에 게시하지 않음",
+      "공식: 'Use ASSIST.org to see the prerequisites'",
+      "학과별 세부 과목은 ASSIST.org에서 학교-BCOE 아티큘레이션 확인"
+    ]
+  },
+  {
+    "school": "UC System",
+    "major": "UC Merced — School of Engineering",
+    "reqCount": 4,
+    "reqs": [
+      "공통: CHEM 002 + MATH 021+022+023+024 + Physics 008+008L + Physics 009+009L",
+      "CSE 추가: CSE 020+021 (B 이상 필수) + CSE 030",
+      "IGETC strongly discouraged",
+      "English Composition: 1과목 C 이상으로 충족 (다른 UC 2과목과 다름)"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Aerospace Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목: Mechanics + E&M + Waves/Optics/Modern)",
+      "Gen Chemistry 1과목+lab",
+      "MATLAB or engineering programming 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Biomedical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목)",
+      "Gen Chemistry 1년 (2과목)+lab",
+      "MATLAB or engineering programming 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Biomedical Engineering: Premedical",
+    "reqCount": 10,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목)",
+      "Gen Chemistry 1년 (2과목)+lab",
+      "Organic Chemistry 1년 (2과목)+lab",
+      "MATLAB or engineering programming 1과목",
+      "UCI 공대 내 Organic Chemistry 필수 유일한 전공"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Chemical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Gen Chemistry 1년 (2과목)+lab",
+      "MATLAB or engineering programming 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Civil Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2 + lab (2과목 only)",
+      "Gen Chemistry 1년 (2과목)+lab",
+      "MATLAB or engineering programming 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Computer Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목)",
+      "Programming Concepts & Methodology 1과목",
+      "Circuit Analysis 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Computer Science & Engineering",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2 + lab (2과목)",
+      "OOP 1년 (Python/Java/C++ — B 이상 필수)",
+      "Advanced course 1개 (Data Structures/SWE/Discrete Math/Boolean Algebra/Linear Alg/Multivariable Calc 중 택1 — B 이상)",
+      "최소 성적 B (다른 학과 C와 다름)",
+      "C, C#, VB 불인정 / intro CS 과목 불인정",
+      "TAG 미참여 (최소 GPA 3.0만 적용)"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Electrical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목)",
+      "Programming Concepts & Methodology 1과목",
+      "Circuit Analysis 1과목",
+      "Circuit Analysis 필수"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Environmental Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2 + lab (2과목 only)",
+      "Gen Chemistry 1년 (2과목)+lab",
+      "MATLAB or engineering programming 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Materials Science & Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목)",
+      "Gen Chemistry 1년 (2과목)+lab",
+      "MATLAB or engineering programming 1과목"
+    ]
+  },
+  {
+    "school": "UC Irvine",
+    "major": "Mechanical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1+2 (1yr single variable)",
+      "Multivariable Calculus (1과목)",
+      "Differential Equations (CS&E 제외)",
+      "Linear Algebra (CS&E 제외)",
+      "Programming/MATLAB (학과별 상이)",
+      "Physics 1+2+3 + lab (3과목)",
+      "Gen Chemistry 1과목+lab (1년 아님)",
+      "MATLAB or engineering programming 1과목",
+      "Gen Chem 1과목 (Aerospace와 동일 — 1년/2과목 아님)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Biological Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CS 1110 or CS 1112 (Introduction to Computing): 4cr",
+      "BIOG 1500 (Investigative Biology Laboratory): 2cr",
+      "BIOG 1440 / BIOG 1445 / BIOMG 1350 / BIOEE 1610",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations for Engineers): 4cr",
+      "MATH 2940 (Linear Algebra for Engineers): 4cr",
+      "PHYS 2213 (Physics II Electromagnetism): 4cr",
+      "CHEM 1570 or CHEM 3570 (Organic & Biological Chemistry): 3cr",
+      "ENGRD 2020 (Statics & Mechanics of Solids): 4cr",
+      "BEE 2220 (Sustainable Engineering Thermodynamics): 3cr",
+      "BEE/ENGRD 2600 (Principles of Biological Engineering)",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Biomedical Engineering",
+    "reqCount": 17,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CS 1110 or CS 1112 (Introduction to Computing): 4cr",
+      "BME에서는 CS가 Junior 단계로 분류됨 (Sophomore 단계 아님)",
+      "ENGRI 입문 과목 1개: 3cr (any ENGRI course)",
+      "BIOMG 1350 (Cell & Developmental Biology): 3cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "ENGRD 2020 (Statics & Mechanics of Solids): 4cr",
+      "BME 2000 / ENGRD 2202 (Biomedical Transport Phenomena): 3cr",
+      "BME 2110 / ENGRD 2111 (Biomolecular Thermodynamics): 3cr",
+      "CS 1112 or CS 1110 (Computing — Junior 단계): 4cr",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Chemical Engineering",
+    "reqCount": 17,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CHEM 2080 (General Chemistry II): 3cr + CHEM 2081 (Lab): 1cr",
+      "CS 1110 or CS 1112 (Introduction to Computing): 4cr",
+      "ENGRI 입문 과목 1개: 3cr (any ENGRI course)",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "ENGRD 2190 (Chemical Process Design and Analysis): 4cr",
+      "CHEM 2900 (Introductory Physical Chemistry Lab): 2cr",
+      "CHEM 3890 (Honors Physical Chemistry I): 4cr",
+      "CHEME 2200 (Physical Chemistry II for Engineers): 4cr",
+      "CHEME 3230 (Fluid Mechanics): 3cr",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Civil Engineering",
+    "reqCount": 17,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "ENGRI 입문 과목 1개: 3cr (any ENGRI course)",
+      "CS 1110 or CS 1112 (Introduction to Computing): 4cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "ENGRD 2020 (Statics & Mechanics of Solids): 4cr",
+      "ENGRD 추가 1과목 (any ENGRD course)",
+      "다음 중 1과목 이상 (택1):",
+      "PHYS 2214 (Physics III) OR",
+      "CHEM 2080+2081 (Gen Chem II+Lab) OR",
+      "CHEM 1570 (Organic & Biological Chemistry)",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Earth and Atmospheric Sciences",
+    "reqCount": 19,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "대학 수준 Biology 1과목 (다음 중 택1):",
+      "BIOG 1140 / BIOG 1440 / BIOEE 1610 / BIOEE 1780 / BIOMG 1350 / BIOSM 1610",
+      "ENGRI 입문 과목 1개: 3cr (any ENGRI course)",
+      "CS 1110 or CS 1112 (Introduction to Computing): 4cr",
+      "CS는 Junior 단계에 배치됨",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "EAS 2250 (The Earth System): 4cr",
+      "CS 1112 or CS 1110 (Computing — Junior 단계): 4cr",
+      "ENGRD 추가 1과목 (any ENGRD course)",
+      "다음 중 1과목 (택1):",
+      "CHEM 2080+2081 OR CHEM 1570 OR PHYS 2214",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Electrical & Computer Engineering",
+    "reqCount": 19,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "다음 중 1과목 (택1):",
+      "ECE/ENGRD 2100 (Intro to Circuits): 4cr OR",
+      "ENGRD 2300 (Digital Logic & Computer Organization): 4cr",
+      "CS 1110 or CS 1112 (Introduction to Computing): 4cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "Successful transfer applicants complete digital logic design, circuits, or signal processing before applying",
+      "introductory coursework in digital logic design, fundamental properties",
+      "of circuits, or signal processing before applying'",
+      "MATH 2930 or MATH 2940 중 1과목",
+      "(Differential Equations 4cr OR Linear Algebra 4cr)",
+      "위 두 과목 중 Junior 단계에서 나머지 1과목",
+      "PHYS 2213 (Physics II): 4cr",
+      "PHYS 2214 (Physics III): 4cr",
+      "ECE/ENGRD 2100 또는 ENGRD 2300 중 나머지 1과목 (Sophomore에서 1개 이수 후)",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Engineering Physics",
+    "reqCount": 16,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "Physics I: PHYS 1112 OR PHYS 1116 (택1) + PHYS 1110 Lab: 4cr",
+      "CS 1110 or CS 1112: 4cr",
+      "ENGRI 입문 과목 1개: 3cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 or PHYS 2217 (Physics II): 4cr",
+      "PHYS 2214 or PHYS 2218+PHYS 2210 (Physics III): 4cr",
+      "AEP 3200 (Introductory Mathematical Physics): 4cr",
+      "ENGRD 추가 1과목 (any ENGRD course)",
+      "Liberal Studies ×3 (각 3-4cr)",
+      "Liberal Studies 3개 필요 (다른 학과는 대부분 2개)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Environmental Engineering",
+    "reqCount": 19,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CS 1110 or CS 1112: 4cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "Biology·Chemistry 이수 순서 무관 (공식 명시)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "Biology 과목 1개 (다음 중 택1):",
+      "BIOEE 1610 / BIOEE 1780 / BIOG 1440 / BIOG 1445 / BIOMG 1350",
+      "Organic Chemistry 관련 1과목 (다음 중 택1):",
+      "CHEM 1570 / CHEM 3570 / CHEM 3530",
+      "ENGRD/BEE 2510 (Engineering Processes for Environmental Sustainability): 3cr",
+      "BEE 2220 or ENGRD 2210 (Thermodynamics): 3cr",
+      "CEE/ENGRD 3200 (Engineering Computation): 4cr",
+      "CEE 3510 (Environmental Quality Engineering): 3cr",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Materials Science & Engineering",
+    "reqCount": 14,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CS 1112 or CS 1110: 4cr",
+      "ENGRI 입문 과목 1개: 3cr",
+      "Writing Seminars 2개 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "MSE/ENGRD 2610 OR MSE/ENGRD 2620 중 1과목",
+      "MSE 2060 (Atomic & Molecular Structure of Matter): 3cr",
+      "ENGRD 추가 1과목 (any ENGRD course)",
+      "Liberal Studies 1개 (3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Mechanical Engineering",
+    "reqCount": 12,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CS 1110 or CS 1112: 4cr",
+      "ENGRI 입문 과목 1개: 3cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Differential Equations): 4cr",
+      "MATH 2940 (Linear Algebra): 4cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "ENGRD 2020 (Statics & Mechanics of Solids): 4cr",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "Cornell (Duffield)",
+    "major": "Operations Research & Engineering",
+    "reqCount": 14,
+    "reqs": [
+      "MATH 1910 (Calculus 2 수준): 4cr",
+      "MATH 1920 (Multivariable Calculus): 4cr",
+      "PHYS 1112 (Physics I Mechanics & Heat): 3cr + PHYS 1110 (Lab): 1cr",
+      "CHEM 2090 (Engineering General Chemistry): 3cr + CHEM 2091 (Lab): 1cr",
+      "CS 1110 or CS 1112: 4cr",
+      "ENGRI 입문 과목 1개: 3cr",
+      "MATH 2940 (Linear Algebra for Engineers): 4cr",
+      "ENGRD 2700 (Basic Engineering Probability & Statistics): 4cr",
+      "Writing Seminars ×2 (각 3cr)",
+      "MATH 2930 (Diff Eq) OR MATH 3040 OR CS 2800 중 택1",
+      "CS/ENGRD 2110 (Object-Oriented Programming & Data Structures): 3cr",
+      "PHYS 2213 (Physics II): 4cr",
+      "CHEM 2080+2081 / MATH 3110 / MATH 3360 / MATH 2930 / MATH 3040 / CS 2800",
+      "Liberal Studies ×2 (각 3-4cr)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Biomedical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Chemical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Civil Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Computer Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Electrical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Engineering Mechanics (+ Aerospace Engineering Option)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Engineering Physics",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Environmental Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Geological Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Industrial Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Materials Science and Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Mechanical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UW-Madison",
+    "major": "Nuclear Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 221)",
+      "Calculus II (MATH 222)",
+      "General Chemistry I (CHEM 103 or CHEM 109)",
+      "General Physics I (PHYSICS 201 or PHYSICS 207)",
+      "Communication Part A (English Composition)",
+      "Introduction to Engineering (INTEREGR 170)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Aerospace Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Architectural Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Biomedical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Chemical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Civil Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Computational Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Electrical & Computer Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Environmental Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Geosystems Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Mechanical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "UT Austin (Cockrell)",
+    "major": "Petroleum Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (MATH 408C or equivalent)",
+      "Calculus II (MATH 408D/L/M or equivalent)",
+      "Engineering Physics I with Lab (PHYS 303K & PHYSICS 103M or equivalent)",
+      "General Chemistry I (CHEM 301 or equivalent)",
+      "Four Technical Courses completed (math, physics, chemistry, biology, geology, CS, or engineering)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Aeronautical & Astronautical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Agricultural Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Biological Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Biomedical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Chemical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Civil Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Computer Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Construction Engineering & Management (CEM)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Electrical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Environmental & Ecological Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Environmental & Natural Resources Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Industrial Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Interdisciplinary Engineering (IDES)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Mechanical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Motorsports Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Multidisciplinary Engineering (MDE)",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Purdue",
+    "major": "Nuclear Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MA 16100 or MA 16500)",
+      "Calculus II (MA 16200 or MA 16600)",
+      "Calculus-based Chemistry I (CHM 11500)",
+      "Calculus-based Physics I (PHYS 17200)",
+      "Advanced Course in Math, Chemistry, or Physics (1 course)",
+      "English Composition or Speech (1 course)"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Aerospace Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Biomedical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Chemical & Biomolecular Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Civil Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Computer Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab",
+      "Intro Programming"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Computer Science",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Intro Programming",
+      "Lab Science Elective Sequence (2 Courses)"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Electrical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab",
+      "Intro Programming"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Environmental Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Industrial Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Physics 1 + Lab",
+      "Lab Science Elective (1 Course)"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Materials Science & Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Mechanical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "Georgia Tech",
+    "major": "Nuclear & Radiological Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition 1",
+      "English Composition 2",
+      "Calculus 1",
+      "Calculus 2",
+      "Chemistry 1 + Lab",
+      "Physics 1 + Lab"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Bioengineering (BioE)",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Civil & Environmental Engineering",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "EECS (Electrical Engineering & Computer Science)",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Industrial Engineering & Operations Research (IEOR)",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Materials Science & Engineering (MSE)",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Mechanical Engineering (ME)",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Nuclear Engineering (NE)",
+    "reqCount": 2,
+    "reqs": [
+      "English R1A (Reading & Composition Part A): letter grade, C- 이상",
+      "English R1B (Reading & Composition Part B): letter grade, C- 이상"
+    ]
+  },
+  {
+    "school": "UC Berkeley (COE)",
+    "major": "Chemical Engineering\n★ College of Chemistry 소속 (COE 아님)",
+    "reqCount": 9,
+    "reqs": [
+      "Chemical Engineering은 College of Engineering(COE) 소속이 아닌",
+      "College of Chemistry(COC) 소속 — COE와 별도 규정 적용",
+      "(공식: 'Note: Chemical Engineering is in the College of Chemistry')",
+      "COC 공식 게시 ChemE 편입 필수과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission):",
+      "Chemistry 1A + 1AL + 1B (General Chemistry + Lab sequence)",
+      "Mathematics 51 + 52 + 53 + 54 (Multivariable Calc + Linear Algebra/ODE)",
+      "Physics 7A + 7B (2학기 물리 — 7B 포함)",
+      "Minimum grade: B or A grades expected in math and science courses",
+      "입학 전 수강 과목은 고려되지 않음 (summer before enrollment 불인정)"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Aerospace Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (AERSP, Penn State 이수)】:",
+      "CHEM 110 (Chemical Principles I, 3cr)",
+      "EDSGN 100 (Intro to Engineering Design, 2cr)",
+      "MATH 140 (Calculus I, 4cr)",
+      "MATH 141 (Calculus II, 4cr)",
+      "PHYS 211 (General Physics: Mechanics, 4cr)",
+      "ETM 최소 GPA: 3.2"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Architectural Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (AE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Artificial Intelligence Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (AIE, Penn State 이수)】:",
+      "CMPSC 121 or CMPSC 131 (Intro to Programming I, 3cr)",
+      "CMPSC 122 or CMPSC 132 (Intro to Programming II, 3cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.6"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Biological Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (BE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Biomedical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (BME, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.6"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Chemical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (CHE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Civil Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (CE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Computer Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (CMPEN, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "CMPSC 121 or CMPSC 131 (Intro to Programming I, 3cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "CS 1과목 필요",
+      "ETM 최소 GPA: 3.2"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Computer Science (비UP: Beaver/Brandywine/Hazelton)",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (CSENG, Penn State 이수)】:",
+      "CMPSC 121 or CMPSC 131 (3cr)",
+      "CMPSC 122 or CMPSC 132 (3cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.6"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Computer Science (University Park)",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (CMPSC, Penn State 이수)】:",
+      "CMPSC 121 or CMPSC 131 (3cr)",
+      "CMPSC 122 or CMPSC 132 (3cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 3.20"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Data Sciences",
+    "reqCount": 10,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (DTSCE, Penn State 이수)】:",
+      "CMPSC 121 or CMPSC 131 (3cr)",
+      "CMPSC 122 or CMPSC 132 (3cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "STAT 200 or DS 200 (Statistics/Data Science Intro, 3cr)",
+      "3rd~5th semester standing 필요",
+      "ETM 최소 GPA: 2.00"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Electrical Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (EE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "CMPSC 121 or CMPSC 131 or EDSGN 100 중 택1",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "CS 또는 EDSGN 중 택1 (다른 학과는 EDSGN 고정)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Engineering (General)",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (GE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Engineering Science",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (ESC, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 3.00"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Industrial Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (IE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Mechanical Engineering (비UP: Scranton)",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (MEENG, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.6"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Mechanical Engineering (University Park)",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (ME, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 3.20"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "major": "Nuclear Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Penn State에서 12~25학점 이수 후 전공 배정 신청",
+      "ETM 필수과목 = Penn State 재학 중 이수하는 과목",
+      "【ETM 필수과목 (NUCE, Penn State 이수)】:",
+      "CHEM 110 (3cr)",
+      "EDSGN 100 (2cr)",
+      "MATH 140 (4cr)",
+      "MATH 141 (4cr)",
+      "PHYS 211 (4cr)",
+      "ETM 최소 GPA: 2.60"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Aerospace Engineering",
+    "reqCount": 17,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204)",
+      "Linear Algebra (MATH 2114)",
+      "Diff Equations (MATH 2214)",
+      "Physics 2 (PHYS 2306)",
+      "Statics (ESM 2104)",
+      "Solid Mechanics (ESM 2204)",
+      "Dynamics (ESM 2304)",
+      "Circuits (AOE 2054, equiv EGR 271)",
+      "Programming (CS 1044 or 1064 or 1114 -- one required)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Biological Systems Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204, 3 cr, equiv MTH 265)",
+      "Linear Algebra (MATH 2114, 3 cr, equiv MTH 266)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 2 (PHYS 2306, 4 cr, equiv PHY 242)",
+      "Statics (ESM 2104, 3 cr, equiv EGR 240)",
+      "Dynamics (ESM 2304, 3 cr, equiv EGR 246)",
+      "Chemistry 2 + Lab (CHEM 1036, 3 cr, equiv CHM 112)",
+      "Biology 1 (BIOL 1105, 3 cr, equiv BIO 101) OR Engineering topics (ISE 2014, 2 cr, equiv EGR 206) -- one required",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Biomedical Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204)",
+      "Linear Algebra (MATH 2114)",
+      "Diff Equations (MATH 2214)",
+      "Physics 2 (PHYS 2306)",
+      "Statics (ESM 2104)",
+      "Solid Mechanics (ESM 2204)",
+      "Dynamics (ESM 2304)",
+      "Biology 1 (BIOL 1105, 4 cr, equiv BIO 101)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Building Construction",
+    "reqCount": 4,
+    "reqs": [
+      "MATH 1025 (Elementary Calculus) OR MATH 1225 (Calculus 1) -- pick one; full Calc 1/2/3 NOT required",
+      "English Composition 1 (ENGL 1105)",
+      "English Composition 2 (ENGL 1106)",
+      "No Physics, Chemistry, or Engineering Foundations courses listed as required on official Transfer Roadmap"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Chemical Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204, 4 cr, equiv MTH 265)",
+      "Linear Algebra (MATH 2114, 3 cr, equiv MTH 266)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 2 (PHYS 2306, 4 cr, equiv PHY 242)",
+      "Chemistry 2 + Lab (CHEM 1036+1046, 4 cr, equiv CHM 112)",
+      "Organic Chemistry + Lab (CHEM 2535+2545, 5 cr, equiv CHM 241/245)",
+      "CHE 2114 (Chemical Engineering 1, 3 cr, equiv EGR 231)",
+      "CHE 2164 (Chemical Engineering 2, 3 cr, equiv EGR 232)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Civil Engineering",
+    "reqCount": 14,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204, 4 cr, equiv MTH 265)",
+      "Linear Algebra (MATH 2114, 3 cr, equiv MTH 266)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Statics (ESM 2104, 3 cr, equiv EGR 240)",
+      "Solid Mechanics (ESM 2204, 3 cr, equiv EGR 246)",
+      "Engineering topics (ISE 2014, 2-3 cr, equiv EGR 206)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Computer Engineering",
+    "reqCount": 15,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "MATH 2114 (Linear Algebra, 3 cr) -- equiv MTH 265, 266, OR 288 (one of: Calc3/Linear/Discrete)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 2 (PHYS 2306, 4 cr, equiv PHY 242)",
+      "ECE 2544 (Digital Design, 3 cr, equiv EGR 270)",
+      "ECE 1004 + ECE 2514 (combined, 3 cr total, equiv EGR 125 AND EGR 271 -- same course satisfies both)",
+      "ECE 2024 (Circuits & Devices, 3 cr, equiv EGR 272)",
+      "MATH 2204 (Calc 3, 3 cr, equiv MTH 265) -- also listed separately at bottom of PDF",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Computer Science",
+    "reqCount": 15,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204, 4 cr, equiv MTH 265)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 1 ONLY (PHYS 2305 -- Physics 2 NOT required for CS)",
+      "CS 1114 (Intro Software Design, 4 cr, equiv CSC 222)",
+      "CS 2114 (Software Design & Data Structures, 4 cr, equiv CSC 223)",
+      "MATH 2534 (Intro Discrete Math, 3 cr, equiv CSC 208 or MTH 288)",
+      "CS 2505 (Computer Organization 1, 3 cr, equiv CSC 215)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Construction Engineering & Management",
+    "reqCount": 15,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204)",
+      "Linear Algebra (MATH 2114)",
+      "Diff Equations (MATH 2214)",
+      "Statics (ESM 2104)",
+      "Solid Mechanics (ESM 2204)",
+      "Economics 1 (ECON 2005, equiv ECO 202)",
+      "Economics 2 (ECON 2006, equiv ECO 201)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Electrical Engineering",
+    "reqCount": 14,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Linear Algebra (MATH 2114, 3 cr, equiv MTH 266)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 2 (PHYS 2306, 4 cr, equiv PHY 242)",
+      "ECE 2544 (Digital Design, 4 cr, equiv EGR 270)",
+      "ECE 1004 + ECE 2514 (combined, 4 cr total, equiv EGR 125 AND EGR 271)",
+      "ECE 2024 (Circuits & Devices, 4 cr, equiv EGR 272)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Industrial & Systems Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204, 4 cr, equiv MTH 265)",
+      "Linear Algebra (MATH 2114, 3 cr, equiv MTH 266)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 2 (PHYS 2306, 4 cr, equiv PHY 242)",
+      "Statics (ESM 2104, 3 cr, equiv EGR 240)",
+      "Dynamics OR Solid Mechanics (ESM 2304 equiv EGR 245 OR ESM 2204 equiv EGR 246) -- pick one",
+      "Engineering topics (ISE 2014, 2-3 cr, equiv EGR 206)",
+      "Intro CS / Python (CS 1064, 3 cr, equiv CSC 221)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Materials Science & Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204, 4 cr, equiv MTH 265)",
+      "Linear Algebra (MATH 2114, 3 cr, equiv MTH 266)",
+      "Diff Equations (MATH 2214, 3 cr, equiv MTH 267)",
+      "Physics 2 (PHYS 2306, 4 cr, equiv PHY 242)",
+      "Chemistry 2 + Lab (CHEM 1036, 4 cr, equiv CHM 112)",
+      "Statics (ESM 2104, 3 cr, equiv EGR 240)",
+      "Solid Mechanics (ESM 2204, 3 cr, equiv EGR 246)",
+      "Economics 1 (ECON 2005, 3 cr, equiv ECO 202) -- Pathways Concept 3 requirement",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Mechanical Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204)",
+      "Linear Algebra (MATH 2114)",
+      "Diff Equations (MATH 2214)",
+      "Physics 2 (PHYS 2306)",
+      "Statics (ESM 2104)",
+      "Solid Mechanics (ESM 2204)",
+      "Dynamics (ESM 2304)",
+      "Circuits (ECE 2054)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Mining Engineering",
+    "reqCount": 16,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204)",
+      "Linear Algebra (MATH 2114)",
+      "Diff Equations (MATH 2214)",
+      "Physics 2 (PHYS 2306)",
+      "Statics (ESM 2104)",
+      "Solid Mechanics (ESM 2204)",
+      "Dynamics (ESM 2304)",
+      "Geology 1 + Lab (GEOS 1004 + 1104, equiv GOL 105 or 110)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "Virginia Tech",
+    "major": "Ocean Engineering (BSAOE)",
+    "reqCount": 17,
+    "reqs": [
+      "Calculus 1 (MATH 1225)",
+      "Calculus 2 (MATH 1226)",
+      "Physics 1 + Lab (PHYS 2305, 4 cr)",
+      "General Chemistry 1 + Lab (CHEM 1035 + 1045, 4 cr)",
+      "Engineering Foundations 1 (ENGE 1215)",
+      "Engineering Foundations 2 (ENGE 1216)",
+      "English Composition 1 (ENGL 1105)",
+      "Calculus 3 (MATH 2204)",
+      "Linear Algebra (MATH 2114)",
+      "Diff Equations (MATH 2214)",
+      "Physics 2 (PHYS 2306)",
+      "Statics (ESM 2104)",
+      "Solid Mechanics (ESM 2204)",
+      "Dynamics (ESM 2304)",
+      "Circuits (AOE 2054, equiv EGR 271)",
+      "Programming (CS 1044 or 1064 or 1114 -- one required)",
+      "English Comp 2 (ENGL 1106)"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Aerospace Engineering (MAE)",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "APMA 2130 (ODE) -- 3 credits; if transferred as 3 of 4 credits, makeup option exists",
+      "Dept-specific add'l reqs determined after major declaration"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Biomedical Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "Biology coursework with cellular/molecular content expected for BME"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Chemical Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "Strong chemistry background required; sufficient to prepare for Organic Chemistry"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Civil Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Computer Engineering (ECE)",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "ECE 2330 (Digital Logic, 4 cr, equiv EGR 270)",
+      "ECE 2300 (Circuits, 4 cr, equiv EGR 271)",
+      "If transferred 3 of 4 required credits for APMA 2120 or APMA 2130 -> makeup option exists"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Computer Science (BSCS)",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "CS 1110 (Intro Programming) -- mandatory",
+      "BSCS requires 3 additional APMA courses beyond SEAS general reqs (from APMA 3080/3100/3140 range)",
+      "APMA 3120 and APMA 3150 cannot BOTH count toward BSCS degree"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Electrical Engineering (ECE)",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "ECE 2330 (Digital Logic, 4 cr, equiv EGR 270)",
+      "ECE 2300 (Circuits, 4 cr, equiv EGR 271)"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Engineering Science",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Materials Science & Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122",
+      "APMA 3110 (Applied Statistics, 3 cr, equiv MTH 283)"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Mechanical Engineering (MAE)",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122"
+    ]
+  },
+  {
+    "school": "University of Virginia (UVA)",
+    "major": "Systems Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus 1 (APMA 1090, 3 cr) -- NEW req for students entering Fall 2025+",
+      "Calculus 2 (APMA 1110, 4 cr)",
+      "Calculus 3 / Multivariable (APMA 2120, 4 cr)",
+      "Diff Equations (APMA 2130, 3 cr)",
+      "Physics 1 + Lab (PHYS 1425/1429, 4 cr) -- LAB MUST be in-person; online lab does NOT receive credit",
+      "Physics 2 + Lab (PHYS 2415/2419, 4 cr) -- LAB MUST be in-person",
+      "Gen Chemistry 1 + Lab (CHEM 1410/1411, 4 cr) -- only offered at UVA in fall semester",
+      "Intro Programming (CS 1110/1111/1112/1113, 3 cr)",
+      "Engineering Foundations 1 (ENGR 1010) -- waivable with VCCS EGR 121+122"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Biomedical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "Chemistry sufficient to prepare for Organic Chemistry",
+      "Biology course that includes cellular, molecular, and genetics work"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Computer Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Computer Science",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "CS EXCEPTION: instead of 2 semesters calculus-based physics, may substitute 8 units of approved natural science from: Anthropology, Biology, Chemistry, Earth & Planetary Science..."
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Computer Science + Economics",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "CS EXCEPTION applies: may substitute 8 units natural science for 2 semesters physics"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Computer Science + Math",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "CS EXCEPTION applies: may substitute 8 units natural science for 2 semesters physics",
+      "Strong mathematics background required for dual degree"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Data Science",
+    "reqCount": 6,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "CS EXCEPTION likely applies: may substitute 8 units natural science for 2 semesters physics -- confirm with McKelvey admissions"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Business + Computer Science",
+    "reqCount": 4,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Business + CS applicants: confirm with McKelvey whether Calc 3 and full physics sequence required"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Electrical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Systems Science & Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Chemical Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "Biology (1 semester, cellular/molecular/developmental content) [ChemE additional req]",
+      "Chemistry 2 (General Chemistry 2nd semester with lab) [ChemE additional req]",
+      "Organic Chemistry (1 semester with lab) [ChemE additional req]"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Environmental Engineering",
+    "reqCount": 10,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer",
+      "Biology (1 semester, cellular/molecular/developmental content) [EnvE additional req]",
+      "Chemistry 2 (General Chemistry 2nd semester with lab) [EnvE additional req]",
+      "Organic Chemistry (1 semester with lab) [EnvE additional req]"
+    ]
+  },
+  {
+    "school": "Washington University in St. Louis (WashU)",
+    "major": "Mechanical Engineering",
+    "reqCount": 7,
+    "reqs": [
+      "English Composition (1 course)",
+      "Calculus 1",
+      "Calculus 2",
+      "Calculus 3",
+      "Physics 1: Calculus-based Mechanics + Lab",
+      "Physics 2: Calculus-based E&M + Lab",
+      "Prepared for Differential Equations (ODE) after transfer"
+    ]
+  },
+  {
+    "school": "UNC Chapel Hill",
+    "major": "Applied Sciences BS -- Materials Engineering track",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus 1 (MATH 231 at UNC)",
+      "Gen Chemistry 1 + Lab (CHEM 101/L at UNC)",
+      "Physics 1: Calculus-based Mechanics (PHYS 118 at UNC)",
+      "English Composition (ENGL 105 at UNC)",
+      "Program launched Fall 2024 (class of 2028+) -- RESTRICTED capacity"
+    ]
+  },
+  {
+    "school": "UNC Chapel Hill",
+    "major": "Applied Sciences BS -- Environmental Engineering track",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus 1 (MATH 231 at UNC)",
+      "Gen Chemistry 1 + Lab (CHEM 101/L at UNC)",
+      "Physics 1: Calculus-based Mechanics (PHYS 118 at UNC)",
+      "English Composition (ENGL 105 at UNC)",
+      "Program launched Fall 2024 (class of 2028+) -- RESTRICTED capacity"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Aeronautics & Astronautics (Course 16)\nSB: Aerospace Engineering (16)\nSB: Engineering flexible (16-ENG)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Biological Engineering (Course 20)\nSB: Biological Engineering (20)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Chemical Engineering (Course 10)\nSB: Chemical Engineering (10)\nSB: Chemical-Biological Engineering (10-B)\nSB: Chemical Engineering advanced (10-C)\nSB: Engineering flexible (10-ENG)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Civil & Environmental Engineering (Course 1)\nSB: General Engineering (1-ENG)\n학제간 SB: Climate System Science & Engineering (1-12)*\n(*interdisciplinary — Course 1과 Course 12 공동)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Electrical Engineering & Computer Science (Course 6) — MIT 최대 학과\nSB: Electrical Science & Engineering (6-1)\nSB: Electrical Eng & Computer Science (6-2)\nSB: Computer Science & Engineering (6-3)\nSB: AI & Decision Making (6-4)\nSB: Electrical Engineering with Computing (6-5)\n학제간 SB: CS & Molecular Biology (6-7)*\n학제간 SB: Computation & Cognition (6-9)*\n학제간 SB: CS, Economics & Data Science (6-14)*",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Materials Science & Engineering (Course 3)\nSB: Materials Science & Engineering (3)\nSB: Materials Science & Engineering flexible (3-A)\nSB: Archaeology & Materials (3-C)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Mechanical Engineering (Course 2)\nSB: Mechanical Engineering (2)\nSB: Mechanical & Ocean Engineering (2-OE)\nSB: Engineering flexible (2-A)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "MIT",
+    "major": "Nuclear Science & Engineering (Course 22)\nSB: Nuclear Science & Engineering (22)\nSB: Engineering flexible (22-ENG)",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I (Single Variable Calculus)",
+      "Calculus II (Multivariable Calculus)",
+      "Calculus-based Physics I (Mechanics)",
+      "Calculus-based Physics II (Electricity & Magnetism)",
+      "General Chemistry I with Lab"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Aeronautics & Astronautics (AA-BS)\nDepartment: Aeronautics & Astronautics",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Bioengineering (BIOE-BS)\nDepartment: Bioengineering",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Chemical Engineering (CHEMENG-BS)\nDepartment: Chemical Engineering",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Civil Engineering (CEE-BS)\nDepartment: Civil & Environmental Engineering\n※ 같은 학과에서 Environmental Engineering도 제공",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Environmental Engineering (CEE 학과 소속 — BS)\nDepartment: Civil & Environmental Engineering\n※ Civil Engineering과 같은 학과; 별도 BS 학위",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Computer Science (CS-BS)\nDepartment: Computer Science",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Electrical Engineering (EE-BS)\nDepartment: Electrical Engineering",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Management Science & Engineering (MS&E-BS)\nDepartment: Management Science & Engineering",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Materials Science & Engineering (MATSCI-BS)\nDepartment: Materials Science & Engineering",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Mechanical Engineering (ME-BS)\nDepartment: Mechanical Engineering",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Engineering — Atmosphere & Energy (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Engineering — Biomechanical Engineering (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Engineering — Biomedical Computation (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Engineering — Engineering Physics (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Engineering — Sustainable Architecture & Engineering (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속\n※ Architectural Design subplan: 2023년 이전 입학자만 (현재 신입 없음)",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Stanford University",
+    "major": "Individually Designed Major in Engineering (IDMEN-BS)\n※ 위 16개 defined 전공에 해당하지 않는 분야 지망자가 교수 2인과 설계하는 자체 전공. 입학 후 junior 말까지 신청.",
+    "reqCount": 1,
+    "reqs": [
+      "[출처: admission.stanford.edu/apply/transfer/credit.html + engineering.stanford.edu/students-academics/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Applied Mathematics (BA or BS)\n※ SEAS 소속; engineering 입학 지침 적용",
+    "reqCount": 3,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]",
+      "Applied Math 추가 prerequisites: 컴퓨터 프로그래밍, 다변수 미적분학, 선형대수학 (공식 명시)"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Applied Physics (BS)",
+    "reqCount": 2,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Biomedical Engineering (BS + combined BS/MS 가능)",
+    "reqCount": 2,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Chemical Engineering\nBS (ABET 인증) | BS: Engineering Sciences—Chemical",
+    "reqCount": 2,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Computer Science\nBS or BA | BS: CS+Economics | BS: CS+Mathematics | BA: CS+Psychology | BA/BS: Computing & Linguistics | BA: Computing & Arts",
+    "reqCount": 3,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]",
+      "※ CS BA 포함 모든 CS 트랙에 engineering 입학 지침 적용."
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Electrical Engineering\nBS (ABET 인증, 실질적으로 'Electrical & Computer Engineering') | BS/BA: Engineering Sciences—Electrical",
+    "reqCount": 2,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Environmental Engineering\nBS | BS/BA: Engineering Sciences—Environmental",
+    "reqCount": 2,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Yale University",
+    "major": "Mechanical Engineering\nBS (ABET 인증) | BS/BA: Engineering Sciences—Mechanical",
+    "reqCount": 2,
+    "reqs": [
+      "【Yale 공식 engineering transfer 필수 과목 — 2가지만】 ① 대학 수준 단변수 미적분학(single-variable calculus) full sequence 완료 ② 대학 수준 입문 물리학(introductory physics) full sequence 완료",
+      "[출처: admissions.yale.edu/transfer-eligibility 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Harvard University",
+    "major": "Applied Mathematics (AB or AB/SM)\n※ Harvard는 'concentration' 사용\nSecondary Field(minor) 별도 제공",
+    "reqCount": 3,
+    "reqs": [
+      "최대 16 semester-long courses 이전",
+      "Harvard SEAS 학부 전공 6개: Applied Mathematics, Bioengineering, Computer Science, Electrical Engineering, Environmental Science & Engineering, Materials Science & Mechanical Enginee...",
+      "[출처: college.harvard.edu/admissions/apply/transfer-applicants + seas.harvard.edu/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Harvard University",
+    "major": "Bioengineering (AB or SB)\nSB = 'Engineering Sciences SB (Bioengineering track)'\nAB = 'Biomedical Engineering AB' (구어 표현)\n※ 'Biomedical Engineering' 독립 전공 없음 — seas.harvard.edu 확인",
+    "reqCount": 3,
+    "reqs": [
+      "최대 16 semester-long courses 이전",
+      "Harvard SEAS 학부 전공 6개: Applied Mathematics, Bioengineering, Computer Science, Electrical Engineering, Environmental Science & Engineering, Materials Science & Mechanical Enginee...",
+      "[출처: college.harvard.edu/admissions/apply/transfer-applicants + seas.harvard.edu/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Harvard University",
+    "major": "Computer Science (AB or AB/SM)\nSecondary Field(minor) 별도 제공",
+    "reqCount": 3,
+    "reqs": [
+      "최대 16 semester-long courses 이전",
+      "Harvard SEAS 학부 전공 6개: Applied Mathematics, Bioengineering, Computer Science, Electrical Engineering, Environmental Science & Engineering, Materials Science & Mechanical Enginee...",
+      "[출처: college.harvard.edu/admissions/apply/transfer-applicants + seas.harvard.edu/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Harvard University",
+    "major": "Electrical Engineering (AB or SB)\nSB = 'Electrical Engineering SB'\nAB = 'Engineering Sciences AB (Electrical & Computer Engineering track)'",
+    "reqCount": 3,
+    "reqs": [
+      "최대 16 semester-long courses 이전",
+      "Harvard SEAS 학부 전공 6개: Applied Mathematics, Bioengineering, Computer Science, Electrical Engineering, Environmental Science & Engineering, Materials Science & Mechanical Enginee...",
+      "[출처: college.harvard.edu/admissions/apply/transfer-applicants + seas.harvard.edu/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Harvard University",
+    "major": "Environmental Science & Engineering (AB or SB)\nSB = 'Engineering Sciences SB (Environmental Science & Eng track)'\nAB = 'Environmental Science & Engineering AB'",
+    "reqCount": 3,
+    "reqs": [
+      "최대 16 semester-long courses 이전",
+      "Harvard SEAS 학부 전공 6개: Applied Mathematics, Bioengineering, Computer Science, Electrical Engineering, Environmental Science & Engineering, Materials Science & Mechanical Enginee...",
+      "[출처: college.harvard.edu/admissions/apply/transfer-applicants + seas.harvard.edu/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Harvard University",
+    "major": "Materials Science & Mechanical Engineering (AB or SB)\nSB = 'Materials Science & Mechanical Engineering SB'\nAB = 'Engineering Sciences AB (Mechanical & Materials Science & Eng track)'\n※ Mechanical Engineering과 Materials Science가 통합 전공",
+    "reqCount": 3,
+    "reqs": [
+      "최대 16 semester-long courses 이전",
+      "Harvard SEAS 학부 전공 6개: Applied Mathematics, Bioengineering, Computer Science, Electrical Engineering, Environmental Science & Engineering, Materials Science & Mechanical Enginee...",
+      "[출처: college.harvard.edu/admissions/apply/transfer-applicants + seas.harvard.edu/academics 직접 확인 2026-05]"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Applied Mathematics",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Biomedical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Chemical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Civil Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Computer Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Computer Science",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Electrical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Environmental Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Industrial Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Materials Science & Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Northwestern University",
+    "major": "Mechanical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MATH 220-1)",
+      "Calculus II (MATH 220-2)",
+      "Calculus III / Multivariable Calculus (MATH 228-1 & 228-2)",
+      "Linear Algebra (MATH 228-2)",
+      "General Chemistry I w/ Lab (CHEM 110 or equivalent)",
+      "Calculus-based Physics I w/ Lab (PHYSICS 135-1 or equivalent)",
+      "Calculus-based Physics II w/ Lab (PHYSICS 135-2 or equivalent)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "University of Chicago",
+    "major": "Molecular Engineering (Bioengineering Track)",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus I (MATH 15100 or 16100)",
+      "Calculus II (MATH 15200 or 16200)",
+      "Calculus III / Multivariable Calculus (MATH 15300 or 16300)",
+      "Linear Algebra (MATH 19600 or 20200)",
+      "General Chemistry I w/ Lab (CHEM 11100 or 12100)",
+      "General Chemistry II w/ Lab (CHEM 11200 or 12200)",
+      "Physics I w/ Lab (PHYS 13100 or 14100)",
+      "Physics II w/ Lab (PHYS 13200 or 14200)",
+      "Physics III / Modern Physics w/ Lab (PHYS 13300 or 14300)",
+      "Intro Programming (CMSC 12100 or 15100)",
+      "English Composition (1 course)",
+      "Biology I (General Biology w/ Lab)"
+    ]
+  },
+  {
+    "school": "University of Chicago",
+    "major": "Molecular Engineering (Chemical Track)",
+    "reqCount": 12,
+    "reqs": [
+      "Calculus I (MATH 15100 or 16100)",
+      "Calculus II (MATH 15200 or 16200)",
+      "Calculus III / Multivariable Calculus (MATH 15300 or 16300)",
+      "Linear Algebra (MATH 19600 or 20200)",
+      "General Chemistry I w/ Lab (CHEM 11100 or 12100)",
+      "General Chemistry II w/ Lab (CHEM 11200 or 12200)",
+      "Physics I w/ Lab (PHYS 13100 or 14100)",
+      "Physics II w/ Lab (PHYS 13200 or 14200)",
+      "Physics III / Modern Physics w/ Lab (PHYS 13300 or 14300)",
+      "Intro Programming (CMSC 12100 or 15100)",
+      "English Composition (1 course)",
+      "Biology I (General Biology w/ Lab)"
+    ]
+  },
+  {
+    "school": "University of Chicago",
+    "major": "Molecular Engineering (Quantum Track)",
+    "reqCount": 11,
+    "reqs": [
+      "Calculus I (MATH 15100 or 16100)",
+      "Calculus II (MATH 15200 or 16200)",
+      "Calculus III / Multivariable Calculus (MATH 15300 or 16300)",
+      "Linear Algebra (MATH 19600 or 20200)",
+      "General Chemistry I w/ Lab (CHEM 11100 or 12100)",
+      "General Chemistry II w/ Lab (CHEM 11200 or 12200)",
+      "Physics I w/ Lab (PHYS 13100 or 14100)",
+      "Physics II w/ Lab (PHYS 13200 or 14200)",
+      "Physics III / Modern Physics w/ Lab (PHYS 13300 or 14300)",
+      "Intro Programming (CMSC 12100 or 15100)",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Aerospace Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "General Chemistry II (CHEM 10172 or equivalent)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Biomedical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "General Chemistry II (CHEM 10172 or equivalent)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Chemical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "General Chemistry II (CHEM 10172 or equivalent)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Civil Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "Calculus-based Physics II (PHYS 10320 or science elective)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Computer Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "Intro Programming (or science elective)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Computer Science",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "Intro Programming (or science elective)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Electrical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "Calculus-based Physics II (PHYS 10320 or science elective)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Environmental Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "General Chemistry II (CHEM 10172 or equivalent)"
+    ]
+  },
+  {
+    "school": "University of Notre Dame",
+    "major": "Mechanical Engineering",
+    "reqCount": 6,
+    "reqs": [
+      "Calculus I (MATH 10550)",
+      "Calculus II (MATH 10560)",
+      "General Chemistry I w/ Lab (CHEM 10171)",
+      "Calculus-based Physics I w/ Lab (PHYS 10310)",
+      "English Composition / Writing and Rhetoric (1 course)",
+      "General Chemistry II (CHEM 10172 or equivalent)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Biomedical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Chemical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Civil Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Computer Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Computer Science",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Electrical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "major": "Mechanical Engineering",
+    "reqCount": 5,
+    "reqs": [
+      "Calculus I",
+      "Calculus II",
+      "General Chemistry I w/ Lab",
+      "Calculus-based Physics I w/ Lab",
+      "English Composition (1 course)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Aerospace Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Engineering Foundations 1 (EML 2023 Graphics/Design)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Biomedical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "General Chemistry II w/ Lab (CHM 2046 & CHM 2046L)",
+      "Biology I w/ Lab (BSC 2010 & BSC 2010L)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Chemical Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "General Chemistry II w/ Lab (CHM 2046 & CHM 2046L)",
+      "Organic Chemistry (CHM 2210)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Civil Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "General Chemistry II w/ Lab (CHM 2046 & CHM 2046L)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Computer Engineering",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Intro Programming (COP 3502)",
+      "Object-Oriented Programming (COP 3503)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Computer Science",
+    "reqCount": 9,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Intro Programming (COP 3502)",
+      "Object-Oriented Programming (COP 3503)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Electrical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Intro Programming (COP 3502)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Environmental Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "General Chemistry II w/ Lab (CHM 2046 & CHM 2046L)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Industrial & Systems Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Intro Programming (COP 3502)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Materials Science & Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "General Chemistry II w/ Lab (CHM 2046 & CHM 2046L)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Mechanical Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Engineering Foundations 1 (EML 2023 Graphics/Design)"
+    ]
+  },
+  {
+    "school": "University of Florida",
+    "major": "Nuclear Engineering",
+    "reqCount": 8,
+    "reqs": [
+      "Calculus I (MAC 2311)",
+      "Calculus II (MAC 2312)",
+      "Calculus III / Multivariable Calculus (MAC 2313)",
+      "Differential Equations (MAP 2302)",
+      "Physics I w/ Lab (PHY 2048 & PHY 2048L)",
+      "Physics II w/ Lab (PHY 2049 & PHY 2049L)",
+      "General Chemistry I w/ Lab (CHM 2045 & CHM 2045L)",
+      "Intro Programming (COP 3502)"
+    ]
+  }
+]
