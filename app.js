@@ -1693,27 +1693,24 @@ function renderCourseGroups() {
 }
 
 function renderTargetPicker() {
-  const schools = uniqueSchools();
-  qs("#targetPicker").innerHTML = state.targetSlots
+  const container = qs("#targetPicker");
+  if (!container) return;
+  
+  container.innerHTML = state.targetSlots
     .map((slot, index) => {
-      const majors = slot.school ? programsForSchoolName(slot.school) : [];
       return `
         <div class="target-search-row">
           <span class="target-index">${index + 1}</span>
           <div class="target-inputs-group">
-            <div class="form-row search-field">
+            <div class="form-row search-field autocomplete-container" data-autocomplete-type="school" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="targetSchool${index}">${t("label_school", "School")}</label>
-              <select id="targetSchool${index}" data-target-school="${index}" class="target-select school-select">
-                <option value="">-- ${t("select_school_placeholder", "Select School")} --</option>
-                ${schools.map(s => `<option value="${escapeHtml(s.name)}" ${slot.school === s.name ? 'selected' : ''}>${escapeHtml(s.name)}</option>`).join("")}
-              </select>
+              <input type="text" id="targetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" />
+              <div class="search-menu autocomplete-menu hidden" id="targetSchoolMenu${index}"></div>
             </div>
-            <div class="form-row search-field">
+            <div class="form-row search-field autocomplete-container" data-autocomplete-type="major" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="targetMajor${index}">${t("label_major", "Major")}</label>
-              <select id="targetMajor${index}" data-target-major="${index}" class="target-select major-select" ${!slot.school ? 'disabled' : ''}>
-                <option value="">-- ${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")} --</option>
-                ${majors.map(p => `<option value="${escapeHtml(p.name)}" ${slot.major === p.name ? 'selected' : ''}>${escapeHtml(p.name)}</option>`).join("")}
-              </select>
+              <input type="text" id="targetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} />
+              <div class="search-menu autocomplete-menu hidden" id="targetMajorMenu${index}"></div>
             </div>
           </div>
         </div>
@@ -1721,23 +1718,90 @@ function renderTargetPicker() {
     })
     .join("");
 
-  qsa("[data-target-school]").forEach((select) => {
-    select.addEventListener("change", () => {
-      const index = Number(select.dataset.targetSchool);
-      state.targetSlots[index].school = select.value;
-      state.targetSlots[index].major = "";
-      syncSelectedTargetsFromSlots();
-      renderTargetPicker();
-      renderEligibilityResults();
-    });
-  });
+  bindAutocompleteEvents(container, "target");
+}
 
-  qsa("[data-target-major]").forEach((select) => {
-    select.addEventListener("change", () => {
-      const index = Number(select.dataset.targetMajor);
-      state.targetSlots[index].major = select.value;
-      syncSelectedTargetsFromSlots();
-      renderEligibilityResults();
+function bindAutocompleteEvents(container, type) {
+  const getSlots = () => type === "target" ? state.targetSlots : state.roadmapTargetSlots;
+  const syncFunc = () => type === "target" ? syncSelectedTargetsFromSlots() : syncSelectedRoadmapTargetsFromSlots();
+  const renderFunc = () => type === "target" ? renderTargetPicker() : renderRoadmapTargetPicker();
+  const resultsFunc = () => type === "target" ? renderEligibilityResults() : () => {};
+
+  const schools = uniqueSchools();
+
+  container.querySelectorAll(".autocomplete-container").forEach((ac) => {
+    const idx = Number(ac.dataset.index);
+    const acType = ac.dataset.autocompleteType;
+    const input = ac.querySelector(".autocomplete-input");
+    const menu = ac.querySelector(".autocomplete-menu");
+
+    if (!input || !menu) return;
+
+    const renderMenu = (query = "") => {
+      const normalizedQuery = normalizeText(query);
+      let items = [];
+      const slots = getSlots();
+
+      if (acType === "school") {
+        items = schools.filter(s => 
+          !normalizedQuery || normalizeText(s.name).includes(normalizedQuery)
+        ).map(s => s.name);
+      } else {
+        const selectedSchool = slots[idx].school;
+        const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
+        items = majors.filter(p =>
+          !normalizedQuery || normalizeText(p.name).includes(normalizedQuery)
+        ).map(p => p.name);
+      }
+
+      menu.innerHTML = items.length
+        ? items.map(name => `
+            <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
+              <span style="font-weight: 600; font-size: 13.5px; display: block; color: #ffffff;">${escapeHtml(name)}</span>
+            </button>
+          `).join("")
+        : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+      
+      menu.classList.remove("hidden");
+    };
+
+    let autocompleteTimeout;
+    input.addEventListener("focus", () => {
+      clearTimeout(autocompleteTimeout);
+      renderMenu(input.value);
+    });
+
+    input.addEventListener("blur", () => {
+      autocompleteTimeout = setTimeout(() => {
+        menu.classList.add("hidden");
+      }, 200);
+    });
+
+    input.addEventListener("input", (e) => {
+      renderMenu(e.target.value);
+    });
+
+    menu.addEventListener("mousedown", (e) => {
+      clearTimeout(autocompleteTimeout);
+      const btn = e.target.closest(".autocomplete-item-btn");
+      if (!btn) return;
+      e.preventDefault();
+
+      const val = btn.dataset.value;
+      input.value = val;
+      menu.classList.add("hidden");
+
+      const slots = getSlots();
+      if (acType === "school") {
+        slots[idx].school = val;
+        slots[idx].major = "";
+      } else {
+        slots[idx].major = val;
+      }
+
+      syncFunc();
+      renderFunc();
+      resultsFunc();
     });
   });
 }
@@ -1777,27 +1841,22 @@ function syncSelectedRoadmapTargetsFromSlots() {
 function renderRoadmapTargetPicker() {
   const container = qs("#roadmapTargetPicker");
   if (!container) return;
-  const schools = uniqueSchools();
+  
   container.innerHTML = state.roadmapTargetSlots
     .map((slot, index) => {
-      const majors = slot.school ? programsForSchoolName(slot.school) : [];
       return `
         <div class="target-search-row">
           <span class="target-index">${index + 1}</span>
           <div class="target-inputs-group">
-            <div class="form-row search-field">
+            <div class="form-row search-field autocomplete-container" data-autocomplete-type="school" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="roadmapTargetSchool${index}">${t("label_school", "School")}</label>
-              <select id="roadmapTargetSchool${index}" data-roadmap-school="${index}" class="target-select school-select">
-                <option value="">-- ${t("select_school_placeholder", "Select School")} --</option>
-                ${schools.map(s => `<option value="${escapeHtml(s.name)}" ${slot.school === s.name ? 'selected' : ''}>${escapeHtml(s.name)}</option>`).join("")}
-              </select>
+              <input type="text" id="roadmapTargetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" />
+              <div class="search-menu autocomplete-menu hidden" id="roadmapTargetSchoolMenu${index}"></div>
             </div>
-            <div class="form-row search-field">
+            <div class="form-row search-field autocomplete-container" data-autocomplete-type="major" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="roadmapTargetMajor${index}">${t("label_major", "Major")}</label>
-              <select id="roadmapTargetMajor${index}" data-roadmap-major="${index}" class="target-select major-select" ${!slot.school ? 'disabled' : ''}>
-                <option value="">-- ${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")} --</option>
-                ${majors.map(p => `<option value="${escapeHtml(p.name)}" ${slot.major === p.name ? 'selected' : ''}>${escapeHtml(p.name)}</option>`).join("")}
-              </select>
+              <input type="text" id="roadmapTargetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} />
+              <div class="search-menu autocomplete-menu hidden" id="roadmapTargetMajorMenu${index}"></div>
             </div>
           </div>
         </div>
@@ -1805,23 +1864,7 @@ function renderRoadmapTargetPicker() {
     })
     .join("");
 
-  qsa("[data-roadmap-school]").forEach((select) => {
-    select.addEventListener("change", () => {
-      const index = Number(select.dataset.roadmapSchool);
-      state.roadmapTargetSlots[index].school = select.value;
-      state.roadmapTargetSlots[index].major = "";
-      syncSelectedRoadmapTargetsFromSlots();
-      renderRoadmapTargetPicker();
-    });
-  });
-
-  qsa("[data-roadmap-major]").forEach((select) => {
-    select.addEventListener("change", () => {
-      const index = Number(select.dataset.roadmapMajor);
-      state.roadmapTargetSlots[index].major = select.value;
-      syncSelectedRoadmapTargetsFromSlots();
-    });
-  });
+  bindAutocompleteEvents(container, "roadmap");
 }
 
 function renderEligibilityResults() {
@@ -2088,12 +2131,19 @@ function renderRequirementControls() {
   };
 
   qs("#requirementSelect").addEventListener("change", () => renderRequirementDetail(qs("#requirementSelect").value));
+  let requirementBlurTimeout;
   qs("#requirementSearch").addEventListener("focus", (event) => {
-    event.target.value = "";
-    renderRequirementMenu("");
+    clearTimeout(requirementBlurTimeout);
+    renderRequirementMenu(event.target.value);
+  });
+  qs("#requirementSearch").addEventListener("blur", () => {
+    requirementBlurTimeout = setTimeout(() => {
+      qs("#requirementMenu")?.classList.remove("open");
+    }, 200);
   });
   qs("#requirementSearch").addEventListener("input", (event) => renderRequirementMenu(event.target.value));
   qs("#requirementMenu").addEventListener("mousedown", (event) => {
+    clearTimeout(requirementBlurTimeout);
     const button = event.target.closest("[data-pick-requirement]");
     if (!button) return;
     event.preventDefault();
@@ -2105,7 +2155,19 @@ function renderRequirementControls() {
     renderRequirementDetail(program.id);
   });
   document.addEventListener("click", (event) => {
-    if (!event.target.closest(".requirement-search-field")) qs("#requirementMenu").classList.remove("open");
+    if (!event.target.closest(".requirement-search-field")) {
+      qs("#requirementMenu")?.classList.remove("open");
+    }
+    document.querySelectorAll(".autocomplete-container").forEach((ac) => {
+      const menu = ac.querySelector(".autocomplete-menu");
+      if (menu && !ac.contains(event.target)) {
+        menu.classList.add("hidden");
+      }
+    });
+    const essayContainer = qs("#essayTargetContainer");
+    if (essayContainer && !essayContainer.contains(event.target)) {
+      qs("#essayTargetMenu")?.classList.add("hidden");
+    }
   });
   renderRequirementDetail(allPrograms()[0]?.id);
 }
@@ -3144,21 +3206,73 @@ function bindEssay() {
   const schoolSelect = qs("#essayTargetSchool");
   const generateBtn = qs("#generateEssayBtn");
   const outlineContent = qs("#essayOutlineContent");
+  const menu = qs("#essayTargetMenu");
+  const container = qs("#essayTargetContainer");
   
-  if (!schoolSelect || !generateBtn || !outlineContent) return;
+  if (!schoolSelect || !generateBtn || !outlineContent || !menu || !container) return;
 
-  // 1. Populate options
   const programs = allPrograms().sort((a, b) => {
     const sA = a.school.name.localeCompare(b.school.name);
     if (sA !== 0) return sA;
     return a.name.localeCompare(b.name);
   });
 
-  schoolSelect.innerHTML = programs.map(p => `
-    <option value="${p.id}">${escapeHtml(p.school.name)} - ${escapeHtml(p.name)}</option>
-  `).join("");
+  let selectedProgramId = schoolSelect.dataset.selectedId || "";
+  if (!selectedProgramId && programs.length > 0) {
+    selectedProgramId = programs[0].id;
+    schoolSelect.value = `${programs[0].school.name} - ${programs[0].name}`;
+    schoolSelect.dataset.selectedId = selectedProgramId;
+  }
 
-  // 2. Click handler
+  const renderEssayMenu = (query = "") => {
+    const normalizedQuery = normalizeText(query);
+    const matches = programs.filter(p => 
+      !normalizedQuery || normalizeText(`${p.school.name} ${p.name}`).includes(normalizedQuery)
+    ).slice(0, 140);
+
+    menu.innerHTML = matches.length
+      ? matches.map(p => `
+          <button type="button" class="autocomplete-item-btn" data-id="${escapeHtml(p.id)}" data-label="${escapeHtml(p.school.name)} - ${escapeHtml(p.name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
+            <strong style="font-weight: 700; font-size: 13.5px; display: block; color: #ffffff;">${escapeHtml(p.school.name)}</strong>
+            <span style="font-size: 12px; color: var(--muted); display: block; margin-top: 2px;">${escapeHtml(p.name)}</span>
+          </button>
+        `).join("")
+      : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+    
+    menu.classList.remove("hidden");
+  };
+
+  let essayBlurTimeout;
+  schoolSelect.addEventListener("focus", () => {
+    clearTimeout(essayBlurTimeout);
+    renderEssayMenu(schoolSelect.value);
+  });
+
+  schoolSelect.addEventListener("blur", () => {
+    essayBlurTimeout = setTimeout(() => {
+      menu.classList.add("hidden");
+    }, 200);
+  });
+
+  schoolSelect.addEventListener("input", (e) => {
+    renderEssayMenu(e.target.value);
+  });
+
+  menu.addEventListener("mousedown", (e) => {
+    clearTimeout(essayBlurTimeout);
+    const btn = e.target.closest(".autocomplete-item-btn");
+    if (!btn) return;
+    e.preventDefault();
+
+    const id = btn.dataset.id;
+    const label = btn.dataset.label;
+
+    schoolSelect.value = label;
+    schoolSelect.dataset.selectedId = id;
+    selectedProgramId = id;
+    menu.classList.add("hidden");
+  });
+
   generateBtn.addEventListener("click", async () => {
     if (state.essayCredits <= 0) {
       alert(t("essay_out_of_credits", "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI."));
@@ -3166,7 +3280,7 @@ function bindEssay() {
       return;
     }
 
-    const selectedId = schoolSelect.value;
+    const selectedId = schoolSelect.dataset.selectedId || selectedProgramId;
     const essayQuestion = qs("#essayQuestion")?.value.trim();
     const essayLimit = qs("#essayLimit")?.value.trim();
     const activities = qs("#essayActivity")?.value.trim();
@@ -3193,8 +3307,9 @@ function bindEssay() {
     generateBtn.disabled = true;
     generateBtn.textContent = t("essay_generating_label");
 
-    let data;
     try {
+      let data;
+      try {
       const response = await fetch('/api/essay', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -346,11 +346,10 @@
                 <div class="essay-inputs-grid">
                   <!-- Column 1: School & Limit -->
                   <div class="essay-input-col" style="display: flex; flex-direction: column; gap: 16px;">
-                    <div class="form-row" style="margin-bottom: 0;">
+                    <div class="form-row search-field autocomplete-container" id="essayTargetContainer" style="margin-bottom: 0; position: relative;">
                       <label for="essayTargetSchool" data-i18n="label_essay_target">Target University & Program</label>
-                      <select id="essayTargetSchool" style="width: 100%; min-height: 44px; background: #0c1222; border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 0 12px;">
-                        <!-- Options populated via JS -->
-                      </select>
+                      <input type="text" id="essayTargetSchool" class="autocomplete-input" placeholder="Type target program..." autocomplete="off" style="width: 100%; min-height: 44px; background: #0c1222; border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 0 12px;" />
+                      <div class="search-menu autocomplete-menu hidden" id="essayTargetMenu" style="width: 100%; max-height: 220px; overflow-y: auto;"></div>
                     </div>
                     <div class="form-row" style="margin-bottom: 0;">
                       <label for="essayLimit" data-i18n="label_essay_limit">Word Limit / Length</label>
