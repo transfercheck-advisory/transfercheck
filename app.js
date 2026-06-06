@@ -1704,12 +1704,18 @@ function renderTargetPicker() {
           <div class="target-inputs-group">
             <div class="form-row search-field autocomplete-container" data-autocomplete-type="school" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="targetSchool${index}">${t("label_school", "School")}</label>
-              <input type="text" id="targetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" />
+              <div style="position: relative; display: flex; align-items: center;">
+                <input type="text" id="targetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" style="width: 100%; padding-right: 30px;" />
+                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+              </div>
               <div class="search-menu autocomplete-menu hidden" id="targetSchoolMenu${index}"></div>
             </div>
             <div class="form-row search-field autocomplete-container" data-autocomplete-type="major" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="targetMajor${index}">${t("label_major", "Major")}</label>
-              <input type="text" id="targetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} />
+              <div style="position: relative; display: flex; align-items: center;">
+                <input type="text" id="targetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} style="width: 100%; padding-right: 30px;" />
+                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" ${!slot.school ? 'disabled' : ''}>▼</button>
+              </div>
               <div class="search-menu autocomplete-menu hidden" id="targetMajorMenu${index}"></div>
             </div>
           </div>
@@ -1734,6 +1740,7 @@ function bindAutocompleteEvents(container, type) {
     const acType = ac.dataset.autocompleteType;
     const input = ac.querySelector(".autocomplete-input");
     const menu = ac.querySelector(".autocomplete-menu");
+    const toggleBtn = ac.querySelector(".autocomplete-toggle-btn");
 
     if (!input || !menu) return;
 
@@ -1745,19 +1752,19 @@ function bindAutocompleteEvents(container, type) {
       if (acType === "school") {
         items = schools.filter(s => 
           !normalizedQuery || normalizeText(s.name).includes(normalizedQuery)
-        ).map(s => s.name);
+        ).map(s => s.name).sort((a, b) => a.localeCompare(b));
       } else {
         const selectedSchool = slots[idx].school;
         const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
         items = majors.filter(p =>
           !normalizedQuery || normalizeText(p.name).includes(normalizedQuery)
-        ).map(p => p.name);
+        ).map(p => p.name).sort((a, b) => a.localeCompare(b));
       }
 
       menu.innerHTML = items.length
         ? items.map(name => `
             <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
-              <span style="font-weight: 600; font-size: 13.5px; display: block; color: #ffffff;">${escapeHtml(name)}</span>
+              <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
             </button>
           `).join("")
         : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
@@ -1781,11 +1788,27 @@ function bindAutocompleteEvents(container, type) {
       renderMenu(e.target.value);
     });
 
+    if (toggleBtn) {
+      toggleBtn.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        clearTimeout(autocompleteTimeout);
+      });
+      toggleBtn.addEventListener("click", () => {
+        if (menu.classList.contains("hidden")) {
+          input.focus();
+          renderMenu(input.value);
+        } else {
+          menu.classList.add("hidden");
+        }
+      });
+    }
+
     menu.addEventListener("mousedown", (e) => {
       clearTimeout(autocompleteTimeout);
+      e.preventDefault(); // 스크롤바 드래그 및 메뉴 클릭 시 포커스 블러 방지
+
       const btn = e.target.closest(".autocomplete-item-btn");
       if (!btn) return;
-      e.preventDefault();
 
       const val = btn.dataset.value;
       input.value = val;
@@ -1850,12 +1873,18 @@ function renderRoadmapTargetPicker() {
           <div class="target-inputs-group">
             <div class="form-row search-field autocomplete-container" data-autocomplete-type="school" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="roadmapTargetSchool${index}">${t("label_school", "School")}</label>
-              <input type="text" id="roadmapTargetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" />
+              <div style="position: relative; display: flex; align-items: center;">
+                <input type="text" id="roadmapTargetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" style="width: 100%; padding-right: 30px;" />
+                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+              </div>
               <div class="search-menu autocomplete-menu hidden" id="roadmapTargetSchoolMenu${index}"></div>
             </div>
             <div class="form-row search-field autocomplete-container" data-autocomplete-type="major" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="roadmapTargetMajor${index}">${t("label_major", "Major")}</label>
-              <input type="text" id="roadmapTargetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} />
+              <div style="position: relative; display: flex; align-items: center;">
+                <input type="text" id="roadmapTargetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} style="width: 100%; padding-right: 30px;" />
+                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" ${!slot.school ? 'disabled' : ''}>▼</button>
+              </div>
               <div class="search-menu autocomplete-menu hidden" id="roadmapTargetMajorMenu${index}"></div>
             </div>
           </div>
@@ -3208,6 +3237,7 @@ function bindEssay() {
   const outlineContent = qs("#essayOutlineContent");
   const menu = qs("#essayTargetMenu");
   const container = qs("#essayTargetContainer");
+  const toggleBtn = container ? container.querySelector(".autocomplete-toggle-btn") : null;
   
   if (!schoolSelect || !generateBtn || !outlineContent || !menu || !container) return;
 
@@ -3233,7 +3263,7 @@ function bindEssay() {
     menu.innerHTML = matches.length
       ? matches.map(p => `
           <button type="button" class="autocomplete-item-btn" data-id="${escapeHtml(p.id)}" data-label="${escapeHtml(p.school.name)} - ${escapeHtml(p.name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
-            <strong style="font-weight: 700; font-size: 13.5px; display: block; color: #ffffff;">${escapeHtml(p.school.name)}</strong>
+            <strong style="font-weight: 700; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(p.school.name)}</strong>
             <span style="font-size: 12px; color: var(--muted); display: block; margin-top: 2px;">${escapeHtml(p.name)}</span>
           </button>
         `).join("")
@@ -3258,11 +3288,27 @@ function bindEssay() {
     renderEssayMenu(e.target.value);
   });
 
+  if (toggleBtn) {
+    toggleBtn.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      clearTimeout(essayBlurTimeout);
+    });
+    toggleBtn.addEventListener("click", () => {
+      if (menu.classList.contains("hidden")) {
+        schoolSelect.focus();
+        renderEssayMenu(schoolSelect.value);
+      } else {
+        menu.classList.add("hidden");
+      }
+    });
+  }
+
   menu.addEventListener("mousedown", (e) => {
     clearTimeout(essayBlurTimeout);
+    e.preventDefault(); // 스크롤바 드래그 및 메뉴 클릭 시 포커스 블러 방지
+
     const btn = e.target.closest(".autocomplete-item-btn");
     if (!btn) return;
-    e.preventDefault();
 
     const id = btn.dataset.id;
     const label = btn.dataset.label;

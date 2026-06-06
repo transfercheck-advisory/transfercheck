@@ -222,7 +222,6 @@
                     <p data-i18n="target_desc">Search and select target programs (Free Plan: max 5 targets).</p>
                   </div>
                 </div>
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Target University Selection Campus Quad" class="tab-panel-image compact" />
                 <div class="target-picker" id="targetPicker"></div>
                 <!-- Cumulative School Analysis Limit Helper Alert -->
                 <div id="statCompassLimitNotice" style="margin-top: 12px; font-size: 12.5px; line-height: 1.6; color: #94a3b8; font-weight: 500; display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px;">
@@ -348,12 +347,15 @@
                   <div class="essay-input-col" style="display: flex; flex-direction: column; gap: 16px;">
                     <div class="form-row search-field autocomplete-container" id="essayTargetContainer" style="margin-bottom: 0; position: relative;">
                       <label for="essayTargetSchool" data-i18n="label_essay_target">Target University & Program</label>
-                      <input type="text" id="essayTargetSchool" class="autocomplete-input" placeholder="Type target program..." autocomplete="off" style="width: 100%; min-height: 44px; background: #0c1222; border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 0 12px;" />
+                      <div style="position: relative; display: flex; align-items: center;">
+                        <input type="text" id="essayTargetSchool" class="autocomplete-input" placeholder="Type target program..." autocomplete="off" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 30px 0 12px;" />
+                        <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+                      </div>
                       <div class="search-menu autocomplete-menu hidden" id="essayTargetMenu" style="width: 100%; max-height: 220px; overflow-y: auto;"></div>
                     </div>
                     <div class="form-row" style="margin-bottom: 0;">
                       <label for="essayLimit" data-i18n="label_essay_limit">Word Limit / Length</label>
-                      <input id="essayLimit" type="text" placeholder="E.g., 350 words, 500 words, 1 page..." data-i18n-placeholder="essay_limit_placeholder" style="width: 100%; min-height: 44px; background: #0c1222; border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 0 12px;" />
+                      <input id="essayLimit" type="text" placeholder="E.g., 350 words, 500 words, 1 page..." data-i18n-placeholder="essay_limit_placeholder" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 12px;" />
                     </div>
                   </div>
 
@@ -361,7 +363,7 @@
                   <div class="essay-input-col">
                     <div class="form-row" style="height: 100%; display: flex; flex-direction: column; margin-bottom: 0;">
                       <label for="essayQuestion" data-i18n="label_essay_question">Essay Question / Prompt</label>
-                      <textarea id="essayQuestion" rows="3" placeholder="Paste the university essay question or prompt here..." data-i18n-placeholder="essay_question_placeholder" style="flex: 1; min-height: 110px; width: 100%; background: #0c1222; border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 12px; resize: none;"></textarea>
+                      <textarea id="essayQuestion" rows="3" placeholder="Paste the university essay question or prompt here..." data-i18n-placeholder="essay_question_placeholder" style="flex: 1; min-height: 110px; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 12px; resize: none;"></textarea>
                     </div>
                   </div>
 
@@ -369,14 +371,14 @@
                   <div class="essay-input-col" style="display: flex; flex-direction: column;">
                     <!-- Input Mode Switcher -->
                     <div class="essay-mode-switcher" style="display: flex; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
-                      <button type="button" class="mode-tab active" id="modeTabDirect" style="flex: 1; padding: 6px; border: none; border-radius: 6px; background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 11.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_direct">Direct Input</button>
+                      <button type="button" class="mode-tab active" id="modeTabDirect" style="flex: 1; padding: 6px; border: none; border-radius: 6px; background: var(--primary); color: #ffffff; font-size: 11.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_direct">Direct Input</button>
                       <button type="button" class="mode-tab" id="modeTabInterview" style="flex: 1; padding: 6px; border: none; border-radius: 6px; background: transparent; color: var(--muted); font-size: 11.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_interview">AI Interview Guide</button>
                     </div>
 
                     <!-- Mode 1: Direct Input -->
                     <div class="form-row" id="essayDirectInputWrapper" style="flex: 1; display: flex; flex-direction: column; margin-bottom: 0;">
                       <label for="essayActivity" data-i18n="label_essay_activity">Core Activities & Projects</label>
-                      <textarea id="essayActivity" placeholder="E.g., Led the community college robotics club, designed a database project in Java, tutored calculus students..." style="flex: 1; min-height: 110px; width: 100%; background: #0c1222; border: 1px solid var(--line); border-radius: 8px; color: #ffffff; padding: 12px; resize: none;"></textarea>
+                      <textarea id="essayActivity" placeholder="E.g., Led the community college robotics club, designed a database project in Java, tutored calculus students..." style="flex: 1; min-height: 110px; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 12px; resize: none;"></textarea>
                     </div>
 
                     <!-- Mode 2: AI Interview -->
