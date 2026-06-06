@@ -489,9 +489,9 @@
           </div>
           <div class="form-row hidden" id="authConsentRow" style="display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; margin-bottom: 14px;">
             <input id="authConsent" type="checkbox" style="width: auto; margin-top: 4px; cursor: pointer;" />
-            <label for="authConsent" style="font-size: 12.5px; color: #cbd5e1; cursor: pointer; line-height: 1.5; text-align: left; user-select: none;">
+            <label for="authConsent" style="font-size: 12.5px; color: var(--muted); cursor: pointer; line-height: 1.5; text-align: left; user-select: none;">
               <span data-i18n="auth_consent_text">I agree to the Terms of Service and Privacy Policy.</span>
-              <a href="./terms-privacy-pricing.html" target="_blank" style="color: #818cf8; text-decoration: underline; font-weight: 700; margin-left: 4px;" data-i18n="auth_consent_link">Read details</a>
+              <a href="./terms-privacy-pricing.html" target="_blank" style="color: var(--accent); text-decoration: underline; font-weight: 700; margin-left: 4px;" data-i18n="auth_consent_link">Read details</a>
             </label>
           </div>
           <button class="primary-btn full" id="authSubmitBtn" type="submit">Log in</button>
@@ -511,24 +511,24 @@
         </p>
 
         <!-- Free Beta Promo Banner -->
-        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; color: #10b981; font-weight: 700; font-size: 14px; text-align: center; line-height: 1.5;" data-i18n="pricing_free_beta_notice">
+        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; color: #047857; font-weight: 700; font-size: 14px; text-align: center; line-height: 1.5;" data-i18n="pricing_free_beta_notice">
           현재 무료로 제공 중입니다. 원하시는 모델을 선택하신 후 바로 사용하시면 됩니다.
         </div>
         
         <!-- Active Plan Status -->
-        <div style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
-          <span style="font-size: 13px; font-weight: 700; color: #cbd5e1;" data-i18n="active_plan_label">Your Current Plan:</span>
-          <strong id="activePlanLabel" style="font-size: 14px; text-transform: uppercase; color: #10b981; letter-spacing: 0.05em;">Free Plan</strong>
+        <div style="background: rgba(15, 30, 54, 0.03); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 13px; font-weight: 700; color: var(--muted);" data-i18n="active_plan_label">Your Current Plan:</span>
+          <strong id="activePlanLabel" style="font-size: 14px; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em;">Free Plan</strong>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px;">
           <!-- Free Plan -->
-          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(6, 9, 19, 0.3); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
+          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(197, 168, 128, 0.05); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
             <div>
               <h3 data-i18n="tier_free_name">Free Plan</h3>
-              <strong style="font-size: 28px; color: #ffffff; display: block; margin: 10px 0;" data-i18n="tier_free_price">$0</strong>
+              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_free_price">$0</strong>
               <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_free_desc">For initial exploration</p>
-              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+              <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
                 <li data-i18n="tier_free_feature1">Analyze up to 5 target programs in StatCompass</li>
                 <li data-i18n="tier_free_feature2">No access to ReqRadar, Pathfinder, or EssayAI</li>
               </ul>
@@ -537,12 +537,12 @@
           </div>
 
           <!-- Pro Plan -->
-          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(6, 9, 19, 0.3); padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(197, 168, 128, 0.05); padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <h3 data-i18n="tier_pro_name">Pro Plan</h3>
-              <strong style="font-size: 28px; color: #ffffff; display: block; margin: 10px 0;" data-i18n="tier_pro_price">$9.99/mo</strong>
+              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_pro_price">$9.99/mo</strong>
               <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_pro_desc">Unlimited feasibility analyzer</p>
-              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+              <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
                 <li data-i18n="tier_pro_feature1">Unlimited target evaluations in StatCompass</li>
                 <li data-i18n="tier_pro_feature2">No access to ReqRadar, Pathfinder, or EssayAI</li>
               </ul>
@@ -551,27 +551,27 @@
           </div>
 
           <!-- Premium Plan -->
-          <div style="border: 1px solid rgba(99, 102, 241, 0.45); border-radius: 14px; background: rgba(99, 102, 241, 0.04); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
-            <span style="position: absolute; top: -10px; right: 14px; background: #6366f1; color: white; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Best Value</span>
+          <div style="border: 1px solid var(--accent); border-radius: 14px; background: rgba(197, 168, 128, 0.12); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <span style="position: absolute; top: -10px; right: 14px; background: var(--accent); color: white; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Best Value</span>
             <div>
               <h3 data-i18n="tier_premium_name">Premium Plan</h3>
-              <strong style="font-size: 28px; color: #10b981; display: block; margin: 10px 0;" data-i18n="tier_premium_price">$29.99/mo</strong>
+              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_premium_price">$29.99/mo</strong>
               <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_premium_desc">Full transfer planner suite</p>
-              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+              <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
                 <li data-i18n="tier_premium_feature1">Unlimited access to StatCompass, ReqRadar & Pathfinder</li>
                 <li data-i18n="tier_premium_feature2">5 EssayAI outline generations included</li>
               </ul>
             </div>
-            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px; background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);" onclick="selectUserPlan('Premium')" data-i18n="btn_premium_action">Subscribe Premium</button>
+            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px; background: var(--primary); color: #ffffff;" onclick="selectUserPlan('Premium')" data-i18n="btn_premium_action">Subscribe Premium</button>
           </div>
 
           <!-- Standalone Essay Pass -->
-          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(6, 9, 19, 0.3); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
+          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(197, 168, 128, 0.05); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
             <div>
               <h3 data-i18n="tier_essay_pass_name">Standalone Essay Pass</h3>
-              <strong style="font-size: 28px; color: #ffffff; display: block; margin: 10px 0;" data-i18n="tier_essay_pass_price">$6.99</strong>
+              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_essay_pass_price">$6.99</strong>
               <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_essay_pass_desc">Single addon package</p>
-              <ul style="padding-left: 18px; font-size: 12.5px; color: #cbd5e1; margin: 0; line-height: 1.6; display: grid; gap: 8px;">
+              <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
                 <li data-i18n="tier_essay_pass_feature1">5 uses of EssayAI essay strategizer</li>
                 <li data-i18n="tier_essay_pass_feature2">Can be purchased on any plan</li>
               </ul>
@@ -638,14 +638,14 @@
 
     <!-- Feature Ad Modal -->
     <div class="auth-modal hidden" id="featureAdModal" role="dialog" aria-modal="true" aria-labelledby="adModalTitle">
-      <div class="auth-card" style="width: min(540px, 100%); padding: 36px; border: 1px solid rgba(99, 102, 241, 0.3); background: rgba(10, 15, 30, 0.95); backdrop-filter: blur(16px); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);">
+      <div class="auth-card" style="width: min(540px, 100%);">
         <button class="auth-close" onclick="closeFeatureAd()" type="button" aria-label="Close">x</button>
-        <span id="adModalTitle" style="font-size: 11px; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Feature Title</span>
-        <h2 id="adModalHeadline" style="font-size: 22px; font-weight: 800; color: #ffffff; line-height: 1.4; margin-bottom: 24px;">Feature Headline</h2>
-        <ul id="adModalBullets" style="margin-left: 20px; margin-bottom: 32px; font-size: 14px; color: #cbd5e1; display: grid; gap: 14px; line-height: 1.6; list-style-type: disc;">
+        <span id="adModalTitle" style="font-size: 11px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Feature Title</span>
+        <h2 id="adModalHeadline" style="font-size: 22px; font-weight: 800; color: var(--ink); line-height: 1.4; margin-bottom: 24px;">Feature Headline</h2>
+        <ul id="adModalBullets" style="margin-left: 20px; margin-bottom: 32px; font-size: 14.5px; color: var(--muted); display: grid; gap: 14px; line-height: 1.6; list-style-type: disc;">
           <!-- Bullet points loaded via JS -->
         </ul>
-        <button class="primary-btn full" id="adModalCta" type="button" style="background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);">Try Feature Now</button>
+        <button class="primary-btn full" id="adModalCta" type="button" style="background: var(--primary); color: #ffffff;">Try Feature Now</button>
       </div>
     </div>
 
