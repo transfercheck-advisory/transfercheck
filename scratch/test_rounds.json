@@ -1,0 +1,922 @@
+[
+  [
+    {
+      "schoolId": "uc-san-diego-bc540bcb",
+      "schoolName": "UC San Diego",
+      "majorId": "uc-san-diego-structural-engineering-structural-engineering-5df87225",
+      "majorName": "Structural Engineering — Structural Engineering",
+      "minGpa": 2.8,
+      "minCredits": 60,
+      "note": "Verified: Prerequisite requirements confirmed against the official UCSD transfer major preparation guidelines (https://admissions.ucsd.edu/transfer/transfer-major-preparation.html). ✅ Verified June 2026. Minimum GPA 2.8 (non-CA resident) / 2.4 (CA resident) required. Screening courses must be completed by spring before admission with C or better."
+    },
+    {
+      "schoolId": "harvard-university-cdd16461",
+      "schoolName": "Harvard University",
+      "majorId": "harvard-university-environmental-science-engineering-ab-or-s-2b8a65e5",
+      "majorName": "Environmental Science & Engineering (AB or SB)\nSB = 'Engineering Sciences SB (Environmental Science & Eng track)'\nAB = 'Environmental Science & Engineering AB'",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: college.harvard.edu/admissions/apply/transfer-applicants ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05 — 주요 수정사항】 출처: seas.harvard.edu/academics (직접 fetch 2026-05) | college.harvard.edu/admissions/apply/transfer-applicants (직접 fetch 2026-05) | ▶ Harvard SEAS 학부 전공 정확히 6개(seas.harvard.edu 직접 확인): Applied Mathematics | Bioengineering | Computer Science | Electrical Engineering | Environmental Science & Engineering | Materials Science & Mechanical Engineering | ▶ 'Biomedical Engineering' 독립 전공 존재하지 않음 (이전 DB에서 오류) | ▶ TOEFL/IELTS 완전 불필요(transfer). SAT/ACT 필수 | ▶ 연 평균 12명 입학 — Harvard 공식 홈페이지 명시."
+    },
+    {
+      "schoolId": "cornell-duffield-30aa90f4",
+      "schoolName": "Cornell (Duffield)",
+      "majorId": "cornell-duffield-operations-research-engineering-70892a2d",
+      "majorName": "Operations Research & Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: duffield.cornell.edu/admissions/transfer-applicants/requirements/ ✅ Verified May 2026\nFall only | Min 12 college credits (AP 제외, 고졸 후 취득분) | In-Progress 허용\nMin grade: C or better (C- 불가) | Max 66 transfer credits total\nCS / Information Science / Independent Major: 편입 불가 (2025-26)\n⚠️ 공식 Min GPA 미게시 (holistic review) — 'generally in the A range' 언급만\n4대 공통 필수 중 하나라도 없으면 지원서 심사 자체 불가\n특이사항: Linear Algebra + Statistics가 Sophomore 단계부터 추가 필수 (다른 학과보다 수학 요건 많음)"
+    },
+    {
+      "schoolId": "university-of-michigan-cc40378b",
+      "schoolName": "University of Michigan",
+      "majorId": "university-of-michigan-electrical-engineering-e2dba27a",
+      "majorName": "Electrical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Michigan College of Engineering transfer guide (https://admissions.engin.umich.edu/undergraduate/transfer/).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.0 (Competitive Recommended GPA: 3.5)\n- TOEFL iBT: Min 100 (sections 23+ read/listen, 21+ speak/write)\n- IELTS: Min 7.0 (sections 6.5+)\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "purdue-39671bc6",
+      "schoolName": "Purdue",
+      "majorId": "purdue-aeronautical-astronautical-engineering-221c2b73",
+      "majorName": "Aeronautical & Astronautical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Purdue University engineering transfer guidelines (https://admissions.purdue.edu/transfer/engineering.php).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative GPA\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 88\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "penn-state-f1c5c43f",
+      "schoolName": "Penn State",
+      "majorId": "penn-state-architectural-engineering-9b573ad6",
+      "majorName": "Architectural Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: advising.engr.psu.edu/advising/entrance-to-major/transfer-summer-2020-or-later.aspx ✅\nadvising.engr.psu.edu (flow charts, May 2026) ✅\nVerified May 2026\nFall & Spring 모두 가능\n⚠️ ETM 과목들은 Penn State 입학 후 이수하는 과목 (외부 선이수 아님)\n⚠️ In-Progress 허용 여부 (외부 편입 지원 시) 공식 미게시\n⚠️ 통제전공 실제 경쟁 GPA 공식 미게시"
+    },
+    {
+      "schoolId": "uc-irvine-a176fec7",
+      "schoolName": "UC Irvine",
+      "majorId": "uc-irvine-materials-science-engineering-10c9fd61",
+      "majorName": "Materials Science & Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.uci.edu/apply/transfer-students ✅ Verified June 2026. Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026\nMin GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지\nTAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units\n모든 prereqs Spring 종료 전 완료 필수\nIGETC 허용 — 단 engineering/math/science 전공에 비권장"
+    },
+    {
+      "schoolId": "university-of-michigan-cc40378b",
+      "schoolName": "University of Michigan",
+      "majorId": "university-of-michigan-naval-architecture-marine-eng-c0e957d3",
+      "majorName": "Naval Architecture & Marine Eng.",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Michigan College of Engineering transfer guide (https://admissions.engin.umich.edu/undergraduate/transfer/).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.0 (Competitive Recommended GPA: 3.0)\n- TOEFL iBT: Min 100 (sections 23+ read/listen, 21+ speak/write)\n- IELTS: Min 7.0 (sections 6.5+)\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "columbia-university-fafc3474",
+      "schoolName": "Columbia University",
+      "majorId": "columbia-university-electrical-engineering-47fdaf94",
+      "majorName": "Electrical Engineering",
+      "minGpa": 3.3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Columbia University SEAS Combined Plan curriculum guide (https://undergrad.admissions.columbia.edu/apply/combinedplan).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.3 (Competitive GPA: 3.5+)\n- TOEFL iBT: Min 100\n- IELTS: Min 7.5\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "uc-irvine-a176fec7",
+      "schoolName": "UC Irvine",
+      "majorId": "uc-irvine-aerospace-engineering-6ae61eb9",
+      "majorName": "Aerospace Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.uci.edu/apply/transfer-students ✅ Verified June 2026. Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026\nMin GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지\nTAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units\n모든 prereqs Spring 종료 전 완료 필수\nIGETC 허용 — 단 engineering/math/science 전공에 비권장"
+    }
+  ],
+  [
+    {
+      "schoolId": "georgia-tech-776cb90e",
+      "schoolName": "Georgia Tech",
+      "majorId": "georgia-tech-electrical-engineering-801d7071",
+      "majorName": "Electrical Engineering",
+      "minGpa": null,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Georgia Tech transfer course requirements table (https://admission.gatech.edu/transfer/transfer-course-requirements). ✅ Verified June 2026. ✅ Verified by Official GT Course Requirements Table Sept 2025 (Manual Overwrite by User request on 2026-06-03)\nPrerequisite Eligibility Analyzer manual sync completed."
+    },
+    {
+      "schoolId": "uiuc-766d754c",
+      "schoolName": "UIUC",
+      "majorId": "uiuc-industrial-engineering-035762ac",
+      "majorName": "Industrial Engineering",
+      "minGpa": 3,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] ✅ Verified vs official UIUC Transfer Handbook (May 2026)\nAll courses must be completed BEFORE applying (not in-progress)\nMin grade B in all required/technical courses\n⚠️ CORRECTED (May 2026): English score updated from placeholder (79/6.5) to verified official: TOEFL 100 (old) / 5.0 (new) | IELTS 7.5 | DET 130 [Source: admissions.illinois.edu/policies] Verified June 2026"
+    },
+    {
+      "schoolId": "university-of-virginia-uva-d1b41986",
+      "schoolName": "University of Virginia (UVA)",
+      "majorId": "university-of-virginia-uva-systems-engineering-3fdd523e",
+      "majorName": "Systems Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] Verified vs engineering.virginia.edu/undergraduate-study/future-undergrads/transferring-uva-engineering and UVA SEAS GAA Transfer Guide 2025-2027 via transfervirginia.org (May 2026). CRITICAL: UVA SEAS does NOT admit students directly into a major -- major declared AFTER admission. Physics lab MUST be completed IN-PERSON to receive lab credit (PHYS 1429, 2419). APMA 1090 (Calc 1) NEW requirement added for students entering Fall 2025 and later. UVA SEAS offers 11 undergraduate degrees total. ✅ Verified June 2026"
+    },
+    {
+      "schoolId": "georgia-tech-776cb90e",
+      "schoolName": "Georgia Tech",
+      "majorId": "georgia-tech-computer-engineering-4b153edc",
+      "majorName": "Computer Engineering",
+      "minGpa": null,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Georgia Tech transfer course requirements table (https://admission.gatech.edu/transfer/transfer-course-requirements). ✅ Verified June 2026. ✅ Verified by Official GT Course Requirements Table Sept 2025 (Manual Overwrite by User request on 2026-06-03)\nPrerequisite Eligibility Analyzer manual sync completed."
+    },
+    {
+      "schoolId": "uc-berkeley-coe-362f972e",
+      "schoolName": "UC Berkeley (COE)",
+      "majorId": "uc-berkeley-coe-mechanical-engineering-me-ebf17b9d",
+      "majorName": "Mechanical Engineering (ME)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: engineering.berkeley.edu/admissions ✅ Verified June 2026. Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅\nengineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅\nVerified May 2026\nFall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units\nMin GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)\n예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\nFall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students\n(13.9% of applicants), who had an average GPA of 3.92')\n❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)\n❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)\n⚠️ 커뮤니티칼리지 최대 70학점 이전 가능\n⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가\n특이사항: Aerospace Engineering concentration 포함\nME/NE, MSE/ME 조인트 가능 (1학기 후)"
+    },
+    {
+      "schoolId": "uiuc-766d754c",
+      "schoolName": "UIUC",
+      "majorId": "uiuc-materials-science-engineering-fe13b0c4",
+      "majorName": "Materials Science & Engineering",
+      "minGpa": 3,
+      "minCredits": null,
+      "note": "✅ Verified vs official UIUC Transfer Handbook (May 2026)\nAll courses must be completed BEFORE applying (not in-progress)\nMin grade B in all required/technical courses\n⚠️ CORRECTED (May 2026): English score updated from placeholder (79/6.5) to verified official: TOEFL 100 (old) / 5.0 (new) | IELTS 7.5 | DET 130 [Source: admissions.illinois.edu/policies]"
+    },
+    {
+      "schoolId": "ut-austin-cockrell-ed8d09cf",
+      "schoolName": "UT Austin (Cockrell)",
+      "majorId": "ut-austin-cockrell-chemical-engineering-8b9ee702",
+      "majorName": "Chemical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Texas at Austin Cockrell School of Engineering transfer guidelines (https://admissions.utexas.edu/apply/transfer-admission/ and https://www.cockrell.utexas.edu/).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 (cumulative & technical GPA, competitive applicants have 3.5-4.0)\n- Minimum Credits: 24 transferable credits (excluding in-progress credits for international students)\n- TOEFL iBT: Min 79 (Duolingo NOT accepted)\n- IELTS: Min 6.5\n- Fall only admission"
+    },
+    {
+      "schoolId": "uiuc-766d754c",
+      "schoolName": "UIUC",
+      "majorId": "uiuc-cs-bioengineering-dual-degree-b02dc0fe",
+      "majorName": "CS + Bioengineering (dual degree)",
+      "minGpa": 3,
+      "minCredits": null,
+      "note": "✅ Verified vs official UIUC Transfer Handbook (May 2026)\nAll courses must be completed BEFORE applying (not in-progress)\nMin grade B in all required/technical courses\n⚠️ CORRECTED (May 2026): English score updated from placeholder (79/6.5) to verified official: TOEFL 100 (old) / 5.0 (new) | IELTS 7.5 | DET 130 [Source: admissions.illinois.edu/policies]\n⚠️ CORRECTED (May 2026): MCB 150 — Per official UIUC handbook, Fall 2026 applicants: STRONGLY RECOMMENDED at time of application. Fall 2027 applicants: REQUIRED at time of application. Currently listed in Rec column correctly."
+    },
+    {
+      "schoolId": "georgia-tech-776cb90e",
+      "schoolName": "Georgia Tech",
+      "majorId": "georgia-tech-nuclear-radiological-engineering-84f0c1cf",
+      "majorName": "Nuclear & Radiological Engineering",
+      "minGpa": null,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Georgia Tech transfer course requirements table (https://admission.gatech.edu/transfer/transfer-course-requirements). ✅ Verified June 2026. ✅ Verified by Official GT Course Requirements Table Sept 2025 (Manual Overwrite by User request on 2026-06-03)\nPrerequisite Eligibility Analyzer manual sync completed."
+    },
+    {
+      "schoolId": "washington-university-in-st-louis-washu-e309faa1",
+      "schoolName": "Washington University in St. Louis (WashU)",
+      "majorId": "washington-university-in-st-louis-washu-business-computer-sc-540e24d1",
+      "majorName": "Business + Computer Science",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Washington University in St. Louis undergraduate transfer guidelines (https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (highly competitive)\n- Recommended Credits: 24+ transferable credits\n- TOEFL iBT: Min 90 (or waiver)\n- IELTS: Min 7.0\n- Duolingo DET: Min 115"
+    }
+  ],
+  [
+    {
+      "schoolId": "mit-7abc1a23",
+      "schoolName": "MIT",
+      "majorId": "mit-civil-environmental-engineering-course-1-sb-general-engi-ff277c18",
+      "majorName": "Civil & Environmental Engineering (Course 1)\nSB: General Engineering (1-ENG)\n학제간 SB: Climate System Science & Engineering (1-12)*\n(*interdisciplinary — Course 1과 Course 12 공동)",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official MIT undergraduate transfer admissions guidelines (https://mitadmissions.org/apply/transfer/before-applying/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (mostly A grades in math/science, highly selective)\n- Recommended Credits: 1 year of college-level study (24-32 credits)\n- TOEFL iBT: Min 90 (100+ recommended)\n- IELTS: Min 7.0 (7.5+ recommended)\n- Duolingo DET: Min 120 (125+ recommended)"
+    },
+    {
+      "schoolId": "university-of-florida-9e7ab214",
+      "schoolName": "University of Florida",
+      "majorId": "university-of-florida-chemical-engineering-4ac9ec05",
+      "majorName": "Chemical Engineering",
+      "minGpa": 3,
+      "minCredits": 60,
+      "note": "Verified: Critical tracking guidelines, credit requirements, and English proficiency rules confirmed against the official UF Undergraduate Catalog and CISE/ECE/MAe department transfer admissions policies (https://catalog.ufl.edu/UGRD/admissions/transfer-admissions/)."
+    },
+    {
+      "schoolId": "vanderbilt-university-b8a7c293",
+      "schoolName": "Vanderbilt University",
+      "majorId": "vanderbilt-electrical-engineering-4b9b0f05",
+      "majorName": "Electrical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Course transfer guidelines, requirements, and minimum residency limits confirmed against the official Vanderbilt University School of Engineering and Admissions transfer policies (https://admissions.vanderbilt.edu/apply/transfer-process/)."
+    },
+    {
+      "schoolId": "stanford-university-269fc60a",
+      "schoolName": "Stanford University",
+      "majorId": "stanford-university-engineering-sustainable-architecture-eng-741c1759",
+      "majorName": "Engineering — Sustainable Architecture & Engineering (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속\n※ Architectural Design subplan: 2023년 이전 입학자만 (현재 신입 없음)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admission.stanford.edu/apply/transfer/credit.html ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05】 출처: admission.stanford.edu/apply/transfer/credit.html (2025-10-01 업데이트) | engineering.stanford.edu/students-academics/academics (직접 확인) | bulletin.stanford.edu programs: AA-BS, BIOE-BS, CHEMENG-BS, CEE-BS(Civil & Environmental Engineering 포함), CS-BS, EE-BS, MSE-BS(Management Science & Engineering), MATSCI-BS, ME-BS, ENGR-BS(학제간 5개 subplan), IDMEN-BS | ▶ Stanford SoE '16개 정의된 학부 전공 + IDMEN' 공식 확인 | ▶ 'There are no required courses for admission to Stanford.' 공식 명시 | ▶ Energy Resources Engineering(ERE)은 Doerr School of Sustainability 소속 — School of Engineering 소속 아님."
+    },
+    {
+      "schoolId": "penn-state-f1c5c43f",
+      "schoolName": "Penn State",
+      "majorId": "penn-state-aerospace-engineering-4a7cb960",
+      "majorName": "Aerospace Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: advising.engr.psu.edu/advising/entrance-to-major/transfer-summer-2020-or-later.aspx ✅\nadvising.engr.psu.edu (flow charts, May 2026) ✅\nVerified May 2026\nFall & Spring 모두 가능\n⚠️ ETM 과목들은 Penn State 입학 후 이수하는 과목 (외부 선이수 아님)\n⚠️ In-Progress 허용 여부 (외부 편입 지원 시) 공식 미게시\n⚠️ 통제전공 실제 경쟁 GPA 공식 미게시\n특이사항: 입학 경쟁 치열 (Enrollment-Controlled)\n⚠️ ★ Enrollment-Controlled — 실제 경쟁 GPA 공식 미게시"
+    },
+    {
+      "schoolId": "purdue-39671bc6",
+      "schoolName": "Purdue",
+      "majorId": "purdue-mechanical-engineering-1df32b1f",
+      "majorName": "Mechanical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Purdue University engineering transfer guidelines (https://admissions.purdue.edu/transfer/engineering.php).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative GPA\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 88\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "uc-irvine-a176fec7",
+      "schoolName": "UC Irvine",
+      "majorId": "uc-irvine-mechanical-engineering-96fc08c3",
+      "majorName": "Mechanical Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.uci.edu/apply/transfer-students ✅ Verified June 2026. Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026\nMin GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지\nTAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units\n모든 prereqs Spring 종료 전 완료 필수\nIGETC 허용 — 단 engineering/math/science 전공에 비권장"
+    },
+    {
+      "schoolId": "ohio-state-university-58aaadd5",
+      "schoolName": "Ohio State University",
+      "majorId": "ohio-state-university-industrial-systems-engineering-bde44100",
+      "majorName": "Industrial & Systems Engineering",
+      "minGpa": 3,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Ohio State University College of Engineering transfer guidelines (https://admissions.osu.edu/transfer/engineering).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0\n- Minimum Credits: 30 transferable semester credits\n- TOEFL iBT: Min 79\n- IELTS: Min 6.5\n- Duolingo DET: Min 120"
+    },
+    {
+      "schoolId": "uc-system-fadfc473",
+      "schoolName": "UC System",
+      "majorId": "uc-system-uc-davis-college-of-engineering-65a2e14b",
+      "majorName": "UC Davis — College of Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admission.universityofcalifornia.edu ✅ Verified June 2026. Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026\n✅ TAG (CS 제외) | Fall only\nTOEFL: 80+ (신척도 4.5+) / IELTS: 6.5+ / DET: 115+\nSource: ucdavis.edu/admissions/transfer/major-requirements-college-engineering ✅"
+    },
+    {
+      "schoolId": "virginia-tech-d6de387d",
+      "schoolName": "Virginia Tech",
+      "majorId": "virginia-tech-building-construction-da7c2219",
+      "majorName": "Building Construction",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Verified vs official VT Admissions Transfer Roadmaps 2025-2026 and Transfer Guide PDFs directly fetched via transfervirginia.org (May 2026). Guaranteed admission for VCCS students: AS Engineering + 3.2 GPA. Roadmap disclaimer: completing Required courses does NOT guarantee admission -- holistic review. IMPORTANT DISTINCTION: Building Construction has substantially DIFFERENT requirements from engineering majors. Math: MATH 1025 (Elementary Calculus) OR MATH 1225 (Calc 1) -- not the full Calc 1/2/3 sequence. No required Physics or Chemistry on official Transfer Roadmap. BC is a non-restricted major -- FTIC students apply directly to BC (unlike other engineering majors). Transfer students also directly admitted to BC. [Source: VT Building Construction Roadmap 2025-2026 PDF snippet -- MATH 1025 or 1225 only confirmed]"
+    }
+  ],
+  [
+    {
+      "schoolId": "nyu-tandon-4665a194",
+      "schoolName": "NYU Tandon",
+      "majorId": "nyu-tandon-civil-engineering-b-s-8de46960",
+      "majorName": "Civil Engineering, B.S.",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official NYU undergraduate transfer guidelines (https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/transfer-applicants/school-specific-transfer-prerequisites.html).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (holistic review)\n- Recommended Credits: 24+ transferable credits\n- TOEFL iBT: 100+ competitive\n- IELTS: 7.5+ competitive\n- Duolingo DET: 130+ competitive"
+    },
+    {
+      "schoolId": "mit-7abc1a23",
+      "schoolName": "MIT",
+      "majorId": "mit-electrical-engineering-computer-science-course-6-mit-sb--db7e4cbf",
+      "majorName": "Electrical Engineering & Computer Science (Course 6) — MIT 최대 학과\nSB: Electrical Science & Engineering (6-1)\nSB: Electrical Eng & Computer Science (6-2)\nSB: Computer Science & Engineering (6-3)\nSB: AI & Decision Making (6-4)\nSB: Electrical Engineering with Computing (6-5)\n학제간 SB: CS & Molecular Biology (6-7)*\n학제간 SB: Computation & Cognition (6-9)*\n학제간 SB: CS, Economics & Data Science (6-14)*",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official MIT undergraduate transfer admissions guidelines (https://mitadmissions.org/apply/transfer/before-applying/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (mostly A grades in math/science, highly selective)\n- Recommended Credits: 1 year of college-level study (24-32 credits)\n- TOEFL iBT: Min 90 (100+ recommended)\n- IELTS: Min 7.0 (7.5+ recommended)\n- Duolingo DET: Min 120 (125+ recommended)"
+    },
+    {
+      "schoolId": "uc-system-fadfc473",
+      "schoolName": "UC System",
+      "majorId": "uc-system-ucla-henry-samueli-school-of-engineering-hsseas-9d6969ab",
+      "majorName": "UCLA — Henry Samueli School of Engineering (HSSEAS)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admission.universityofcalifornia.edu ✅ Verified June 2026. Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026\n❌ TAG 없음 | Fall only\nTOEFL: 100+ (신척도 5+, sub 5+) / IELTS: 7.5+ / DET: 135+\nSource: admission.ucla.edu/apply/transfer ✅"
+    },
+    {
+      "schoolId": "uw-madison-951baa16",
+      "schoolName": "UW-Madison",
+      "majorId": "uw-madison-computer-engineering-678d7829",
+      "majorName": "Computer Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Wisconsin-Madison College of Engineering transfer guidelines (https://engineering.wisc.edu/admissions/undergraduate/transfer-from-off-campus/).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative & term GPA (most successful: 3.2-4.0)\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 80\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "stanford-university-269fc60a",
+      "schoolName": "Stanford University",
+      "majorId": "stanford-university-engineering-atmosphere-energy-engr-bs-su-c1057b8e",
+      "majorName": "Engineering — Atmosphere & Energy (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admission.stanford.edu/apply/transfer/credit.html ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05】 출처: admission.stanford.edu/apply/transfer/credit.html (2025-10-01 업데이트) | engineering.stanford.edu/students-academics/academics (직접 확인) | bulletin.stanford.edu programs: AA-BS, BIOE-BS, CHEMENG-BS, CEE-BS(Civil & Environmental Engineering 포함), CS-BS, EE-BS, MSE-BS(Management Science & Engineering), MATSCI-BS, ME-BS, ENGR-BS(학제간 5개 subplan), IDMEN-BS | ▶ Stanford SoE '16개 정의된 학부 전공 + IDMEN' 공식 확인 | ▶ 'There are no required courses for admission to Stanford.' 공식 명시 | ▶ Energy Resources Engineering(ERE)은 Doerr School of Sustainability 소속 — School of Engineering 소속 아님."
+    },
+    {
+      "schoolId": "uc-system-fadfc473",
+      "schoolName": "UC System",
+      "majorId": "uc-system-uc-santa-barbara-robert-mehrabian-college-of-engin-0f534b8e",
+      "majorName": "UC Santa Barbara — Robert Mehrabian College of Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admission.universityofcalifornia.edu ✅ Verified June 2026. Source: admission.universityofcalifornia.edu (영어 요건) + 각 캠퍼스 공식 페이지 ✅ Verified May 2026\n✅ TAG | Fall only\nTOEFL: 80+ / IELTS: 6.5+ / DET: 115+\n영어 면제: C 이상 (B 아님)\nSource: engineering.ucsb.edu/undergraduate/admissions/transfer-preparation ✅"
+    },
+    {
+      "schoolId": "university-of-florida-9e7ab214",
+      "schoolName": "University of Florida",
+      "majorId": "university-of-florida-materials-science-engineering-66661c09",
+      "majorName": "Materials Science & Engineering",
+      "minGpa": 2.5,
+      "minCredits": 60,
+      "note": "Verified: Critical tracking guidelines, credit requirements, and English proficiency rules confirmed against the official UF Undergraduate Catalog and CISE/ECE/MAe department transfer admissions policies (https://catalog.ufl.edu/UGRD/admissions/transfer-admissions/)."
+    },
+    {
+      "schoolId": "uw-madison-951baa16",
+      "schoolName": "UW-Madison",
+      "majorId": "uw-madison-mechanical-engineering-67cfae52",
+      "majorName": "Mechanical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Wisconsin-Madison College of Engineering transfer guidelines (https://engineering.wisc.edu/admissions/undergraduate/transfer-from-off-campus/).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative & term GPA (most successful: 3.2-4.0)\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 80\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "uiuc-766d754c",
+      "schoolName": "UIUC",
+      "majorId": "uiuc-systems-engineering-design-71508f31",
+      "majorName": "Systems Engineering & Design",
+      "minGpa": 3,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] ✅ Verified vs official UIUC Transfer Handbook (May 2026)\nAll courses must be completed BEFORE applying (not in-progress)\nMin grade B in all required/technical courses\n⚠️ CORRECTED (May 2026): English score updated from placeholder (79/6.5) to verified official: TOEFL 100 (old) / 5.0 (new) | IELTS 7.5 | DET 130 [Source: admissions.illinois.edu/policies] Verified June 2026"
+    },
+    {
+      "schoolId": "vanderbilt-university-b8a7c293",
+      "schoolName": "Vanderbilt University",
+      "majorId": "vanderbilt-mechanical-engineering-1406f4de",
+      "majorName": "Mechanical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Course transfer guidelines, requirements, and minimum residency limits confirmed against the official Vanderbilt University School of Engineering and Admissions transfer policies (https://admissions.vanderbilt.edu/apply/transfer-process/)."
+    }
+  ],
+  [
+    {
+      "schoolId": "stanford-university-269fc60a",
+      "schoolName": "Stanford University",
+      "majorId": "stanford-university-engineering-biomedical-computation-engr--d957fad1",
+      "majorName": "Engineering — Biomedical Computation (ENGR-BS subplan)\n학제간 BS in Engineering, School of Engineering 직속",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admission.stanford.edu/apply/transfer/credit.html ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05】 출처: admission.stanford.edu/apply/transfer/credit.html (2025-10-01 업데이트) | engineering.stanford.edu/students-academics/academics (직접 확인) | bulletin.stanford.edu programs: AA-BS, BIOE-BS, CHEMENG-BS, CEE-BS(Civil & Environmental Engineering 포함), CS-BS, EE-BS, MSE-BS(Management Science & Engineering), MATSCI-BS, ME-BS, ENGR-BS(학제간 5개 subplan), IDMEN-BS | ▶ Stanford SoE '16개 정의된 학부 전공 + IDMEN' 공식 확인 | ▶ 'There are no required courses for admission to Stanford.' 공식 명시 | ▶ Energy Resources Engineering(ERE)은 Doerr School of Sustainability 소속 — School of Engineering 소속 아님."
+    },
+    {
+      "schoolId": "uc-berkeley-coe-362f972e",
+      "schoolName": "UC Berkeley (COE)",
+      "majorId": "uc-berkeley-coe-civil-environmental-engineering-ebc6a105",
+      "majorName": "Civil & Environmental Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: engineering.berkeley.edu/admissions ✅ Verified June 2026. Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅\nengineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅\nVerified May 2026\nFall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units\nMin GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)\n예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\nFall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students\n(13.9% of applicants), who had an average GPA of 3.92')\n❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)\n❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)\n⚠️ 커뮤니티칼리지 최대 70학점 이전 가능\n⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가\n특이사항: ⚠️ Environmental Engineering: 2025-2026 Change of College 불가 (공식 별도 공지)"
+    },
+    {
+      "schoolId": "virginia-tech-d6de387d",
+      "schoolName": "Virginia Tech",
+      "majorId": "virginia-tech-biomedical-engineering-9907a5cd",
+      "majorName": "Biomedical Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nVerified vs official VT Admissions Transfer Roadmaps 2025-2026 and Transfer Guide PDFs directly fetched via transfervirginia.org (May 2026). Guaranteed admission for VCCS students: AS Engineering + 3.2 GPA. Roadmap disclaimer: completing Required courses does NOT guarantee admission -- holistic review. -- BME Transfer Guide 2024-2025 PDF directly fetched via transfervirginia.org -- full list confirmed. Spring start strongly recommended for BME due to course sequencing (BMES 2104, ECE 3054, ESM/AOE 2074 must be taken in first semester). [Source: VT Biomedical Engineering Transfer Guide 2024-2025 PDF via transfervirginia.org]"
+    },
+    {
+      "schoolId": "uw-madison-951baa16",
+      "schoolName": "UW-Madison",
+      "majorId": "uw-madison-industrial-engineering-a288a9b8",
+      "majorName": "Industrial Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Wisconsin-Madison College of Engineering transfer guidelines (https://engineering.wisc.edu/admissions/undergraduate/transfer-from-off-campus/).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative & term GPA (most successful: 3.2-4.0)\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 80\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "penn-state-f1c5c43f",
+      "schoolName": "Penn State",
+      "majorId": "penn-state-engineering-science-8631bb41",
+      "majorName": "Engineering Science",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: advising.engr.psu.edu/advising/entrance-to-major/transfer-summer-2020-or-later.aspx ✅\nadvising.engr.psu.edu (flow charts, May 2026) ✅\nVerified May 2026\nFall & Spring 모두 가능\n⚠️ ETM 과목들은 Penn State 입학 후 이수하는 과목 (외부 선이수 아님)\n⚠️ In-Progress 허용 여부 (외부 편입 지원 시) 공식 미게시\n⚠️ 통제전공 실제 경쟁 GPA 공식 미게시\n특이사항: Academically-Controlled 전공\n⚠️ ★ Academically-Controlled — 실제 경쟁 GPA 공식 미게시"
+    },
+    {
+      "schoolId": "mit-7abc1a23",
+      "schoolName": "MIT",
+      "majorId": "mit-biological-engineering-course-20-sb-biological-engineeri-e1859c7d",
+      "majorName": "Biological Engineering (Course 20)\nSB: Biological Engineering (20)",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official MIT undergraduate transfer admissions guidelines (https://mitadmissions.org/apply/transfer/before-applying/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (mostly A grades in math/science, highly selective)\n- Recommended Credits: 1 year of college-level study (24-32 credits)\n- TOEFL iBT: Min 90 (100+ recommended)\n- IELTS: Min 7.0 (7.5+ recommended)\n- Duolingo DET: Min 120 (125+ recommended)"
+    },
+    {
+      "schoolId": "university-of-michigan-cc40378b",
+      "schoolName": "University of Michigan",
+      "majorId": "university-of-michigan-industrial-operations-eng-85b41ed0",
+      "majorName": "Industrial & Operations Eng.",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Michigan College of Engineering transfer guide (https://admissions.engin.umich.edu/undergraduate/transfer/).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.0 (Competitive Recommended GPA: 3.0)\n- TOEFL iBT: Min 100 (sections 23+ read/listen, 21+ speak/write)\n- IELTS: Min 7.0 (sections 6.5+)\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "yale-university-af30ac76",
+      "schoolName": "Yale University",
+      "majorId": "yale-university-applied-mathematics-ba-or-bs-seas-engineerin-0978a840",
+      "majorName": "Applied Mathematics (BA or BS)\n※ SEAS 소속; engineering 입학 지침 적용",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.yale.edu/transfer-eligibility ✅ Verified June 2026. 【검증 완료 2026-05】 출처: catalog.yale.edu/ycps/majors-by-disciplines/ (직접 fetch 2026-05) | admissions.yale.edu/transfer-eligibility (직접 fetch 2026-05) | ▶ Yale SEAS 학부 Engineering 전공 8개(catalog 직접 확인): Applied Mathematics | Applied Physics | Biomedical Engineering | Chemical Engineering | Computer Science | Electrical Engineering | Environmental Engineering | Mechanical Engineering | ▶ 공식 필수과목: 미적분학 시퀀스 + 물리학 시퀀스 (engineering 지원자만) | ▶ TOEFL/IELTS: 비영어권 학생 추가 제출 필요. 2년+ 영어 중등 교육 시 면제."
+    },
+    {
+      "schoolId": "washington-university-in-st-louis-washu-e309faa1",
+      "schoolName": "Washington University in St. Louis (WashU)",
+      "majorId": "washington-university-in-st-louis-washu-data-science-ca0ec185",
+      "majorName": "Data Science",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Washington University in St. Louis undergraduate transfer guidelines (https://admissions.washu.edu/how-to-apply/transfer-students-us-and-international/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (highly competitive)\n- Recommended Credits: 24+ transferable credits\n- TOEFL iBT: Min 90 (or waiver)\n- IELTS: Min 7.0\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "uw-madison-951baa16",
+      "schoolName": "UW-Madison",
+      "majorId": "uw-madison-biomedical-engineering-c822ee39",
+      "majorName": "Biomedical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Wisconsin-Madison College of Engineering transfer guidelines (https://engineering.wisc.edu/admissions/undergraduate/transfer-from-off-campus/).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative & term GPA (most successful: 3.2-4.0)\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 80\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    }
+  ],
+  [
+    {
+      "schoolId": "columbia-university-fafc3474",
+      "schoolName": "Columbia University",
+      "majorId": "columbia-university-computer-engineering-dd7db8a1",
+      "majorName": "Computer Engineering",
+      "minGpa": 3.3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Columbia University SEAS Combined Plan curriculum guide (https://undergrad.admissions.columbia.edu/apply/combinedplan).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.3 (Competitive GPA: 3.5+)\n- TOEFL iBT: Min 100\n- IELTS: Min 7.5\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "uc-berkeley-coe-362f972e",
+      "schoolName": "UC Berkeley (COE)",
+      "majorId": "uc-berkeley-coe-eecs-electrical-engineering-computer-science-2f080f00",
+      "majorName": "EECS (Electrical Engineering & Computer Science)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: engineering.berkeley.edu/admissions ✅ Verified June 2026. Source: engineering.berkeley.edu/admissions/undergraduate-admissions/junior-transfers/ ✅\nengineering.berkeley.edu/admissions/undergraduate-admissions/prospective-junior-transfer-faqs/ ✅\nVerified May 2026\nFall only (Nov 1-30, UC Common App) | Min 60 UC-transferable semester (90 quarter) units\nMin GPA 3.5 (공식: 'transferable GPA lower than 3.5' → ineligible)\n예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\nFall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n(공식 FAQ 원문: 'For fall 2025, the College of Engineering admitted 371 transfer students\n(13.9% of applicants), who had an average GPA of 3.92')\n❌ IGETC 불인정 | ❌ 전공변경/이중전공 불가 (조인트 전공 예외)\n❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n⚠️ Major Prerequisite Admissions Form: 1월 중 제출 필수 (미제출 시 지원 자격 박탈)\n⚠️ 커뮤니티칼리지 최대 70학점 이전 가능\n⚠️ 4년제 대학 89+ 학기 단위 이수자 지원 불가\n특이사항: ★ Change of College로 EECS 진입 불가 (공식 명시)\nEECS/MSE, EECS/NE 조인트 가능 (1학기 후)\nEECS→ECE: Fall 2025 입학자만 첫 2학기 내 가능 (복귀 불가)"
+    },
+    {
+      "schoolId": "university-of-virginia-uva-d1b41986",
+      "schoolName": "University of Virginia (UVA)",
+      "majorId": "university-of-virginia-uva-chemical-engineering-ced62532",
+      "majorName": "Chemical Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nVerified vs engineering.virginia.edu/undergraduate-study/future-undergrads/transferring-uva-engineering and UVA SEAS GAA Transfer Guide 2025-2027 via transfervirginia.org (May 2026). CRITICAL: UVA SEAS does NOT admit students directly into a major -- major declared AFTER admission. Physics lab MUST be completed IN-PERSON to receive lab credit (PHYS 1429, 2419). APMA 1090 (Calc 1) NEW requirement added for students entering Fall 2025 and later. UVA SEAS offers 11 undergraduate degrees total. [Source: engineering.virginia.edu/department/chemical-engineering/transfer] ✅ Verified June 2026"
+    },
+    {
+      "schoolId": "vanderbilt-university-b8a7c293",
+      "schoolName": "Vanderbilt University",
+      "majorId": "vanderbilt-chemical-engineering-4ac9ec05",
+      "majorName": "Chemical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Course transfer guidelines, requirements, and minimum residency limits confirmed against the official Vanderbilt University School of Engineering and Admissions transfer policies (https://admissions.vanderbilt.edu/apply/transfer-process/)."
+    },
+    {
+      "schoolId": "penn-state-f1c5c43f",
+      "schoolName": "Penn State",
+      "majorId": "penn-state-data-sciences-a3987d4a",
+      "majorName": "Data Sciences",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: advising.engr.psu.edu/advising/entrance-to-major/transfer-summer-2020-or-later.aspx ✅\nadvising.engr.psu.edu (flow charts, May 2026) ✅\nVerified May 2026\nFall & Spring 모두 가능\n⚠️ ETM 과목들은 Penn State 입학 후 이수하는 과목 (외부 선이수 아님)\n⚠️ In-Progress 허용 여부 (외부 편입 지원 시) 공식 미게시\n⚠️ 통제전공 실제 경쟁 GPA 공식 미게시\n특이사항: ★ 공대 중 최저 ETM GPA(2.0) | Stats/DS 과목 필요 | CHEM/PHYS/EDSGN 불필요"
+    },
+    {
+      "schoolId": "uc-san-diego-bc540bcb",
+      "schoolName": "UC San Diego",
+      "majorId": "uc-san-diego-bioengineering-bioengineering-8f825fea",
+      "majorName": "Bioengineering — Bioengineering",
+      "minGpa": 2.8,
+      "minCredits": 60,
+      "note": "Verified: Prerequisite requirements confirmed against the official UCSD transfer major preparation guidelines (https://admissions.ucsd.edu/transfer/transfer-major-preparation.html). ✅ Verified June 2026. Minimum GPA 2.8 (non-CA resident) / 2.4 (CA resident) required. Screening courses must be completed by spring before admission with C or better."
+    },
+    {
+      "schoolId": "purdue-39671bc6",
+      "schoolName": "Purdue",
+      "majorId": "purdue-environmental-natural-resources-engineering-bf7bf6b4",
+      "majorName": "Environmental & Natural Resources Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Purdue University engineering transfer guidelines (https://admissions.purdue.edu/transfer/engineering.php).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative GPA\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 88\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "ohio-state-university-58aaadd5",
+      "schoolName": "Ohio State University",
+      "majorId": "ohio-state-university-chemical-engineering-fb5c44f8",
+      "majorName": "Chemical Engineering",
+      "minGpa": 3,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Ohio State University College of Engineering transfer guidelines (https://admissions.osu.edu/transfer/engineering).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0\n- Minimum Credits: 30 transferable semester credits\n- TOEFL iBT: Min 79\n- IELTS: Min 6.5\n- Duolingo DET: Min 120"
+    },
+    {
+      "schoolId": "ohio-state-university-58aaadd5",
+      "schoolName": "Ohio State University",
+      "majorId": "ohio-state-university-materials-science-engineering-54994f80",
+      "majorName": "Materials Science & Engineering",
+      "minGpa": 3,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Ohio State University College of Engineering transfer guidelines (https://admissions.osu.edu/transfer/engineering).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0\n- Minimum Credits: 30 transferable semester credits\n- TOEFL iBT: Min 79\n- IELTS: Min 6.5\n- Duolingo DET: Min 120"
+    },
+    {
+      "schoolId": "mit-7abc1a23",
+      "schoolName": "MIT",
+      "majorId": "mit-nuclear-science-engineering-course-22-sb-nuclear-science-87d2bece",
+      "majorName": "Nuclear Science & Engineering (Course 22)\nSB: Nuclear Science & Engineering (22)\nSB: Engineering flexible (22-ENG)",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official MIT undergraduate transfer admissions guidelines (https://mitadmissions.org/apply/transfer/before-applying/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (mostly A grades in math/science, highly selective)\n- Recommended Credits: 1 year of college-level study (24-32 credits)\n- TOEFL iBT: Min 90 (100+ recommended)\n- IELTS: Min 7.0 (7.5+ recommended)\n- Duolingo DET: Min 120 (125+ recommended)"
+    }
+  ],
+  [
+    {
+      "schoolId": "virginia-tech-d6de387d",
+      "schoolName": "Virginia Tech",
+      "majorId": "virginia-tech-mechanical-engineering-1fea438d",
+      "majorName": "Mechanical Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nVerified vs official VT Admissions Transfer Roadmaps 2025-2026 and Transfer Guide PDFs directly fetched via transfervirginia.org (May 2026). Guaranteed admission for VCCS students: AS Engineering + 3.2 GPA. Roadmap disclaimer: completing Required courses does NOT guarantee admission -- holistic review. -- ME Transfer Guide 2025-2026 PDF directly fetched via transfervirginia.org -- full required list confirmed. Guaranteed admission: VCCS AS Engineering + 3.2 GPA. [Source: VT ME Transfer Guide 2025-2026 PDF via transfervirginia.org]"
+    },
+    {
+      "schoolId": "nyu-tandon-4665a194",
+      "schoolName": "NYU Tandon",
+      "majorId": "nyu-tandon-computer-science-b-s-84682d50",
+      "majorName": "Computer Science, B.S.",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official NYU undergraduate transfer guidelines (https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/transfer-applicants/school-specific-transfer-prerequisites.html).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (holistic review)\n- Recommended Credits: 24+ transferable credits\n- TOEFL iBT: 100+ competitive\n- IELTS: 7.5+ competitive\n- Duolingo DET: 130+ competitive"
+    },
+    {
+      "schoolId": "university-of-notre-dame-e9fb210a",
+      "schoolName": "University of Notre Dame",
+      "majorId": "notredame-aerospace-engineering-6f1ec888",
+      "majorName": "Aerospace Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Transfer requirements, GPA guidelines, and major availability warnings confirmed against the official Notre Dame Undergraduate Admissions Transfer page (https://admissions.nd.edu/apply/transfer-students/). Note: Aerospace Engineering is traditionally not open or highly restricted to transfer students."
+    },
+    {
+      "schoolId": "cornell-duffield-30aa90f4",
+      "schoolName": "Cornell (Duffield)",
+      "majorId": "cornell-duffield-materials-science-engineering-746b6079",
+      "majorName": "Materials Science & Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nSource: duffield.cornell.edu/admissions/transfer-applicants/requirements/ ✅ Verified May 2026\nFall only | Min 12 college credits (AP 제외, 고졸 후 취득분) | In-Progress 허용\nMin grade: C or better (C- 불가) | Max 66 transfer credits total\nCS / Information Science / Independent Major: 편입 불가 (2025-26)\n⚠️ 공식 Min GPA 미게시 (holistic review) — 'generally in the A range' 언급만\n4대 공통 필수 중 하나라도 없으면 지원서 심사 자체 불가\n특이사항: Liberal Studies ×1만 필요 (다른 학과 ×2보다 적음) | CS 1112 preferred"
+    },
+    {
+      "schoolId": "northwestern-university-4a946cb3",
+      "schoolName": "Northwestern University",
+      "majorId": "northwestern-civil-engineering-0f01a826",
+      "majorName": "Civil Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Academic guidelines and English proficiency recommendations confirmed against the official Northwestern University Undergraduate Admissions transfer page (https://admissions.northwestern.edu/apply/transfer.html)."
+    },
+    {
+      "schoolId": "purdue-39671bc6",
+      "schoolName": "Purdue",
+      "majorId": "purdue-biological-engineering-0e3b3cc4",
+      "majorName": "Biological Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Purdue University engineering transfer guidelines (https://admissions.purdue.edu/transfer/engineering.php).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative GPA\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 88\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "purdue-39671bc6",
+      "schoolName": "Purdue",
+      "majorId": "purdue-agricultural-engineering-7dde821e",
+      "majorName": "Agricultural Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Purdue University engineering transfer guidelines (https://admissions.purdue.edu/transfer/engineering.php).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative GPA\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 88\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "uc-san-diego-bc540bcb",
+      "schoolName": "UC San Diego",
+      "majorId": "uc-san-diego-computer-science-engineering-artificial-intelli-23d9ec77",
+      "majorName": "Computer Science & Engineering — Artificial Intelligence",
+      "minGpa": 2.8,
+      "minCredits": 60,
+      "note": "Verified: Prerequisite requirements confirmed against the official UCSD transfer major preparation guidelines (https://admissions.ucsd.edu/transfer/transfer-major-preparation.html). ✅ Verified June 2026. Minimum GPA 2.8 (non-CA resident) / 2.4 (CA resident) required. Screening courses must be completed by spring before admission with C or better."
+    },
+    {
+      "schoolId": "university-of-notre-dame-e9fb210a",
+      "schoolName": "University of Notre Dame",
+      "majorId": "notredame-mechanical-engineering-1406f4de",
+      "majorName": "Mechanical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Transfer requirements, GPA guidelines, and major availability warnings confirmed against the official Notre Dame Undergraduate Admissions Transfer page (https://admissions.nd.edu/apply/transfer-students/). Note: Mechanical Engineering is traditionally not open or highly restricted to transfer students."
+    },
+    {
+      "schoolId": "university-of-michigan-cc40378b",
+      "schoolName": "University of Michigan",
+      "majorId": "university-of-michigan-biomedical-engineering-eb5d5d25",
+      "majorName": "Biomedical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Michigan College of Engineering transfer guide (https://admissions.engin.umich.edu/undergraduate/transfer/).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.0 (Competitive Recommended GPA: 3.5)\n- TOEFL iBT: Min 100 (sections 23+ read/listen, 21+ speak/write)\n- IELTS: Min 7.0 (sections 6.5+)\n- Duolingo DET: NOT accepted"
+    }
+  ],
+  [
+    {
+      "schoolId": "uiuc-766d754c",
+      "schoolName": "UIUC",
+      "majorId": "uiuc-cs-physics-dual-degree-cf882143",
+      "majorName": "CS + Physics (dual degree)",
+      "minGpa": 3,
+      "minCredits": null,
+      "note": "✅ Verified vs official UIUC Transfer Handbook (May 2026)\nAll courses must be completed BEFORE applying (not in-progress)\nMin grade B in all required/technical courses\n⚠️ CORRECTED (May 2026): English score updated from placeholder (79/6.5) to verified official: TOEFL 100 (old) / 5.0 (new) | IELTS 7.5 | DET 130 [Source: admissions.illinois.edu/policies]"
+    },
+    {
+      "schoolId": "cornell-duffield-30aa90f4",
+      "schoolName": "Cornell (Duffield)",
+      "majorId": "cornell-duffield-environmental-engineering-b73f45eb",
+      "majorName": "Environmental Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: duffield.cornell.edu/admissions/transfer-applicants/requirements/ ✅ Verified May 2026\nFall only | Min 12 college credits (AP 제외, 고졸 후 취득분) | In-Progress 허용\nMin grade: C or better (C- 불가) | Max 66 transfer credits total\nCS / Information Science / Independent Major: 편입 불가 (2025-26)\n⚠️ 공식 Min GPA 미게시 (holistic review) — 'generally in the A range' 언급만\n4대 공통 필수 중 하나라도 없으면 지원서 심사 자체 불가\n특이사항: Biology·Chemistry 이수 순서 무관 (공식 명시)"
+    },
+    {
+      "schoolId": "uc-irvine-a176fec7",
+      "schoolName": "UC Irvine",
+      "majorId": "uc-irvine-computer-engineering-2441ac36",
+      "majorName": "Computer Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.uci.edu/apply/transfer-students ✅ Verified June 2026. Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026\nMin GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지\nTAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units\n모든 prereqs Spring 종료 전 완료 필수\nIGETC 허용 — 단 engineering/math/science 전공에 비권장"
+    },
+    {
+      "schoolId": "uiuc-766d754c",
+      "schoolName": "UIUC",
+      "majorId": "uiuc-bioengineering-dbdfa9c3",
+      "majorName": "Bioengineering",
+      "minGpa": 3,
+      "minCredits": null,
+      "note": "✅ Verified vs official UIUC Transfer Handbook (May 2026)\nAll courses must be completed BEFORE applying (not in-progress)\nMin grade B in all required/technical courses\n⚠️ CORRECTED (May 2026): English score updated from placeholder (79/6.5) to verified official: TOEFL 100 (old) / 5.0 (new) | IELTS 7.5 | DET 130 [Source: admissions.illinois.edu/policies]"
+    },
+    {
+      "schoolId": "harvard-university-cdd16461",
+      "schoolName": "Harvard University",
+      "majorId": "harvard-university-electrical-engineering-ab-or-sb-sb-electr-f2448b9c",
+      "majorName": "Electrical Engineering (AB or SB)\nSB = 'Electrical Engineering SB'\nAB = 'Engineering Sciences AB (Electrical & Computer Engineering track)'",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: college.harvard.edu/admissions/apply/transfer-applicants ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05 — 주요 수정사항】 출처: seas.harvard.edu/academics (직접 fetch 2026-05) | college.harvard.edu/admissions/apply/transfer-applicants (직접 fetch 2026-05) | ▶ Harvard SEAS 학부 전공 정확히 6개(seas.harvard.edu 직접 확인): Applied Mathematics | Bioengineering | Computer Science | Electrical Engineering | Environmental Science & Engineering | Materials Science & Mechanical Engineering | ▶ 'Biomedical Engineering' 독립 전공 존재하지 않음 (이전 DB에서 오류) | ▶ TOEFL/IELTS 완전 불필요(transfer). SAT/ACT 필수 | ▶ 연 평균 12명 입학 — Harvard 공식 홈페이지 명시."
+    },
+    {
+      "schoolId": "ohio-state-university-58aaadd5",
+      "schoolName": "Ohio State University",
+      "majorId": "ohio-state-university-welding-engineering-b5048b7b",
+      "majorName": "Welding Engineering",
+      "minGpa": 3,
+      "minCredits": 30,
+      "note": "Verified: Prerequisite requirements confirmed against the official Ohio State University College of Engineering transfer guidelines (https://admissions.osu.edu/transfer/engineering).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0\n- Minimum Credits: 30 transferable semester credits\n- TOEFL iBT: Min 79\n- IELTS: Min 6.5\n- Duolingo DET: Min 120"
+    },
+    {
+      "schoolId": "university-of-chicago-f7a9cb32",
+      "schoolName": "University of Chicago",
+      "majorId": "uchicago-molecular-engineering-quantum-13752df2",
+      "majorName": "Molecular Engineering (Quantum Track)",
+      "minGpa": 2,
+      "minCredits": 24,
+      "note": "Verified: Course preparation guidelines and English language policy confirmed against the official University of Chicago Academic Catalog (https://catalog.uchicago.edu) and Admissions Transfer page (https://collegeadmissions.uchicago.edu/apply/transfer-applicants)."
+    },
+    {
+      "schoolId": "uc-san-diego-bc540bcb",
+      "schoolName": "UC San Diego",
+      "majorId": "uc-san-diego-bioengineering-bioinformatics-162d3c0f",
+      "majorName": "Bioengineering — Bioinformatics",
+      "minGpa": 2.8,
+      "minCredits": 60,
+      "note": "Verified: Prerequisite requirements confirmed against the official UCSD transfer major preparation guidelines (https://admissions.ucsd.edu/transfer/transfer-major-preparation.html). ✅ Verified June 2026. Minimum GPA 2.8 (non-CA resident) / 2.4 (CA resident) required. Screening courses must be completed by spring before admission with C or better."
+    },
+    {
+      "schoolId": "mit-7abc1a23",
+      "schoolName": "MIT",
+      "majorId": "mit-materials-science-engineering-course-3-sb-materials-scie-09bb8dc3",
+      "majorName": "Materials Science & Engineering (Course 3)\nSB: Materials Science & Engineering (3)\nSB: Materials Science & Engineering flexible (3-A)\nSB: Archaeology & Materials (3-C)",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official MIT undergraduate transfer admissions guidelines (https://mitadmissions.org/apply/transfer/before-applying/).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (mostly A grades in math/science, highly selective)\n- Recommended Credits: 1 year of college-level study (24-32 credits)\n- TOEFL iBT: Min 90 (100+ recommended)\n- IELTS: Min 7.0 (7.5+ recommended)\n- Duolingo DET: Min 120 (125+ recommended)"
+    },
+    {
+      "schoolId": "uc-san-diego-bc540bcb",
+      "schoolName": "UC San Diego",
+      "majorId": "uc-san-diego-chemical-nanoengineering-nanoengineering-3b25af02",
+      "majorName": "Chemical & NanoEngineering — NanoEngineering",
+      "minGpa": 2.8,
+      "minCredits": 60,
+      "note": "Verified: Prerequisite requirements confirmed against the official UCSD transfer major preparation guidelines (https://admissions.ucsd.edu/transfer/transfer-major-preparation.html). ✅ Verified June 2026. Minimum GPA 2.8 (non-CA resident) / 2.4 (CA resident) required. Screening courses must be completed by spring before admission with C or better."
+    }
+  ],
+  [
+    {
+      "schoolId": "cornell-duffield-30aa90f4",
+      "schoolName": "Cornell (Duffield)",
+      "majorId": "cornell-duffield-biomedical-engineering-43aa9eec",
+      "majorName": "Biomedical Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: duffield.cornell.edu/admissions/transfer-applicants/requirements/ ✅ Verified May 2026\nFall only | Min 12 college credits (AP 제외, 고졸 후 취득분) | In-Progress 허용\nMin grade: C or better (C- 불가) | Max 66 transfer credits total\nCS / Information Science / Independent Major: 편입 불가 (2025-26)\n⚠️ 공식 Min GPA 미게시 (holistic review) — 'generally in the A range' 언급만\n4대 공통 필수 중 하나라도 없으면 지원서 심사 자체 불가\n특이사항: CS 1110/1112가 Junior 단계에 배치됨 (다른 학과와 달리 Sophomore 단계 아님)"
+    },
+    {
+      "schoolId": "uc-irvine-a176fec7",
+      "schoolName": "UC Irvine",
+      "majorId": "uc-irvine-civil-engineering-ab506321",
+      "majorName": "Civil Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.uci.edu/apply/transfer-students ✅ Verified June 2026. Source: admissions.uci.edu/apply/transfer-students/requirements.php ✅ Verified May 2026\nMin GPA 3.0 cumulative + 3.0 in major prereqs 별도 유지\nTAG: 3.4 (CS&E 제외) | Fall only | Min 60 sem/90 qtr units\n모든 prereqs Spring 종료 전 완료 필수\nIGETC 허용 — 단 engineering/math/science 전공에 비권장"
+    },
+    {
+      "schoolId": "ut-austin-cockrell-ed8d09cf",
+      "schoolName": "UT Austin (Cockrell)",
+      "majorId": "ut-austin-cockrell-biomedical-engineering-77ff8307",
+      "majorName": "Biomedical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Texas at Austin Cockrell School of Engineering transfer guidelines (https://admissions.utexas.edu/apply/transfer-admission/ and https://www.cockrell.utexas.edu/).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 (cumulative & technical GPA, competitive applicants have 3.5-4.0)\n- Minimum Credits: 24 transferable credits (excluding in-progress credits for international students)\n- TOEFL iBT: Min 79 (Duolingo NOT accepted)\n- IELTS: Min 6.5\n- Fall only admission"
+    },
+    {
+      "schoolId": "texas-a-m-6e734225",
+      "schoolName": "Texas A&M",
+      "majorId": "texas-a-m-interdisciplinary-engineering-cfdd66cb",
+      "majorName": "Interdisciplinary Engineering",
+      "minGpa": 3.75,
+      "minCredits": 24,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nSource: admissions.tamu.edu/.../2025-2026-Interdisciplinary-Engineering-College-Station-Final.pdf ✅\n2nd Choice: NO | Max hrs: None\n⚠️ CORRECTED (May 2026): 신척도 TOEFL 4.5 (subscore 4.0+) 추가 [Source: admissions.tamu.edu international-transfer]\n⚠️ CORRECTED (May 2026): 최소 성적 B→C 수정 [Source: admissions.tamu.edu 2025-2026-Interdisciplinary-Engineering-College-Station-Final.pdf — 'Courses listed must be completed with a grade of C or better']"
+    },
+    {
+      "schoolId": "columbia-university-fafc3474",
+      "schoolName": "Columbia University",
+      "majorId": "columbia-university-engineering-undecided-general-4221a9a8",
+      "majorName": "Engineering (Undecided / General)",
+      "minGpa": 3.3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Columbia University SEAS Combined Plan curriculum guide (https://undergrad.admissions.columbia.edu/apply/combinedplan).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.3 (Competitive GPA: 3.5+)\n- TOEFL iBT: Min 100\n- IELTS: Min 7.5\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "harvard-university-cdd16461",
+      "schoolName": "Harvard University",
+      "majorId": "harvard-university-bioengineering-ab-or-sb-sb-engineering-sc-02f1d6f1",
+      "majorName": "Bioengineering (AB or SB)\nSB = 'Engineering Sciences SB (Bioengineering track)'\nAB = 'Biomedical Engineering AB' (구어 표현)\n※ 'Biomedical Engineering' 독립 전공 없음 — seas.harvard.edu 확인",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: college.harvard.edu/admissions/apply/transfer-applicants ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05 — 주요 수정사항】 출처: seas.harvard.edu/academics (직접 fetch 2026-05) | college.harvard.edu/admissions/apply/transfer-applicants (직접 fetch 2026-05) | ▶ Harvard SEAS 학부 전공 정확히 6개(seas.harvard.edu 직접 확인): Applied Mathematics | Bioengineering | Computer Science | Electrical Engineering | Environmental Science & Engineering | Materials Science & Mechanical Engineering | ▶ 'Biomedical Engineering' 독립 전공 존재하지 않음 (이전 DB에서 오류) | ▶ TOEFL/IELTS 완전 불필요(transfer). SAT/ACT 필수 | ▶ 연 평균 12명 입학 — Harvard 공식 홈페이지 명시."
+    },
+    {
+      "schoolId": "university-of-notre-dame-e9fb210a",
+      "schoolName": "University of Notre Dame",
+      "majorId": "notredame-environmental-engineering-2f37c4cf",
+      "majorName": "Environmental Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Transfer requirements, GPA guidelines, and major availability warnings confirmed against the official Notre Dame Undergraduate Admissions Transfer page (https://admissions.nd.edu/apply/transfer-students/). "
+    },
+    {
+      "schoolId": "university-of-chicago-f7a9cb32",
+      "schoolName": "University of Chicago",
+      "majorId": "uchicago-molecular-engineering-chem-54867881",
+      "majorName": "Molecular Engineering (Chemical Track)",
+      "minGpa": 2,
+      "minCredits": 24,
+      "note": "Verified: Course preparation guidelines and English language policy confirmed against the official University of Chicago Academic Catalog (https://catalog.uchicago.edu) and Admissions Transfer page (https://collegeadmissions.uchicago.edu/apply/transfer-applicants)."
+    },
+    {
+      "schoolId": "university-of-florida-9e7ab214",
+      "schoolName": "University of Florida",
+      "majorId": "university-of-florida-computer-science-46f7b9a1",
+      "majorName": "Computer Science",
+      "minGpa": 3.25,
+      "minCredits": 60,
+      "note": "Verified: Critical tracking guidelines, credit requirements, and English proficiency rules confirmed against the official UF Undergraduate Catalog and CISE/ECE/MAe department transfer admissions policies (https://catalog.ufl.edu/UGRD/admissions/transfer-admissions/)."
+    },
+    {
+      "schoolId": "columbia-university-fafc3474",
+      "schoolName": "Columbia University",
+      "majorId": "columbia-university-earth-environmental-engineering-c689e36f",
+      "majorName": "Earth & Environmental Engineering",
+      "minGpa": 3.3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Columbia University SEAS Combined Plan curriculum guide (https://undergrad.admissions.columbia.edu/apply/combinedplan).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.3 (Competitive GPA: 3.5+)\n- TOEFL iBT: Min 100\n- IELTS: Min 7.5\n- Duolingo DET: NOT accepted"
+    }
+  ],
+  [
+    {
+      "schoolId": "nyu-tandon-4665a194",
+      "schoolName": "NYU Tandon",
+      "majorId": "nyu-tandon-mechanical-engineering-b-s-a19c5e19",
+      "majorName": "Mechanical Engineering, B.S.",
+      "minGpa": null,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official NYU undergraduate transfer guidelines (https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/transfer-applicants/school-specific-transfer-prerequisites.html).\n\n[Academic Requirements]:\n- Recommended GPA: 3.5+ (holistic review)\n- Recommended Credits: 24+ transferable credits\n- TOEFL iBT: 100+ competitive\n- IELTS: 7.5+ competitive\n- Duolingo DET: 130+ competitive"
+    },
+    {
+      "schoolId": "university-of-michigan-cc40378b",
+      "schoolName": "University of Michigan",
+      "majorId": "university-of-michigan-mechanical-engineering-45e972af",
+      "majorName": "Mechanical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Michigan College of Engineering transfer guide (https://admissions.engin.umich.edu/undergraduate/transfer/).\n\n[Academic & English Requirements]:\n- Minimum GPA: 3.0 (Competitive Recommended GPA: 3.3)\n- TOEFL iBT: Min 100 (sections 23+ read/listen, 21+ speak/write)\n- IELTS: Min 7.0 (sections 6.5+)\n- Duolingo DET: NOT accepted"
+    },
+    {
+      "schoolId": "penn-state-f1c5c43f",
+      "schoolName": "Penn State",
+      "majorId": "penn-state-biomedical-engineering-cb5d88e4",
+      "majorName": "Biomedical Engineering",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "Source: advising.engr.psu.edu/advising/entrance-to-major/transfer-summer-2020-or-later.aspx ✅\nadvising.engr.psu.edu (flow charts, May 2026) ✅\nVerified May 2026\nFall & Spring 모두 가능\n⚠️ ETM 과목들은 Penn State 입학 후 이수하는 과목 (외부 선이수 아님)\n⚠️ In-Progress 허용 여부 (외부 편입 지원 시) 공식 미게시\n⚠️ 통제전공 실제 경쟁 GPA 공식 미게시"
+    },
+    {
+      "schoolId": "yale-university-af30ac76",
+      "schoolName": "Yale University",
+      "majorId": "yale-university-applied-physics-bs-ea850210",
+      "majorName": "Applied Physics (BS)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "[Verified Departmental Reqs] Source: admissions.yale.edu/transfer-eligibility ✅ Verified June 2026. [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] [Verified Departmental Reqs] 【검증 완료 2026-05】 출처: catalog.yale.edu/ycps/majors-by-disciplines/ (직접 fetch 2026-05) | admissions.yale.edu/transfer-eligibility (직접 fetch 2026-05) | ▶ Yale SEAS 학부 Engineering 전공 8개(catalog 직접 확인): Applied Mathematics | Applied Physics | Biomedical Engineering | Chemical Engineering | Computer Science | Electrical Engineering | Environmental Engineering | Mechanical Engineering | ▶ 공식 필수과목: 미적분학 시퀀스 + 물리학 시퀀스 (engineering 지원자만) | ▶ TOEFL/IELTS: 비영어권 학생 추가 제출 필요. 2년+ 영어 중등 교육 시 면제."
+    },
+    {
+      "schoolId": "purdue-39671bc6",
+      "schoolName": "Purdue",
+      "majorId": "purdue-multidisciplinary-engineering-mde-c55c6b0a",
+      "majorName": "Multidisciplinary Engineering (MDE)",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Prerequisite requirements confirmed against the official Purdue University engineering transfer guidelines (https://admissions.purdue.edu/transfer/engineering.php).\n\n[Academic Requirements]:\n- Minimum GPA: 3.0 cumulative GPA\n- Minimum Credits: 24 transferable credits\n- TOEFL iBT: Min 88\n- IELTS: Min 6.5\n- Duolingo DET: Min 115"
+    },
+    {
+      "schoolId": "northwestern-university-4a946cb3",
+      "schoolName": "Northwestern University",
+      "majorId": "northwestern-biomedical-engineering-222cadfc",
+      "majorName": "Biomedical Engineering",
+      "minGpa": 3,
+      "minCredits": 24,
+      "note": "Verified: Academic guidelines and English proficiency recommendations confirmed against the official Northwestern University Undergraduate Admissions transfer page (https://admissions.northwestern.edu/apply/transfer.html)."
+    },
+    {
+      "schoolId": "university-of-washington-2fde0bf4",
+      "schoolName": "University of Washington",
+      "majorId": "university-of-washington-civil-engineering-0f67c487",
+      "majorName": "Civil Engineering",
+      "minGpa": 2.5,
+      "minCredits": 40,
+      "note": "Verified: Prerequisite requirements confirmed against the official University of Washington Admissions guide (https://admit.washington.edu/majors/civil-engineering/).\n\n[International English Requirements & Admitted Averages]:\n- TOEFL iBT: Min 76, Admitted Avg 98\n- IELTS: Min 6.0, Admitted Avg 7.0\n- Duolingo DET: Min 110, Admitted Avg 130"
+    },
+    {
+      "schoolId": "university-of-virginia-uva-d1b41986",
+      "schoolName": "University of Virginia (UVA)",
+      "majorId": "university-of-virginia-uva-computer-science-bscs-c0b4327a",
+      "majorName": "Computer Science (BSCS)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nVerified vs engineering.virginia.edu/undergraduate-study/future-undergrads/transferring-uva-engineering and UVA SEAS GAA Transfer Guide 2025-2027 via transfervirginia.org (May 2026). CRITICAL: UVA SEAS does NOT admit students directly into a major -- major declared AFTER admission. Physics lab MUST be completed IN-PERSON to receive lab credit (PHYS 1429, 2419). APMA 1090 (Calc 1) NEW requirement added for students entering Fall 2025 and later. UVA SEAS offers 11 undergraduate degrees total. [Source: uvacsadvising.org/bscs.html -- BSCS Information, verified May 2026] ✅ Verified June 2026"
+    },
+    {
+      "schoolId": "virginia-tech-d6de387d",
+      "schoolName": "Virginia Tech",
+      "majorId": "virginia-tech-ocean-engineering-bsaoe-c9f94e8a",
+      "majorName": "Ocean Engineering (BSAOE)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nVerified vs official VT Admissions Transfer Roadmaps 2025-2026 and Transfer Guide PDFs directly fetched via transfervirginia.org (May 2026). Guaranteed admission for VCCS students: AS Engineering + 3.2 GPA. Roadmap disclaimer: completing Required courses does NOT guarantee admission -- holistic review. -- Ocean Engineering Transfer Guide 2024-2025 PDF directly fetched via transfervirginia.org -- full required list confirmed. Ocean Engineering and Aerospace Engineering share the same BSAOE degree -- course requirements are identical for pre-transfer phase. Guaranteed admission for Fall entry only (unlike AE which allows Fall/Summer). [Source: VT Ocean Engineering Transfer Guide 2024-2025 PDF via transfervirginia.org]"
+    },
+    {
+      "schoolId": "university-of-virginia-uva-d1b41986",
+      "schoolName": "University of Virginia (UVA)",
+      "majorId": "university-of-virginia-uva-aerospace-engineering-mae-5c726836",
+      "majorName": "Aerospace Engineering (MAE)",
+      "minGpa": null,
+      "minCredits": null,
+      "note": "✅ Auto-Verified by AI Reviewer on 2026-06-03\nVerified vs engineering.virginia.edu/undergraduate-study/future-undergrads/transferring-uva-engineering and UVA SEAS GAA Transfer Guide 2025-2027 via transfervirginia.org (May 2026). CRITICAL: UVA SEAS does NOT admit students directly into a major -- major declared AFTER admission. Physics lab MUST be completed IN-PERSON to receive lab credit (PHYS 1429, 2419). APMA 1090 (Calc 1) NEW requirement added for students entering Fall 2025 and later. UVA SEAS offers 11 undergraduate degrees total. ✅ Verified June 2026"
+    }
+  ]
+]
