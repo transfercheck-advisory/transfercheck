@@ -266,6 +266,26 @@ const TRANSLATIONS = {
     stat_essays: "successful transfer essays calibrated",
     holistic_eval_title: "Holistic Review Institution Guide",
     holistic_eval_desc: "This institution does not enforce specific required prerequisite courses. Admissions are evaluated holistically based on overall academic achievements and potential. The absence of a prerequisite checklist is normal and is not a database error. Transfer applicants are highly encouraged to complete the most challenging math, science, and fundamental engineering courses available to demonstrate academic excellence.",
+    btn_profile: "My Profile",
+    profile_modal_title: "Account Dashboard",
+    profile_modal_header: "My Profile",
+    profile_modal_subtitle: "Manage your account settings, subscription tier, and security preferences.",
+    profile_email_label: "Email Address",
+    profile_plan_label: "Subscription Level",
+    profile_essay_credits_label: "EssayAI Credits",
+    btn_upgrade_short: "Upgrade",
+    btn_topup_short: "Buy Credits",
+    profile_security_header: "Security Settings",
+    label_current_password: "Current Password",
+    label_new_password: "New Password",
+    btn_update_password: "Update Password",
+    locked_card_title: "Pro / Premium Plan Only",
+    locked_card_desc: "6th target and beyond require Pro Plan or higher for evaluation.",
+    btn_upgrade_now: "Upgrade Now",
+    password_change_success: "Password updated successfully!",
+    password_change_invalid: "Current password does not match.",
+    statcompass_limit_help: "Free Plan maintains a cumulative history limit of 5 analyzed schools. Upgrade to Pro/Premium for unlimited analyses.",
+    btn_toggle_recommended: "Toggle Recommended Courses",
   },
   ko: {
     site_title: "TransferChek | 미국 공대 편입 준비 플랫폼",
@@ -534,6 +554,26 @@ const TRANSLATIONS = {
     stat_essays: "합격 에세이 패턴 분석 완료",
     holistic_eval_title: "종합 평가(Holistic Review) 대학 안내",
     holistic_eval_desc: "본 대학교는 공식적인 필수 선이수 과목 지정이 없으며, 지원자의 전반적인 학업 성취도 및 역량을 종합적으로 평가(Holistic Review)합니다. 따라서 필수 과목 체크리스트가 표시되지 않는 것은 정보 누락이나 데이터 오류가 아닌 실제 대학의 편입 요강에 따른 정상적인 상태입니다. 이전 대학에서 본인이 이수할 수 있는 가장 높은 수준의 물리, 수학 및 전공 기초 과목을 적극적으로 수강하여 학업적 성실성과 도전 정신을 입증하는 것이 합격률을 높이는 최선의 방법입니다.",
+    btn_profile: "내 프로필",
+    profile_modal_title: "계정 대시보드",
+    profile_modal_header: "내 프로필",
+    profile_modal_subtitle: "계정 설정, 구독 등급 및 비밀번호 등 보안 설정을 관리하세요.",
+    profile_email_label: "이메일 주소",
+    profile_plan_label: "이용 중인 플랜",
+    profile_essay_credits_label: "에세이 남은 횟수",
+    btn_upgrade_short: "업그레이드",
+    btn_topup_short: "이용권 구매",
+    profile_security_header: "보안 설정",
+    label_current_password: "현재 비밀번호",
+    label_new_password: "새로운 비밀번호",
+    btn_update_password: "비밀번호 변경",
+    locked_card_title: "Pro / Premium 플랜 전용",
+    locked_card_desc: "6번째 대학부터는 Pro 플랜 이상에서 분석 가능합니다.",
+    btn_upgrade_now: "지금 업그레이드",
+    password_change_success: "비밀번호가 성공적으로 변경되었습니다!",
+    password_change_invalid: "현재 비밀번호가 올바르지 않습니다.",
+    statcompass_limit_help: "무료 플랜은 분석 가능한 대학이 누적 최대 5개로 제한됩니다. 무제한 분석을 원하시면 Pro/Premium 플랜으로 업그레이드하세요.",
+    btn_toggle_recommended: "추천 과목 보기/숨기기",
   },
   zh: {
     site_title: "TransferChek | 工程学院转学策略分析平台",
@@ -801,7 +841,27 @@ const TRANSLATIONS = {
     stat_programs_small: "个专业",
     stat_essays: "已分析的优秀转学文书案例",
     holistic_eval_title: "综合评估 (Holistic Review) 大学指南",
-    holistic_eval_desc: "该大学没有官方指定的强制性先修课程要求，将根据申请者的整体学术成就和潜力进行综合评估。没有先修课程清单是正常现象，并非数据错误。建议申请者在原学校修读尽可能高难度的数学、物理及专业基础课程，以证明学术挑战精神并提升录取概率。"
+    holistic_eval_desc: "该大学没有官方指定的强制性先修课程要求，将根据申请者整体的学术成就和潜力进行综合评估。没有先修课程清单是正常现象，并非数据错误。建议申请者在原学校修读尽可能高难度的数学、物理及专业基础课程，以证明学术挑战精神并提升录取概率。",
+    btn_profile: "我的个人资料",
+    profile_modal_title: "账户控制面板",
+    profile_modal_header: "我的个人资料",
+    profile_modal_subtitle: "管理您的账户设置、订阅级别和安全首选项。",
+    profile_email_label: "电子邮箱",
+    profile_plan_label: "订阅级别",
+    profile_essay_credits_label: "EssayAI 剩余次数",
+    btn_upgrade_short: "升级",
+    btn_topup_short: "购买额度",
+    profile_security_header: "安全设置",
+    label_current_password: "当前密码",
+    label_new_password: "新密码",
+    btn_update_password: "更新密码",
+    locked_card_title: "仅限 Pro / Premium 方案",
+    locked_card_desc: "第 6 个目标及以上需要订阅 Pro 或更高方案以进行资格评估。",
+    btn_upgrade_now: "立即升级",
+    password_change_success: "密码更新成功！",
+    password_change_invalid: "当前密码输入不正确。",
+    statcompass_limit_help: "免费计划限制累计分析最多5所大学。升级到 Pro/Premium 计划以解锁无限分析。",
+    btn_toggle_recommended: "切换推荐课程",
   }
 };
 
@@ -825,8 +885,15 @@ const state = {
   selectedRoadmapTargets: [],
   plan: localStorage.getItem("transferCompassPlan") || "Free",
   language: localStorage.getItem("transferCompassLang") || "en",
-  essayCredits: parseInt(localStorage.getItem("transferCompassEssayCredits") || (localStorage.getItem("transferCompassPlan") === "Premium" ? "5" : "0"), 10)
+  essayCredits: parseInt(localStorage.getItem("transferCompassEssayCredits") || (localStorage.getItem("transferCompassPlan") === "Premium" ? "5" : "0"), 10),
+  analyzedSchools: new Set(JSON.parse(localStorage.getItem("transferCompassAnalyzedSchools") || "[]")),
+  admissionYear: 2026,
+  admissionTerm: "Fall"
 };
+
+function saveAnalyzedSchoolsToLocalStorage() {
+  localStorage.setItem("transferCompassAnalyzedSchools", JSON.stringify(Array.from(state.analyzedSchools)));
+}
 
 function saveProfileToLocalStorage() {
   const profileData = {
@@ -838,7 +905,9 @@ function saveProfileToLocalStorage() {
     englishWaiver: state.englishWaiver,
     completedCourses: Array.from(state.completedCourses),
     targetSlots: state.targetSlots,
-    roadmapTargetSlots: state.roadmapTargetSlots
+    roadmapTargetSlots: state.roadmapTargetSlots,
+    admissionYear: state.admissionYear,
+    admissionTerm: state.admissionTerm
   };
   localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profileData));
 }
@@ -854,6 +923,8 @@ function loadProfileFromLocalStorage() {
     if (profile.englishType !== undefined) state.englishType = profile.englishType;
     if (profile.englishScore !== undefined) state.englishScore = Number(profile.englishScore);
     if (profile.englishWaiver !== undefined) state.englishWaiver = Boolean(profile.englishWaiver);
+    if (profile.admissionYear !== undefined) state.admissionYear = Number(profile.admissionYear);
+    if (profile.admissionTerm !== undefined) state.admissionTerm = profile.admissionTerm;
     if (Array.isArray(profile.completedCourses)) {
       state.completedCourses = new Set(profile.completedCourses);
     }
@@ -1005,7 +1076,29 @@ function updateActivePlanLabel() {
   }
 }
 
+function updatePlanNoticeVisibility() {
+  const notice = qs("#statCompassLimitNotice");
+  if (notice) {
+    if (state.plan === "Free") {
+      notice.style.display = "flex";
+    } else {
+      notice.style.display = "none";
+    }
+  }
+}
+
 window.selectUserPlan = function(plan) {
+  if (plan !== "Free") {
+    const authState = readAuthState();
+    const currentUser = authState.currentUser || "";
+    if (!currentUser) {
+      alert(t("alert_login_required", "You must log in or register to select a paid plan."));
+      closePricingModal();
+      openAuthModal("login");
+      return;
+    }
+  }
+
   state.plan = plan;
   localStorage.setItem("transferCompassPlan", plan);
   
@@ -1014,7 +1107,18 @@ window.selectUserPlan = function(plan) {
     localStorage.setItem("transferCompassEssayCredits", "5");
   }
   
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  if (currentUser) {
+    authState.users[currentUser].plan = plan;
+    if (plan === "Premium") {
+      authState.users[currentUser].essayCredits = 5;
+    }
+    writeAuthState(authState);
+  }
+  
   updateActivePlanLabel();
+  updatePlanNoticeVisibility();
   updateEssayCreditsUI();
   syncSelectedTargetsFromSlots();
   renderEligibilityResults();
@@ -1090,6 +1194,8 @@ function isUnspecifiedText(value) {
     text.includes("holistic")
   );
 }
+
+
 
 function isGeneralGuidanceText(value) {
   const text = normalizeText(value);
@@ -1427,14 +1533,16 @@ function evaluateProgram(program) {
     checks.push({
       label: `GPA ${displayRawRequirement(program.rawMinGpa, program.minGpa)}`,
       pass: program.minGpa === null || state.gpa >= program.minGpa,
-      status: "normal"
+      status: "normal",
+      type: "gpa"
     });
   }
   if (program.minCredits !== null) {
     checks.push({
       label: `Credits ${displayRawRequirement(program.rawMinCredits, program.minCredits)}`,
       pass: program.minCredits === null || state.credits >= program.minCredits,
-      status: "normal"
+      status: "normal",
+      type: "credits"
     });
   }
 
@@ -1442,7 +1550,8 @@ function evaluateProgram(program) {
     checks.push({
       label: course.name,
       pass: isCourseSatisfied(course.id),
-      status: "normal"
+      status: "normal",
+      type: "course"
     });
   });
 
@@ -1450,7 +1559,8 @@ function evaluateProgram(program) {
     checks.push({
       label: `${t("choice_label_pref")} ${choice.options.map((course) => course.name).join(" / ")}`,
       pass: choice.options.some((course) => isCourseSatisfied(course.id)),
-      status: "normal"
+      status: "normal",
+      type: "course"
     });
   });
 
@@ -1459,7 +1569,8 @@ function evaluateProgram(program) {
     checks.push({
       label: t("review_count_alert").replace("{count}", reviewCount),
       pass: true,
-      status: "review"
+      status: "review",
+      type: "course"
     });
   }
 
@@ -1468,7 +1579,8 @@ function evaluateProgram(program) {
     checks.push({
       label: `${englishLabel(state.englishType)} ${englishRequirement}+`,
       pass: state.englishWaiver || state.englishScore >= englishRequirement,
-      status: "normal"
+      status: "normal",
+      type: "english"
     });
   }
 
@@ -1510,10 +1622,6 @@ function syncSelectedTargetsFromSlots() {
       if (seen.has(key)) {
         slot.school = "";
         slot.major = "";
-        const schoolInput = qs(`#targetSchool${index}`);
-        const majorInput = qs(`#targetMajor${index}`);
-        if (schoolInput) schoolInput.value = "";
-        if (majorInput) majorInput.value = "";
       } else {
         seen.add(key);
       }
@@ -1529,28 +1637,8 @@ function syncSelectedTargetsFromSlots() {
   
   const uniqueIds = [...new Set(ids)];
   
-  if (state.plan === "Free" && uniqueIds.length > 5) {
-    openPricingModal();
-    state.selectedTargets = uniqueIds.slice(0, 5);
-    
-    let validCount = 0;
-    state.targetSlots.forEach((slot, index) => {
-      const match = programsForSchoolName(slot.school).find((program) => normalizeText(program.name) === normalizeText(slot.major));
-      if (match) {
-        validCount++;
-        if (validCount > 5) {
-          slot.school = "";
-          slot.major = "";
-          const schoolInput = qs(`#targetSchool${index}`);
-          const majorInput = qs(`#targetMajor${index}`);
-          if (schoolInput) schoolInput.value = "";
-          if (majorInput) majorInput.value = "";
-        }
-      }
-    });
-  } else {
-    state.selectedTargets = uniqueIds.slice(0, 10);
-  }
+  // Keep all selected targets up to 10 regardless of the Free/Pro plan tier
+  state.selectedTargets = uniqueIds.slice(0, 10);
 
   saveProfileToLocalStorage();
 }
@@ -1605,182 +1693,52 @@ function renderCourseGroups() {
 }
 
 function renderTargetPicker() {
-  qs("#targetPicker").innerHTML = `
-    ${state.targetSlots
-      .map((slot, index) => {
-        return `
-          <div class="target-search-row">
-            <span class="target-index">${index + 1}</span>
-            <div class="target-inputs-group">
-              <div class="form-row search-field">
-                <label for="targetSchool${index}">${t("label_school")}</label>
-                <div class="input-wrapper">
-                  <input
-                    id="targetSchool${index}"
-                    type="text"
-                    data-target-school="${index}"
-                    value="${escapeHtml(slot.school)}"
-                    placeholder="${t("search_school_placeholder")}"
-                    autocomplete="off"
-                  />
-                  <button type="button" class="clear-input-btn ${slot.school ? 'visible' : ''}" data-clear-slot-school="${index}">&times;</button>
-                </div>
-                <div class="search-menu" data-school-menu="${index}"></div>
-              </div>
-              <div class="form-row search-field">
-                <label for="targetMajor${index}">${t("label_major")}</label>
-                <div class="input-wrapper">
-                  <input
-                    id="targetMajor${index}"
-                    type="text"
-                    data-target-major="${index}"
-                    value="${escapeHtml(slot.major)}"
-                    placeholder="${t("search_major_placeholder")}"
-                    autocomplete="off"
-                  />
-                  <button type="button" class="clear-input-btn ${slot.major ? 'visible' : ''}" data-clear-slot-major="${index}">&times;</button>
-                </div>
-                <div class="search-menu" data-major-menu="${index}"></div>
-              </div>
+  const schools = uniqueSchools();
+  qs("#targetPicker").innerHTML = state.targetSlots
+    .map((slot, index) => {
+      const majors = slot.school ? programsForSchoolName(slot.school) : [];
+      return `
+        <div class="target-search-row">
+          <span class="target-index">${index + 1}</span>
+          <div class="target-inputs-group">
+            <div class="form-row search-field">
+              <label for="targetSchool${index}">${t("label_school", "School")}</label>
+              <select id="targetSchool${index}" data-target-school="${index}" class="target-select school-select">
+                <option value="">-- ${t("select_school_placeholder", "Select School")} --</option>
+                ${schools.map(s => `<option value="${escapeHtml(s.name)}" ${slot.school === s.name ? 'selected' : ''}>${escapeHtml(s.name)}</option>`).join("")}
+              </select>
+            </div>
+            <div class="form-row search-field">
+              <label for="targetMajor${index}">${t("label_major", "Major")}</label>
+              <select id="targetMajor${index}" data-target-major="${index}" class="target-select major-select" ${!slot.school ? 'disabled' : ''}>
+                <option value="">-- ${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")} --</option>
+                ${majors.map(p => `<option value="${escapeHtml(p.name)}" ${slot.major === p.name ? 'selected' : ''}>${escapeHtml(p.name)}</option>`).join("")}
+              </select>
             </div>
           </div>
-        `;
-      })
-      .join("")}
-  `;
+        </div>
+      `;
+    })
+    .join("");
 
-  const renderSchoolMenu = (index, query = "") => {
-    const menu = qs(`[data-school-menu="${index}"]`);
-    if (!menu) return;
-    const normalizedQuery = normalizeText(query);
-    const schools = uniqueSchools()
-      .filter((school) => !normalizedQuery || normalizeText(school.name).includes(normalizedQuery))
-      .slice(0, 80);
-    menu.innerHTML = schools.length
-      ? schools.map((school) => `<button type="button" data-pick-school="${index}" data-value="${escapeHtml(school.name)}">${escapeHtml(school.name)}</button>`).join("")
-      : `<div class="search-empty">${t("search_empty")}</div>`;
-    menu.classList.add("open");
-  };
-
-  const renderMajorMenu = (index, query = "") => {
-    const menu = qs(`[data-major-menu="${index}"]`);
-    if (!menu) return;
-    const normalizedQuery = normalizeText(query);
-    const programs = programsForSchoolName(state.targetSlots[index].school)
-      .filter((program) => !normalizedQuery || normalizeText(program.name).includes(normalizedQuery))
-      .slice(0, 120);
-    menu.innerHTML = programs.length
-      ? programs.map((program) => `<button type="button" data-pick-major="${index}" data-value="${escapeHtml(program.name)}">${escapeHtml(program.name)}</button>`).join("")
-      : `<div class="search-empty">${state.targetSlots[index].school ? t("search_empty") : t("search_select_school_first")}</div>`;
-    menu.classList.add("open");
-  };
-
-  const closeSearchMenus = () => qsa(".search-menu").forEach((menu) => menu.classList.remove("open"));
-
-  qsa("[data-target-school]").forEach((input) => {
-    input.addEventListener("focus", () => renderSchoolMenu(Number(input.dataset.targetSchool), input.value));
-    input.addEventListener("input", () => {
-      const index = Number(input.dataset.targetSchool);
-      state.targetSlots[index].school = input.value;
+  qsa("[data-target-school]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const index = Number(select.dataset.targetSchool);
+      state.targetSlots[index].school = select.value;
       state.targetSlots[index].major = "";
-      const majorInput = qs(`#targetMajor${index}`);
-      if (majorInput) majorInput.value = "";
-
-      const clearBtn = qs(`[data-clear-slot-school="${index}"]`);
-      if (clearBtn) {
-        if (input.value) clearBtn.classList.add("visible");
-        else clearBtn.classList.remove("visible");
-      }
-      const majorClearBtn = qs(`[data-clear-slot-major="${index}"]`);
-      if (majorClearBtn) majorClearBtn.classList.remove("visible");
-
       syncSelectedTargetsFromSlots();
-      renderSchoolMenu(index, input.value);
+      renderTargetPicker();
       renderEligibilityResults();
     });
   });
 
-  qsa("[data-target-major]").forEach((input) => {
-    input.addEventListener("focus", () => renderMajorMenu(Number(input.dataset.targetMajor), input.value));
-    input.addEventListener("input", () => {
-      const index = Number(input.dataset.targetMajor);
-      state.targetSlots[index].major = input.value;
-
-      const clearBtn = qs(`[data-clear-slot-major="${index}"]`);
-      if (clearBtn) {
-        if (input.value) clearBtn.classList.add("visible");
-        else clearBtn.classList.remove("visible");
-      }
-
+  qsa("[data-target-major]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const index = Number(select.dataset.targetMajor);
+      state.targetSlots[index].major = select.value;
       syncSelectedTargetsFromSlots();
-      renderMajorMenu(index, input.value);
       renderEligibilityResults();
     });
-  });
-
-  qs("#targetPicker").addEventListener("mousedown", (event) => {
-    const schoolButton = event.target.closest("[data-pick-school]");
-    const majorButton = event.target.closest("[data-pick-major]");
-    if (!schoolButton && !majorButton) return;
-    event.preventDefault();
-    if (schoolButton) {
-      const index = Number(schoolButton.dataset.pickSchool);
-      state.targetSlots[index].school = schoolButton.dataset.value;
-      state.targetSlots[index].major = "";
-      qs(`#targetSchool${index}`).value = schoolButton.dataset.value;
-      qs(`#targetMajor${index}`).value = "";
-
-      const clearBtn = qs(`[data-clear-slot-school="${index}"]`);
-      if (clearBtn) clearBtn.classList.add("visible");
-      const majorClearBtn = qs(`[data-clear-slot-major="${index}"]`);
-      if (majorClearBtn) majorClearBtn.classList.remove("visible");
-
-      closeSearchMenus();
-    }
-    if (majorButton) {
-      const index = Number(majorButton.dataset.pickMajor);
-      state.targetSlots[index].major = majorButton.dataset.value;
-      qs(`#targetMajor${index}`).value = majorButton.dataset.value;
-
-      const clearBtn = qs(`[data-clear-slot-major="${index}"]`);
-      if (clearBtn) clearBtn.classList.add("visible");
-
-      closeSearchMenus();
-    }
-    syncSelectedTargetsFromSlots();
-    renderEligibilityResults();
-  });
-
-  qs("#targetPicker").addEventListener("click", (event) => {
-    const clearSchoolBtn = event.target.closest("[data-clear-slot-school]");
-    const clearMajorBtn = event.target.closest("[data-clear-slot-major]");
-    if (!clearSchoolBtn && !clearMajorBtn) return;
-
-    if (clearSchoolBtn) {
-      const index = Number(clearSchoolBtn.dataset.clearSlotSchool);
-      state.targetSlots[index].school = "";
-      state.targetSlots[index].major = "";
-      const schoolInput = qs(`#targetSchool${index}`);
-      const majorInput = qs(`#targetMajor${index}`);
-      if (schoolInput) schoolInput.value = "";
-      if (majorInput) majorInput.value = "";
-      clearSchoolBtn.classList.remove("visible");
-      const siblingClear = qs(`[data-clear-slot-major="${index}"]`);
-      if (siblingClear) siblingClear.classList.remove("visible");
-    }
-    if (clearMajorBtn) {
-      const index = Number(clearMajorBtn.dataset.clearSlotMajor);
-      state.targetSlots[index].major = "";
-      const majorInput = qs(`#targetMajor${index}`);
-      if (majorInput) majorInput.value = "";
-      clearMajorBtn.classList.remove("visible");
-    }
-    syncSelectedTargetsFromSlots();
-    renderEligibilityResults();
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest("#targetPicker")) closeSearchMenus();
   });
 }
 
@@ -1819,186 +1777,68 @@ function syncSelectedRoadmapTargetsFromSlots() {
 function renderRoadmapTargetPicker() {
   const container = qs("#roadmapTargetPicker");
   if (!container) return;
-  container.innerHTML = `
-    ${state.roadmapTargetSlots
-      .map((slot, index) => {
-        return `
-          <div class="target-search-row">
-            <span class="target-index">${index + 1}</span>
-            <div class="target-inputs-group">
-              <div class="form-row search-field">
-                <label for="roadmapTargetSchool${index}">${t("label_school")}</label>
-                <div class="input-wrapper">
-                  <input
-                    id="roadmapTargetSchool${index}"
-                    type="text"
-                    data-roadmap-school="${index}"
-                    value="${escapeHtml(slot.school)}"
-                    placeholder="${t("search_school_placeholder")}"
-                    autocomplete="off"
-                  />
-                  <button type="button" class="clear-input-btn ${slot.school ? 'visible' : ''}" data-clear-roadmap-slot-school="${index}">&times;</button>
-                </div>
-                <div class="search-menu" data-roadmap-school-menu="${index}"></div>
-              </div>
-              <div class="form-row search-field">
-                <label for="roadmapTargetMajor${index}">${t("label_major")}</label>
-                <div class="input-wrapper">
-                  <input
-                    id="roadmapTargetMajor${index}"
-                    type="text"
-                    data-roadmap-major="${index}"
-                    value="${escapeHtml(slot.major)}"
-                    placeholder="${t("search_major_placeholder")}"
-                    autocomplete="off"
-                  />
-                  <button type="button" class="clear-input-btn ${slot.major ? 'visible' : ''}" data-clear-roadmap-slot-major="${index}">&times;</button>
-                </div>
-                <div class="search-menu" data-roadmap-major-menu="${index}"></div>
-              </div>
+  const schools = uniqueSchools();
+  container.innerHTML = state.roadmapTargetSlots
+    .map((slot, index) => {
+      const majors = slot.school ? programsForSchoolName(slot.school) : [];
+      return `
+        <div class="target-search-row">
+          <span class="target-index">${index + 1}</span>
+          <div class="target-inputs-group">
+            <div class="form-row search-field">
+              <label for="roadmapTargetSchool${index}">${t("label_school", "School")}</label>
+              <select id="roadmapTargetSchool${index}" data-roadmap-school="${index}" class="target-select school-select">
+                <option value="">-- ${t("select_school_placeholder", "Select School")} --</option>
+                ${schools.map(s => `<option value="${escapeHtml(s.name)}" ${slot.school === s.name ? 'selected' : ''}>${escapeHtml(s.name)}</option>`).join("")}
+              </select>
+            </div>
+            <div class="form-row search-field">
+              <label for="roadmapTargetMajor${index}">${t("label_major", "Major")}</label>
+              <select id="roadmapTargetMajor${index}" data-roadmap-major="${index}" class="target-select major-select" ${!slot.school ? 'disabled' : ''}>
+                <option value="">-- ${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")} --</option>
+                ${majors.map(p => `<option value="${escapeHtml(p.name)}" ${slot.major === p.name ? 'selected' : ''}>${escapeHtml(p.name)}</option>`).join("")}
+              </select>
             </div>
           </div>
-        `;
-      })
-      .join("")}
-  `;
+        </div>
+      `;
+    })
+    .join("");
 
-  const renderSchoolMenu = (index, query = "") => {
-    const menu = qs(`[data-roadmap-school-menu="${index}"]`);
-    if (!menu) return;
-    const normalizedQuery = normalizeText(query);
-    const schools = uniqueSchools()
-      .filter((school) => !normalizedQuery || normalizeText(school.name).includes(normalizedQuery))
-      .slice(0, 80);
-    menu.innerHTML = schools.length
-      ? schools.map((school) => `<button type="button" data-pick-roadmap-school="${index}" data-value="${escapeHtml(school.name)}">${escapeHtml(school.name)}</button>`).join("")
-      : `<div class="search-empty">${t("search_empty")}</div>`;
-    menu.classList.add("open");
-  };
-
-  const renderMajorMenu = (index, query = "") => {
-    const menu = qs(`[data-roadmap-major-menu="${index}"]`);
-    if (!menu) return;
-    const normalizedQuery = normalizeText(query);
-    const programs = programsForSchoolName(state.roadmapTargetSlots[index].school)
-      .filter((program) => !normalizedQuery || normalizeText(program.name).includes(normalizedQuery))
-      .slice(0, 120);
-    menu.innerHTML = programs.length
-      ? programs.map((program) => `<button type="button" data-pick-roadmap-major="${index}" data-value="${escapeHtml(program.name)}">${escapeHtml(program.name)}</button>`).join("")
-      : `<div class="search-empty">${state.roadmapTargetSlots[index].school ? t("search_empty") : t("search_select_school_first")}</div>`;
-    menu.classList.add("open");
-  };
-
-  const closeSearchMenus = () => qsa(".search-menu").forEach((menu) => menu.classList.remove("open"));
-
-  qsa("[data-roadmap-school]").forEach((input) => {
-    input.addEventListener("focus", () => renderSchoolMenu(Number(input.dataset.roadmapSchool), input.value));
-    input.addEventListener("input", () => {
-      const index = Number(input.dataset.roadmapSchool);
-      state.roadmapTargetSlots[index].school = input.value;
+  qsa("[data-roadmap-school]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const index = Number(select.dataset.roadmapSchool);
+      state.roadmapTargetSlots[index].school = select.value;
       state.roadmapTargetSlots[index].major = "";
-      const majorInput = qs(`#roadmapTargetMajor${index}`);
-      if (majorInput) majorInput.value = "";
-
-      const clearBtn = qs(`[data-clear-roadmap-slot-school="${index}"]`);
-      if (clearBtn) {
-        if (input.value) clearBtn.classList.add("visible");
-        else clearBtn.classList.remove("visible");
-      }
-      const majorClearBtn = qs(`[data-clear-roadmap-slot-major="${index}"]`);
-      if (majorClearBtn) majorClearBtn.classList.remove("visible");
-
       syncSelectedRoadmapTargetsFromSlots();
-      renderSchoolMenu(index, input.value);
+      renderRoadmapTargetPicker();
     });
   });
 
-  qsa("[data-roadmap-major]").forEach((input) => {
-    input.addEventListener("focus", () => renderMajorMenu(Number(input.dataset.roadmapMajor), input.value));
-    input.addEventListener("input", () => {
-      const index = Number(input.dataset.roadmapMajor);
-      state.roadmapTargetSlots[index].major = input.value;
-
-      const clearBtn = qs(`[data-clear-roadmap-slot-major="${index}"]`);
-      if (clearBtn) {
-        if (input.value) clearBtn.classList.add("visible");
-        else clearBtn.classList.remove("visible");
-      }
-
+  qsa("[data-roadmap-major]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const index = Number(select.dataset.roadmapMajor);
+      state.roadmapTargetSlots[index].major = select.value;
       syncSelectedRoadmapTargetsFromSlots();
-      renderMajorMenu(index, input.value);
     });
-  });
-
-  container.addEventListener("mousedown", (event) => {
-    const schoolButton = event.target.closest("[data-pick-roadmap-school]");
-    const majorButton = event.target.closest("[data-pick-roadmap-major]");
-    if (!schoolButton && !majorButton) return;
-    event.preventDefault();
-    if (schoolButton) {
-      const index = Number(schoolButton.dataset.pickRoadmapSchool);
-      state.roadmapTargetSlots[index].school = schoolButton.dataset.value;
-      state.roadmapTargetSlots[index].major = "";
-      qs(`#roadmapTargetSchool${index}`).value = schoolButton.dataset.value;
-      qs(`#roadmapTargetMajor${index}`).value = "";
-
-      const clearBtn = qs(`[data-clear-roadmap-slot-school="${index}"]`);
-      if (clearBtn) clearBtn.classList.add("visible");
-      const majorClearBtn = qs(`[data-clear-roadmap-slot-major="${index}"]`);
-      if (majorClearBtn) majorClearBtn.classList.remove("visible");
-
-      closeSearchMenus();
-    }
-    if (majorButton) {
-      const index = Number(majorButton.dataset.pickRoadmapMajor);
-      state.roadmapTargetSlots[index].major = majorButton.dataset.value;
-      qs(`#roadmapTargetMajor${index}`).value = majorButton.dataset.value;
-
-      const clearBtn = qs(`[data-clear-roadmap-slot-major="${index}"]`);
-      if (clearBtn) clearBtn.classList.add("visible");
-
-      closeSearchMenus();
-    }
-    syncSelectedRoadmapTargetsFromSlots();
-  });
-
-  container.addEventListener("click", (event) => {
-    const clearSchoolBtn = event.target.closest("[data-clear-roadmap-slot-school]");
-    const clearMajorBtn = event.target.closest("[data-clear-roadmap-slot-major]");
-    if (!clearSchoolBtn && !clearMajorBtn) return;
-
-    if (clearSchoolBtn) {
-      const index = Number(clearSchoolBtn.dataset.clearRoadmapSlotSchool);
-      state.roadmapTargetSlots[index].school = "";
-      state.roadmapTargetSlots[index].major = "";
-      const schoolInput = qs(`#roadmapTargetSchool${index}`);
-      const majorInput = qs(`#roadmapTargetMajor${index}`);
-      if (schoolInput) schoolInput.value = "";
-      if (majorInput) majorInput.value = "";
-      clearSchoolBtn.classList.remove("visible");
-      const siblingClear = qs(`[data-clear-roadmap-slot-major="${index}"]`);
-      if (siblingClear) siblingClear.classList.remove("visible");
-    }
-    if (clearMajorBtn) {
-      const index = Number(clearMajorBtn.dataset.clearRoadmapSlotMajor);
-      state.roadmapTargetSlots[index].major = "";
-      const majorInput = qs(`#roadmapTargetMajor${index}`);
-      if (majorInput) majorInput.value = "";
-      clearMajorBtn.classList.remove("visible");
-    }
-    syncSelectedRoadmapTargetsFromSlots();
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest("#roadmapTargetPicker")) closeSearchMenus();
   });
 }
 
 function renderEligibilityResults() {
-  const selectedPrograms = allPrograms().filter((program) => state.selectedTargets.includes(program.id));
+  let selectedPrograms = allPrograms().filter((program) => state.selectedTargets.includes(program.id));
+  let isExample = false;
+  if (selectedPrograms.length === 0) {
+    const exampleId = "university-of-washington-computer-engineering-allen-school-347f00d7";
+    const exampleProg = allPrograms().find(p => p.id === exampleId) || allPrograms()[0];
+    if (exampleProg) {
+      selectedPrograms = [exampleProg];
+      isExample = true;
+    }
+  }
+
   qs("#eligibilityResults").innerHTML =
     selectedPrograms
-      .map((program) => {
+      .map((program, idx) => {
         const evaluation = evaluateProgram(program);
         const verificationNotice = verificationNoticeForProgram(program);
         const statusText = evaluation.pass ? (evaluation.needsReview ? t("status_pass_review") : t("status_pass")) : t("status_fail");
@@ -2033,104 +1873,133 @@ function renderEligibilityResults() {
             detail: t("rec_other_detail")
           }))
         ];
-        return `
-          <article class="result-card ${evaluation.pass ? "pass" : ""}">
-            <span class="status ${evaluation.pass ? "pass" : "fail"}">${statusText}</span>
-            <h3>${escapeHtml(program.school.shortName)}</h3>
-            <p>${escapeHtml(program.name)}</p>
-            <div class="badge-container">${getConfidenceBadgeHtml(program)}</div>
-            ${
-              verificationNotice
-                ? `<div class="verification-alert">
-                    <strong>${escapeHtml(verificationNotice.label)}</strong>
-                    <span>${escapeHtml(verificationNotice.detail)}</span>
-                  </div>`
-                : ""
-            }
-            ${
-              isHolistic
-                ? `<div class="holistic-warning" style="margin: 12px 0; background: rgba(59, 130, 246, 0.08); border-left: 4px solid var(--accent); padding: 12px; border-radius: 6px;">
-                    <strong style="color: var(--accent); display: block; margin-bottom: 4px; font-size: 14px;">ℹ️ ${escapeHtml(t("holistic_eval_title"))}</strong>
-                    <span style="color: var(--foreground); font-size: 13px; line-height: 1.4; display: block;">${escapeHtml(t("holistic_eval_desc"))}</span>
-                  </div>`
-                : ""
-            }
-            <div class="check-list">
-              ${primaryChecks
-                .map(
-                  (check) => `
-                    <div class="check-item ${check.pass ? "pass" : "fail"}">
-                      <span>${escapeHtml(check.label)}</span>
-                      <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
-                    </div>
-                  `
-                )
-                .join("")}
+
+        let isLocked = false;
+        if (state.plan === "Free" && !isExample) {
+          const schoolName = program.school.name;
+          if (state.analyzedSchools.has(schoolName)) {
+            isLocked = false;
+          } else if (state.analyzedSchools.size < 5) {
+            state.analyzedSchools.add(schoolName);
+            saveAnalyzedSchoolsToLocalStorage();
+            isLocked = false;
+          } else {
+            isLocked = true;
+          }
+        }
+
+        const lockedOverlayHtml = isLocked ? `
+          <div class="locked-overlay">
+            <div class="locked-content">
+              <span class="locked-icon">🔒</span>
+              <h4>${escapeHtml(t("locked_card_title", "Pro / Premium Plan 전용"))}</h4>
+              <p>${escapeHtml(t("locked_card_desc", "6번째 대학부터는 Pro 플랜 이상에서 분석 가능합니다."))}</p>
+              <button class="primary-btn compact" type="button" onclick="openPricingModal()">${escapeHtml(t("btn_upgrade_now", "지금 업그레이드"))}</button>
             </div>
-            ${
-              extraChecks.length
-                ? `<details class="result-details">
-                    <summary>${t("roadmap_extra_summary").replace("{count}", extraChecks.length)}</summary>
-                    <p class="result-detail-note">${t("roadmap_extra_note")}</p>
-                    <div class="check-list">
-                      ${extraChecks
-                        .map(
-                          (check) => `
-                            <div class="check-item ${check.pass ? "pass" : "fail"}">
-                              <span>${escapeHtml(check.label)}</span>
-                              <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
-                            </div>
-                          `
-                        )
-                        .join("")}
-                    </div>
-                  </details>`
-                : ""
-            }
-            ${
-              recommendedItems.length
-                ? `<details class="result-details recommended-details">
-                    <summary>${t("roadmap_recommended_summary").replace("{count}", recommendedItems.length)}</summary>
-                    <ul>
-                      ${recommendedItems
-                        .map(
-                          (item) => `
-                            <li>
-                              <strong>${escapeHtml(item.label)}</strong>
-                              <span>${escapeHtml(item.detail || t("rec_course_detail"))}</span>
-                            </li>
-                          `
-                        )
-                        .join("")}
-                    </ul>
-                  </details>`
-                : ""
-            }
-            ${
-              reviewItems.length
-                ? `<details class="result-details review-details">
-                    <summary>${t("roadmap_review_summary").replace("{count}", reviewItems.length)}</summary>
-                    <ul>
-                      ${reviewItems
-                        .map(
-                          (item) => `
-                            <li>
-                              <strong>${escapeHtml(reviewFocus(item))}</strong>
-                              <span>${escapeHtml(item.raw || item)}</span>
-                            </li>
-                          `
-                        )
-                        .join("")}
-                    </ul>
-                  </details>`
-                : ""
-            }
-            ${
-              evaluation.additionalInfo.length
-                ? `<p class="result-note">${evaluation.additionalInfo.map((item) => escapeHtml(item)).join("<br />")}</p>`
-                : ""
-            }
-          </article>
+          </div>
+        ` : "";
+
+        return `
+          <div class="locked-card-wrapper">
+            <article class="result-card ${evaluation.pass ? "pass" : ""} ${isExample ? "example-card" : ""} ${isLocked ? "locked-card" : ""}">
+              ${lockedOverlayHtml}
+              <span class="status ${evaluation.pass ? "pass" : "fail"}">${statusText}</span>
+              <h3>${escapeHtml(program.school.shortName)}</h3>
+              <p>${escapeHtml(program.name)}</p>
+              <div class="badge-container">${getConfidenceBadgeHtml(program)}</div>
+              ${
+                verificationNotice
+                  ? `<div class="verification-alert">
+                      <strong>${escapeHtml(verificationNotice.label)}</strong>
+                      <span>${escapeHtml(verificationNotice.detail)}</span>
+                    </div>`
+                  : ""
+              }
+              ${
+                isHolistic
+                  ? `<div class="holistic-warning" style="margin: 12px 0; background: rgba(59, 130, 246, 0.08); border-left: 4px solid var(--accent); padding: 12px; border-radius: 6px;">
+                      <strong style="color: var(--accent); display: block; margin-bottom: 4px; font-size: 14px;">ℹ️ ${escapeHtml(t("holistic_eval_title"))}</strong>
+                      <span style="color: var(--foreground); font-size: 13px; line-height: 1.4; display: block;">${escapeHtml(t("holistic_eval_desc"))}</span>
+                    </div>`
+                  : ""
+              }
+              <div class="check-list">
+                ${primaryChecks
+                  .map(
+                    (check) => `
+                      <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}">
+                        <span>${escapeHtml(check.label)}</span>
+                        <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
+                      </div>
+                    `
+                  )
+                  .join("")}
+              </div>
+              ${
+                extraChecks.length
+                  ? `<details class="result-details">
+                      <summary>${t("roadmap_extra_summary").replace("{count}", extraChecks.length)}</summary>
+                      <p class="result-detail-note">${t("roadmap_extra_note")}</p>
+                      <div class="check-list">
+                        ${extraChecks
+                          .map(
+                            (check) => `
+                              <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}">
+                                <span>${escapeHtml(check.label)}</span>
+                                <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
+                              </div>
+                            `
+                          )
+                          .join("")}
+                      </div>
+                    </details>`
+                  : ""
+              }
+              ${
+                recommendedItems.length
+                  ? `<details class="result-details recommended-details">
+                      <summary>${t("roadmap_recommended_summary").replace("{count}", recommendedItems.length)}</summary>
+                      <ul>
+                        ${recommendedItems
+                          .map(
+                            (item) => `
+                              <li>
+                                <strong>${escapeHtml(item.label)}</strong>
+                                <span>${escapeHtml(item.detail || t("rec_course_detail"))}</span>
+                              </li>
+                            `
+                          )
+                          .join("")}
+                      </ul>
+                    </details>`
+                  : ""
+              }
+              ${
+                reviewItems.length
+                  ? `<details class="result-details review-details">
+                      <summary>${t("roadmap_review_summary").replace("{count}", reviewItems.length)}</summary>
+                      <ul>
+                        ${reviewItems
+                          .map(
+                            (item) => `
+                              <li>
+                                <strong>${escapeHtml(reviewFocus(item))}</strong>
+                                <span>${escapeHtml(item.raw || item)}</span>
+                              </li>
+                            `
+                          )
+                          .join("")}
+                      </ul>
+                    </details>`
+                  : ""
+              }
+              ${
+                evaluation.additionalInfo.length
+                  ? `<p class="result-note">${evaluation.additionalInfo.map((item) => escapeHtml(item)).join("<br />")}</p>`
+                  : ""
+              }
+            </article>
+          </div>
         `;
       })
       .join("") || `<div class="panel"><strong>${t("no_targets_selected")}</strong></div>`;
@@ -2156,6 +2025,9 @@ function activateProductTab(tabName, shouldScroll = true) {
   panel.classList.add("active");
   qs("#pageTitle").textContent = t("tab_" + tabName, pageTitles[tabName]);
   
+  // Smooth scroll active tab button into center on mobile viewport
+  button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+
   if (tabName === "requirements") {
     const searchInput = qs("#requirementSearch");
     if (searchInput) {
@@ -2718,27 +2590,49 @@ function buildRoadmap() {
 
   qs("#roadmapTimeline").innerHTML = buckets
     .map(
-      (bucket) => `
-        <article class="term-card">
-          <h3>${escapeHtml(bucket.term)}</h3>
-          <div class="term-courses">
-            ${
-              bucket.courses.length
-                ? bucket.courses
-                    .map(
-                      (item) => `
-                        <div class="term-course ${item.priority}">
-                          <strong>${escapeHtml(item.name)}</strong>
-                          <small>${escapeHtml(item.label)} · ${escapeHtml(item.category)}${item.isLab ? " · Lab" : ""}</small>
-                        </div>
-                      `
-                    )
-                    .join("")
-                : `<div class="term-course"><strong>${escapeHtml(t("buffer_term_title"))}</strong><small>${escapeHtml(t("buffer_term_desc"))}</small></div>`
-            }
-          </div>
-        </article>
-      `
+      (bucket) => {
+        const requireds = bucket.courses.filter(item => item.priority !== "recommended");
+        const recommendeds = bucket.courses.filter(item => item.priority === "recommended");
+        
+        let coursesHtml = "";
+        if (bucket.courses.length === 0) {
+          coursesHtml = `<div class="term-course"><strong>${escapeHtml(t("buffer_term_title"))}</strong><small>${escapeHtml(t("buffer_term_desc"))}</small></div>`;
+        } else {
+          if (requireds.length > 0) {
+            coursesHtml += requireds.map(item => `
+              <div class="term-course ${item.priority}">
+                <strong>${escapeHtml(item.name)}</strong>
+                <small>${escapeHtml(item.label)} · ${escapeHtml(item.category)}${item.isLab ? " · Lab" : ""}</small>
+              </div>
+            `).join("");
+          }
+          if (recommendeds.length > 0) {
+            coursesHtml += `
+              <button type="button" class="link-btn toggle-recommended-btn" onclick="toggleRecommendedCourses(this)" style="margin-top: 8px; margin-bottom: 8px; font-size: 11.5px; color: #818cf8; font-weight: 700; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 0;">
+                <span>👁️</span> 
+                <span>${escapeHtml(t("btn_toggle_recommended", "Toggle Recommended"))}</span>
+              </button>
+              <div class="recommended-wrapper hidden" style="display: grid; gap: 8px; width: 100%;">
+                ${recommendeds.map(item => `
+                  <div class="term-course ${item.priority}">
+                    <strong>${escapeHtml(item.name)}</strong>
+                    <small>${escapeHtml(item.label)} · ${escapeHtml(item.category)}${item.isLab ? " · Lab" : ""}</small>
+                  </div>
+                `).join("")}
+              </div>
+            `;
+          }
+        }
+        
+        return `
+          <article class="term-card">
+            <h3>${escapeHtml(bucket.term)}</h3>
+            <div class="term-courses">
+              ${coursesHtml}
+            </div>
+          </article>
+        `;
+      }
     )
     .join("");
 }
@@ -2867,8 +2761,16 @@ function bindEvents() {
   if (roadmapTarget) {
     roadmapTarget.addEventListener("change", buildRoadmap);
   }
-  qs("#admissionYear").addEventListener("change", buildRoadmap);
-  qs("#admissionTerm").addEventListener("change", buildRoadmap);
+  qs("#admissionYear").addEventListener("change", (event) => {
+    state.admissionYear = Number(event.target.value);
+    saveProfileToLocalStorage();
+    buildRoadmap();
+  });
+  qs("#admissionTerm").addEventListener("change", (event) => {
+    state.admissionTerm = event.target.value;
+    saveProfileToLocalStorage();
+    buildRoadmap();
+  });
 
   qs("#langSelector")?.addEventListener("change", (event) => {
     switchLanguage(event.target.value);
@@ -3046,6 +2948,7 @@ function renderAuthState() {
   qs("#loginOpenBtn").classList.toggle("hidden", Boolean(currentUser));
   qs("#signupOpenBtn").classList.toggle("hidden", Boolean(currentUser));
   qs("#logoutBtn").classList.toggle("hidden", !currentUser);
+  qs("#profileOpenBtn").classList.toggle("hidden", !currentUser);
 }
 
 function openAuthModal(mode) {
@@ -3086,11 +2989,73 @@ function bindAuth() {
   qs("#authModal")?.addEventListener("click", (event) => {
     if (event.target.id === "authModal") closeAuthModal();
   });
+  
+  qs("#profileOpenBtn")?.addEventListener("click", openProfileModal);
+  qs("#profileCloseBtn")?.addEventListener("click", closeProfileModal);
+  qs("#profileModal")?.addEventListener("click", (event) => {
+    if (event.target.id === "profileModal") closeProfileModal();
+  });
+  
+  qs("#passwordChangeForm")?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const currPass = qs("#profileCurrentPassword").value;
+    const newPass = qs("#profileNewPassword").value;
+    const feedbackMsg = qs("#profileMessage");
+    
+    const authState = readAuthState();
+    const email = authState.currentUser;
+    if (!email) return;
+    
+    const currHash = await hashPassword(currPass);
+    const user = authState.users[email];
+    
+    if (user.passwordHash !== currHash) {
+      if (feedbackMsg) {
+        feedbackMsg.textContent = t("password_change_invalid", "Current password does not match.");
+        feedbackMsg.style.color = "var(--danger)";
+      }
+      return;
+    }
+    
+    user.passwordHash = await hashPassword(newPass);
+    writeAuthState(authState);
+    
+    if (feedbackMsg) {
+      feedbackMsg.textContent = t("password_change_success", "Password updated successfully!");
+      feedbackMsg.style.color = "#10b981";
+    }
+    
+    qs("#profileCurrentPassword").value = "";
+    qs("#profileNewPassword").value = "";
+  });
   qs("#logoutBtn")?.addEventListener("click", () => {
     const authState = readAuthState();
     authState.currentUser = "";
     writeAuthState(authState);
+    
+    // Reset state and localStorage
+    state.plan = "Free";
+    state.essayCredits = 0;
+    state.analyzedSchools.clear();
+    localStorage.setItem("transferCompassPlan", "Free");
+    localStorage.setItem("transferCompassEssayCredits", "0");
+    localStorage.removeItem("transferCompassAnalyzedSchools");
+    
     renderAuthState();
+    updateActivePlanLabel();
+    updatePlanNoticeVisibility();
+    updateEssayCreditsUI();
+    syncSelectedTargetsFromSlots();
+    renderEligibilityResults();
+    buildRoadmap();
+    
+    const activeTabBtn = qs(".tab-button.active");
+    if (activeTabBtn) {
+      const tabName = activeTabBtn.getAttribute("data-tab");
+      if (!checkPlanAccess(tabName)) {
+        activateProductTab("eligibility");
+      }
+    }
   });
   qs("#authForm")?.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -3110,14 +3075,34 @@ function bindAuth() {
         qs("#authMessage").textContent = t("auth_email_exists", "An account with this email already exists on this browser.");
         return;
       }
-      authState.users[email] = { passwordHash, createdAt: new Date().toISOString() };
+      authState.users[email] = { 
+        passwordHash, 
+        createdAt: new Date().toISOString(),
+        plan: "Free",
+        essayCredits: 0
+      };
     } else if (!authState.users[email] || authState.users[email].passwordHash !== passwordHash) {
       qs("#authMessage").textContent = t("auth_invalid_credentials", "Email or password does not match this browser.");
       return;
     }
     authState.currentUser = email;
+    
+    // Load their plan and essayCredits from their profile
+    const userProfile = authState.users[email] || {};
+    state.plan = userProfile.plan || "Free";
+    state.essayCredits = userProfile.essayCredits || 0;
+    localStorage.setItem("transferCompassPlan", state.plan);
+    localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+    
     writeAuthState(authState);
     renderAuthState();
+    updateActivePlanLabel();
+    updatePlanNoticeVisibility();
+    updateEssayCreditsUI();
+    syncSelectedTargetsFromSlots();
+    renderEligibilityResults();
+    buildRoadmap();
+    
     closeAuthModal();
   });
   renderAuthState();
@@ -3277,6 +3262,11 @@ function bindEssay() {
       `).join("");
 
       outlineContent.innerHTML = styleGuideHtml + outlineHtml;
+
+      // Auto-scroll to essay result panel
+      setTimeout(() => {
+        qs("#essayResultPanel")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 100);
 
     } catch (err) {
       outlineContent.innerHTML = `
@@ -3458,6 +3448,36 @@ function bindEssay() {
       }
     });
   }
+
+  // 4. Pre-fill Examples
+  qs("#loadEssayExample1")?.addEventListener("click", () => {
+    const schoolSelect = qs("#essayTargetSchool");
+    if (schoolSelect) schoolSelect.value = "university-of-michigan-computer-science-coe-2c16a5ea";
+    const limitInput = qs("#essayLimit");
+    if (limitInput) limitInput.value = "350 words";
+    const questionText = qs("#essayQuestion");
+    if (questionText) questionText.value = "Describe your academic interests and how you plan to pursue them at the University of Michigan.";
+    const activitiesText = qs("#essayActivity");
+    if (activitiesText) activitiesText.value = "Led the community college computer science club, developed an open-source web application for class scheduling using React and Node.js, tutored peers in Calculus and Discrete Math.";
+    
+    const modeDirect = qs("#modeTabDirect");
+    if (modeDirect) modeDirect.click();
+  });
+
+  qs("#loadEssayExample2")?.addEventListener("click", () => {
+    const schoolSelect = qs("#essayTargetSchool");
+    if (schoolSelect) schoolSelect.value = "georgia-tech-mechanical-engineering-0dac0766";
+    const limitInput = qs("#essayLimit");
+    if (limitInput) limitInput.value = "500 words";
+    const questionText = qs("#essayQuestion");
+    if (questionText) questionText.value = "Georgia Tech values social responsibility. Describe how your interest in mechanical engineering will allow you to make a positive impact.";
+    const activitiesText = qs("#essayActivity");
+    if (activitiesText) activitiesText.value = "Mentored a high school robotics team (FTC), designed and 3D printed low-cost prosthetic hands for a local charity project, worked part-time as a bicycle mechanic repairing community bikes.";
+    
+    const modeDirect = qs("#modeTabDirect");
+    if (modeDirect) modeDirect.click();
+  });
+
   updateEssayCreditsUI();
 }
 
@@ -3470,8 +3490,21 @@ function updateEssayCreditsUI() {
 window.updateEssayCreditsUI = updateEssayCreditsUI;
 
 window.buyStandaloneEssayPass = function() {
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  if (!currentUser) {
+    alert(t("alert_login_required", "You must log in or register to buy essay credits."));
+    closePricingModal();
+    openAuthModal("login");
+    return;
+  }
+
   state.essayCredits = (state.essayCredits || 0) + 5;
   localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+  
+  authState.users[currentUser].essayCredits = state.essayCredits;
+  writeAuthState(authState);
+  
   updateEssayCreditsUI();
   
   const alertMsg = t("alert_essay_pass_purchased", "Successfully purchased Standalone Essay Pass! 5 credits have been added to your account.");
@@ -3479,6 +3512,21 @@ window.buyStandaloneEssayPass = function() {
 };
 
 function init() {
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  if (!currentUser) {
+    state.plan = "Free";
+    state.essayCredits = 0;
+    localStorage.setItem("transferCompassPlan", "Free");
+    localStorage.setItem("transferCompassEssayCredits", "0");
+  } else {
+    const userProfile = authState.users[currentUser] || {};
+    state.plan = userProfile.plan || "Free";
+    state.essayCredits = userProfile.essayCredits || 0;
+    localStorage.setItem("transferCompassPlan", state.plan);
+    localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+  }
+
   loadProfileFromLocalStorage();
   initializeTargetSlots();
   renderRequirementControls();
@@ -3501,10 +3549,16 @@ function init() {
   const englishScoreInput = qs("#englishScoreInput");
   if (englishScoreInput) englishScoreInput.value = state.englishScore;
 
+  const admissionYearInput = qs("#admissionYear");
+  if (admissionYearInput) admissionYearInput.value = state.admissionYear;
+  const admissionTermInput = qs("#admissionTerm");
+  if (admissionTermInput) admissionTermInput.value = state.admissionTerm;
+
   qs("#englishFields")?.classList.toggle("hidden", state.englishWaiver || !state.international);
   qs("#englishWaiverRow")?.classList.toggle("hidden", !state.international);
   
   switchLanguage(state.language);
+  updatePlanNoticeVisibility();
   updateEnglishScoreInputConstraints();
   initScrollEffects();
   initStatsText();
@@ -3569,3 +3623,59 @@ function closeFeatureAd() {
 
 window.openFeatureAd = openFeatureAd;
 window.closeFeatureAd = closeFeatureAd;
+
+// Profile Modal helpers
+function openProfileModal() {
+  const authState = readAuthState();
+  const email = authState.currentUser;
+  if (!email) return;
+
+  const userProfile = authState.users[email] || {};
+  const plan = userProfile.plan || "Free";
+  const credits = userProfile.essayCredits || 0;
+
+  qs("#profileEmailVal").textContent = email;
+  qs("#profilePlanVal").textContent = plan.toUpperCase() + " PLAN";
+  qs("#profileCreditsVal").textContent = credits;
+  
+  const msg = qs("#profileMessage");
+  if (msg) msg.textContent = "";
+  
+  qs("#profileCurrentPassword").value = "";
+  qs("#profileNewPassword").value = "";
+
+  qs("#profileModal").classList.remove("hidden");
+}
+
+function closeProfileModal() {
+  qs("#profileModal").classList.add("hidden");
+}
+
+function closeProfileAndOpenPricing() {
+  closeProfileModal();
+  openPricingModal();
+}
+
+function closeProfileAndBuyCredits() {
+  closeProfileModal();
+  buyStandaloneEssayPass();
+}
+
+window.openProfileModal = openProfileModal;
+window.closeProfileModal = closeProfileModal;
+window.closeProfileAndOpenPricing = closeProfileAndOpenPricing;
+window.closeProfileAndBuyCredits = closeProfileAndBuyCredits;
+
+window.toggleRecommendedCourses = function(btn) {
+  const wrapper = btn.nextElementSibling;
+  if (wrapper && wrapper.classList.contains("recommended-wrapper")) {
+    const isHidden = wrapper.classList.contains("hidden");
+    if (isHidden) {
+      wrapper.classList.remove("hidden");
+      btn.querySelector("span:first-child").textContent = "🙈";
+    } else {
+      wrapper.classList.add("hidden");
+      btn.querySelector("span:first-child").textContent = "👁️";
+    }
+  }
+};

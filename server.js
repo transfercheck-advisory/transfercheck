@@ -411,8 +411,16 @@ const server = http.createServer((req, res) => {
         }
 
         const subject = '=?UTF-8?B?' + Buffer.from('[TransferChek] 신규 익명 피드백 알림').toString('base64') + '?=';
-        const mailBody = `안녕하세요. TransferChek 시스템 알림입니다.\\n\\n사용자로부터 새로운 피드백이 접수되었습니다:\\n\\n---------------------------------\ns${message}
----------------------------------\n\\n전송 시각: ${new Date().toLocaleString()}\\n`;
+        const mailBody = `안녕하세요. TransferChek 시스템 알림입니다.
+
+사용자로부터 새로운 피드백이 접수되었습니다:
+
+---------------------------------
+${message}
+---------------------------------
+
+전송 시각: ${new Date().toLocaleString()}
+`;
 
         await sendEmailViaSmtp({
           user: smtpUser,
@@ -471,7 +479,7 @@ function sendEmailViaSmtp({ user, pass, to, subject, body }) {
 
     let step = 0;
     const send = (data) => {
-      socket.write(data + '\\r\\n');
+      socket.write(data + '\r\n');
     };
 
     socket.on('data', (data) => {
@@ -508,7 +516,7 @@ function sendEmailViaSmtp({ user, pass, to, subject, body }) {
           '',
           body,
           '.'
-        ].join('\\r\\n');
+        ].join('\r\n');
         send(emailData);
         step = 8;
       } else if (step === 8 && msg.startsWith('250')) {
