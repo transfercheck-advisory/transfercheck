@@ -3728,11 +3728,44 @@ function init() {
 init();
 
 function openFeatureAd(featureId) {
-  const demoSec = qs("#demo");
-  if (demoSec) {
-    demoSec.scrollIntoView({ behavior: 'smooth' });
+  const modal = qs("#featureAdModal");
+  if (!modal) return;
+  
+  const title = t(`ad_${featureId}_title`, "Feature");
+  const headline = t(`ad_${featureId}_headline`, "");
+  const b1 = t(`ad_${featureId}_b1`, "");
+  const b2 = t(`ad_${featureId}_b2`, "");
+  const b3 = t(`ad_${featureId}_b3`, "");
+  const btn = t(`ad_${featureId}_btn`, "Try Feature");
+  
+  const modalTitle = qs("#adModalTitle");
+  const modalHeadline = qs("#adModalHeadline");
+  const modalBullets = qs("#adModalBullets");
+  const modalCta = qs("#adModalCta");
+  
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalHeadline) modalHeadline.textContent = headline;
+  if (modalBullets) {
+    modalBullets.innerHTML = `
+      <li>${escapeHtml(b1)}</li>
+      <li>${escapeHtml(b2)}</li>
+      <li>${escapeHtml(b3)}</li>
+    `;
   }
-  activateProductTab(featureId);
+  
+  if (modalCta) {
+    modalCta.textContent = btn;
+    modalCta.onclick = () => {
+      closeFeatureAd();
+      const demoSec = qs("#demo");
+      if (demoSec) {
+        demoSec.scrollIntoView({ behavior: 'smooth' });
+      }
+      activateProductTab(featureId);
+    };
+  }
+  
+  modal.classList.remove("hidden");
 }
 
 function closeFeatureAd() {
