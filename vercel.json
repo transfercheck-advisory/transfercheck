@@ -10,7 +10,9 @@
     { "src": "terms-privacy-pricing.html", "use": "@vercel/static" },
     { "src": "logo.png", "use": "@vercel/static" },
     { "src": "preview.png", "use": "@vercel/static" },
-    { "src": "admin.html", "use": "@vercel/static" }
+    { "src": "admin.html", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" },
+    { "src": "sitemap.xml", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.js" },
