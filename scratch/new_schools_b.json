@@ -1,0 +1,525 @@
+[
+  {
+    "id": "university-of-pittsburgh-4e7a892b",
+    "name": "University of Pittsburgh",
+    "shortName": "Pitt",
+    "majors": [
+      {
+        "id": "university-of-pittsburgh-computer-science-5fa4e27c",
+        "name": "Computer Science",
+        "rawMinGpa": "3.00 minimum cumulative GPA for external transfer students (2.75 for internal Pitt transfers)",
+        "rawMinCredits": "24 transferable credits",
+        "minGpa": 3.0,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 0220 - Calculus I",
+          "ENGCMP 0200 - English Composition",
+          "CMPINF 0401 - Intermediate Programming",
+          "CS 0441 - Discrete Structures for CS",
+          "CS 0445 - Algorithms and Data Structures"
+        ],
+        "recommendedCourses": [
+          "CS 0447 - Computer Organization and Assembly Language"
+        ],
+        "rawRequired": "MATH 0220 - Calculus I\nENGCMP 0200 - English Composition\nCMPINF 0401 - Intermediate Programming\nCS 0441 - Discrete Structures for CS\nCS 0445 - Algorithms and Data Structures",
+        "rawRecommended": "CS 0447 - Computer Organization and Assembly Language",
+        "english": {
+          "raw": "TOEFL iBT: 95 or higher (subscores 21+) | IELTS: 7.0 or higher (subscores 6.0+) | Duolingo DET: 120 or higher",
+          "TOEFL": 95,
+          "TOEFL_2026": null,
+          "IELTS": 7.0,
+          "Duolingo": 120
+        },
+        "englishExemption": "Waiver of English proficiency requirement is not automatic. May be eligible if citizen of a country where English is the official language or completed a degree at a regionally accredited U.S. institution. Must contact Admissions directly.",
+        "note": "Verified: Prerequisite requirements confirmed against the official School of Computing and Information transfer guidelines (https://www.sci.pitt.edu/admissions/undergraduate-admissions) and University Catalog.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-pittsburgh-mechanical-engineering-8c9e7d3a",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "3.00 minimum cumulative GPA for transfer consideration (3.25 for community college students)",
+        "rawMinCredits": "24 credits applicable to engineering",
+        "minGpa": 3.0,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 0220 - Calculus I",
+          "MATH 0230 - Calculus II",
+          "CHEM 0110 - General Chemistry I",
+          "CHEM 0120 - General Chemistry II",
+          "PHYS 0174 - Physics for Science and Engineering I",
+          "PHYS 0175 - Physics for Science and Engineering II",
+          "Computer Programming in C or C++",
+          "ENGCMP 0200 - English Composition"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MATH 0220 - Calculus I\nMATH 0230 - Calculus II\nCHEM 0110 - General Chemistry I\nCHEM 0120 - General Chemistry II\nPHYS 0174 - Physics for Science and Engineering I\nPHYS 0175 - Physics for Science and Engineering II\nComputer Programming in C or C++\nENGCMP 0200 - English Composition",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 95 or higher (subscores 21+) | IELTS: 7.0 or higher (subscores 6.0+) | Duolingo DET: 120 or higher",
+          "TOEFL": 95,
+          "TOEFL_2026": null,
+          "IELTS": 7.0,
+          "Duolingo": 120
+        },
+        "englishExemption": "Waiver of English proficiency requirement is not automatic. May be eligible if citizen of a country where English is the official language or completed a degree at a regionally accredited U.S. institution. Must contact Admissions directly.",
+        "note": "Verified: Prerequisite requirements confirmed against the official Swanson School of Engineering Transfer Students page (https://www.engineering.pitt.edu/admissions/undergraduate/transfer-students/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-pittsburgh-electrical-engineering-3b7c6d5e",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "3.00 minimum cumulative GPA for transfer consideration (3.25 for community college students)",
+        "rawMinCredits": "24 credits applicable to engineering",
+        "minGpa": 3.0,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 0220 - Calculus I",
+          "MATH 0230 - Calculus II",
+          "CHEM 0110 - General Chemistry I",
+          "CHEM 0120 - General Chemistry II",
+          "PHYS 0174 - Physics for Science and Engineering I",
+          "PHYS 0175 - Physics for Science and Engineering II",
+          "Computer Programming in C or C++",
+          "ENGCMP 0200 - English Composition"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MATH 0220 - Calculus I\nMATH 0230 - Calculus II\nCHEM 0110 - General Chemistry I\nCHEM 0120 - General Chemistry II\nPHYS 0174 - Physics for Science and Engineering I\nPHYS 0175 - Physics for Science and Engineering II\nComputer Programming in C or C++\nENGCMP 0200 - English Composition",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 95 or higher (subscores 21+) | IELTS: 7.0 or higher (subscores 6.0+) | Duolingo DET: 120 or higher",
+          "TOEFL": 95,
+          "TOEFL_2026": null,
+          "IELTS": 7.0,
+          "Duolingo": 120
+        },
+        "englishExemption": "Waiver of English proficiency requirement is not automatic. May be eligible if citizen of a country where English is the official language or completed a degree at a regionally accredited U.S. institution. Must contact Admissions directly.",
+        "note": "Verified: Prerequisite requirements confirmed against the official Swanson School of Engineering Transfer Students page (https://www.engineering.pitt.edu/admissions/undergraduate/transfer-students/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-pittsburgh-chemical-engineering-9e8d7c6b",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "3.00 minimum cumulative GPA for transfer consideration (3.25 for community college students)",
+        "rawMinCredits": "24 credits applicable to engineering",
+        "minGpa": 3.0,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 0220 - Calculus I",
+          "MATH 0230 - Calculus II",
+          "CHEM 0110 - General Chemistry I",
+          "CHEM 0120 - General Chemistry II",
+          "PHYS 0174 - Physics for Science and Engineering I",
+          "PHYS 0175 - Physics for Science and Engineering II",
+          "Computer Programming in C or C++",
+          "ENGCMP 0200 - English Composition"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MATH 0220 - Calculus I\nMATH 0230 - Calculus II\nCHEM 0110 - General Chemistry I\nCHEM 0120 - General Chemistry II\nPHYS 0174 - Physics for Science and Engineering I\nPHYS 0175 - Physics for Science and Engineering II\nComputer Programming in C or C++\nENGCMP 0200 - English Composition",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 95 or higher (subscores 21+) | IELTS: 7.0 or higher (subscores 6.0+) | Duolingo DET: 120 or higher",
+          "TOEFL": 95,
+          "TOEFL_2026": null,
+          "IELTS": 7.0,
+          "Duolingo": 120
+        },
+        "englishExemption": "Waiver of English proficiency requirement is not automatic. May be eligible if citizen of a country where English is the official language or completed a degree at a regionally accredited U.S. institution. Must contact Admissions directly.",
+        "note": "Verified: Prerequisite requirements confirmed against the official Swanson School of Engineering Transfer Students page (https://www.engineering.pitt.edu/admissions/undergraduate/transfer-students/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  },
+  {
+    "id": "university-of-utah-1b3c5d7e",
+    "name": "University of Utah",
+    "shortName": "U of U",
+    "majors": [
+      {
+        "id": "university-of-utah-computer-science-2f4e6d8c",
+        "name": "Computer Science",
+        "rawMinGpa": "No official minimum (holistic review; 2.5 recommended)",
+        "rawMinCredits": "30 transferable semester credits (fewer than 30 requires high school transcripts)",
+        "minGpa": 2.5,
+        "minCredits": 30,
+        "requiredCourses": [
+          "CS 1400 - Introduction to Computer Programming",
+          "CS 1410 - Introduction to Object-Oriented Programming (or CS 1420 Accelerated)",
+          "CS 2420 - Introduction to Algorithms and Data Structures",
+          "MATH 1210 - Calculus I",
+          "MATH 1220 - Calculus II"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "CS 1400 - Introduction to Computer Programming\nCS 1410 - Introduction to Object-Oriented Programming (or CS 1420 Accelerated)\nCS 2420 - Introduction to Algorithms and Data Structures (Grade B- or higher)\nMATH 1210 - Calculus I (Grade C or higher)\nMATH 1220 - Calculus II",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 or higher | IELTS: 6.5 or higher | Duolingo DET: 110 or higher",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver of English proficiency requirement is granted if earned an associate, bachelor’s, master’s, or doctoral degree from a regionally accredited U.S. college or university within two years of application.",
+        "note": "Verified: Requirements confirmed against Kahlert School of Computing Full Major Status guidelines (https://cs.utah.edu) and University of Utah admissions.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-utah-mechanical-engineering-3a5b7c9d",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "No official minimum for general transfer (2.500 minimum cumulative GPA required to declare pre-major and maintain major status)",
+        "rawMinCredits": "30 transferable semester credits (fewer than 30 requires high school transcripts)",
+        "minGpa": 2.5,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MATH 1210 - Calculus I",
+          "MATH 1220 - Calculus II",
+          "CHEM 1210 - General Chemistry I",
+          "PHYS 2210 - Physics for Scientists and Engineers I",
+          "PHYS 2220 - Physics for Scientists and Engineers II",
+          "ME EN 1000 - Introduction to Mechanical Engineering I",
+          "ME EN 1010 - Introduction to Mechanical Engineering II"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MATH 1210 - Calculus I (Grade C or higher)\nMATH 1220 - Calculus II (Grade C or higher)\nCHEM 1210 - General Chemistry I (Grade C or higher)\nPHYS 2210 - Physics for Scientists and Engineers I (Grade C or higher)\nPHYS 2220 - Physics for Scientists and Engineers II (Grade C or higher)\nME EN 1000 - Introduction to Mechanical Engineering I (Grade C or higher)\nME EN 1010 - Introduction to Mechanical Engineering II (Grade C or higher)",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 or higher | IELTS: 6.5 or higher | Duolingo DET: 110 or higher",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver of English proficiency requirement is granted if earned an associate, bachelor’s, master’s, or doctoral degree from a regionally accredited U.S. college or university within two years of application.",
+        "note": "Verified: Requirements confirmed against Department of Mechanical Engineering Admission to the Major guidelines (https://www.mech.utah.edu) and University of Utah admissions.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-utah-electrical-engineering-7c8d9e0f",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "2.8 minimum Pre-major GPA and Cumulative GPA required for Full Major Status",
+        "rawMinCredits": "30 transferable semester credits (fewer than 30 requires high school transcripts)",
+        "minGpa": 2.8,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MATH 1210 - Calculus I",
+          "MATH 1220 - Calculus II",
+          "MATH 2250 - Differential Equations and Linear Algebra",
+          "PHYS 2210 - Physics for Scientists and Engineers I",
+          "PHYS 2220 - Physics for Scientists and Engineers II",
+          "ECE 1240 - Circuits & Systems I",
+          "ECE 1245 - Circuits & Systems I Lab",
+          "ECE 1050 - MATLAB",
+          "CS 1400 - Introduction to Computer Programming",
+          "CS 1410 - Introduction to Object-Oriented Programming (or CS 1420 Accelerated)"
+        ],
+        "recommendedCourses": [
+          "ECE 3530 - Engineering Probability & Statistics",
+          "WRTG 2010 - Intermediate Writing",
+          "ECE 3030 - Technical Communications"
+        ],
+        "rawRequired": "MATH 1210 - Calculus I\nMATH 1220 - Calculus II\nMATH 2250 - Differential Equations and Linear Algebra\nPHYS 2210 - Physics for Scientists and Engineers I\nPHYS 2220 - Physics for Scientists and Engineers II\nECE 1240 - Circuits & Systems I\nECE 1245 - Circuits & Systems I Lab\nECE 1050 - MATLAB\nCS 1400 - Introduction to Computer Programming\nCS 1410 - Introduction to Object-Oriented Programming (or CS 1420)",
+        "rawRecommended": "ECE 3530 - Engineering Probability & Statistics\nWRTG 2010 - Intermediate Writing\nECE 3030 - Technical Communications",
+        "english": {
+          "raw": "TOEFL iBT: 80 or higher | IELTS: 6.5 or higher | Duolingo DET: 110 or higher",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver of English proficiency requirement is granted if earned an associate, bachelor’s, master’s, or doctoral degree from a regionally accredited U.S. college or university within two years of application.",
+        "note": "Verified: Requirements confirmed against Department of Electrical and Computer Engineering Admission guidelines (https://www.ece.utah.edu) and University of Utah admissions.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-utah-chemical-engineering-8e9f0a1b",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "No official minimum (holistic review; 2.5 recommended)",
+        "rawMinCredits": "30 transferable semester credits (fewer than 30 requires high school transcripts)",
+        "minGpa": 2.5,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MATH 1210 - Calculus I",
+          "MATH 1220 - Calculus II",
+          "CHEM 1210 - General Chemistry I",
+          "CHEM 1220 - General Chemistry II",
+          "CH EN 1703 - Introduction to Chemical Engineering",
+          "PHYS 2210 - Physics for Scientists and Engineers I"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MATH 1210 - Calculus I\nMATH 1220 - Calculus II\nCHEM 1210 - General Chemistry I\nCHEM 1220 - General Chemistry II\nCH EN 1703 - Introduction to Chemical Engineering\nPHYS 2210 - Physics for Scientists and Engineers I",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 or higher | IELTS: 6.5 or higher | Duolingo DET: 110 or higher",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver of English proficiency requirement is granted if earned an associate, bachelor’s, master’s, or doctoral degree from a regionally accredited U.S. college or university within two years of application.",
+        "note": "Verified: Requirements confirmed against Department of Chemical Engineering Admission guidelines (https://chemeng.utah.edu) and University of Utah admissions.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  },
+  {
+    "id": "drexel-university-5a6b7c8d",
+    "name": "Drexel University",
+    "shortName": "Drexel",
+    "majors": [
+      {
+        "id": "drexel-university-computer-science-9a0b1c2d",
+        "name": "Computer Science",
+        "rawMinGpa": "2.75 minimum cumulative GPA for transfer consideration",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.75,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 121 - Calculus I"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "Calculus I (equivalent to MATH 121; AP score of 4 or 5 acceptable)",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79-80 | IELTS Academic: 6.5 | Duolingo DET: 110-115",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver eligible if citizen of recognized English-speaking country, completed English Composition I and II with C or better at U.S. college, graduated from U.S. high school/university with English instruction for 3+ years, or scored 600+ on SAT EBRW or 27+ on ACT English within 2 years.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Computing & Informatics transfer guidelines and Drexel Undergraduate Admissions (https://drexel.edu/undergrad/apply/transfer/prerequisites).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "drexel-university-mechanical-engineering-3c4d5e6f",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "2.75 minimum cumulative GPA for transfer consideration (3.0 often required for dual admissions/competitive programs)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.75,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 121 - Calculus I",
+          "CHEM 101 - General Chemistry I",
+          "PHYS 141 - Physics I"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "Pre-calculus or Calculus (equivalent to MATH 121), Chemistry with Lab (CHEM 101), Physics with Lab (PHYS 141). At least two must be completed at the time of application (one of which must be pre-calculus or calculus).",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79-80 | IELTS Academic: 6.5 | Duolingo DET: 110-115",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver eligible if citizen of recognized English-speaking country, completed English Composition I and II with C or better at U.S. college, graduated from U.S. high school/university with English instruction for 3+ years, or scored 600+ on SAT EBRW or 27+ on ACT English within 2 years.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Engineering transfer guidelines and Drexel Undergraduate Admissions (https://drexel.edu/undergrad/apply/transfer/prerequisites).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "drexel-university-electrical-engineering-7e8f9a0b",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "2.75 minimum cumulative GPA for transfer consideration (3.0 often required for dual admissions/competitive programs)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.75,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 121 - Calculus I",
+          "CHEM 101 - General Chemistry I",
+          "PHYS 141 - Physics I"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "Pre-calculus or Calculus (equivalent to MATH 121), Chemistry with Lab (CHEM 101), Physics with Lab (PHYS 141). At least two must be completed at the time of application (one of which must be pre-calculus or calculus).",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79-80 | IELTS Academic: 6.5 | Duolingo DET: 110-115",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver eligible if citizen of recognized English-speaking country, completed English Composition I and II with C or better at U.S. college, graduated from U.S. high school/university with English instruction for 3+ years, or scored 600+ on SAT EBRW or 27+ on ACT English within 2 years.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Engineering transfer guidelines and Drexel Undergraduate Admissions (https://drexel.edu/undergrad/apply/transfer/prerequisites).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "drexel-university-chemical-engineering-1c2d3e4f",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "2.75 minimum cumulative GPA for transfer consideration (3.0 often required for dual admissions/competitive programs)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.75,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 121 - Calculus I",
+          "CHEM 101 - General Chemistry I",
+          "PHYS 141 - Physics I"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "Pre-calculus or Calculus (equivalent to MATH 121), Chemistry with Lab (CHEM 101), Physics with Lab (PHYS 141). At least two must be completed at the time of application (one of which must be pre-calculus or calculus).",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79-80 | IELTS Academic: 6.5 | Duolingo DET: 110-115",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver eligible if citizen of recognized English-speaking country, completed English Composition I and II with C or better at U.S. college, graduated from U.S. high school/university with English instruction for 3+ years, or scored 600+ on SAT EBRW or 27+ on ACT English within 2 years.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Engineering transfer guidelines and Drexel Undergraduate Admissions (https://drexel.edu/undergrad/apply/transfer/prerequisites).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  },
+  {
+    "id": "iowa-state-university-7a8b9c0d",
+    "name": "Iowa State University",
+    "shortName": "ISU",
+    "majors": [
+      {
+        "id": "iowa-state-university-computer-science-2c3d4e5f",
+        "name": "Computer Science",
+        "rawMinGpa": "2.00 minimum cumulative GPA for transfer admission",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.0,
+        "minCredits": 24,
+        "requiredCourses": [
+          "COM S 227 - Introduction to Object-oriented Programming",
+          "COM S 228 - Introduction to Data Structures",
+          "MATH 165 - Calculus I"
+        ],
+        "recommendedCourses": [
+          "MATH 166 - Calculus II",
+          "ENGL 1500 - Critical Thinking and Communication",
+          "ENGL 2500 - Written, Oral, Visual, and Electronic Composition",
+          "COM S 230 - Discrete Computational Structures"
+        ],
+        "rawRequired": "COM S 227 - Introduction to Object-oriented Programming (Grade C- or higher)\nCOM S 228 - Introduction to Data Structures (Grade C- or higher)\nMATH 165 - Calculus I (Grade C- or higher)",
+        "rawRecommended": "MATH 166 - Calculus II\nENGL 1500 - Critical Thinking and Communication\nENGL 2500 - Written, Oral, Visual, and Electronic Composition\nCOM S 230 - Discrete Computational Structures",
+        "english": {
+          "raw": "TOEFL iBT: 71 (subscores 17+ on speaking/writing) or 4.0 overall band (subscores 3.5+) on/after Jan 21, 2026 | IELTS: 6.0 (subscores 5.5+) | Duolingo DET: 105",
+          "TOEFL": 71,
+          "TOEFL_2026": 4.0,
+          "IELTS": 6.0,
+          "Duolingo": 105
+        },
+        "englishExemption": "Waiver granted if native English speaker, graduated from U.S. high school, or completed equivalent of English 1500 or 2500 with a B or higher at a U.S. college.",
+        "note": "Verified: Prerequisite requirements confirmed against Iowa State Department of Computer Science guidelines and ISU catalog.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "iowa-state-university-mechanical-engineering-6e7f8a9b",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "2.25 minimum cumulative GPA for transfer consideration (2.00 for applicants with an associate's degree)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.25,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 1650 - Calculus I",
+          "MATH 1660 - Calculus II",
+          "ENGL 1500 - Critical Thinking and Communication",
+          "CHEM 1670 - General Chemistry for Engineering (or CHEM 1770)",
+          "ENGR 1010 - Engineering Orientation",
+          "ENGR 1600 - Engineering Problems with Computer Applications Laboratory",
+          "LIB 1600 - Information Literacy"
+        ],
+        "recommendedCourses": [
+          "PHYS 2310 - Introduction to Classical Physics I",
+          "PHYS 2310L - Introduction to Classical Physics I Laboratory"
+        ],
+        "rawRequired": "Basic Program courses must be completed with C or better: MATH 1650 - Calculus I, MATH 1660 - Calculus II, ENGL 1500 - Critical Thinking and Communication, CHEM 1670 - General Chemistry (or CHEM 1770), ENGR 1010 - Engineering Orientation, ENGR 1600 - Engineering Problems, LIB 1600 - Information Literacy.",
+        "rawRecommended": "PHYS 2310 - Introduction to Classical Physics I\nPHYS 2310L - Introduction to Classical Physics I Laboratory",
+        "english": {
+          "raw": "TOEFL iBT: 71 (subscores 17+ on speaking/writing) or 4.0 overall band (subscores 3.5+) on/after Jan 21, 2026 | IELTS: 6.0 (subscores 5.5+) | Duolingo DET: 105",
+          "TOEFL": 71,
+          "TOEFL_2026": 4.0,
+          "IELTS": 6.0,
+          "Duolingo": 105
+        },
+        "englishExemption": "Waiver granted if native English speaker, graduated from U.S. high school, or completed equivalent of English 1500 or 2500 with a B or higher at a U.S. college.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Engineering Basic Program requirements (https://www.engineering.iastate.edu/admissions/transfer).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "iowa-state-university-electrical-engineering-0c1d2e3f",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "2.25 minimum cumulative GPA for transfer consideration (2.00 for applicants with an associate's degree)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.25,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 1650 - Calculus I",
+          "MATH 1660 - Calculus II",
+          "ENGL 1500 - Critical Thinking and Communication",
+          "CHEM 1670 - General Chemistry for Engineering (or CHEM 1770)",
+          "ENGR 1010 - Engineering Orientation",
+          "ENGR 1600 - Engineering Problems with Computer Applications Laboratory",
+          "LIB 1600 - Information Literacy"
+        ],
+        "recommendedCourses": [
+          "PHYS 2310 - Introduction to Classical Physics I",
+          "PHYS 2310L - Introduction to Classical Physics I Laboratory"
+        ],
+        "rawRequired": "Basic Program courses must be completed with C or better: MATH 1650 - Calculus I, MATH 1660 - Calculus II, ENGL 1500 - Critical Thinking and Communication, CHEM 1670 - General Chemistry (or CHEM 1770), ENGR 1010 - Engineering Orientation, ENGR 1600 - Engineering Problems, LIB 1600 - Information Literacy.",
+        "rawRecommended": "PHYS 2310 - Introduction to Classical Physics I\nPHYS 2310L - Introduction to Classical Physics I Laboratory",
+        "english": {
+          "raw": "TOEFL iBT: 71 (subscores 17+ on speaking/writing) or 4.0 overall band (subscores 3.5+) on/after Jan 21, 2026 | IELTS: 6.0 (subscores 5.5+) | Duolingo DET: 105",
+          "TOEFL": 71,
+          "TOEFL_2026": 4.0,
+          "IELTS": 6.0,
+          "Duolingo": 105
+        },
+        "englishExemption": "Waiver granted if native English speaker, graduated from U.S. high school, or completed equivalent of English 1500 or 2500 with a B or higher at a U.S. college.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Engineering Basic Program requirements (https://www.engineering.iastate.edu/admissions/transfer).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "iowa-state-university-chemical-engineering-4e5f6a7b",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "2.25 minimum cumulative GPA for transfer consideration (2.00 for applicants with an associate's degree)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.25,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MATH 1650 - Calculus I",
+          "MATH 1660 - Calculus II",
+          "ENGL 1500 - Critical Thinking and Communication",
+          "CHEM 1670 - General Chemistry for Engineering (or CHEM 1770)",
+          "ENGR 1010 - Engineering Orientation",
+          "ENGR 1600 - Engineering Problems with Computer Applications Laboratory",
+          "LIB 1600 - Information Literacy"
+        ],
+        "recommendedCourses": [
+          "PHYS 2310 - Introduction to Classical Physics I",
+          "PHYS 2310L - Introduction to Classical Physics I Laboratory"
+        ],
+        "rawRequired": "Basic Program courses must be completed with C or better: MATH 1650 - Calculus I, MATH 1660 - Calculus II, ENGL 1500 - Critical Thinking and Communication, CHEM 1670 - General Chemistry (or CHEM 1770), ENGR 1010 - Engineering Orientation, ENGR 1600 - Engineering Problems, LIB 1600 - Information Literacy.",
+        "rawRecommended": "PHYS 2310 - Introduction to Classical Physics I\nPHYS 2310L - Introduction to Classical Physics I Laboratory",
+        "english": {
+          "raw": "TOEFL iBT: 71 (subscores 17+ on speaking/writing) or 4.0 overall band (subscores 3.5+) on/after Jan 21, 2026 | IELTS: 6.0 (subscores 5.5+) | Duolingo DET: 105",
+          "TOEFL": 71,
+          "TOEFL_2026": 4.0,
+          "IELTS": 6.0,
+          "Duolingo": 105
+        },
+        "englishExemption": "Waiver granted if native English speaker, graduated from U.S. high school, or completed equivalent of English 1500 or 2500 with a B or higher at a U.S. college.",
+        "note": "Verified: Prerequisite requirements confirmed against College of Engineering Basic Program requirements (https://www.engineering.iastate.edu/admissions/transfer).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  }
+]

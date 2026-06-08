@@ -288,6 +288,12 @@ const TRANSLATIONS = {
     password_change_invalid: "Current password does not match.",
     statcompass_limit_help: "Free Plan maintains a cumulative history limit of 5 analyzed schools. Upgrade to Pro/Premium for unlimited analyses.",
     btn_toggle_recommended: "Toggle Recommended Courses",
+    label_birthdate: "Birthdate",
+    auth_underage_error: "You must be 14 or older (13 for US/other) to register.",
+    auth_birthdate_required: "Please enter your birthdate.",
+    payment_consent_minor_text: "I confirm that I am of legal age or have obtained consent from my legal guardian (parent) for this payment. (Minor consent required)",
+    payment_consent_disclaimer_text: "I agree that TransferChek is a reference tool that does not guarantee admission. I understand that I must verify requirements on official university websites, and all university names are properties of their respective trademark owners.",
+    payment_consent_error: "You must agree to all legal consents (Minor check, Disclaimer) to proceed with payment.",
   },
   ko: {
     site_title: "TransferChek | 미국 공대 편입 준비 플랫폼",
@@ -578,6 +584,12 @@ const TRANSLATIONS = {
     password_change_invalid: "현재 비밀번호가 올바르지 않습니다.",
     statcompass_limit_help: "무료 플랜은 분석 가능한 대학이 누적 최대 5개로 제한됩니다. 무제한 분석을 원하시면 Pro/Premium 플랜으로 업그레이드하세요.",
     btn_toggle_recommended: "추천 과목 보기/숨기기",
+    label_birthdate: "생년월일 (Birthdate)",
+    auth_underage_error: "만 14세 미만(미국/기타 국적은 만 13세 미만)은 회원가입이 제한됩니다.",
+    auth_birthdate_required: "생년월일을 입력해 주세요.",
+    payment_consent_minor_text: "[필수] 본인은 성인이거나 법정대리인(부모)의 결제 동의를 받았음을 확인합니다. (미성년자 결제 시 부모 동의 필수)",
+    payment_consent_disclaimer_text: "[필수] TransferChek의 매칭 결과는 참고용 가이드이며 입학을 보장하지 않으며, 대학 정보의 공식 요건을 입학처 웹사이트를 통해 직접 재확인해야 하고, 모든 대학명은 개별 상표권에 귀속됨에 동의합니다.",
+    payment_consent_error: "결제를 진행하려면 모든 법적 고지(미성년자 동의, 면책 동의)에 동의하셔야 합니다.",
   },
   zh: {
     site_title: "TransferChek | 工程学院转学策略分析平台",
@@ -868,6 +880,12 @@ const TRANSLATIONS = {
     password_change_invalid: "当前密码输入不正确。",
     statcompass_limit_help: "免费计划限制累计分析最多5所大学。升级到 Pro/Premium 计划以解锁无限分析。",
     btn_toggle_recommended: "切换推荐课程",
+    label_birthdate: "出生日期",
+    auth_underage_error: "未满 14 周岁（美国/其他国家未满 13 周岁）无法注册。",
+    auth_birthdate_required: "请输入您的出生日期。",
+    payment_consent_minor_text: "[必须] 我确认我已达到法定年龄或已获得监护人（父母）的同意。 (未成年人付款需父母同意)",
+    payment_consent_disclaimer_text: "[必须] 我同意 TransferChek 是参考指南，不保证录取。我理解我必须在大学官方网站上核实最终要求，所有大学名称均为其各自商标所有者的财产。",
+    payment_consent_error: "您必须同意所有法律条款（未成年人确认、免责声明）才能继续付款。",
   }
 };
 
@@ -1101,6 +1119,13 @@ window.selectUserPlan = function(plan) {
       alert(t("alert_login_required", "You must log in or register to select a paid plan."));
       closePricingModal();
       openAuthModal("login");
+      return;
+    }
+    
+    const consentMinor = qs("#paymentConsentMinor");
+    const consentDisclaimer = qs("#paymentConsentDisclaimer");
+    if ((consentMinor && !consentMinor.checked) || (consentDisclaimer && !consentDisclaimer.checked)) {
+      alert(t("payment_consent_error", "You must agree to all legal consents (Minor check, Disclaimer) to proceed with payment."));
       return;
     }
   }
@@ -3110,6 +3135,20 @@ function openAuthModal(mode) {
     }
   }
   
+  const birthdateRow = qs("#authBirthdateRow");
+  const birthdateInput = qs("#authBirthdate");
+  if (birthdateRow && birthdateInput) {
+    if (mode === "signup") {
+      birthdateRow.classList.remove("hidden");
+      birthdateInput.required = true;
+      birthdateInput.value = "";
+    } else {
+      birthdateRow.classList.add("hidden");
+      birthdateInput.required = false;
+      birthdateInput.value = "";
+    }
+  }
+
   const nationalityRow = qs("#authNationalityRow");
   if (nationalityRow) {
     if (mode === "signup") {
@@ -3222,13 +3261,34 @@ function bindAuth() {
         qs("#authMessage").textContent = t("auth_email_exists", "An account with this email already exists on this browser.");
         return;
       }
+      
+      const birthdateVal = qs("#authBirthdate")?.value;
+      if (!birthdateVal) {
+        qs("#authMessage").textContent = t("auth_birthdate_required", "Please enter your birthdate.");
+        return;
+      }
+      const birthDate = new Date(birthdateVal);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      
       nationality = qs("#authNationality")?.value || "Other";
+      const limitAge = nationality === "Korea" ? 14 : 13;
+      if (age < limitAge) {
+        qs("#authMessage").textContent = t("auth_underage_error", "You must be 14 or older (13 for US/other) to register.");
+        return;
+      }
+      
       authState.users[email] = { 
         passwordHash, 
         createdAt: new Date().toISOString(),
         plan: "Free",
         essayCredits: 0,
-        nationality: nationality
+        nationality: nationality,
+        birthdate: birthdateVal
       };
       
       // Track signup event on server
@@ -3784,6 +3844,13 @@ window.buyStandaloneEssayPass = function() {
     alert(t("alert_login_required", "You must log in or register to buy essay credits."));
     closePricingModal();
     openAuthModal("login");
+    return;
+  }
+
+  const consentMinor = qs("#paymentConsentMinor");
+  const consentDisclaimer = qs("#paymentConsentDisclaimer");
+  if ((consentMinor && !consentMinor.checked) || (consentDisclaimer && !consentDisclaimer.checked)) {
+    alert(t("payment_consent_error", "You must agree to all legal consents (Minor check, Disclaimer) to proceed with payment."));
     return;
   }
 

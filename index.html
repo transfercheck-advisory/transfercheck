@@ -490,6 +490,29 @@
       </section>
     </main>
 
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h4>트랜스퍼체크(TransferCheck)</h4>
+          <p><strong>대표자명:</strong> 김하민 | <strong>이메일:</strong> kimhamin060307@gmail.com</p>
+          <p><strong>사업자등록번호:</strong> 817-07-03516 | <strong>통신판매업신고번호:</strong> 신고 준비 중</p>
+          <p><strong>주소:</strong> 광주광역시 동구 필문대로153번길 21-1 (산수동)</p>
+          <p><strong>유선번호:</strong> 010-5612-0637</p>
+        </div>
+        <div class="footer-links">
+          <h4 style="color: #f8fafc; font-size: 16px; font-weight: 800; margin-bottom: 12px;">고객지원 & 약관</h4>
+          <a href="./terms-privacy-pricing.html#pricing" onclick="localStorage.setItem('termsTargetTab', 'pricing')">요금제 안내 (Pricing Plans)</a>
+          <a href="./terms-privacy-pricing.html#terms" onclick="localStorage.setItem('termsTargetTab', 'terms')">서비스 이용약관 (Terms of Service)</a>
+          <a href="./terms-privacy-pricing.html#privacy" onclick="localStorage.setItem('termsTargetTab', 'privacy')">개인정보 처리방침 (Privacy Policy)</a>
+          <a href="./terms-privacy-pricing.html#refund" onclick="localStorage.setItem('termsTargetTab', 'refund')">환불 및 해지 정책 (Refund Policy)</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TransferChek. All rights reserved. All university names and logos are trademarks of their respective owners. TransferChek has no official affiliation or endorsement relationship with these universities.</p>
+      </div>
+    </footer>
+
     <!-- Auth Modal -->
     <div class="auth-modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
       <div class="auth-card">
@@ -507,6 +530,10 @@
           <div class="form-row">
             <label for="authPassword" data-i18n="label_password">Password</label>
             <input id="authPassword" type="password" autocomplete="current-password" required />
+          </div>
+          <div class="form-row hidden" id="authBirthdateRow" style="margin-top: 14px;">
+            <label for="authBirthdate" data-i18n="label_birthdate">Birthdate (생년월일)</label>
+            <input id="authBirthdate" type="date" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 12px;" />
           </div>
           <div class="form-row hidden" id="authNationalityRow" style="margin-top: 14px;">
             <label for="authNationality" data-i18n="label_nationality">Nationality (국적)</label>
@@ -549,6 +576,22 @@
         <div style="background: rgba(15, 30, 54, 0.03); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
           <span style="font-size: 13px; font-weight: 700; color: var(--muted);" data-i18n="active_plan_label">Your Current Plan:</span>
           <strong id="activePlanLabel" style="font-size: 14px; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em;">Free Plan</strong>
+        </div>
+
+        <!-- Legal Consent for Payments -->
+        <div style="background: rgba(15, 30, 54, 0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; gap: 8px; align-items: flex-start;">
+            <input id="paymentConsentMinor" type="checkbox" style="width: auto; margin-top: 4px; cursor: pointer;" />
+            <label for="paymentConsentMinor" style="font-size: 13px; color: var(--muted); cursor: pointer; line-height: 1.5; text-align: left; user-select: none;">
+              <span data-i18n="payment_consent_minor_text">I confirm that I am of legal age or have obtained consent from my legal guardian (parent) for this payment. (Minor consent required)</span>
+            </label>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: flex-start;">
+            <input id="paymentConsentDisclaimer" type="checkbox" style="width: auto; margin-top: 4px; cursor: pointer;" />
+            <label for="paymentConsentDisclaimer" style="font-size: 13px; color: var(--muted); cursor: pointer; line-height: 1.5; text-align: left; user-select: none;">
+              <span data-i18n="payment_consent_disclaimer_text">I agree that TransferChek is a reference tool that does not guarantee admission. I understand that I must verify requirements on official university websites, and all university names are properties of their respective trademark owners.</span>
+            </label>
+          </div>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px;">

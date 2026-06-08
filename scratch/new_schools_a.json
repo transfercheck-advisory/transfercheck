@@ -1,0 +1,514 @@
+[
+  {
+    "id": "stony-brook-university-6ae372f8",
+    "name": "Stony Brook University",
+    "shortName": "Stony Brook University",
+    "majors": [
+      {
+        "id": "stony-brook-university-computer-science-8c234a9b",
+        "name": "Computer Science",
+        "rawMinGpa": "3.2 cumulative GPA in prerequisite courses, overall 3.0+ competitive",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 3.2,
+        "minCredits": 24,
+        "requiredCourses": [
+          "CSE 114 - Introduction to Object-Oriented Programming",
+          "CSE 214 - Data Structures",
+          "CSE 215 - Foundations of Computer Science",
+          "MAT 131 - Calculus I",
+          "MAT 132 - Calculus II"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "CSE 114 - Introduction to Object-Oriented Programming\nCSE 214 - Data Structures\nCSE 215 - Foundations of Computer Science\nMAT 131 - Calculus I\nMAT 132 - Calculus II",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 105",
+          "TOEFL": 80,
+          "TOEFL_2026": 4,
+          "IELTS": 6.5,
+          "Duolingo": 105
+        },
+        "englishExemption": "Transfer students who have successfully completed a college-level writing course at a U.S. college or university with a grade of 'C' or better are exempt.",
+        "note": "Verified: Prerequisite requirements confirmed against Stony Brook University Undergraduate Bulletin (https://www.stonybrook.edu/sb/bulletin/current/academicprograms/cse/admission.php) and International Admissions guidelines.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "stony-brook-university-mechanical-engineering-7d341f5a",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "3.2 cumulative GPA in math, physics, and engineering courses",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 3.2,
+        "minCredits": 24,
+        "requiredCourses": [
+          "PHY 131 - Classical Physics I",
+          "MAT 131 - Calculus I",
+          "MAT 132 - Calculus II",
+          "At least one MEC course required for the major"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "PHY 131 - Classical Physics I\nMAT 131 - Calculus I\nMAT 132 - Calculus II\nAt least one MEC course required for the major",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 105",
+          "TOEFL": 80,
+          "TOEFL_2026": 4,
+          "IELTS": 6.5,
+          "Duolingo": 105
+        },
+        "englishExemption": "Transfer students who have successfully completed a college-level writing course at a U.S. college or university with a grade of 'C' or better are exempt.",
+        "note": "Verified: Prerequisite requirements confirmed against Stony Brook University Undergraduate Bulletin (https://www.stonybrook.edu/sb/bulletin/current/academicprograms/mec/admission.php) and International Admissions guidelines.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "stony-brook-university-electrical-engineering-5b12a84c",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "3.2 cumulative GPA in math, physics, and engineering courses",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 3.2,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MAT 131 - Calculus I",
+          "MAT 132 - Calculus II",
+          "PHY 131 - Classical Physics I",
+          "PHY 132 - Classical Physics II",
+          "11 credits of math, physics, and electrical/computer engineering courses required for the major (excluding ESE 300 and ESE 301)"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MAT 131 - Calculus I\nMAT 132 - Calculus II\nPHY 131 - Classical Physics I\nPHY 132 - Classical Physics II\n11 credits of math, physics, and electrical/computer engineering courses required for the major (excluding ESE 300 and ESE 301)",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 105",
+          "TOEFL": 80,
+          "TOEFL_2026": 4,
+          "IELTS": 6.5,
+          "Duolingo": 105
+        },
+        "englishExemption": "Transfer students who have successfully completed a college-level writing course at a U.S. college or university with a grade of 'C' or better are exempt.",
+        "note": "Verified: Prerequisite requirements confirmed against Stony Brook University Undergraduate Bulletin (https://www.stonybrook.edu/sb/bulletin/current/academicprograms/ese/admission.php) and International Admissions guidelines.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "stony-brook-university-chemical-molecular-engineering-3a98c76e",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "3.2 cumulative GPA overall, with no more than one grade of C+ or lower in any course",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 3.2,
+        "minCredits": 24,
+        "requiredCourses": [
+          "CHE 131 - General Chemistry I",
+          "CHE 132 - General Chemistry II",
+          "MAT 131 - Calculus I",
+          "MAT 132 - Calculus II",
+          "PHY 131 - Classical Physics I",
+          "PHY 132 - Classical Physics II"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "CHE 131 - General Chemistry I\nCHE 132 - General Chemistry II\nMAT 131 - Calculus I\nMAT 132 - Calculus II\nPHY 131 - Classical Physics I\nPHY 132 - Classical Physics II",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 105",
+          "TOEFL": 80,
+          "TOEFL_2026": 4,
+          "IELTS": 6.5,
+          "Duolingo": 105
+        },
+        "englishExemption": "Transfer students who have successfully completed a college-level writing course at a U.S. college or university with a grade of 'C' or better are exempt.",
+        "note": "Verified: Prerequisite requirements confirmed against Stony Brook University Undergraduate Bulletin (https://www.stonybrook.edu/sb/bulletin/current/academicprograms/cme/admission.php) and International Admissions guidelines. SBU offers Chemical and Molecular Engineering (CME) major.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  },
+  {
+    "id": "university-of-georgia-9fd24e81",
+    "name": "University of Georgia",
+    "shortName": "UGA",
+    "majors": [
+      {
+        "id": "university-of-georgia-computer-science-1c88d72b",
+        "name": "Computer Science",
+        "rawMinGpa": "3.3 calculated transfer GPA for 30-59 transferable credits, 3.0 for 60+ credits",
+        "rawMinCredits": "30 transferable semester credits",
+        "minGpa": 3.3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "CSCI 1301 - Introduction to Computing and Programming",
+          "MATH 2250 - Calculus I for Science and Engineering"
+        ],
+        "recommendedCourses": [
+          "CSCI 1302 - Software Development",
+          "CSCI 2610 - Discrete Mathematics for Computer Science",
+          "CSCI 2720 - Data Structures"
+        ],
+        "rawRequired": "CSCI 1301 - Introduction to Computing and Programming\nMATH 2250 - Calculus I for Science and Engineering",
+        "rawRecommended": "CSCI 1302 - Software Development\nCSCI 2610 - Discrete Mathematics for Computer Science\nCSCI 2720 - Data Structures",
+        "english": {
+          "raw": "TOEFL iBT: 80 | IELTS: 6.5 | Duolingo: Not accepted",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": null
+        },
+        "englishExemption": "Completion of the equivalent of English 1101 and 1102 (first-year composition) at an accredited U.S. institution with a minimum 2.5 combined GPA, or SAT EBRW 480+, or ACT English 17+",
+        "note": "Verified: Prerequisite requirements confirmed against UGA School of Computing (https://csc.uga.edu/) and Admissions guidelines.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-georgia-mechanical-engineering-2b99c43a",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "3.3 calculated transfer GPA for 30-59 credits, 3.0 for 60+ credits (standing requires 2.75 minimum GPA in major courses)",
+        "rawMinCredits": "30 transferable semester credits",
+        "minGpa": 3.3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "ENGL 1101 - English Composition I",
+          "MATH 2250 - Calculus I for Science and Engineering",
+          "MATH 2260 - Calculus II for Science and Engineering",
+          "PHYS 1211/1211L - Principles of Physics for Scientists and Engineers I (or PHYS 1251)",
+          "ENGR 1120 - Engineering Graphics and Design",
+          "ENGR 1140 - Computational Engineering Methods",
+          "ENGR 2120 - Engineering Statics"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "ENGL 1101 - English Composition I\nMATH 2250 - Calculus I for Science and Engineering\nMATH 2260 - Calculus II for Science and Engineering\nPHYS 1211/L - Principles of Physics for Scientists and Engineers I\nENGR 1120 - Engineering Graphics and Design\nENGR 1140 - Computational Engineering Methods\nENGR 2120 - Engineering Statics",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 | IELTS: 6.5 | Duolingo: Not accepted",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": null
+        },
+        "englishExemption": "Completion of the equivalent of English 1101 and 1102 (first-year composition) at an accredited U.S. institution with a minimum 2.5 combined GPA, or SAT EBRW 480+, or ACT English 17+",
+        "note": "Verified: Prerequisite requirements confirmed against UGA College of Engineering (https://engineering.uga.edu/) and Admissions guidelines.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-georgia-electrical-engineering-3c22b10f",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "3.3 calculated transfer GPA for 30-59 credits, 3.0 for 60+ credits (standing requires 2.75 minimum GPA in major courses)",
+        "rawMinCredits": "30 transferable semester credits",
+        "minGpa": 3.3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "ENGL 1101 - English Composition I",
+          "MATH 2250 - Calculus I for Science and Engineering",
+          "MATH 2260 - Calculus II for Science and Engineering",
+          "PHYS 1211/1211L - Principles of Physics for Scientists and Engineers I (or PHYS 1251)",
+          "CSEE 2220 - Fundamentals of Logic Design",
+          "ECSE 1100 - Introduction to Electrical and Computer Systems Engineering",
+          "ECSE 2170-2170L - Fundamentals of Circuit Analysis"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "ENGL 1101 - English Composition I\nMATH 2250 - Calculus I for Science and Engineering\nMATH 2260 - Calculus II for Science and Engineering\nPHYS 1211/L - Principles of Physics for Scientists and Engineers I\nCSEE 2220 - Fundamentals of Logic Design\nECSE 1100 - Introduction to Electrical and Computer Systems Engineering\nECSE 2170-2170L - Fundamentals of Circuit Analysis",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 | IELTS: 6.5 | Duolingo: Not accepted",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": null
+        },
+        "englishExemption": "Completion of the equivalent of English 1101 and 1102 (first-year composition) at an accredited U.S. institution with a minimum 2.5 combined GPA, or SAT EBRW 480+, or ACT English 17+",
+        "note": "Verified: Prerequisite requirements confirmed against UGA College of Engineering (https://engineering.uga.edu/) and Admissions guidelines.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-of-georgia-chemical-engineering-biochemical-4d55e87a",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "3.3 calculated transfer GPA for 30-59 credits, 3.0 for 60+ credits (standing requires 2.75 minimum GPA in major courses)",
+        "rawMinCredits": "30 transferable semester credits",
+        "minGpa": 3.3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "ENGL 1101 - English Composition I",
+          "MATH 2250 - Calculus I for Science and Engineering",
+          "MATH 2260 - Calculus II for Science and Engineering",
+          "PHYS 1211/1211L - Principles of Physics for Scientists and Engineers I (or PHYS 1251)",
+          "BIOL 1107/1107L - Principles of Biology I",
+          "CHEM 1212/1212L - General Chemistry II",
+          "ENGR 2120 - Engineering Statics"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "ENGL 1101 - English Composition I\nMATH 2250 - Calculus I for Science and Engineering\nMATH 2260 - Calculus II for Science and Engineering\nPHYS 1211/L - Principles of Physics for Scientists and Engineers I\nBIOL 1107/1107L - Principles of Biology I\nCHEM 1212/1212L - General Chemistry II\nENGR 2120 - Engineering Statics",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 80 | IELTS: 6.5 | Duolingo: Not accepted",
+          "TOEFL": 80,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": null
+        },
+        "englishExemption": "Completion of the equivalent of English 1101 and 1102 (first-year composition) at an accredited U.S. institution with a minimum 2.5 combined GPA, or SAT EBRW 480+, or ACT English 17+",
+        "note": "Verified: UGA does not offer a Chemical Engineering major; Biochemical Engineering requirements are provided instead as the closest equivalent. Prerequisite requirements verified at official College of Engineering guides.",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  },
+  {
+    "id": "university-at-buffalo-3cd4e2a8",
+    "name": "University at Buffalo (SUNY Buffalo)",
+    "shortName": "University at Buffalo",
+    "majors": [
+      {
+        "id": "university-at-buffalo-computer-science-4d56b891",
+        "name": "Computer Science",
+        "rawMinGpa": "2.8 minimum cumulative GPA, with a minimum 2.5 core GPA (Standard Path) or 3.0 core GPA (Fast-Track Path)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.8,
+        "minCredits": 24,
+        "requiredCourses": [
+          "CSE 115 - Introduction to Computer Science for Majors I",
+          "CSE 116 - Introduction to Computer Science for Majors II",
+          "CSE 191 - Discrete Structures (or MTH 191)",
+          "MTH 141 - Calculus I"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "CSE 115 - Introduction to Computer Science for Majors I\nCSE 116 - Introduction to Computer Science for Majors II\nCSE 191 - Discrete Structures (or MTH 191)\nMTH 141 - Calculus I",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79 | IELTS: 6.5 | Duolingo: 120",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 120
+        },
+        "englishExemption": "Transfer students from another U.S. institution who had a valid TOEFL/IELTS score at the time they commenced their previous study, with no more than a one-year break between institutions, or earned a degree from a U.S. institution without a lapse in studies.",
+        "note": "Verified: Prerequisite requirements confirmed against UB School of Engineering and Applied Sciences (SEAS) undergraduate admissions guide (https://engineering.buffalo.edu/home/academics/undergrad/admissions.html).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-at-buffalo-mechanical-engineering-5e67c902",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "2.8 minimum cumulative GPA, with a minimum 2.5 core GPA (Standard Path) or 3.0 core GPA (Fast-Track Path)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.8,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MTH 141 - Calculus 1",
+          "MTH 142 - Calculus 2",
+          "CHE 107 - General Chemistry for Engineers (or CHE 101/105)",
+          "PHY 107 - General Physics 1"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MTH 141 - Calculus 1\nMTH 142 - Calculus 2\nCHE 107 - General Chemistry for Engineers (or CHE 101/105)\nPHY 107 - General Physics 1",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79 | IELTS: 6.5 | Duolingo: 120",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 120
+        },
+        "englishExemption": "Transfer students from another U.S. institution who had a valid TOEFL/IELTS score at the time they commenced their previous study, with no more than a one-year break between institutions, or earned a degree from a U.S. institution without a lapse in studies.",
+        "note": "Verified: Prerequisite requirements confirmed against UB School of Engineering and Applied Sciences (SEAS) undergraduate admissions guide (https://engineering.buffalo.edu/home/academics/undergrad/admissions.html).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-at-buffalo-electrical-engineering-6f78d013",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "2.5 minimum cumulative GPA, with a minimum 2.5 core GPA (Standard Path) or 3.0 core GPA (Fast-Track Path)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.5,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MTH 141 - Calculus 1",
+          "MTH 142 - Calculus 2",
+          "CHE 107 - General Chemistry for Engineers (or CHE 101/105)",
+          "PHY 107 - General Physics 1"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MTH 141 - Calculus 1\nMTH 142 - Calculus 2\nCHE 107 - General Chemistry for Engineers (or CHE 101/105)\nPHY 107 - General Physics 1",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79 | IELTS: 6.5 | Duolingo: 120",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 120
+        },
+        "englishExemption": "Transfer students from another U.S. institution who had a valid TOEFL/IELTS score at the time they commenced their previous study, with no more than a one-year break between institutions, or earned a degree from a U.S. institution without a lapse in studies.",
+        "note": "Verified: Prerequisite requirements confirmed against UB School of Engineering and Applied Sciences (SEAS) undergraduate admissions guide (https://engineering.buffalo.edu/home/academics/undergrad/admissions.html).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "university-at-buffalo-chemical-engineering-7a89e124",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "2.5 minimum cumulative GPA, with a minimum 2.5 core GPA (Standard Path) or 3.0 core GPA (Fast-Track Path)",
+        "rawMinCredits": "24 transferable semester credits",
+        "minGpa": 2.5,
+        "minCredits": 24,
+        "requiredCourses": [
+          "MTH 141 - Calculus 1",
+          "MTH 142 - Calculus 2",
+          "CHE 107 - General Chemistry for Engineers (or CHE 101/105)",
+          "PHY 107 - General Physics 1"
+        ],
+        "recommendedCourses": [],
+        "rawRequired": "MTH 141 - Calculus 1\nMTH 142 - Calculus 2\nCHE 107 - General Chemistry for Engineers (or CHE 101/105)\nPHY 107 - General Physics 1",
+        "rawRecommended": "",
+        "english": {
+          "raw": "TOEFL iBT: 79 | IELTS: 6.5 | Duolingo: 120",
+          "TOEFL": 79,
+          "TOEFL_2026": null,
+          "IELTS": 6.5,
+          "Duolingo": 120
+        },
+        "englishExemption": "Transfer students from another U.S. institution who had a valid TOEFL/IELTS score at the time they commenced their previous study, with no more than a one-year break between institutions, or earned a degree from a U.S. institution without a lapse in studies.",
+        "note": "Verified: Prerequisite requirements confirmed against UB School of Engineering and Applied Sciences (SEAS) undergraduate admissions guide (https://engineering.buffalo.edu/home/academics/undergrad/admissions.html).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  },
+  {
+    "id": "north-carolina-state-university-1b2c3d4e",
+    "name": "North Carolina State University",
+    "shortName": "NC State",
+    "majors": [
+      {
+        "id": "north-carolina-state-university-computer-science-2b3c4d5e",
+        "name": "Computer Science",
+        "rawMinGpa": "3.0 minimum cumulative GPA (3.5+ recommended for competitiveness). Math GPA of 2.5+ in last two math courses required.",
+        "rawMinCredits": "30 transferable college-level credit hours recommended",
+        "minGpa": 3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MA 141 - Calculus I",
+          "MA 241 - Calculus II",
+          "PY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab",
+          "CH 101 - General Chemistry I and CH 102 - General Chemistry I Lab",
+          "ENG 101 - English Composition"
+        ],
+        "recommendedCourses": [
+          "MA 242 - Calculus III",
+          "PY 208/209 - Physics II with Lab",
+          "CSC 116 - Introduction to Java Programming"
+        ],
+        "rawRequired": "MA 141 - Calculus I\nMA 241 - Calculus II\nPY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab\nCH 101 - General Chemistry I and CH 102 - General Chemistry I Lab\nENG 101 - English Composition",
+        "rawRecommended": "MA 242 - Calculus III\nPY 208/209 - Physics II with Lab\nCSC 116 - Introduction to Java Programming",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4.5 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 110",
+          "TOEFL": 80,
+          "TOEFL_2026": 4.5,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver if achieved a minimum reading subscore of 27 on the ACT or a minimum reading subscore of 33 on the SAT, or citizens of a country where English is the official language.",
+        "note": "Verified: Prerequisite requirements confirmed against NC State College of Engineering transfer admission guidelines (https://admissions.ncsu.edu/apply/transfer/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "north-carolina-state-university-mechanical-engineering-3c4d5e6f",
+        "name": "Mechanical Engineering",
+        "rawMinGpa": "3.0 minimum cumulative GPA (3.5+ recommended for competitiveness). Math GPA of 2.5+ in last two math courses required.",
+        "rawMinCredits": "30 transferable college-level credit hours recommended",
+        "minGpa": 3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MA 141 - Calculus I",
+          "MA 241 - Calculus II",
+          "PY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab",
+          "CH 101 - General Chemistry I and CH 102 - General Chemistry I Lab",
+          "ENG 101 - English Composition"
+        ],
+        "recommendedCourses": [
+          "MA 242 - Calculus III",
+          "PY 208/209 - Physics II with Lab",
+          "MAE 206 - Statics"
+        ],
+        "rawRequired": "MA 141 - Calculus I\nMA 241 - Calculus II\nPY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab\nCH 101 - General Chemistry I and CH 102 - General Chemistry I Lab\nENG 101 - English Composition",
+        "rawRecommended": "MA 242 - Calculus III\nPY 208/209 - Physics II with Lab\nMAE 206 - Statics",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4.5 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 110",
+          "TOEFL": 80,
+          "TOEFL_2026": 4.5,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver if achieved a minimum reading subscore of 27 on the ACT or a minimum reading subscore of 33 on the SAT, or citizens of a country where English is the official language.",
+        "note": "Verified: Prerequisite requirements confirmed against NC State College of Engineering transfer admission guidelines (https://admissions.ncsu.edu/apply/transfer/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "north-carolina-state-university-electrical-engineering-4d5e6f7a",
+        "name": "Electrical Engineering",
+        "rawMinGpa": "3.0 minimum cumulative GPA (3.5+ recommended for competitiveness). Math GPA of 2.5+ in last two math courses required.",
+        "rawMinCredits": "30 transferable college-level credit hours recommended",
+        "minGpa": 3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MA 141 - Calculus I",
+          "MA 241 - Calculus II",
+          "PY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab",
+          "CH 101 - General Chemistry I and CH 102 - General Chemistry I Lab",
+          "ENG 101 - English Composition"
+        ],
+        "recommendedCourses": [
+          "MA 242 - Calculus III",
+          "PY 208/209 - Physics II with Lab",
+          "ECE 109 - Introduction to Computer Systems",
+          "ECE 200 - Introduction to Signals, Circuits and Systems"
+        ],
+        "rawRequired": "MA 141 - Calculus I\nMA 241 - Calculus II\nPY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab\nCH 101 - General Chemistry I and CH 102 - General Chemistry I Lab\nENG 101 - English Composition",
+        "rawRecommended": "MA 242 - Calculus III\nPY 208/209 - Physics II with Lab\nECE 109 - Introduction to Computer Systems\nECE 200 - Introduction to Signals, Circuits and Systems",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4.5 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 110",
+          "TOEFL": 80,
+          "TOEFL_2026": 4.5,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver if achieved a minimum reading subscore of 27 on the ACT or a minimum reading subscore of 33 on the SAT, or citizens of a country where English is the official language.",
+        "note": "Verified: Prerequisite requirements confirmed against NC State College of Engineering transfer admission guidelines (https://admissions.ncsu.edu/apply/transfer/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      },
+      {
+        "id": "north-carolina-state-university-chemical-engineering-5e6f7a8b",
+        "name": "Chemical Engineering",
+        "rawMinGpa": "3.0 minimum cumulative GPA (3.5+ recommended for competitiveness). Math GPA of 2.5+ in last two math courses required.",
+        "rawMinCredits": "30 transferable college-level credit hours recommended",
+        "minGpa": 3,
+        "minCredits": 30,
+        "requiredCourses": [
+          "MA 141 - Calculus I",
+          "MA 241 - Calculus II",
+          "PY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab",
+          "CH 101 - General Chemistry I and CH 102 - General Chemistry I Lab",
+          "ENG 101 - English Composition"
+        ],
+        "recommendedCourses": [
+          "MA 242 - Calculus III",
+          "PY 208/209 - Physics II with Lab",
+          "CH 221/222 - Organic Chemistry I with Lab"
+        ],
+        "rawRequired": "MA 141 - Calculus I\nMA 241 - Calculus II\nPY 205 - Physics I (Calculus-based) and PY 206 - Physics I Lab\nCH 101 - General Chemistry I and CH 102 - General Chemistry I Lab\nENG 101 - English Composition",
+        "rawRecommended": "MA 242 - Calculus III\nPY 208/209 - Physics II with Lab\nCH 221/222 - Organic Chemistry I with Lab",
+        "english": {
+          "raw": "TOEFL iBT: 80 (prior to Jan 21, 2026) or 4.5 (on/after Jan 21, 2026) | IELTS: 6.5 | Duolingo: 110",
+          "TOEFL": 80,
+          "TOEFL_2026": 4.5,
+          "IELTS": 6.5,
+          "Duolingo": 110
+        },
+        "englishExemption": "Waiver if achieved a minimum reading subscore of 27 on the ACT or a minimum reading subscore of 33 on the SAT, or citizens of a country where English is the official language.",
+        "note": "Verified: Prerequisite requirements confirmed against NC State College of Engineering transfer admission guidelines (https://admissions.ncsu.edu/apply/transfer/).",
+        "sourceFile": "Db 8-transfercheck final.xlsx",
+        "confidence": "verified"
+      }
+    ]
+  }
+]

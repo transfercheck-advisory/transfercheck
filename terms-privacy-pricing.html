@@ -557,6 +557,79 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Footer Styles */
+    .site-footer {
+      background-color: #0b1329;
+      color: #94a3b8;
+      padding: 40px 24px;
+      border-top: 1px solid #1e293b;
+      margin-top: 60px;
+    }
+
+    .site-footer .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      text-align: left;
+    }
+
+    .site-footer .footer-info h4 {
+      color: #f8fafc;
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .site-footer .footer-info p {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      color: #94a3b8;
+    }
+
+    .site-footer .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
+    .site-footer .footer-links a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer .footer-links a:hover {
+      color: #7dd3fc;
+    }
+
+    .site-footer .footer-bottom {
+      max-width: 1000px;
+      margin: 32px auto 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid #1e293b;
+      font-size: 11px;
+      text-align: center;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .site-footer .footer-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .site-footer .footer-links {
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -795,6 +868,29 @@
 
   </main>
 
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h4>트랜스퍼체크(TransferCheck)</h4>
+        <p><strong>대표자명:</strong> 김하민 | <strong>이메일:</strong> kimhamin060307@gmail.com</p>
+        <p><strong>사업자등록번호:</strong> 817-07-03516 | <strong>통신판매업신고번호:</strong> 신고 준비 중</p>
+        <p><strong>주소:</strong> 광주광역시 동구 필문대로153번길 21-1 (산수동)</p>
+        <p><strong>유선번호:</strong> 010-5612-0637</p>
+      </div>
+      <div class="footer-links">
+        <h4 style="color: #f8fafc; font-size: 16px; font-weight: 800; margin-bottom: 12px;">고객지원 & 약관</h4>
+        <a href="#pricing" onclick="switchTab('pricing')">요금제 안내 (Pricing Plans)</a>
+        <a href="#terms" onclick="switchTab('terms')">서비스 이용약관 (Terms of Service)</a>
+        <a href="#privacy" onclick="switchTab('privacy')">개인정보 처리방침 (Privacy Policy)</a>
+        <a href="#refund" onclick="switchTab('refund')">환불 및 해지 정책 (Refund Policy)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TransferChek. All rights reserved. All university names and logos are trademarks of their respective owners. TransferChek has no official affiliation or endorsement relationship with these universities.</p>
+    </div>
+  </footer>
+
   <!-- Cancellation Modal -->
   <div class="modal-overlay" id="cancelModalOverlay">
     <div class="cancel-modal">
@@ -825,32 +921,123 @@
         btn.classList.remove('active');
       });
 
-      document.getElementById(tabId).classList.add('active');
-      const eventTarget = [...document.querySelectorAll('.site-nav button')].find(btn => btn.textContent === event.target.textContent);
-      if (eventTarget) {
-        eventTarget.classList.add('active');
+      const panel = document.getElementById(tabId);
+      if (panel) {
+        panel.classList.add('active');
+      }
+      
+      const targetBtn = [...document.querySelectorAll('.site-nav button')].find(btn => {
+        const onclickAttr = btn.getAttribute('onclick') || '';
+        return onclickAttr.includes(`'${tabId}'`) || onclickAttr.includes(`"${tabId}"`);
+      });
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTab = localStorage.getItem('termsTargetTab');
+      if (savedTab) {
+        switchTab(savedTab);
+        localStorage.removeItem('termsTargetTab');
+        return;
+      }
+      
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['pricing', 'terms', 'privacy', 'refund'].includes(hash)) {
+        switchTab(hash);
+      }
+    });
+
+
+    let currentUser = null;
+    let authState = {};
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        authState = JSON.parse(localStorage.getItem('transferCompassAuth') || '{}');
+        currentUser = authState.currentUser || null;
+      } catch (e) {
+        console.error("Failed to load authState in pricing page:", e);
+      }
+
+      const savedTab = localStorage.getItem('termsTargetTab');
+      if (savedTab) {
+        switchTab(savedTab);
+        localStorage.removeItem('termsTargetTab');
+      } else {
+        const hash = window.location.hash.replace('#', '');
+        if (hash && ['pricing', 'terms', 'privacy', 'refund'].includes(hash)) {
+          switchTab(hash);
+        }
+      }
+
+      renderSubscriptionConsole();
+    });
+
+    function renderSubscriptionConsole() {
+      const consolePlanText = document.getElementById('subPlanText');
+      const consoleBillingDate = document.getElementById('nextBillingDate');
+      const consoleBadge = document.getElementById('subStatusBadge');
+      const consoleCancelBtn = document.getElementById('cancelSubBtn');
+
+      if (!consolePlanText || !consoleBillingDate || !consoleBadge || !consoleCancelBtn) return;
+
+      if (!currentUser) {
+        consolePlanText.textContent = '메인 페이지에서 로그인이 필요합니다.';
+        consoleBillingDate.textContent = '-';
+        consoleBadge.textContent = 'Inactive';
+        consoleBadge.className = 'status-badge status-cancelled';
+        consoleCancelBtn.setAttribute('disabled', 'true');
+        consoleCancelBtn.style.opacity = '0.5';
+        return;
+      }
+
+      const userProfile = authState.users[currentUser] || {};
+      const plan = userProfile.plan || 'Free';
+
+      if (plan === 'Free') {
+        consolePlanText.textContent = 'Free Plan (무료 혜택 이용 중)';
+        consoleBillingDate.textContent = '해당 없음';
+        consoleBadge.textContent = 'Inactive';
+        consoleBadge.className = 'status-badge status-cancelled';
+        consoleCancelBtn.setAttribute('disabled', 'true');
+        consoleCancelBtn.style.opacity = '0.5';
+      } else {
+        consolePlanText.textContent = plan + ' Plan (' + (plan === 'Pro' ? '$9.99' : '$29.99') + '/월)';
+        consoleBillingDate.textContent = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+        consoleBadge.textContent = 'Active (구독 중)';
+        consoleBadge.className = 'status-badge status-active';
+        consoleCancelBtn.removeAttribute('disabled');
+        consoleCancelBtn.style.opacity = '1';
       }
     }
 
     function simulateSubscribe(planName, price) {
+      if (!currentUser) {
+        alert('구독을 신청하려면 먼저 메인 화면에서 로그인해 주세요!');
+        return;
+      }
+
       if (planName === 'Essay Pass') {
         alert('에세이 5회 단독 이용권($6.99) 결제 시뮬레이션을 진행합니다!');
-        const badge = document.getElementById('subStatusBadge');
-        badge.textContent = 'Active';
-        badge.className = 'status-badge status-active';
-        document.getElementById('subPlanText').textContent = 'Essay Pass (5회 이용권 - $6.99)';
-        document.getElementById('nextBillingDate').textContent = '해당 없음 (일회성 구매)';
-        document.getElementById('cancelSubBtn').setAttribute('disabled', 'true');
-        document.getElementById('cancelSubBtn').style.opacity = '0.5';
+        const userProfile = authState.users[currentUser] || {};
+        userProfile.essayCredits = (userProfile.essayCredits || 0) + 5;
+        localStorage.setItem('transferCompassEssayCredits', userProfile.essayCredits);
+        localStorage.setItem('transferCompassAuth', JSON.stringify(authState));
+        alert('에세이 이용권 5회가 계정에 충전되었습니다!');
+        renderSubscriptionConsole();
       } else {
-        alert(planName + ' 요금제 정기 구독 시뮬레이션을 진행합니다! 데모 콘솔 상태가 Active로 활성화됩니다.');
-        const badge = document.getElementById('subStatusBadge');
-        badge.textContent = 'Active (구독 중)';
-        badge.className = 'status-badge status-active';
-        document.getElementById('subPlanText').textContent = planName + ' Plan (' + price + '/월)';
-        document.getElementById('nextBillingDate').textContent = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
-        document.getElementById('cancelSubBtn').removeAttribute('disabled');
-        document.getElementById('cancelSubBtn').style.opacity = '1';
+        alert(planName + ' 요금제 정기 구독 시뮬레이션을 진행합니다!');
+        const userProfile = authState.users[currentUser] || {};
+        userProfile.plan = planName;
+        if (planName === 'Premium') {
+          userProfile.essayCredits = 5;
+          localStorage.setItem('transferCompassEssayCredits', '5');
+        }
+        localStorage.setItem('transferCompassPlan', planName);
+        localStorage.setItem('transferCompassAuth', JSON.stringify(authState));
+        renderSubscriptionConsole();
       }
     }
 
@@ -863,15 +1050,16 @@
     }
 
     function confirmCancellation() {
-      alert('구독 해지 처리가 완료되었습니다. 당기 만료일까지만 유료 기능이 유지되며 이후 자동 갱신되지 않습니다.');
+      if (!currentUser) return;
+      alert('구독 해지 처리가 완료되었습니다. 플랜이 즉시 무료 등급으로 전환됩니다.');
       closeCancelModal();
 
-      const badge = document.getElementById('subStatusBadge');
-      badge.textContent = 'Cancelled (해지됨)';
-      badge.className = 'status-badge status-cancelled';
-      document.getElementById('nextBillingDate').textContent = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' }) + ' (만료 예정)';
-      document.getElementById('cancelSubBtn').setAttribute('disabled', 'true');
-      document.getElementById('cancelSubBtn').style.opacity = '0.5';
+      const userProfile = authState.users[currentUser] || {};
+      userProfile.plan = 'Free';
+      localStorage.setItem('transferCompassPlan', 'Free');
+      localStorage.setItem('transferCompassAuth', JSON.stringify(authState));
+
+      renderSubscriptionConsole();
     }
   </script>
 </body>
