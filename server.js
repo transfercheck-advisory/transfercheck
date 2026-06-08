@@ -211,12 +211,43 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const parsed = JSON.parse(body);
-        const { schoolName, majorName, essayQuestion, essayLimit, activities } = parsed;
+        const { schoolName, majorName, essayQuestion, essayLimit, activities, lang } = parsed;
         const apiKey = process.env.GEMINI_API_KEY;
 
         // Fallback generator helper to keep UX seamless if API key is invalid or rate-limited
-        const getFallbackOutline = () => {
+        const getFallbackOutline = (lang) => {
           const limitStr = essayLimit && essayLimit !== "unspecified" ? ` (${essayLimit})` : "";
+          if (lang !== 'ko') {
+            return {
+              targetStyleGuide: `${schoolName} ${majorName} transfer essays strongly prefer a practical, factual writing style that connects completed foundational prerequisites with engineering project outcomes. Focus on your specific quantitative/qualitative contributions rather than using overly decorative language.`,
+              outline: [
+                {
+                  paragraph: "Introduction (1st Paragraph)",
+                  title: `Academic Interest in ${majorName} and Motivation for ${schoolName}`,
+                  content: `[Length Guide: ~25% of total limit${limitStr}]\n[Activity Link]: Connect with 1 key activity from "${activities.slice(0, 50)}..." that initiated your interest in this field.\n[Guide]: Write about the specific academic moment that triggered your passion. Explain why you must transfer to '${schoolName}' specifically, referencing unique courses or resources.`,
+                  dos: `Highlight your initial academic spark and explain the curriculum alignment with '${schoolName}' using specific names of courses or lab tracks.`,
+                  donts: `Avoid clichés like "I've loved machines since I was a child" or "I am applying because of your high ranking and global reputation."`,
+                  example: `My academic curiosity in ${majorName} was solidified at my current college while studying its foundational principles. Transferring to ${schoolName} is a critical step for me to access their advanced research labs and specialized upper-division curriculum, bridging my current coursework with real-world engineering applications.`
+                },
+                {
+                  paragraph: "Body Paragraph (2nd Paragraph)",
+                  title: "Engineering Project Outcomes & Mapping Competencies",
+                  content: `[Length Guide: ~50% of total limit${limitStr}]\n[Activity Link]: Focus deeply on 1-2 major technical projects or activities.\n[Guide]: Detail how you applied coursework knowledge (math, physics, code) to design, build, or analyze. Emphasize your personal contribution, technical challenges resolved, and quantitative metrics. Prove you are ready for immediate junior-level project workloads.`,
+                  dos: `Emphasize technical bottlenecks you faced and how you systematically resolved them using logical engineering workflows or code optimization.`,
+                  donts: `Do not just list all your achievements. A shallow list of tutoring or minor homework projects dilutes the focus and professionalism of your essay.`,
+                  example: `Leveraging my knowledge from Calculus and Physics, I designed a control script in MATLAB that optimized feedback loops for our robotics project, reducing systemic latency by 15%. This experience demonstrated my ability to apply mathematical models to solve practical hardware problems under tight resource constraints.`
+                },
+                {
+                  paragraph: "Conclusion (3rd Paragraph)",
+                  title: "Post-Transfer Study Plan & Long-Term Career Vision",
+                  content: `[Length Guide: ~25% of total limit${limitStr}]\n[Activity Link]: Establish a roadmap for your final academic and professional goals.\n[Guide]: Name specific upper-division courses or research labs at '${schoolName}' you plan to join. Conclude with a strong statement on how you will contribute to the engineering industry or research community post-graduation.`,
+                  dos: `Connect your long-term career goals with the specialized academic paths available only at '${schoolName}'.`,
+                  donts: `Avoid vague endings like "I will study hard if admitted" or concluding with emotional statements that lack professional substance.`,
+                  example: `Upon transferring to ${schoolName}, I aim to participate in undergraduate research opportunities focused on systems optimization and smart materials. In the long run, I plan to leverage this education to design sustainable energy systems that resolve scalability issues in the industrial sector.`
+                }
+              ]
+            };
+          }
           return {
             targetStyleGuide: `${schoolName} ${majorName} 편입 에세이는 기초 선수과목 우수성과 실질적인 공학 프로젝트 성과를 정량적/정성적으로 연결하는 실사구시형 서술 스타일을 강력히 선호합니다. 화려한 수식어를 줄이고 사실(Factual) 중심으로 기여도를 작성하는 것이 합격의 지름길입니다.`,
             outline: [
@@ -239,7 +270,7 @@ const server = http.createServer((req, res) => {
               {
                 paragraph: "Conclusion (3rd Paragraph)",
                 title: `${schoolName} 편입 성공 후의 학업/연구 기획 및 장기적 커리어 비전`,
-                content: `[분량 가이드: 총 분량${limitStr}의 25% 내외]\n[활동 연계]: 본인의 커리어 청사진과 로드맵의 종착역을 제시합니다.\n[가이드]: '${schoolName}'에 합격한 이후 수강할 구체적인 고학년 특화 강좌나 참여하고자 하는 랩실(Lab) 연구 분야를 지칭하여 포부를 밝히세요. 졸업 후 산업계나 연구계에서 어떤 공학적 혁신을 이끌어낼 것인지 강한 포부와 함께 마무리합니다.`,
+                content: `[분량 가이드: 총 분량${limitStr}의 25% 내외]\n[활동 연계]: 본인의 커리어 청사진 och 로드맵의 종착역을 제시합니다.\n[가이드]: '${schoolName}'에 합격한 이후 수강할 구체적인 고학년 특화 강좌나 참여하고자 하는 랩실(Lab) 연구 분야를 지칭하여 포부를 밝히세요. 졸업 후 산업계나 연구계에서 어떤 공학적 혁신을 이끌어낼 것인지 강한 포부와 함께 마무리합니다.`,
                 dos: `'${schoolName}' 공대 졸업생으로서 향후 기여하고자 하는 기술적 분야와 장기적인 직업적 목표를 유기적으로 선언하여 입학처에 강렬한 잠재력을 심어주세요.`,
                 donts: "'합격만 시켜주시면 뭐든 열심히 하겠다'는 식의 빈약한 포부나, 감성적인 다짐으로 끝맺는 흐릿한 결말은 전문성을 해치므로 절대 피하십시오.",
                 example: `Upon transferring to ${schoolName}, I aim to participate in undergraduate research opportunities focused on systems optimization and smart materials. In the long run, I plan to leverage this education to design sustainable energy systems that resolve scalability issues in the industrial sector.`
@@ -251,44 +282,51 @@ const server = http.createServer((req, res) => {
         if (!apiKey) {
           console.warn("API key is missing in env. Serving fallback template.");
           res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-          res.end(JSON.stringify({ success: true, ...getFallbackOutline() }));
+          res.end(JSON.stringify({ success: true, ...getFallbackOutline(lang) }));
           return;
         }
 
-        const systemInstruction = `당신은 수십 년 전통의 명문 미국 공과대학교 편입 컨설팅 전문가이자 합격 에세이 수석 튜터입니다.
-학생이 작성할 에세이의 타겟 대학교/학과가 추구하는 에세이 고유 스타일과 인재상을 인지하고, 주어진 에세이 질문(Prompt)에 합격할 수 있도록 정교한 '3-4문단 전략적 설계도'를 JSON 형식으로 제공해야 합니다.
+        const systemInstruction = `You are an expert transfer admission consultant and a senior essay tutor specializing in top U.S. engineering universities.
+Your role is to analyze the target school/program's unique essay style and values, then generate a detailed "3-Paragraph Strategic Essay Outline" in JSON format that maximizes the student's chances of admission.
 
-[대학별 공대 편입 에세이 심사 기준 & 선호 스타일 지식 베이스]
-1. UC 계열 (UC Berkeley, UCLA, UC San Diego 등):
-   - 스타일: 화려한 은유나 시적 표현은 절대 피해야 합니다. 극단적으로 Factual(사실 기반)하고 구체적(Specific)이며 명확한(Clear) 문체를 가장 선호합니다.
-   - 준비 입증: 어떤 선수과목을 들었고(Prerequisite), 어떤 기술적 프로젝트를 완수했는지 명확한 기여 실적 위주로 서술하게 합니다. (PIQ 제한 350단어에 엄격히 맞추도록 문단을 압축 설계)
-2. 조지아텍 (Georgia Tech):
-   - 스타일: SOP(Statement of Purpose)와 Contribution을 중시합니다.
-   - 핵심 가치: 본인의 기술 역량이 조지아텍 캠퍼스와 공학 발전에 어떻게 기여할 것인지(Contribution), 팀워크와 협업(Collaboration) 리더십 역량이 드러나는 실례를 연결하도록 만듭니다.
+\${lang === 'ko' ? \`
+[응답 언어 설정]
+반드시 한국어로 모든 설명(targetStyleGuide, paragraph, title, content, dos, donts)을 작성해 주십시오. 단, 'example' (영문 작성 예시) 필드만은 실제로 학생이 에세이에 쓸 수 있도록 반드시 완벽한 영어로 작성해 주어야 합니다.
+\` : \`
+[Response Language Setting]
+You MUST write all explanations, guides, guidelines, and feedback (targetStyleGuide, paragraph, title, content, dos, donts) strictly in English. The 'example' field must also be written in perfect English so the student can use it as a starting point.
+\`}
+
+[University Engineering Transfer Essay Styles & Rubric]
+1. UC System (UC Berkeley, UCLA, UC San Diego, etc.):
+   - Style: Avoid flowery metaphors or poetic language. Strictly prefer factual, specific, and clear statements.
+   - Evidence: Detail completed prerequisites and specific technical projects highlighting your direct contributions. (Strict 350-word PIQ limits)
+2. Georgia Tech:
+   - Style: Emphasize Statement of Purpose and Contribution.
+   - Core Values: Focus on how your technical skills contribute to the Georgia Tech community/engineering advancement. Highlight teamwork, collaboration, and leadership.
 3. UIUC:
-   - 스타일: 전공에 대한 정밀한 타겟 연구 관심(Specific research fit)을 요구합니다.
-   - 핵심 가치: 왜 타 대학이 아닌 UIUC 공대여야만 하는지 커리큘럼 특성을 파악하고, 본인이 일하고 싶은 특정 연구 랩실이나 교수진의 연구 핏을 정교하게 엮어 지원 동기를 밝히도록 가이드합니다.
-4. 기타 명문 공대 (UMich, Columbia, NYU, Purdue, UVA 등):
-   - 스타일: 엄격한 학업적 우수성(Academic excellence)하고 공학적 창의력을 깊이 있게 강조합니다.
+   - Style: Specific research fit and target study interest.
+   - Core Values: Explain why UIUC specifically is the right fit. Reference UIUC's specific curriculum features, research labs, or faculty you want to work with.
+4. Other Elite Engineering Schools (UMich, Columbia, NYU, Purdue, UVA, etc.):
+   - Style: Focus on strict academic excellence and engineering innovation.
 
-[활동 선별(Selection) 지침]
-- 학생이 제공한 경험 목록 중, 편입 대상 학교가 특히 선호할 만하고 전공과의 연계도가 가장 강력한 핵심 활동 1~2개만을 자율적으로 엄격하게 선별해 문단에 최적으로 매치하십시오.
-- 무의미하고 난잡한 자잘한 활동은 전문적인 흐름을 위해 과감하게 배제(Filter out)해야 합니다.
+[Activity Selection Guidelines]
+- From the student's list of experiences, selectively filter and match only 1-2 key activities that are highly relevant to the target program and school values. Avoid listing clutter.
 
-[응답 가이드라인 작성 규칙]
-- 각 문단에 맞춰 구체적으로 학생이 작성해야 할 콘텐츠 가이드라인을 적어줍니다.
-- 문단마다 'dos'(반드시 강조해 서술해야 할 핵심 가치나 팁)와 'donts'(절대 쓰지 말아야 할 흔한 진부한 실수의 예)를 명시적으로 상세하게 제공하십시오.
-- 가장 중요한 규칙으로, 각 문단마다 학생의 입력 활동과 목표 학교 인재상 스타일 가이드를 결합한 '실제 합격생 수준의 고품질 영문 작성 예시(example)'를 2~3문장 규모로 구체적으로 작성해 주어야 합니다.`;
+[Outline Writing Rules]
+- Write clear instructions and storyline guides for each paragraph.
+- Provide clear "dos" (critical points to emphasize) and "donts" (common clichés or mistakes to avoid) for each section.
+- For each paragraph, provide a high-quality "example" (2-3 sentences of actual draft text written in perfect English) combining the student's activities with the school's style rubric.`;
 
         const payload = JSON.stringify({
           contents: [{
             parts: [{
               text: `[학생 정보 및 요청 사항]
-목표 대학: ${schoolName}
-목표 전공: ${majorName}
-에세이 질문 (Prompt): ${essayQuestion}
-에세이 분량 제한 (Limit): ${essayLimit}
-학생 활동 및 경험 풀: ${activities}
+목표 대학: \${schoolName}
+목표 전공: \${majorName}
+에세이 질문 (Prompt): \${essayQuestion}
+에세이 분량 제한 (Limit): \${essayLimit}
+학생 활동 및 경험 풀: \${activities}
 
 위 정보를 바탕으로, 해당 대학의 인재상에 핏을 맞추어 문단별 에세이 설계 도면을 상세히 작성해 주십시오. JSON 형식으로 제공해야 합니다.`
             }]
@@ -327,7 +365,7 @@ const server = http.createServer((req, res) => {
           }
         });
 
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=\${apiKey}`;
         const options = {
           method: 'POST',
           headers: {
@@ -342,9 +380,9 @@ const server = http.createServer((req, res) => {
           geminiRes.on('data', chunk => geminiData += chunk);
           geminiRes.on('end', () => {
             if (geminiRes.statusCode !== 200) {
-              console.warn(`Gemini API returned status ${geminiRes.statusCode}. Serving fallback template.`);
+              console.warn(`Gemini API returned status \${geminiRes.statusCode}. Serving fallback template.`);
               res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-              res.end(JSON.stringify({ success: true, ...getFallbackOutline() }));
+              res.end(JSON.stringify({ success: true, ...getFallbackOutline(lang) }));
               return;
             }
             try {
@@ -355,7 +393,7 @@ const server = http.createServer((req, res) => {
             } catch (err) {
               console.warn("AI parsing failed. Serving fallback template.", err);
               res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-              res.end(JSON.stringify({ success: true, ...getFallbackOutline() }));
+              res.end(JSON.stringify({ success: true, ...getFallbackOutline(lang) }));
             }
           });
         });

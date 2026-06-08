@@ -97,6 +97,8 @@ const TRANSLATIONS = {
     label_essay_target: "Target University & Program",
     label_essay_activity: "Core Activities & Projects",
     btn_generate_essay: "Generate Essay Storyline Guide",
+    btn_essay_example1: "📝 Example 1: CS Project (U-Mich)",
+    btn_essay_example2: "⚙️ Example 2: ME Robotics (Georgia Tech)",
     essay_outline_title: "AI Essay Blueprint",
     essay_outline_desc: "Tailored paragraph structure connecting your activities to school goals.",
     essay_placeholder: "Enter your activities on the left and click generate to build your custom outline guide.",
@@ -385,6 +387,8 @@ const TRANSLATIONS = {
     label_essay_target: "에세이 대상 목표 대학교 및 전공",
     label_essay_activity: "핵심 활동 및 프로젝트 내용",
     btn_generate_essay: "에세이 문단 가이드라인 생성",
+    btn_essay_example1: "📝 예시 1: 컴공 프로젝트 (U-Mich)",
+    btn_essay_example2: "⚙️ 예시 2: 기계공 로보틱스 (Georgia Tech)",
     essay_outline_title: "AI 에세이 전략 가이드",
     essay_outline_desc: "작성자의 활동 경험을 전공 요구 인재상과 논리적으로 연결한 3문단 가이드라인입니다.",
     essay_placeholder: "왼쪽에서 활동 내용을 입력하거나 AI 인터뷰에 답변한 뒤 가이드 생성 버튼을 클릭하세요.",
@@ -673,6 +677,8 @@ const TRANSLATIONS = {
     label_essay_target: "文书针对的目标大学/专业",
     label_essay_activity: "核心活动、竞赛或项目细节",
     btn_generate_essay: "生成文书叙事指南大纲",
+    btn_essay_example1: "📝 示例 1: CS项目 (U-Mich)",
+    btn_essay_example2: "⚙️ 示例 2: 机械工程机器人 (Georgia Tech)",
     essay_outline_title: "AI文书大纲推荐",
     essay_outline_desc: "逻辑连贯的3段式学术陈述（PS）写作蓝图，指导您如何将项目经历转化为亮眼的文书叙事。",
     essay_placeholder: "在左侧输入您的活动经历，点击生成按钮，系统将在此处展示您的定制大纲建议。",
@@ -3425,7 +3431,8 @@ function bindEssay() {
           majorName: targetProgram.name,
           essayQuestion: essayQuestion,
           essayLimit: essayLimit || "unspecified",
-          activities: activities
+          activities: activities,
+          lang: state.language || "en"
         })
       });
       if (!response.ok) {
