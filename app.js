@@ -294,6 +294,8 @@ const TRANSLATIONS = {
     payment_consent_minor_text: "I confirm that I am of legal age or have obtained consent from my legal guardian (parent) for this payment. (Minor consent required)",
     payment_consent_disclaimer_text: "I agree that TransferChek is a reference tool that does not guarantee admission. I understand that I must verify requirements on official university websites, and all university names are properties of their respective trademark owners.",
     payment_consent_error: "You must agree to all legal consents (Minor check, Disclaimer) to proceed with payment.",
+    payment_sdk_error: "Payment module is loading. Please try again in a moment.",
+    payment_failed: "Payment failed: {error}",
   },
   ko: {
     site_title: "TransferChek | 미국 공대 편입 준비 플랫폼",
@@ -590,6 +592,8 @@ const TRANSLATIONS = {
     payment_consent_minor_text: "[필수] 본인은 성인이거나 법정대리인(부모)의 결제 동의를 받았음을 확인합니다. (미성년자 결제 시 부모 동의 필수)",
     payment_consent_disclaimer_text: "[필수] TransferChek의 매칭 결과는 참고용 가이드이며 입학을 보장하지 않으며, 대학 정보의 공식 요건을 입학처 웹사이트를 통해 직접 재확인해야 하고, 모든 대학명은 개별 상표권에 귀속됨에 동의합니다.",
     payment_consent_error: "결제를 진행하려면 모든 법적 고지(미성년자 동의, 면책 동의)에 동의하셔야 합니다.",
+    payment_sdk_error: "결제 모듈이 아직 로드 중입니다. 잠시 후 다시 시도해 주세요.",
+    payment_failed: "결제에 실패하였습니다: {error}",
   },
   zh: {
     site_title: "TransferChek | 工程学院转学策略分析平台",
@@ -886,6 +890,8 @@ const TRANSLATIONS = {
     payment_consent_minor_text: "[必须] 我确认我已达到法定年龄或已获得监护人（父母）的同意。 (未成年人付款需父母同意)",
     payment_consent_disclaimer_text: "[必须] 我同意 TransferChek 是参考指南，不保证录取。我理解我必须在大学官方网站上核实最终要求，所有大学名称均为其各自商标所有者的财产。",
     payment_consent_error: "您必须同意所有法律条款（未成年人确认、免责声明）才能继续付款。",
+    payment_sdk_error: "支付模块正在加载中，请稍后再试。",
+    payment_failed: "支付失败: {error}",
   }
 };
 
@@ -1112,9 +1118,10 @@ function updatePlanNoticeVisibility() {
 }
 
 window.selectUserPlan = function(plan) {
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+
   if (plan !== "Free") {
-    const authState = readAuthState();
-    const currentUser = authState.currentUser || "";
     if (!currentUser) {
       alert(t("alert_login_required", "You must log in or register to select a paid plan."));
       closePricingModal();
@@ -1128,8 +1135,47 @@ window.selectUserPlan = function(plan) {
       alert(t("payment_consent_error", "You must agree to all legal consents (Minor check, Disclaimer) to proceed with payment."));
       return;
     }
-  }
 
+    // Portone payment integration
+    const IMP = window.IMP;
+    if (!IMP) {
+      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+      return;
+    }
+
+    const pricingDetails = {
+      Pro: { name: "Pro Plan", amount: 14000 },
+      Premium: { name: "Premium Plan", amount: 42000 }
+    };
+    const details = pricingDetails[plan];
+    if (!details) return;
+
+    const userProfile = authState.users[currentUser] || {};
+    const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
+    const buyerPhone = userProfile.phone || "010-0000-0000";
+
+    IMP.request_pay({
+      pg: "html5_inicis", // Test PG (KG Inicis)
+      pay_method: "card",
+      merchant_uid: `order_sub_${plan}_${Date.now()}`,
+      name: details.name,
+      amount: details.amount,
+      buyer_email: currentUser,
+      buyer_name: buyerName,
+      buyer_tel: buyerPhone
+    }, function(rsp) {
+      if (rsp.success) {
+        applyPlanUpgrade(plan);
+      } else {
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+      }
+    });
+  } else {
+    applyPlanUpgrade("Free");
+  }
+};
+
+function applyPlanUpgrade(plan) {
   state.plan = plan;
   localStorage.setItem("transferCompassPlan", plan);
   
@@ -1181,7 +1227,7 @@ window.selectUserPlan = function(plan) {
   }
   
   alert(t("alert_subscribed", "Successfully subscribed to the {plan}!").replace("{plan}", displayName));
-};
+}
 
 const courseCategoryOrder = { Math: 0, Physics: 1, Chemistry: 2, Science: 3, English: 4, Computer: 5, Engineering: 6 };
 
@@ -3854,6 +3900,40 @@ window.buyStandaloneEssayPass = function() {
     return;
   }
 
+  // Portone payment integration
+  const IMP = window.IMP;
+  if (!IMP) {
+    alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+    return;
+  }
+
+  const userProfile = authState.users[currentUser] || {};
+  const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
+  const buyerPhone = userProfile.phone || "010-0000-0000";
+
+  IMP.request_pay({
+    pg: "html5_inicis", // Test PG (KG Inicis)
+    pay_method: "card",
+    merchant_uid: `order_essay_${Date.now()}`,
+    name: "Standalone Essay Pass (5 Credits)",
+    amount: 9800, // 9,800 KRW
+    buyer_email: currentUser,
+    buyer_name: buyerName,
+    buyer_tel: buyerPhone
+  }, function(rsp) {
+    if (rsp.success) {
+      applyEssayCreditsPurchase();
+    } else {
+      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+    }
+  });
+};
+
+function applyEssayCreditsPurchase() {
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  if (!currentUser) return;
+
   state.essayCredits = (state.essayCredits || 0) + 5;
   localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
   
@@ -3864,9 +3944,15 @@ window.buyStandaloneEssayPass = function() {
   
   const alertMsg = t("alert_essay_pass_purchased", "Successfully purchased Standalone Essay Pass! 5 credits have been added to your account.");
   alert(alertMsg);
-};
+}
 
 function init() {
+  // Initialize Portone SDK Test Mode
+  const IMP = window.IMP;
+  if (IMP) {
+    IMP.init("imp31068472"); // Portone Public Test Store ID
+  }
+
   // Track visit telemetry on page load
   fetch('/api/track-visit', { method: 'POST', cache: 'no-store' })
     .catch(e => console.warn("Failed to send visit telemetry:", e));
