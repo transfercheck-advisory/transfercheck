@@ -932,6 +932,10 @@ textarea:focus {
   padding: 8px;
 }
 
+.search-menu:not(.hidden) {
+  display: block;
+}
+
 .search-menu.open {
   display: grid;
   gap: 6px;
