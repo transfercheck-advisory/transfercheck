@@ -1110,11 +1110,19 @@ window.selectUserPlan = function(plan) {
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
   if (currentUser) {
+    const prevPlan = authState.users[currentUser].plan || "Free";
     authState.users[currentUser].plan = plan;
     if (plan === "Premium") {
       authState.users[currentUser].essayCredits = 5;
     }
     writeAuthState(authState);
+    
+    // Track plan change telemetry
+    fetch('/api/track-subscription', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ oldPlan: prevPlan, newPlan: plan })
+    }).catch(e => console.warn("Failed to send plan change telemetry:", e));
   }
   
   updateActivePlanLabel();
@@ -3027,9 +3035,28 @@ function writeAuthState(authState) {
 }
 
 async function hashPassword(password) {
-  const data = new TextEncoder().encode(password);
-  const digest = await crypto.subtle.digest("SHA-256", data);
-  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  if (!window.crypto || !window.crypto.subtle) {
+    let hash = 0;
+    for (let i = 0; i < password.length; i++) {
+      const char = password.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash;
+    }
+    return "fallback_" + Math.abs(hash).toString(16);
+  }
+  try {
+    const data = new TextEncoder().encode(password);
+    const digest = await crypto.subtle.digest("SHA-256", data);
+    return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  } catch (e) {
+    let hash = 0;
+    for (let i = 0; i < password.length; i++) {
+      const char = password.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash;
+    }
+    return "fallback_" + Math.abs(hash).toString(16);
+  }
 }
 
 function renderAuthState() {
@@ -3062,6 +3089,15 @@ function openAuthModal(mode) {
       consentRow.classList.add("hidden");
       consentInput.required = false;
       consentInput.checked = false;
+    }
+  }
+  
+  const nationalityRow = qs("#authNationalityRow");
+  if (nationalityRow) {
+    if (mode === "signup") {
+      nationalityRow.classList.remove("hidden");
+    } else {
+      nationalityRow.classList.add("hidden");
     }
   }
   
@@ -3156,6 +3192,8 @@ function bindAuth() {
     const passwordHash = await hashPassword(password);
     const authState = readAuthState();
     authState.users = authState.users || {};
+    let nationality = "Other";
+    
     if (mode === "signup") {
       const consentInput = qs("#authConsent");
       if (consentInput && !consentInput.checked) {
@@ -3166,15 +3204,35 @@ function bindAuth() {
         qs("#authMessage").textContent = t("auth_email_exists", "An account with this email already exists on this browser.");
         return;
       }
+      nationality = qs("#authNationality")?.value || "Other";
       authState.users[email] = { 
         passwordHash, 
         createdAt: new Date().toISOString(),
         plan: "Free",
-        essayCredits: 0
+        essayCredits: 0,
+        nationality: nationality
       };
-    } else if (!authState.users[email] || authState.users[email].passwordHash !== passwordHash) {
-      qs("#authMessage").textContent = t("auth_invalid_credentials", "Email or password does not match this browser.");
-      return;
+      
+      // Track signup event on server
+      fetch('/api/track-signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nationality })
+      }).catch(e => console.warn("Failed to send signup telemetry:", e));
+      
+    } else {
+      if (!authState.users[email] || authState.users[email].passwordHash !== passwordHash) {
+        qs("#authMessage").textContent = t("auth_invalid_credentials", "Email or password does not match this browser.");
+        return;
+      }
+      nationality = authState.users[email].nationality || "Other";
+      
+      // Track login event on server
+      fetch('/api/track-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nationality })
+      }).catch(e => console.warn("Failed to send login telemetry:", e));
     }
     authState.currentUser = email;
     
@@ -3712,6 +3770,10 @@ window.buyStandaloneEssayPass = function() {
 };
 
 function init() {
+  // Track visit telemetry on page load
+  fetch('/api/track-visit', { method: 'POST' })
+    .catch(e => console.warn("Failed to send visit telemetry:", e));
+
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
   if (!currentUser) {
@@ -3833,8 +3895,10 @@ function openProfileModal() {
   const userProfile = authState.users[email] || {};
   const plan = userProfile.plan || "Free";
   const credits = userProfile.essayCredits || 0;
+  const nationality = userProfile.nationality || "Other";
 
   qs("#profileEmailVal").textContent = email;
+  qs("#profileNationalityVal").textContent = nationality;
   qs("#profilePlanVal").textContent = plan.toUpperCase() + " PLAN";
   qs("#profileCreditsVal").textContent = credits;
   

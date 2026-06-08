@@ -30,11 +30,144 @@ const MIME_TYPES = {
   '.svg': 'image/svg+xml'
 };
 
+// Statistics helper functions
+function getStats() {
+  const statsPath = path.join(__dirname, 'admin-stats.json');
+  const defaultStats = {
+    totalVisits: 0,
+    dailyVisits: {},
+    nationalityAccess: { "Korea": 0, "USA": 0, "China": 0, "Other": 0 },
+    planCounts: { "Free": 0, "Pro": 0, "Premium": 0 },
+    usersCount: 0
+  };
+  if (!fs.existsSync(statsPath)) {
+    fs.writeFileSync(statsPath, JSON.stringify(defaultStats, null, 2), 'utf8');
+    return defaultStats;
+  }
+  try {
+    const raw = fs.readFileSync(statsPath, 'utf8');
+    return JSON.parse(raw);
+  } catch (err) {
+    return defaultStats;
+  }
+}
+
+function saveStats(stats) {
+  const statsPath = path.join(__dirname, 'admin-stats.json');
+  fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2), 'utf8');
+}
+
 const server = http.createServer((req, res) => {
   // Prevent path traversal
   const rawUrl = req.url || "";
   let safeUrl = rawUrl.split('?')[0];
   if (safeUrl === '/') safeUrl = '/index.html';
+
+  // API Route: Get Admin Stats
+  if (req.method === 'GET' && safeUrl === '/api/admin-stats') {
+    const stats = getStats();
+    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+    res.end(JSON.stringify(stats));
+    return;
+  }
+
+  // API Route: Track Visit
+  if (req.method === 'POST' && safeUrl === '/api/track-visit') {
+    const stats = getStats();
+    stats.totalVisits = (stats.totalVisits || 0) + 1;
+    
+    const today = new Date().toISOString().split('T')[0];
+    stats.dailyVisits = stats.dailyVisits || {};
+    stats.dailyVisits[today] = (stats.dailyVisits[today] || 0) + 1;
+    
+    saveStats(stats);
+    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+    res.end(JSON.stringify({ success: true, totalVisits: stats.totalVisits }));
+    return;
+  }
+
+  // API Route: Track Signup
+  if (req.method === 'POST' && safeUrl === '/api/track-signup') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', () => {
+      try {
+        const parsed = JSON.parse(body);
+        const nationality = parsed.nationality || 'Other';
+        const stats = getStats();
+        
+        stats.usersCount = (stats.usersCount || 0) + 1;
+        stats.nationalityAccess = stats.nationalityAccess || { "Korea": 0, "USA": 0, "China": 0, "Other": 0 };
+        stats.nationalityAccess[nationality] = (stats.nationalityAccess[nationality] || 0) + 1;
+        
+        stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
+        stats.planCounts["Free"] = (stats.planCounts["Free"] || 0) + 1;
+        
+        saveStats(stats);
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true }));
+      } catch (err) {
+        res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: 'Invalid payload' }));
+      }
+    });
+    return;
+  }
+
+  // API Route: Track Login
+  if (req.method === 'POST' && safeUrl === '/api/track-login') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', () => {
+      try {
+        const parsed = JSON.parse(body);
+        const nationality = parsed.nationality || 'Other';
+        const stats = getStats();
+        
+        stats.nationalityAccess = stats.nationalityAccess || { "Korea": 0, "USA": 0, "China": 0, "Other": 0 };
+        stats.nationalityAccess[nationality] = (stats.nationalityAccess[nationality] || 0) + 1;
+        
+        saveStats(stats);
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true }));
+      } catch (err) {
+        res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: 'Invalid payload' }));
+      }
+    });
+    return;
+  }
+
+  // API Route: Track Subscription Plan Changes
+  if (req.method === 'POST' && safeUrl === '/api/track-subscription') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', () => {
+      try {
+        const parsed = JSON.parse(body);
+        const { oldPlan, newPlan } = parsed;
+        const stats = getStats();
+        
+        stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
+        if (stats.planCounts[oldPlan] !== undefined && stats.planCounts[oldPlan] > 0) {
+          stats.planCounts[oldPlan]--;
+        }
+        if (stats.planCounts[newPlan] !== undefined) {
+          stats.planCounts[newPlan]++;
+        } else {
+          stats.planCounts[newPlan] = 1;
+        }
+        
+        saveStats(stats);
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true }));
+      } catch (err) {
+        res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: 'Invalid payload' }));
+      }
+    });
+    return;
+  }
 
   // API Route: Save transfer-data back to disk
   if (req.method === 'POST' && safeUrl === '/api/save') {

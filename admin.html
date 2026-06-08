@@ -379,7 +379,14 @@
         <small>Database Control Panel</small>
       </div>
     </a>
-    <div class="status-summary">
+    
+    <!-- Tab navigation -->
+    <div style="display: flex; gap: 8px; margin-left: 20px;">
+      <button class="btn btn-primary" id="tabDbBtn" onclick="switchAdminTab('db')">데이터베이스 제어</button>
+      <button class="btn btn-secondary" id="tabStatsBtn" onclick="switchAdminTab('stats')">방문/활동 통계</button>
+    </div>
+
+    <div class="status-summary" id="headerStatusSummary">
       <div class="status-item"><span class="status-dot dot-verified"></span> Verified: <strong id="statVerified">0</strong></div>
       <div class="status-item"><span class="status-dot dot-needs-review"></span> Needs Review: <strong id="statReview">0</strong></div>
       <div class="status-item"><span class="status-dot dot-high-risk"></span> High Risk: <strong id="statRisk">0</strong></div>
@@ -391,123 +398,189 @@
   </header>
 
   <main class="admin-main">
-    <!-- Sidebar -->
-    <section class="sidebar">
-      <div class="search-area">
-        <input type="search" class="search-input" id="searchBar" placeholder="대학 또는 학과 검색..." oninput="renderSidebarList()">
-      </div>
-      <div class="filter-tabs">
-        <button class="filter-btn active" onclick="setFilter('all')">All</button>
-        <button class="filter-btn" onclick="setFilter('verified')">Verified</button>
-        <button class="filter-btn" onclick="setFilter('needs_source_check')">Needs Review</button>
-        <button class="filter-btn" onclick="setFilter('high_risk')">High Risk</button>
-      </div>
-      <div class="program-list" id="programListContainer">
-        <!-- JS inserts program nodes here -->
-      </div>
-    </section>
+    <!-- View 1: Database Management (기존 사이드바 + 에디터) -->
+    <div id="dbView" style="display: flex; flex: 1; width: 100%; height: 100%;">
+      <!-- Sidebar -->
+      <section class="sidebar">
+        <div class="search-area">
+          <input type="search" class="search-input" id="searchBar" placeholder="대학 또는 학과 검색..." oninput="renderSidebarList()">
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" onclick="setFilter('all')">All</button>
+          <button class="filter-btn" onclick="setFilter('verified')">Verified</button>
+          <button class="filter-btn" onclick="setFilter('needs_source_check')">Needs Review</button>
+          <button class="filter-btn" onclick="setFilter('high_risk')">High Risk</button>
+        </div>
+        <div class="program-list" id="programListContainer">
+          <!-- JS inserts program nodes here -->
+        </div>
+      </section>
 
-    <!-- Editor Panel -->
-    <section class="editor-area">
-      <div id="placeholderPanel" class="placeholder-view">
-        <h2>편집할 전공을 왼쪽 목록에서 선택해 주세요.</h2>
-        <p>선택 시 데이터 무결성을 위한 자동 Linter 경고 분석 창과 상세 조건 폼이 로드됩니다.</p>
+      <!-- Editor Panel -->
+      <section class="editor-area">
+        <div id="placeholderPanel" class="placeholder-view">
+          <h2>편집할 전공을 왼쪽 목록에서 선택해 주세요.</h2>
+          <p>선택 시 데이터 무결성을 위한 자동 Linter 경고 분석 창과 상세 조건 폼이 로드됩니다.</p>
+        </div>
+        
+        <form id="editorForm" class="editor-body" style="display: none;" onsubmit="event.preventDefault()">
+          <!-- Warnings Banner -->
+          <div class="warning-panel" id="warningPanel">
+            <h4>⚠ 데이터 무결성 검증 경고 (Linter Warnings)</h4>
+            <ul class="warning-list" id="warningList">
+              <!-- JS inserts warning list item nodes here -->
+            </ul>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>대학 이름</label>
+              <input type="text" class="form-input" id="editSchoolName" readonly>
+            </div>
+            <div class="form-group">
+              <label>학과/전공명</label>
+              <input type="text" class="form-input" id="editMajorName" oninput="updateActiveProgram()">
+            </div>
+
+            <div class="form-group">
+              <label>신뢰도 수동 지정</label>
+              <select class="select-input" id="editConfidence" onchange="updateActiveProgram()">
+                <option value="verified">Verified (검증 완료)</option>
+                <option value="needs_source_check">Needs Review (확인 필요)</option>
+                <option value="high_risk">High Risk (검증 필요)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>공식 요강 URL</label>
+              <input type="text" class="form-input" id="editSourceUrl" oninput="updateActiveProgram()" placeholder="https://admissions...">
+            </div>
+
+            <div class="form-group">
+              <label>최소 GPA (정수/소수만)</label>
+              <input type="number" step="0.01" class="form-input" id="editMinGpa" oninput="updateActiveProgram()">
+            </div>
+            <div class="form-group">
+              <label>최소 GPA 원문 표현</label>
+              <input type="text" class="form-input" id="editRawMinGpa" oninput="updateActiveProgram()">
+            </div>
+
+            <div class="form-group">
+              <label>최소 이수 학점 (숫자만)</label>
+              <input type="number" class="form-input" id="editMinCredits" oninput="updateActiveProgram()">
+            </div>
+            <div class="form-group">
+              <label>최소 이수 학점 원문 표현</label>
+              <input type="text" class="form-input" id="editRawMinCredits" oninput="updateActiveProgram()">
+            </div>
+
+            <div class="form-group">
+              <label>TOEFL (60~120)</label>
+              <input type="number" class="form-input" id="editToefl" oninput="updateActiveProgram()">
+            </div>
+            <div class="form-group">
+              <label>TOEFL 2026 개정 (0~6)</label>
+              <input type="number" step="0.1" class="form-input" id="editToefl2026" oninput="updateActiveProgram()">
+            </div>
+
+            <div class="form-group">
+              <label>IELTS (0~9)</label>
+              <input type="number" step="0.5" class="form-input" id="editIelts" oninput="updateActiveProgram()">
+            </div>
+            <div class="form-group">
+              <label>Duolingo DET (80~160)</label>
+              <input type="number" class="form-input" id="editDuolingo" oninput="updateActiveProgram()">
+            </div>
+
+            <div class="form-group full-width">
+              <label>영어 성적 면제 / 대체 조항 원문</label>
+              <input type="text" class="form-input" id="editEnglishRaw" oninput="updateActiveProgram()">
+            </div>
+
+            <div class="form-group full-width">
+              <label>필수 과목 목록 (과목별 줄바꿈하여 기입)</label>
+              <textarea class="form-input" id="editRequiredCourses" oninput="updateActiveProgram()" placeholder="Calculus 1&#10;Calculus 2&#10;Physics 1"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label>권장 과목 목록 (과목별 줄바꿈하여 기입)</label>
+              <textarea class="form-input" id="editRecommendedCourses" oninput="updateActiveProgram()"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label>검증 상태 주석 & 공식 요약 필드 (note)</label>
+              <textarea class="form-input" id="editNote" oninput="updateActiveProgram()"></textarea>
+            </div>
+          </div>
+        </form>
+        <footer class="editor-footer" id="editorFooter" style="display: none;">
+          <span style="font-size: 13px; color: var(--muted);" id="saveStatus">편집 중인 상태 (저장 전)</span>
+          <button class="btn btn-primary" onclick="triggerFormSave()">저장 완료 승인</button>
+        </footer>
+      </section>
+    </div>
+
+    <!-- View 2: Statistics Dashboard Panel -->
+    <div id="statsView" style="display: none; flex: 1; flex-direction: column; overflow-y: auto; padding: 32px; background: var(--bg); gap: 28px; width: 100%;">
+      <div style="border-bottom: 1px solid var(--line); padding-bottom: 16px;">
+        <h2 style="font-size: 20px; font-weight: 800; color: var(--text-light); display: flex; align-items: center; gap: 8px;">
+          📊 실시간 서비스 트래픽 및 활동 통계
+        </h2>
+        <p style="font-size: 13px; color: var(--muted); margin-top: 4px;">방문자 국가, 구독 모델 분포, 일별 유입 로그 현황을 실시간으로 집계합니다.</p>
       </div>
       
-      <form id="editorForm" class="editor-body" style="display: none;" onsubmit="event.preventDefault()">
-        <!-- Warnings Banner -->
-        <div class="warning-panel" id="warningPanel">
-          <h4>⚠ 데이터 무결성 검증 경고 (Linter Warnings)</h4>
-          <ul class="warning-list" id="warningList">
-            <!-- JS inserts warning list item nodes here -->
-          </ul>
+      <!-- Indicator cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+        <div style="background: var(--panel-bg); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-soft);">
+          <span style="font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">누적 서비스 방문 수</span>
+          <strong id="statTotalVisits" style="font-size: 36px; color: var(--gold); font-weight: 900; margin-top: 4px;">0</strong>
+        </div>
+        <div style="background: var(--panel-bg); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-soft);">
+          <span style="font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">전체 회원가입 유저 수</span>
+          <strong id="statUsersCount" style="font-size: 36px; color: #10b981; font-weight: 900; margin-top: 4px;">0</strong>
+        </div>
+        <div style="background: var(--panel-bg); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-soft);">
+          <span style="font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">오늘 방문자 수</span>
+          <strong id="statTodayVisits" style="font-size: 36px; color: #38bdf8; font-weight: 900; margin-top: 4px;">0</strong>
+        </div>
+      </div>
+
+      <!-- Charts grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+        <!-- Nationality list bar chart -->
+        <div style="background: var(--panel-bg); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+          <h3 style="font-size: 15px; font-weight: 800; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px;">🌍 유저 국적별 접속 분포</h3>
+          <div id="statsNationalityList" style="display: flex; flex-direction: column; gap: 16px; margin-top: 8px;">
+            <!-- Rendered dynamically -->
+          </div>
         </div>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label>대학 이름</label>
-            <input type="text" class="form-input" id="editSchoolName" readonly>
-          </div>
-          <div class="form-group">
-            <label>학과/전공명</label>
-            <input type="text" class="form-input" id="editMajorName" oninput="updateActiveProgram()">
-          </div>
-
-          <div class="form-group">
-            <label>신뢰도 수동 지정</label>
-            <select class="select-input" id="editConfidence" onchange="updateActiveProgram()">
-              <option value="verified">Verified (검증 완료)</option>
-              <option value="needs_source_check">Needs Review (확인 필요)</option>
-              <option value="high_risk">High Risk (검증 필요)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>공식 요강 URL</label>
-            <input type="text" class="form-input" id="editSourceUrl" oninput="updateActiveProgram()" placeholder="https://admissions...">
-          </div>
-
-          <div class="form-group">
-            <label>최소 GPA (정수/소수만)</label>
-            <input type="number" step="0.01" class="form-input" id="editMinGpa" oninput="updateActiveProgram()">
-          </div>
-          <div class="form-group">
-            <label>최소 GPA 원문 표현</label>
-            <input type="text" class="form-input" id="editRawMinGpa" oninput="updateActiveProgram()">
-          </div>
-
-          <div class="form-group">
-            <label>최소 이수 학점 (숫자만)</label>
-            <input type="number" class="form-input" id="editMinCredits" oninput="updateActiveProgram()">
-          </div>
-          <div class="form-group">
-            <label>최소 이수 학점 원문 표현</label>
-            <input type="text" class="form-input" id="editRawMinCredits" oninput="updateActiveProgram()">
-          </div>
-
-          <div class="form-group">
-            <label>TOEFL (60~120)</label>
-            <input type="number" class="form-input" id="editToefl" oninput="updateActiveProgram()">
-          </div>
-          <div class="form-group">
-            <label>TOEFL 2026 개정 (0~6)</label>
-            <input type="number" step="0.1" class="form-input" id="editToefl2026" oninput="updateActiveProgram()">
-          </div>
-
-          <div class="form-group">
-            <label>IELTS (0~9)</label>
-            <input type="number" step="0.5" class="form-input" id="editIelts" oninput="updateActiveProgram()">
-          </div>
-          <div class="form-group">
-            <label>Duolingo DET (80~160)</label>
-            <input type="number" class="form-input" id="editDuolingo" oninput="updateActiveProgram()">
-          </div>
-
-          <div class="form-group full-width">
-            <label>영어 성적 면제 / 대체 조항 원문</label>
-            <input type="text" class="form-input" id="editEnglishRaw" oninput="updateActiveProgram()">
-          </div>
-
-          <div class="form-group full-width">
-            <label>필수 과목 목록 (과목별 줄바꿈하여 기입)</label>
-            <textarea class="form-input" id="editRequiredCourses" oninput="updateActiveProgram()" placeholder="Calculus 1&#10;Calculus 2&#10;Physics 1"></textarea>
-          </div>
-
-          <div class="form-group full-width">
-            <label>권장 과목 목록 (과목별 줄바꿈하여 기입)</label>
-            <textarea class="form-input" id="editRecommendedCourses" oninput="updateActiveProgram()"></textarea>
-          </div>
-
-          <div class="form-group full-width">
-            <label>검증 상태 주석 & 공식 요약 필드 (note)</label>
-            <textarea class="form-input" id="editNote" oninput="updateActiveProgram()"></textarea>
+        <!-- Subscription distribution list bar chart -->
+        <div style="background: var(--panel-bg); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+          <h3 style="font-size: 15px; font-weight: 800; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px;">💳 가입 모델별 분포 현황</h3>
+          <div id="statsPlanList" style="display: flex; flex-direction: column; gap: 16px; margin-top: 8px;">
+            <!-- Rendered dynamically -->
           </div>
         </div>
-      </form>
-      <footer class="editor-footer" id="editorFooter" style="display: none;">
-        <span style="font-size: 13px; color: var(--muted);" id="saveStatus">편집 중인 상태 (저장 전)</span>
-        <button class="btn btn-primary" onclick="triggerFormSave()">저장 완료 승인</button>
-      </footer>
-    </section>
+      </div>
+
+      <!-- Daily visits logger -->
+      <div style="background: var(--panel-bg); border: 1px solid var(--line); border-radius: 16px; padding: 24px;">
+        <h3 style="font-size: 15px; font-weight: 800; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 16px;">📅 일별 서비스 트래픽 로그</h3>
+        <div style="max-height: 250px; overflow-y: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--line); color: #94a3b8; font-weight: 800;">
+                <th style="padding: 12px 14px;">방문 날짜 (Date)</th>
+                <th style="padding: 12px 14px; text-align: right;">일별 접속 수 (Hits)</th>
+              </tr>
+            </thead>
+            <tbody id="statsDailyList">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- Scripts -->
@@ -683,6 +756,104 @@
       .catch(err => {
         alert('❌ 서버 연결 실패: 로컬 웹 서버가 중지되었거나 연동에 실패했습니다.');
       });
+    }
+
+    // Admin Tabs Switcher
+    function switchAdminTab(tab) {
+      const dbView = document.getElementById('dbView');
+      const statsView = document.getElementById('statsView');
+      const tabDbBtn = document.getElementById('tabDbBtn');
+      const tabStatsBtn = document.getElementById('tabStatsBtn');
+      const headerStatusSummary = document.getElementById('headerStatusSummary');
+
+      if (tab === 'stats') {
+        dbView.style.display = 'none';
+        statsView.style.display = 'flex';
+        headerStatusSummary.style.display = 'none';
+        
+        tabDbBtn.className = 'btn btn-secondary';
+        tabStatsBtn.className = 'btn btn-primary';
+        
+        loadAdminStats();
+      } else {
+        dbView.style.display = 'flex';
+        statsView.style.display = 'none';
+        headerStatusSummary.style.display = 'flex';
+        
+        tabDbBtn.className = 'btn btn-primary';
+        tabStatsBtn.className = 'btn btn-secondary';
+      }
+    }
+
+    function loadAdminStats() {
+      fetch('/api/admin-stats')
+        .then(res => res.json())
+        .then(data => {
+          // Update cards
+          document.getElementById('statTotalVisits').textContent = (data.totalVisits || 0).toLocaleString();
+          document.getElementById('statUsersCount').textContent = (data.usersCount || 0).toLocaleString();
+          
+          const today = new Date().toISOString().split('T')[0];
+          const todayVisits = data.dailyVisits && data.dailyVisits[today] ? data.dailyVisits[today] : 0;
+          document.getElementById('statTodayVisits').textContent = todayVisits.toLocaleString();
+
+          // Render Nationality Chart Bars
+          const natData = data.nationalityAccess || { "Korea": 0, "USA": 0, "China": 0, "Other": 0 };
+          const natTotal = Object.values(natData).reduce((a, b) => a + b, 0);
+          const natHtml = Object.entries(natData).map(([country, count]) => {
+            const pct = natTotal ? (count / natTotal) * 100 : 0;
+            return `
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; font-weight: 600;">
+                  <span>${country === 'Korea' ? '🇰🇷 대한민국 (Korea)' : country === 'USA' ? '🇺🇸 미국 (USA)' : country === 'China' ? '🇨🇳 중국 (China)' : '🏳 기타 (Other)'}</span>
+                  <strong style="color: var(--text-light);">${count.toLocaleString()}회 (${pct.toFixed(1)}%)</strong>
+                </div>
+                <div style="background: var(--line); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: linear-gradient(90deg, var(--gold) 0%, var(--accent) 100%); width: ${pct}%; height: 100%; border-radius: 4px;"></div>
+                </div>
+              </div>
+            `;
+          }).join('');
+          document.getElementById('statsNationalityList').innerHTML = natHtml;
+
+          // Render Subscription Plan Chart Bars
+          const planData = data.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
+          const planTotal = Object.values(planData).reduce((a, b) => a + b, 0);
+          const planHtml = Object.entries(planData).map(([plan, count]) => {
+            const pct = planTotal ? (count / planTotal) * 100 : 0;
+            let barColor = 'var(--gold)';
+            if (plan === 'Pro') barColor = '#10b981';
+            if (plan === 'Premium') barColor = '#38bdf8';
+            return `
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; font-weight: 600;">
+                  <span>${plan} Plan</span>
+                  <strong style="color: var(--text-light);">${count.toLocaleString()}명 (${pct.toFixed(1)}%)</strong>
+                </div>
+                <div style="background: var(--line); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: ${barColor}; width: ${pct}%; height: 100%; border-radius: 4px;"></div>
+                </div>
+              </div>
+            `;
+          }).join('');
+          document.getElementById('statsPlanList').innerHTML = planHtml;
+
+          // Render Daily Visits Log Table Rows
+          const dailyData = data.dailyVisits || {};
+          const dailySorted = Object.entries(dailyData).sort((a, b) => b[0].localeCompare(a[0])); // Descending order
+          const dailyHtml = dailySorted.length 
+            ? dailySorted.map(([date, hits]) => `
+                <tr style="border-bottom: 1px solid var(--line); color: #cbd5e1;">
+                  <td style="padding: 12px 14px; font-weight: 600;">${date}</td>
+                  <td style="padding: 12px 14px; text-align: right; font-weight: 700; color: #38bdf8;">${hits.toLocaleString()} Hits</td>
+                </tr>
+              `).join('')
+            : `<tr><td colspan="2" style="padding: 20px; text-align: center; color: var(--muted);">방문 기록이 아직 없습니다.</td></tr>`;
+          document.getElementById('statsDailyList').innerHTML = dailyHtml;
+        })
+        .catch(err => {
+          console.error("Failed to load admin telemetry stats:", err);
+        });
     }
 
     function exportDataJson() {

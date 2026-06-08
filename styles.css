@@ -2555,5 +2555,19 @@ textarea:focus {
     max-height: 220px !important;
     z-index: 999 !important;
   }
+  
+  .tab-panel-image {
+    max-height: 140px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  .feedback-image {
+    max-height: 180px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
 }
 
