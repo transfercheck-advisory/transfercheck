@@ -3481,6 +3481,15 @@ function bindEssay() {
 
       state.essayCredits = Math.max(0, state.essayCredits - 1);
       localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+      
+      // Sync remaining credits back to authenticated user profile to prevent session desync
+      const authStateForSync = readAuthState();
+      const currentUserForSync = authStateForSync.currentUser || "";
+      if (currentUserForSync && authStateForSync.users[currentUserForSync]) {
+        authStateForSync.users[currentUserForSync].essayCredits = state.essayCredits;
+        writeAuthState(authStateForSync);
+      }
+      
       updateEssayCreditsUI();
 
       // Render style guide header if provided

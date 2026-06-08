@@ -31,8 +31,8 @@ window.transferDatabase = {
       "sheet": "Transfer Requirements"
     }
   ],
-  "schoolCount": 30,
-  "programCount": 349,
+  "schoolCount": 50,
+  "programCount": 402,
   "schools": [
     {
       "id": "university-of-washington-2fde0bf4",
@@ -12984,6 +12984,1555 @@ window.transferDatabase = {
           "englishExemption": "Exempt if completed one academic year of full-time study in a degree-seeking program at a recognized U.S. institution or English-speaking country.",
           "note": "Verified: Critical tracking guidelines, credit requirements, and English proficiency rules confirmed against the official UF Undergraduate Catalog and CISE/ECE/MAe department transfer admissions policies (https://catalog.ufl.edu/UGRD/admissions/transfer-admissions/).",
           "sourceFile": "Db 7-transfercheck final.xlsx",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "carnegie-mellon-university-3ce86f57",
+      "name": "Carnegie Mellon University",
+      "shortName": "Carnegie Mellon University",
+      "majors": [
+        {
+          "id": "carnegie-mellon-university-mechanical-engineering-5c8efe69",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.5 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.5,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus (equivalent to CMU 21-120)",
+            "Physics I (equivalent to CMU 33-141, 33-151, or 33-121)",
+            "Introduction to Mechanical Engineering (equivalent to CMU 24-101)",
+            "Relevant science co-requisite"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus (equivalent to CMU 21-120)\nPhysics I (equivalent to CMU 33-141, 33-151, or 33-121)\nIntroduction to Mechanical Engineering (equivalent to CMU 24-101)\nRelevant science co-requisite",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 102,
+            "IELTS": 7.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waiver considered if applicant holds a previous degree from an institution in the United States or holds citizenship from the United Kingdom or Canada.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.cmu.edu/admission/academics/transfer-applicants",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "carnegie-mellon-university-electrical-and-computer-engineering-92fd0be5",
+          "name": "Electrical and Computer Engineering",
+          "rawMinGpa": "3.5 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.5,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus (equivalent to CMU 21-120)",
+            "Physics I (equivalent to CMU 33-141, 33-151, or 33-121)",
+            "Introduction to Electrical and Computer Engineering (equivalent to CMU 18-100)",
+            "Relevant science co-requisite"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus (equivalent to CMU 21-120)\nPhysics I (equivalent to CMU 33-141, 33-151, or 33-121)\nIntroduction to Electrical and Computer Engineering (equivalent to CMU 18-100)\nRelevant science co-requisite",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 102,
+            "IELTS": 7.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waiver considered if applicant holds a previous degree from an institution in the United States or holds citizenship from the United Kingdom or Canada.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.cmu.edu/admission/academics/transfer-applicants",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "carnegie-mellon-university-computer-science-9d4434a6",
+          "name": "Computer Science",
+          "rawMinGpa": "Not specified",
+          "rawMinCredits": "Not specified",
+          "minGpa": null,
+          "minCredits": null,
+          "requiredCourses": [],
+          "recommendedCourses": [],
+          "rawRequired": "",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 102,
+            "IELTS": 7.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waiver considered if applicant holds a previous degree from an institution in the United States or holds citizenship from the United Kingdom or Canada.",
+          "note": "Verified: CMU's School of Computer Science (SCS) does not accept external transfer applicants; undergraduate transfers are only accepted into other colleges. (Source: https://www.cmu.edu/admission/academics/transfer-applicants)",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "johns-hopkins-university-6f689cc1",
+      "name": "Johns Hopkins University",
+      "shortName": "Johns Hopkins University",
+      "majors": [
+        {
+          "id": "johns-hopkins-university-computer-science-e3cc9a23",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus (recommended)",
+            "Physics (recommended)",
+            "Chemistry (recommended)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus (recommended)\nPhysics (recommended)\nChemistry (recommended)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Recommended but not required if English is primary language, or student has attended an English-medium school for the last 3 years, or scored 690+ on SAT ERW / 30+ on ACT Reading & English.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://apply.jhu.edu/apply/transfer-applicants/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "johns-hopkins-university-mechanical-engineering-e4939ed0",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus (recommended)",
+            "Physics (recommended)",
+            "Chemistry (recommended)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus (recommended)\nPhysics (recommended)\nChemistry (recommended)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Recommended but not required if English is primary language, or student has attended an English-medium school for the last 3 years, or scored 690+ on SAT ERW / 30+ on ACT Reading & English.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://apply.jhu.edu/apply/transfer-applicants/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "johns-hopkins-university-electrical-engineering-7162b8ec",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus (recommended)",
+            "Physics (recommended)",
+            "Chemistry (recommended)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus (recommended)\nPhysics (recommended)\nChemistry (recommended)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Recommended but not required if English is primary language, or student has attended an English-medium school for the last 3 years, or scored 690+ on SAT ERW / 30+ on ACT Reading & English.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://apply.jhu.edu/apply/transfer-applicants/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "california-institute-of-technology-80ddec2a",
+      "name": "California Institute of Technology",
+      "shortName": "California Institute of Technology",
+      "majors": [
+        {
+          "id": "california-institute-of-technology-computer-science-a25020a7",
+          "name": "Computer Science",
+          "rawMinGpa": "Not specified",
+          "rawMinCredits": "1 credits",
+          "minGpa": null,
+          "minCredits": 1,
+          "requiredCourses": [
+            "Calculus of One and Several Variables",
+            "Linear Algebra",
+            "Classical Mechanics",
+            "Electromagnetism and Statistical Physics",
+            "Special Relativity"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus of One and Several Variables\nLinear Algebra\nClassical Mechanics\nElectromagnetism and Statistical Physics\nSpecial Relativity",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Required unless native language is English, or English was the primary language of instruction in secondary school.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.caltech.edu/apply/transfer-applicants",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "california-institute-of-technology-mechanical-engineering-90cded64",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "Not specified",
+          "rawMinCredits": "1 credits",
+          "minGpa": null,
+          "minCredits": 1,
+          "requiredCourses": [
+            "Calculus of One and Several Variables",
+            "Linear Algebra",
+            "Classical Mechanics",
+            "Electromagnetism and Statistical Physics",
+            "Special Relativity"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus of One and Several Variables\nLinear Algebra\nClassical Mechanics\nElectromagnetism and Statistical Physics\nSpecial Relativity",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Required unless native language is English, or English was the primary language of instruction in secondary school.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.caltech.edu/apply/transfer-applicants",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "california-institute-of-technology-electrical-engineering-8c6cff7d",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "Not specified",
+          "rawMinCredits": "1 credits",
+          "minGpa": null,
+          "minCredits": 1,
+          "requiredCourses": [
+            "Calculus of One and Several Variables",
+            "Linear Algebra",
+            "Classical Mechanics",
+            "Electromagnetism and Statistical Physics",
+            "Special Relativity"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus of One and Several Variables\nLinear Algebra\nClassical Mechanics\nElectromagnetism and Statistical Physics\nSpecial Relativity",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Required unless native language is English, or English was the primary language of instruction in secondary school.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.caltech.edu/apply/transfer-applicants",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "duke-university-296f426b",
+      "name": "Duke University",
+      "shortName": "Duke University",
+      "majors": [
+        {
+          "id": "duke-university-computer-science-1d8a9571",
+          "name": "Computer Science",
+          "rawMinGpa": "3.7 minimum",
+          "rawMinCredits": "30 credits",
+          "minGpa": 3.7,
+          "minCredits": 30,
+          "requiredCourses": [],
+          "recommendedCourses": [],
+          "rawRequired": "",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "Recommended but not required if student's native language is English or currently studying in an English-medium curriculum.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.duke.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "duke-university-mechanical-engineering-43ef60ee",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.7 minimum",
+          "rawMinCredits": "30 credits",
+          "minGpa": 3.7,
+          "minCredits": 30,
+          "requiredCourses": [
+            "Calculus",
+            "Physics (strongly recommended)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus\nPhysics (strongly recommended)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "Recommended but not required if student's native language is English or currently studying in an English-medium curriculum.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.duke.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "duke-university-electrical-and-computer-engineering-1ac68e89",
+          "name": "Electrical and Computer Engineering",
+          "rawMinGpa": "3.7 minimum",
+          "rawMinCredits": "30 credits",
+          "minGpa": 3.7,
+          "minCredits": 30,
+          "requiredCourses": [
+            "Calculus",
+            "Physics (strongly recommended)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus\nPhysics (strongly recommended)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "Recommended but not required if student's native language is English or currently studying in an English-medium curriculum.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.duke.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "rice-university-b1fd17d1",
+      "name": "Rice University",
+      "shortName": "Rice University",
+      "majors": [
+        {
+          "id": "rice-university-computer-science-0422955e",
+          "name": "Computer Science",
+          "rawMinGpa": "3.2 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.2,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Trigonometry or Precalculus",
+            "Chemistry",
+            "Physics (or a second year of chemistry or biology)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Trigonometry or Precalculus\nChemistry\nPhysics (or a second year of chemistry or biology)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "Waiver granted if applicant completed at least two years of full-time study in an English-language curriculum prior to submitting an application.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admission.rice.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "rice-university-mechanical-engineering-b6859e06",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.2 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.2,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Trigonometry or Precalculus",
+            "Chemistry",
+            "Physics (or a second year of chemistry or biology)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Trigonometry or Precalculus\nChemistry\nPhysics (or a second year of chemistry or biology)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "Waiver granted if applicant completed at least two years of full-time study in an English-language curriculum prior to submitting an application.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admission.rice.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "rice-university-electrical-engineering-7805b795",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3.2 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.2,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Trigonometry or Precalculus",
+            "Chemistry",
+            "Physics (or a second year of chemistry or biology)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Trigonometry or Precalculus\nChemistry\nPhysics (or a second year of chemistry or biology)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "Waiver granted if applicant completed at least two years of full-time study in an English-language curriculum prior to submitting an application.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admission.rice.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "stevens-institute-of-technology-81d6689e",
+      "name": "Stevens Institute of Technology",
+      "shortName": "Stevens Institute of Technology",
+      "majors": [
+        {
+          "id": "stevens-institute-of-technology-computer-science-28f85da2",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus I",
+            "Calculus II",
+            "Introductory Computer Programming",
+            "English Composition"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I\nCalculus II\nIntroductory Computer Programming\nEnglish Composition",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6,
+            "Duolingo": 105
+          },
+          "englishExemption": "English proficiency waivers may be granted on a case-by-case basis for international students who have studied in the U.S. for at least three years.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.stevens.edu/admission-aid/undergraduate-admissions/transfer-students",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "stevens-institute-of-technology-mechanical-engineering-84efda5b",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus I",
+            "Calculus II",
+            "Calculus-based Physics I with Lab",
+            "General Chemistry with Lab",
+            "English Composition"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I\nCalculus II\nCalculus-based Physics I with Lab\nGeneral Chemistry with Lab\nEnglish Composition",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6,
+            "Duolingo": 105
+          },
+          "englishExemption": "English proficiency waivers may be granted on a case-by-case basis for international students who have studied in the U.S. for at least three years.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.stevens.edu/admission-aid/undergraduate-admissions/transfer-students",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "stevens-institute-of-technology-electrical-engineering-4de89bc3",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus I",
+            "Calculus II",
+            "Calculus-based Physics I with Lab",
+            "General Chemistry with Lab",
+            "English Composition"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I\nCalculus II\nCalculus-based Physics I with Lab\nGeneral Chemistry with Lab\nEnglish Composition",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6,
+            "Duolingo": 105
+          },
+          "englishExemption": "English proficiency waivers may be granted on a case-by-case basis for international students who have studied in the U.S. for at least three years.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.stevens.edu/admission-aid/undergraduate-admissions/transfer-students",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "worcester-polytechnic-institute-169dc5bf",
+      "name": "Worcester Polytechnic Institute",
+      "shortName": "Worcester Polytechnic Institute",
+      "majors": [
+        {
+          "id": "worcester-polytechnic-institute-computer-science-c8789126",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "Not specified",
+          "minGpa": 3,
+          "minCredits": 0,
+          "requiredCourses": [
+            "Calculus I",
+            "Calculus II",
+            "Recommended: Introductory Computer Programming"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I\nCalculus II\nRecommended: Introductory Computer Programming",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 90,
+            "IELTS": 7,
+            "Duolingo": 125
+          },
+          "englishExemption": "Waived if previous college coursework was conducted in English, or if applicant is a citizen of an English-speaking country who attended an English-speaking high school for four years.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.wpi.edu/admissions/undergraduate/apply/transfer-students",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "worcester-polytechnic-institute-mechanical-engineering-3cdc9dc4",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "Not specified",
+          "minGpa": 3,
+          "minCredits": 0,
+          "requiredCourses": [
+            "Calculus I",
+            "Calculus II",
+            "Calculus-based Physics (Mechanics)",
+            "General Chemistry I"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I\nCalculus II\nCalculus-based Physics (Mechanics)\nGeneral Chemistry I",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 90,
+            "IELTS": 7,
+            "Duolingo": 125
+          },
+          "englishExemption": "Waived if previous college coursework was conducted in English, or if applicant is a citizen of an English-speaking country who attended an English-speaking high school for four years.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.wpi.edu/admissions/undergraduate/apply/transfer-students",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "worcester-polytechnic-institute-electrical-engineering-e7c74e26",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "Not specified",
+          "minGpa": 3,
+          "minCredits": 0,
+          "requiredCourses": [
+            "Calculus I",
+            "Calculus II",
+            "Calculus-based Physics (Mechanics)",
+            "General Chemistry I"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I\nCalculus II\nCalculus-based Physics (Mechanics)\nGeneral Chemistry I",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 90,
+            "IELTS": 7,
+            "Duolingo": 125
+          },
+          "englishExemption": "Waived if previous college coursework was conducted in English, or if applicant is a citizen of an English-speaking country who attended an English-speaking high school for four years.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.wpi.edu/admissions/undergraduate/apply/transfer-students",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "rensselaer-polytechnic-institute-837c9cb0",
+      "name": "Rensselaer Polytechnic Institute",
+      "shortName": "Rensselaer Polytechnic Institute",
+      "majors": [
+        {
+          "id": "rensselaer-polytechnic-institute-computer-science-8133d3cb",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Pre-Calculus (minimum)",
+            "Recommended: Calculus I",
+            "Recommended: Calculus II",
+            "Recommended: Introductory Computer Programming"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Pre-Calculus (minimum)\nRecommended: Calculus I\nRecommended: Calculus II\nRecommended: Introductory Computer Programming",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 88,
+            "IELTS": 7,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waived if completed 24+ semester credits at a U.S. college/university (excluding ESL), OR completed College Composition I and II with a grade of B or better at a U.S. college.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.rpi.edu/undergraduate/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "rensselaer-polytechnic-institute-mechanical-engineering-6568face",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Pre-Calculus (minimum)",
+            "Recommended: Calculus I",
+            "Recommended: Calculus II",
+            "Recommended: Calculus-based Physics",
+            "Recommended: Chemistry"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Pre-Calculus (minimum)\nRecommended: Calculus I\nRecommended: Calculus II\nRecommended: Calculus-based Physics\nRecommended: Chemistry",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 88,
+            "IELTS": 7,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waived if completed 24+ semester credits at a U.S. college/university (excluding ESL), OR completed College Composition I and II with a grade of B or better at a U.S. college.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.rpi.edu/undergraduate/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "rensselaer-polytechnic-institute-electrical-engineering-2c580f90",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Pre-Calculus (minimum)",
+            "Recommended: Calculus I",
+            "Recommended: Calculus II",
+            "Recommended: Calculus-based Physics",
+            "Recommended: Chemistry"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Pre-Calculus (minimum)\nRecommended: Calculus I\nRecommended: Calculus II\nRecommended: Calculus-based Physics\nRecommended: Chemistry",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 88,
+            "IELTS": 7,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waived if completed 24+ semester credits at a U.S. college/university (excluding ESL), OR completed College Composition I and II with a grade of B or better at a U.S. college.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.rpi.edu/undergraduate/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "michigan-state-university-f9a5c361",
+      "name": "Michigan State University",
+      "shortName": "Michigan State University",
+      "majors": [
+        {
+          "id": "michigan-state-university-computer-science-cf215435",
+          "name": "Computer Science",
+          "rawMinGpa": "3.4 minimum",
+          "rawMinCredits": "28 credits",
+          "minGpa": 3.4,
+          "minCredits": 28,
+          "requiredCourses": [
+            "CSE 231 (Introduction to Programming I or equivalent)",
+            "MTH 132 (Calculus I)",
+            "MTH 133 (Calculus II)",
+            "WRA 101 (Writing as Inquiry)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CSE 231 (Introduction to Programming I or equivalent)\nMTH 132 (Calculus I)\nMTH 133 (Calculus II)\nWRA 101 (Writing as Inquiry)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 110
+          },
+          "englishExemption": "Waived if completed 3 consecutive years of full-time U.S. high school with a 3.0+ GPA and no ELL classes, OR completed at least 1 full year (28 credits) at a U.S. college with a 3.0+ GPA and a grade of 3.0 (B) or higher in English composition.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.msu.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "michigan-state-university-mechanical-engineering-90f80f4c",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.6 minimum",
+          "rawMinCredits": "28 credits",
+          "minGpa": 3.6,
+          "minCredits": 28,
+          "requiredCourses": [
+            "CSE 231 (Introduction to Programming I or equivalent)",
+            "MTH 132 (Calculus I)",
+            "MTH 133 (Calculus II)",
+            "MTH 234 (Multivariable Calculus)",
+            "CEM 141 (General Chemistry)",
+            "PHY 183 (Physics I)",
+            "PHY 184 (Physics II)",
+            "WRA 101"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CSE 231 (Introduction to Programming I or equivalent)\nMTH 132 (Calculus I)\nMTH 133 (Calculus II)\nMTH 234 (Multivariable Calculus)\nCEM 141 (General Chemistry)\nPHY 183 (Physics I)\nPHY 184 (Physics II)\nWRA 101",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 110
+          },
+          "englishExemption": "Waived if completed 3 consecutive years of full-time U.S. high school with a 3.0+ GPA and no ELL classes, OR completed at least 1 full year (28 credits) at a U.S. college with a 3.0+ GPA and a grade of 3.0 (B) or higher in English composition.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.msu.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "michigan-state-university-electrical-engineering-7d866844",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3.2 minimum",
+          "rawMinCredits": "28 credits",
+          "minGpa": 3.2,
+          "minCredits": 28,
+          "requiredCourses": [
+            "CSE 220 (or equivalent)",
+            "MTH 132 (Calculus I)",
+            "MTH 133 (Calculus II)",
+            "MTH 234 (Multivariable Calculus)",
+            "CEM 141 (General Chemistry)",
+            "PHY 183 (Physics I)",
+            "PHY 184 (Physics II)",
+            "WRA 101"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CSE 220 (or equivalent)\nMTH 132 (Calculus I)\nMTH 133 (Calculus II)\nMTH 234 (Multivariable Calculus)\nCEM 141 (General Chemistry)\nPHY 183 (Physics I)\nPHY 184 (Physics II)\nWRA 101",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 110
+          },
+          "englishExemption": "Waived if completed 3 consecutive years of full-time U.S. high school with a 3.0+ GPA and no ELL classes, OR completed at least 1 full year (28 credits) at a U.S. college with a 3.0+ GPA and a grade of 3.0 (B) or higher in English composition.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.msu.edu/apply/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "boston-college-76a3e937",
+      "name": "Boston College",
+      "shortName": "Boston College",
+      "majors": [
+        {
+          "id": "boston-college-computer-science-5ef7a2ab",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "9 credits",
+          "minGpa": 3,
+          "minCredits": 9,
+          "requiredCourses": [
+            "Intermediate Foreign Language proficiency",
+            "Recommended: Core Liberal Arts courses (English, History, Science)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Intermediate Foreign Language proficiency\nRecommended: Core Liberal Arts courses (English, History, Science)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7.5,
+            "Duolingo": 130
+          },
+          "englishExemption": "Waived if native English speaker, OR attended a U.S. high school for at least three years with a traditional academic curriculum and no ESOL, OR scored 650+ on SAT EBRW or 29+ on ACT English.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.bc.edu/admission/undergraduate/apply/transfer.html. Note: BC's Human-Centered Engineering program does not accept transfer students.",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "university-of-rochester-87b71d5f",
+      "name": "University of Rochester",
+      "shortName": "University of Rochester",
+      "majors": [
+        {
+          "id": "university-of-rochester-computer-science-5e59490e",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "8 credits",
+          "minGpa": 3,
+          "minCredits": 8,
+          "requiredCourses": [
+            "CSC 171 (Introduction to Computer Science)",
+            "CSC 172 (Data Structures and Algorithms)",
+            "MATH 150 (Discrete Mathematics)",
+            "Calculus sequence (MATH 141-142 or MATH 161-162)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CSC 171 (Introduction to Computer Science)\nCSC 172 (Data Structures and Algorithms)\nMATH 150 (Discrete Mathematics)\nCalculus sequence (MATH 141-142 or MATH 161-162)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Applicants can submit an English Proficiency Waiver Request Form after applying. It is typically granted if previous education was conducted entirely in English.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.cs.rochester.edu/undergraduate/ and https://enrollment.rochester.edu/international/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "university-of-rochester-mechanical-engineering-7c8ae54a",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "8 credits",
+          "minGpa": 3,
+          "minCredits": 8,
+          "requiredCourses": [
+            "MATH 161 (Calculus IA)",
+            "MATH 162 (Calculus IIA)",
+            "PHYS 121 (Mechanics)",
+            "PHYS 122 (Electricity and Magnetism)",
+            "CHEM 131 (Chemical Concepts, Systems and Practices I)",
+            "ME 120 (Engineering Mechanics I)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 161 (Calculus IA)\nMATH 162 (Calculus IIA)\nPHYS 121 (Mechanics)\nPHYS 122 (Electricity and Magnetism)\nCHEM 131 (Chemical Concepts, Systems and Practices I)\nME 120 (Engineering Mechanics I)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Applicants can submit an English Proficiency Waiver Request Form after applying. It is typically granted if previous education was conducted entirely in English.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.me.rochester.edu/ and https://enrollment.rochester.edu/international/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "university-of-maryland-college-park-umd-6f986a9a",
+      "name": "University of Maryland, College Park (UMD)",
+      "shortName": "University of Maryland, College Park (UMD)",
+      "majors": [
+        {
+          "id": "university-of-maryland-college-park-umd-mechanical-engineering-ed3011fc",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "MATH 141 (Calculus II) with B- or better",
+            "PHYS 161 (General Physics I - Mechanics) with B- or better",
+            "CHEM 135 (General Chemistry for Engineers) with C- or better",
+            "ENGL 101 (Academic Writing)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 141 (Calculus II) with B- or better\nPHYS 161 (General Physics I - Mechanics) with B- or better\nCHEM 135 (General Chemistry for Engineers) with C- or better\nENGL 101 (Academic Writing)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 96,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waived if applicant completed four years of study at a U.S. high school or U.S.-accredited high school without ESL/ESOL courses, or earned a degree from an English-medium institution.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://lep.umd.edu/engineering.html",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "university-of-maryland-college-park-umd-computer-science-a2ca3a40",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "CMSC 131 (Object-Oriented Programming I) with B- or better",
+            "CMSC 132 (Object-Oriented Programming II) with B- or better",
+            "MATH 140 (Calculus I) with B- or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CMSC 131 (Object-Oriented Programming I) with B- or better\nCMSC 132 (Object-Oriented Programming II) with B- or better\nMATH 140 (Calculus I) with B- or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 96,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waived if applicant completed four years of study at a U.S. high school or U.S.-accredited high school without ESL/ESOL courses, or earned a degree from an English-medium institution.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://lep.umd.edu/ and UMD computer science transfer gateway guidelines.",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "university-of-minnesota-twin-cities-0222c69b",
+      "name": "University of Minnesota, Twin Cities",
+      "shortName": "University of Minnesota, Twin Cities",
+      "majors": [
+        {
+          "id": "university-of-minnesota-twin-cities-computer-science-3609952d",
+          "name": "Computer Science",
+          "rawMinGpa": "3.2 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3.2,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus I (MATH 1371 or MATH 1271) with C- or better",
+            "Calculus II (MATH 1372 or MATH 1272) with C- or better",
+            "CSCI 1133 (Introduction to Computing and Programming Concepts) or equivalent CS I sequence with C- or better",
+            "CSCI 1933 (Introduction to Algorithms and Data Structures) or equivalent CS II sequence with C- or better",
+            "CSCI 2011 (Discrete Structures of Computer Science) with C- or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (MATH 1371 or MATH 1271) with C- or better\nCalculus II (MATH 1372 or MATH 1272) with C- or better\nCSCI 1133 (Introduction to Computing and Programming Concepts) or equivalent CS I sequence with C- or better\nCSCI 1933 (Introduction to Algorithms and Data Structures) or equivalent CS II sequence with C- or better\nCSCI 2011 (Discrete Structures of Computer Science) with C- or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 110
+          },
+          "englishExemption": "Automatically waived if completed 26+ transferable semester credits AND the equivalent of UMN's first-year English writing course with a grade of C or better, OR completed 60+ transferable semester credits.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.tc.umn.edu/transfer-requirements-college-science-and-engineering",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "university-of-minnesota-twin-cities-mechanical-engineering-c301e3ee",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.2 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3.2,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus I (MATH 1371 or MATH 1271) with C- or better",
+            "Calculus II (MATH 1372 or MATH 1272) with C- or better",
+            "Calculus-based Physics I (PHYS 1301W) with C- or better",
+            "Calculus-based Physics II (PHYS 1302W) with C- or better",
+            "General Chemistry I (CHEM 1061 & CHEM 1065) with C- or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (MATH 1371 or MATH 1271) with C- or better\nCalculus II (MATH 1372 or MATH 1272) with C- or better\nCalculus-based Physics I (PHYS 1301W) with C- or better\nCalculus-based Physics II (PHYS 1302W) with C- or better\nGeneral Chemistry I (CHEM 1061 & CHEM 1065) with C- or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 110
+          },
+          "englishExemption": "Automatically waived if completed 26+ transferable semester credits AND the equivalent of UMN's first-year English writing course with a grade of C or better, OR completed 60+ transferable semester credits.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.tc.umn.edu/transfer-requirements-college-science-and-engineering",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "rutgers-university-fb5dfe1c",
+      "name": "Rutgers University",
+      "shortName": "Rutgers University",
+      "majors": [
+        {
+          "id": "rutgers-university-computer-science-78589e80",
+          "name": "Computer Science",
+          "rawMinGpa": "2.75 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 2.75,
+          "minCredits": 12,
+          "requiredCourses": [
+            "CS 111 (Introduction to Computer Science) with C or better",
+            "CS 112 (Data Structures) with C or better",
+            "CS 205 (Introduction to Discrete Structures I) with C or better",
+            "MATH 151 (Calculus I for Physical Science Majors) with C or better",
+            "MATH 152 (Calculus II for Physical Science Majors) with C or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CS 111 (Introduction to Computer Science) with C or better\nCS 112 (Data Structures) with C or better\nCS 205 (Introduction to Discrete Structures I) with C or better\nMATH 151 (Calculus I for Physical Science Majors) with C or better\nMATH 152 (Calculus II for Physical Science Majors) with C or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 105
+          },
+          "englishExemption": "Waived on a case-by-case basis. Commonly waived if studied entirely in English-speaking countries, or earned a grade of B or better in a college-level English Composition course at an accredited U.S. college.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.newbrunswick.rutgers.edu/ and CS major declaration page.",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "rutgers-university-mechanical-engineering-6b755fd0",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "2.75 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 2.75,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus I (MATH 151) with C or better",
+            "Calculus II (MATH 152) with C or better",
+            "Calculus-based Physics I (PHYS 203 or equivalent) with C or better",
+            "Chemistry I (CHEM 159 or equivalent) with C or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (MATH 151) with C or better\nCalculus II (MATH 152) with C or better\nCalculus-based Physics I (PHYS 203 or equivalent) with C or better\nChemistry I (CHEM 159 or equivalent) with C or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 105
+          },
+          "englishExemption": "Waived on a case-by-case basis. Commonly waived if studied entirely in English-speaking countries, or earned a grade of B or better in a college-level English Composition course at an accredited U.S. college.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.newbrunswick.rutgers.edu/ and Rutgers School of Engineering transfer page.",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "university-of-colorado-boulder-c326b5a0",
+      "name": "University of Colorado Boulder",
+      "shortName": "University of Colorado Boulder",
+      "majors": [
+        {
+          "id": "university-of-colorado-boulder-computer-science-2cb03109",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus 1 (MATH 1300) with B or better",
+            "Calculus 2 (MATH 2300) with B or better",
+            "Calculus-based Physics I (PHYS 1110) or College Chemistry I (CHEM 1113/1114) with B or better",
+            "Introduction to Programming course (e.g. CSCI 1300) with B or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus 1 (MATH 1300) with B or better\nCalculus 2 (MATH 2300) with B or better\nCalculus-based Physics I (PHYS 1110) or College Chemistry I (CHEM 1113/1114) with B or better\nIntroduction to Programming course (e.g. CSCI 1300) with B or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waived if completed two years of full-time academic study at a secondary school or college in a qualifying English-speaking country, or graduated from a U.S. high school.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.colorado.edu/engineering/admissions/undergraduate/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "university-of-colorado-boulder-mechanical-engineering-7533dd35",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "Calculus 1 (MATH 1300) with B or better",
+            "Calculus 2 (MATH 2300) with B or better",
+            "Calculus-based Physics I (PHYS 1110) or College Chemistry I (CHEM 1113/1114) or Intro to Programming (CSCI 1300) with B or better"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus 1 (MATH 1300) with B or better\nCalculus 2 (MATH 2300) with B or better\nCalculus-based Physics I (PHYS 1110) or College Chemistry I (CHEM 1113/1114) or Intro to Programming (CSCI 1300) with B or better",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waived if completed two years of full-time academic study at a secondary school or college in a qualifying English-speaking country, or graduated from a U.S. high school.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.colorado.edu/engineering/admissions/undergraduate/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "usc-university-of-southern-california-608be272",
+      "name": "USC (University of Southern California)",
+      "shortName": "USC (University of Southern California)",
+      "majors": [
+        {
+          "id": "usc-university-of-southern-california-computer-science-f813e5db",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "30 credits",
+          "minGpa": 3,
+          "minCredits": 30,
+          "requiredCourses": [
+            "MATH 125 (Calculus I)",
+            "MATH 126 (Calculus II)",
+            "MATH 225 (Linear Algebra) or MATH 226 (Calculus III)",
+            "WRIT 130 or WRIT 150 (English Composition / Writing)",
+            "CSCI 102 (C++ Programming) or two semesters of lab-based science (Calculus-based Physics/Chemistry)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 125 (Calculus I)\nMATH 126 (Calculus II)\nMATH 225 (Linear Algebra) or MATH 226 (Calculus III)\nWRIT 130 or WRIT 150 (English Composition / Writing)\nCSCI 102 (C++ Programming) or two semesters of lab-based science (Calculus-based Physics/Chemistry)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "No waivers or exemptions for non-native English speakers, even with college-level English coursework in the US. Only native English speakers or students who hold a completed master's or doctoral degree from an English-speaking country are exempt.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://viterbiadmission.usc.edu/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "usc-university-of-southern-california-mechanical-engineering-21427373",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "30 credits",
+          "minGpa": 3,
+          "minCredits": 30,
+          "requiredCourses": [
+            "MATH 125 (Calculus I)",
+            "MATH 126 (Calculus II)",
+            "MATH 226 (Calculus III)",
+            "MATH 225 (Linear Algebra)",
+            "PHYS 151L (General Physics I: Mechanics)",
+            "PHYS 152L (General Physics II: Electricity & Magnetism)",
+            "CHEM 105aL (General Chemistry I)",
+            "WRIT 130 or WRIT 150 (English Composition / Writing)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 125 (Calculus I)\nMATH 126 (Calculus II)\nMATH 226 (Calculus III)\nMATH 225 (Linear Algebra)\nPHYS 151L (General Physics I: Mechanics)\nPHYS 152L (General Physics II: Electricity & Magnetism)\nCHEM 105aL (General Chemistry I)\nWRIT 130 or WRIT 150 (English Composition / Writing)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "No waivers or exemptions for non-native English speakers, even with college-level English coursework in the US. Only native English speakers or students who hold a completed master's or doctoral degree from an English-speaking country are exempt.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://viterbiadmission.usc.edu/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "usc-university-of-southern-california-electrical-engineering-9bf71e85",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "30 credits",
+          "minGpa": 3,
+          "minCredits": 30,
+          "requiredCourses": [
+            "MATH 125 (Calculus I)",
+            "MATH 126 (Calculus II)",
+            "MATH 226 (Calculus III)",
+            "MATH 225 (Linear Algebra)",
+            "PHYS 151L (General Physics I: Mechanics)",
+            "PHYS 152L (General Physics II: Electricity & Magnetism)",
+            "CHEM 105aL (General Chemistry I) or equivalent lab science",
+            "WRIT 130 or WRIT 150 (English Composition / Writing)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 125 (Calculus I)\nMATH 126 (Calculus II)\nMATH 226 (Calculus III)\nMATH 225 (Linear Algebra)\nPHYS 151L (General Physics I: Mechanics)\nPHYS 152L (General Physics II: Electricity & Magnetism)\nCHEM 105aL (General Chemistry I) or equivalent lab science\nWRIT 130 or WRIT 150 (English Composition / Writing)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 100,
+            "IELTS": 7,
+            "Duolingo": 130
+          },
+          "englishExemption": "No waivers or exemptions for non-native English speakers, even with college-level English coursework in the US. Only native English speakers or students who hold a completed master's or doctoral degree from an English-speaking country are exempt.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://viterbiadmission.usc.edu/transfer",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "northeastern-university-56c02dd8",
+      "name": "Northeastern University",
+      "shortName": "Northeastern University",
+      "majors": [
+        {
+          "id": "northeastern-university-computer-science-617f9d58",
+          "name": "Computer Science",
+          "rawMinGpa": "3.3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus I (MATH 1341 equivalent)",
+            "College Writing (ENGW 1111 equivalent)",
+            "Natural Science with Lab",
+            "Discrete Structures (highly recommended for 2nd or 3rd year standing)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (MATH 1341 equivalent)\nCollege Writing (ENGW 1111 equivalent)\nNatural Science with Lab\nDiscrete Structures (highly recommended for 2nd or 3rd year standing)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waiver available for non-native English speakers who will have completed 4 consecutive, full-time academic years immediately before enrolling at Northeastern in high schools or universities where native English was the primary language of instruction.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.northeastern.edu",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "northeastern-university-mechanical-engineering-535edcc9",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus I for Science/Engineering",
+            "Calculus-based Physics I with Lab",
+            "General Chemistry I with Lab",
+            "Precalculus (demonstrated background)",
+            "College Writing (ENGW 1111 equivalent)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I for Science/Engineering\nCalculus-based Physics I with Lab\nGeneral Chemistry I with Lab\nPrecalculus (demonstrated background)\nCollege Writing (ENGW 1111 equivalent)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waiver available for non-native English speakers who will have completed 4 consecutive, full-time academic years immediately before enrolling at Northeastern in high schools or universities where native English was the primary language of instruction.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.northeastern.edu",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "northeastern-university-electrical-engineering-93b69943",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3.3 minimum",
+          "rawMinCredits": "12 credits",
+          "minGpa": 3.3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "Calculus I for Science/Engineering",
+            "Calculus-based Physics I with Lab",
+            "General Chemistry I with Lab",
+            "Precalculus (demonstrated background)",
+            "College Writing (ENGW 1111 equivalent)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I for Science/Engineering\nCalculus-based Physics I with Lab\nGeneral Chemistry I with Lab\nPrecalculus (demonstrated background)\nCollege Writing (ENGW 1111 equivalent)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Waiver available for non-native English speakers who will have completed 4 consecutive, full-time academic years immediately before enrolling at Northeastern in high schools or universities where native English was the primary language of instruction.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://admissions.northeastern.edu",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "boston-university-d78d362e",
+      "name": "Boston University",
+      "shortName": "Boston University",
+      "majors": [
+        {
+          "id": "boston-university-computer-science-2d51e8d2",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "32 credits",
+          "minGpa": 3,
+          "minCredits": 32,
+          "requiredCourses": [
+            "Calculus I (CAS MA 123 equivalent)",
+            "General Chemistry I (CAS CH 101/131 equivalent) or General Physics I (CAS PY 211 equivalent)",
+            "First-Year Writing / English Composition (WR 120 or equivalent)",
+            "Second Language Proficiency (CAS requirement, up to 4th semester level)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (CAS MA 123 equivalent)\nGeneral Chemistry I (CAS CH 101/131 equivalent) or General Physics I (CAS PY 211 equivalent)\nFirst-Year Writing / English Composition (WR 120 or equivalent)\nSecond Language Proficiency (CAS requirement, up to 4th semester level)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 90,
+            "IELTS": 7,
+            "Duolingo": 125
+          },
+          "englishExemption": "Waiver requests must be submitted by the application deadline, accompanied by a complete application including transcripts, and are granted at the sole discretion of the Board of Admissions (typically evaluated based on prior English-medium secondary or post-secondary education of 4+ years in English-speaking countries).",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.bu.edu/admissions",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "boston-university-mechanical-engineering-a9f14ea6",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "32 credits",
+          "minGpa": 3,
+          "minCredits": 32,
+          "requiredCourses": [
+            "Calculus I (CAS MA 123)",
+            "Calculus II (CAS MA 124)",
+            "General Chemistry I (CAS CH 131)",
+            "General Physics I (CAS PY 211)",
+            "First-Year Writing / English Composition (WR 120 or equivalent)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (CAS MA 123)\nCalculus II (CAS MA 124)\nGeneral Chemistry I (CAS CH 131)\nGeneral Physics I (CAS PY 211)\nFirst-Year Writing / English Composition (WR 120 or equivalent)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 90,
+            "IELTS": 7,
+            "Duolingo": 125
+          },
+          "englishExemption": "Waiver requests must be submitted by the application deadline, accompanied by a complete application including transcripts, and are granted at the sole discretion of the Board of Admissions (typically evaluated based on prior English-medium secondary or post-secondary education of 4+ years in English-speaking countries).",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.bu.edu/admissions",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "boston-university-electrical-engineering-59eddb2f",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "32 credits",
+          "minGpa": 3,
+          "minCredits": 32,
+          "requiredCourses": [
+            "Calculus I (CAS MA 123)",
+            "Calculus II (CAS MA 124)",
+            "General Chemistry I (CAS CH 131)",
+            "General Physics I (CAS PY 211)",
+            "First-Year Writing / English Composition (WR 120 or equivalent)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "Calculus I (CAS MA 123)\nCalculus II (CAS MA 124)\nGeneral Chemistry I (CAS CH 131)\nGeneral Physics I (CAS PY 211)\nFirst-Year Writing / English Composition (WR 120 or equivalent)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 90,
+            "IELTS": 7,
+            "Duolingo": 125
+          },
+          "englishExemption": "Waiver requests must be submitted by the application deadline, accompanied by a complete application including transcripts, and are granted at the sole discretion of the Board of Admissions (typically evaluated based on prior English-medium secondary or post-secondary education of 4+ years in English-speaking countries).",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.bu.edu/admissions",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "cal-poly-san-luis-obispo-060450c5",
+      "name": "Cal Poly San Luis Obispo",
+      "shortName": "Cal Poly San Luis Obispo",
+      "majors": [
+        {
+          "id": "cal-poly-san-luis-obispo-computer-science-06a88eb2",
+          "name": "Computer Science",
+          "rawMinGpa": "2.4 minimum",
+          "rawMinCredits": "60 credits",
+          "minGpa": 2.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 141 (Calculus I)",
+            "MATH 142 (Calculus II)",
+            "MATH 143 (Calculus III)",
+            "MATH 244 (Linear Analysis I) or MATH 206 (Linear Algebra I)",
+            "PHYS 141 (General Physics IA)",
+            "PHYS 142 (General Physics II)",
+            "PHYS 143 (General Physics III)",
+            "Oral Communication (GE Area A1)",
+            "Written Communication / English Composition (GE Area A2)",
+            "Critical Thinking (GE Area A3)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 141 (Calculus I)\nMATH 142 (Calculus II)\nMATH 143 (Calculus III)\nMATH 244 (Linear Analysis I) or MATH 206 (Linear Algebra I)\nPHYS 141 (General Physics IA)\nPHYS 142 (General Physics II)\nPHYS 143 (General Physics III)\nOral Communication (GE Area A1)\nWritten Communication / English Composition (GE Area A2)\nCritical Thinking (GE Area A3)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waiver available if educated at an institution where English is the language of instruction for at least three years, OR transfer applicants who completed all GE Area A courses (English Composition, Critical Thinking, and Public Speaking) with a 'B' or higher grade.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.calpoly.edu/admissions/transfer-student/selection-criteria/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "cal-poly-san-luis-obispo-mechanical-engineering-a2768745",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "2.4 minimum",
+          "rawMinCredits": "60 credits",
+          "minGpa": 2.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 141 (Calculus I)",
+            "MATH 142 (Calculus II)",
+            "MATH 143 (Calculus III)",
+            "MATH 241 (Calculus IV)",
+            "MATH 244 (Linear Analysis I)",
+            "PHYS 141 (General Physics IA)",
+            "PHYS 142 (General Physics II)",
+            "PHYS 143 (General Physics III)",
+            "Oral Communication (GE Area A1)",
+            "Written Communication / English Composition (GE Area A2)",
+            "Critical Thinking (GE Area A3)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 141 (Calculus I)\nMATH 142 (Calculus II)\nMATH 143 (Calculus III)\nMATH 241 (Calculus IV)\nMATH 244 (Linear Analysis I)\nPHYS 141 (General Physics IA)\nPHYS 142 (General Physics II)\nPHYS 143 (General Physics III)\nOral Communication (GE Area A1)\nWritten Communication / English Composition (GE Area A2)\nCritical Thinking (GE Area A3)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waiver available if educated at an institution where English is the language of instruction for at least three years, OR transfer applicants who completed all GE Area A courses (English Composition, Critical Thinking, and Public Speaking) with a 'B' or higher grade.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.calpoly.edu/admissions/transfer-student/selection-criteria/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "cal-poly-san-luis-obispo-electrical-engineering-fc7194b1",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "2.4 minimum",
+          "rawMinCredits": "60 credits",
+          "minGpa": 2.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 141 (Calculus I)",
+            "MATH 142 (Calculus II)",
+            "MATH 143 (Calculus III)",
+            "MATH 241 (Calculus IV)",
+            "MATH 244 (Linear Analysis I)",
+            "PHYS 141 (General Physics IA)",
+            "PHYS 142 (General Physics II)",
+            "PHYS 143 (General Physics III)",
+            "Oral Communication (GE Area A1)",
+            "Written Communication / English Composition (GE Area A2)",
+            "Critical Thinking (GE Area A3)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 141 (Calculus I)\nMATH 142 (Calculus II)\nMATH 143 (Calculus III)\nMATH 241 (Calculus IV)\nMATH 244 (Linear Analysis I)\nPHYS 141 (General Physics IA)\nPHYS 142 (General Physics II)\nPHYS 143 (General Physics III)\nOral Communication (GE Area A1)\nWritten Communication / English Composition (GE Area A2)\nCritical Thinking (GE Area A3)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 80,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Waiver available if educated at an institution where English is the language of instruction for at least three years, OR transfer applicants who completed all GE Area A courses (English Composition, Critical Thinking, and Public Speaking) with a 'B' or higher grade.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://www.calpoly.edu/admissions/transfer-student/selection-criteria/",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        }
+      ]
+    },
+    {
+      "id": "arizona-state-university-4e79aa20",
+      "name": "Arizona State University",
+      "shortName": "Arizona State University",
+      "majors": [
+        {
+          "id": "arizona-state-university-computer-science-e645eaa8",
+          "name": "Computer Science",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "MAT 265 (Calculus for Engineers I)",
+            "MAT 266 (Calculus for Engineers II)",
+            "CSE 110 (Principles of Programming / Java)",
+            "CSE 205 (Object-Oriented Programming & Data Structures)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MAT 265 (Calculus for Engineers I)\nMAT 266 (Calculus for Engineers II)\nCSE 110 (Principles of Programming / Java)\nCSE 205 (Object-Oriented Programming & Data Structures)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 105
+          },
+          "englishExemption": "Waiver available for students who complete 48 transferable semester credits in the U.S. with at least a 2.50 GPA, including English 101 and English 102.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://degrees.apps.asu.edu",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "arizona-state-university-mechanical-engineering-49e859c3",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "MAT 265 (Calculus for Engineers I)",
+            "MAT 266 (Calculus for Engineers II)",
+            "PHY 121 & PHY 122 (University Physics I: Mechanics & Lab)",
+            "MAE 201 (Statics)",
+            "MAE 202 (Dynamics)",
+            "MAE 213 (Mechanics of Materials)",
+            "MAE 241 (Introduction to Thermodynamics)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MAT 265 (Calculus for Engineers I)\nMAT 266 (Calculus for Engineers II)\nPHY 121 & PHY 122 (University Physics I: Mechanics & Lab)\nMAE 201 (Statics)\nMAE 202 (Dynamics)\nMAE 213 (Mechanics of Materials)\nMAE 241 (Introduction to Thermodynamics)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 105
+          },
+          "englishExemption": "Waiver available for students who complete 48 transferable semester credits in the U.S. with at least a 2.50 GPA, including English 101 and English 102.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://degrees.apps.asu.edu",
+          "sourceFile": "AI Telemetry Expansion",
+          "confidence": "verified"
+        },
+        {
+          "id": "arizona-state-university-electrical-engineering-b252443b",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3 minimum",
+          "rawMinCredits": "24 credits",
+          "minGpa": 3,
+          "minCredits": 24,
+          "requiredCourses": [
+            "MAT 265 (Calculus for Engineers I)",
+            "MAT 266 (Calculus for Engineers II)",
+            "PHY 121 & PHY 122 (University Physics I: Mechanics & Lab)",
+            "PHY 131 & PHY 132 (University Physics II: Electricity & Magnetism & Lab)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MAT 265 (Calculus for Engineers I)\nMAT 266 (Calculus for Engineers II)\nPHY 121 & PHY 122 (University Physics I: Mechanics & Lab)\nPHY 131 & PHY 132 (University Physics II: Electricity & Magnetism & Lab)",
+          "rawRecommended": "",
+          "english": {
+            "TOEFL": 79,
+            "IELTS": 6.5,
+            "Duolingo": 105
+          },
+          "englishExemption": "Waiver available for students who complete 48 transferable semester credits in the U.S. with at least a 2.50 GPA, including English 101 and English 102.",
+          "note": "Verified: Prerequisite requirements confirmed against official guide at https://degrees.apps.asu.edu",
+          "sourceFile": "AI Telemetry Expansion",
           "confidence": "verified"
         }
       ]

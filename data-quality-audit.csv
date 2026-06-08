@@ -413,3 +413,56 @@ University of Florida,Industrial & Systems Engineering,verified,true,official_si
 University of Florida,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
 University of Florida,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
 University of Florida,Nuclear Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Carnegie Mellon University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Carnegie Mellon University,Electrical and Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Carnegie Mellon University,Computer Science,high_risk,true,official_site,false,false,false,false,false,true,No official required courses listed
+Johns Hopkins University,Computer Science,needs_source_check,true,official_site,true,false,false,false,true,true,Mixed recommendations in required courses; Required courses contain recommendation keywords; Same required courses shared by 3 majors in this school
+Johns Hopkins University,Mechanical Engineering,needs_source_check,true,official_site,true,false,false,false,true,true,Mixed recommendations in required courses; Required courses contain recommendation keywords; Same required courses shared by 3 majors in this school
+Johns Hopkins University,Electrical Engineering,needs_source_check,true,official_site,true,false,false,false,true,true,Mixed recommendations in required courses; Required courses contain recommendation keywords; Same required courses shared by 3 majors in this school
+California Institute of Technology,Computer Science,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+California Institute of Technology,Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+California Institute of Technology,Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Duke University,Computer Science,high_risk,true,official_site,false,false,false,false,false,true,No official required courses listed
+Duke University,Mechanical Engineering,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Duke University,Electrical and Computer Engineering,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Rice University,Computer Science,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Rice University,Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Rice University,Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Stevens Institute of Technology,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Stevens Institute of Technology,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Stevens Institute of Technology,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Worcester Polytechnic Institute,Computer Science,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Worcester Polytechnic Institute,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Worcester Polytechnic Institute,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Rensselaer Polytechnic Institute,Computer Science,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Rensselaer Polytechnic Institute,Mechanical Engineering,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Rensselaer Polytechnic Institute,Electrical Engineering,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Michigan State University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Michigan State University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Michigan State University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Boston College,Computer Science,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+University of Rochester,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Rochester,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+"University of Maryland, College Park (UMD)",Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+"University of Maryland, College Park (UMD)",Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+"University of Minnesota, Twin Cities",Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+"University of Minnesota, Twin Cities",Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Rutgers University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Rutgers University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Colorado Boulder,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Colorado Boulder,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+USC (University of Southern California),Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+USC (University of Southern California),Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+USC (University of Southern California),Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northeastern University,Computer Science,needs_source_check,true,official_site,true,false,false,false,false,true,Mixed recommendations in required courses; Required courses contain recommendation keywords
+Northeastern University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Northeastern University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Boston University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Boston University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Boston University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cal Poly San Luis Obispo,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Cal Poly San Luis Obispo,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Cal Poly San Luis Obispo,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Arizona State University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Arizona State University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Arizona State University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
