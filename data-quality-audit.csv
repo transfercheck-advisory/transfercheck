@@ -466,3 +466,35 @@ Cal Poly San Luis Obispo,Electrical Engineering,verified,true,official_site,fals
 Arizona State University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
 Arizona State University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
 Arizona State University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Stony Brook University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Stony Brook University,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Stony Brook University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Stony Brook University,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Georgia,Computer Science,high_risk,true,official_site,false,false,true,false,false,true,Suspect number in raw GPA: 30; Suspect number in raw GPA: 59; Suspect number in raw GPA: 60
+University of Georgia,Mechanical Engineering,high_risk,true,official_site,false,false,true,false,false,true,Suspect number in raw GPA: 30; Suspect number in raw GPA: 59; Suspect number in raw GPA: 60
+University of Georgia,Electrical Engineering,high_risk,true,official_site,false,false,true,false,false,true,Suspect number in raw GPA: 30; Suspect number in raw GPA: 59; Suspect number in raw GPA: 60
+University of Georgia,Chemical Engineering,high_risk,false,none,false,false,true,false,false,true,Suspect number in raw GPA: 30; Suspect number in raw GPA: 59; Suspect number in raw GPA: 60
+University at Buffalo (SUNY Buffalo),Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University at Buffalo (SUNY Buffalo),Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+University at Buffalo (SUNY Buffalo),Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+University at Buffalo (SUNY Buffalo),Chemical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+North Carolina State University,Computer Science,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 4 majors in this school
+North Carolina State University,Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 4 majors in this school
+North Carolina State University,Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 4 majors in this school
+North Carolina State University,Chemical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 4 majors in this school
+University of Pittsburgh,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Pittsburgh,Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+University of Pittsburgh,Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+University of Pittsburgh,Chemical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+University of Utah,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+University of Utah,Mechanical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Utah,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+University of Utah,Chemical Engineering,verified,true,official_site,false,false,false,false,false,false,None
+Drexel University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
+Drexel University,Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Drexel University,Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Drexel University,Chemical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Iowa State University,Computer Science,needs_source_check,false,none,false,false,false,false,false,true,None
+Iowa State University,Mechanical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Iowa State University,Electrical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school
+Iowa State University,Chemical Engineering,needs_source_check,true,official_site,false,false,false,false,true,true,Same required courses shared by 3 majors in this school

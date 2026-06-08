@@ -1466,6 +1466,9 @@ function isIgnorableSourceLine(rawCourse) {
     || text.includes("concentration")
     || text.includes("required courses 없음")
     || text.includes("required course 없음")
+    || text.includes("at least one mec course")
+    || text.includes("11 credits of math")
+    || text.includes("basic program")
   );
 }
 

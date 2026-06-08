@@ -7,7 +7,8 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "english composition 1", "english comp 1", "engl 1105", "composition i", "writing seminar", "writing seminars",
-      "engl cc1010", "university writing", "english composition (1 course)", "english r1a", "english composition"
+      "engl cc1010", "university writing", "english composition (1 course)", "english r1a", "english composition",
+      "wra 101", "writing as inquiry", "engl 101", "academic writing", "college writing", "engw 1111", "critical thinking", "ge area a3"
     ]
   },
   {
@@ -26,7 +27,8 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "calculus 1", "calculus i", "calc i", "calc 1", "math 124", "math 1225", "18.01", "math 140", "calculus 4학점",
-      "mac 2311", "math 220-1", "math 15100", "math 10550"
+      "mac 2311", "math 220-1", "math 15100", "math 10550", "21-120", "calculus of one and several variables",
+      "/^calculus$/", "calculus (recommended)", "calculus (strongly recommended)", "math 161", "calculus ia", "mat 265", "calculus for engineers i"
     ]
   },
   {
@@ -37,7 +39,7 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "calculus 2", "calculus ii", "calc ii", "calc 2", "math 125", "math 1226", "math 1910", "math 141",
-      "mac 2312", "math 220-2", "math 15200", "math 10560"
+      "mac 2312", "math 220-2", "math 15200", "math 10560", "math 162", "calculus iia", "mat 266", "calculus for engineers ii"
     ]
   },
   {
@@ -59,7 +61,7 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "differential equations", "diff equations", "diff. equations", "math 207", "math 2214", "math 2930",
-      "map 2302", "math 228-2", "math 18400"
+      "map 2302", "math 228-2", "math 18400", "mat 22a", "mat 22b", "apma 2130", "aep 3200"
     ]
   },
   {
@@ -70,7 +72,7 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "linear algebra", "math 224", "math 2114", "math 2940", "matrix algebra", "math 208",
-      "math 19600", "math 20200"
+      "math 19600", "math 20200", "math 244", "linear analysis i", "mat 22a", "mat 22b"
     ]
   },
   {
@@ -79,7 +81,15 @@ window.courseCatalog = [
     category: "Math",
     level: 2,
     hasLab: false,
-    patterns: ["discrete structures", "discrete mathematics", "discrete math", "cs 173"]
+    patterns: ["discrete structures", "discrete mathematics", "discrete math", "cs 173", "cse 215", "foundations of computer science"]
+  },
+  {
+    id: "precalculus",
+    name: "Precalculus",
+    category: "Math",
+    level: 0,
+    hasLab: false,
+    patterns: ["precalculus", "pre-calculus", "trigonometry", "algebra & trigonometry"]
   },
   {
     id: "calculus-sequence",
@@ -105,7 +115,10 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "physics 1", "physics i", "mechanics", "phys 121", "phys 2305", "phys 1112", "8.01", "phys 211",
-      "phy 2048", "phys 13100", "phys 14100", "phys 10310"
+      "phy 2048", "phys 13100", "phys 14100", "phys 10310", "physics (recommended)", "physics (strongly recommended)",
+      "calculus-based physics", "phys 141", "general physics ia", "physics (or a second year of chemistry or biology)", "physics 7a",
+      "phys 1211", "principles of physics for scientists and engineers i", "phys 0174", "physics for science and engineering i",
+      "phys 2210", "physics for scientists and engineers i"
     ]
   },
   {
@@ -126,7 +139,8 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "physics 2", "physics ii", "e&m", "electromagnetism", "phys 122", "phys 2306", "phys 2213", "8.02", "phys 207",
-      "phy 2049", "phys 13200", "phys 14200", "phys 10320"
+      "phy 2049", "phys 13200", "phys 14200", "phys 10320", "physics 7b",
+      "phys 0175", "physics for science and engineering ii", "phys 2220", "physics for scientists and engineers ii"
     ]
   },
   {
@@ -147,7 +161,7 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "physics 3", "physics iii", "modern physics", "quantum physics", "phys 214", "phys un1403", "waves, light, and heat", "phys 123", "phys 213", "thermal physics",
-      "phys 13300", "phys 14300"
+      "phys 13300", "phys 14300", "special relativity"
     ]
   },
   {
@@ -166,7 +180,11 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "general chemistry 1", "chemistry 1", "chemistry i", "chem 1211", "chem 1211k", "chem 142", "chem 1035", "chem 2090", "5.111", "5.112", "3.091", "chem 110",
-      "chm 2045", "chem 11100", "chem 12100", "chem 10171"
+      "chm 2045", "chem 11100", "chem 12100", "chem 10171", "chemistry (recommended)", "/^chemistry$/", "general chemistry with lab",
+      "recommended: chemistry", "cem 141", "chem 131", "chemical concepts, systems and practices i", "chem 135", "general chemistry for engineers",
+      "chem 107", "chem 117", "chemistry for engineers", "chem 1410", "chem 119", "chem 1409", "chem 1411", "chem 1412", "chem 120",
+      "gen chem 1년\\+lab", "gen chem 1과목\\+lab", "chemistry 1a \\+ 1al \\+ 1b",
+      "chem 1670", "chem 1770", "general chemistry for engineering"
     ]
   },
   {
@@ -187,7 +205,7 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "general chemistry 2", "chemistry 2", "chemistry ii", "chem 1212", "chem 1212k", "chem 152", "chem 1036", "chem 162",
-      "chm 2046", "chem 11200", "chem 12200", "chem 10172"
+      "chm 2046", "chem 11200", "chem 12200", "chem 10172", "chem 2080"
     ]
   },
   {
@@ -238,7 +256,11 @@ window.courseCatalog = [
     category: "Science",
     level: 1,
     hasLab: false,
-    patterns: ["biology 1", "biol 180", "biol 1105", "bio 101", "bioee 1610", "biog 1440", "biog 1445", "biomg 1350", "7.016", "biol un2005", "introductory biology i"]
+    patterns: [
+      "biology 1", "biol 180", "biol 1105", "bio 101", "bioee 1610", "biog 1440", "biog 1445", "biomg 1350", "7.016", "biol un2005", "introductory biology i",
+      "bsc 2010", "general biology w/ lab", "biology i w/ lab", "biog 1500", "cellular/molecular content",
+      "biol 1107", "principles of biology i"
+    ]
   },
   {
     id: "biology-2",
@@ -257,7 +279,8 @@ window.courseCatalog = [
     patterns: [
       "intro to programming", "introduction to programming", "programming", "python", "matlab", "computing",
       "cs 1110", "cs 1112", "cse 12", "cs 1044", "cs 1064", "cs 1114", "cs 124", "intro cs 1", "computer science i",
-      "cs 1", "chem e 375", "cop 3502", "cmsc 12100", "cmsc 15100"
+      "cs 1", "chem e 375", "cop 3502", "cmsc 12100", "cmsc 15100", "csc 171", "introduction to computer science",
+      "cs 111", "cmpsc 121", "cmpsc 131", "engr 1140", "computational engineering methods"
     ]
   },
   {
@@ -266,7 +289,7 @@ window.courseCatalog = [
     category: "Computer",
     level: 2,
     hasLab: false,
-    patterns: ["data structures"]
+    patterns: ["data structures", "cse 220"]
   },
   {
     id: "oop",
@@ -276,7 +299,7 @@ window.courseCatalog = [
     hasLab: false,
     patterns: [
       "object-oriented programming", "oop", "cs 128", "intro cs 2", "computer science ii", "cs 2",
-      "cop 3503"
+      "cop 3503", "cmpsc 122", "cmpsc 132"
     ]
   },
   {
@@ -312,7 +335,9 @@ window.courseCatalog = [
     patterns: [
       "engineering foundations 1", "fundamentals of engineering 1", "enge 1215", "engr 1181", "engr 13100",
       "edsgn 100", "interegr 170", "intro to engineering", "introduction to engineering", "engineering graphics",
-      "graphics", "se 101", "me 170", "engri", "ise 2014", "egr 206"
+      "graphics", "se 101", "me 170", "engri", "ise 2014", "egr 206", "24-101", "introduction to mechanical engineering",
+      "18-100", "introduction to electrical and computer engineering", "ecse 1100", "ch en 1703", "introduction to chemical engineering",
+      "engr 1010", "engineering orientation", "engr 1600", "engineering problems"
     ]
   },
   {
@@ -337,7 +362,7 @@ window.courseCatalog = [
     category: "Engineering",
     level: 3,
     hasLab: false,
-    patterns: ["digital logic", "digital systems", "digital design", "ece 2330", "egr 270"]
+    patterns: ["digital logic", "digital systems", "digital design", "ece 2330", "egr 270", "cs 2505", "csee 2220", "fundamentals of logic design"]
   },
   {
     id: "solid-mechanics",
@@ -361,7 +386,7 @@ window.courseCatalog = [
     category: "Engineering",
     level: 3,
     hasLab: false,
-    patterns: ["material and energy balance", "chem e 310", "material and energy balances"]
+    patterns: ["material and energy balance", "chem e 310", "material and energy balances", "che 2114", "che 2164"]
   },
   {
     id: "materials-science",
@@ -369,7 +394,7 @@ window.courseCatalog = [
     category: "Engineering",
     level: 3,
     hasLab: false,
-    patterns: ["materials science", "material science"]
+    patterns: ["materials science", "material science", "mse 2060"]
   },
   {
     id: "liberal-studies",
@@ -377,6 +402,10 @@ window.courseCatalog = [
     category: "English",
     level: 4,
     hasLab: false,
-    patterns: ["liberal studies", "humanities", "general education", "economics", "econ un1105"]
+    patterns: [
+      "liberal studies", "humanities", "general education", "economics", "econ un1105", "natural science with lab",
+      "relevant science co-requisite", "intermediate foreign language proficiency", "second language proficiency",
+      "core liberal arts courses", "geos 1004", "geology 1 \\+ lab", "eas 2250", "cee 3510", "lib 1600", "information literacy"
+    ]
   }
 ];
