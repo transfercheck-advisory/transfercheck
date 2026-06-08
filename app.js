@@ -1791,9 +1791,15 @@ function bindAutocompleteEvents(container, type) {
     };
 
     let autocompleteTimeout;
+    let isToggling = false;
+
     input.addEventListener("focus", () => {
       clearTimeout(autocompleteTimeout);
-      renderMenu(input.value);
+      if (isToggling) {
+        renderMenu(""); // 역삼각형 토글 버튼 클릭 시에는 전체 리스트 노출
+      } else {
+        renderMenu(input.value);
+      }
     });
 
     input.addEventListener("blur", () => {
@@ -1813,8 +1819,10 @@ function bindAutocompleteEvents(container, type) {
       });
       toggleBtn.addEventListener("click", () => {
         if (menu.classList.contains("hidden")) {
+          isToggling = true;
           input.focus();
-          renderMenu(input.value);
+          renderMenu(""); // 쿼리 필터를 무시하고 전체 목록 렌더링
+          isToggling = false;
         } else {
           menu.classList.add("hidden");
         }
