@@ -786,7 +786,7 @@
     }
 
     function loadAdminStats() {
-      fetch('/api/admin-stats')
+      fetch('/api/admin-stats', { cache: 'no-store' })
         .then(res => res.json())
         .then(data => {
           // Update cards

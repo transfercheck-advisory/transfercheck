@@ -31,8 +31,16 @@ const MIME_TYPES = {
 };
 
 // Statistics helper functions
+function getStatsPath() {
+  const isVercel = process.env.VERCEL || process.env.NOW_REGION || (process.env.NODE_ENV === 'production' && !fs.existsSync(path.join(__dirname, 'write-test-dummy')));
+  if (isVercel) {
+    return path.join('/tmp', 'admin-stats.json');
+  }
+  return path.join(__dirname, 'admin-stats.json');
+}
+
 function getStats() {
-  const statsPath = path.join(__dirname, 'admin-stats.json');
+  const statsPath = getStatsPath();
   const defaultStats = {
     totalVisits: 0,
     dailyVisits: {},
@@ -41,7 +49,11 @@ function getStats() {
     usersCount: 0
   };
   if (!fs.existsSync(statsPath)) {
-    fs.writeFileSync(statsPath, JSON.stringify(defaultStats, null, 2), 'utf8');
+    try {
+      fs.writeFileSync(statsPath, JSON.stringify(defaultStats, null, 2), 'utf8');
+    } catch (e) {
+      console.error("Failed to write initial stats:", e);
+    }
     return defaultStats;
   }
   try {
@@ -53,8 +65,12 @@ function getStats() {
 }
 
 function saveStats(stats) {
-  const statsPath = path.join(__dirname, 'admin-stats.json');
-  fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2), 'utf8');
+  const statsPath = getStatsPath();
+  try {
+    fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2), 'utf8');
+  } catch (e) {
+    console.error("Failed to save stats file:", e);
+  }
 }
 
 const server = http.createServer((req, res) => {

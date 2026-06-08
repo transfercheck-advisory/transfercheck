@@ -1120,6 +1120,7 @@ window.selectUserPlan = function(plan) {
     // Track plan change telemetry
     fetch('/api/track-subscription', {
       method: 'POST',
+      cache: 'no-store',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ oldPlan: prevPlan, newPlan: plan })
     }).catch(e => console.warn("Failed to send plan change telemetry:", e));
@@ -3216,6 +3217,7 @@ function bindAuth() {
       // Track signup event on server
       fetch('/api/track-signup', {
         method: 'POST',
+        cache: 'no-store',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nationality })
       }).catch(e => console.warn("Failed to send signup telemetry:", e));
@@ -3230,6 +3232,7 @@ function bindAuth() {
       // Track login event on server
       fetch('/api/track-login', {
         method: 'POST',
+        cache: 'no-store',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nationality })
       }).catch(e => console.warn("Failed to send login telemetry:", e));
@@ -3771,7 +3774,7 @@ window.buyStandaloneEssayPass = function() {
 
 function init() {
   // Track visit telemetry on page load
-  fetch('/api/track-visit', { method: 'POST' })
+  fetch('/api/track-visit', { method: 'POST', cache: 'no-store' })
     .catch(e => console.warn("Failed to send visit telemetry:", e));
 
   const authState = readAuthState();
