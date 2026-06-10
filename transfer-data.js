@@ -14338,6 +14338,35 @@ window.transferDatabase = {
           "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt.",
           "sourceFile": "database-expansion-agent",
           "confidence": "verified"
+        },
+        {
+          "id": "university-of-maryland-college-park-umd--computer-science-a5678b90",
+          "name": "Computer Science",
+          "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework (LEP admission criteria)",
+          "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+          "minGpa": 3,
+          "minCredits": 12,
+          "requiredCourses": [
+            "CMSC 131 - Object-Oriented Programming I (grade of C- or better)",
+            "CMSC 132 - Object-Oriented Programming II (grade of C- or better)",
+            "MATH 140 - Calculus I (grade of C- or better)"
+          ],
+          "recommendedCourses": [
+            "MATH 141 - Calculus II"
+          ],
+          "rawRequired": "CMSC 131 - Object-Oriented Programming I (grade of C- or better)\nCMSC 132 - Object-Oriented Programming II (grade of C- or better)\nMATH 140 - Calculus I (grade of C- or better)",
+          "rawRecommended": "MATH 141 - Calculus II",
+          "english": {
+            "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+            "TOEFL": 96,
+            "TOEFL_2026": null,
+            "IELTS": 7,
+            "Duolingo": 120
+          },
+          "englishExemption": "Completed 2 English Composition courses with grade of C- or higher",
+          "note": "Verified: Computer Science is a CMNS Limited Enrollment Program (LEP). Requirements cross-referenced with the official UMD LEP Computer Science page (https://lep.umd.edu/computerscience.html).",
+          "sourceFile": "database-expansion-agent",
+          "confidence": "verified"
         }
       ]
     },
@@ -14989,6 +15018,34 @@ window.transferDatabase = {
           },
           "englishExemption": "",
           "note": "Official requirements from admissions website: https://soe.rutgers.edu/admissions/undergraduate-admissions/transfer-requirements",
+          "sourceFile": "database-expansion-agent",
+          "confidence": "verified"
+        },
+        {
+          "id": "rutgers-university-computer-science-c8901d23",
+          "name": "Computer Science",
+          "rawMinGpa": "2.75 minimum cumulative GPA for external SAS transfers, and grade of C or better in prerequisite courses",
+          "rawMinCredits": "At least 24 college-level academic credits completed",
+          "minGpa": 2.75,
+          "minCredits": 24,
+          "requiredCourses": [
+            "CS 111 - Introduction to Computer Science (grade of C or better)",
+            "CS 112 - Data Structures (grade of C or better)",
+            "MATH 151 - Calculus I for Physical Sciences (grade of C or better)",
+            "MATH 152 - Calculus II for Physical Sciences (grade of C or better)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "CS 111 - Introduction to Computer Science (grade of C or better)\nCS 112 - Data Structures (grade of C or better)\nMATH 151 - Calculus I for Physical Sciences (grade of C or better)\nMATH 152 - Calculus II for Physical Sciences (grade of C or better)",
+          "rawRecommended": "",
+          "english": {
+            "raw": "TOEFL iBT: 79 minimum, IELTS Academic: 6.5 minimum, Duolingo: 115 minimum",
+            "TOEFL": 79,
+            "TOEFL_2026": null,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Completed English Composition I & II with grades of B or higher",
+          "note": "Verified: Computer Science major declaration requirements cross-referenced with the official Rutgers School of Arts and Sciences (SAS) Computer Science curriculum guidelines (https://www.cs.rutgers.edu/academics/undergraduate/admission-to-the-major).",
           "sourceFile": "database-expansion-agent",
           "confidence": "verified"
         }
