@@ -1143,22 +1143,23 @@ window.selectUserPlan = function(plan) {
       return;
     }
 
-    const pricingDetails = {
-      Premium: { name: "Premium Plan", amount: 29900 }
-    };
-    const details = pricingDetails[plan];
-    if (!details) return;
-
     const userProfile = authState.users[currentUser] || {};
     const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
     const buyerPhone = userProfile.phone || "010-0000-0000";
 
+    const isKo = (state.lang || "ko") === "ko";
+    const pgChannel = isKo ? "html5_inicis" : "paypal_v2";
+    const payCurrency = isKo ? "KRW" : "USD";
+    const payAmount = isKo ? 29900 : 22; // $22 USD for Premium Plan
+    const productName = isKo ? "Premium Plan (프리미엄 구독)" : "TransferChek Premium Plan (1 Month)";
+
     IMP.request_pay({
-      pg: "html5_inicis", // Test PG (KG Inicis)
+      pg: pgChannel,
       pay_method: "card",
       merchant_uid: `order_sub_${plan}_${Date.now()}`,
-      name: details.name,
-      amount: details.amount,
+      name: productName,
+      amount: payAmount,
+      currency: payCurrency,
       buyer_email: currentUser,
       buyer_name: buyerName,
       buyer_tel: buyerPhone
@@ -3995,12 +3996,19 @@ window.buyStandaloneEssayPass = function() {
   const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
   const buyerPhone = userProfile.phone || "010-0000-0000";
 
+  const isKo = (state.lang || "ko") === "ko";
+  const pgChannel = isKo ? "html5_inicis" : "paypal_v2";
+  const payCurrency = isKo ? "KRW" : "USD";
+  const payAmount = isKo ? 6900 : 5; // $5 USD for AI Essay 5-Pack
+  const productName = isKo ? "AI 에세이 5회 이용권" : "AI Essay 5-Pack (5 Credits)";
+
   IMP.request_pay({
-    pg: "html5_inicis", // Test PG (KG Inicis)
+    pg: pgChannel,
     pay_method: "card",
     merchant_uid: `order_essay_${Date.now()}`,
-    name: "AI Essay 5-Pack (5 Credits)",
-    amount: 6900, // 6,900 KRW
+    name: productName,
+    amount: payAmount,
+    currency: payCurrency,
     buyer_email: currentUser,
     buyer_name: buyerName,
     buyer_tel: buyerPhone
