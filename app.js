@@ -133,24 +133,24 @@ const TRANSLATIONS = {
     tier_pro_feature1: "Unlimited target evaluations in StatCompass (Service 1)",
     tier_pro_feature2: "No access to ReqRadar, Pathfinder, or EssayAI",
     tier_premium_name: "Premium Plan",
-    tier_premium_price: "$29.99/mo",
-    tier_premium_desc: "Full transfer planner suite",
+    tier_premium_price: "29,900 KRW/mo",
+    tier_premium_desc: "Full transfer planner suite (Credits expire monthly)",
     tier_premium_feature1: "Unlimited access to StatCompass, ReqRadar, and Pathfinder",
-    tier_premium_feature2: "5 EssayAI (Service 4) outline generations included",
-    tier_essay_pass_name: "Standalone Essay Pass",
-    tier_essay_pass_price: "$6.99",
-    tier_essay_pass_desc: "Single addon package",
+    tier_premium_feature2: "5 EssayAI (Service 4) outline generations included (non-cumulative)",
+    tier_essay_pass_name: "AI Essay 5-Pack",
+    tier_essay_pass_price: "6,900 KRW",
+    tier_essay_pass_desc: "Standalone addon package (Valid for 3 months)",
     tier_essay_pass_feature1: "5 uses of EssayAI (Service 4) essay strategizer",
-    tier_essay_pass_feature2: "Can be purchased on any plan (accumulates credits)",
+    tier_essay_pass_feature2: "Must be used within 3 months of purchase",
     btn_choose_plan: "Subscribe",
     btn_free_action: "Select Free",
     btn_pro_action: "Subscribe Pro",
     btn_premium_action: "Subscribe Premium",
-    btn_essay_pass_action: "Buy Essay Pass",
+    btn_essay_pass_action: "Buy 5-Pack",
     essay_credits_remaining: "Remaining Credits:",
-    btn_buy_credits: "Buy 5 Credits ($6.99)",
+    btn_buy_credits: "Buy 5 Credits (6,900 KRW)",
     essay_out_of_credits: "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI.",
-    alert_essay_pass_purchased: "Successfully purchased Standalone Essay Pass! 5 credits have been added to your account.",
+    alert_essay_pass_purchased: "Successfully purchased AI Essay 5-Pack! 5 credits (valid for 3 months) have been added to your account.",
     display_fallback: "Official Unspecified",
     display_fallback_none: "None",
     display_credits_unspecified: "Credits Unspecified",
@@ -431,24 +431,24 @@ const TRANSLATIONS = {
     tier_pro_feature1: "지원 가능 판단 기능 내 목표 대학 무제한 분석 지원",
     tier_pro_feature2: "학교 학과별 편입 요건 파악, 수강 로드맵 생성, AI 에세이 전략가 모든 기능 접근 제한",
     tier_premium_name: "Premium 플랜",
-    tier_premium_price: "월 $29.99",
-    tier_premium_desc: "통합 편입 계획 패키지",
+    tier_premium_price: "29,900원 / 월",
+    tier_premium_desc: "통합 편입 계획 패키지 (당월 소멸)",
     tier_premium_feature1: "지원 가능 판단, 학교 학과별 편입 요건 파악, 수강 로드맵 생성 무제한 제공",
-    tier_premium_feature2: "AI 에세이 전략가(EssayAI) 5회 이용 횟수 포함",
-    tier_essay_pass_name: "에세이 단독 이용권",
-    tier_essay_pass_price: "$6.99",
-    tier_essay_pass_desc: "단독 추가 기능 패키지",
+    tier_premium_feature2: "AI 에세이 전략가(EssayAI) 5회 이용권 포함 (결제 월 내 사용 필수)",
+    tier_essay_pass_name: "AI 에세이 5회권",
+    tier_essay_pass_price: "6,900원",
+    tier_essay_pass_desc: "에세이 5회 이용권 (3개월 유효)",
     tier_essay_pass_feature1: "AI 에세이 전략가(EssayAI) 5회 이용권 제공",
-    tier_essay_pass_feature2: "어떤 플랜에서도 단독 구매 가능 (이용 횟수 누적)",
+    tier_essay_pass_feature2: "3개월(90일) 이내 사용 필수 (어떤 플랜에서도 추가 구매 가능)",
     btn_choose_plan: "구독하기",
     btn_free_action: "무료 선택",
     btn_pro_action: "Pro 구독하기",
     btn_premium_action: "Premium 구독하기",
-    btn_essay_pass_action: "에세이 이용권 구매",
+    btn_essay_pass_action: "5회권 구매",
     essay_credits_remaining: "남은 이용 횟수:",
-    btn_buy_credits: "5회 이용권 구매 ($6.99)",
+    btn_buy_credits: "5회 이용권 구매 (6,900원)",
     essay_out_of_credits: "남은 에세이 이용 횟수가 없습니다. 5회 이용권을 구매하거나 Premium 플랜을 구독해 주세요.",
-    alert_essay_pass_purchased: "에세이 5회 이용권을 성공적으로 구매하였습니다! 5개의 크레딧이 추가되었습니다.",
+    alert_essay_pass_purchased: "AI 에세이 5회 이용권을 성공적으로 구매하였습니다! 5개의 크레딧(3개월 유효)이 추가되었습니다.",
     display_fallback: "공식 미명시",
     display_fallback_none: "없음",
     display_credits_unspecified: "이수 학점 미명시",
@@ -729,24 +729,24 @@ const TRANSLATIONS = {
     tier_pro_feature1: "转学可行性分析仪 (服务1) 可无限次进行目标专业评估",
     tier_pro_feature2: "限制访问先修课程搜索引擎、最优选课路线规划以及AI转学文书策略家所有功能",
     tier_premium_name: "Premium 方案 (Premium Plan)",
-    tier_premium_price: "$29.99/月",
-    tier_premium_desc: "转学规划全包套件",
+    tier_premium_price: "29,900 KRW/月",
+    tier_premium_desc: "转学规划全包套件 (当月失效)",
     tier_premium_feature1: "资格评估、先修课程搜索引擎、最优选课路线规划服务无限制使用",
-    tier_premium_feature2: "包含 AI 转学文书策略家 (服务4) 5次使用额度",
-    tier_essay_pass_name: "文书单项包 (Essay Pass)",
-    tier_essay_pass_price: "$6.99",
-    tier_essay_pass_desc: "单项增值服务包",
+    tier_premium_feature2: "包含 AI 转学文书策略家 (服务4) 5次使用额度 (需在订阅月内使用)",
+    tier_essay_pass_name: "AI 写作5次加油包",
+    tier_essay_pass_price: "6,900 KRW",
+    tier_essay_pass_desc: "文书5次使用额度 (3个月有效)",
     tier_essay_pass_feature1: "提供 AI 转学文书策略家 (服务4) 5次使用额度",
-    tier_essay_pass_feature2: "可在任何订阅方案中单独购买（使用额度可累加）",
+    tier_essay_pass_feature2: "需在3个月（90天）内使用 (支持在任何订阅中叠加购买)",
     btn_choose_plan: "立即订阅",
     btn_free_action: "选择免费",
     btn_pro_action: "订阅 Pro 方案",
     btn_premium_action: "订阅 Premium 方案",
-    btn_essay_pass_action: "购买文书单项包",
+    btn_essay_pass_action: "购买5次加油包",
     essay_credits_remaining: "剩余使用次数:",
-    btn_buy_credits: "购买5次次数包 ($6.99)",
+    btn_buy_credits: "购买5次次数包 (6,900 KRW)",
     essay_out_of_credits: "您没有剩余的文书使用次数。请购买次数包或订阅 Premium 方案。",
-    alert_essay_pass_purchased: "成功购买 5 次文书使用包！已为您添加 5 次使用额度。",
+    alert_essay_pass_purchased: "成功购买 5 次文书使用包！已为您添加 5 次使用额度（3个月有效）。",
     display_fallback: "官方未标明",
     display_fallback_none: "无",
     display_credits_unspecified: "学分要求未标明",
@@ -1144,8 +1144,7 @@ window.selectUserPlan = function(plan) {
     }
 
     const pricingDetails = {
-      Pro: { name: "Pro Plan", amount: 14000 },
-      Premium: { name: "Premium Plan", amount: 42000 }
+      Premium: { name: "Premium Plan", amount: 29900 }
     };
     const details = pricingDetails[plan];
     if (!details) return;
@@ -1179,19 +1178,27 @@ function applyPlanUpgrade(plan) {
   state.plan = plan;
   localStorage.setItem("transferCompassPlan", plan);
   
-  if (plan === "Premium") {
-    state.essayCredits = 5;
-    localStorage.setItem("transferCompassEssayCredits", "5");
-  }
-  
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
   if (currentUser) {
     const prevPlan = authState.users[currentUser].plan || "Free";
     authState.users[currentUser].plan = plan;
     if (plan === "Premium") {
-      authState.users[currentUser].essayCredits = 5;
+      const now = new Date();
+      const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
+      authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks || [];
+      // Premium credits do not stack, so remove any previous premium credit packs
+      authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks.filter(p => p.type !== "premium");
+      authState.users[currentUser].creditPacks.push({
+        id: `premium_${Date.now()}`,
+        type: "premium",
+        count: 5,
+        expiresAt: expiresAt
+      });
     }
+    const totalCredits = syncUserEssayCredits(currentUser, authState);
+    state.essayCredits = totalCredits;
+    localStorage.setItem("transferCompassEssayCredits", totalCredits.toString());
     writeAuthState(authState);
     
     // Track plan change telemetry
@@ -1201,6 +1208,14 @@ function applyPlanUpgrade(plan) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ oldPlan: prevPlan, newPlan: plan })
     }).catch(e => console.warn("Failed to send plan change telemetry:", e));
+  } else {
+    if (plan === "Premium") {
+      state.essayCredits = 5;
+      localStorage.setItem("transferCompassEssayCredits", "5");
+    } else {
+      state.essayCredits = 0;
+      localStorage.setItem("transferCompassEssayCredits", "0");
+    }
   }
   
   updateActivePlanLabel();
@@ -3111,6 +3126,25 @@ function bindFeedback() {
   });
 }
 
+function syncUserEssayCredits(currentUser, authState) {
+  if (currentUser === "haminkim@uwm.edu") {
+    authState.users[currentUser].essayCredits = 999999;
+    return 999999;
+  }
+  const userProfile = authState.users[currentUser];
+  if (!userProfile) return 0;
+  userProfile.creditPacks = userProfile.creditPacks || [];
+  
+  const nowStr = new Date().toISOString();
+  // Filter out expired or fully consumed packs
+  const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
+  
+  const totalCredits = activePacks.reduce((sum, p) => sum + p.count, 0);
+  userProfile.essayCredits = totalCredits;
+  userProfile.creditPacks = activePacks;
+  return totalCredits;
+}
+
 function readAuthState() {
   try {
     const state = JSON.parse(localStorage.getItem(AUTH_STORAGE_KEY) || "{}");
@@ -3182,6 +3216,10 @@ function renderAuthState() {
   qs("#signupOpenBtn").classList.toggle("hidden", Boolean(currentUser));
   qs("#logoutBtn").classList.toggle("hidden", !currentUser);
   qs("#profileOpenBtn").classList.toggle("hidden", !currentUser);
+  
+  if (typeof renderSideDrawerUserSection === "function") {
+    renderSideDrawerUserSection();
+  }
 }
 
 function openAuthModal(mode) {
@@ -3391,11 +3429,12 @@ function bindAuth() {
     authState.currentUser = email;
     
     // Load their plan and essayCredits from their profile
+    const totalCredits = syncUserEssayCredits(email, authState);
     const userProfile = authState.users[email] || {};
     state.plan = userProfile.plan || "Free";
-    state.essayCredits = userProfile.essayCredits || 0;
+    state.essayCredits = totalCredits;
     localStorage.setItem("transferCompassPlan", state.plan);
-    localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+    localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
     
     writeAuthState(authState);
     renderAuthState();
@@ -3624,15 +3663,32 @@ function bindEssay() {
       };
     }
 
-      state.essayCredits = Math.max(0, state.essayCredits - 1);
-      localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
-      
-      // Sync remaining credits back to authenticated user profile to prevent session desync
       const authStateForSync = readAuthState();
       const currentUserForSync = authStateForSync.currentUser || "";
       if (currentUserForSync && authStateForSync.users[currentUserForSync]) {
-        authStateForSync.users[currentUserForSync].essayCredits = state.essayCredits;
+        if (currentUserForSync !== "haminkim@uwm.edu") {
+          const userProfile = authStateForSync.users[currentUserForSync];
+          userProfile.creditPacks = userProfile.creditPacks || [];
+          const nowStr = new Date().toISOString();
+          const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
+          if (activePacks.length > 0) {
+            // Sort by oldest expiration first to use the one expiring soonest
+            activePacks.sort((a, b) => new Date(a.expiresAt) - new Date(b.expiresAt));
+            activePacks[0].count--;
+            // Sync updated packs back
+            userProfile.creditPacks = userProfile.creditPacks.map(p => {
+              const match = activePacks.find(ap => ap.id === p.id);
+              return match ? match : p;
+            });
+          }
+        }
+        const totalCredits = syncUserEssayCredits(currentUserForSync, authStateForSync);
+        state.essayCredits = totalCredits;
+        localStorage.setItem("transferCompassEssayCredits", totalCredits.toString());
         writeAuthState(authStateForSync);
+      } else {
+        state.essayCredits = Math.max(0, state.essayCredits - 1);
+        localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
       }
       
       updateEssayCreditsUI();
@@ -3943,8 +3999,8 @@ window.buyStandaloneEssayPass = function() {
     pg: "html5_inicis", // Test PG (KG Inicis)
     pay_method: "card",
     merchant_uid: `order_essay_${Date.now()}`,
-    name: "Standalone Essay Pass (5 Credits)",
-    amount: 9800, // 9,800 KRW
+    name: "AI Essay 5-Pack (5 Credits)",
+    amount: 6900, // 6,900 KRW
     buyer_email: currentUser,
     buyer_name: buyerName,
     buyer_tel: buyerPhone
@@ -3962,15 +4018,24 @@ function applyEssayCreditsPurchase() {
   const currentUser = authState.currentUser || "";
   if (!currentUser) return;
 
-  state.essayCredits = (state.essayCredits || 0) + 5;
-  localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+  const now = new Date();
+  const expiresAt = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000).toISOString(); // 90 days (3 months)
+  authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks || [];
+  authState.users[currentUser].creditPacks.push({
+    id: `standalone_${Date.now()}`,
+    type: "standalone",
+    count: 5,
+    expiresAt: expiresAt
+  });
   
-  authState.users[currentUser].essayCredits = state.essayCredits;
+  const totalCredits = syncUserEssayCredits(currentUser, authState);
+  state.essayCredits = totalCredits;
+  localStorage.setItem("transferCompassEssayCredits", totalCredits.toString());
   writeAuthState(authState);
   
   updateEssayCreditsUI();
   
-  const alertMsg = t("alert_essay_pass_purchased", "Successfully purchased Standalone Essay Pass! 5 credits have been added to your account.");
+  const alertMsg = t("alert_essay_pass_purchased", "Successfully purchased AI Essay 5-Pack! 5 credits (valid for 3 months) have been added to your account.");
   alert(alertMsg);
 }
 
@@ -4001,11 +4066,13 @@ function init() {
     localStorage.setItem("transferCompassPlan", "Free");
     localStorage.setItem("transferCompassEssayCredits", "0");
   } else {
+    const totalCredits = syncUserEssayCredits(currentUser, authState);
+    writeAuthState(authState);
     const userProfile = authState.users[currentUser] || {};
     state.plan = userProfile.plan || "Free";
-    state.essayCredits = userProfile.essayCredits || 0;
+    state.essayCredits = totalCredits;
     localStorage.setItem("transferCompassPlan", state.plan);
-    localStorage.setItem("transferCompassEssayCredits", state.essayCredits);
+    localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
   }
 
   loadProfileFromLocalStorage();
@@ -4162,3 +4229,91 @@ window.toggleRecommendedCourses = function(btn) {
     }
   }
 };
+
+// Side Drawer Menu Logic
+function openSideDrawer() {
+  const drawer = qs("#sideDrawer");
+  const toggleBtn = qs("#hamburgerMenuBtn");
+  if (drawer) {
+    drawer.classList.remove("hidden");
+    toggleBtn?.classList.add("open");
+    renderSideDrawerUserSection();
+  }
+}
+
+function closeSideDrawer() {
+  const drawer = qs("#sideDrawer");
+  const toggleBtn = qs("#hamburgerMenuBtn");
+  if (drawer) {
+    drawer.classList.add("hidden");
+    toggleBtn?.classList.remove("open");
+  }
+}
+
+function renderSideDrawerUserSection() {
+  const container = qs("#sideDrawerUserSection");
+  if (!container) return;
+  
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  
+  if (!currentUser) {
+    container.innerHTML = `
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <p style="font-size: 12px; color: var(--muted); margin: 0;">로그인하시면 개인 맞춤 수강계획 및 AI 에세이 기능을 사용하실 수 있습니다.</p>
+        <div style="display: flex; gap: 8px; margin-top: 4px;">
+          <button class="secondary-btn compact" style="flex: 1; min-height: 30px; font-size: 11px; padding: 4px;" onclick="closeSideDrawer(); openAuthModal('login');">로그인</button>
+          <button class="primary-btn compact" style="flex: 1; min-height: 30px; font-size: 11px; padding: 4px;" onclick="closeSideDrawer(); openAuthModal('register');">회원가입</button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+  
+  const userProfile = authState.users[currentUser] || {};
+  const initial = currentUser.charAt(0).toUpperCase();
+  const plan = userProfile.plan || "Free";
+  const displayPlan = plan === "Premium" ? "Premium" : "Free Plan";
+  const credits = state.essayCredits;
+  
+  container.innerHTML = `
+    <div class="user-header">
+      <div class="user-avatar">${initial}</div>
+      <div class="user-details">
+        <span class="user-email" style="word-break: break-all;">${currentUser}</span>
+        <span class="user-plan">${displayPlan}</span>
+      </div>
+    </div>
+    <div class="user-credits">
+      <span>✉️ AI 에세이 크레딧: <strong>${credits === 999999 ? "무제한" : credits + "회"}</strong></span>
+    </div>
+  `;
+}
+
+function handleDrawerNavigation(target) {
+  closeSideDrawer();
+  
+  if (target === 'pricing') {
+    openPricingModal();
+    return;
+  }
+  
+  if (target === 'transfer-guide') {
+    const guideSec = qs("#transfer-guide");
+    if (guideSec) {
+      guideSec.scrollIntoView({ behavior: 'smooth' });
+    }
+    return;
+  }
+  
+  const demoSec = qs("#demo");
+  if (demoSec) {
+    demoSec.scrollIntoView({ behavior: 'smooth' });
+  }
+  activateProductTab(target);
+}
+
+window.openSideDrawer = openSideDrawer;
+window.closeSideDrawer = closeSideDrawer;
+window.handleDrawerNavigation = handleDrawerNavigation;
+window.renderSideDrawerUserSection = renderSideDrawerUserSection;

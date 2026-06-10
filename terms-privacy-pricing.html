@@ -685,31 +685,13 @@
           <button class="btn-pricing btn-pricing-secondary" onclick="alert('현재 무료 등급 상태입니다.')">무료 이용 중</button>
         </div>
 
-        <!-- Pro Plan -->
-        <div class="price-card">
-          <div class="plan-name">Pro Plan</div>
-          <div class="plan-title">프로 플랜</div>
-          <div class="price-tag">
-            <span class="amount">$9.99</span>
-            <span class="period">/ 월간 구독</span>
-          </div>
-          <p class="plan-desc">지원 자격 분석기를 무제한으로 이용하고 수강 이수 요건을 탐색합니다.</p>
-          <ul class="feature-list">
-            <li>동시 비교 대상 대학 무제한 확장 (지원 가능 판단)</li>
-            <li class="disabled">선수과목 통합 검색기 (학교 학과별 편입 요건 파악)</li>
-            <li class="disabled">학기별 맞춤 수강 계획 자동 배치 로드맵 (수강 로드맵 생성)</li>
-            <li class="disabled">AI 에세이 전략 가이드 맵핑 (EssayAI)</li>
-          </ul>
-          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Pro', '$9.99')">Pro 구독하기</button>
-        </div>
-
         <!-- Premium Plan -->
         <div class="price-card popular">
           <div class="popular-badge">추천 플랜</div>
           <div class="plan-name">Premium</div>
           <div class="plan-title">프리미엄 플랜</div>
           <div class="price-tag">
-            <span class="amount">$29.99</span>
+            <span class="amount">29,900원</span>
             <span class="period">/ 월간 구독</span>
           </div>
           <p class="plan-desc">진단, 선수과목 검색, 로드맵을 모두 제공하고 AI 에세이 서비스 5회권을 포함합니다.</p>
@@ -717,26 +699,26 @@
             <li>동시 비교 대상 대학 무제한 (지원 가능 판단)</li>
             <li>선수과목 통합 검색기 (학교 학과별 편입 요건 파악) 완전 개방</li>
             <li>최적화 수강 로드맵 빌더 (수강 로드맵 생성) 완전 개방</li>
-            <li>AI 에세이 전략가 (EssayAI) 5회 이용 가능</li>
+            <li>AI 에세이 전략가 (EssayAI) 5회 이용 가능 (결제 월 내 사용 필수)</li>
           </ul>
-          <button class="btn-pricing btn-pricing-primary" style="background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);" onclick="simulateSubscribe('Premium', '$29.99')">Premium 구독하기</button>
+          <button class="btn-pricing btn-pricing-primary" style="background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);" onclick="simulateSubscribe('Premium', '29,900원')">Premium 구독하기</button>
         </div>
 
         <!-- Standalone Essay Pass -->
         <div class="price-card">
           <div class="plan-name">Essay Pass</div>
-          <div class="plan-title">에세이 단독 패스</div>
+          <div class="plan-title">AI 에세이 5회권</div>
           <div class="price-tag">
-            <span class="amount">$6.99</span>
+            <span class="amount">6,900원</span>
             <span class="period">/ 일회성 결제</span>
           </div>
-          <p class="plan-desc">4번 서비스(EssayAI)를 5회 이용할 수 있는 단독 패키지입니다.</p>
+          <p class="plan-desc">4번 서비스(EssayAI)를 5회 이용할 수 있는 단독 패키지입니다. (3개월 유효)</p>
           <ul class="feature-list">
             <li>AI 에세이 전략가 (EssayAI) 5회 이용</li>
             <li>모든 구독 플랜에서 구매 가능</li>
-            <li>이용권 개수 누적 가능</li>
+            <li>3개월(90일) 이내 사용 필수 (이용권 개수 누적)</li>
           </ul>
-          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Essay Pass', '$6.99')">Essay Pass 구매하기</button>
+          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Essay Pass', '6,900원')">5회권 구매하기</button>
         </div>
       </div>
 
@@ -752,7 +734,7 @@
 
         <div class="dashboard-row">
           <strong>현재 요금제</strong>
-          <span id="subPlanText">Premium Plan ($29.99/월)</span>
+          <span id="subPlanText">Premium Plan (29,900원/월)</span>
         </div>
         <div class="dashboard-row">
           <strong>다음 결제일</strong>
@@ -1014,7 +996,7 @@
         consoleCancelBtn.setAttribute('disabled', 'true');
         consoleCancelBtn.style.opacity = '0.5';
       } else {
-        consolePlanText.textContent = plan + ' Plan (' + (plan === 'Pro' ? '$9.99' : '$29.99') + '/월)';
+        consolePlanText.textContent = plan + ' Plan (29,900원/월)';
         consoleBillingDate.textContent = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
         consoleBadge.textContent = 'Active (구독 중)';
         consoleBadge.className = 'status-badge status-active';
@@ -1030,20 +1012,48 @@
       }
 
       if (planName === 'Essay Pass') {
-        alert('에세이 5회 단독 이용권($6.99) 결제 시뮬레이션을 진행합니다!');
+        alert('AI 에세이 5회권(6,900원) 결제 시뮬레이션을 진행합니다!');
         const userProfile = authState.users[currentUser] || {};
-        userProfile.essayCredits = (userProfile.essayCredits || 0) + 5;
-        localStorage.setItem('transferCompassEssayCredits', userProfile.essayCredits);
+        userProfile.creditPacks = userProfile.creditPacks || [];
+        const now = new Date();
+        const expiresAt = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000).toISOString(); // 90 days (3 months)
+        userProfile.creditPacks.push({
+          id: 'standalone_' + Date.now(),
+          type: 'standalone',
+          count: 5,
+          expiresAt: expiresAt
+        });
+        
+        const nowStr = new Date().toISOString();
+        const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
+        userProfile.essayCredits = activePacks.reduce((sum, p) => sum + p.count, 0);
+        userProfile.creditPacks = activePacks;
+        
+        localStorage.setItem('transferCompassEssayCredits', userProfile.essayCredits.toString());
         localStorage.setItem('transferCompassAuth', JSON.stringify(authState));
-        alert('에세이 이용권 5회가 계정에 충전되었습니다!');
+        alert('AI 에세이 5회 이용권(3개월 유효)이 계정에 충전되었습니다!');
         renderSubscriptionConsole();
       } else {
         alert(planName + ' 요금제 정기 구독 시뮬레이션을 진행합니다!');
         const userProfile = authState.users[currentUser] || {};
         userProfile.plan = planName;
         if (planName === 'Premium') {
-          userProfile.essayCredits = 5;
-          localStorage.setItem('transferCompassEssayCredits', '5');
+          const now = new Date();
+          const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
+          userProfile.creditPacks = userProfile.creditPacks || [];
+          userProfile.creditPacks = userProfile.creditPacks.filter(p => p.type !== 'premium');
+          userProfile.creditPacks.push({
+            id: 'premium_' + Date.now(),
+            type: 'premium',
+            count: 5,
+            expiresAt: expiresAt
+          });
+          
+          const nowStr = new Date().toISOString();
+          const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
+          userProfile.essayCredits = activePacks.reduce((sum, p) => sum + p.count, 0);
+          userProfile.creditPacks = activePacks;
+          localStorage.setItem('transferCompassEssayCredits', userProfile.essayCredits.toString());
         }
         localStorage.setItem('transferCompassPlan', planName);
         localStorage.setItem('transferCompassAuth', JSON.stringify(authState));

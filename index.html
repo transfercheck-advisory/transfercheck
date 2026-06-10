@@ -36,6 +36,11 @@
   <body>
     <header class="site-header">
       <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="hamburger-menu" id="hamburgerMenuBtn" aria-label="Open menu" onclick="openSideDrawer()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <a class="brand" href="#top" aria-label="TransferChek home">
           <span class="brand-mark">TC</span>
           <span>
@@ -153,6 +158,93 @@
             <h3 data-i18n="feature4_title" style="margin-top: 8px;">AI Essay Strategist</h3>
             <p data-i18n="feature4_body">Convert your personal projects, robotics club activities, or coding achievements into a cohesive academic story. Generate an admissions-aligned, 3-paragraph strategy essay outline instantly.</p>
           </article>
+        </div>
+      </section>
+
+      <!-- 5-Step Transfer Guide Section -->
+      <section class="section" id="transfer-guide" style="background: rgba(197, 168, 128, 0.04); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 64px); margin: 40px 0;">
+        <div class="section-heading" style="text-align: center; margin-bottom: 48px;">
+          <p class="eyebrow" style="color: var(--accent); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Successful Transfer Strategy</p>
+          <h2 style="font-size: clamp(24px, 4vw, 36px); font-weight: 900; color: var(--primary-dark); margin-top: 10px;">미국 명문 공대 합격을 위한 5단계 성공 전략</h2>
+          <p style="font-size: 15px; color: var(--muted); max-width: 700px; margin: 12px auto 0 auto; line-height: 1.6;">
+            미국 공과대학교 편입은 체계적인 수강 계획과 철저한 선수과목 검증에서 시작됩니다. 아래 5단계 성공 전략을 확인하고, 본 플랫폼의 기능을 어떻게 연계하여 합격률을 극대화할 수 있는지 파악하십시오.
+          </p>
+        </div>
+
+        <div class="guide-timeline" style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
+          <!-- Step 1 -->
+          <div class="guide-card" style="display: flex; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-soft); transition: transform 0.2s ease;">
+            <div class="guide-step-num" style="width: 48px; height: 48px; border-radius: 12px; background: rgba(197, 168, 128, 0.15); color: var(--accent); display: grid; place-items: center; font-size: 20px; font-weight: 900; flex-shrink: 0;">01</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <h3 style="font-size: 18px; font-weight: 800; color: var(--ink);">목표 대학 및 공학 전공 탐색 (Target Research)</h3>
+              <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0;">
+                자신이 편입하고자 하는 대학교의 공과대학 및 학과(컴퓨터공학, 기계공학, 전기공학 등)를 명확히 정의합니다. 각 대학의 입학처 요강과 정량적 합격 지표(GPA, 최저 학점)를 먼저 검토해야 합니다.
+              </p>
+              <div style="background: rgba(15, 30, 54, 0.03); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.5;">
+                <strong>💡 플랫폼 활용 팁:</strong> <strong>[01. 지원 가능 판단]</strong> 기능에서 현재의 GPA와 이수 학점을 입력하여 각 타겟 대학교의 안정/소신 지원 가능 여부를 실시간으로 진단해 보십시오.
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="guide-card" style="display: flex; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-soft); transition: transform 0.2s ease;">
+            <div class="guide-step-num" style="width: 48px; height: 48px; border-radius: 12px; background: rgba(197, 168, 128, 0.15); color: var(--accent); display: grid; place-items: center; font-size: 20px; font-weight: 900; flex-shrink: 0;">02</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <h3 style="font-size: 18px; font-weight: 800; color: var(--ink);">선수과목 및 요구 요건 완벽 파악 (Prerequisite Mapping)</h3>
+              <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0;">
+                미국 공대 편입 심사에서 선수과목(Prerequisites) 이수 여부는 절대적입니다. 핵심 수학(Calculus I/II/III, Linear Algebra), 일반 물리(Physics), 화학(Chemistry), 프로그래밍 필수 과목 중 하나라도 누락되면 서류 심사에서 자동으로 즉시 탈락 처리됩니다.
+              </p>
+              <div style="background: rgba(15, 30, 54, 0.03); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.5;">
+                <strong>💡 플랫폼 활용 팁:</strong> <strong>[02. 편입 요건 검색]</strong> 기능으로 타겟 학교/학과를 조회하여 공식 입학처 요강과 100% 동일한 선수과목 목록 및 최저 성적 조건(GPA Threshold)을 간편하게 조회할 수 있습니다.
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="guide-card" style="display: flex; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-soft); transition: transform 0.2s ease;">
+            <div class="guide-step-num" style="width: 48px; height: 48px; border-radius: 12px; background: rgba(197, 168, 128, 0.15); color: var(--accent); display: grid; place-items: center; font-size: 20px; font-weight: 900; flex-shrink: 0;">03</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <h3 style="font-size: 18px; font-weight: 800; color: var(--ink);">전략적 커뮤니티 칼리지(CC) 또는 연계 대학 선택 (State-wise CC Selection)</h3>
+              <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0;">
+                미국 주립대들은 본인이 속한 주의 커뮤니티 칼리지(CC) 출신 편입생에게 전형 상 가산점과 우선선발권(예: UC 계열의 TAG 협약 등)을 보장합니다. 목표 대학교와 동일한 주에 위치한 CC 혹은 주립대에서 편입을 개시하는 것이 합격 확률 및 학점 인정(Credit Transfer) 측면에서 압도적으로 유리합니다.
+              </p>
+              <div style="background: rgba(15, 30, 54, 0.03); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.5;">
+                <strong>💡 플랫폼 활용 팁:</strong> 저희 데이터베이스가 제공하는 캘리포니아, 텍사스, 미시간 등 주(State)별 매핑 분석을 참고하여, 목표 대학교로의 편입 성공률을 높여주는 우수 연계 CC 리스트와 필수 조건을 파악하십시오.
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="guide-card" style="display: flex; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-soft); transition: transform 0.2s ease;">
+            <div class="guide-step-num" style="width: 48px; height: 48px; border-radius: 12px; background: rgba(197, 168, 128, 0.15); color: var(--accent); display: grid; place-items: center; font-size: 20px; font-weight: 900; flex-shrink: 0;">04</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <h3 style="font-size: 18px; font-weight: 800; color: var(--ink);">체계적인 수강계획 수립 및 철저한 GPA 관리 (Academic Scheduling)</h3>
+              <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0;">
+                편입 요건을 충족하는 과목들을 우선적으로 이수하기 위해 학기별 수강 순서를 세밀하게 기획해야 합니다. 선이수 필수 조건(Pre-requisites)이나 개설 학기 제약이 있으므로, 학기 설계에 작은 오류가 있어도 편입 시기가 6개월에서 1년 이상 미뤄질 수 있습니다.
+              </p>
+              <div style="background: rgba(15, 30, 54, 0.03); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.5;">
+                <strong>💡 플랫폼 활용 팁:</strong> <strong>[03. 수강 로드맵 빌더]</strong>를 통해 복잡하게 꼬이기 쉬운 기초 수학, 물리, 전공 탐색 과목들을 최적의 논리적 순서로 구성해 보십시오.
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="guide-card" style="display: flex; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-soft); transition: transform 0.2s ease;">
+            <div class="guide-step-num" style="width: 48px; height: 48px; border-radius: 12px; background: rgba(197, 168, 128, 0.15); color: var(--accent); display: grid; place-items: center; font-size: 20px; font-weight: 900; flex-shrink: 0;">05</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <h3 style="font-size: 18px; font-weight: 800; color: var(--ink);">정성적 스펙 철저 준비 - 에세이 & 교외 활동 (Qualitative Assets)</h3>
+              <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0;">
+                상위권 공대 편입 합격을 결정짓는 마지막 열쇠는 에세이(Personal Statement / SOP)와 모의 면접입니다. 본인의 학업 성과(GPA)와 더불어, 교내외 동아리, 설계 프로젝트, 코딩 성과 등을 전공 관심사와 결합하여 설득력 있는 스토리로 전달해야 합니다.
+              </p>
+              <div style="background: rgba(15, 30, 54, 0.03); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.5;">
+                <strong>💡 플랫폼 활용 팁:</strong> <strong>[04. EssayAI 전략 가이드]</strong>와 <strong>[AI 인터뷰 질문 생성기]</strong>를 활용해 자신의 전공 프로젝트 경험과 강점을 각 대학이 요구하는 인재상에 딱 맞춘 강력한 에세이 구조와 모의 답변으로 설계해 보십시오.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="#demo" class="primary-btn" style="padding: 16px 36px; font-size: 15px; border-radius: 12px; box-shadow: 0 10px 25px rgba(15, 30, 54, 0.15);" onclick="handleDrawerNavigation('eligibility')">나의 편입 진단 시뮬레이션 시작하기</a>
         </div>
       </section>
 
@@ -596,7 +688,7 @@
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
           <!-- Free Plan -->
           <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(197, 168, 128, 0.05); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
             <div>
@@ -611,30 +703,16 @@
             <button class="secondary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="selectUserPlan('Free')" data-i18n="btn_free_action">Select Free</button>
           </div>
 
-          <!-- Pro Plan -->
-          <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(197, 168, 128, 0.05); padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <h3 data-i18n="tier_pro_name">Pro Plan</h3>
-              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_pro_price">$9.99/mo</strong>
-              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_pro_desc">Unlimited feasibility analyzer</p>
-              <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
-                <li data-i18n="tier_pro_feature1">Unlimited target evaluations in StatCompass</li>
-                <li data-i18n="tier_pro_feature2">No access to ReqRadar, Pathfinder, or EssayAI</li>
-              </ul>
-            </div>
-            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="selectUserPlan('Pro')" data-i18n="btn_pro_action">Subscribe Pro</button>
-          </div>
-
           <!-- Premium Plan -->
           <div style="border: 1px solid var(--accent); border-radius: 14px; background: rgba(197, 168, 128, 0.12); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
             <span style="position: absolute; top: -10px; right: 14px; background: var(--accent); color: white; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Best Value</span>
             <div>
               <h3 data-i18n="tier_premium_name">Premium Plan</h3>
-              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_premium_price">$29.99/mo</strong>
-              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_premium_desc">Full transfer planner suite</p>
+              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_premium_price">29,900 KRW/mo</strong>
+              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_premium_desc">Full transfer planner suite (Credits expire monthly)</p>
               <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
                 <li data-i18n="tier_premium_feature1">Unlimited access to StatCompass, ReqRadar & Pathfinder</li>
-                <li data-i18n="tier_premium_feature2">5 EssayAI outline generations included</li>
+                <li data-i18n="tier_premium_feature2">5 EssayAI outline generations included (non-cumulative)</li>
               </ul>
             </div>
             <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px; background: var(--primary); color: #ffffff;" onclick="selectUserPlan('Premium')" data-i18n="btn_premium_action">Subscribe Premium</button>
@@ -643,15 +721,15 @@
           <!-- Standalone Essay Pass -->
           <div style="border: 1px solid var(--line); border-radius: 14px; background: rgba(197, 168, 128, 0.05); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease;">
             <div>
-              <h3 data-i18n="tier_essay_pass_name">Standalone Essay Pass</h3>
-              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_essay_pass_price">$6.99</strong>
-              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_essay_pass_desc">Single addon package</p>
+              <h3 data-i18n="tier_essay_pass_name">AI Essay 5-Pack</h3>
+              <strong style="font-size: 28px; color: var(--ink); display: block; margin: 10px 0;" data-i18n="tier_essay_pass_price">6,900 KRW</strong>
+              <p style="font-size: 12px; color: var(--muted); margin: 0 0 20px 0;" data-i18n="tier_essay_pass_desc">Standalone addon package (Valid for 3 months)</p>
               <ul style="padding-left: 18px; font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.6; display: grid; gap: 8px;">
                 <li data-i18n="tier_essay_pass_feature1">5 uses of EssayAI essay strategizer</li>
-                <li data-i18n="tier_essay_pass_feature2">Can be purchased on any plan</li>
+                <li data-i18n="tier_essay_pass_feature2">Must be used within 3 months of purchase</li>
               </ul>
             </div>
-            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="buyStandaloneEssayPass()" data-i18n="btn_essay_pass_action">Buy Essay Pass</button>
+            <button class="primary-btn full" style="margin-top: 24px; font-size: 13px; min-height: 38px;" onclick="buyStandaloneEssayPass()" data-i18n="btn_essay_pass_action">Buy 5-Pack</button>
           </div>
         </div>
       </div>
@@ -725,6 +803,79 @@
           <!-- Bullet points loaded via JS -->
         </ul>
         <button class="primary-btn full" id="adModalCta" type="button" style="background: var(--primary); color: #ffffff;">Try Feature Now</button>
+      </div>
+    </div>
+
+    <!-- Side Drawer Menu -->
+    <div class="side-drawer hidden" id="sideDrawer" role="dialog" aria-modal="true" aria-labelledby="sideDrawerTitle">
+      <div class="side-drawer-backdrop" id="sideDrawerBackdrop" onclick="closeSideDrawer()"></div>
+      <div class="side-drawer-content">
+        <div class="side-drawer-header">
+          <div class="brand">
+            <span class="brand-mark">TC</span>
+            <span>
+              <strong>TransferChek</strong>
+              <small data-i18n="site_subtitle">Engineering Transfer Advisory</small>
+            </span>
+          </div>
+          <button class="side-drawer-close" id="sideDrawerCloseBtn" onclick="closeSideDrawer()" aria-label="Close menu">&times;</button>
+        </div>
+        
+        <!-- User status in drawer -->
+        <div class="side-drawer-user" id="sideDrawerUserSection">
+          <!-- Will be updated dynamically via JS -->
+        </div>
+
+        <nav class="side-drawer-nav">
+          <a href="javascript:void(0)" onclick="handleDrawerNavigation('eligibility')" class="drawer-nav-item">
+            <span class="num">01</span>
+            <div class="txt">
+              <span class="title">01. 지원 가능 판단</span>
+              <span class="desc">현재 내 스펙으로 지원 가능한 대학 진단</span>
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" class="drawer-nav-item">
+            <span class="num">02</span>
+            <div class="txt">
+              <span class="title">02. 편입 요건 검색</span>
+              <span class="desc">목표 대학/학과별 학점 및 과목 요건 조회</span>
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="handleDrawerNavigation('roadmap')" class="drawer-nav-item">
+            <span class="num">03</span>
+            <div class="txt">
+              <span class="title">03. 수강 로드맵 빌더</span>
+              <span class="desc">선수과목 이수를 위한 학기별 최적 계획표 생성</span>
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="handleDrawerNavigation('essay')" class="drawer-nav-item">
+            <span class="num">04</span>
+            <div class="txt">
+              <span class="title">04. EssayAI & 면접 준비</span>
+              <span class="desc">AI 에세이 가이드라인 및 모의 면접 질문 매핑</span>
+            </div>
+          </a>
+          
+          <hr class="drawer-divider">
+
+          <a href="javascript:void(0)" onclick="handleDrawerNavigation('transfer-guide')" class="drawer-nav-item highlight">
+            <span class="num">★</span>
+            <div class="txt">
+              <span class="title" style="color: var(--accent);">5단계 편입 성공 전략 가이드</span>
+              <span class="desc">체계적이고 검증된 미국 공대 편입 준비 로드맵</span>
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="handleDrawerNavigation('pricing')" class="drawer-nav-item">
+            <span class="num">$</span>
+            <div class="txt">
+              <span class="title">멤버십 요금제</span>
+              <span class="desc">무료 및 프리미엄 요금제 혜택 확인</span>
+            </div>
+          </a>
+        </nav>
+        <div class="side-drawer-footer">
+          <p>&copy; 2026 TransferChek. All rights reserved.</p>
+        </div>
       </div>
     </div>
 
