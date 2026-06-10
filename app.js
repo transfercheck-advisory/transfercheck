@@ -1148,7 +1148,7 @@ window.selectUserPlan = function(plan) {
     const buyerPhone = userProfile.phone || "010-0000-0000";
 
     const isKo = (state.lang || "ko") === "ko";
-    const pgChannel = isKo ? "html5_inicis" : "paypal_v2";
+    const pgChannel = isKo ? "html5_inicis.MOI6298964" : "paypal_v2";
     const payCurrency = isKo ? "KRW" : "USD";
     const payAmount = isKo ? 29900 : 22; // $22 USD for Premium Plan
     const productName = isKo ? "Premium Plan (프리미엄 구독)" : "TransferChek Premium Plan (1 Month)";
@@ -3997,7 +3997,7 @@ window.buyStandaloneEssayPass = function() {
   const buyerPhone = userProfile.phone || "010-0000-0000";
 
   const isKo = (state.lang || "ko") === "ko";
-  const pgChannel = isKo ? "html5_inicis" : "paypal_v2";
+  const pgChannel = isKo ? "html5_inicis.MOI6298964" : "paypal_v2";
   const payCurrency = isKo ? "KRW" : "USD";
   const payAmount = isKo ? 6900 : 5; // $5 USD for AI Essay 5-Pack
   const productName = isKo ? "AI 에세이 5회 이용권" : "AI Essay 5-Pack (5 Credits)";
@@ -4051,7 +4051,7 @@ function init() {
   // Initialize Portone SDK Test Mode
   const IMP = window.IMP;
   if (IMP) {
-    IMP.init("imp31068472"); // Portone Public Test Store ID
+    IMP.init("imp81577133"); // Portone Live Store ID for TransferChek
   }
 
   // Track visit telemetry on page load
