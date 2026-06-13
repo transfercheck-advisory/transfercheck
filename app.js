@@ -3006,7 +3006,7 @@ function getCompetitiveProfile(program) {
     activities = isKo
       ? ["경영 케이스 공모전 참여 및 입상", "경영/금융 학회 리더십", "기업 인턴십 체험 (마케팅/재무 분석)", "비즈니스 영어 디베이트 클럽"]
       : ["Business case competition participation and award", "Business/Finance academic society leadership", "Corporate internship experience (Marketing/Financial analysis)", "Business English debate club"];
-  } else if (majorName.includes("english") || majorName.includes("history") || majorName.includes("philosophy") || majorName.includes("political") || majorName.includes("sociology") || majorName.includes("art") || majorName.includes("literature") || majorName.includes("humanities")) {
+  } else if (majorName.includes("english") || majorName.includes("history") || majorName.includes("philosophy") || majorName.includes("political") || majorName.includes("sociology") || majorName.includes("art") || majorName.includes("literature") || majorName.includes("humanities") || majorName.includes("psych") || majorName.includes("comm") || majorName.includes("relations") || majorName.includes("anthro") || majorName.includes("ling") || majorName.includes("global") || majorName.includes("gov") || majorName.includes("social studies")) {
     track = "Humanities";
     electives = ["Introduction to Sociology", "World History", "Ethics", "Critical Writing", "Political Theory"];
     activities = isKo
@@ -3304,6 +3304,7 @@ function bucketUnits(bucket) {
 
 const ROADMAP_PREREQUISITES = {
   "eng-comp-2": ["eng-comp-1"],
+  "man-acctg": ["fin-acctg"],
   "calc-2": ["calc-1"],
   "calc-3": ["calc-2"],
   "diff-eq": ["calc-2"],
@@ -3402,7 +3403,7 @@ function getStudentTrack(selectedPrograms) {
     const majorName = (p.name || "").toLowerCase();
     if (majorName.includes("business") || majorName.includes("manage") || majorName.includes("finance") || majorName.includes("accounting") || majorName.includes("econ")) {
       hasBusiness = true;
-    } else if (majorName.includes("english") || majorName.includes("history") || majorName.includes("philosophy") || majorName.includes("political") || majorName.includes("sociology") || majorName.includes("art") || majorName.includes("literature") || majorName.includes("humanities")) {
+    } else if (majorName.includes("english") || majorName.includes("history") || majorName.includes("philosophy") || majorName.includes("political") || majorName.includes("sociology") || majorName.includes("art") || majorName.includes("literature") || majorName.includes("humanities") || majorName.includes("psych") || majorName.includes("comm") || majorName.includes("relations") || majorName.includes("anthro") || majorName.includes("ling") || majorName.includes("global") || majorName.includes("gov") || majorName.includes("social studies")) {
       hasHumanities = true;
     }
   });
