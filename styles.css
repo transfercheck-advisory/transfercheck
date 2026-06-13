@@ -2302,7 +2302,7 @@ textarea:focus {
   align-items: center;
   gap: 10px;
   background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-  color: #ffffff;
+  color: #0f1e36;
   padding: 12px 20px;
   border-radius: 99px;
   font-weight: 800;
@@ -3128,7 +3128,7 @@ textarea:focus {
 .strategy-track-btn.active {
   background: var(--accent);
   border-color: var(--accent);
-  color: var(--surface);
+  color: #0f1e36;
 }
 
 @media (max-width: 520px) {
