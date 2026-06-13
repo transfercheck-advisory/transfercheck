@@ -1713,6 +1713,8 @@ const courseCategoryOrder = { Math: 0, Physics: 1, Chemistry: 2, Science: 3, Eng
 const qs = (selector) => document.querySelector(selector);
 const qsa = (selector) => [...document.querySelectorAll(selector)];
 
+const database = window.transferDatabase;
+
 function allPrograms() {
   return database.schools.flatMap((school) =>
     school.majors.map((major) => ({
