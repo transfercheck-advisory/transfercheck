@@ -394,10 +394,23 @@
                 <span class="subtext" data-i18n="ph_finder_desc">Search databases for credit transfer and GPA thresholds</span>
               </div>
               <div class="search-bar">
-                <div class="form-row search-field requirement-search-field">
-                  <label for="requirementSearch" data-i18n="label_search_school">Search School or Major</label>
-                  <input id="requirementSearch" type="search" placeholder="Type school name or major..." autocomplete="off" />
-                  <div class="search-menu requirement-menu" id="requirementMenu"></div>
+                <div class="target-inputs-group requirement-search-field" style="margin-bottom: 12px; display: flex; flex-flow: row wrap; gap: 12px; width: 100%;">
+                  <div class="form-row search-field autocomplete-container" id="reqSchoolContainer" data-autocomplete-type="school" style="position: relative; margin-bottom: 0; flex: 1 1 200px;">
+                    <label for="reqSchoolInput" data-i18n="label_school">School</label>
+                    <div style="position: relative; display: flex; align-items: center;">
+                      <input type="text" id="reqSchoolInput" class="autocomplete-input school-input" placeholder="Select School" data-i18n-placeholder="select_school_placeholder" autocomplete="off" style="width: 100%; min-height: 44px; padding-right: 30px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink);" />
+                      <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+                    </div>
+                    <div class="search-menu autocomplete-menu hidden" id="reqSchoolMenu" style="width: 100%; max-height: 250px; overflow-y: auto;"></div>
+                  </div>
+                  <div class="form-row search-field autocomplete-container" id="reqMajorContainer" data-autocomplete-type="major" style="position: relative; margin-bottom: 0; flex: 1 1 200px;">
+                    <label for="reqMajorInput" data-i18n="label_major">Major</label>
+                    <div style="position: relative; display: flex; align-items: center;">
+                      <input type="text" id="reqMajorInput" class="autocomplete-input major-input" placeholder="Select School First" data-i18n-placeholder="select_school_first_placeholder" autocomplete="off" disabled style="width: 100%; min-height: 44px; padding-right: 30px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink);" />
+                      <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" disabled>▼</button>
+                    </div>
+                    <div class="search-menu autocomplete-menu hidden" id="reqMajorMenu" style="width: 100%; max-height: 250px; overflow-y: auto;"></div>
+                  </div>
                 </div>
                 <select id="requirementSelect" class="visually-hidden" aria-label="Selected target"></select>
                 <div style="margin-top: 10px; font-size: 13px; color: var(--muted); text-align: left;">
@@ -544,15 +557,28 @@
                 <div class="essay-inputs-grid">
                   <!-- Column 1: School & Limit -->
                   <div class="essay-input-col" style="display: flex; flex-direction: column; gap: 16px;">
-                    <div class="form-row search-field autocomplete-container" id="essayTargetContainer" style="margin-bottom: 0; position: relative;">
-                      <label for="essayTargetSchool" data-i18n="label_essay_target">Target University & Program</label>
-                      <div style="position: relative; display: flex; align-items: center;">
-                        <input type="text" id="essayTargetSchool" class="autocomplete-input" placeholder="Type target program..." autocomplete="off" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 30px 0 12px;" />
-                        <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+                    <div id="essayTargetContainer" style="margin-bottom: 0; position: relative;">
+                      <input type="hidden" id="essayTargetSchool" value="" data-selected-id="" />
+                      <div class="target-inputs-group" style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="form-row search-field autocomplete-container" id="essaySchoolContainer" data-autocomplete-type="school" style="position: relative; margin-bottom: 0; width: 100%;">
+                          <label for="essaySchoolInput" data-i18n="label_school">School</label>
+                          <div style="position: relative; display: flex; align-items: center;">
+                            <input type="text" id="essaySchoolInput" class="autocomplete-input school-input" placeholder="Select School" data-i18n-placeholder="select_school_placeholder" autocomplete="off" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 30px 0 12px;" />
+                            <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+                          </div>
+                          <div class="search-menu autocomplete-menu hidden" id="essaySchoolMenu" style="width: 100%; max-height: 220px; overflow-y: auto;"></div>
+                        </div>
+                        <div class="form-row search-field autocomplete-container" id="essayMajorContainer" data-autocomplete-type="major" style="position: relative; margin-bottom: 0; width: 100%;">
+                          <label for="essayMajorInput" data-i18n="label_major">Major</label>
+                          <div style="position: relative; display: flex; align-items: center;">
+                            <input type="text" id="essayMajorInput" class="autocomplete-input major-input" placeholder="Select School First" data-i18n-placeholder="select_school_first_placeholder" autocomplete="off" disabled style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 30px 0 12px;" />
+                            <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" disabled>▼</button>
+                          </div>
+                          <div class="search-menu autocomplete-menu hidden" id="essayMajorMenu" style="width: 100%; max-height: 220px; overflow-y: auto;"></div>
+                        </div>
                       </div>
-                      <div class="search-menu autocomplete-menu hidden" id="essayTargetMenu" style="width: 100%; max-height: 220px; overflow-y: auto;"></div>
-                      <div id="essaySchoolPassStatus" style="font-size: 12px; margin-top: 6px; display: none; line-height: 1.4; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px;"></div>
                     </div>
+                    <div id="essaySchoolPassStatus" style="font-size: 12px; margin-top: 6px; display: none; line-height: 1.4; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; width: 100%;"></div>
                     <div class="form-row" style="margin-bottom: 0;">
                       <label for="essayLimit" data-i18n="label_essay_limit">Word Limit / Length</label>
                       <input id="essayLimit" type="text" placeholder="E.g., 350 words, 500 words, 1 page..." data-i18n-placeholder="essay_limit_placeholder" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 12px;" />

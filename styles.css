@@ -2140,6 +2140,12 @@ textarea:focus {
   cursor: not-allowed;
 }
 
+.autocomplete-input:disabled,
+.autocomplete-toggle-btn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
 .target-select option {
   background: #ffffff;
   color: var(--ink);

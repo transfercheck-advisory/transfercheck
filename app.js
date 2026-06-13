@@ -1488,9 +1488,23 @@ function switchLanguage(lang) {
     }
   });
 
-  const reqSearchInput = qs("#requirementSearch");
-  if (reqSearchInput) {
-    reqSearchInput.placeholder = t("req_search_placeholder", "Type school name or major...");
+  const reqSchoolInput = qs("#reqSchoolInput");
+  if (reqSchoolInput) {
+    reqSchoolInput.placeholder = t("search_school_placeholder", "Search School");
+  }
+  const reqMajorInput = qs("#reqMajorInput");
+  if (reqMajorInput) {
+    const key = safeHasAttr(reqMajorInput, "disabled") ? "select_school_first_placeholder" : "select_major_placeholder";
+    reqMajorInput.placeholder = t(key, key === "select_school_first_placeholder" ? "Select School First" : "Select Major");
+  }
+  const essaySchoolInput = qs("#essaySchoolInput");
+  if (essaySchoolInput) {
+    essaySchoolInput.placeholder = t("search_school_placeholder", "Search School");
+  }
+  const essayMajorInput = qs("#essayMajorInput");
+  if (essayMajorInput) {
+    const key = safeHasAttr(essayMajorInput, "disabled") ? "select_school_first_placeholder" : "select_major_placeholder";
+    essayMajorInput.placeholder = t(key, key === "select_school_first_placeholder" ? "Select School First" : "Select Major");
   }
   const essayActivityInput = qs("#essayActivity");
   if (essayActivityInput) {
@@ -1753,6 +1767,24 @@ function escapeHtml(value) {
 
 function normalizeText(value) {
   return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function safeSetAttr(el, name, val) {
+  if (!el) return;
+  if (name === "disabled") el.disabled = (val === "true" || val === true);
+  if (el.setAttribute) el.setAttribute(name, val);
+}
+
+function safeRemoveAttr(el, name) {
+  if (!el) return;
+  if (name === "disabled") el.disabled = false;
+  if (el.removeAttribute) el.removeAttribute(name);
+}
+
+function safeHasAttr(el, name) {
+  if (!el) return false;
+  if (name === "disabled") return !!(el.disabled || (el.hasAttribute && el.hasAttribute("disabled")));
+  return el.hasAttribute ? el.hasAttribute(name) : false;
 }
 
 function displayRequirement(value, fallback) {
@@ -2463,6 +2495,181 @@ function bindAutocompleteEvents(container, type) {
   });
 }
 
+function bindSingleAutocomplete({
+  schoolInput,
+  schoolMenu,
+  schoolToggle,
+  majorInput,
+  majorMenu,
+  majorToggle,
+  onSelected
+}) {
+  const schools = uniqueSchools();
+
+  const renderSchoolMenu = (query = "") => {
+    const normalizedQuery = normalizeText(query);
+    const items = schools.filter(s => 
+      !normalizedQuery || normalizeText(s.name).includes(normalizedQuery)
+    ).map(s => s.name).sort((a, b) => a.localeCompare(b));
+
+    schoolMenu.innerHTML = items.length
+      ? items.map(name => `
+          <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
+            <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
+          </button>
+        `).join("")
+      : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+    
+    schoolMenu.classList.remove("hidden");
+  };
+
+  const renderMajorMenu = (query = "") => {
+    const selectedSchool = schoolInput.value.trim();
+    const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
+    const normalizedQuery = normalizeText(query);
+    const items = majors.filter(p =>
+      !normalizedQuery || normalizeText(p.name).includes(normalizedQuery)
+    ).map(p => p.name).sort((a, b) => a.localeCompare(b));
+
+    majorMenu.innerHTML = items.length
+      ? items.map(name => `
+          <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
+            <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
+          </button>
+        `).join("")
+      : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+    
+    majorMenu.classList.remove("hidden");
+  };
+
+  let schoolBlurTimeout;
+  let majorBlurTimeout;
+  let isSchoolToggling = false;
+  let isMajorToggling = false;
+
+  // School events
+  schoolInput.addEventListener("focus", () => {
+    clearTimeout(schoolBlurTimeout);
+    if (isSchoolToggling) {
+      renderSchoolMenu("");
+    } else {
+      renderSchoolMenu(schoolInput.value);
+    }
+  });
+
+  schoolInput.addEventListener("blur", () => {
+    schoolBlurTimeout = setTimeout(() => {
+      schoolMenu.classList.add("hidden");
+    }, 200);
+  });
+
+  schoolInput.addEventListener("input", (e) => {
+    if (!e.target.value.trim()) {
+      majorInput.value = "";
+      safeSetAttr(majorInput, "disabled", "true");
+      safeSetAttr(majorInput, "data-i18n-placeholder", "select_school_first_placeholder");
+      majorInput.placeholder = t("select_school_first_placeholder", "Select School First");
+      if (majorToggle) safeSetAttr(majorToggle, "disabled", "true");
+      onSelected("", "");
+    } else {
+      renderSchoolMenu(e.target.value);
+    }
+  });
+
+  if (schoolToggle) {
+    schoolToggle.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      clearTimeout(schoolBlurTimeout);
+    });
+    schoolToggle.addEventListener("click", () => {
+      if (schoolMenu.classList.contains("hidden")) {
+        isSchoolToggling = true;
+        schoolInput.focus();
+        renderSchoolMenu("");
+        isSchoolToggling = false;
+      } else {
+        schoolMenu.classList.add("hidden");
+      }
+    });
+  }
+
+  schoolMenu.addEventListener("mousedown", (e) => {
+    clearTimeout(schoolBlurTimeout);
+    e.preventDefault();
+
+    const btn = e.target.closest(".autocomplete-item-btn");
+    if (!btn) return;
+
+    const val = btn.dataset.value;
+    schoolInput.value = val;
+    schoolMenu.classList.add("hidden");
+
+    // Reset major when school changes
+    majorInput.value = "";
+    safeRemoveAttr(majorInput, "disabled");
+    safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
+    majorInput.placeholder = t("select_major_placeholder", "Select Major");
+    if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
+
+    onSelected(val, "");
+  });
+
+  // Major events
+  majorInput.addEventListener("focus", () => {
+    clearTimeout(majorBlurTimeout);
+    if (isMajorToggling) {
+      renderMajorMenu("");
+    } else {
+      renderMajorMenu(majorInput.value);
+    }
+  });
+
+  majorInput.addEventListener("blur", () => {
+    majorBlurTimeout = setTimeout(() => {
+      majorMenu.classList.add("hidden");
+    }, 200);
+  });
+
+  majorInput.addEventListener("input", (e) => {
+    if (!e.target.value.trim()) {
+      onSelected(schoolInput.value, "");
+    } else {
+      renderMajorMenu(e.target.value);
+    }
+  });
+
+  if (majorToggle) {
+    majorToggle.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      clearTimeout(majorBlurTimeout);
+    });
+    majorToggle.addEventListener("click", () => {
+      if (majorMenu.classList.contains("hidden")) {
+        isMajorToggling = true;
+        majorInput.focus();
+        renderMajorMenu("");
+        isMajorToggling = false;
+      } else {
+        majorMenu.classList.add("hidden");
+      }
+    });
+  }
+
+  majorMenu.addEventListener("mousedown", (e) => {
+    clearTimeout(majorBlurTimeout);
+    e.preventDefault();
+
+    const btn = e.target.closest(".autocomplete-item-btn");
+    if (!btn) return;
+
+    const val = btn.dataset.value;
+    majorInput.value = val;
+    majorMenu.classList.add("hidden");
+
+    onSelected(schoolInput.value, val);
+  });
+}
+
 function syncSelectedRoadmapTargetsFromSlots() {
   const seen = new Set();
   state.roadmapTargetSlots.forEach((slot, index) => {
@@ -2737,10 +2944,21 @@ function activateProductTab(tabName, shouldScroll = true) {
   button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
 
   if (tabName === "requirements") {
-    const searchInput = qs("#requirementSearch");
-    if (searchInput) {
-      searchInput.value = "";
-      setTimeout(() => searchInput.focus(), 50);
+    const schoolInput = qs("#reqSchoolInput");
+    const majorInput = qs("#reqMajorInput");
+    const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+    if (schoolInput) {
+      schoolInput.value = "";
+      setTimeout(() => schoolInput.focus(), 50);
+    }
+    if (majorInput) {
+      majorInput.value = "";
+      majorInput.setAttribute("disabled", "true");
+      majorInput.setAttribute("data-i18n-placeholder", "select_school_first_placeholder");
+      majorInput.placeholder = t("select_school_first_placeholder", "Select School First");
+    }
+    if (majorToggle) {
+      majorToggle.setAttribute("disabled", "true");
     }
     renderRequirementDetail("");
   }
@@ -2771,79 +2989,53 @@ function renderRequirementControls() {
     }
   }
 
-  const renderRequirementMenu = (query = "") => {
-    const menu = qs("#requirementMenu");
-    const normalizedQuery = normalizeText(query);
-    const matches = sortedPrograms
-      .filter(
-        (program) =>
-          !normalizedQuery ||
-          normalizeText(`${program.school.name} ${program.school.shortName} ${program.name}`).includes(normalizedQuery)
-      )
-      .slice(0, 140);
+  const reqSchoolInput = qs("#reqSchoolInput");
+  const reqSchoolMenu = qs("#reqSchoolMenu");
+  const reqSchoolToggle = reqSchoolInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+  const reqMajorInput = qs("#reqMajorInput");
+  const reqMajorMenu = qs("#reqMajorMenu");
+  const reqMajorToggle = reqMajorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
 
-    let html = "";
-    if (matches.length > 0) {
-      html = matches
-        .map(
-          (program) => `
-            <button type="button" data-pick-requirement="${escapeHtml(program.id)}">
-              <strong>${escapeHtml(program.school.name)}</strong>
-              <span>${escapeHtml(program.name)}</span>
-            </button>
-          `
-        )
-        .join("");
-    } else {
-      html = `<div class="search-empty">${t("search_empty")}</div>`;
+  if (reqSchoolInput && reqSchoolMenu && reqMajorInput && reqMajorMenu) {
+    bindSingleAutocomplete({
+      schoolInput: reqSchoolInput,
+      schoolMenu: reqSchoolMenu,
+      schoolToggle: reqSchoolToggle,
+      majorInput: reqMajorInput,
+      majorMenu: reqMajorMenu,
+      majorToggle: reqMajorToggle,
+      onSelected: (schoolName, majorName) => {
+        const reqSelect = qs("#requirementSelect");
+        if (schoolName && majorName) {
+          const match = programsForSchoolName(schoolName).find(p => normalizeText(p.name) === normalizeText(majorName));
+          if (match) {
+            if (reqSelect) reqSelect.value = match.id;
+            renderRequirementDetail(match.id);
+          }
+        } else {
+          renderRequirementDetail("");
+        }
+      }
+    });
+
+    // Initialize fields based on current requirementSelect value
+    const selectedProgramId = qs("#requirementSelect")?.value;
+    if (selectedProgramId) {
+      const program = allPrograms().find(p => p.id === selectedProgramId);
+      if (program) {
+        reqSchoolInput.value = program.school.name;
+        reqMajorInput.value = program.name;
+        safeRemoveAttr(reqMajorInput, "disabled");
+        safeSetAttr(reqMajorInput, "data-i18n-placeholder", "select_major_placeholder");
+        reqMajorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (reqMajorToggle) safeRemoveAttr(reqMajorToggle, "disabled");
+      }
     }
-
-    if (query.trim()) {
-      const escapedQuery = escapeHtml(query.trim());
-      const isKo = state.language === "ko";
-      const generateText = isKo 
-        ? `🔍 AI로 "${escapedQuery}" 전공 요건 실시간 생성하기`
-        : `🔍 Generate "${escapedQuery}" requirements with AI in real-time`;
-      
-      html += `
-        <button type="button" class="ai-generate-search-btn" style="background: rgba(129, 140, 248, 0.15); border: 1px dashed var(--accent); color: var(--accent); font-weight: 700; width: 100%; text-align: left; padding: 10px 16px; display: flex; align-items: center; gap: 8px; cursor: pointer; transition: background 0.2s; width: 100%;" onclick="event.preventDefault(); window.openOnDemandScrapeWithQuery('${escapedQuery.replace(/'/g, "\\'")}')">
-          <span style="font-size: 14px;">✨</span> ${generateText}
-        </button>
-      `;
-    }
-
-    menu.innerHTML = html;
-    menu.classList.add("open");
-  };
+  }
 
   qs("#requirementSelect")?.addEventListener("change", () => {
     const reqSel = qs("#requirementSelect");
     if (reqSel) renderRequirementDetail(reqSel.value);
-  });
-  let requirementBlurTimeout;
-  qs("#requirementSearch")?.addEventListener("focus", (event) => {
-    clearTimeout(requirementBlurTimeout);
-    renderRequirementMenu(event.target.value);
-  });
-  qs("#requirementSearch")?.addEventListener("blur", () => {
-    requirementBlurTimeout = setTimeout(() => {
-      qs("#requirementMenu")?.classList.remove("open");
-    }, 200);
-  });
-  qs("#requirementSearch")?.addEventListener("input", (event) => renderRequirementMenu(event.target.value));
-  qs("#requirementMenu")?.addEventListener("mousedown", (event) => {
-    clearTimeout(requirementBlurTimeout);
-    const button = event.target.closest("[data-pick-requirement]");
-    if (!button) return;
-    event.preventDefault();
-    const program = allPrograms().find((item) => item.id === button.dataset.pickRequirement);
-    if (!program) return;
-    const reqSearch = qs("#requirementSearch");
-    if (reqSearch) reqSearch.value = `${program.school.name} · ${program.name}`;
-    const reqSelect = qs("#requirementSelect");
-    if (reqSelect) reqSelect.value = program.id;
-    qs("#requirementMenu")?.classList.remove("open");
-    renderRequirementDetail(program.id);
   });
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".requirement-search-field")) {
@@ -3036,7 +3228,7 @@ function getCompetitiveProfile(program) {
 function renderRequirementDetail(programId) {
   const container = qs("#requirementDetail");
   if (!container) return;
-  const isSearchEmpty = !qs("#requirementSearch")?.value?.trim();
+  const isSearchEmpty = !qs("#reqSchoolInput")?.value?.trim() || !qs("#reqMajorInput")?.value?.trim();
   if (!programId || isSearchEmpty) {
     container.innerHTML = `
       <div class="placeholder-view" style="text-align: center; padding: 60px 20px;">
@@ -4551,71 +4743,52 @@ function bindEssay() {
     updateEssaySubtabUI(activeSubtab);
   });
 
-  const renderEssayMenu = (query = "") => {
-    const normalizedQuery = normalizeText(query);
-    const matches = programs.filter(p => 
-      !normalizedQuery || normalizeText(`${p.school.name} ${p.name}`).includes(normalizedQuery)
-    ).slice(0, 140);
+  const essaySchoolInput = qs("#essaySchoolInput");
+  const essaySchoolMenu = qs("#essaySchoolMenu");
+  const essaySchoolToggle = essaySchoolInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+  const essayMajorInput = qs("#essayMajorInput");
+  const essayMajorMenu = qs("#essayMajorMenu");
+  const essayMajorToggle = essayMajorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
 
-    menu.innerHTML = matches.length
-      ? matches.map(p => `
-          <button type="button" class="autocomplete-item-btn" data-id="${escapeHtml(p.id)}" data-label="${escapeHtml(p.school.name)} - ${escapeHtml(p.name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
-            <strong style="font-weight: 700; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(p.school.name)}</strong>
-            <span style="font-size: 12px; color: var(--muted); display: block; margin-top: 2px;">${escapeHtml(p.name)}</span>
-          </button>
-        `).join("")
-      : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
-    
-    menu.classList.remove("hidden");
-  };
-
-  let essayBlurTimeout;
-  schoolSelect.addEventListener("focus", () => {
-    clearTimeout(essayBlurTimeout);
-    renderEssayMenu(schoolSelect.value);
-  });
-
-  schoolSelect.addEventListener("blur", () => {
-    essayBlurTimeout = setTimeout(() => {
-      menu.classList.add("hidden");
-    }, 200);
-  });
-
-  schoolSelect.addEventListener("input", (e) => {
-    renderEssayMenu(e.target.value);
-  });
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener("mousedown", (e) => {
-      e.preventDefault();
-      clearTimeout(essayBlurTimeout);
-    });
-    toggleBtn.addEventListener("click", () => {
-      if (menu.classList.contains("hidden")) {
-        schoolSelect.focus();
-        renderEssayMenu(schoolSelect.value);
-      } else {
-        menu.classList.add("hidden");
+  if (essaySchoolInput && essaySchoolMenu && essayMajorInput && essayMajorMenu) {
+    bindSingleAutocomplete({
+      schoolInput: essaySchoolInput,
+      schoolMenu: essaySchoolMenu,
+      schoolToggle: essaySchoolToggle,
+      majorInput: essayMajorInput,
+      majorMenu: essayMajorMenu,
+      majorToggle: essayMajorToggle,
+      onSelected: (schoolName, majorName) => {
+        if (schoolName && majorName) {
+          const match = programsForSchoolName(schoolName).find(p => normalizeText(p.name) === normalizeText(majorName));
+          if (match) {
+            schoolSelect.value = `${match.school.name} - ${match.name}`;
+            schoolSelect.dataset.selectedId = match.id;
+            selectedProgramId = match.id;
+            updateEssaySchoolStatusUI();
+          }
+        } else {
+          schoolSelect.value = "";
+          schoolSelect.dataset.selectedId = "";
+          selectedProgramId = "";
+          updateEssaySchoolStatusUI();
+        }
       }
     });
+
+    // Initialize fields based on current selectedProgramId
+    if (selectedProgramId) {
+      const program = allPrograms().find(p => p.id === selectedProgramId);
+      if (program) {
+        essaySchoolInput.value = program.school.name;
+        essayMajorInput.value = program.name;
+        safeRemoveAttr(essayMajorInput, "disabled");
+        safeSetAttr(essayMajorInput, "data-i18n-placeholder", "select_major_placeholder");
+        essayMajorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (essayMajorToggle) safeRemoveAttr(essayMajorToggle, "disabled");
+      }
+    }
   }
-
-  menu.addEventListener("mousedown", (e) => {
-    clearTimeout(essayBlurTimeout);
-    e.preventDefault(); // 스크롤바 드래그 및 메뉴 클릭 시 포커스 블러 방지
-
-    const btn = e.target.closest(".autocomplete-item-btn");
-    if (!btn) return;
-
-    const id = btn.dataset.id;
-    const label = btn.dataset.label;
-
-    schoolSelect.value = label;
-    schoolSelect.dataset.selectedId = id;
-    selectedProgramId = id;
-    menu.classList.add("hidden");
-    updateEssaySchoolStatusUI();
-  });
 
   // copyToClipboard helper definition bound globally
   window.copyToClipboard = function(text, btnId) {
@@ -5160,7 +5333,26 @@ function bindEssay() {
   // 4. Pre-fill Examples
   qs("#loadEssayExample1")?.addEventListener("click", () => {
     const schoolSelect = qs("#essayTargetSchool");
-    if (schoolSelect) schoolSelect.value = "university-of-michigan-computer-science-coe-2c16a5ea";
+    const programId = "university-of-michigan-computer-science-coe-2c16a5ea";
+    const program = allPrograms().find(p => p.id === programId);
+    if (program) {
+      if (schoolSelect) {
+        schoolSelect.value = `${program.school.name} - ${program.name}`;
+        schoolSelect.dataset.selectedId = program.id;
+      }
+      const schoolInput = qs("#essaySchoolInput");
+      const majorInput = qs("#essayMajorInput");
+      const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+      if (schoolInput) schoolInput.value = program.school.name;
+      if (majorInput) {
+        majorInput.value = program.name;
+        safeRemoveAttr(majorInput, "disabled");
+        safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
+        majorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
+      }
+      updateEssaySchoolStatusUI();
+    }
     const limitInput = qs("#essayLimit");
     if (limitInput) limitInput.value = "350 words";
     const questionText = qs("#essayQuestion");
@@ -5174,7 +5366,26 @@ function bindEssay() {
 
   qs("#loadEssayExample2")?.addEventListener("click", () => {
     const schoolSelect = qs("#essayTargetSchool");
-    if (schoolSelect) schoolSelect.value = "georgia-tech-mechanical-engineering-0dac0766";
+    const programId = "georgia-tech-mechanical-engineering-0dac0766";
+    const program = allPrograms().find(p => p.id === programId);
+    if (program) {
+      if (schoolSelect) {
+        schoolSelect.value = `${program.school.name} - ${program.name}`;
+        schoolSelect.dataset.selectedId = program.id;
+      }
+      const schoolInput = qs("#essaySchoolInput");
+      const majorInput = qs("#essayMajorInput");
+      const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+      if (schoolInput) schoolInput.value = program.school.name;
+      if (majorInput) {
+        majorInput.value = program.name;
+        safeRemoveAttr(majorInput, "disabled");
+        safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
+        majorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
+      }
+      updateEssaySchoolStatusUI();
+    }
     const limitInput = qs("#essayLimit");
     if (limitInput) limitInput.value = "500 words";
     const questionText = qs("#essayQuestion");
@@ -5862,7 +6073,17 @@ async function handleOnDemandScrape(event) {
       updateSortedPrograms();
       
       // 3. Highlight/Select the newly generated major in Tab 2 (ReqRadar)
-      qs("#requirementSearch").value = `${localSchool.name} · ${newMajor.name}`;
+      const reqSchoolInput = qs("#reqSchoolInput");
+      const reqMajorInput = qs("#reqMajorInput");
+      const reqMajorToggle = reqMajorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+      if (reqSchoolInput) reqSchoolInput.value = localSchool.name;
+      if (reqMajorInput) {
+        reqMajorInput.value = newMajor.name;
+        reqMajorInput.removeAttribute("disabled");
+        reqMajorInput.setAttribute("data-i18n-placeholder", "select_major_placeholder");
+        reqMajorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (reqMajorToggle) reqMajorToggle.removeAttribute("disabled");
+      }
       qs("#requirementSelect").value = newMajor.id;
       renderRequirementDetail(newMajor.id);
       
