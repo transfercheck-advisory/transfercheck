@@ -1582,6 +1582,7 @@ textarea:focus {
   background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  overflow-y: auto;
 }
 
 .auth-card {
@@ -1592,6 +1593,7 @@ textarea:focus {
   background: var(--surface);
   padding: 36px;
   box-shadow: var(--shadow);
+  margin: auto;
 }
 
 .auth-close {
