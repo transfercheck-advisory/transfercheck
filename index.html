@@ -56,10 +56,10 @@
       <nav class="site-nav" aria-label="Website Menu">
         <a href="#demo" id="openPricingBtn" data-i18n="nav_pricing">Subscription Plans</a>
         <a href="#solution" data-i18n="nav_solution">Features</a>
-        <a href="javascript:void(0)" onclick="openFeatureAd('eligibility')" data-i18n="nav_statcompass">01. 지원 가능 판단</a>
-        <a href="javascript:void(0)" onclick="openFeatureAd('requirements')" data-i18n="nav_reqradar">02. 학교 학과별 편입 요건 파악</a>
-        <a href="javascript:void(0)" onclick="openFeatureAd('roadmap')" data-i18n="nav_pathfinder">03. 수강 로드맵 생성</a>
-        <a href="javascript:void(0)" onclick="openFeatureAd('essay')" data-i18n="nav_essayai">04. EssayAI</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('eligibility')" data-i18n="nav_statcompass">01. 지원 가능 판단</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" data-i18n="nav_reqradar">02. 학교 학과별 편입 요건 파악</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('roadmap')" data-i18n="nav_pathfinder">03. 수강 로드맵 생성</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('essay')" data-i18n="nav_essayai">04. EssayAI</a>
         <a href="#feedback" data-i18n="nav_feedback">Feedback</a>
       </nav>
       
@@ -144,22 +144,22 @@
           <h2 data-i18n="feature_heading">The most expensive transfer mistake is taking course credits that do not transfer.</h2>
         </div>
         <div class="feature-grid">
-          <article>
+          <article style="cursor: pointer;" onclick="handleDrawerNavigation('eligibility')">
             <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">01 • Eligibility Diagnostics</span>
             <h3 data-i18n="feature1_title" style="margin-top: 8px;">Prerequisite Eligibility Analyzer</h3>
             <p data-i18n="feature1_body">Don't let regret be your final grade. Instantly analyze your GPA and completed courses against official database profiles to discover hidden top-tier transfer options you didn't even know you qualified for.</p>
           </article>
-          <article>
+          <article style="cursor: pointer;" onclick="handleDrawerNavigation('requirements')">
             <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">02 • Prerequisite Finder</span>
             <h3 data-i18n="feature2_title" style="margin-top: 8px;">Prerequisite Finder</h3>
             <p data-i18n="feature2_body">Skip the endless hunt through confusing university catalog sites and broken PDF guides. Search any school or major to load canonical prerequisite lists and grade thresholds instantly.</p>
           </article>
-          <article>
+          <article style="cursor: pointer;" onclick="handleDrawerNavigation('roadmap')">
             <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">03 • Roadmap Builder</span>
             <h3 data-i18n="feature3_title" style="margin-top: 8px;">Optimized Roadmap Builder</h3>
             <p data-i18n="feature3_body">Perfect for early planning 1-2 years ahead. Build prerequisite-compliant, term-by-term course paths to protect your GPA and ensure every single credit transfers without wasting tuition.</p>
           </article>
-          <article>
+          <article style="cursor: pointer;" onclick="handleDrawerNavigation('essay')">
             <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">04 • Essay Strategist</span>
             <h3 data-i18n="feature4_title" style="margin-top: 8px;">AI Essay Strategist</h3>
             <p data-i18n="feature4_body">Convert your personal projects, club activities, or academic achievements into a cohesive academic story. Powered by pattern analysis of over 120,000 successful essays, generate an admissions-aligned strategy outline instantly.</p>
@@ -703,7 +703,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 TransferChek. All rights reserved. All university names and logos are trademarks of their respective owners. TransferChek has no official affiliation or endorsement relationship with these universities.</p>
+        <p data-i18n="footer_copyright">&copy; 2026 TransferChek. All rights reserved. All university names and logos are trademarks of their respective owners. TransferChek has no official affiliation or endorsement relationship with these universities.</p>
       </div>
     </footer>
 

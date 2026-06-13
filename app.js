@@ -1,5 +1,14 @@
 const TRANSLATIONS = {
   "en": {
+    "alert_login_required": "You must log in or register to select a plan.",
+    "guest_label": "Guest",
+    "auth_modal_title_login": "Log in",
+    "auth_modal_title_signup": "Sign up",
+    "auth_modal_label_login": "Account",
+    "auth_modal_label_signup": "Create account",
+    "auth_modal_btn_login": "Log in",
+    "auth_modal_btn_signup": "Create account",
+    "footer_copyright": "&copy; 2026 TransferChek. All rights reserved. All university names and logos are trademarks of their respective owners. TransferChek has no official affiliation or endorsement relationship with these universities.",
     "site_title": "TransferChek | Top U.S. University Transfer Strategy Engine",
     "site_subtitle": "Top U.S. University Transfer Advisory",
     "nav_pricing": "Subscription Plans",
@@ -396,6 +405,15 @@ const TRANSLATIONS = {
     "profile_nationality_label": "Nationality"
   },
   "ko": {
+    "alert_login_required": "구독 요금제를 선택하거나 크레딧을 구매하려면 먼저 로그인하거나 회원가입을 해야 합니다.",
+    "guest_label": "게스트",
+    "auth_modal_title_login": "로그인",
+    "auth_modal_title_signup": "회원가입",
+    "auth_modal_label_login": "계정 로그인",
+    "auth_modal_label_signup": "계정 생성",
+    "auth_modal_btn_login": "로그인",
+    "auth_modal_btn_signup": "가입하기",
+    "footer_copyright": "&copy; 2026 TransferChek. All rights reserved. 모든 대학 이름 및 로고는 해당 소유자의 상표입니다. TransferChek은 이들 대학과 공식적인 제휴 또는 보증 관계가 없습니다.",
     "site_title": "TransferChek | 미국 대학교 편입 준비 플랫폼",
     "site_subtitle": "미국 명문대 편입 전문 컨설팅",
     "nav_pricing": "구독 요금 플랜",
@@ -1474,6 +1492,7 @@ function switchLanguage(lang) {
   renderEligibilityResults();
   buildRoadmap();
   renderStrategyTimeline();
+  renderAuthState();
   
   const reqSelVal = qs("#requirementSelect")?.value;
   if (reqSelVal) {
@@ -4098,7 +4117,7 @@ async function hashPassword(password) {
 function renderAuthState() {
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
-  qs("#authStatus").textContent = currentUser ? currentUser : "Guest";
+  qs("#authStatus").textContent = currentUser ? currentUser : t("guest_label", "Guest");
   qs("#loginOpenBtn").classList.toggle("hidden", Boolean(currentUser));
   qs("#signupOpenBtn").classList.toggle("hidden", Boolean(currentUser));
   qs("#logoutBtn").classList.toggle("hidden", !currentUser);
@@ -4112,9 +4131,9 @@ function renderAuthState() {
 function openAuthModal(mode) {
   const modal = qs("#authModal");
   modal.dataset.mode = mode;
-  qs("#authTitle").textContent = mode === "signup" ? "Sign up" : "Log in";
-  qs("#authModeLabel").textContent = mode === "signup" ? "Create account" : "Account";
-  qs("#authSubmitBtn").textContent = mode === "signup" ? "Create account" : "Log in";
+  qs("#authTitle").textContent = mode === "signup" ? t("auth_modal_title_signup", "Sign up") : t("auth_modal_title_login", "Log in");
+  qs("#authModeLabel").textContent = mode === "signup" ? t("auth_modal_label_signup", "Create account") : t("auth_modal_label_login", "Account");
+  qs("#authSubmitBtn").textContent = mode === "signup" ? t("auth_modal_btn_signup", "Create account") : t("auth_modal_btn_login", "Log in");
   qs("#authMessage").textContent = "";
   qs("#authPassword").value = "";
   
@@ -5594,8 +5613,28 @@ function renderStrategyTimeline() {
   const track = state.strategyTrack || "stem";
   const steps = STRATEGY_DATA[lang]?.[track] || STRATEGY_DATA["en"]?.[track] || [];
 
+  const FEATURE_TAB_MAP = {
+    "01. 지원 가능 판단": "eligibility",
+    "02. 편입 요건 검색": "requirements",
+    "03. 수강 로드맵 빌더": "roadmap",
+    "04. AI 에세이 전략가": "essay",
+    "01. Eligibility Diagnostics": "eligibility",
+    "02. Prerequisite Finder": "requirements",
+    "03. Roadmap Builder": "roadmap",
+    "04. EssayAI": "essay"
+  };
+
   container.innerHTML = steps.map((step, index) => {
     const stepNum = String(index + 1).padStart(2, '0');
+    const parsedTip = step.tip.replace(/\[([^\]]+)\]/g, (match, p1) => {
+      const cleanKey = p1.trim();
+      const tab = FEATURE_TAB_MAP[cleanKey];
+      if (tab) {
+        return `<a href="#demo" onclick="handleDrawerNavigation('${tab}'); return false;" style="color: var(--accent); font-weight: 800; text-decoration: underline; cursor: pointer;">${cleanKey}</a>`;
+      }
+      return match;
+    });
+
     return `
       <div class="guide-card">
         <div class="guide-step-num" style="width: 48px; height: 48px; border-radius: 12px; background: rgba(197, 168, 128, 0.15); color: var(--accent); display: grid; place-items: center; font-size: 20px; font-weight: 900; flex-shrink: 0;">${stepNum}</div>
@@ -5605,7 +5644,7 @@ function renderStrategyTimeline() {
             ${step.body}
           </p>
           <div style="background: rgba(15, 30, 54, 0.03); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.5;">
-            ${step.tip}
+            ${parsedTip}
           </div>
         </div>
       </div>
