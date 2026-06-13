@@ -12,6 +12,7 @@ const TRANSLATIONS = {
     "footer_copyright": "&copy; 2026 TransferChek. All rights reserved. All university names and logos are trademarks of their respective owners. TransferChek has no official affiliation or endorsement relationship with these universities.",
     "site_title": "TransferChek | Top U.S. University Transfer Strategy Engine",
     "site_subtitle": "Top U.S. University Transfer Advisory",
+    "refer_to_catalog_wording": "Refer to official catalog wording below",
     "nav_pricing": "Subscription Plans",
     "nav_solution": "Features",
     "nav_statcompass": "01. StatCompass",
@@ -418,6 +419,7 @@ const TRANSLATIONS = {
     "footer_copyright": "&copy; 2026 TransferChek. All rights reserved. 모든 대학 이름 및 로고는 해당 소유자의 상표입니다. TransferChek은 이들 대학과 공식적인 제휴 또는 보증 관계가 없습니다.",
     "site_title": "TransferChek | 미국 대학교 편입 준비 플랫폼",
     "site_subtitle": "미국 명문대 편입 전문 컨설팅",
+    "refer_to_catalog_wording": "아래 공식 요강 안내를 참조하세요",
     "nav_pricing": "구독 요금 플랜",
     "nav_solution": "주요 서비스",
     "nav_statcompass": "01. 지원 가능 판단",
@@ -815,6 +817,7 @@ const TRANSLATIONS = {
     "drawer_lang_label": "选择语言 (Language)",
     "site_title": "TransferChek | 美国顶尖大学转学策略分析平台",
     "site_subtitle": "全美顶尖大学转学专业咨询",
+    "refer_to_catalog_wording": "请参阅下方的官方说明",
     "nav_pricing": "订阅会员方案",
     "nav_solution": "主要服务",
     "nav_statcompass": "01. StatCompass",
@@ -1345,8 +1348,22 @@ const state = {
   language: localStorage.getItem("transferCompassLang") || "en",
   essayCredits: parseInt(localStorage.getItem("transferCompassEssayCredits") || (localStorage.getItem("transferCompassPlan") === "Premium" ? "1" : "0"), 10),
   pendingPasses: parseInt(localStorage.getItem("transferCompassPendingPasses") || "0", 10),
-  unlockedSchools: JSON.parse(localStorage.getItem("transferCompassUnlockedSchools") || "[]"),
-  analyzedSchools: new Set(JSON.parse(localStorage.getItem("transferCompassAnalyzedSchools") || "[]")),
+  unlockedSchools: (() => {
+    try {
+      const val = localStorage.getItem("transferCompassUnlockedSchools");
+      return val ? JSON.parse(val) : [];
+    } catch {
+      return [];
+    }
+  })(),
+  analyzedSchools: (() => {
+    try {
+      const val = localStorage.getItem("transferCompassAnalyzedSchools");
+      return new Set(val ? JSON.parse(val) : []);
+    } catch {
+      return new Set();
+    }
+  })(),
   admissionYear: 2026,
   admissionTerm: "Fall",
   track: "stem",
@@ -1746,7 +1763,11 @@ function displayRequirement(value, fallback) {
 }
 
 function displayRawRequirement(rawValue, numericValue) {
-  return rawValue || displayRequirement(numericValue);
+  let val = rawValue || displayRequirement(numericValue);
+  if (typeof val === 'string' && val.toLowerCase().includes("refer to official catalog wording below")) {
+    return t("refer_to_catalog_wording", "Refer to official catalog wording below");
+  }
+  return val;
 }
 
 function isUnspecifiedText(value) {
@@ -3226,7 +3247,7 @@ function renderRequirementDetail(programId) {
         ? `<article class="requirement-card">
             <h3>English Requirements</h3>
             <div class="check-list">${renderEnglishRequirementRows(program.english)}</div>
-            <p>${escapeHtml(program.english?.raw || "")}</p>
+            <p>${escapeHtml(program.english?.raw === "Refer to official catalog wording below" ? t("refer_to_catalog_wording", "Refer to official catalog wording below") : (program.english?.raw || ""))}</p>
           </article>`
         : ""
     }
