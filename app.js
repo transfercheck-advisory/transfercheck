@@ -1,5 +1,6 @@
 const TRANSLATIONS = {
   "en": {
+    "drawer_lang_label": "Language",
     "alert_login_required": "You must log in or register to select a plan.",
     "guest_label": "Guest",
     "auth_modal_title_login": "Log in",
@@ -405,6 +406,7 @@ const TRANSLATIONS = {
     "profile_nationality_label": "Nationality"
   },
   "ko": {
+    "drawer_lang_label": "언어 선택 (Language)",
     "alert_login_required": "구독 요금제를 선택하거나 크레딧을 구매하려면 먼저 로그인하거나 회원가입을 해야 합니다.",
     "guest_label": "게스트",
     "auth_modal_title_login": "로그인",
@@ -810,6 +812,7 @@ const TRANSLATIONS = {
     "profile_nationality_label": "국적"
   },
   "zh": {
+    "drawer_lang_label": "选择语言 (Language)",
     "site_title": "TransferChek | 美国顶尖大学转学策略分析平台",
     "site_subtitle": "全美顶尖大学转学专业咨询",
     "nav_pricing": "订阅会员方案",
@@ -1442,6 +1445,10 @@ function switchLanguage(lang) {
   const langSelector = qs("#langSelector");
   if (langSelector) {
     langSelector.value = lang;
+  }
+  const drawerLangSelector = qs("#drawerLangSelector");
+  if (drawerLangSelector) {
+    drawerLangSelector.value = lang;
   }
   
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -3880,6 +3887,9 @@ function bindEvents() {
   qs("#langSelector")?.addEventListener("change", (event) => {
     switchLanguage(event.target.value);
   });
+  qs("#drawerLangSelector")?.addEventListener("change", (event) => {
+    switchLanguage(event.target.value);
+  });
   qs("#openPricingBtn")?.addEventListener("click", (event) => {
     event.preventDefault();
     openPricingModal();
@@ -5152,31 +5162,6 @@ function bindEssay() {
     if (modeDirect) modeDirect.click();
   });
 
-  // 5. Academic Track & Strategy Timeline Track bindings
-  const trackSelector = qs("#trackSelector");
-  if (trackSelector) {
-    trackSelector.value = state.track || "stem";
-    trackSelector.addEventListener("change", (event) => {
-      state.track = event.target.value;
-      saveProfileToLocalStorage();
-      renderCourseGroups();
-      renderEligibilityResults();
-      buildRoadmap();
-    });
-  }
-
-  qsa(".strategy-track-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      qsa(".strategy-track-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      state.strategyTrack = btn.dataset.track;
-      renderStrategyTimeline();
-    });
-  });
-
-  // Render strategy timeline initially
-  renderStrategyTimeline();
-
   updateEssayCreditsUI();
 }
 
@@ -5205,6 +5190,33 @@ function updateEssayCreditsUI() {
   updateTabLockStates();
 }
 window.updateEssayCreditsUI = updateEssayCreditsUI;
+
+function bindTracks() {
+  const trackSelector = qs("#trackSelector");
+  if (trackSelector) {
+    trackSelector.value = state.track || "stem";
+    trackSelector.addEventListener("change", (event) => {
+      state.track = event.target.value;
+      saveProfileToLocalStorage();
+      renderCourseGroups();
+      renderEligibilityResults();
+      buildRoadmap();
+    });
+  }
+
+  qsa(".strategy-track-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      qsa(".strategy-track-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      state.strategyTrack = btn.dataset.track;
+      renderStrategyTimeline();
+    });
+  });
+
+  // Render strategy timeline initially
+  renderStrategyTimeline();
+}
+window.bindTracks = bindTracks;
 
 function updateEssaySchoolStatusUI() {
   const schoolSelect = qs("#essayTargetSchool");
@@ -5393,6 +5405,7 @@ function init() {
   bindFeedback();
   bindAuth();
   bindEssay();
+  bindTracks();
 
   // Sync loaded profile state with DOM inputs
   const gpaInput = qs("#gpaInput");

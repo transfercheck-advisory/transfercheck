@@ -34,7 +34,7 @@
     />
     <!-- Portone SDK -->
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
-    <link rel="stylesheet" href="./styles.css?v=20260613-v1" />
+    <link rel="stylesheet" href="./styles.css?v=20260613-v1333" />
   </head>
   <body>
     <header class="site-header">
@@ -67,6 +67,7 @@
         <select id="langSelector" style="background: var(--surface-strong); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; color: var(--ink); width: auto; font-size: 12px; font-weight: 700; cursor: pointer; outline: none;">
           <option value="en">English</option>
           <option value="ko">한국어</option>
+          <option value="zh">中文</option>
         </select>
         <div class="auth-actions" id="authActions">
           <span id="authStatus">Guest</span>
@@ -889,10 +890,10 @@
     </div>
 
     <!-- Data scripts -->
-    <script src="./transfer-data.js?v=20260613-v1"></script>
-    <script src="./course-catalog.js?v=20260613-v1"></script>
-    <script src="./admissions-cases.js?v=20260613-v1"></script>
-    <script src="./app.js?v=20260613-v1"></script>
+    <script src="./transfer-data.js?v=20260613-v1333"></script>
+    <script src="./course-catalog.js?v=20260613-v1333"></script>
+    <script src="./admissions-cases.js?v=20260613-v1333"></script>
+    <script src="./app.js?v=20260613-v1333"></script>
 
     <!-- Feature Ad Modal -->
     <div class="auth-modal hidden" id="featureAdModal" role="dialog" aria-modal="true" aria-labelledby="adModalTitle">
@@ -951,6 +952,15 @@
             </span>
           </div>
           <button class="side-drawer-close" id="sideDrawerCloseBtn" onclick="closeSideDrawer()" aria-label="Close menu">&times;</button>
+        </div>
+        
+        <div style="padding: 12px 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; background: rgba(15, 30, 54, 0.02);">
+          <span style="font-size: 12px; font-weight: 700; color: var(--muted);" data-i18n="drawer_lang_label">Language / 언어</span>
+          <select id="drawerLangSelector" style="background: var(--surface-strong); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; color: var(--ink); width: auto; font-size: 12px; font-weight: 700; cursor: pointer; outline: none;">
+            <option value="en">English</option>
+            <option value="ko">한국어</option>
+            <option value="zh">中文</option>
+          </select>
         </div>
         
         <!-- User status in drawer -->
