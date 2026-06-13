@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const tls = require('tls');
 const vm = require('vm');
+const { createClient } = require('@supabase/supabase-js');
 
 // Load .env variables without external dependencies
 const envPath = path.join(__dirname, '.env');
@@ -17,6 +18,18 @@ if (fs.existsSync(envPath)) {
       process.env[key] = val;
     }
   });
+}
+
+// Initialize Supabase Admin Client
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+let supabaseAdmin = null;
+if (supabaseUrl && supabaseServiceRoleKey) {
+  supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey, {
+    auth: { persistSession: false }
+  });
+} else {
+  console.warn("Supabase configurations are missing in .env. Database operations might fail.");
 }
 
 const PORT = 3000;
@@ -79,6 +92,132 @@ const server = http.createServer((req, res) => {
   const rawUrl = req.url || "";
   let safeUrl = rawUrl.split('?')[0];
   if (safeUrl === '/') safeUrl = '/index.html';
+
+  // API Route: Verify Payment and Update Plan
+  if (req.method === 'POST' && safeUrl === '/api/payments/verify') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', async () => {
+      try {
+        const parsed = JSON.parse(body);
+        const { imp_uid, merchant_uid, plan, email, userId } = parsed;
+
+        if (!userId || !plan) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'userId and plan are required' }));
+          return;
+        }
+
+        if (!supabaseAdmin) {
+          res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'Supabase is not initialized on the server.' }));
+          return;
+        }
+
+        // Portone Verification Hook
+        const portoneApiKey = process.env.PORTONE_API_KEY;
+        const portoneApiSecret = process.env.PORTONE_API_SECRET;
+        
+        let verified = true;
+        if (portoneApiKey && portoneApiSecret && imp_uid) {
+          try {
+            // Get access token from Portone
+            const tokenResponse = await fetch('https://api.iamport.kr/users/getToken', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ imp_key: portoneApiKey, imp_secret: portoneApiSecret })
+            });
+            const tokenResult = await tokenResponse.json();
+            
+            if (tokenResult.code === 0) {
+              const accessToken = tokenResult.response.access_token;
+              
+              // Fetch payment info from Portone
+              const paymentResponse = await fetch(`https://api.iamport.kr/payments/${imp_uid}`, {
+                headers: { 'Authorization': accessToken }
+              });
+              const paymentResult = await paymentResponse.json();
+              
+              if (paymentResult.code === 0 && paymentResult.response.status === 'paid') {
+                // Match amount
+                const expectedAmount = plan === 'Premium' ? 19900 : 9900;
+                if (paymentResult.response.amount !== expectedAmount) {
+                  verified = false;
+                  console.error(`Amount mismatch: expected ${expectedAmount}, got ${paymentResult.response.amount}`);
+                }
+              } else {
+                verified = false;
+              }
+            } else {
+              verified = false;
+            }
+          } catch (e) {
+            console.error("Portone verification API call failed:", e);
+            verified = false;
+          }
+        } else {
+          console.log("Portone verification skipped (API keys not configured). Assuming payment is valid.");
+        }
+
+        if (!verified) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'Payment verification failed.' }));
+          return;
+        }
+
+        // Calculate credits to add
+        let essayCreditsToAdd = 0;
+        if (plan === 'Premium') {
+          essayCreditsToAdd = 1;
+        }
+
+        // Update public.profiles table using Supabase Admin Client
+        const { data: profile, error: selectError } = await supabaseAdmin
+          .from('profiles')
+          .select('essay_credits')
+          .eq('id', userId)
+          .single();
+
+        if (selectError) {
+          console.error("Failed to select user profile:", selectError);
+          res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'Failed to retrieve user profile.' }));
+          return;
+        }
+
+        const newCredits = (profile?.essay_credits || 0) + essayCreditsToAdd;
+
+        const { error: updateError } = await supabaseAdmin
+          .from('profiles')
+          .update({
+            plan: plan,
+            essay_credits: newCredits,
+            updated_at: new Date().toISOString()
+          })
+          .eq('id', userId);
+
+        if (updateError) {
+          console.error("Failed to update user profile in Supabase:", updateError);
+          res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'Failed to upgrade plan in database.' }));
+          return;
+        }
+
+        // Update local stats config
+        const stats = getStats();
+        stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
+        stats.planCounts[plan] = (stats.planCounts[plan] || 0) + 1;
+        saveStats(stats);
+
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true, plan, essayCredits: newCredits }));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: err.message }));
+      }
+    });
+    return;
+  }
 
   // API Route: Get Admin Stats
   if (req.method === 'GET' && safeUrl === '/api/admin-stats') {

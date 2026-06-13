@@ -1163,22 +1163,34 @@ const AUTH_STORAGE_KEY = "transferCompassAuth";
 const PROFILE_STORAGE_KEY = "transferCompassProfile";
 const PORTONE_TEST_MODE = false; // Set to false for live production payments
 
+// Supabase Configuration
+const SUPABASE_URL = "https://dqgyxiqkqrykrupfzipl.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRxZ3l4aXFrcXJ5a3J1cGZ6aXBsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNDE5MTcsImV4cCI6MjA5NjkxNzkxN30.nTFg5gBQnJGQ1AsSKdVxJiH9JYN7gAyd9RD1hN-SIAI";
+let sbClient = null;
+try {
+  if (window.supabase && typeof window.supabase.createClient === 'function') {
+    sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  }
+} catch (e) {
+  console.warn("Supabase client initialization failed:", e);
+}
+
 const STRATEGY_DATA = {
   en: {
     stem: [
       {
-        title: "Target Research & Majors",
-        body: "Define your transfer program (CS, Economics, Psychology, etc.). Check cumulative prerequisite GPA and credit thresholds early on.",
+        title: "Target Research & Engineering Majors",
+        body: "Define your target engineering program (Computer Science, Mechanical, Electrical, etc.). Check cumulative prerequisite GPA and credit thresholds early on.",
         tip: "💡 Platform Tip: Use [01. Eligibility Diagnostics] to input your current GPA and credits to get a real-time assessment of your target schools."
       },
       {
         title: "Prerequisite Mapping & Sequential Planning",
-        body: "Transfer programs are highly prerequisite-dependent. Complete core math, science, or general education requirements early. Missing key prerequisites can lead to automatic rejection.",
+        body: "Transfer engineering programs are highly prerequisite-dependent. Complete core math (Calculus I/II/III, Linear Algebra), general physics (Physics), chemistry, and programming fundamentals early. Missing key prerequisites can lead to automatic rejection.",
         tip: "💡 Platform Tip: Use [02. Prerequisite Finder] to search target universities and instantly load required minimum grades and lab rules."
       },
       {
         title: "Strategic Community College (CC) Selection",
-        body: "Select CCs with strong articulation agreements (like California CCs utilizing ASSIST.org) to guarantee maximum credit transferability and state-wide priority selection.",
+        body: "Select CCs with strong articulation agreements (like California CCs utilizing ASSIST.org) to guarantee maximum engineering course credit transferability and state-wide priority selection.",
         tip: "💡 Platform Tip: Select target schools and inspect 'Residency & Institution' policies to optimize credit evaluations."
       },
       {
@@ -1187,8 +1199,8 @@ const STRATEGY_DATA = {
         tip: "💡 Platform Tip: Use [03. Roadmap Builder] to automatically build term-by-term lecture and lab schedules matching your target timelines."
       },
       {
-        title: "Qualitative Assets: Projects & AI Essay Prep",
-        body: "Admissions committees evaluate holistic factors. Build projects, lead student clubs, gain internships, and prepare essays connecting your achievements to target university goals.",
+        title: "Qualitative Assets: Engineering Projects & AI Essay Prep",
+        body: "Admissions committees evaluate qualitative engineering assets holistically. Build coding projects, lead robotics clubs, gain technical internships, and prepare essays connecting your achievements to target university lab goals.",
         tip: "💡 Platform Tip: Use [04. EssayAI] to draft and polish admissions essay outlines and structure mock interview answers."
       }
     ],
@@ -1250,13 +1262,13 @@ const STRATEGY_DATA = {
   ko: {
     stem: [
       {
-        title: "목표 대학 및 전공 탐색 (Target Research)",
-        body: "자신이 편입하고자 하는 대학교와 학과를 명확히 정의합니다. 각 대학의 입학처 요강과 정량적 합격 지표(GPA, 최저 학점)를 먼저 검토해야 합니다.",
+        title: "목표 대학 및 공학 전공 탐색 (Target Research)",
+        body: "자신이 편입하고자 하는 대학교의 공과대학 및 학과(컴퓨터공학, 기계공학, 전기공학 등)를 명확히 정의합니다. 각 대학의 입학처 요강과 정량적 합격 지표(GPA, 최저 학점)를 먼저 검토해야 합니다.",
         tip: "💡 플랫폼 활용 팁: [01. 지원 가능 판단] 기능에서 현재의 GPA와 이수 학점을 입력하여 각 타겟 대학교의 안정/소신 지원 가능 여부를 실시간으로 진단해 보십시오."
       },
       {
         title: "선수과목 및 요구 요건 완벽 파악 (Prerequisite Mapping)",
-        body: "미국 대학 편입 심사에서 선수과목(Prerequisites) 이수 여부는 절대적입니다. 핵심 수학, 과학 또는 전공 필수 과목 중 하나라도 누락되면 서류 심사에서 자동으로 즉시 탈락 처리됩니다.",
+        body: "미국 공대 편입 심사에서 선수과목(Prerequisites) 이수 여부는 절대적입니다. 핵심 수학(Calculus I/II/III, Linear Algebra), 일반 물리(Physics), 화학(Chemistry), 프로그래밍 필수 과목 중 하나라도 누락되면 서류 심사에서 자동으로 즉시 탈락 처리됩니다.",
         tip: "💡 플랫폼 활용 팁: [02. 편입 요건 검색] 기능으로 타겟 학교/학과를 조회하여 공식 입학처 요강과 100% 동일한 선수과목 목록 및 최저 성적 조건(GPA Threshold)을 간편하게 조회할 수 있습니다."
       },
       {
@@ -1271,7 +1283,7 @@ const STRATEGY_DATA = {
       },
       {
         title: "정성적 스펙 철저 준비 - 에세이 & 교외 활동 (Qualitative Assets)",
-        body: "상위권 대학 편입 합격을 결정짓는 마지막 열쇠는 에세이(Personal Statement / SOP)와 모의 면접입니다. 본인의 학업 성과(GPA)와 더불어, 교내외 활동, 프로젝트 성과 등을 전공 관심사와 결합하여 설득력 있는 스토리로 전달해야 합니다.",
+        body: "상위권 대학 공대 편입 합격을 결정짓는 마지막 열쇠는 에세이(Personal Statement / SOP)와 모의 면접입니다. 본인의 학업 성과(GPA)와 더불어, 교내외 활동, 프로젝트 성과(코딩 프로젝트, 로봇 공학 등)를 전공 관심사와 결합하여 설득력 있는 스토리로 전달해야 합니다.",
         tip: "💡 플랫폼 활용 팁: [04. AI 에세이 전략가]와 [AI 인터뷰 질문 생성기]를 활용해 자신의 전공 프로젝트 경험과 강점을 각 대학이 요구하는 인재상에 딱 맞춘 강력한 에세이 구조와 모의 답변으로 설계해 보십시오."
       }
     ],
@@ -1390,6 +1402,37 @@ function saveProfileToLocalStorage() {
     track: state.track
   };
   localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profileData));
+  saveProfileToSupabase();
+}
+
+function normalizeSlots(slots, limit) {
+  if (!Array.isArray(slots)) return Array.from({ length: limit }, () => ({ school: "", major: "" }));
+  const seen = new Set();
+  const progs = allPrograms();
+  let loaded = slots.map(slot => {
+    let school = "";
+    let major = "";
+    if (typeof slot === "string") {
+      const prog = progs.find(p => p.id === slot);
+      if (prog) {
+        school = prog.school.name;
+        major = prog.name;
+      }
+    } else if (slot && typeof slot === "object") {
+      school = slot.school || "";
+      major = slot.major || "";
+    }
+    const key = `${(school || "").trim()}:${(major || "").trim()}`;
+    if (key !== ":" && seen.has(key)) {
+      return { school: "", major: "" };
+    }
+    if (key !== ":") seen.add(key);
+    return { school, major };
+  }).slice(0, limit);
+  while (loaded.length < limit) {
+    loaded.push({ school: "", major: "" });
+  }
+  return loaded;
 }
 
 function loadProfileFromLocalStorage() {
@@ -1413,34 +1456,10 @@ function loadProfileFromLocalStorage() {
       state.completedCourses = new Set(profile.completedCourses);
     }
     if (Array.isArray(profile.targetSlots)) {
-      const seen = new Set();
-      let loadedSlots = profile.targetSlots.map(slot => {
-        const key = `${slot.school?.trim() || ""}:${slot.major?.trim() || ""}`;
-        if (key !== ":" && seen.has(key)) {
-          return { school: "", major: "" };
-        }
-        if (key !== ":") seen.add(key);
-        return slot;
-      }).slice(0, 10);
-      while (loadedSlots.length < 10) {
-        loadedSlots.push({ school: "", major: "" });
-      }
-      state.targetSlots = loadedSlots;
+      state.targetSlots = normalizeSlots(profile.targetSlots, 10);
     }
     if (Array.isArray(profile.roadmapTargetSlots)) {
-      const seen = new Set();
-      let loadedSlots = profile.roadmapTargetSlots.map(slot => {
-        const key = `${slot.school?.trim() || ""}:${slot.major?.trim() || ""}`;
-        if (key !== ":" && seen.has(key)) {
-          return { school: "", major: "" };
-        }
-        if (key !== ":") seen.add(key);
-        return slot;
-      }).slice(0, 7);
-      while (loadedSlots.length < 7) {
-        loadedSlots.push({ school: "", major: "" });
-      }
-      state.roadmapTargetSlots = loadedSlots;
+      state.roadmapTargetSlots = normalizeSlots(profile.roadmapTargetSlots, 7);
     }
   } catch (e) {
     console.error("Failed to load profile from localStorage:", e);
@@ -1657,9 +1676,30 @@ window.selectUserPlan = function(plan) {
       buyer_email: currentUser,
       buyer_name: buyerName,
       buyer_tel: buyerPhone
-    }, function(rsp) {
+    }, async function(rsp) {
       if (rsp.success) {
-        applyPlanUpgrade(plan);
+        try {
+          const verifyResponse = await fetch('/api/payments/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              imp_uid: rsp.imp_uid,
+              merchant_uid: rsp.merchant_uid,
+              plan: plan,
+              email: currentUser,
+              userId: supabaseUserSession?.user?.id
+            })
+          });
+          const verifyResult = await verifyResponse.json();
+          if (verifyResult.success) {
+            applyPlanUpgrade(plan, verifyResult.essayCredits);
+          } else {
+            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+          }
+        } catch (e) {
+          console.error("Payment verification request failed:", e);
+          alert(t("payment_failed", "Payment verification failed."));
+        }
       } else {
         alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
       }
@@ -1669,7 +1709,7 @@ window.selectUserPlan = function(plan) {
   }
 };
 
-function applyPlanUpgrade(plan) {
+function applyPlanUpgrade(plan, forceCredits = null) {
   state.plan = plan;
   localStorage.setItem("transferCompassPlan", plan);
   
@@ -1678,22 +1718,36 @@ function applyPlanUpgrade(plan) {
   if (currentUser) {
     const prevPlan = authState.users[currentUser].plan || "Free";
     authState.users[currentUser].plan = plan;
-    if (plan === "Premium") {
-      const now = new Date();
-      const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
-      authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks || [];
-      // Premium credits do not stack, so remove any previous premium credit packs
-      authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks.filter(p => p.type !== "premium");
-      authState.users[currentUser].creditPacks.push({
-        id: `premium_${Date.now()}`,
-        type: "premium",
-        count: 1,
-        expiresAt: expiresAt
-      });
+    
+    if (supabaseUserProfile) {
+      supabaseUserProfile.plan = plan;
     }
-    const totalCredits = syncUserEssayCredits(currentUser, authState);
-    state.essayCredits = totalCredits;
-    localStorage.setItem("transferCompassEssayCredits", totalCredits.toString());
+    
+    if (forceCredits !== null) {
+      authState.users[currentUser].essayCredits = forceCredits;
+      state.essayCredits = forceCredits;
+      localStorage.setItem("transferCompassEssayCredits", forceCredits.toString());
+      if (supabaseUserProfile) {
+        supabaseUserProfile.essay_credits = forceCredits;
+      }
+    } else {
+      if (plan === "Premium") {
+        const now = new Date();
+        const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
+        authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks || [];
+        authState.users[currentUser].creditPacks = authState.users[currentUser].creditPacks.filter(p => p.type !== "premium");
+        authState.users[currentUser].creditPacks.push({
+          id: `premium_${Date.now()}`,
+          type: "premium",
+          count: 1,
+          expiresAt: expiresAt
+        });
+      }
+      const totalCredits = syncUserEssayCredits(currentUser, authState);
+      state.essayCredits = totalCredits;
+      localStorage.setItem("transferCompassEssayCredits", totalCredits.toString());
+    }
+    
     writeAuthState(authState);
     
     // Track plan change telemetry
@@ -4290,42 +4344,116 @@ function syncUserEssayCredits(currentUser, authState) {
   return totalCredits;
 }
 
-function readAuthState() {
+let supabaseUserSession = null;
+let supabaseUserProfile = null;
+
+async function syncSupabaseSession() {
+  if (!sbClient) return;
   try {
-    const state = JSON.parse(localStorage.getItem(AUTH_STORAGE_KEY) || "{}");
-    state.users = state.users || {};
-    
-    // Always inject/ensure haminkim@uwm.edu exists with Premium + Infinite credits
-    state.users["haminkim@uwm.edu"] = {
-      passwordHash: "c2d3283bfac96056cdafff8f76b1c159a7802671a4e9ba54d6c145c546bdec07",
-      fallbackHash: "fallback_77cf196e",
-      createdAt: "2026-06-08T22:15:00.000Z",
-      plan: "Premium",
-      essayCredits: 999999,
-      nationality: "Korea",
-      birthdate: "2006-06-03"
-    };
-    
-    return state;
-  } catch {
-    return {
-      users: {
-        "haminkim@uwm.edu": {
-          passwordHash: "c2d3283bfac96056cdafff8f76b1c159a7802671a4e9ba54d6c145c546bdec07",
-          fallbackHash: "fallback_77cf196e",
-          createdAt: "2026-06-08T22:15:00.000Z",
-          plan: "Premium",
-          essayCredits: 999999,
-          nationality: "Korea",
-          birthdate: "2006-06-03"
-        }
-      }
-    };
+    const { data: { session } } = await sbClient.auth.getSession();
+    supabaseUserSession = session;
+    if (session && session.user) {
+      const { data: profile } = await sbClient.from('profiles').select('*').eq('id', session.user.id).single();
+      supabaseUserProfile = profile;
+      
+      // Global state sync
+      state.plan = profile?.plan || "Free";
+      state.essayCredits = profile?.essay_credits || 0;
+      localStorage.setItem("transferCompassPlan", state.plan);
+      localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
+      
+      // Load user academic selections
+      await loadProfileFromSupabase();
+    } else {
+      supabaseUserProfile = null;
+    }
+  } catch (e) {
+    console.error("Failed to sync Supabase session:", e);
   }
 }
 
+async function saveProfileToSupabase() {
+  if (!sbClient || !supabaseUserSession) return;
+  try {
+    await sbClient.from('user_roadmaps').upsert({
+      user_id: supabaseUserSession.user.id,
+      target_slots: state.targetSlots,
+      gpa: state.gpa,
+      completed_credits: state.credits,
+      course_history: {
+        completedCourses: Array.from(state.completedCourses),
+        international: state.international,
+        englishType: state.englishType,
+        englishScore: state.englishScore,
+        englishWaiver: state.englishWaiver,
+        admissionYear: state.admissionYear,
+        admissionTerm: state.admissionTerm,
+        track: state.track
+      },
+      updated_at: new Date().toISOString()
+    });
+  } catch (e) {
+    console.warn("Failed to save profile to Supabase:", e);
+  }
+}
+
+async function loadProfileFromSupabase() {
+  if (!sbClient || !supabaseUserSession) return;
+  try {
+    const { data: roadmap, error } = await sbClient
+      .from('user_roadmaps')
+      .select('*')
+      .eq('user_id', supabaseUserSession.user.id)
+      .single();
+      
+    if (error || !roadmap) return;
+    
+    if (roadmap.gpa !== undefined && roadmap.gpa !== null) state.gpa = Number(roadmap.gpa);
+    if (roadmap.completed_credits !== undefined && roadmap.completed_credits !== null) state.credits = Number(roadmap.completed_credits);
+    
+    const history = roadmap.course_history || {};
+    if (history.international !== undefined) state.international = Boolean(history.international);
+    if (history.englishType !== undefined) state.englishType = history.englishType;
+    if (history.englishScore !== undefined) state.englishScore = Number(history.englishScore);
+    if (history.englishWaiver !== undefined) state.englishWaiver = Boolean(history.englishWaiver);
+    if (history.admissionYear !== undefined) state.admissionYear = Number(history.admissionYear);
+    if (history.admissionTerm !== undefined) state.admissionTerm = history.admissionTerm;
+    if (history.track !== undefined) {
+      state.track = history.track;
+      state.strategyTrack = history.track;
+    }
+    if (Array.isArray(history.completedCourses)) {
+      state.completedCourses = new Set(history.completedCourses);
+    }
+    if (Array.isArray(roadmap.target_slots)) {
+      state.targetSlots = normalizeSlots(roadmap.target_slots, 10);
+    }
+    
+    saveProfileToLocalStorage();
+  } catch (e) {
+    console.warn("Failed to load profile from Supabase:", e);
+  }
+}
+
+function readAuthState() {
+  const currentUser = supabaseUserSession?.user?.email || "";
+  const mockUsers = {};
+  if (currentUser) {
+    mockUsers[currentUser] = {
+      plan: supabaseUserProfile?.plan || "Free",
+      essayCredits: supabaseUserProfile?.essay_credits || 0,
+      nationality: supabaseUserProfile?.nationality || "Other",
+      birthdate: supabaseUserProfile?.birthdate || ""
+    };
+  }
+  return {
+    currentUser: currentUser,
+    users: mockUsers
+  };
+}
+
 function writeAuthState(authState) {
-  localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authState));
+  // Handled by Supabase DB & Auth Session. No-op.
 }
 
 async function hashPassword(password) {
@@ -4453,27 +4581,20 @@ function bindAuth() {
   
   qs("#passwordChangeForm")?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const currPass = qs("#profileCurrentPassword").value;
     const newPass = qs("#profileNewPassword").value;
     const feedbackMsg = qs("#profileMessage");
     
-    const authState = readAuthState();
-    const email = authState.currentUser;
-    if (!email) return;
+    if (!supabaseUserSession) return;
     
-    const currHash = await hashPassword(currPass);
-    const user = authState.users[email];
+    const { error } = await sbClient.auth.updateUser({ password: newPass });
     
-    if (user.passwordHash !== currHash) {
+    if (error) {
       if (feedbackMsg) {
-        feedbackMsg.textContent = t("password_change_invalid", "Current password does not match.");
+        feedbackMsg.textContent = t("password_change_invalid", "Failed to update password: ") + error.message;
         feedbackMsg.style.color = "var(--danger)";
       }
       return;
     }
-    
-    user.passwordHash = await hashPassword(newPass);
-    writeAuthState(authState);
     
     if (feedbackMsg) {
       feedbackMsg.textContent = t("password_change_success", "Password updated successfully!");
@@ -4483,10 +4604,12 @@ function bindAuth() {
     qs("#profileCurrentPassword").value = "";
     qs("#profileNewPassword").value = "";
   });
-  qs("#logoutBtn")?.addEventListener("click", () => {
-    const authState = readAuthState();
-    authState.currentUser = "";
-    writeAuthState(authState);
+  qs("#logoutBtn")?.addEventListener("click", async () => {
+    if (sbClient) {
+      await sbClient.auth.signOut();
+    }
+    supabaseUserSession = null;
+    supabaseUserProfile = null;
     
     // Reset state and localStorage
     state.plan = "Free";
@@ -4517,25 +4640,20 @@ function bindAuth() {
     const mode = qs("#authModal").dataset.mode || "login";
     const email = qs("#authEmail").value.trim().toLowerCase();
     const password = qs("#authPassword").value;
-    const passwordHash = await hashPassword(password);
-    const authState = readAuthState();
-    authState.users = authState.users || {};
+    const messageEl = qs("#authMessage");
+    
     let nationality = "Other";
     
     if (mode === "signup") {
       const consentInput = qs("#authConsent");
       if (consentInput && !consentInput.checked) {
-        qs("#authMessage").textContent = t("auth_consent_error", "You must agree to the Terms and Privacy Policy to register.");
-        return;
-      }
-      if (authState.users[email]) {
-        qs("#authMessage").textContent = t("auth_email_exists", "An account with this email already exists on this browser.");
+        if (messageEl) messageEl.textContent = t("auth_consent_error", "You must agree to the Terms and Privacy Policy to register.");
         return;
       }
       
       const birthdateVal = qs("#authBirthdate")?.value;
       if (!birthdateVal) {
-        qs("#authMessage").textContent = t("auth_birthdate_required", "Please enter your birthdate.");
+        if (messageEl) messageEl.textContent = t("auth_birthdate_required", "Please enter your birthdate.");
         return;
       }
       const birthDate = new Date(birthdateVal);
@@ -4549,18 +4667,27 @@ function bindAuth() {
       nationality = qs("#authNationality")?.value || "Other";
       const limitAge = nationality === "Korea" ? 14 : 13;
       if (age < limitAge) {
-        qs("#authMessage").textContent = t("auth_underage_error", "You must be 14 or older (13 for US/other) to register.");
+        if (messageEl) messageEl.textContent = t("auth_underage_error", "You must be 14 or older (13 for US/other) to register.");
         return;
       }
       
-      authState.users[email] = { 
-        passwordHash, 
-        createdAt: new Date().toISOString(),
-        plan: "Free",
-        essayCredits: 0,
-        nationality: nationality,
-        birthdate: birthdateVal
-      };
+      if (messageEl) messageEl.textContent = "Registering...";
+      
+      const { data, error } = await sbClient.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            nationality,
+            birthdate: birthdateVal
+          }
+        }
+      });
+      
+      if (error) {
+        if (messageEl) messageEl.textContent = error.message;
+        return;
+      }
       
       // Track signup event on server
       fetch('/api/track-signup', {
@@ -4571,13 +4698,17 @@ function bindAuth() {
       }).catch(e => console.warn("Failed to send signup telemetry:", e));
       
     } else {
-      const user = authState.users[email];
-      const isValid = user && (user.passwordHash === passwordHash || user.fallbackHash === passwordHash);
-      if (!isValid) {
-        qs("#authMessage").textContent = t("auth_invalid_credentials", "Email or password does not match this browser.");
+      if (messageEl) messageEl.textContent = "Logging in...";
+      
+      const { data, error } = await sbClient.auth.signInWithPassword({
+        email,
+        password
+      });
+      
+      if (error) {
+        if (messageEl) messageEl.textContent = error.message;
         return;
       }
-      nationality = user.nationality || "Other";
       
       // Track login event on server
       fetch('/api/track-login', {
@@ -4587,17 +4718,10 @@ function bindAuth() {
         body: JSON.stringify({ nationality })
       }).catch(e => console.warn("Failed to send login telemetry:", e));
     }
-    authState.currentUser = email;
     
-    // Load their plan and essayCredits from their profile
-    const totalCredits = syncUserEssayCredits(email, authState);
-    const userProfile = authState.users[email] || {};
-    state.plan = userProfile.plan || "Free";
-    state.essayCredits = totalCredits;
-    localStorage.setItem("transferCompassPlan", state.plan);
-    localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
+    // Sync session and fetch profile data from DB
+    await syncSupabaseSession();
     
-    writeAuthState(authState);
     renderAuthState();
     updateActivePlanLabel();
     updatePlanNoticeVisibility();
@@ -4645,11 +4769,10 @@ function bindEssay() {
   const schoolSelect = qs("#essayTargetSchool");
   const generateBtn = qs("#generateEssayBtn");
   const outlineContent = qs("#essayOutlineContent");
-  const menu = qs("#essayTargetMenu");
   const container = qs("#essayTargetContainer");
   const toggleBtn = container ? container.querySelector(".autocomplete-toggle-btn") : null;
   
-  if (!schoolSelect || !generateBtn || !outlineContent || !menu || !container) return;
+  if (!schoolSelect || !generateBtn || !outlineContent || !container) return;
 
   const programs = allPrograms().sort((a, b) => {
     const sA = a.school.name.localeCompare(b.school.name);
@@ -5597,7 +5720,7 @@ function applyEssayCreditsPurchase() {
   alert(alertMsg);
 }
 
-function init() {
+async function init() {
   // Initialize Portone SDK Test Mode
   const IMP = window.IMP;
   if (IMP) {
@@ -5608,15 +5731,11 @@ function init() {
   fetch('/api/track-visit', { method: 'POST', cache: 'no-store' })
     .catch(e => console.warn("Failed to send visit telemetry:", e));
 
+  // Sync Supabase Session and User Profile
+  await syncSupabaseSession();
+
   const authState = readAuthState();
   let currentUser = authState.currentUser || "";
-  
-  // Enforce Premium status and infinite credits for admin email
-  if (currentUser === "haminkim@uwm.edu") {
-    authState.users[currentUser].plan = "Premium";
-    authState.users[currentUser].essayCredits = 999999;
-    writeAuthState(authState);
-  }
 
   if (!currentUser) {
     state.plan = "Free";
@@ -5624,11 +5743,10 @@ function init() {
     localStorage.setItem("transferCompassPlan", "Free");
     localStorage.setItem("transferCompassEssayCredits", "0");
   } else {
-    const totalCredits = syncUserEssayCredits(currentUser, authState);
-    writeAuthState(authState);
+    // If logged in via Supabase, readAuthState populated plan & essayCredits
     const userProfile = authState.users[currentUser] || {};
     state.plan = userProfile.plan || "Free";
-    state.essayCredits = totalCredits;
+    state.essayCredits = userProfile.essayCredits || 0;
     localStorage.setItem("transferCompassPlan", state.plan);
     localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
   }
@@ -5678,7 +5796,7 @@ function init() {
   }
 }
 
-init();
+init().catch(e => console.error("Init failed:", e));
 
 function openFeatureAd(featureId) {
   const modal = qs("#featureAdModal");
