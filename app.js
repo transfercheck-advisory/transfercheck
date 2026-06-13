@@ -946,7 +946,7 @@ const TRANSLATIONS = {
     "tier_premium_price": "29,900 KRW/月",
     "tier_premium_desc": "转学规划全包套件 (当月失效)",
     "tier_premium_feature1": "资格评估、先修课程搜索引擎、最优选课路线规划服务无限制使用",
-    "tier_premium_feature2": "包含 AI 转学文书策略家 (服务4) 5次使用额度 (需在订阅月内使用)",
+    "tier_premium_feature2": "包含 AI 转学文书策略家 (服务4) 5次使用额度 (需在订阅 month 内使用)",
     "tier_essay_pass_name": "AI 写作5次加油包",
     "tier_essay_pass_price": "6,900 KRW",
     "tier_essay_pass_desc": "文书5次使用额度 (3个月有效)",
@@ -983,7 +983,7 @@ const TRANSLATIONS = {
     "review_course_desc": "先修课程条件",
     "review_extra_desc": "其他待验证项",
     "choice_note": "多选一先修课说明",
-    "review_reason": "需人工核对项",
+    "review_reason": "需人工核对",
     "choice_label_pref": "多选一:",
     "review_count_alert": "请注意: 有 {count} 个项目需要您去官网核对",
     "search_empty": "未找到搜索结果",
@@ -1000,6 +1000,7 @@ const TRANSLATIONS = {
     "tag_pass": "已匹配",
     "tag_fail": "未匹配",
     "roadmap_extra_summary": "其他必修要求 {count} 项",
+    "roadmap_required_summary": "要求 {count} 项",
     "roadmap_extra_note": "以下项计入评估，不仅仅是推荐建议。",
     "roadmap_recommended_summary": "推荐要求 {count} 项 • 非必须",
     "roadmap_review_summary": "需人工核实项 {count} 个",
@@ -2500,6 +2501,8 @@ function renderRoadmapTargetPicker() {
 }
 
 function renderEligibilityResults() {
+  const container = qs("#eligibilityResults");
+  if (!container) return;
   let selectedPrograms = allPrograms().filter((program) => state.selectedTargets.includes(program.id));
   let isExample = false;
   if (selectedPrograms.length === 0) {
@@ -2511,7 +2514,7 @@ function renderEligibilityResults() {
     }
   }
 
-  qs("#eligibilityResults").innerHTML =
+  container.innerHTML =
     selectedPrograms
       .map((program, idx) => {
         const evaluation = evaluateProgram(program);
@@ -2783,28 +2786,33 @@ function renderRequirementControls() {
     menu.classList.add("open");
   };
 
-  qs("#requirementSelect").addEventListener("change", () => renderRequirementDetail(qs("#requirementSelect").value));
+  qs("#requirementSelect")?.addEventListener("change", () => {
+    const reqSel = qs("#requirementSelect");
+    if (reqSel) renderRequirementDetail(reqSel.value);
+  });
   let requirementBlurTimeout;
-  qs("#requirementSearch").addEventListener("focus", (event) => {
+  qs("#requirementSearch")?.addEventListener("focus", (event) => {
     clearTimeout(requirementBlurTimeout);
     renderRequirementMenu(event.target.value);
   });
-  qs("#requirementSearch").addEventListener("blur", () => {
+  qs("#requirementSearch")?.addEventListener("blur", () => {
     requirementBlurTimeout = setTimeout(() => {
       qs("#requirementMenu")?.classList.remove("open");
     }, 200);
   });
-  qs("#requirementSearch").addEventListener("input", (event) => renderRequirementMenu(event.target.value));
-  qs("#requirementMenu").addEventListener("mousedown", (event) => {
+  qs("#requirementSearch")?.addEventListener("input", (event) => renderRequirementMenu(event.target.value));
+  qs("#requirementMenu")?.addEventListener("mousedown", (event) => {
     clearTimeout(requirementBlurTimeout);
     const button = event.target.closest("[data-pick-requirement]");
     if (!button) return;
     event.preventDefault();
     const program = allPrograms().find((item) => item.id === button.dataset.pickRequirement);
     if (!program) return;
-    qs("#requirementSearch").value = `${program.school.name} · ${program.name}`;
-    qs("#requirementSelect").value = program.id;
-    qs("#requirementMenu").classList.remove("open");
+    const reqSearch = qs("#requirementSearch");
+    if (reqSearch) reqSearch.value = `${program.school.name} · ${program.name}`;
+    const reqSelect = qs("#requirementSelect");
+    if (reqSelect) reqSelect.value = program.id;
+    qs("#requirementMenu")?.classList.remove("open");
     renderRequirementDetail(program.id);
   });
   document.addEventListener("click", (event) => {
@@ -2996,9 +3004,11 @@ function getCompetitiveProfile(program) {
 }
 
 function renderRequirementDetail(programId) {
+  const container = qs("#requirementDetail");
+  if (!container) return;
   const isSearchEmpty = !qs("#requirementSearch")?.value?.trim();
   if (!programId || isSearchEmpty) {
-    qs("#requirementDetail").innerHTML = `
+    container.innerHTML = `
       <div class="placeholder-view" style="text-align: center; padding: 60px 20px;">
         <div style="font-size: 48px; margin-bottom: 20px;">🔍</div>
         <h3 style="color: var(--foreground); margin-bottom: 8px;" data-i18n="req_finder_placeholder_title">${escapeHtml(t("req_finder_placeholder_title"))}</h3>
@@ -3243,7 +3253,7 @@ function renderRequirementDetail(programId) {
     ${casesHtml}
   `;
 
-  qs("#requirementDetail").innerHTML = detailHtml;
+  container.innerHTML = detailHtml;
 }
 
 function orderRoadmapCourses(courses) {
@@ -3755,7 +3765,7 @@ function bindEvents() {
     });
   });
 
-  qs("#gpaInput").addEventListener("input", (event) => {
+  qs("#gpaInput")?.addEventListener("input", (event) => {
     let val = event.target.value;
     if (val === "") return;
     let num = Number(val);
@@ -3766,7 +3776,7 @@ function bindEvents() {
     saveProfileToLocalStorage();
     renderEligibilityResults();
   });
-  qs("#gpaInput").addEventListener("blur", (event) => {
+  qs("#gpaInput")?.addEventListener("blur", (event) => {
     let num = Number(event.target.value);
     if (isNaN(num) || event.target.value === "") num = 3.0;
     if (num < 0) num = 0;
@@ -3778,7 +3788,7 @@ function bindEvents() {
     renderEligibilityResults();
   });
 
-  qs("#creditsInput").addEventListener("input", (event) => {
+  qs("#creditsInput")?.addEventListener("input", (event) => {
     let val = event.target.value;
     if (val === "") return;
     let num = Math.floor(Number(val));
@@ -3789,7 +3799,7 @@ function bindEvents() {
     saveProfileToLocalStorage();
     renderEligibilityResults();
   });
-  qs("#creditsInput").addEventListener("blur", (event) => {
+  qs("#creditsInput")?.addEventListener("blur", (event) => {
     let num = Math.floor(Number(event.target.value));
     if (isNaN(num) || event.target.value === "") num = 0;
     if (num < 0) num = 0;
@@ -3800,27 +3810,27 @@ function bindEvents() {
     renderEligibilityResults();
   });
 
-  qs("#internationalInput").addEventListener("change", (event) => {
+  qs("#internationalInput")?.addEventListener("change", (event) => {
     state.international = event.target.checked;
-    qs("#englishFields").classList.toggle("hidden", !state.international || state.englishWaiver);
-    qs("#englishWaiverRow").classList.toggle("hidden", !state.international);
+    qs("#englishFields")?.classList.toggle("hidden", !state.international || state.englishWaiver);
+    qs("#englishWaiverRow")?.classList.toggle("hidden", !state.international);
     saveProfileToLocalStorage();
     renderEligibilityResults();
   });
-  qs("#englishWaiverInput").addEventListener("change", (event) => {
+  qs("#englishWaiverInput")?.addEventListener("change", (event) => {
     state.englishWaiver = event.target.checked;
-    qs("#englishFields").classList.toggle("hidden", state.englishWaiver || !state.international);
+    qs("#englishFields")?.classList.toggle("hidden", state.englishWaiver || !state.international);
     saveProfileToLocalStorage();
     renderEligibilityResults();
   });
-  qs("#englishTypeInput").addEventListener("change", (event) => {
+  qs("#englishTypeInput")?.addEventListener("change", (event) => {
     state.englishType = event.target.value;
     updateEnglishScoreInputConstraints();
     saveProfileToLocalStorage();
     renderEligibilityResults();
     buildRoadmap();
   });
-  qs("#englishScoreInput").addEventListener("input", (event) => {
+  qs("#englishScoreInput")?.addEventListener("input", (event) => {
     let val = event.target.value;
     if (val === "") return;
     let num = Number(val);
@@ -3833,7 +3843,7 @@ function bindEvents() {
     saveProfileToLocalStorage();
     renderEligibilityResults();
   });
-  qs("#englishScoreInput").addEventListener("blur", (event) => {
+  qs("#englishScoreInput")?.addEventListener("blur", (event) => {
     let num = Number(event.target.value);
     const maxMap = { TOEFL: 120, TOEFL_2026: 6, IELTS: 9, Duolingo: 160 };
     const maxVal = maxMap[state.englishType] || 120;
@@ -3846,22 +3856,22 @@ function bindEvents() {
     renderEligibilityResults();
   });
 
-  qs("#checkEligibilityBtn").addEventListener("click", () => {
+  qs("#checkEligibilityBtn")?.addEventListener("click", () => {
     renderEligibilityResults();
     scrollToSection("#eligibilityResults");
   });
 
-  qs("#buildRoadmapBtn").addEventListener("click", buildRoadmap);
+  qs("#buildRoadmapBtn")?.addEventListener("click", buildRoadmap);
   const roadmapTarget = qs("#roadmapTarget");
   if (roadmapTarget) {
     roadmapTarget.addEventListener("change", buildRoadmap);
   }
-  qs("#admissionYear").addEventListener("change", (event) => {
+  qs("#admissionYear")?.addEventListener("change", (event) => {
     state.admissionYear = Number(event.target.value);
     saveProfileToLocalStorage();
     buildRoadmap();
   });
-  qs("#admissionTerm").addEventListener("change", (event) => {
+  qs("#admissionTerm")?.addEventListener("change", (event) => {
     state.admissionTerm = event.target.value;
     saveProfileToLocalStorage();
     buildRoadmap();
@@ -3870,7 +3880,10 @@ function bindEvents() {
   qs("#langSelector")?.addEventListener("change", (event) => {
     switchLanguage(event.target.value);
   });
-  qs("#openPricingBtn")?.addEventListener("click", openPricingModal);
+  qs("#openPricingBtn")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    openPricingModal();
+  });
   qs("#pricingCloseBtn")?.addEventListener("click", closePricingModal);
   qs("#pricingModal")?.addEventListener("click", (event) => {
     if (event.target.id === "pricingModal") closePricingModal();
@@ -4117,11 +4130,16 @@ async function hashPassword(password) {
 function renderAuthState() {
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
-  qs("#authStatus").textContent = currentUser ? currentUser : t("guest_label", "Guest");
-  qs("#loginOpenBtn").classList.toggle("hidden", Boolean(currentUser));
-  qs("#signupOpenBtn").classList.toggle("hidden", Boolean(currentUser));
-  qs("#logoutBtn").classList.toggle("hidden", !currentUser);
-  qs("#profileOpenBtn").classList.toggle("hidden", !currentUser);
+  
+  const authStatus = qs("#authStatus");
+  if (authStatus) {
+    authStatus.textContent = currentUser ? currentUser : t("guest_label", "Guest");
+  }
+  
+  qs("#loginOpenBtn")?.classList.toggle("hidden", Boolean(currentUser));
+  qs("#signupOpenBtn")?.classList.toggle("hidden", Boolean(currentUser));
+  qs("#logoutBtn")?.classList.toggle("hidden", !currentUser);
+  qs("#profileOpenBtn")?.classList.toggle("hidden", !currentUser);
   
   if (typeof renderSideDrawerUserSection === "function") {
     renderSideDrawerUserSection();
@@ -4130,12 +4148,23 @@ function renderAuthState() {
 
 function openAuthModal(mode) {
   const modal = qs("#authModal");
+  if (!modal) return;
   modal.dataset.mode = mode;
-  qs("#authTitle").textContent = mode === "signup" ? t("auth_modal_title_signup", "Sign up") : t("auth_modal_title_login", "Log in");
-  qs("#authModeLabel").textContent = mode === "signup" ? t("auth_modal_label_signup", "Create account") : t("auth_modal_label_login", "Account");
-  qs("#authSubmitBtn").textContent = mode === "signup" ? t("auth_modal_btn_signup", "Create account") : t("auth_modal_btn_login", "Log in");
-  qs("#authMessage").textContent = "";
-  qs("#authPassword").value = "";
+  
+  const authTitle = qs("#authTitle");
+  if (authTitle) authTitle.textContent = mode === "signup" ? t("auth_modal_title_signup", "Sign up") : t("auth_modal_title_login", "Log in");
+  
+  const authModeLabel = qs("#authModeLabel");
+  if (authModeLabel) authModeLabel.textContent = mode === "signup" ? t("auth_modal_label_signup", "Create account") : t("auth_modal_label_login", "Account");
+  
+  const authSubmitBtn = qs("#authSubmitBtn");
+  if (authSubmitBtn) authSubmitBtn.textContent = mode === "signup" ? t("auth_modal_btn_signup", "Create account") : t("auth_modal_btn_login", "Log in");
+  
+  const authMessage = qs("#authMessage");
+  if (authMessage) authMessage.textContent = "";
+  
+  const authPassword = qs("#authPassword");
+  if (authPassword) authPassword.value = "";
   
   const consentRow = qs("#authConsentRow");
   const consentInput = qs("#authConsent");
