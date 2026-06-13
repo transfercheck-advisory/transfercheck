@@ -1155,7 +1155,7 @@ const courseCatalog = window.courseCatalog || [];
 const FEEDBACK_STORAGE_KEY = "transferCompassFeedback";
 const AUTH_STORAGE_KEY = "transferCompassAuth";
 const PROFILE_STORAGE_KEY = "transferCompassProfile";
-const PORTONE_TEST_MODE = true; // Set to false for live production payments
+const PORTONE_TEST_MODE = false; // Set to false for live production payments
 
 const STRATEGY_DATA = {
   en: {
