@@ -4688,6 +4688,16 @@ function bindAuth() {
         if (messageEl) messageEl.textContent = error.message;
         return;
       }
+
+      if (!data.session) {
+        if (messageEl) {
+          messageEl.textContent = state.language === "ko"
+            ? "인증 메일이 발송되었습니다! 메일함에서 링크를 클릭해 인증 완료 후 로그인해 주세요."
+            : "Verification email sent! Please check your inbox and verify your email to log in.";
+          messageEl.className = "feedback-status success";
+        }
+        return;
+      }
       
       // Track signup event on server
       fetch('/api/track-signup', {
