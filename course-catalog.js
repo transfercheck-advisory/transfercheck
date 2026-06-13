@@ -407,5 +407,109 @@ window.courseCatalog = [
       "relevant science co-requisite", "intermediate foreign language proficiency", "second language proficiency",
       "core liberal arts courses", "geos 1004", "geology 1 \\+ lab", "eas 2250", "cee 3510", "lib 1600", "information literacy"
     ]
+  },
+  {
+    id: "micro-econ",
+    name: "Intro to Microeconomics",
+    category: "Business",
+    level: 1,
+    hasLab: false,
+    patterns: ["introduction to microeconomics", "intro to microeconomics", "microeconomics", "econ 200", "econ 101", "econ 51"]
+  },
+  {
+    id: "macro-econ",
+    name: "Intro to Macroeconomics",
+    category: "Business",
+    level: 1,
+    hasLab: false,
+    patterns: ["introduction to macroeconomics", "intro to macroeconomics", "macroeconomics", "econ 201", "econ 102", "econ 52"]
+  },
+  {
+    id: "fin-acctg",
+    name: "Financial Accounting",
+    category: "Business",
+    level: 2,
+    hasLab: false,
+    patterns: ["financial accounting", "financial reporting", "acctg 215", "acc 201", "ba 211"]
+  },
+  {
+    id: "man-acctg",
+    name: "Managerial Accounting",
+    category: "Business",
+    level: 2,
+    hasLab: false,
+    patterns: ["managerial accounting", "introduction to managerial accounting", "acctg 225", "acc 202", "ba 212"]
+  },
+  {
+    id: "bus-law",
+    name: "Business Law",
+    category: "Business",
+    level: 2,
+    hasLab: false,
+    patterns: ["business law", "introduction to law", "mgmt 200", "bul 3130", "legal environment of business"]
+  },
+  {
+    id: "bus-stats",
+    name: "Business Statistics",
+    category: "Business",
+    level: 1,
+    hasLab: false,
+    patterns: ["business statistics", "introductory statistical methods", "qmeth 201", "sta 2023", "stats for business"]
+  },
+  {
+    id: "intro-psych",
+    name: "Intro to Psychology",
+    category: "SocialSciences",
+    level: 1,
+    hasLab: false,
+    patterns: ["introduction to psychology", "intro to psychology", "general psychology", "psych 101", "psy 1012"]
+  },
+  {
+    id: "intro-soc",
+    name: "Intro to Sociology",
+    category: "SocialSciences",
+    level: 1,
+    hasLab: false,
+    patterns: ["introduction to sociology", "intro to sociology", "general sociology", "soc 101", "syg 2000"]
+  },
+  {
+    id: "public-speaking",
+    name: "Public Speaking",
+    category: "Humanities",
+    level: 1,
+    hasLab: false,
+    patterns: ["public-speaking", "public speaking", "introduction to communication", "speech 101", "spc 1017"]
+  },
+  {
+    id: "us-history",
+    name: "US History",
+    category: "Humanities",
+    level: 1,
+    hasLab: false,
+    patterns: ["us history", "u.s. history", "united states history", "hist 1301", "hist 1302"]
+  },
+  {
+    id: "world-history",
+    name: "World History / Western Civ",
+    category: "Humanities",
+    level: 1,
+    hasLab: false,
+    patterns: ["world history", "western civilization", "hist 1111", "hist 1112"]
+  },
+  {
+    id: "intro-phil",
+    name: "Intro to Philosophy",
+    category: "Humanities",
+    level: 1,
+    hasLab: false,
+    patterns: ["introduction to philosophy", "intro to philosophy", "general philosophy", "phil 101", "phi 2010"]
+  },
+  {
+    id: "foreign-lang",
+    name: "Foreign Language Sequence",
+    category: "Humanities",
+    level: 2,
+    hasLab: false,
+    patterns: ["foreign language", "second language", "spanish", "french", "german", "chinese", "korean"]
   }
 ];

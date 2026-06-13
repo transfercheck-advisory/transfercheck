@@ -1,0 +1,870 @@
+[
+  {
+    "school": "University of Notre Dame",
+    "majors": [
+      {
+        "name": "Aerospace Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "CHEM 10172 - General Chemistry II (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Note: Aerospace Engineering is traditionally closed or has very limited space for transfers. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Chemical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "CHEM 10172 - General Chemistry II (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "Rigorous Science Technical Elective (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "Rigorous Science Technical Elective (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Computer Science",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "Rigorous Science Technical Elective (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Note: Computer Science is traditionally closed or has very limited space for transfers. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "Rigorous Science Technical Elective (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Environmental Earth Sciences",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "CHEM 10172 - General Chemistry II (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Syllabus submission required for all completed college courses."
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.7 or higher",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (at least one full academic year)",
+        "requiredCourses": [
+          "MATH 10550 - Calculus I",
+          "MATH 10560 - Calculus II",
+          "CHEM 10171 - General Chemistry I with Lab",
+          "PHYS 10310 - General Physics I with Lab (Calculus-based)",
+          "CHEM 10172 - General Chemistry II (no lab required)",
+          "Writing and Rhetoric / Composition"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 minimum recommended, Duolingo: 125 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://admissions.nd.edu/apply/transfer-applicants/transfer-prerequisites/. Note: Mechanical Engineering is traditionally closed or has very limited space for transfers. Syllabus submission required for all completed college courses."
+      }
+    ]
+  },
+  {
+    "school": "Vanderbilt University",
+    "majors": [
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Chemical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Computer Science",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Engineering Science",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.5+ (3.7+ competitive)",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed after high school graduation; must complete at least 63 credits at Vanderbilt to graduate",
+        "requiredCourses": [
+          "Calculus I & II (equivalent to MATH 1300 & 1301)",
+          "Two semesters of laboratory-based General Chemistry and/or Calculus-based General Physics relevant to the major"
+        ],
+        "recommendedCourses": [
+          "Calculus III (equivalent to MATH 2300)",
+          "MATH 2420 - Methods of Ordinary Differential Equations with Linear Algebra (or MATH 2600 & 2610)",
+          "Additional major-specific foundational math, science, and engineering courses"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.0 recommended, Duolingo: 120 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://engineering.vanderbilt.edu/admissions/undergraduate/transfer.php"
+      }
+    ]
+  },
+  {
+    "school": "Boston College",
+    "majors": [
+      {
+        "name": "Human-Centered Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "No official minimum GPA, typical admitted GPA is 3.0+ minimum (3.7+ competitive)",
+        "minCredits": 9,
+        "rawMinCredits": "9 transferable semester credits completed prior to application deadline",
+        "requiredCourses": [
+          "Calculus I & II (MATH 1103 & MATH 1104 equivalent)",
+          "Calculus-based Physics I with Lab",
+          "General Chemistry I with Lab",
+          "Engineering Modeling, Computation, and Programming"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo (DET): 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from transfer admissions page: https://www.bc.edu/bc-web/admissions/undergraduate/how-to-apply/transfer-applicants.html. Note: Human-Centered Engineering (HCE) has a cohort-based structure and limited capacity, and currently does not have an active external transfer policy (closed/highly restricted)."
+      }
+    ]
+  },
+  {
+    "school": "University of Rochester",
+    "majors": [
+      {
+        "name": "Aerospace Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Audio and Music Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Chemical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Computer Science",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Introduction to Computer Science / Programming (CSC 171 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Introduction to Web Design / Programming II (CSC 172 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Electrical and Computer Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "Introduction to Computer Science / Programming (CSC 171 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Engineering and Applied Sciences",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html. This is an interdisciplinary program."
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Geomechanics",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Materials Science",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      },
+      {
+        "name": "Optical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum GPA to apply, typical admitted GPA is 3.5+ (median 3.6)",
+        "minCredits": 12,
+        "rawMinCredits": "Varies (typically 12-24 semester hours to apply), must complete at least 48 credits at Rochester to graduate",
+        "requiredCourses": [
+          "Calculus I (MATH 161 equivalent)",
+          "Calculus II (MATH 162 equivalent)",
+          "Calculus-based Physics I - Mechanics (PHYS 121 equivalent)",
+          "General Chemistry I (CHEM 131 or 137 equivalent)",
+          "Primary Writing Requirement (WRTG 105 equivalent, completed with B or better)"
+        ],
+        "recommendedCourses": [
+          "Calculus III / Multidimensional Calculus (MATH 164 equivalent)",
+          "Linear Algebra & Differential Equations (MATH 165 equivalent)",
+          "Calculus-based Physics II - Electricity & Magnetism (PHYS 122 equivalent)"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 100 recommended, IELTS: 7.5 recommended, Duolingo: 130 recommended",
+          "TOEFL": 100
+        },
+        "note": "Official requirements from admissions website: https://www.rochester.edu/college/admissions/apply/transfer/major-prerequisites.html"
+      }
+    ]
+  },
+  {
+    "school": "University of Maryland",
+    "majors": [
+      {
+        "name": "Aerospace Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Bioengineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or approved substitute like CHEM 271 / CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Chemical and Biomolecular Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Civil and Environmental Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Fire Protection Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Materials Science and Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3.0,
+        "rawMinGpa": "3.0 minimum cumulative GPA across all college coursework",
+        "minCredits": 12,
+        "rawMinCredits": "12 transferable credits completed, but 30+ credits strongly recommended",
+        "requiredCourses": [
+          "MATH 141 - Calculus II (grade of B- or better)",
+          "PHYS 161 - General Physics I: Mechanics (grade of B- or better)",
+          "CHEM 135 - General Chemistry for Engineers (or CHEM 131 & 132; grade of C- or better)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL iBT: 96 minimum, IELTS: 7.0 minimum, Duolingo: 120 minimum",
+          "TOEFL": 96
+        },
+        "note": "Official LEP requirements: https://lep.umd.edu/engineering.html. Admission is competitive. Limited to only one gateway or performance review course repeat, which counts 'W' as an attempt."
+      }
+    ]
+  }
+]

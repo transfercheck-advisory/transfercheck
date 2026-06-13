@@ -1,0 +1,580 @@
+[
+  {
+    "school": "Drexel University",
+    "majors": [
+      {
+        "name": "Architectural Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Chemical Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Construction Management",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [],
+        "recommendedCourses": [
+          "Pre-calculus"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Construction Management does not have specific course prerequisites for admission, though Pre-calculus is recommended."
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Engineering Technology",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [],
+        "recommendedCourses": [
+          "Pre-calculus"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Engineering Technology does not have specific course prerequisites for admission, though Pre-calculus is recommended."
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Materials Science and Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 2.75,
+        "rawMinGpa": "2.75 cumulative GPA (3.0 for Dual Admissions)",
+        "minCredits": 24,
+        "rawMinCredits": "24 semester credits (if under 24 credits, high school transcript and SAT/ACT may be required)",
+        "requiredCourses": [
+          "Pre-calculus or Calculus",
+          "Chemistry with lab",
+          "Physics with lab"
+        ],
+        "recommendedCourses": [
+          "Calculus I",
+          "Calculus II",
+          "Physics I with lab"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 79 (minimum 20 in each subsection); IELTS: 6.5 (minimum 6.5 in each subsection); Duolingo: 110",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://drexel.edu/undergrad/apply/prereqs. Transfer applicants must complete or have in progress these prerequisites. At least two of the prerequisites, including the math course, must be completed at the time of application."
+      }
+    ]
+  },
+  {
+    "school": "Iowa State University",
+    "majors": [
+      {
+        "name": "Aerospace Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Agricultural Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Biological Systems Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Chemical Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Construction Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Cyber Security Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Industrial Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Materials Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      },
+      {
+        "name": "Software Engineering",
+        "minGpa": 2.25,
+        "rawMinGpa": "2.25 cumulative GPA (2.00 if applicant has earned an Associate's degree)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits (if fewer than 24, high school transcript and ACT/SAT scores are required)",
+        "requiredCourses": [
+          "MATH 165 - Calculus I",
+          "MATH 166 - Calculus II",
+          "CHEM 167 - General Chemistry for Engineering Students (or CHEM 177 - General Chemistry I)",
+          "ENGL 150 - Critical Thinking and Communication (with grade of C or better)",
+          "PHYS 221 - Introduction to Classical Physics I (or PHYS 231 & PHYS 231L)"
+        ],
+        "recommendedCourses": [
+          "ENGL 250 - Written, Oral, Visual, and Electronic Composition",
+          "LIB 160 - Introduction to College Level Research",
+          "ENGR 101 - Engineering Orientation"
+        ],
+        "english": {
+          "raw": "TOEFL iBT: 71 (minimum 17 on Speaking/Writing sections); IELTS: 6.0 (no subscore below 5.5); Duolingo: 105",
+          "TOEFL": 71
+        },
+        "note": "Official requirements from admissions website: https://www.admissions.iastate.edu/transfer/ and https://www.engineering.iastate.edu/transfer/. Students are admitted directly to the College of Engineering. Once admitted, they must complete the foundational 'Basic Program' (with a minimum 2.00 GPA in those courses) to progress to 200-level and above engineering courses."
+      }
+    ]
+  }
+]

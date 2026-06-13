@@ -31,7 +31,7 @@ try {
 
 // 13가지 핵심 추출 스키마 정의 (정밀 필드)
 const ExtractionSchema = {
-  description: "미국 공과대학 전공 편입 요건 데이터 스키마",
+  description: "미국 대학 전공 편입 요건 데이터 스키마",
   type: "object",
   properties: {
     schoolName: { type: "string", description: "대학 공식 이름 (예: University of Michigan)" },
@@ -94,7 +94,7 @@ const ExtractionSchema = {
 };
 
 const SYSTEM_INSTRUCTION = `
-당신은 미국 공과대학 편입 요건 데이터를 분석하는 전문 데이터 엔지니어입니다.
+당신은 미국 대학 편입 요건 데이터를 분석하는 전문 데이터 엔지니어입니다.
 주어진 대학교 전공 요강 텍스트를 정밀 분석하여, 지정된 JSON 스키마 규격에 완벽히 부합하는 정제된 구조화 데이터를 만드십시오.
 
 [주의 사항]

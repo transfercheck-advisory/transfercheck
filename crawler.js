@@ -24,6 +24,17 @@ const transferDataPath = path.join(root, 'transfer-data.js');
 // Helper to delay between requests (Gemini rate-limit & target server protection)
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// Helper to save database atomically
+function saveDatabase(database) {
+  try {
+    const rawUpdatedJs = `window.transferDatabase = ${JSON.stringify(database, null, 2)};\n`;
+    fs.writeFileSync(transferDataPath, rawUpdatedJs, 'utf8');
+    console.log(`💾 Saved database state to transfer-data.js.`);
+  } catch (err) {
+    console.error(`❌ Failed to save database to disk:`, err.message);
+  }
+}
+
 // Strip HTML tags and simplify text using regex to reduce tokens
 function cleanHtml(html) {
   return html
@@ -47,10 +58,22 @@ function fetchUrlContent(url, depth = 0) {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       },
-      timeout: 10000
+      timeout: 10000,
+      agent: false, // Prevent Node.js global connection pool deadlock
+      rejectUnauthorized: false // Prevent SSL cert failures on old university sites
     };
 
-    client.get(url, options, (res) => {
+    let finished = false;
+    
+    // Overall request timer to catch hanging connections
+    const overallTimer = setTimeout(() => {
+      if (finished) return;
+      finished = true;
+      req.destroy();
+      reject(new Error('Overall request timeout (15s)'));
+    }, 15000);
+
+    const req = client.get(url, options, (res) => {
       // Follow redirect
       if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
         let redirectUrl = res.headers.location;
@@ -58,19 +81,46 @@ function fetchUrlContent(url, depth = 0) {
           const urlObj = new URL(url);
           redirectUrl = `${urlObj.protocol}//${urlObj.host}${redirectUrl}`;
         }
+        clearTimeout(overallTimer);
+        finished = true;
         resolve(fetchUrlContent(redirectUrl, depth + 1));
         return;
       }
 
       if (res.statusCode !== 200) {
+        clearTimeout(overallTimer);
+        finished = true;
         reject(new Error(`HTTP Status Code: ${res.statusCode}`));
         return;
       }
 
       let data = '';
       res.on('data', (chunk) => { data += chunk; });
-      res.on('end', () => resolve(data));
-    }).on('error', (err) => reject(err));
+      res.on('end', () => {
+        if (!finished) {
+          clearTimeout(overallTimer);
+          finished = true;
+          resolve(data);
+        }
+      });
+    });
+
+    req.on('error', (err) => {
+      if (!finished) {
+        clearTimeout(overallTimer);
+        finished = true;
+        reject(err);
+      }
+    });
+
+    req.on('timeout', () => {
+      if (!finished) {
+        clearTimeout(overallTimer);
+        finished = true;
+        req.destroy();
+        reject(new Error('Request timeout (10s)'));
+      }
+    });
   });
 }
 
@@ -99,6 +149,29 @@ function parseSourceUrl(major) {
   return null;
 }
 
+// Wrapper function to handle Gemini API with exponential backoff retries
+async function extractWithRetry(textSample, retries = 5, delay = 5000) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const result = await extractRequirements(textSample);
+      return result;
+    } catch (err) {
+      const errMsg = err.message || "";
+      const isRateLimit = errMsg.includes('429') || errMsg.toLowerCase().includes('rate limit') || errMsg.toLowerCase().includes('quota');
+      const isTimeout = errMsg.toLowerCase().includes('timeout');
+      const isTransient = errMsg.includes('500') || errMsg.includes('503') || errMsg.includes('502');
+
+      if ((isRateLimit || isTimeout || isTransient) && attempt < retries) {
+        const backoff = delay * Math.pow(2, attempt - 1);
+        console.warn(`⚠️ Gemini API error (attempt ${attempt}/${retries}): ${errMsg}. Retrying in ${backoff / 1000}s...`);
+        await sleep(backoff);
+      } else {
+        throw err;
+      }
+    }
+  }
+}
+
 // Main execution function
 async function main() {
   const args = process.argv.slice(2);
@@ -125,6 +198,18 @@ async function main() {
     process.exit(1);
   }
 
+  // Register shutdown handlers to save data in case of manual stop or crash
+  let isShuttingDown = false;
+  const handleExit = () => {
+    if (isShuttingDown) return;
+    isShuttingDown = true;
+    console.log('\n🛑 Process interrupted. Saving final database state to disk before exiting...');
+    saveDatabase(database);
+    process.exit(0);
+  };
+  process.on('SIGINT', handleExit);
+  process.on('SIGTERM', handleExit);
+
   // 2. Collect target majors matching the argument filter
   const targets = [];
   database.schools.forEach(school => {
@@ -150,8 +235,17 @@ async function main() {
   console.log(`🚀 Found ${targets.length} target major(s) for crawling.`);
 
   // 3. Process targets sequentially
+  let unsavedCount = 0;
+  const SAVE_BATCH_SIZE = 20;
+
   for (let i = 0; i < targets.length; i++) {
     const { major, school, parentSchoolName } = targets[i];
+    
+    // Skip if raw text is already populated (to support resuming)
+    if (major.rawOfficialText && major.rawOfficialText.trim() !== '') {
+      continue;
+    }
+    
     console.log(`\n--------------------------------------------------`);
     console.log(`🔄 [${i + 1}/${targets.length}] Processing: ${parentSchoolName} - ${major.name}`);
     
@@ -171,10 +265,35 @@ async function main() {
       // Keep prompt short (max 12000 chars of text to avoid huge token bills)
       const textSample = cleanedText.slice(0, 12000);
       
+      // Save raw official text verbatim to the new field
+      major.rawOfficialText = textSample;
+      major.officialSourceUrl = url;
+      unsavedCount++;
+      
+      // Batch save raw text state to prevent OneDrive I/O locks on large file writes
+      if (unsavedCount >= SAVE_BATCH_SIZE) {
+        saveDatabase(database);
+        unsavedCount = 0;
+      } else {
+        console.log(`✍️  Cached changes for ${major.name} in memory (Pending batch save: ${unsavedCount}/${SAVE_BATCH_SIZE})`);
+      }
+      
+      const rawOnly = process.argv.includes('--raw-only');
+      if (rawOnly) {
+        console.log(`✓ [Raw-Only Mode] Saved raw official text for ${major.name}. Skipping Gemini extraction.`);
+        
+        // Delay 3 seconds to stay safe from IP blocking
+        if (i < targets.length - 1) {
+          console.log('⏳ Sleeping for 3 seconds before next crawler request...');
+          await sleep(3000);
+        }
+        continue;
+      }
+      
       console.log(`🧠 Text Extracted (${textSample.length} chars). Sending to Gemini AI...`);
       
-      // Call Gemini API
-      const geminiResult = await extractRequirements(textSample);
+      // Call Gemini API with retries
+      const geminiResult = await extractWithRetry(textSample);
       
       // 4. Update local DB Object with extracted fields
       major.minGpa = geminiResult.minGpa;
@@ -199,11 +318,12 @@ async function main() {
       major.confidence = 'needs_source_check';
 
       console.log(`✓ Data updated for ${major.name}. Marked as "Needs Review" for human check.`);
-
-      // 5. Instantly serialize database back to transfer-data.js on disk
-      const updatedJs = `window.transferDatabase = ${JSON.stringify(database, null, 2)};\n`;
-      fs.writeFileSync(transferDataPath, updatedJs, 'utf8');
-      console.log(`💾 Saved database state to transfer-data.js.`);
+      
+      // For full mode, write immediately or stick to batch saving
+      if (unsavedCount >= SAVE_BATCH_SIZE) {
+        saveDatabase(database);
+        unsavedCount = 0;
+      }
 
     } catch (err) {
       console.error(`❌ Failed processing ${major.name}:`, err.message);
@@ -214,6 +334,12 @@ async function main() {
       console.log('⏳ Sleeping for 3 seconds before next crawler request...');
       await sleep(3000);
     }
+  }
+
+  // Save any remaining changes at the very end
+  if (unsavedCount > 0) {
+    console.log(`🏁 Saving remaining ${unsavedCount} changes to disk...`);
+    saveDatabase(database);
   }
 
   console.log(`\n==================================================`);

@@ -1,0 +1,18 @@
+{
+  "totalVisits": 2,
+  "dailyVisits": {
+    "2026-06-10": 2
+  },
+  "nationalityAccess": {
+    "Korea": 0,
+    "USA": 0,
+    "China": 0,
+    "Other": 0
+  },
+  "planCounts": {
+    "Free": 0,
+    "Pro": 0,
+    "Premium": 0
+  },
+  "usersCount": 0
+}

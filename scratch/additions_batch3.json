@@ -1,0 +1,1263 @@
+[
+  {
+    "school": "Boston University",
+    "majors": [
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "3.5 typical competitive GPA (no strict minimum GPA cutoff)",
+        "minCredits": 12,
+        "rawMinCredits": "12 credits (at least 1 full-time semester)",
+        "requiredCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "recommendedCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "english": {
+          "raw": "TOEFL: 90-100 composite (minimum of 20 in each section); IELTS: 7.0 minimum; Duolingo: 125-135 minimum",
+          "TOEFL": 90
+        },
+        "note": "Official requirements from admissions website: https://www.bu.edu/eng/admissions/undergraduate/transfer/"
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "3.5 typical competitive GPA (no strict minimum GPA cutoff)",
+        "minCredits": 12,
+        "rawMinCredits": "12 credits (at least 1 full-time semester)",
+        "requiredCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "recommendedCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "english": {
+          "raw": "TOEFL: 90-100 composite (minimum of 20 in each section); IELTS: 7.0 minimum; Duolingo: 125-135 minimum",
+          "TOEFL": 90
+        },
+        "note": "Official requirements from admissions website: https://www.bu.edu/eng/admissions/undergraduate/transfer/"
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "3.5 typical competitive GPA (no strict minimum GPA cutoff)",
+        "minCredits": 12,
+        "rawMinCredits": "12 credits (at least 1 full-time semester)",
+        "requiredCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "recommendedCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "english": {
+          "raw": "TOEFL: 90-100 composite (minimum of 20 in each section); IELTS: 7.0 minimum; Duolingo: 125-135 minimum",
+          "TOEFL": 90
+        },
+        "note": "Official requirements from admissions website: https://www.bu.edu/eng/admissions/undergraduate/transfer/"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3.5,
+        "rawMinGpa": "3.5 typical competitive GPA (no strict minimum GPA cutoff)",
+        "minCredits": 12,
+        "rawMinCredits": "12 credits (at least 1 full-time semester)",
+        "requiredCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "recommendedCourses": [
+          "Calculus I (equivalent to CAS MA 123)",
+          "Calculus II (equivalent to CAS MA 124)",
+          "General Chemistry I with lab (equivalent to CAS CH 101 or CH 131)",
+          "General Physics I with lab (equivalent to CAS PY 211)"
+        ],
+        "english": {
+          "raw": "TOEFL: 90-100 composite (minimum of 20 in each section); IELTS: 7.0 minimum; Duolingo: 125-135 minimum",
+          "TOEFL": 90
+        },
+        "note": "Official requirements from admissions website: https://www.bu.edu/eng/admissions/undergraduate/transfer/"
+      }
+    ]
+  },
+  {
+    "school": "Cal Poly San Luis Obispo",
+    "majors": [
+      {
+        "name": "Aerospace Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Linear Analysis (MATH 244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "General Chemistry II (CHEM 125)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Linear Analysis (MATH 244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Computer Science",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Linear Algebra / Linear Analysis (MATH 206/244)",
+          "General Physics sequence (PHYS 141/142/143) OR General Chemistry sequence (CHEM 124/125/126)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)",
+          "Critical Thinking (GE Area A3)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Linear Analysis (MATH 244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "General Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Industrial Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Manufacturing Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Materials Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Calculus IV / Linear Analysis (MATH 241/244)",
+          "General Physics I (PHYS 141)",
+          "General Physics II (PHYS 142)",
+          "General Physics III (PHYS 143)",
+          "General Chemistry I (CHEM 124)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      },
+      {
+        "name": "Software Engineering",
+        "minGpa": 2,
+        "rawMinGpa": "2.00 minimum GPA (CSU requirement), but 3.45-3.93 typical admitted range",
+        "minCredits": 60,
+        "rawMinCredits": "60 transferable semester units (90 quarter units)",
+        "requiredCourses": [
+          "Calculus I (MATH 141)",
+          "Calculus II (MATH 142)",
+          "Calculus III (MATH 143)",
+          "Linear Algebra / Linear Analysis (MATH 206/244)",
+          "General Physics sequence (PHYS 141/142/143) OR General Chemistry sequence (CHEM 124/125/126)",
+          "Written Communication (GE Area A2)",
+          "Oral Communication (GE Area A1)",
+          "Critical Thinking (GE Area A3)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 115 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.calpoly.edu/admissions/transfer-student/selection-criteria/"
+      }
+    ]
+  },
+  {
+    "school": "Arizona State University",
+    "majors": [
+      {
+        "name": "Aerospace Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.html.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Chemical Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Chemistry II (CHM 116)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Chemistry II (CHM 116)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Computer Science",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "Linear Algebra (MAT 242)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "Linear Algebra (MAT 242)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Computer Systems Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Construction Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Engineering (Robotics, Automotive, Clean Energy, Mechanical, or Electrical Systems)",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Environmental and Sustainable Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Chemistry II (CHM 116)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Chemistry II (CHM 116)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Industrial Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Materials Science and Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Chemistry II (CHM 116)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Chemistry II (CHM 116)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "General Chemistry I (CHM 113)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      },
+      {
+        "name": "Software Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum cumulative transfer GPA (or 2.75 for secondary admission criteria based on critical courses)",
+        "minCredits": 24,
+        "rawMinCredits": "24 transferable semester credits",
+        "requiredCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "Linear Algebra (MAT 242)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "recommendedCourses": [
+          "Calculus for Engineers I (MAT 265)",
+          "Calculus for Engineers II (MAT 266)",
+          "Calculus for Engineers III (MAT 267)",
+          "Linear Algebra (MAT 242)",
+          "General Physics I (PHY 121 & 122 lab)",
+          "General Physics II (PHY 131 & 132 lab)"
+        ],
+        "english": {
+          "raw": "TOEFL: 79 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 79
+        },
+        "note": "Official requirements from admissions website: https://engineering.asu.edu/transfer-students/"
+      }
+    ]
+  },
+  {
+    "school": "Stony Brook University",
+    "majors": [
+      {
+        "name": "Applied Mathematics and Statistics",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus III (MAT 203 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Biomedical Engineering",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Chemical and Molecular Engineering",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Computer Engineering",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Computer Science",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Object-Oriented Programming (CSE 114 or equivalent)",
+          "Data Structures (CSE 214 or equivalent)",
+          "Discrete Mathematics (CSE 215 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Electrical Engineering",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Engineering Chemistry",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "General Chemistry I (CHE 131/133 or equivalent)",
+          "General Chemistry II (CHE 132/134 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Engineering Science",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Information Systems",
+        "minGpa": 3,
+        "rawMinGpa": "2.8 minimum for university admission, 3.0 minimum for Information Systems major (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Object-Oriented Programming (CSE 114 or equivalent)",
+          "Data Structures (CSE 214 or equivalent)",
+          "Discrete Mathematics (CSE 215 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3.2,
+        "rawMinGpa": "2.8 minimum for university admission, 3.2 minimum for CEAS majors (competitive)",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)",
+          "Calculus-based Physics I (PHY 131/133 or equivalent)",
+          "Calculus-based Physics II (PHY 132/134 or equivalent)",
+          "General Chemistry I (CHE 131 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      },
+      {
+        "name": "Technological Systems Management",
+        "minGpa": 2.8,
+        "rawMinGpa": "2.8 minimum for university admission, Technological Systems Management is non-restricted",
+        "minCredits": 24,
+        "rawMinCredits": "24 credits completed",
+        "requiredCourses": [
+          "Calculus I (MAT 131 or equivalent)",
+          "Calculus II (MAT 132 or equivalent)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; Duolingo: 105 minimum",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://www.stonybrook.edu/commcms/ceas-undergrad/admissions/transfer_students.php"
+      }
+    ]
+  },
+  {
+    "school": "University of Georgia",
+    "majors": [
+      {
+        "name": "Agricultural Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Biochemical Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [
+          "General Chemistry I with Lab (CHEM 1211 & 1211L)"
+        ],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Biological Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [
+          "General Chemistry I with Lab (CHEM 1211 & 1211L)"
+        ],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Civil Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Computer Systems Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Electrical and Electronics Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Environmental Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [
+          "General Chemistry I with Lab (CHEM 1211 & 1211L)"
+        ],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "minGpa": 3,
+        "rawMinGpa": "3.00 minimum for 60+ transferable credit hours, 3.30 minimum for 30-59 transferable credit hours",
+        "minCredits": 30,
+        "rawMinCredits": "30 transferable credit hours completed",
+        "requiredCourses": [
+          "Calculus I (MATH 2250)",
+          "Calculus II (MATH 2260)",
+          "General Physics I with Lab (PHYS 1211 & 1211L)",
+          "English Composition I (ENGL 1101)"
+        ],
+        "recommendedCourses": [],
+        "english": {
+          "raw": "TOEFL: 80 minimum; IELTS: 6.5 minimum; SAT: 480 EBRW; ACT: 17 English; Duolingo: not accepted",
+          "TOEFL": 80
+        },
+        "note": "Official requirements from admissions website: https://engineering.uga.edu/admissions/undergraduate-admissions/transfer-students/"
+      }
+    ]
+  }
+]
