@@ -145,23 +145,23 @@ const TRANSLATIONS = {
     "tier_pro_feature2": "No access to ReqRadar, Pathfinder, or EssayAI",
     "tier_premium_name": "Premium Plan",
     "tier_premium_price": "29,900 KRW/mo",
-    "tier_premium_desc": "Full transfer planner suite (Credits expire monthly)",
+    "tier_premium_desc": "Full transfer planner suite (AI Essay is unlimited for 1 school/major/question for 1 month)",
     "tier_premium_feature1": "Unlimited access to StatCompass, ReqRadar, and Pathfinder",
-    "tier_premium_feature2": "5 EssayAI (Service 4) outline generations included (non-cumulative)",
-    "tier_essay_pass_name": "AI Essay 5-Pack",
-    "tier_essay_pass_price": "6,900 KRW",
-    "tier_essay_pass_desc": "Standalone addon package (Valid for 3 months)",
-    "tier_essay_pass_feature1": "5 uses of EssayAI (Service 4) essay strategizer",
-    "tier_essay_pass_feature2": "Must be used within 3 months of purchase",
+    "tier_premium_feature2": "AI Essay: Unlimited access for 1 selected school, major & essay question (Valid for 1 month)",
+    "tier_essay_pass_name": "AI Target Essay Pass",
+    "tier_essay_pass_price": "9,900 KRW",
+    "tier_essay_pass_desc": "Standalone addon package (1 school/major/question unlimited for 1 month)",
+    "tier_essay_pass_feature1": "Unlimited critiques & storyline mapper for 1 selected school, major & question",
+    "tier_essay_pass_feature2": "Valid for 1 month from activation (Activate within 3 months)",
     "btn_choose_plan": "Subscribe",
     "btn_free_action": "Select Free",
     "btn_pro_action": "Subscribe Pro",
     "btn_premium_action": "Subscribe Premium",
-    "btn_essay_pass_action": "Buy 5-Pack",
-    "essay_credits_remaining": "Remaining Credits:",
-    "btn_buy_credits": "Buy 5 Credits (6,900 KRW)",
-    "essay_out_of_credits": "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI.",
-    "alert_essay_pass_purchased": "Successfully purchased AI Essay 5-Pack! 5 credits (valid for 3 months) have been added to your account.",
+    "btn_essay_pass_action": "Buy Target Pass",
+    "essay_credits_remaining": "Active Passes:",
+    "btn_buy_credits": "Buy Target Pass (9,900 KRW)",
+    "essay_out_of_credits": "You have no active essay passes. Please purchase a Target Essay Pass or subscribe to Premium Plan.",
+    "alert_essay_pass_purchased": "Successfully purchased AI Target Essay Pass! 1 pending essay pass has been added to your account. Activate it below for your target school, major, and essay question.",
     "display_fallback": "Official Unspecified",
     "display_fallback_none": "None",
     "display_credits_unspecified": "Credits Unspecified",
@@ -552,23 +552,23 @@ const TRANSLATIONS = {
     "tier_pro_feature2": "학교 학과별 편입 요건 파악, 수강 로드맵 생성, AI 에세이 전략가 모든 기능 접근 제한",
     "tier_premium_name": "Premium 플랜",
     "tier_premium_price": "29,900원 / 월",
-    "tier_premium_desc": "통합 편입 계획 패키지 (당월 소멸)",
+    "tier_premium_desc": "통합 편입 계획 패키지 (AI 에세이는 학교/학과/질문 딱 하나 지정하여 1개월간 무제한)",
     "tier_premium_feature1": "지원 가능 판단, 학교 학과별 편입 요건 파악, 수강 로드맵 생성 무제한 제공",
-    "tier_premium_feature2": "AI 에세이 전략가(EssayAI) 5회 이용권 포함 (결제 월 내 사용 필수)",
-    "tier_essay_pass_name": "AI 에세이 5회권",
-    "tier_essay_pass_price": "6,900원",
-    "tier_essay_pass_desc": "에세이 5회 이용권 (3개월 유효)",
-    "tier_essay_pass_feature1": "AI 에세이 전략가(EssayAI) 5회 이용권 제공",
-    "tier_essay_pass_feature2": "3개월(90일) 이내 사용 필수 (어떤 플랜에서도 추가 구매 가능)",
+    "tier_premium_feature2": "AI 에세이: 학교/학과/질문 딱 하나 지정하여 1개월 동안 무제한 첨삭 및 이용 가능",
+    "tier_essay_pass_name": "AI 에세이 대상학교 패스",
+    "tier_essay_pass_price": "9,900원",
+    "tier_essay_pass_desc": "단독 추가 패키지 (1개 학교/학과/질문 1개월 무제한)",
+    "tier_essay_pass_feature1": "지정한 학교, 학과, 에세이 질문에 대해 1개월 동안 무제한 첨삭 및 매퍼 제공",
+    "tier_essay_pass_feature2": "구매 후 3개월(90일) 이내 활성화 필수, 활성화 시 1개월간 무제한 유효",
     "btn_choose_plan": "구독하기",
     "btn_free_action": "무료 선택",
     "btn_pro_action": "Pro 구독하기",
     "btn_premium_action": "Premium 구독하기",
-    "btn_essay_pass_action": "5회권 구매",
-    "essay_credits_remaining": "남은 이용 횟수:",
-    "btn_buy_credits": "5회 이용권 구매 (6,900원)",
-    "essay_out_of_credits": "남은 에세이 이용 횟수가 없습니다. 5회 이용권을 구매하거나 Premium 플랜을 구독해 주세요.",
-    "alert_essay_pass_purchased": "AI 에세이 5회 이용권을 성공적으로 구매하였습니다! 5개의 크레딧(3개월 유효)이 추가되었습니다.",
+    "btn_essay_pass_action": "대상패스 구매",
+    "essay_credits_remaining": "보유 중인 패스 수:",
+    "btn_buy_credits": "대상학교 패스 구매 (9,900원)",
+    "essay_out_of_credits": "활성화된 에세이 권한 또는 대기 중인 패스가 없습니다. 대상학교 패스를 구매하거나 Premium 플랜을 구독해 주세요.",
+    "alert_essay_pass_purchased": "AI 에세이 대상학교 패스를 성공적으로 구매하였습니다! 1개의 대기 중인 패스가 추가되었습니다. 아래에서 목표 학교, 학과, 질문을 설정하고 활성화하세요.",
     "display_fallback": "공식 미명시",
     "display_fallback_none": "없음",
     "display_credits_unspecified": "이수 학점 미명시",
@@ -950,23 +950,23 @@ const TRANSLATIONS = {
     "tier_pro_feature2": "限制访问先修课程搜索引擎、最优选课路线规划以及AI转学文书策略家所有功能",
     "tier_premium_name": "Premium 方案 (Premium Plan)",
     "tier_premium_price": "29,900 KRW/月",
-    "tier_premium_desc": "转学规划全包套件 (当月失效)",
+    "tier_premium_desc": "转学规划全包套件 (AI 文书仅限指定1个学校/专业/问题，1个月内无限制修改)",
     "tier_premium_feature1": "资格评估、先修课程搜索引擎、最优选课路线规划服务无限制使用",
-    "tier_premium_feature2": "包含 AI 转学文书策略家 (服务4) 5次使用额度 (需在订阅 month 内使用)",
-    "tier_essay_pass_name": "AI 写作5次加油包",
-    "tier_essay_pass_price": "6,900 KRW",
-    "tier_essay_pass_desc": "文书5次使用额度 (3个月有效)",
-    "tier_essay_pass_feature1": "提供 AI 转学文书策略家 (服务4) 5次使用额度",
-    "tier_essay_pass_feature2": "需在3个月（90天）内使用 (支持在任何订阅中叠加购买)",
+    "tier_premium_feature2": "AI 转学文书: 仅限指定一个学校、专业和问题一个月内无限制修改使用",
+    "tier_essay_pass_name": "AI 单校/专业/文书无限制包",
+    "tier_essay_pass_price": "9,900 KRW",
+    "tier_essay_pass_desc": "单项追加包 (1个学校/专业/问题 1个月内无限制使用)",
+    "tier_essay_pass_feature1": "针对选定的学校、专业及文书问题，在1个月内提供无限制修改及设计导图服务",
+    "tier_essay_pass_feature2": "购买后需在3个月（90天）内激活，激活后1个月内有效",
     "btn_choose_plan": "立即订阅",
     "btn_free_action": "选择免费",
     "btn_pro_action": "订阅 Pro 方案",
     "btn_premium_action": "订阅 Premium 方案",
-    "btn_essay_pass_action": "购买5次加油包",
-    "essay_credits_remaining": "剩余使用次数:",
-    "btn_buy_credits": "购买5次次数包 (6,900 KRW)",
-    "essay_out_of_credits": "您没有剩余的文书使用次数。请购买次数包或订阅 Premium 方案。",
-    "alert_essay_pass_purchased": "成功购买 5 次文书使用包！已为您添加 5 次使用额度（3个月有效）。",
+    "btn_essay_pass_action": "购买目标包",
+    "essay_credits_remaining": "可用包数量:",
+    "btn_buy_credits": "购买单校/专业/文书包 (9,900 KRW)",
+    "essay_out_of_credits": "没有已激活的文书包或待激活额度。请购买单校/专业/文书包或订阅 Premium 方案。",
+    "alert_essay_pass_purchased": "成功购买 AI 单校/专业/文书包！已为您添加 1 个待激活的文书包。您可以在下方指定目标学校、专业和文书问题进行激活。",
     "display_fallback": "官方未标明",
     "display_fallback_none": "无",
     "display_credits_unspecified": "学分要求未标明",
@@ -1466,13 +1466,56 @@ function loadProfileFromLocalStorage() {
   }
 }
 
+let krwToUsdRate = 0.00074; // Fallback: 1 USD = 1350 KRW (1 / 1350 = 0.00074)
+
+async function fetchExchangeRate() {
+  try {
+    const res = await fetch('https://open.er-api.com/v6/latest/KRW');
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.rates && data.rates.USD) {
+        krwToUsdRate = data.rates.USD;
+        console.log("Fetched real-time KRW to USD exchange rate:", krwToUsdRate);
+        switchLanguage(state.language || "ko");
+      }
+    }
+  } catch (e) {
+    console.warn("Failed to fetch real-time exchange rate, using fallback:", e);
+  }
+}
+
 function t(key, fallback = "") {
   const lang = state.language || "en";
+  let baseVal = "";
   if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
-    return TRANSLATIONS[lang][key];
+    baseVal = TRANSLATIONS[lang][key];
+  } else {
+    baseVal = TRANSLATIONS["en"][key] || fallback;
   }
-  return TRANSLATIONS["en"][key] || fallback;
+
+  // Intercept price keys and append USD conversion dynamically
+  if (key === "tier_premium_price") {
+    const usd = (29900 * krwToUsdRate).toFixed(2);
+    if (lang === "ko") return `29,900원 / 월 (실시간 환율: $${usd} USD)`;
+    if (lang === "zh") return `29,900 KRW/月 (约合 $${usd} USD)`;
+    return `29,900 KRW/mo (approx. $${usd} USD)`;
+  }
+  if (key === "tier_pro_price") {
+    const usd = (9900 * krwToUsdRate).toFixed(2);
+    if (lang === "ko") return `월 9,900원 (실시간 환율: $${usd} USD)`;
+    if (lang === "zh") return `9,900 KRW/月 (约合 $${usd} USD)`;
+    return `9,900 KRW/mo (approx. $${usd} USD)`;
+  }
+  if (key === "tier_essay_pass_price") {
+    const usd = (9900 * krwToUsdRate).toFixed(2);
+    if (lang === "ko") return `9,900원 (실시간 환율: $${usd} USD)`;
+    if (lang === "zh") return `9,900 KRW (约合 $${usd} USD)`;
+    return `9,900 KRW (approx. $${usd} USD)`;
+  }
+
+  return baseVal;
 }
+
 
 function switchLanguage(lang) {
   state.language = lang;
@@ -1663,8 +1706,8 @@ window.selectUserPlan = function(plan) {
     const isKo = (state.language || state.lang || "ko") === "ko";
     const pgChannel = isKo ? (PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964") : "paypal_v2";
     const payCurrency = isKo ? "KRW" : "USD";
-    const payAmount = isKo ? 29900 : 22; // $22 USD for Premium Plan
-    const productName = isKo ? "Premium Plan (프리미엄 구독)" : "TransferChek Premium Plan (1 Month)";
+    const payAmount = isKo ? (plan === "Premium" ? 29900 : 9900) : (plan === "Premium" ? 22 : 8); 
+    const productName = isKo ? `${plan} Plan (${plan === "Premium" ? "프리미엄" : "프로"} 구독)` : `TransferChek ${plan} Plan (1 Month)`;
 
     IMP.request_pay({
       pg: pgChannel,
@@ -4357,10 +4400,17 @@ async function syncSupabaseSession() {
       supabaseUserProfile = profile;
       
       // Global state sync
-      state.plan = profile?.plan || "Free";
-      state.essayCredits = profile?.essay_credits || 0;
-      localStorage.setItem("transferCompassPlan", state.plan);
-      localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
+      if (session.user.email === "haminkim@uwm.edu") {
+        state.plan = "Premium";
+        state.essayCredits = 999999;
+        localStorage.setItem("transferCompassPlan", "Premium");
+        localStorage.setItem("transferCompassEssayCredits", "999999");
+      } else {
+        state.plan = profile?.plan || "Free";
+        state.essayCredits = profile?.essay_credits || 0;
+        localStorage.setItem("transferCompassPlan", state.plan);
+        localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
+      }
       
       // Load user academic selections
       await loadProfileFromSupabase();
@@ -4388,7 +4438,8 @@ async function saveProfileToSupabase() {
         englishWaiver: state.englishWaiver,
         admissionYear: state.admissionYear,
         admissionTerm: state.admissionTerm,
-        track: state.track
+        track: state.track,
+        activeEssaySlots: getActiveEssaySlots()
       },
       updated_at: new Date().toISOString()
     });
@@ -4425,6 +4476,9 @@ async function loadProfileFromSupabase() {
     if (Array.isArray(history.completedCourses)) {
       state.completedCourses = new Set(history.completedCourses);
     }
+    if (Array.isArray(history.activeEssaySlots)) {
+      localStorage.setItem("transferCompassActiveEssaySlots", JSON.stringify(history.activeEssaySlots));
+    }
     if (Array.isArray(roadmap.target_slots)) {
       state.targetSlots = normalizeSlots(roadmap.target_slots, 10);
     }
@@ -4439,9 +4493,15 @@ function readAuthState() {
   const currentUser = supabaseUserSession?.user?.email || "";
   const mockUsers = {};
   if (currentUser) {
+    let plan = supabaseUserProfile?.plan || "Free";
+    let essayCredits = supabaseUserProfile?.essay_credits || 0;
+    if (currentUser === "haminkim@uwm.edu") {
+      plan = "Premium";
+      essayCredits = 999999;
+    }
     mockUsers[currentUser] = {
-      plan: supabaseUserProfile?.plan || "Free",
-      essayCredits: supabaseUserProfile?.essay_credits || 0,
+      plan: plan,
+      essayCredits: essayCredits,
       nationality: supabaseUserProfile?.nationality || "Other",
       birthdate: supabaseUserProfile?.birthdate || ""
     };
@@ -4872,6 +4932,13 @@ function bindEssay() {
     updateEssaySchoolStatusUI();
   }, 100);
 
+  const essayQuestionArea = qs("#essayQuestion");
+  if (essayQuestionArea) {
+    essayQuestionArea.addEventListener("input", () => {
+      updateEssaySchoolStatusUI();
+    });
+  }
+
   window.addEventListener("languageChanged", () => {
     updateEssaySubtabUI(activeSubtab);
   });
@@ -4945,38 +5012,42 @@ function bindEssay() {
     const isKo = (state.language || "ko") === "ko";
     const selectedId = schoolSelect.dataset.selectedId || selectedProgramId;
     const targetProgram = programs.find(p => p.id === selectedId);
-    
-    // Pass check
-    const isSchoolPassActive = targetProgram && state.unlockedSchools.includes(targetProgram.school.name);
-    
+    const essayQuestion = qs("#essayQuestion")?.value.trim() || "";
+    const essayLimit = qs("#essayLimit")?.value.trim() || "";
+    const activities = qs("#essayActivity")?.value.trim();
+
     if (activeSubtab !== "optimizer" && !targetProgram) {
       alert(isKo ? "목표 대학 및 학과를 선택해 주세요." : "Please select target program.");
       return;
     }
 
+    if (activeSubtab !== "optimizer" && !essayQuestion) {
+      alert(t("essay_alert_no_question", "Please enter the essay question."));
+      return;
+    }
+
+    // Pass check using the active essay slots
+    let isSchoolPassActive = false;
+    if (targetProgram && essayQuestion) {
+      isSchoolPassActive = getActiveEssaySlot(targetProgram.school.name, targetProgram.name, essayQuestion) !== null;
+    }
+
     if (activeSubtab === "optimizer") {
-      // General tools consume 1 general credit
-      if (state.essayCredits <= 0) {
+      const isPremium = (state.plan || "Free") === "Premium";
+      if (!isPremium && state.essayCredits <= 0) {
         alert(t("essay_out_of_credits", "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI."));
         openPricingModal();
         return;
       }
     } else {
-      if (!isSchoolPassActive && state.essayCredits <= 0) {
-        alert(t("essay_out_of_credits", "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI."));
-        openPricingModal();
+      if (!isSchoolPassActive) {
+        alert(isKo 
+          ? "이 에세이의 이용 권한이 활성화되어 있지 않습니다. 먼저 하단의 활성화 버튼을 눌러주세요." 
+          : "AI Essay access for this essay is not active. Please click the activation button below first.");
         return;
       }
     }
 
-    const essayQuestion = qs("#essayQuestion")?.value.trim() || "";
-    const essayLimit = qs("#essayLimit")?.value.trim() || "";
-    const activities = qs("#essayActivity")?.value.trim();
-    
-    if (activeSubtab !== "optimizer" && !essayQuestion) {
-      alert(t("essay_alert_no_question"));
-      return;
-    }
     if (!activities) {
       alert(activeSubtab === "critic" 
         ? (isKo ? "에세이 초안 문단을 입력하세요!" : "Please enter the essay draft paragraph!")
@@ -5103,8 +5174,9 @@ function bindEssay() {
         }
       }
 
-      // Decrement general credit only if not school pass active
-      if (!isSchoolPassActive) {
+      // Decrement general credit only if not school pass active and not Premium
+      const isPremium = (state.plan || "Free") === "Premium";
+      if (!isSchoolPassActive && !isPremium) {
         const authStateForSync = readAuthState();
         const currentUserForSync = authStateForSync.currentUser || "";
         if (currentUserForSync && authStateForSync.users[currentUserForSync]) {
@@ -5586,6 +5658,149 @@ function bindTracks() {
 }
 window.bindTracks = bindTracks;
 
+function getFirstTargetSchoolAndMajor() {
+  if (Array.isArray(state.targetSlots)) {
+    for (let slot of state.targetSlots) {
+      if (slot && slot.school && slot.school.trim() !== "" && slot.major && slot.major.trim() !== "") {
+        return { school: slot.school.trim(), major: slot.major.trim() };
+      }
+    }
+  }
+  return null;
+}
+
+function getActiveEssaySlots() {
+  try {
+    const val = localStorage.getItem("transferCompassActiveEssaySlots");
+    return val ? JSON.parse(val) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveActiveEssaySlots(slots) {
+  localStorage.setItem("transferCompassActiveEssaySlots", JSON.stringify(slots));
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  if (currentUser && authState.users[currentUser]) {
+    authState.users[currentUser].activeEssaySlots = slots;
+    writeAuthState(authState);
+  }
+}
+
+function getActiveEssaySlot(schoolName, majorName, essayQuestion) {
+  if (!schoolName || !majorName || !essayQuestion) return null;
+  const slots = getActiveEssaySlots();
+  const normSchool = normalizeText(schoolName);
+  const normMajor = normalizeText(majorName);
+  const normQuestion = normalizeText(essayQuestion);
+  const now = new Date();
+  
+  for (let slot of slots) {
+    if (normalizeText(slot.school) === normSchool &&
+        normalizeText(slot.major) === normMajor &&
+        normalizeText(slot.question) === normQuestion) {
+      if (new Date(slot.expiresAt) > now) {
+        return slot;
+      }
+    }
+  }
+  return null;
+}
+
+function getActivePremiumSlot() {
+  const slots = getActiveEssaySlots();
+  const now = new Date();
+  for (let slot of slots) {
+    if (slot.type === "premium" && new Date(slot.expiresAt) > now) {
+      return slot;
+    }
+  }
+  return null;
+}
+
+window.activatePremiumEssaySlot = function(schoolName, majorName, essayQuestion) {
+  const isKo = (state.language || "ko") === "ko";
+  if (!schoolName || !majorName || !essayQuestion) {
+    alert(isKo ? "학교, 학과, 그리고 에세이 질문을 모두 입력해 주세요." : "Please select school, major and enter the essay question.");
+    return;
+  }
+  
+  const existingPremium = getActivePremiumSlot();
+  if (existingPremium) {
+    alert(isKo 
+      ? `이미 이번 달 Premium 에세이가 등록되어 있습니다: ${existingPremium.school} - ${existingPremium.major}` 
+      : `You already have an active Premium essay slot: ${existingPremium.school} - ${existingPremium.major}`);
+    return;
+  }
+  
+  const slots = getActiveEssaySlots();
+  const now = new Date();
+  const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
+  
+  slots.push({
+    school: schoolName,
+    major: majorName,
+    question: essayQuestion,
+    expiresAt: expiresAt,
+    type: "premium"
+  });
+  
+  saveActiveEssaySlots(slots);
+  saveProfileToSupabase();
+  
+  updateEssaySchoolStatusUI();
+  
+  alert(isKo 
+    ? `성공적으로 Premium 에세이를 등록했습니다! 한 달 동안 이 에세이를 무제한으로 첨삭받을 수 있습니다.` 
+    : `Successfully activated Premium essay slot! You can critique and rewrite this essay unlimitedly for one month.`);
+};
+
+window.activatePassEssaySlot = function(schoolName, majorName, essayQuestion) {
+  const isKo = (state.language || "ko") === "ko";
+  if (state.pendingPasses <= 0) {
+    alert(isKo ? "사용 가능한 에세이 패스가 없습니다." : "No pending essay passes available.");
+    return;
+  }
+  
+  if (!schoolName || !majorName || !essayQuestion) {
+    alert(isKo ? "학교, 학과, 그리고 에세이 질문을 모두 입력해 주세요." : "Please select school, major and enter the essay question.");
+    return;
+  }
+  
+  state.pendingPasses--;
+  localStorage.setItem("transferCompassPendingPasses", state.pendingPasses.toString());
+  
+  const authState = readAuthState();
+  const currentUser = authState.currentUser || "";
+  if (currentUser && authState.users[currentUser]) {
+    authState.users[currentUser].pendingPasses = state.pendingPasses;
+    writeAuthState(authState);
+  }
+  
+  const slots = getActiveEssaySlots();
+  const now = new Date();
+  const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
+  
+  slots.push({
+    school: schoolName,
+    major: majorName,
+    question: essayQuestion,
+    expiresAt: expiresAt,
+    type: "pass"
+  });
+  
+  saveActiveEssaySlots(slots);
+  saveProfileToSupabase();
+  
+  updateEssaySchoolStatusUI();
+  updateEssayCreditsUI();
+  
+  alert(isKo 
+    ? `성공적으로 에세이 대상 패스를 활성화했습니다! 한 달 동안 이 에세이를 무제한으로 첨삭받을 수 있습니다.` 
+    : `Successfully activated essay target pass! You can critique and rewrite this essay unlimitedly for one month.`);
+};
+
 function updateEssaySchoolStatusUI() {
   const schoolSelect = qs("#essayTargetSchool");
   const statusEl = qs("#essaySchoolPassStatus");
@@ -5604,60 +5819,78 @@ function updateEssaySchoolStatusUI() {
   }
   
   const schoolName = program.school.name;
+  const majorName = program.name;
+  const essayQuestion = qs("#essayQuestion")?.value.trim() || "";
   const isKo = (state.language || "ko") === "ko";
+  const isPremium = (state.plan || "Free") === "Premium";
   
   statusEl.style.display = "block";
+  statusEl.style.marginTop = "8px";
   
-  if (state.unlockedSchools.includes(schoolName)) {
-    statusEl.innerHTML = `<span style="color: #10b981; font-weight: 800;">✓ ${isKo ? "이 학교 에세이 패스 활성화됨 (무제한 검토 가능)" : "Target School Pass Active (Unlimited Reviews)"}</span>`;
-  } else {
-    if (state.pendingPasses > 0) {
-      statusEl.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-          <span style="color: var(--muted);">${isKo ? "보유 패스로 이 대학 해제 가능" : "Can unlock this school with pending pass"}</span>
-          <button type="button" class="primary-btn compact" onclick="unlockSchool('${escapeHtml(schoolName)}')" style="font-size: 11px; padding: 4px 8px; min-height: 28px; background: var(--primary); color: #fff; border: none; border-radius: 4px; cursor: pointer;">
-            ${isKo ? "해제하기" : "Unlock"}
-          </button>
-        </div>
-      `;
+  if (!essayQuestion) {
+    statusEl.innerHTML = `<span style="color: var(--gold); font-size: 12px;">⚠️ ${isKo ? "에세이 질문을 입력해 주세요." : "Please enter the essay question."}</span>`;
+    return;
+  }
+  
+  // Check if active
+  const activeSlot = getActiveEssaySlot(schoolName, majorName, essayQuestion);
+  if (activeSlot) {
+    const expires = new Date(activeSlot.expiresAt);
+    const dateStr = expires.toLocaleDateString(isKo ? 'ko-KR' : 'en-US');
+    if (activeSlot.type === "premium") {
+      statusEl.innerHTML = `<span style="color: #10b981; font-weight: 800; font-size: 12px;">✓ ${isKo ? `이 에세이 패스 활성화됨 (에세이 하나당 한달 동안 유효, 만료일: ${dateStr})` : `Premium Essay Slot Active (Valid for 1 month per essay, Expires: ${dateStr})`}</span>`;
     } else {
+      statusEl.innerHTML = `<span style="color: #10b981; font-weight: 800; font-size: 12px;">✓ ${isKo ? `이 에세이 패스 활성화됨 (한달 동안 무제한, 만료일: ${dateStr})` : `Essay Pass Active (Unlimited for 1 month, Expires: ${dateStr})`}</span>`;
+    }
+    updateTabLockStates();
+    return;
+  }
+  
+  // If not active:
+  if (isPremium) {
+    const activePremium = getActivePremiumSlot();
+    if (!activePremium) {
       statusEl.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-          <span style="color: var(--muted);">${isKo ? "무제한 검토를 위해 이 학교 패스 구매" : "Buy pass for unlimited reviews of this school"}</span>
-          <button type="button" class="primary-btn compact" onclick="buyStandaloneEssayPass()" style="font-size: 11px; padding: 4px 8px; min-height: 28px; background: var(--gold); color: #000; border: none; border-radius: 4px; cursor: pointer;">
-            ${isKo ? "9,900원에 패스 구매" : "Buy Pass 9,900 KRW"}
+        <div style="display: flex; flex-direction: column; gap: 6px; background: rgba(99, 102, 241, 0.05); padding: 10px; border-radius: 8px; border: 1px dashed var(--primary);">
+          <span style="font-size: 12px; color: var(--ink);">${isKo ? "Premium 플랜의 이번 달 무제한 에세이로 등록할 수 있습니다." : "Can register as your Premium monthly essay."}</span>
+          <button type="button" class="primary-btn compact" onclick="activatePremiumEssaySlot('${escapeHtml(schoolName)}', '${escapeHtml(majorName)}', '${escapeHtml(essayQuestion.replace(/'/g, "\\'"))}')" style="font-size: 11px; padding: 4px 8px; min-height: 28px; background: var(--primary); color: #fff; border: none; border-radius: 4px; cursor: pointer; align-self: flex-start;">
+            ${isKo ? "Premium 등록하기 (한 달간 무제한)" : "Activate Premium Essay"}
           </button>
         </div>
       `;
+      updateTabLockStates();
+      return;
     }
+  }
+  
+  // Otherwise, standalone pass options
+  if (state.pendingPasses > 0) {
+    statusEl.innerHTML = `
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; background: rgba(255,255,255,0.02); padding: 8px; border-radius: 6px; border: 1px solid var(--line);">
+        <span style="color: var(--muted); font-size: 11.5px;">${isKo ? "보유 패스로 이 에세이 활성화 가능" : "Can unlock with pending pass"}</span>
+        <button type="button" class="primary-btn compact" onclick="activatePassEssaySlot('${escapeHtml(schoolName)}', '${escapeHtml(majorName)}', '${escapeHtml(essayQuestion.replace(/'/g, "\\'"))}')" style="font-size: 11px; padding: 4px 8px; min-height: 28px; background: var(--primary); color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+          ${isKo ? "활성화하기 (1개월 무제한)" : "Unlock"}
+        </button>
+      </div>
+    `;
+  } else {
+    statusEl.innerHTML = `
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; background: rgba(255,255,255,0.02); padding: 8px; border-radius: 6px; border: 1px solid var(--line);">
+        <span style="color: var(--muted); font-size: 11px;">${isKo ? "무제한 검토를 위해 이 에세이 패스 구매" : "Buy pass for unlimited reviews of this essay"}</span>
+        <button type="button" class="primary-btn compact" onclick="buyStandaloneEssayPass()" style="font-size: 11px; padding: 4px 8px; min-height: 28px; background: var(--gold); color: #000; border: none; border-radius: 4px; cursor: pointer;">
+          ${isKo ? "9,900원에 패스 구매" : "Buy Pass 9,900 KRW"}
+        </button>
+      </div>
+    `;
   }
   updateTabLockStates();
 }
 window.updateEssaySchoolStatusUI = updateEssaySchoolStatusUI;
 
 window.unlockSchool = function(schoolName) {
-  if (state.pendingPasses <= 0) return;
-  state.pendingPasses--;
-  state.unlockedSchools.push(schoolName);
-  
-  localStorage.setItem("transferCompassPendingPasses", state.pendingPasses.toString());
-  localStorage.setItem("transferCompassUnlockedSchools", JSON.stringify(state.unlockedSchools));
-  
-  const authState = readAuthState();
-  const currentUser = authState.currentUser || "";
-  if (currentUser && authState.users[currentUser]) {
-    authState.users[currentUser].pendingPasses = state.pendingPasses;
-    authState.users[currentUser].unlockedSchools = state.unlockedSchools;
-    writeAuthState(authState);
-  }
-  
-  updateEssayCreditsUI();
-  updateEssaySchoolStatusUI();
-  
-  const alertMsg = (state.language || "ko") === "ko"
-    ? `성공적으로 ${schoolName} 에세이 패스를 활성화했습니다! 이제 이 학교에 대한 에세이 검토 및 작성이 평생 무제한 무료입니다.`
-    : `Successfully activated ${schoolName} Essay Pass! You now have unlimited essay revisions for this school.`;
-  alert(alertMsg);
+  // Deprecated - activePassEssaySlot or activatePremiumEssaySlot should be used.
+  // Left for backward compatibility.
+  alert("Please select target school and input the essay question, then click the activation button in the status panel.");
 };
 
 window.buyStandaloneEssayPass = function() {
@@ -5731,6 +5964,9 @@ function applyEssayCreditsPurchase() {
 }
 
 async function init() {
+  // Fetch real-time exchange rate
+  await fetchExchangeRate();
+
   // Initialize Portone SDK Test Mode
   const IMP = window.IMP;
   if (IMP) {

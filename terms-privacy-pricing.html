@@ -707,18 +707,18 @@
         <!-- Standalone Essay Pass -->
         <div class="price-card">
           <div class="plan-name">Essay Pass</div>
-          <div class="plan-title">AI 에세이 5회권</div>
+          <div class="plan-title">AI 에세이 대상학교 패스</div>
           <div class="price-tag">
-            <span class="amount">6,900원</span>
+            <span class="amount">9,900원</span>
             <span class="period">/ 일회성 결제</span>
           </div>
-          <p class="plan-desc">4번 서비스(EssayAI)를 5회 이용할 수 있는 단독 패키지입니다. (3개월 유효)</p>
+          <p class="plan-desc">학교, 학과, 질문을 딱 하나 지정하여 1개월 동안 무제한 첨삭받을 수 있는 패키지입니다.</p>
           <ul class="feature-list">
-            <li>AI 에세이 전략가 (EssayAI) 5회 이용</li>
+            <li>AI 에세이 전략가 (EssayAI) 지정 1개 에세이 무제한 이용</li>
             <li>모든 구독 플랜에서 구매 가능</li>
-            <li>3개월(90일) 이내 사용 필수 (이용권 개수 누적)</li>
+            <li>구매 후 3개월 이내 활성화 필수 (활성화 시 1개월 유효)</li>
           </ul>
-          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Essay Pass', '6,900원')">5회권 구매하기</button>
+          <button class="btn-pricing btn-pricing-primary" onclick="simulateSubscribe('Essay Pass', '9,900원')">패스 구매하기</button>
         </div>
       </div>
 
@@ -1012,49 +1012,17 @@
       }
 
       if (planName === 'Essay Pass') {
-        alert('AI 에세이 5회권(6,900원) 결제 시뮬레이션을 진행합니다!');
+        alert('AI 에세이 대상학교 패스(9,900원) 결제 시뮬레이션을 진행합니다!');
         const userProfile = authState.users[currentUser] || {};
-        userProfile.creditPacks = userProfile.creditPacks || [];
-        const now = new Date();
-        const expiresAt = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000).toISOString(); // 90 days (3 months)
-        userProfile.creditPacks.push({
-          id: 'standalone_' + Date.now(),
-          type: 'standalone',
-          count: 5,
-          expiresAt: expiresAt
-        });
-        
-        const nowStr = new Date().toISOString();
-        const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
-        userProfile.essayCredits = activePacks.reduce((sum, p) => sum + p.count, 0);
-        userProfile.creditPacks = activePacks;
-        
-        localStorage.setItem('transferCompassEssayCredits', userProfile.essayCredits.toString());
+        userProfile.pendingPasses = (userProfile.pendingPasses || 0) + 1;
+        localStorage.setItem('transferCompassPendingPasses', userProfile.pendingPasses.toString());
         localStorage.setItem('transferCompassAuth', JSON.stringify(authState));
-        alert('AI 에세이 5회 이용권(3개월 유효)이 계정에 충전되었습니다!');
+        alert('AI 에세이 대상학교 패스(3개월 내 활성화 가능) 1개가 계정에 충전되었습니다!');
         renderSubscriptionConsole();
       } else {
         alert(planName + ' 요금제 정기 구독 시뮬레이션을 진행합니다!');
         const userProfile = authState.users[currentUser] || {};
         userProfile.plan = planName;
-        if (planName === 'Premium') {
-          const now = new Date();
-          const expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
-          userProfile.creditPacks = userProfile.creditPacks || [];
-          userProfile.creditPacks = userProfile.creditPacks.filter(p => p.type !== 'premium');
-          userProfile.creditPacks.push({
-            id: 'premium_' + Date.now(),
-            type: 'premium',
-            count: 5,
-            expiresAt: expiresAt
-          });
-          
-          const nowStr = new Date().toISOString();
-          const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
-          userProfile.essayCredits = activePacks.reduce((sum, p) => sum + p.count, 0);
-          userProfile.creditPacks = activePacks;
-          localStorage.setItem('transferCompassEssayCredits', userProfile.essayCredits.toString());
-        }
         localStorage.setItem('transferCompassPlan', planName);
         localStorage.setItem('transferCompassAuth', JSON.stringify(authState));
         renderSubscriptionConsole();
