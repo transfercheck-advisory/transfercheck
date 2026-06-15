@@ -1748,7 +1748,7 @@ window.selectUserPlan = async function(plan) {
             alert(t("payment_failed", "Payment verification failed."));
           }
         } else {
-          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+          alert(t("payment_failed", "Payment failed: {error}\n(If this is a PG configuration error, please ensure your Portone V1 Console is correctly configured for 'html5_inicis' under 가맹점식별코드 'imp81577133')").replace("{error}", rsp.error_msg || "Unknown error"));
         }
       });
     }
@@ -5950,7 +5950,7 @@ window.buyStandaloneEssayPass = async function() {
       if (rsp.success) {
         applyEssayCreditsPurchase();
       } else {
-        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+        alert(t("payment_failed", "Payment failed: {error}\n(If this is a PG configuration error, please ensure your Portone V1 Console is correctly configured for 'html5_inicis' under 가맹점식별코드 'imp81577133')").replace("{error}", rsp.error_msg || "Unknown error"));
       }
     });
   }
@@ -6019,7 +6019,7 @@ function openPaypalOverlay(plan, productName, payAmount, email, buyerName, buyer
     channelKey: channelKey,
     paymentId: paymentId,
     orderName: productName,
-    totalAmount: payAmount,
+    totalAmount: payAmount * 100, // Portone V2 USD uses cents
     currency: "CURRENCY_USD",
     customer: {
       fullName: buyerName,
@@ -6065,7 +6065,8 @@ function openPaypalOverlay(plan, productName, payAmount, email, buyerName, buyer
     _paypalUICleanup = cleanup;
   }).catch(err => {
     console.error("loadPaymentUI failed to initialize:", err);
-    container.innerHTML = '<p style="color: #e53e3e; font-size: 13px;">Failed to load PayPal. Please try again.</p>';
+    const errInfo = err ? (err.message || JSON.stringify(err)) : "Unknown initialization error";
+    container.innerHTML = `<p style="color: #e53e3e; font-size: 13px;">Failed to load PayPal: ${errInfo}. Please try again.</p>`;
   });
 }
 
