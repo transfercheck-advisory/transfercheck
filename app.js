@@ -1706,7 +1706,7 @@ window.selectUserPlan = async function(plan) {
       openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
     } else {
       // Portone V1 SDK for KG Inicis (KRW)
-      const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964";
+      const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis";
       const IMP = window.IMP;
       if (!IMP) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -5929,7 +5929,7 @@ window.buyStandaloneEssayPass = async function() {
     openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
   } else {
     // Portone V1 SDK for KG Inicis (KRW)
-    const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964";
+    const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis";
     const IMP = window.IMP;
     if (!IMP) {
       alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -6019,8 +6019,8 @@ function openPaypalOverlay(plan, productName, payAmount, email, buyerName, buyer
     channelKey: channelKey,
     paymentId: paymentId,
     orderName: productName,
-    totalAmount: payAmount * 100, // Convert USD dollars to cents
-    currency: "USD",
+    totalAmount: payAmount,
+    currency: "CURRENCY_USD",
     customer: {
       fullName: buyerName,
       phoneNumber: buyerPhone,

@@ -133,9 +133,9 @@ const server = http.createServer((req, res) => {
               if (paymentResponse.ok && paymentResult.status === 'PAID') {
                 const currency = (paymentResult.currency || 'USD').toUpperCase();
                 let expectedAmount;
-                if (currency === 'USD') {
-                  // Portone V2 USD amounts are in cents
-                  expectedAmount = plan === 'Premium' ? 2200 : 800;
+                if (currency === 'USD' || currency === 'CURRENCY_USD') {
+                  // Portone V2 PayPal USD amounts are in whole dollars
+                  expectedAmount = plan === 'Premium' ? 22 : 8;
                 } else {
                   expectedAmount = plan === 'Premium' ? 29900 : 9900;
                 }
