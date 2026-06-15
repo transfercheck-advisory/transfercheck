@@ -37,7 +37,7 @@
     <script src="https://cdn.portone.io/v2/browser-sdk.js"></script>
     <!-- Supabase SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <link rel="stylesheet" href="./styles.css?v=20260615-v1260" />
+    <link rel="stylesheet" href="./styles.css?v=20260615-v1270" />
   </head>
   <body>
     <header class="site-header">
@@ -802,6 +802,18 @@
           <strong id="activePlanLabel" style="font-size: 14px; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em;">Free Plan</strong>
         </div>
 
+        <!-- PG Selector for Korean Payments -->
+        <div id="koreanPgContainer" style="background: rgba(15, 30, 54, 0.03); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px;">
+          <label for="koreanPgSelect" style="font-size: 13px; font-weight: 700; color: var(--muted); text-align: left;" data-i18n="korean_pg_label">국내 결제 대행사 (Korean Payment Gateway):</label>
+          <select id="koreanPgSelect" style="width: 100%; height: 38px; border-radius: 8px; border: 1px solid var(--line); padding: 0 10px; background: var(--bg-card); color: var(--text); font-size: 13px; cursor: pointer; outline: none;">
+            <option value="html5_inicis.E3MEZTV7YM65W">KG 이니시스 실결제 (KG Inicis Live)</option>
+            <option value="html5_inicis.INIpayTest">KG 이니시스 테스트 결제 (KG Inicis Test)</option>
+            <option value="tosspayments">토스페이먼츠 (Toss Payments)</option>
+            <option value="nice_v2">나이스페이먼츠 (Nice Payments)</option>
+            <option value="kcp">NHN KCP</option>
+          </select>
+        </div>
+
         <!-- Legal Consent for Payments -->
         <div style="background: rgba(15, 30, 54, 0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 12px;">
           <div style="display: flex; gap: 8px; align-items: flex-start;">
@@ -1062,10 +1074,10 @@
     </div>
 
     <!-- Data scripts -->
-    <script src="./transfer-data.js?v=20260615-v1260"></script>
-    <script src="./course-catalog.js?v=20260615-v1260"></script>
-    <script src="./admissions-cases.js?v=20260615-v1260"></script>
-    <script src="./app.js?v=20260615-v1260"></script>
+    <script src="./transfer-data.js?v=20260615-v1270"></script>
+    <script src="./course-catalog.js?v=20260615-v1270"></script>
+    <script src="./admissions-cases.js?v=20260615-v1270"></script>
+    <script src="./app.js?v=20260615-v1270"></script>
 
   </body>
 </html>

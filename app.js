@@ -1706,11 +1706,18 @@ window.selectUserPlan = async function(plan) {
       openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
     } else {
       // Portone V1 SDK for KG Inicis (KRW)
-      const pgChannel = "html5_inicis.INIpayTest"; // Force test channel to pass card evaluation
+      const pgSelect = document.getElementById("koreanPgSelect");
+      const pgChannel = pgSelect ? pgSelect.value : "html5_inicis";
       const IMP = window.IMP;
       if (!IMP) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
         return;
+      }
+      // Dynamically initialize based on chosen channel
+      if (pgChannel.includes("INIpayTest")) {
+        IMP.init("imp31068472"); // Public Test Store ID
+      } else {
+        IMP.init("imp81577133"); // Live Store ID
       }
 
       IMP.request_pay({
@@ -5929,11 +5936,18 @@ window.buyStandaloneEssayPass = async function() {
     openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
   } else {
     // Portone V1 SDK for KG Inicis (KRW)
-    const pgChannel = "html5_inicis.INIpayTest"; // Force test channel to pass card evaluation
+    const pgSelect = document.getElementById("koreanPgSelect");
+    const pgChannel = pgSelect ? pgSelect.value : "html5_inicis";
     const IMP = window.IMP;
     if (!IMP) {
       alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
       return;
+    }
+    // Dynamically initialize based on chosen channel
+    if (pgChannel.includes("INIpayTest")) {
+      IMP.init("imp31068472"); // Public Test Store ID
+    } else {
+      IMP.init("imp81577133"); // Live Store ID
     }
 
     IMP.request_pay({
@@ -6088,7 +6102,7 @@ async function init() {
   // Initialize Portone SDK Test Mode
   const IMP = window.IMP;
   if (IMP) {
-    IMP.init("imp31068472"); // Portone Public Test Store ID to guarantee window load
+    IMP.init("imp81577133"); // Portone Live Store ID for TransferChek
   }
 
   // Track visit telemetry on page load
