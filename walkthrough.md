@@ -59,3 +59,14 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
   - Homepage (`/index.html`): `Status 200 OK`
   - Legal & Pricing (`/terms-privacy-pricing.html`): `Status 200 OK`
   - Production Url (`https://transfercheck.vercel.app`): `Status 200 OK`
+
+### 4. Payment Gateway Fixes (PayPal SPB & KG Inicis V1) (Succeeded)
+* **PayPal SPB (PortOne V2)**:
+  - Corrected `totalAmount` to transfer USD in minor units (cents, i.e., `payAmount * 100`) as required by the PortOne V2 API.
+  - Aligned server-side `/api/payments/verify` expected USD amount checking to compare against cents (`2200` for Premium, `800` for Pro/Essay Pass).
+  - Enhanced error handling inside `PortOne.loadPaymentUI().catch(...)` to print full detailed API errors (`err.message`) in the UI overlay instead of a generic loading failure.
+* **KG Inicis (PortOne V1)**:
+  - Added user-facing debug tips to the error dialog when `IMP.request_pay` fails with a pg parameter error, instructing the client to check the Portone V1 Console settings for `html5_inicis` configuration under 가맹점식별코드 `imp81577133`.
+* **Deployment Validation**:
+  - Pushed hotfixes to GitHub and verified Vercel deployed the changes successfully (Cache version `v1240` verified on production CDN for both `index.html` and `app.js`).
+
