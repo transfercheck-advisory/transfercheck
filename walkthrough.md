@@ -65,8 +65,12 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
   - Corrected `totalAmount` to transfer USD in minor units (cents, i.e., `payAmount * 100`) as required by the PortOne V2 API.
   - Aligned server-side `/api/payments/verify` expected USD amount checking to compare against cents (`2200` for Premium, `800` for Pro/Essay Pass).
   - Enhanced error handling inside `PortOne.loadPaymentUI().catch(...)` to print full detailed API errors (`err.message`) in the UI overlay instead of a generic loading failure.
+  - **Resolved storeId Mismatch**: Fixed the critical `RECORD_NOT_FOUND` error by replacing the mismatched V1 merchant ID (`E3MEZTV7YM65W`) with the actual PortOne V2 Store ID (`store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360`) retrieved dynamically via JWT session payload.
 * **KG Inicis (PortOne V1)**:
-  - Added user-facing debug tips to the error dialog when `IMP.request_pay` fails with a pg parameter error, instructing the client to check the Portone V1 Console settings for `html5_inicis` configuration under 가맹점식별코드 `imp81577133`.
-* **Deployment Validation**:
-  - Pushed hotfixes to GitHub and verified Vercel deployed the changes successfully (Cache version `v1240` verified on production CDN for both `index.html` and `app.js`).
+  - **Resolved pg Parameter Error**: Corrected the `pg` parameter error by binding the real KG Inicis merchant ID (`E3MEZTV7YM65W`) which was mistakenly set as the V2 storeId previously. The channel is now correctly set to `"html5_inicis.E3MEZTV7YM65W"`.
+* **Deployment & Verification**:
+  - Pushed final production hotfixes to GitHub and verified Vercel deployed changes successfully.
+  - Forced client CDN updates by bumping cache-busting version query string to `v1250` for `styles.css` and all JS assets.
+  - Cleaned up temporary debug APIs from the production backend (verified 404 cleanup).
+
 
