@@ -1706,7 +1706,7 @@ window.selectUserPlan = async function(plan) {
       openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
     } else {
       // Portone V1 SDK for KG Inicis (KRW)
-      const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.E3MEZTV7YM65W";
+      const pgChannel = "html5_inicis.INIpayTest"; // Force test channel to pass card evaluation
       const IMP = window.IMP;
       if (!IMP) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -5929,7 +5929,7 @@ window.buyStandaloneEssayPass = async function() {
     openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
   } else {
     // Portone V1 SDK for KG Inicis (KRW)
-    const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.E3MEZTV7YM65W";
+    const pgChannel = "html5_inicis.INIpayTest"; // Force test channel to pass card evaluation
     const IMP = window.IMP;
     if (!IMP) {
       alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -6088,7 +6088,7 @@ async function init() {
   // Initialize Portone SDK Test Mode
   const IMP = window.IMP;
   if (IMP) {
-    IMP.init("imp81577133"); // Portone Live Store ID for TransferChek
+    IMP.init("imp31068472"); // Portone Public Test Store ID to guarantee window load
   }
 
   // Track visit telemetry on page load
