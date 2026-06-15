@@ -100,7 +100,7 @@ const server = http.createServer((req, res) => {
     req.on('end', async () => {
       try {
         const parsed = JSON.parse(body);
-        const { imp_uid, merchant_uid, plan, email, userId } = parsed;
+        const { imp_uid, merchant_uid, paymentId, plan, email, userId } = parsed;
 
         if (!userId || !plan) {
           res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
@@ -114,12 +114,49 @@ const server = http.createServer((req, res) => {
           return;
         }
 
-        // Portone Verification Hook
+        // Portone Verification Hooks
         const portoneApiKey = process.env.PORTONE_API_KEY;
         const portoneApiSecret = process.env.PORTONE_API_SECRET;
+        const portoneV2Secret = process.env.PORTONE_V2_API_SECRET || process.env.PORTONE_API_SECRET;
         
         let verified = true;
-        if (portoneApiKey && portoneApiSecret && imp_uid) {
+
+        if (paymentId) {
+          // Portone V2 Verification Pathway (PayPal USD)
+          if (portoneV2Secret) {
+            try {
+              const paymentResponse = await fetch(`https://api.portone.io/payments/${paymentId}`, {
+                headers: { 'Authorization': `PortOne ${portoneV2Secret}` }
+              });
+              const paymentResult = await paymentResponse.json();
+              
+              if (paymentResponse.ok && paymentResult.status === 'PAID') {
+                const currency = (paymentResult.currency || 'USD').toUpperCase();
+                let expectedAmount;
+                if (currency === 'USD') {
+                  // Portone V2 USD amounts are in cents
+                  expectedAmount = plan === 'Premium' ? 2200 : 800;
+                } else {
+                  expectedAmount = plan === 'Premium' ? 29900 : 9900;
+                }
+                
+                if (paymentResult.amount.total !== expectedAmount) {
+                  verified = false;
+                  console.error(`V2 Amount mismatch: expected ${expectedAmount} ${currency}, got ${paymentResult.amount.total} ${paymentResult.currency}`);
+                }
+              } else {
+                verified = false;
+                console.error("V2 Payment not PAID or API error:", paymentResult);
+              }
+            } catch (e) {
+              console.error("Portone V2 verification API call failed:", e);
+              verified = false;
+            }
+          } else {
+            console.log("Portone V2 verification skipped (V2 API secret not configured). Assuming payment is valid.");
+          }
+        } else if (portoneApiKey && portoneApiSecret && imp_uid) {
+          // Portone V1 Verification Pathway (KG Inicis KRW)
           try {
             // Get access token from Portone
             const tokenResponse = await fetch('https://api.iamport.kr/users/getToken', {
@@ -139,11 +176,19 @@ const server = http.createServer((req, res) => {
               const paymentResult = await paymentResponse.json();
               
               if (paymentResult.code === 0 && paymentResult.response.status === 'paid') {
-                // Match amount
-                const expectedAmount = plan === 'Premium' ? 19900 : 9900;
+                // Match amount based on currency (KRW or USD)
+                const currency = (paymentResult.response.currency || 'KRW').toUpperCase();
+                let expectedAmount;
+                if (currency === 'USD') {
+                  expectedAmount = plan === 'Premium' ? 22 : 8;
+                } else {
+                  // Default to KRW
+                  expectedAmount = plan === 'Premium' ? 29900 : 9900;
+                }
+                
                 if (paymentResult.response.amount !== expectedAmount) {
                   verified = false;
-                  console.error(`Amount mismatch: expected ${expectedAmount}, got ${paymentResult.response.amount}`);
+                  console.error(`Amount mismatch: expected ${expectedAmount} ${currency}, got ${paymentResult.response.amount} ${paymentResult.response.currency}`);
                 }
               } else {
                 verified = false;
@@ -169,12 +214,14 @@ const server = http.createServer((req, res) => {
         let essayCreditsToAdd = 0;
         if (plan === 'Premium') {
           essayCreditsToAdd = 1;
+        } else if (plan === 'Essay Pass' || plan === 'Essay') {
+          essayCreditsToAdd = 1;
         }
 
         // Update public.profiles table using Supabase Admin Client
         const { data: profile, error: selectError } = await supabaseAdmin
           .from('profiles')
-          .select('essay_credits')
+          .select('plan, essay_credits')
           .eq('id', userId)
           .single();
 
@@ -187,13 +234,18 @@ const server = http.createServer((req, res) => {
 
         const newCredits = (profile?.essay_credits || 0) + essayCreditsToAdd;
 
+        const updateFields = {
+          essay_credits: newCredits,
+          updated_at: new Date().toISOString()
+        };
+        // Only update plan if it's a valid plan string matching the database CHECK constraint
+        if (plan === 'Premium' || plan === 'Pro' || plan === 'Free') {
+          updateFields.plan = plan;
+        }
+
         const { error: updateError } = await supabaseAdmin
           .from('profiles')
-          .update({
-            plan: plan,
-            essay_credits: newCredits,
-            updated_at: new Date().toISOString()
-          })
+          .update(updateFields)
           .eq('id', userId);
 
         if (updateError) {
@@ -206,11 +258,15 @@ const server = http.createServer((req, res) => {
         // Update local stats config
         const stats = getStats();
         stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
-        stats.planCounts[plan] = (stats.planCounts[plan] || 0) + 1;
+        if (plan === 'Premium' || plan === 'Pro' || plan === 'Free') {
+          stats.planCounts[plan] = (stats.planCounts[plan] || 0) + 1;
+        } else {
+          stats.essayPassCounts = (stats.essayPassCounts || 0) + 1;
+        }
         saveStats(stats);
 
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-        res.end(JSON.stringify({ success: true, plan, essayCredits: newCredits }));
+        res.end(JSON.stringify({ success: true, plan: updateFields.plan || profile.plan, essayCredits: newCredits }));
       } catch (err) {
         res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ success: false, message: err.message }));

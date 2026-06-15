@@ -1673,7 +1673,7 @@ function updatePlanNoticeVisibility() {
   }
 }
 
-window.selectUserPlan = function(plan) {
+window.selectUserPlan = async function(plan) {
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
 
@@ -1692,13 +1692,6 @@ window.selectUserPlan = function(plan) {
       return;
     }
 
-    // Portone payment integration
-    const IMP = window.IMP;
-    if (!IMP) {
-      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
-      return;
-    }
-
     const userProfile = authState.users[currentUser] || {};
     const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
     const buyerPhone = userProfile.phone || "010-0000-0000";
@@ -1709,44 +1702,100 @@ window.selectUserPlan = function(plan) {
     const payAmount = isKo ? (plan === "Premium" ? 29900 : 9900) : (plan === "Premium" ? 22 : 8); 
     const productName = isKo ? `${plan} Plan (${plan === "Premium" ? "프리미엄" : "프로"} 구독)` : `TransferChek ${plan} Plan (1 Month)`;
 
-    IMP.request_pay({
-      pg: pgChannel,
-      pay_method: "card",
-      merchant_uid: `order_sub_${plan}_${Date.now()}`,
-      name: productName,
-      amount: payAmount,
-      currency: payCurrency,
-      buyer_email: currentUser,
-      buyer_name: buyerName,
-      buyer_tel: buyerPhone
-    }, async function(rsp) {
-      if (rsp.success) {
-        try {
-          const verifyResponse = await fetch('/api/payments/verify', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              imp_uid: rsp.imp_uid,
-              merchant_uid: rsp.merchant_uid,
-              plan: plan,
-              email: currentUser,
-              userId: supabaseUserSession?.user?.id
-            })
-          });
-          const verifyResult = await verifyResponse.json();
-          if (verifyResult.success) {
-            applyPlanUpgrade(plan, verifyResult.essayCredits);
-          } else {
-            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+    if (payCurrency === "USD") {
+      // Portone V2 SDK for PayPal (USD)
+      const storeId = "E3MEZTV7YM65W";
+      const channelKey = "channel-key-ee40e2f0-6f70-4434-beb3-6539d720569e";
+      const paymentId = `order_sub_${plan}_${Date.now()}`;
+
+      try {
+        const response = await window.PortOne.requestPayment({
+          storeId: storeId,
+          channelKey: channelKey,
+          paymentId: paymentId,
+          orderName: productName,
+          totalAmount: payAmount * 100, // Cents conversion for USD
+          currency: "USD",
+          payMethod: "CARD",
+          customer: {
+            fullName: buyerName,
+            phoneNumber: buyerPhone,
+            email: currentUser
           }
-        } catch (e) {
-          console.error("Payment verification request failed:", e);
-          alert(t("payment_failed", "Payment verification failed."));
+        });
+
+        if (response.code !== undefined) {
+          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", response.message || "Unknown error"));
+          return;
         }
-      } else {
-        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+
+        const verifyResponse = await fetch('/api/payments/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            paymentId: response.paymentId,
+            plan: plan,
+            email: currentUser,
+            userId: supabaseUserSession?.user?.id
+          })
+        });
+        const verifyResult = await verifyResponse.json();
+        if (verifyResult.success) {
+          applyPlanUpgrade(plan, verifyResult.essayCredits);
+        } else {
+          alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+        }
+      } catch (e) {
+        console.error("PayPal V2 payment execution failed:", e);
+        alert(t("payment_failed", "Payment failed."));
       }
-    });
+    } else {
+      // Portone V1 SDK for KG Inicis (KRW)
+      const IMP = window.IMP;
+      if (!IMP) {
+        alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+        return;
+      }
+
+      IMP.request_pay({
+        pg: pgChannel,
+        pay_method: "card",
+        merchant_uid: `order_sub_${plan}_${Date.now()}`,
+        name: productName,
+        amount: payAmount,
+        currency: payCurrency,
+        buyer_email: currentUser,
+        buyer_name: buyerName,
+        buyer_tel: buyerPhone
+      }, async function(rsp) {
+        if (rsp.success) {
+          try {
+            const verifyResponse = await fetch('/api/payments/verify', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                imp_uid: rsp.imp_uid,
+                merchant_uid: rsp.merchant_uid,
+                plan: plan,
+                email: currentUser,
+                userId: supabaseUserSession?.user?.id
+              })
+            });
+            const verifyResult = await verifyResponse.json();
+            if (verifyResult.success) {
+              applyPlanUpgrade(plan, verifyResult.essayCredits);
+            } else {
+              alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+            }
+          } catch (e) {
+            console.error("Payment verification request failed:", e);
+            alert(t("payment_failed", "Payment verification failed."));
+          }
+        } else {
+          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+        }
+      });
+    }
   } else {
     applyPlanUpgrade("Free");
   }
@@ -5893,7 +5942,7 @@ window.unlockSchool = function(schoolName) {
   alert("Please select target school and input the essay question, then click the activation button in the status panel.");
 };
 
-window.buyStandaloneEssayPass = function() {
+window.buyStandaloneEssayPass = async function() {
   const authState = readAuthState();
   const currentUser = authState.currentUser || "";
   if (!currentUser) {
@@ -5910,13 +5959,6 @@ window.buyStandaloneEssayPass = function() {
     return;
   }
 
-  // Portone payment integration
-  const IMP = window.IMP;
-  if (!IMP) {
-    alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
-    return;
-  }
-
   const userProfile = authState.users[currentUser] || {};
   const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
   const buyerPhone = userProfile.phone || "010-0000-0000";
@@ -5927,24 +5969,83 @@ window.buyStandaloneEssayPass = function() {
   const payAmount = isKo ? 9900 : 8; // $8 USD for AI Target Essay Pass
   const productName = isKo ? "AI 에세이 대학교 프리패스" : "AI Target Essay Pass (1 School Unlimited)";
 
-  IMP.request_pay({
-    pg: pgChannel,
-    pay_method: "card",
-    merchant_uid: `order_essay_${Date.now()}`,
-    name: productName,
-    amount: payAmount,
-    currency: payCurrency,
-    buyer_email: currentUser,
-    buyer_name: buyerName,
-    buyer_tel: buyerPhone
-  }, function(rsp) {
-    if (rsp.success) {
-      applyEssayCreditsPurchase();
-    } else {
-      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+  if (payCurrency === "USD") {
+    // Portone V2 SDK for PayPal (USD)
+    const storeId = "E3MEZTV7YM65W";
+    const channelKey = "channel-key-ee40e2f0-6f70-4434-beb3-6539d720569e";
+    const paymentId = `order_essay_${Date.now()}`;
+
+    try {
+      const response = await window.PortOne.requestPayment({
+        storeId: storeId,
+        channelKey: channelKey,
+        paymentId: paymentId,
+        orderName: productName,
+        totalAmount: payAmount * 100, // Cents conversion for USD
+        currency: "USD",
+        payMethod: "CARD",
+        customer: {
+          fullName: buyerName,
+          phoneNumber: buyerPhone,
+          email: currentUser
+        }
+      });
+
+      if (response.code !== undefined) {
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", response.message || "Unknown error"));
+        return;
+      }
+
+      // Call backend verification
+      const verifyResponse = await fetch('/api/payments/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          paymentId: response.paymentId,
+          plan: "Essay Pass",
+          email: currentUser,
+          userId: supabaseUserSession?.user?.id
+        })
+      });
+      const verifyResult = await verifyResponse.json();
+      if (verifyResult.success) {
+        applyEssayCreditsPurchase();
+      } else {
+        alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+      }
+    } catch (e) {
+      console.error("PayPal V2 Essay Pass payment failed:", e);
+      alert(t("payment_failed", "Payment failed."));
     }
-  });
+  } else {
+    // Portone V1 SDK for KG Inicis (KRW)
+    const IMP = window.IMP;
+    if (!IMP) {
+      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+      return;
+    }
+
+    IMP.request_pay({
+      pg: pgChannel,
+      pay_method: "card",
+      merchant_uid: `order_essay_${Date.now()}`,
+      name: productName,
+      amount: payAmount,
+      currency: payCurrency,
+      buyer_email: currentUser,
+      buyer_name: buyerName,
+      buyer_tel: buyerPhone
+    }, function(rsp) {
+      if (rsp.success) {
+        applyEssayCreditsPurchase();
+      } else {
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "Unknown error"));
+      }
+    });
+  }
 };
+
+
 
 function applyEssayCreditsPurchase() {
   const authState = readAuthState();
