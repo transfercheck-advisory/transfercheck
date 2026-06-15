@@ -1706,7 +1706,7 @@ window.selectUserPlan = async function(plan) {
       openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
     } else {
       // Portone V1 SDK for KG Inicis (KRW)
-      const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis";
+      const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.E3MEZTV7YM65W";
       const IMP = window.IMP;
       if (!IMP) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -5929,7 +5929,7 @@ window.buyStandaloneEssayPass = async function() {
     openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
   } else {
     // Portone V1 SDK for KG Inicis (KRW)
-    const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis";
+    const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.E3MEZTV7YM65W";
     const IMP = window.IMP;
     if (!IMP) {
       alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -6003,7 +6003,7 @@ function openPaypalOverlay(plan, productName, payAmount, email, buyerName, buyer
   overlay.classList.remove("hidden");
 
   // Portone V2 loadPaymentUI
-  const storeId = "E3MEZTV7YM65W";
+  const storeId = "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360";
   const channelKey = "channel-key-ee40e2f0-6f70-4434-beb3-6539d720569e";
   const paymentId = `order_${plan.replace(/\s+/g, "_")}_${Date.now()}`;
 

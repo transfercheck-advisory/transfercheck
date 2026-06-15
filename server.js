@@ -93,19 +93,6 @@ const server = http.createServer((req, res) => {
   let safeUrl = rawUrl.split('?')[0];
   if (safeUrl === '/') safeUrl = '/index.html';
 
-  // Temporary env debug endpoint to resolve storeId and secret mismatch
-  if (req.method === 'GET' && safeUrl === '/api/debug-env-919582') {
-    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-    res.end(JSON.stringify({
-      PORTONE_V2_API_SECRET: process.env.PORTONE_V2_API_SECRET || "Not found",
-      PORTONE_API_SECRET: process.env.PORTONE_API_SECRET || "Not found",
-      PORTONE_STORE_ID: process.env.PORTONE_STORE_ID || "Not found",
-      PORTONE_V2_STORE_ID: process.env.PORTONE_V2_STORE_ID || "Not found",
-      PORTONE_V1_STORE_ID: process.env.PORTONE_V1_STORE_ID || "Not found",
-    }));
-    return;
-  }
-
   // API Route: Verify Payment and Update Plan
   if (req.method === 'POST' && safeUrl === '/api/payments/verify') {
     let body = '';
