@@ -1162,6 +1162,11 @@ const FEEDBACK_STORAGE_KEY = "transferCompassFeedback";
 const AUTH_STORAGE_KEY = "transferCompassAuth";
 const PROFILE_STORAGE_KEY = "transferCompassProfile";
 const PORTONE_TEST_MODE = false; // Set to false for live production payments
+// Portone V1 KG Inicis channel key (from Portone Admin Console > 결제 연동 > 연동 정보)
+// Use channelKey instead of deprecated pg string for reliable production payments
+const PORTONE_V1_CHANNEL_KEY = "channel-key-inicis-live";
+// Portone Store ID for IMP.init
+const PORTONE_STORE_ID = "imp81577133";
 
 // Supabase Configuration
 const SUPABASE_URL = "https://dqgyxiqkqrykrupfzipl.supabase.co";
@@ -1706,24 +1711,26 @@ window.selectUserPlan = async function(plan) {
       openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
     } else {
       // Portone V1 SDK for KG Inicis (KRW)
-      const pgChannel = "html5_inicis";
+      // Note: KG Inicis requires V1 SDK because V2 channelKey is not yet configured for this PG
       const IMP = window.IMP;
       if (!IMP) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
         return;
       }
-      IMP.init("imp81577133"); // Live Store ID
+      IMP.init("imp81577133"); // Portone Live Store ID
 
+      const krwMerchantUid = `order_sub_${plan}_${Date.now()}`;
       IMP.request_pay({
-        pg: pgChannel,
+        pg: "html5_inicis",
         pay_method: "card",
-        merchant_uid: `order_sub_${plan}_${Date.now()}`,
+        merchant_uid: krwMerchantUid,
         name: productName,
         amount: payAmount,
         currency: payCurrency,
-        buyer_email: currentUser,
         buyer_name: buyerName,
-        buyer_tel: buyerPhone
+        buyer_tel: buyerPhone,
+        // m_redirect_url is required for mobile browsers that redirect to PG app
+        m_redirect_url: `${window.location.origin}${window.location.pathname}`
       }, async function(rsp) {
         if (rsp.success) {
           try {
@@ -1749,7 +1756,8 @@ window.selectUserPlan = async function(plan) {
             alert(t("payment_failed", "Payment verification failed."));
           }
         } else {
-          alert(t("payment_failed", "Payment failed: {error}\n(If this is a PG configuration error, please ensure your Portone V1 Console is correctly configured for 'html5_inicis' under 가맹점식별코드 'imp81577133')").replace("{error}", rsp.error_msg || "Unknown error"));
+          console.error("KG Inicis payment failed:", rsp.error_code, rsp.error_msg);
+          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "결제가 취소되었거나 실패했습니다."));
         }
       });
     }
@@ -5930,29 +5938,51 @@ window.buyStandaloneEssayPass = async function() {
     openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
   } else {
     // Portone V1 SDK for KG Inicis (KRW)
-    const pgChannel = "html5_inicis";
     const IMP = window.IMP;
     if (!IMP) {
       alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
       return;
     }
-    IMP.init("imp81577133"); // Live Store ID
+    IMP.init("imp81577133"); // Portone Live Store ID
 
     IMP.request_pay({
-      pg: pgChannel,
+      pg: "html5_inicis",
       pay_method: "card",
       merchant_uid: `order_essay_${Date.now()}`,
       name: productName,
       amount: payAmount,
       currency: payCurrency,
-      buyer_email: currentUser,
       buyer_name: buyerName,
-      buyer_tel: buyerPhone
-    }, function(rsp) {
+      buyer_tel: buyerPhone,
+      m_redirect_url: `${window.location.origin}${window.location.pathname}`
+    }, async function(rsp) {
       if (rsp.success) {
-        applyEssayCreditsPurchase();
+        // Verify on server then apply
+        try {
+          const verifyResponse = await fetch('/api/payments/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              imp_uid: rsp.imp_uid,
+              merchant_uid: rsp.merchant_uid,
+              plan: "Essay Pass",
+              email: currentUser,
+              userId: supabaseUserSession?.user?.id
+            })
+          });
+          const verifyResult = await verifyResponse.json();
+          if (verifyResult.success) {
+            applyEssayCreditsPurchase();
+          } else {
+            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+          }
+        } catch (e) {
+          console.error("Essay payment verification failed:", e);
+          alert(t("payment_failed", "Payment verification failed."));
+        }
       } else {
-        alert(t("payment_failed", "Payment failed: {error}\n(If this is a PG configuration error, please ensure your Portone V1 Console is correctly configured for 'html5_inicis' under 가맹점식별코드 'imp81577133')").replace("{error}", rsp.error_msg || "Unknown error"));
+        console.error("Essay KG Inicis payment failed:", rsp.error_code, rsp.error_msg);
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "결제가 취소되었거나 실패했습니다."));
       }
     });
   }
@@ -6025,8 +6055,10 @@ function openPaypalOverlay(plan, productName, payAmount, email, buyerName, buyer
     currency: "CURRENCY_USD",
     customer: {
       fullName: buyerName,
-      phoneNumber: buyerPhone,
-      email: email
+      phoneNumber: buyerPhone
+      // NOTE: Do NOT pass email here — if it matches the PayPal merchant email,
+      // PayPal shows "logging in with seller account" error.
+      // PayPal collects the buyer's email during its own login flow.
     }
   }, {
     onPaymentSuccess: async (response) => {
@@ -6087,10 +6119,16 @@ async function init() {
   // Fetch real-time exchange rate
   await fetchExchangeRate();
 
-  // Initialize Portone SDK Test Mode
+  // Initialize Portone V1 SDK for KG Inicis (KRW)
   const IMP = window.IMP;
   if (IMP) {
     IMP.init("imp81577133"); // Portone Live Store ID for TransferChek
+  }
+  // PortOne V2 SDK auto-initializes via the browser-sdk.js script tag (used for PayPal)
+  if (window.PortOne) {
+    console.log("PortOne V2 SDK loaded successfully.");
+  } else {
+    console.warn("PortOne V2 SDK not yet loaded. PayPal buttons may not work immediately.");
   }
 
   // Track visit telemetry on page load

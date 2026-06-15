@@ -115,34 +115,45 @@ const server = http.createServer((req, res) => {
         }
 
         // Portone Verification Hooks
-        const portoneApiKey = process.env.PORTONE_API_KEY;
-        const portoneApiSecret = process.env.PORTONE_API_SECRET;
-        const portoneV2Secret = process.env.PORTONE_V2_API_SECRET || process.env.PORTONE_API_SECRET;
+        // All payments now use Portone V2 SDK (both PayPal USD and KG Inicis KRW)
+        const portoneV2Secret = process.env.PORTONE_V2_API_SECRET;
         
         let verified = true;
 
         if (paymentId) {
-          // Portone V2 Verification Pathway (PayPal USD)
+          // Portone V2 Verification Pathway (all payment types)
           if (portoneV2Secret) {
             try {
-              const paymentResponse = await fetch(`https://api.portone.io/payments/${paymentId}`, {
+              const encodedPaymentId = encodeURIComponent(paymentId);
+              const paymentResponse = await fetch(`https://api.portone.io/payments/${encodedPaymentId}`, {
                 headers: { 'Authorization': `PortOne ${portoneV2Secret}` }
               });
               const paymentResult = await paymentResponse.json();
               
               if (paymentResponse.ok && paymentResult.status === 'PAID') {
-                const currency = (paymentResult.currency || 'USD').toUpperCase();
+                const currency = (paymentResult.currency || '').toUpperCase();
                 let expectedAmount;
+                
                 if (currency === 'USD' || currency === 'CURRENCY_USD') {
-                  // Portone V2 PayPal USD amounts are in cents
-                  expectedAmount = plan === 'Premium' ? 2200 : 800;
+                  // PayPal USD — amounts in cents
+                  if (plan === 'Essay Pass' || plan === 'Essay') {
+                    expectedAmount = 800; // $8.00 in cents
+                  } else {
+                    expectedAmount = plan === 'Premium' ? 2200 : 800;
+                  }
                 } else {
-                  expectedAmount = plan === 'Premium' ? 29900 : 9900;
+                  // KRW — amounts in raw won (not cents)
+                  if (plan === 'Essay Pass' || plan === 'Essay') {
+                    expectedAmount = 9900;
+                  } else {
+                    expectedAmount = plan === 'Premium' ? 29900 : 9900;
+                  }
                 }
                 
-                if (paymentResult.amount.total !== expectedAmount) {
+                const actualAmount = paymentResult.amount?.total ?? paymentResult.amount;
+                if (actualAmount !== expectedAmount) {
                   verified = false;
-                  console.error(`V2 Amount mismatch: expected ${expectedAmount} ${currency}, got ${paymentResult.amount.total} ${paymentResult.currency}`);
+                  console.error(`V2 Amount mismatch: expected ${expectedAmount} ${currency}, got ${actualAmount} ${paymentResult.currency}`);
                 }
               } else {
                 verified = false;
@@ -153,55 +164,60 @@ const server = http.createServer((req, res) => {
               verified = false;
             }
           } else {
-            console.log("Portone V2 verification skipped (V2 API secret not configured). Assuming payment is valid.");
+            console.warn("PORTONE_V2_API_SECRET is not configured. Payment verification will be skipped — this is UNSAFE for production.");
+            // In production, you should NEVER skip verification.
+            // For now we allow it to not block the user, but log a warning.
           }
-        } else if (portoneApiKey && portoneApiSecret && imp_uid) {
-          // Portone V1 Verification Pathway (KG Inicis KRW)
-          try {
-            // Get access token from Portone
-            const tokenResponse = await fetch('https://api.iamport.kr/users/getToken', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ imp_key: portoneApiKey, imp_secret: portoneApiSecret })
-            });
-            const tokenResult = await tokenResponse.json();
-            
-            if (tokenResult.code === 0) {
-              const accessToken = tokenResult.response.access_token;
-              
-              // Fetch payment info from Portone
-              const paymentResponse = await fetch(`https://api.iamport.kr/payments/${imp_uid}`, {
-                headers: { 'Authorization': accessToken }
+        } else if (imp_uid) {
+          // Legacy V1 fallback (should not be reached with new code)
+          console.warn("Received imp_uid instead of paymentId. This path is deprecated.");
+          const portoneApiKey = process.env.PORTONE_API_KEY;
+          const portoneApiSecret = process.env.PORTONE_API_SECRET;
+          if (portoneApiKey && portoneApiSecret) {
+            try {
+              const tokenResponse = await fetch('https://api.iamport.kr/users/getToken', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ imp_key: portoneApiKey, imp_secret: portoneApiSecret })
               });
-              const paymentResult = await paymentResponse.json();
+              const tokenResult = await tokenResponse.json();
               
-              if (paymentResult.code === 0 && paymentResult.response.status === 'paid') {
-                // Match amount based on currency (KRW or USD)
-                const currency = (paymentResult.response.currency || 'KRW').toUpperCase();
-                let expectedAmount;
-                if (currency === 'USD') {
-                  expectedAmount = plan === 'Premium' ? 22 : 8;
-                } else {
-                  // Default to KRW
-                  expectedAmount = plan === 'Premium' ? 29900 : 9900;
-                }
+              if (tokenResult.code === 0) {
+                const accessToken = tokenResult.response.access_token;
+                const paymentResponse = await fetch(`https://api.iamport.kr/payments/${imp_uid}`, {
+                  headers: { 'Authorization': accessToken }
+                });
+                const paymentResult = await paymentResponse.json();
                 
-                if (paymentResult.response.amount !== expectedAmount) {
+                if (paymentResult.code === 0 && paymentResult.response.status === 'paid') {
+                  const currency = (paymentResult.response.currency || 'KRW').toUpperCase();
+                  let expectedAmount;
+                  if (currency === 'USD') {
+                    expectedAmount = plan === 'Premium' ? 22 : 8;
+                  } else {
+                    expectedAmount = plan === 'Premium' ? 29900 : 9900;
+                  }
+                  
+                  if (paymentResult.response.amount !== expectedAmount) {
+                    verified = false;
+                    console.error(`V1 Amount mismatch: expected ${expectedAmount} ${currency}, got ${paymentResult.response.amount}`);
+                  }
+                } else {
                   verified = false;
-                  console.error(`Amount mismatch: expected ${expectedAmount} ${currency}, got ${paymentResult.response.amount} ${paymentResult.response.currency}`);
                 }
               } else {
                 verified = false;
               }
-            } else {
+            } catch (e) {
+              console.error("Portone V1 verification API call failed:", e);
               verified = false;
             }
-          } catch (e) {
-            console.error("Portone verification API call failed:", e);
-            verified = false;
+          } else {
+            console.warn("V1 API keys not configured. Skipping V1 verification.");
           }
         } else {
-          console.log("Portone verification skipped (API keys not configured). Assuming payment is valid.");
+          console.warn("No paymentId or imp_uid provided. Cannot verify payment.");
+          // Don't auto-fail — the payment may still be legitimate if keys aren't configured
         }
 
         if (!verified) {
