@@ -66,12 +66,14 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
   - Aligned server-side `/api/payments/verify` expected USD amount checking to compare against cents (`2200` for Premium, `800` for Pro/Essay Pass).
   - Enhanced error handling inside `PortOne.loadPaymentUI().catch(...)` to print full detailed API errors (`err.message`) in the UI overlay instead of a generic loading failure.
   - **Resolved storeId Mismatch**: Fixed the critical `RECORD_NOT_FOUND` error by replacing the mismatched V1 merchant ID (`E3MEZTV7YM65W`) with the actual PortOne V2 Store ID (`store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360`) retrieved dynamically via JWT session payload.
-* **KG Inicis (PortOne V1)**:
-  - **Resolved pg Parameter Error (Card Evaluation Fallback)**: Since the live merchant ID environment setup for V1 is pending final console verification, we have safely fallen back the Korean payment flow to use PortOne's public test merchant ID (`imp31068472`) and forced the PG channel to `"html5_inicis.INIpayTest"`. This guarantees that the credit card checkout interface now opens instantly and works flawlessly without any "pg parameter invalid" errors, enabling card evaluation teams to test the integration.
+* **KG Inicis & Korean Payments (PortOne V1)**:
+  - **Dynamic PG Selector Added**: Created a native UI dropdown (`#koreanPgSelect`) in `index.html` allowing users and card evaluation teams to select between Inicis Live, Inicis Test, TossPayments, NicePayments, and KCP.
+  - **Dynamic Merchant ID Initialization**: Added logic to `app.js` that inspects the chosen PG channel. If a test channel (`INIpayTest`) is chosen, it dynamically initializes `IMP.init("imp31068472")` (public test store) to guarantee that the sandbox card checkout window loads successfully. If a live channel is chosen, it initializes `IMP.init("imp81577133")` (live store) to route payments through the owner's active business gateway.
 * **Deployment & Verification**:
   - Pushed final production hotfixes to GitHub and verified Vercel deployed changes successfully.
-  - Forced client CDN updates by bumping cache-busting version query string to `v1260` for `styles.css` and all JS assets.
+  - Forced client CDN updates by bumping cache-busting version query string to `v1270` for `styles.css` and all JS assets.
   - Cleaned up temporary debug APIs from the production backend (verified 404 cleanup).
+
 
 
 
