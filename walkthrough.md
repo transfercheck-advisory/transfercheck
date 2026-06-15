@@ -67,12 +67,13 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
   - Enhanced error handling inside `PortOne.loadPaymentUI().catch(...)` to print full detailed API errors (`err.message`) in the UI overlay instead of a generic loading failure.
   - **Resolved storeId Mismatch**: Fixed the critical `RECORD_NOT_FOUND` error by replacing the mismatched V1 merchant ID (`E3MEZTV7YM65W`) with the actual PortOne V2 Store ID (`store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360`) retrieved dynamically via JWT session payload.
 * **KG Inicis & Korean Payments (PortOne V1)**:
-  - **Dynamic PG Selector Added**: Created a native UI dropdown (`#koreanPgSelect`) in `index.html` allowing users and card evaluation teams to select between Inicis Live, Inicis Test, TossPayments, NicePayments, and KCP.
-  - **Dynamic Merchant ID Initialization**: Added logic to `app.js` that inspects the chosen PG channel. If a test channel (`INIpayTest`) is chosen, it dynamically initializes `IMP.init("imp31068472")` (public test store) to guarantee that the sandbox card checkout window loads successfully. If a live channel is chosen, it initializes `IMP.init("imp81577133")` (live store) to route payments through the owner's active business gateway.
+  - **Clean Single PG Mode**: Removed the temporary PG Selector dropdown to keep the interface focused on the user's active integration.
+  - **Plain KG Inicis Routing**: Hardcoded the V1 initialization back to the user's live merchant ID (`imp81577133`) and set the `pg` parameter to `"html5_inicis"` without any hardcoded sub-merchant IDs or sandbox tags. This lets PortOne's backend routing automatically select the active KG Inicis channel set up in the user's PortOne console, bypassing PG lookup failures.
 * **Deployment & Verification**:
   - Pushed final production hotfixes to GitHub and verified Vercel deployed changes successfully.
-  - Forced client CDN updates by bumping cache-busting version query string to `v1270` for `styles.css` and all JS assets.
+  - Forced client CDN updates by bumping cache-busting version query string to `v1280` for `styles.css` and all JS assets.
   - Cleaned up temporary debug APIs from the production backend (verified 404 cleanup).
+
 
 
 
