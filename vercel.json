@@ -7,6 +7,7 @@
     { "src": "app.js", "use": "@vercel/static" },
     { "src": "transfer-data.js", "use": "@vercel/static" },
     { "src": "course-catalog.js", "use": "@vercel/static" },
+    { "src": "admissions-cases.js", "use": "@vercel/static" },
     { "src": "terms-privacy-pricing.html", "use": "@vercel/static" },
     { "src": "logo.png", "use": "@vercel/static" },
     { "src": "preview.png", "use": "@vercel/static" },

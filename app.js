@@ -1697,60 +1697,16 @@ window.selectUserPlan = async function(plan) {
     const buyerPhone = userProfile.phone || "010-0000-0000";
 
     const isKo = (state.language || state.lang || "ko") === "ko";
-    const pgChannel = isKo ? (PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964") : "paypal_v2";
     const payCurrency = isKo ? "KRW" : "USD";
     const payAmount = isKo ? (plan === "Premium" ? 29900 : 9900) : (plan === "Premium" ? 22 : 8); 
     const productName = isKo ? `${plan} Plan (${plan === "Premium" ? "프리미엄" : "프로"} 구독)` : `TransferChek ${plan} Plan (1 Month)`;
 
     if (payCurrency === "USD") {
-      // Portone V2 SDK for PayPal (USD)
-      const storeId = "E3MEZTV7YM65W";
-      const channelKey = "channel-key-ee40e2f0-6f70-4434-beb3-6539d720569e";
-      const paymentId = `order_sub_${plan}_${Date.now()}`;
-
-      try {
-        const response = await window.PortOne.requestPayment({
-          storeId: storeId,
-          channelKey: channelKey,
-          paymentId: paymentId,
-          orderName: productName,
-          totalAmount: payAmount * 100, // Cents conversion for USD
-          currency: "USD",
-          payMethod: "CARD",
-          customer: {
-            fullName: buyerName,
-            phoneNumber: buyerPhone,
-            email: currentUser
-          }
-        });
-
-        if (response.code !== undefined) {
-          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", response.message || "Unknown error"));
-          return;
-        }
-
-        const verifyResponse = await fetch('/api/payments/verify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            paymentId: response.paymentId,
-            plan: plan,
-            email: currentUser,
-            userId: supabaseUserSession?.user?.id
-          })
-        });
-        const verifyResult = await verifyResponse.json();
-        if (verifyResult.success) {
-          applyPlanUpgrade(plan, verifyResult.essayCredits);
-        } else {
-          alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
-        }
-      } catch (e) {
-        console.error("PayPal V2 payment execution failed:", e);
-        alert(t("payment_failed", "Payment failed."));
-      }
+      // Portone V2 SDK — PayPal SPB (Smart Payment Button)
+      openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
     } else {
       // Portone V1 SDK for KG Inicis (KRW)
+      const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964";
       const IMP = window.IMP;
       if (!IMP) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -5964,61 +5920,16 @@ window.buyStandaloneEssayPass = async function() {
   const buyerPhone = userProfile.phone || "010-0000-0000";
 
   const isKo = (state.language || "ko") === "ko";
-  const pgChannel = isKo ? (PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964") : "paypal_v2";
   const payCurrency = isKo ? "KRW" : "USD";
   const payAmount = isKo ? 9900 : 8; // $8 USD for AI Target Essay Pass
   const productName = isKo ? "AI 에세이 대학교 프리패스" : "AI Target Essay Pass (1 School Unlimited)";
 
   if (payCurrency === "USD") {
-    // Portone V2 SDK for PayPal (USD)
-    const storeId = "E3MEZTV7YM65W";
-    const channelKey = "channel-key-ee40e2f0-6f70-4434-beb3-6539d720569e";
-    const paymentId = `order_essay_${Date.now()}`;
-
-    try {
-      const response = await window.PortOne.requestPayment({
-        storeId: storeId,
-        channelKey: channelKey,
-        paymentId: paymentId,
-        orderName: productName,
-        totalAmount: payAmount * 100, // Cents conversion for USD
-        currency: "USD",
-        payMethod: "CARD",
-        customer: {
-          fullName: buyerName,
-          phoneNumber: buyerPhone,
-          email: currentUser
-        }
-      });
-
-      if (response.code !== undefined) {
-        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", response.message || "Unknown error"));
-        return;
-      }
-
-      // Call backend verification
-      const verifyResponse = await fetch('/api/payments/verify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          paymentId: response.paymentId,
-          plan: "Essay Pass",
-          email: currentUser,
-          userId: supabaseUserSession?.user?.id
-        })
-      });
-      const verifyResult = await verifyResponse.json();
-      if (verifyResult.success) {
-        applyEssayCreditsPurchase();
-      } else {
-        alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
-      }
-    } catch (e) {
-      console.error("PayPal V2 Essay Pass payment failed:", e);
-      alert(t("payment_failed", "Payment failed."));
-    }
+    // Portone V2 SDK — PayPal SPB (Smart Payment Button)
+    openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
   } else {
     // Portone V1 SDK for KG Inicis (KRW)
+    const pgChannel = PORTONE_TEST_MODE ? "html5_inicis.INIpayTest" : "html5_inicis.MOI6298964";
     const IMP = window.IMP;
     if (!IMP) {
       alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
@@ -6063,6 +5974,111 @@ function applyEssayCreditsPurchase() {
   const alertMsg = t("alert_essay_pass_purchased", "Successfully purchased AI Target Essay Pass! 1 pending university pass has been added to your account. Activate it below for your target school.");
   alert(alertMsg);
 }
+
+// ─── PayPal SPB (Smart Payment Button) via Portone V2 ───
+let _paypalUICleanup = null;
+
+function openPaypalOverlay(plan, productName, payAmount, email, buyerName, buyerPhone) {
+  const overlay = qs("#paypalOverlay");
+  const container = qs("#paypal-button-container");
+  const summary = qs("#paypalOrderSummary");
+  if (!overlay || !container) {
+    alert("PayPal overlay element not found. Please refresh the page.");
+    return;
+  }
+
+  // Clean up any previous PayPal button render
+  if (_paypalUICleanup) {
+    try { _paypalUICleanup(); } catch(e) {}
+    _paypalUICleanup = null;
+  }
+  container.innerHTML = '<p style="color: var(--muted); font-size: 13px;">Loading PayPal button...</p>';
+
+  // Show summary
+  if (summary) {
+    summary.textContent = `${productName} — $${payAmount} USD`;
+  }
+
+  // Show the overlay
+  overlay.classList.remove("hidden");
+
+  // Portone V2 loadPaymentUI
+  const storeId = "E3MEZTV7YM65W";
+  const channelKey = "channel-key-ee40e2f0-6f70-4434-beb3-6539d720569e";
+  const paymentId = `order_${plan.replace(/\s+/g, "_")}_${Date.now()}`;
+
+  if (!window.PortOne || !window.PortOne.loadPaymentUI) {
+    container.innerHTML = '<p style="color: #e53e3e; font-size: 13px;">PayPal SDK failed to load. Please refresh the page and try again.</p>';
+    console.error("PortOne V2 SDK (loadPaymentUI) is not available.");
+    return;
+  }
+
+  window.PortOne.loadPaymentUI({
+    uiType: "PAYPAL_SPB",
+    storeId: storeId,
+    channelKey: channelKey,
+    paymentId: paymentId,
+    orderName: productName,
+    totalAmount: payAmount * 100, // Convert USD dollars to cents
+    currency: "USD",
+    customer: {
+      fullName: buyerName,
+      phoneNumber: buyerPhone,
+      email: email
+    }
+  }, {
+    onPaymentSuccess: async (response) => {
+      console.log("PayPal payment success:", response);
+      closePaypalOverlay();
+      try {
+        const verifyResponse = await fetch('/api/payments/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            paymentId: response.paymentId || paymentId,
+            plan: plan,
+            email: email,
+            userId: supabaseUserSession?.user?.id
+          })
+        });
+        const verifyResult = await verifyResponse.json();
+        if (verifyResult.success) {
+          if (plan === "Essay Pass") {
+            applyEssayCreditsPurchase();
+          } else {
+            applyPlanUpgrade(plan, verifyResult.essayCredits);
+          }
+        } else {
+          alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+        }
+      } catch (e) {
+        console.error("PayPal payment verification request failed:", e);
+        alert(t("payment_failed", "Payment verification failed."));
+      }
+    },
+    onPaymentFail: (error) => {
+      console.error("PayPal payment failed:", error);
+      closePaypalOverlay();
+      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", error?.message || "PayPal transaction was declined or cancelled."));
+    }
+  }).then(cleanup => {
+    _paypalUICleanup = cleanup;
+  }).catch(err => {
+    console.error("loadPaymentUI failed to initialize:", err);
+    container.innerHTML = '<p style="color: #e53e3e; font-size: 13px;">Failed to load PayPal. Please try again.</p>';
+  });
+}
+
+window.closePaypalOverlay = function() {
+  const overlay = qs("#paypalOverlay");
+  if (overlay) overlay.classList.add("hidden");
+  if (_paypalUICleanup) {
+    try { _paypalUICleanup(); } catch(e) {}
+    _paypalUICleanup = null;
+  }
+  const container = qs("#paypal-button-container");
+  if (container) container.innerHTML = '';
+};
 
 async function init() {
   // Fetch real-time exchange rate
