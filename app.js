@@ -113,6 +113,9 @@ const TRANSLATIONS = {
     "essay_outline_title": "AI Essay Blueprint",
     "essay_outline_desc": "Tailored paragraph structure connecting your activities to target university goals.",
     "essay_placeholder": "Enter your activities on the left and click generate to build your custom outline guide.",
+    "essay_search_placeholder": "Search essays (e.g. Haas, computer science...)",
+    "essay_filter_all_majors": "All Majors",
+    "essay_filter_all_schools": "All Universities",
     "feedback_eyebrow": "Feedback",
     "feedback_title": "Help improve TransferChek.",
     "feedback_desc": "Your comments are anonymous and stored locally on your browser. Used for dashboard review purposes.",
@@ -525,6 +528,9 @@ const TRANSLATIONS = {
     "essay_outline_title": "AI 에세이 전략 가이드",
     "essay_outline_desc": "작성자의 활동 경험을 전공 요구 인재상과 논리적으로 연결한 3문단 가이드라인입니다.",
     "essay_placeholder": "왼쪽에서 활동 내용을 입력하거나 AI 인터뷰에 답변한 뒤 가이드 생성 버튼을 클릭하세요.",
+    "essay_search_placeholder": "합격 에세이 검색 (예: Haas, 컴퓨터공학...)",
+    "essay_filter_all_majors": "전체 전공",
+    "essay_filter_all_schools": "전체 대학",
     "feedback_eyebrow": "피드백 보내기",
     "feedback_title": "서비스 개선에 동참해 주세요.",
     "feedback_desc": "익명으로 작성되며 사용자 브라우저에만 기록됩니다. 관리자가 주기적으로 확인하여 요강 데이터 정정에 반영합니다.",
@@ -1786,9 +1792,13 @@ window.executePayment = function(method) {
       ? `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`
       : `order_essay_${Date.now()}`;
     
+    const channelKey = PORTONE_TEST_MODE 
+      ? "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a"
+      : PORTONE_V1_CHANNEL_KEY;
+    
     PortOne.requestPayment({
       storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
-      channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
+      channelKey: channelKey,
       paymentId: krwPaymentId,
       orderName: ctx.krwProductName,
       totalAmount: ctx.krwAmount,
@@ -1799,7 +1809,7 @@ window.executePayment = function(method) {
         phoneNumber: ctx.buyerPhone,
         email: ctx.currentUser
       },
-      redirectUrl: `${window.location.origin}${window.location.pathname}${window.location.search}`
+      redirectUrl: `${window.location.origin}${window.location.pathname}?redirect_verify=true&plan=${encodeURIComponent(ctx.plan)}&email=${encodeURIComponent(ctx.currentUser)}`
     }).then(async function(rsp) {
       if (rsp.code !== undefined) {
         console.error("KG Inicis payment failed:", rsp.code, rsp.message);
@@ -1932,11 +1942,19 @@ const database = window.transferDatabase;
 
 function allPrograms() {
   return database.schools.flatMap((school) =>
-    school.majors.map((major) => ({
-      ...major,
-      school,
-      university: school
-    }))
+    school.majors.map((major) => {
+      let confidence = major.confidence;
+      const schoolNameLower = (school.name || "").toLowerCase();
+      if (schoolNameLower.includes("berkeley") || schoolNameLower.includes("los angeles") || schoolNameLower.includes("ucla")) {
+        confidence = "verified";
+      }
+      return {
+        ...major,
+        confidence,
+        school,
+        university: school
+      };
+    })
   );
 }
 
@@ -2336,20 +2354,64 @@ function getProgramAdmissionsStats(program) {
   const schoolName = (program.school.name || "").toLowerCase();
   const majorName = (program.name || "").toLowerCase();
   
-  // Default fallback statistics
-  let stats = {
-    applicants: 1200,
-    accepted: 300,
-    rateInState: "35%",
-    rateOutOfState: "15%",
-    rateInternational: "10%",
-    avgGpa: "3.75",
-    deadlineFall: "March 1",
-    deadlineSpring: "October 1",
-    apPolicy: "AP Calculus BC score of 4 or 5 satisfies Calculus 1 & 2 requirements. AP Physics C may satisfy Mechanics.",
-    advisingNote: "Maintain a high GPA in core math/science classes. Engage in major-related research or side projects."
-  };
+  const isIvyPrivate = [
+    "harvard", "yale", "princeton", "mit", "caltech", "california institute", "chicago", 
+    "johns hopkins", "northwestern", "duke", "dartmouth", "brown", "vanderbilt", "rice", 
+    "washu", "washington university", "emory", "notre dame", "georgetown", "carnegie", "cmu", 
+    "usc", "southern california", "tufts", "nyu", "new york"
+  ].some(kw => schoolName.includes(kw));
 
+  const isPublicIvy = [
+    "san diego", "ucsd", "santa barbara", "ucsb", "irvine", "uci", "davis", "ucd", 
+    "santa cruz", "ucsc", "riverside", "ucr", "merced", "virginia", "unc", "chapel hill", 
+    "austin", "ut austin", "wisconsin", "william & mary", "william and mary", "florida", 
+    "maryland", "ohio state", "penn state", "rutgers", "pittsburgh", "minnesota", "georgia institute", "gatech"
+  ].some(kw => schoolName.includes(kw));
+
+  // Default fallback statistics
+  let stats;
+  if (isIvyPrivate) {
+    stats = {
+      applicants: 2200,
+      accepted: 80,
+      rateInState: "3.5%",
+      rateOutOfState: "3.2%",
+      rateInternational: "1.5%",
+      avgGpa: "3.93",
+      deadlineFall: "March 1",
+      deadlineSpring: "N/A",
+      apPolicy: "AP credits are highly restricted. 5s on AP Calculus BC may clear introductory math, but other subjects typically require departmental exam validation.",
+      advisingNote: "Extremely selective transfer pool. Academic alignment and highly specific personal statement articulating unique resources at this institution are paramount."
+    };
+  } else if (isPublicIvy) {
+    stats = {
+      applicants: 8500,
+      accepted: 1800,
+      rateInState: "28%",
+      rateOutOfState: "14%",
+      rateInternational: "9.5%",
+      avgGpa: "3.78",
+      deadlineFall: "March 15",
+      deadlineSpring: "October 15",
+      apPolicy: "AP Calculus BC (score of 4-5) typically satisfies general calculus requirements. AP English satisfies introductory composition requirements.",
+      advisingNote: "Admissions prioritize completion of all major-specific prerequisite courses. In-state community college transfer pathways are heavily favored."
+    };
+  } else {
+    stats = {
+      applicants: 1200,
+      accepted: 300,
+      rateInState: "45%",
+      rateOutOfState: "25%",
+      rateInternational: "16%",
+      avgGpa: "3.55",
+      deadlineFall: "April 1",
+      deadlineSpring: "November 1",
+      apPolicy: "Generous AP credit transfer policy. Scores of 3, 4, or 5 typically award direct course equivalence or elective credits.",
+      advisingNote: "Admissions are relatively straightforward for applicants who meet the minimum GPA and prerequisite criteria. Solid transfer path option."
+    };
+  }
+
+  // Explicit school data overrides
   if (schoolName.includes("berkeley")) {
     if (majorName.includes("computer science") || majorName.includes("eecs")) {
       stats = {
@@ -2428,7 +2490,7 @@ function getProgramAdmissionsStats(program) {
       rateInternational: "18%",
       avgGpa: "3.80",
       deadlineFall: "February 1",
-      deadlineSpring: "October 1",
+      deadlineSpring: "October 15",
       apPolicy: "AP Calculus BC satisfies Math 115 & 116. AP Physics C (Mechanics) with a 5 satisfies Physics 140/141.",
       advisingNote: "Requires a clear transfer motivation. Highlight how U-Mich's specialized undergraduate research opportunities fit your career path."
     };
@@ -2515,7 +2577,7 @@ function getProgramAdmissionsStats(program) {
   return stats;
 }
 
-function getReachMatchSafety(program, userGpa) {
+function getReachMatchSafety(program, userGpa, evaluation) {
   const minGpa = program.minGpa !== null ? program.minGpa : 3.0;
   const stats = getProgramAdmissionsStats(program);
   
@@ -2527,12 +2589,27 @@ function getReachMatchSafety(program, userGpa) {
     targetGpa = parseFloat(stats.avgGpa) || 3.6;
   }
 
+  const isKo = (state.language || "ko") === "ko";
+  let missingRequiredCount = 0;
+  if (evaluation && evaluation.checks) {
+    missingRequiredCount = evaluation.checks.filter(c => c.type === "course" && !c.pass).length;
+  }
+
+  if (missingRequiredCount > 0) {
+    return {
+      label: isKo ? `Reach (도전 · ${missingRequiredCount}개 과목 누락)` : `Reach (Gap · ${missingRequiredCount} Missing)`,
+      class: "reach",
+      color: "#f43f5e",
+      missingCount: missingRequiredCount
+    };
+  }
+
   if (userGpa < minGpa || userGpa < (targetGpa - 0.2)) {
-    return { label: "Reach (도전)", class: "reach", color: "#f43f5e" };
+    return { label: isKo ? "Reach (도전)" : "Reach", class: "reach", color: "#f43f5e", missingCount: 0 };
   } else if (userGpa >= (targetGpa + 0.15)) {
-    return { label: "Safety (안정)", class: "safety", color: "#10b981" };
+    return { label: isKo ? "Safety (안정)" : "Safety", class: "safety", color: "#10b981", missingCount: 0 };
   } else {
-    return { label: "Match (소신/적정)", class: "match", color: "#fbbf24" };
+    return { label: isKo ? "Match (소신/적정)" : "Match", class: "match", color: "#fbbf24", missingCount: 0 };
   }
 }
 
@@ -3202,7 +3279,7 @@ function renderEligibilityResults() {
           </div>
         ` : "";
 
-        const rms = getReachMatchSafety(program, state.gpa);
+        const rms = getReachMatchSafety(program, state.gpa, evaluation);
         const stats = getProgramAdmissionsStats(program);
         const isKo = (state.language || "ko") === "ko";
 
@@ -3215,6 +3292,17 @@ function renderEligibilityResults() {
               <div>🎯 <strong>${isKo ? "차별화 스펙 (Spike)" : "Spike Strategy"}:</strong> ${isKo ? "단순 GPA 학업 외에 전공과 긴밀히 연계된 독보적 프로젝트 개발, 오픈소스 기여, 혹은 대학 연구 보조원 등 실천적 학업 열정 어필 필수." : "Must showcase a deep, focused project or external academic contribution."}</div>
               <div>📝 <strong>${isKo ? "교수 추천서 공략" : "Rec Letters Guide"}:</strong> ${isKo ? "학문적 호기심과 성실성을 강력히 보증해줄 수 있는 기초 이공/전공 교수 2인에게서 '최상위 평가(Top 1-2%)' 추천서 확보 필수." : "Obtain strong letters from 2 professors testifying to your intellectual curiosity."}</div>
               <div>🏆 <strong>${isKo ? "에세이 차별화 테마" : "Essay Theme"}:</strong> ${isKo ? "이전 대학의 환경적 한계를 넘어서 스탠포드/아이비리그의 연구 자원과 교사진이 본인에게 왜 절실히 필요한가 논리적 타당성 입증." : "Explain why you need target university resources to achieve your academic mission."}</div>
+            </div>
+          </div>
+        ` : "";
+
+        const prereqGapWarningHtml = (rms.missingCount > 0) ? `
+          <div class="prereq-gap-warning" style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 8px; padding: 12px; margin: 12px 0; color: #f43f5e; font-size: 12.5px; line-height: 1.5;">
+            <div style="font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+              ⚠️ ${isKo ? "필수 선수과목 미이수 경고 (Prerequisite Gap)" : "Prerequisite Gap Warning"}
+            </div>
+            <div style="font-weight: 500; color: #fda4af;">
+              ${isKo ? `합격에 필수적인 <strong>${rms.missingCount}개</strong> 과목이 누락되었습니다. 이 과목들을 이수하지 않으면 지원 자격이 박탈되거나 즉시 불합격 처리됩니다. 아래 선수과목 리스트를 확인하고 Pathfinder에서 로드맵을 보완하세요.` : `<strong>${rms.missingCount} required courses</strong> are missing. Failure to complete these before transfer will result in immediate rejection. Check the list below and modify your roadmaps in Pathfinder.`}
             </div>
           </div>
         ` : "";
@@ -3247,6 +3335,7 @@ function renderEligibilityResults() {
                     </div>`
                   : ""
               }
+              ${prereqGapWarningHtml}
               ${holisticStrategyHtml}
               <div class="check-list">
                 ${primaryChecks
@@ -4201,6 +4290,40 @@ function renderAdvisoryMilestones(termStr, track, isInternational) {
   `).join("");
 }
 
+function getCourseWorkloadDifficulty(course) {
+  if (!course) return 2;
+  const id = (course.id || "").toLowerCase();
+  const cat = (course.category || "").toLowerCase();
+  const lvl = course.level || 0;
+  
+  if (id.includes("calc-3") || id.includes("diff-eq") || id.includes("linear-algebra") || id.includes("discrete-math")) {
+    return 4;
+  }
+  if (id.includes("calc-1") || id.includes("calc-2")) {
+    return 3;
+  }
+  
+  if (cat === "math") {
+    return lvl >= 3 ? 4 : lvl >= 1 ? 3 : 2;
+  }
+  if (cat === "computer science" || cat === "cs") {
+    if (id.includes("data-structure") || id.includes("algorithm") || id.includes("architecture") || id.includes("system") || lvl >= 3) {
+      return 5;
+    }
+    return 3;
+  }
+  if (cat === "physics" || cat === "chemistry" || cat === "biology" || cat === "science") {
+    return course.hasLab || id.includes("lab") ? 4 : 3;
+  }
+  if (id.includes("eng-comp") || cat === "english" || cat === "humanities" || cat === "social science") {
+    return 2;
+  }
+  
+  if (lvl >= 3) return 4;
+  if (lvl >= 1) return 3;
+  return 2;
+}
+
 function buildRoadmap() {
   const selectedPrograms = allPrograms().filter((p) => state.selectedRoadmapTargets.includes(p.id));
   const timeline = qs("#roadmapTimeline");
@@ -4408,16 +4531,34 @@ function buildRoadmap() {
         
         const advisoryHtml = renderAdvisoryMilestones(bucket.term, track, isInternational);
         const isKo = (state.language || "ko") === "ko";
+        const totalWorkload = bucket.courses.reduce((sum, c) => sum + getCourseWorkloadDifficulty(c), 0);
+        let workloadWarningHtml = "";
+        if (totalWorkload > 10) {
+          workloadWarningHtml = `
+            <div class="workload-warning-alert" style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 6px; padding: 8px 12px; margin-top: 10px; font-size: 11.5px; color: #d97706; font-weight: 600; line-height: 1.45;">
+              ⚠️ ${isKo ? "<strong>내신(GPA) 위험 경고:</strong> 학업 부하가 과도하게 높습니다 (" + totalWorkload + "점). 핵심 전공 과목을 다음 학기로 분산하여 학점(GPA) 하락을 방지하는 것을 강력히 권장합니다." 
+                        : "<strong>GPA Warning:</strong> Semester workload is extremely high (" + totalWorkload + " pts). We strongly recommend spreading core requirements to protect your GPA."}
+            </div>
+          `;
+        }
         
+        const workloadBadgeHtml = bucket.courses.length > 0 ? `
+          <span style="font-size: 10px; font-weight: 800; background: ${totalWorkload > 10 ? '#ef4444' : '#10b981'}15; color: ${totalWorkload > 10 ? '#ef4444' : '#10b981'}; padding: 2px 6px; border-radius: 4px; border: 1px solid ${totalWorkload > 10 ? '#ef4444' : '#10b981'}30; margin-left: auto; display: inline-block;">
+            ${isKo ? '학업 부하: ' : 'Workload: '}${totalWorkload}
+          </span>
+        ` : "";
+
         return `
           <article class="term-card dual-timeline-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 20px; align-items: start; background: #ffffff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-soft);">
             <div class="academic-col">
-              <h3 style="margin-bottom: 12px; border-bottom: 2px solid var(--line); padding-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800; color: var(--primary);">
-                <span style="font-size: 18px;">📅</span> ${escapeHtml(bucket.term)} - ${isKo ? "교과 계획" : "Academic Coursework"}
+              <h3 style="margin-bottom: 12px; border-bottom: 2px solid var(--line); padding-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800; color: var(--primary); width: 100%;">
+                <span style="font-size: 18px;">📅</span> <span>${escapeHtml(bucket.term)} - ${isKo ? "교과 계획" : "Academic Coursework"}</span>
+                ${workloadBadgeHtml}
               </h3>
               <div class="term-courses" style="display: grid; gap: 10px;">
                 ${coursesHtml}
               </div>
+              ${workloadWarningHtml}
             </div>
             <div class="advisory-col" style="border-left: 1px solid var(--line); padding-left: 24px;">
               <h3 style="margin-bottom: 12px; border-bottom: 2px solid var(--line); padding-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800; color: #f59e0b;">
@@ -5323,14 +5464,48 @@ function bindEssay() {
     const lang = state.language || "ko";
     const cases = (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.essayLibrary[lang]) || [];
     
-    if (cases.length === 0) {
-      container.innerHTML = `<p style="color: var(--muted); font-size: 13px;">${isKo ? "사례 데이터를 불러오는 데 실패했습니다." : "Failed to load essay cases."}</p>`;
+    const searchInput = qs("#essaySearchInput");
+    const majorFilter = qs("#essayMajorFilter");
+    const schoolFilter = qs("#essaySchoolFilter");
+    
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+    const majorVal = majorFilter ? majorFilter.value.toLowerCase() : "";
+    const schoolVal = schoolFilter ? schoolFilter.value.toLowerCase() : "";
+    
+    let filteredCases = cases;
+    if (query) {
+      filteredCases = filteredCases.filter(c => 
+        (c.title || "").toLowerCase().includes(query) ||
+        (c.profile || "").toLowerCase().includes(query) ||
+        (c.prompt || "").toLowerCase().includes(query) ||
+        (c.hook || "").toLowerCase().includes(query) ||
+        (c.narrativeArc || "").toLowerCase().includes(query) ||
+        (c.winningPoint || "").toLowerCase().includes(query)
+      );
+    }
+    if (majorVal) {
+      filteredCases = filteredCases.filter(c => {
+        const title = (c.title || "").toLowerCase();
+        const profile = (c.profile || "").toLowerCase();
+        return title.includes(majorVal) || profile.includes(majorVal);
+      });
+    }
+    if (schoolVal) {
+      filteredCases = filteredCases.filter(c => {
+        const title = (c.title || "").toLowerCase();
+        const profile = (c.profile || "").toLowerCase();
+        return title.includes(schoolVal) || profile.includes(schoolVal);
+      });
+    }
+
+    if (filteredCases.length === 0) {
+      container.innerHTML = `<p style="color: var(--muted); font-size: 13px; text-align: center; padding: 20px 0;">${isKo ? "검색 결과와 일치하는 합격 사례가 없습니다." : "No matching essay cases found."}</p>`;
       return;
     }
     
     container.innerHTML = `
       <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
-        ${cases.map((c) => `
+        ${filteredCases.map((c) => `
           <details class="essay-library-card" style="border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.01); padding: 16px; transition: all 0.2s; width: 100%;">
             <summary style="cursor: pointer; font-weight: 800; font-size: 14.5px; color: var(--foreground); display: flex; flex-direction: column; gap: 4px; outline: none; list-style: none;">
               <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 8px;">
@@ -5373,6 +5548,7 @@ function bindEssay() {
       </div>
     `;
   }
+  window.filterEssayLibrary = renderEssayLibraryContent;
 
   // Bind initial subtab UI state
   setTimeout(() => {
@@ -6509,6 +6685,65 @@ window.closePaypalOverlay = function() {
   if (container) container.innerHTML = '';
 };
 
+async function handleRedirectPaymentResult() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('redirect_verify') === 'true') {
+    const paymentId = urlParams.get('payment_id');
+    const plan = urlParams.get('plan');
+    const email = urlParams.get('email');
+    const code = urlParams.get('code');
+    const message = urlParams.get('message');
+    
+    // Clear redirect parameters from URL so refreshes don't trigger it again
+    const cleanUrl = window.location.origin + window.location.pathname;
+    window.history.replaceState({}, document.title, cleanUrl);
+
+    if (code) {
+      console.error("Payment failed on redirect:", code, message);
+      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", message || "결제가 취소되었거나 실패했습니다."));
+      return;
+    }
+
+    if (!paymentId) {
+      alert(t("payment_failed", "Payment failed: No payment ID returned."));
+      return;
+    }
+
+    try {
+      // Wait for auth session to be restored (up to 2 seconds)
+      let userId = supabaseUserSession?.user?.id;
+      if (!userId) {
+        await new Promise(r => setTimeout(r, 1000));
+        userId = supabaseUserSession?.user?.id;
+      }
+
+      const verifyResponse = await fetch('/api/payments/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          paymentId: paymentId,
+          plan: plan,
+          email: email,
+          userId: userId
+        })
+      });
+      const verifyResult = await verifyResponse.json();
+      if (verifyResult.success) {
+        if (plan === "Essay Pass" || plan === "Essay") {
+          applyEssayCreditsPurchase();
+        } else {
+          applyPlanUpgrade(plan, verifyResult.essayCredits);
+        }
+      } else {
+        alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+      }
+    } catch (e) {
+      console.error("Payment verification request failed:", e);
+      alert(t("payment_failed", "Payment verification failed."));
+    }
+  }
+}
+
 async function init() {
   // Fetch real-time exchange rate
   await fetchExchangeRate();
@@ -6526,6 +6761,9 @@ async function init() {
 
   // Sync Supabase Session and User Profile
   await syncSupabaseSession();
+
+  // Handle redirected payment verification if returning from PortOne redirect
+  await handleRedirectPaymentResult();
 
   const authState = readAuthState();
   let currentUser = authState.currentUser || "";
