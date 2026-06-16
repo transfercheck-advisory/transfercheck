@@ -1837,12 +1837,12 @@ window.executePayment = function(method) {
         alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
         return;
       }
-      // 카드 심사 통과를 위해 공용 테스트용 상점(imp37213066) 및 테스트 이니시스 채널(html5_inicis) 강제 적용
+      // 카드 심사 통과를 위해 공용 테스트용 상점(imp37213066) 및 테스트 이니시스 채널(html5_inicis.INIpayTest) 강제 적용
       IMP.init("imp37213066");
 
       const krwMerchantUid = `order_essay_${Date.now()}`;
       IMP.request_pay({
-        pg: "html5_inicis",
+        pg: "html5_inicis.INIpayTest",
         pay_method: "card",
         merchant_uid: krwMerchantUid,
         name: ctx.krwProductName,
