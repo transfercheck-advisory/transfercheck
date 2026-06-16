@@ -1845,7 +1845,7 @@ window.executePayment = function(method) {
       const krwPaymentId = `order_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
-        channelKey: "channel-key-inicis-live",
+        channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
         paymentId: krwPaymentId,
         orderName: ctx.krwProductName,
         totalAmount: ctx.krwAmount,
