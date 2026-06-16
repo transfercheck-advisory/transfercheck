@@ -1777,110 +1777,65 @@ window.executePayment = function(method) {
   if (method === "PayPal") {
     openPaypalOverlay(ctx.plan, ctx.usdProductName, ctx.usdAmount, ctx.currentUser, ctx.buyerName, ctx.buyerPhone);
   } else if (method === "Inicis") {
-    if (ctx.type === "subscription") {
-      if (!window.PortOne || !window.PortOne.requestPayment) {
-        alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+    if (!window.PortOne || !window.PortOne.requestPayment) {
+      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+      return;
+    }
+
+    const krwPaymentId = ctx.type === "subscription" 
+      ? `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`
+      : `order_essay_${Date.now()}`;
+    
+    PortOne.requestPayment({
+      storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
+      channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
+      paymentId: krwPaymentId,
+      orderName: ctx.krwProductName,
+      totalAmount: ctx.krwAmount,
+      currency: "CURRENCY_KRW",
+      payMethod: "CARD",
+      customer: {
+        fullName: ctx.buyerName,
+        phoneNumber: ctx.buyerPhone,
+        email: ctx.currentUser
+      },
+      redirectUrl: `${window.location.origin}${window.location.pathname}${window.location.search}`
+    }).then(async function(rsp) {
+      if (rsp.code !== undefined) {
+        console.error("KG Inicis payment failed:", rsp.code, rsp.message);
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.message || "결제가 취소되었거나 실패했습니다."));
         return;
       }
 
-      const krwPaymentId = `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
-      
-      PortOne.requestPayment({
-        storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
-        channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
-        paymentId: krwPaymentId,
-        orderName: ctx.krwProductName,
-        totalAmount: ctx.krwAmount,
-        currency: "CURRENCY_KRW",
-        payMethod: "CARD",
-        customer: {
-          fullName: ctx.buyerName,
-          phoneNumber: ctx.buyerPhone,
-          email: ctx.currentUser
-        },
-        redirectUrl: `${window.location.origin}${window.location.pathname}${window.location.search}`
-      }).then(async function(rsp) {
-        if (rsp.code !== undefined) {
-          console.error("KG Inicis subscription failed:", rsp.code, rsp.message);
-          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.message || "결제가 취소되었거나 실패했습니다."));
-          return;
-        }
-
-        try {
-          const verifyResponse = await fetch('/api/payments/verify', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              paymentId: rsp.paymentId || krwPaymentId,
-              plan: ctx.plan,
-              email: ctx.currentUser,
-              userId: supabaseUserSession?.user?.id
-            })
-          });
-          const verifyResult = await verifyResponse.json();
-          if (verifyResult.success) {
+      try {
+        const verifyResponse = await fetch('/api/payments/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            paymentId: rsp.paymentId || krwPaymentId,
+            plan: ctx.plan,
+            email: ctx.currentUser,
+            userId: supabaseUserSession?.user?.id
+          })
+        });
+        const verifyResult = await verifyResponse.json();
+        if (verifyResult.success) {
+          if (ctx.type === "subscription") {
             applyPlanUpgrade(ctx.plan, verifyResult.essayCredits);
           } else {
-            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
-          }
-        } catch (e) {
-          console.error("Payment verification request failed:", e);
-          alert(t("payment_failed", "Payment verification failed."));
-        }
-      }).catch(function(err) {
-        console.error("KG Inicis subscription failed with error:", err);
-        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", err.message || "결제 진행 중 오류가 발생했습니다."));
-      });
-    } else {
-      const IMP = window.IMP;
-      if (!IMP) {
-        alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
-        return;
-      }
-      // 카드 심사 통과를 위해 실 가맹점 식별코드(imp81577133)와 기본 테스트 채널(html5_inicis.INIpayTest) 적용
-      IMP.init("imp81577133");
-
-      const krwMerchantUid = `order_essay_${Date.now()}`;
-      IMP.request_pay({
-        pg: "html5_inicis.INIpayTest",
-        pay_method: "card",
-        merchant_uid: krwMerchantUid,
-        name: ctx.krwProductName,
-        amount: ctx.krwAmount,
-        currency: "KRW",
-        buyer_name: ctx.buyerName,
-        buyer_tel: ctx.buyerPhone,
-        m_redirect_url: `${window.location.origin}${window.location.pathname}`
-      }, async function(rsp) {
-        if (rsp.success) {
-          try {
-            const verifyResponse = await fetch('/api/payments/verify', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                imp_uid: rsp.imp_uid,
-                merchant_uid: rsp.merchant_uid,
-                plan: ctx.plan,
-                email: ctx.currentUser,
-                userId: supabaseUserSession?.user?.id
-              })
-            });
-            const verifyResult = await verifyResponse.json();
-            if (verifyResult.success) {
-              applyEssayCreditsPurchase();
-            } else {
-              alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
-            }
-          } catch (e) {
-            console.error("Payment verification request failed:", e);
-            alert(t("payment_failed", "Payment verification failed."));
+            applyEssayCreditsPurchase();
           }
         } else {
-          console.error("KG Inicis onetime payment failed:", rsp.error_code, rsp.error_msg);
-          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "결제가 취소되었거나 실패했습니다."));
+          alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
         }
-      });
-    }
+      } catch (e) {
+        console.error("Payment verification request failed:", e);
+        alert(t("payment_failed", "Payment verification failed."));
+      }
+    }).catch(function(err) {
+      console.error("KG Inicis payment failed with error:", err);
+      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", err.message || "결제 진행 중 오류가 발생했습니다."));
+    });
   }
 };
 

@@ -678,6 +678,24 @@
                     <p data-i18n="essay_library_desc">Explore structural breakdowns and winning themes from real successful transfer student essays.</p>
                   </div>
                 </div>
+                <!-- Essay Filter controls -->
+                <div class="essay-filter-controls" style="padding: 0 20px 14px 20px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--line); margin-bottom: 10px;">
+                  <input type="text" id="essaySearchInput" data-i18n-placeholder="essay_search_placeholder" placeholder="Search essays (e.g. Haas, computer science...)" style="flex: 1; min-width: 200px; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--card-bg); color: var(--text); font-size: 13px;" oninput="filterEssayLibrary()">
+                  <select id="essayMajorFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--card-bg); color: var(--text); font-size: 13px; min-width: 140px;" onchange="filterEssayLibrary()">
+                    <option value="" data-i18n="essay_filter_all_majors">All Majors</option>
+                    <option value="computer science">Computer Science</option>
+                    <option value="computer engineering">Computer Engineering</option>
+                    <option value="business">Business / Economics</option>
+                    <option value="engineering">Engineering</option>
+                  </select>
+                  <select id="essaySchoolFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--card-bg); color: var(--text); font-size: 13px; min-width: 140px;" onchange="filterEssayLibrary()">
+                    <option value="" data-i18n="essay_filter_all_schools">All Universities</option>
+                    <option value="berkeley">UC Berkeley</option>
+                    <option value="michigan">U-Mich</option>
+                    <option value="columbia">Columbia</option>
+                    <option value="stanford">Stanford</option>
+                  </select>
+                </div>
                 <div style="padding: 20px;" id="essayLibraryContent">
                   <!-- Case items will be rendered dynamically -->
                 </div>
