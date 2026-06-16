@@ -307,6 +307,11 @@ const TRANSLATIONS = {
     "payment_consent_error": "You must agree to all legal consents (Minor check, Disclaimer) to proceed with payment.",
     "payment_sdk_error": "Payment module is loading. Please try again in a moment.",
     "payment_failed": "Payment failed: {error}",
+    "payment_method_title": "Checkout Options",
+    "payment_method_heading": "Select Payment Method",
+    "pay_method_card": "Credit Card (Domestic Card / Inicis)",
+    "pay_method_paypal": "International Payment (PayPal)",
+    "payment_method_note": "Domestic cards are processed via Inicis credit card window, and international cards via PayPal.",
     "guide_s1_title": "01. Target Research & Majors",
     "guide_s1_body": "Clearly define your target universities and majors. Review the admissions requirements and GPA ranges first.",
     "guide_s2_body": "Prerequisite completion is critical. Missing core prerequisites or fundamental major coursework will lead to immediate rejection or disadvantage.",
@@ -714,6 +719,11 @@ const TRANSLATIONS = {
     "payment_consent_error": "결제를 진행하려면 모든 법적 고지(미성년자 동의, 면책 동의)에 동의하셔야 합니다.",
     "payment_sdk_error": "결제 모듈이 아직 로드 중입니다. 잠시 후 다시 시도해 주세요.",
     "payment_failed": "결제에 실패하였습니다: {error}",
+    "payment_method_title": "결제 수단 선택",
+    "payment_method_heading": "결제 방식을 선택하세요",
+    "pay_method_card": "신용카드 결제 (국내 카드 / KG이니시스)",
+    "pay_method_paypal": "해외 결제 (PayPal / 해외 카드)",
+    "payment_method_note": "국내 신용카드는 이니시스 일반결제창을 통해, 해외 결제는 페이팔을 통해 안전하게 결제됩니다.",
     "ph_coverage_desc": "58개 미국 명문 대학교의 편입 요건 보유",
     "lock_requirements_desc": "58개 미국 명문 대학교의 상세 선수과목 조건과 합격생 평균 학점 컷(GPA Threshold)을 조회하려면 프리미엄 멤버십으로 업그레이드하세요.",
     "guide_heading": "미국 명문대 합격을 위한 5단계 성공 전략",
@@ -1113,6 +1123,11 @@ const TRANSLATIONS = {
     "payment_consent_error": "您必须同意所有法律条款（未成年人确认、免责声明）才能继续付款。",
     "payment_sdk_error": "支付模块正在加载中，请稍后再试。",
     "payment_failed": "支付失败: {error}",
+    "payment_method_title": "选择付款方式",
+    "payment_method_heading": "请选择您的支付方式",
+    "pay_method_card": "信用卡支付 (国内信用卡 / KG Inicis)",
+    "pay_method_paypal": "海外支付 (PayPal / 国际卡)",
+    "payment_method_note": "国内信用卡将通过 Inicis 常规支付窗口进行安全支付，海外支付将通过 PayPal 进行安全支付。",
     "search_missing_prompt": "找不到您的目标大学或专业？",
     "search_missing_link": "请求 AI 实时生成（100% 专业覆盖）",
     "gen_modal_subtitle": "100% 专业覆盖度",
@@ -1167,6 +1182,7 @@ const PORTONE_TEST_MODE = false; // Set to false for live production payments
 const PORTONE_V1_CHANNEL_KEY = "channel-key-inicis-live";
 // Portone Store ID for IMP.init
 const PORTONE_STORE_ID = "imp81577133";
+let activePaymentContext = null;
 
 // Supabase Configuration
 const SUPABASE_URL = "https://dqgyxiqkqrykrupfzipl.supabase.co";
@@ -1701,68 +1717,129 @@ window.selectUserPlan = async function(plan) {
     const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
     const buyerPhone = userProfile.phone || "010-0000-0000";
 
-    const isKo = (state.language || state.lang || "ko") === "ko";
-    const payCurrency = isKo ? "KRW" : "USD";
-    const payAmount = isKo ? (plan === "Premium" ? 29900 : 9900) : (plan === "Premium" ? 22 : 8); 
-    const productName = isKo ? `${plan} Plan (${plan === "Premium" ? "프리미엄" : "프로"} 구독)` : `TransferChek ${plan} Plan (1 Month)`;
+    const krwAmount = plan === "Premium" ? 29900 : 9900;
+    const usdAmount = plan === "Premium" ? 22 : 8;
+    const krwProductName = `${plan} Plan (${plan === "Premium" ? "프리미엄" : "프로"} 구독)`;
+    const usdProductName = `TransferChek ${plan} Plan (1 Month)`;
 
-    if (payCurrency === "USD") {
-      // Portone V2 SDK — PayPal SPB (Smart Payment Button)
-      openPaypalOverlay(plan, productName, payAmount, currentUser, buyerName, buyerPhone);
-    } else {
-      // Portone V1 SDK for KG Inicis (KRW)
-      // Note: KG Inicis requires V1 SDK because V2 channelKey is not yet configured for this PG
-      const IMP = window.IMP;
-      if (!IMP) {
-        alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
-        return;
-      }
-      IMP.init("imp81577133"); // Portone Live Store ID
+    activePaymentContext = {
+      type: "subscription",
+      plan: plan,
+      buyerName: buyerName,
+      buyerPhone: buyerPhone,
+      currentUser: currentUser,
+      krwAmount: krwAmount,
+      usdAmount: usdAmount,
+      krwProductName: krwProductName,
+      usdProductName: usdProductName
+    };
 
-      const krwMerchantUid = `order_sub_${plan}_${Date.now()}`;
-      IMP.request_pay({
-        pg: "html5_inicis",
-        pay_method: "card",
-        merchant_uid: krwMerchantUid,
-        name: productName,
-        amount: payAmount,
-        currency: payCurrency,
-        buyer_name: buyerName,
-        buyer_tel: buyerPhone,
-        // m_redirect_url is required for mobile browsers that redirect to PG app
-        m_redirect_url: `${window.location.origin}${window.location.pathname}`
-      }, async function(rsp) {
-        if (rsp.success) {
-          try {
-            const verifyResponse = await fetch('/api/payments/verify', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                imp_uid: rsp.imp_uid,
-                merchant_uid: rsp.merchant_uid,
-                plan: plan,
-                email: currentUser,
-                userId: supabaseUserSession?.user?.id
-              })
-            });
-            const verifyResult = await verifyResponse.json();
-            if (verifyResult.success) {
-              applyPlanUpgrade(plan, verifyResult.essayCredits);
-            } else {
-              alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
-            }
-          } catch (e) {
-            console.error("Payment verification request failed:", e);
-            alert(t("payment_failed", "Payment verification failed."));
-          }
-        } else {
-          console.error("KG Inicis payment failed:", rsp.error_code, rsp.error_msg);
-          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "결제가 취소되었거나 실패했습니다."));
-        }
-      });
-    }
+    openPaymentMethodModal();
   } else {
     applyPlanUpgrade("Free");
+  }
+};
+
+window.openPaymentMethodModal = function() {
+  if (!activePaymentContext) return;
+  
+  const summaryEl = qs("#paymentMethodSummary");
+  if (summaryEl) {
+    const isKo = (state.language || "ko") === "ko";
+    const krwText = `${activePaymentContext.krwAmount.toLocaleString()}원`;
+    const usdText = `$${activePaymentContext.usdAmount} USD`;
+    if (isKo) {
+      summaryEl.textContent = `${activePaymentContext.krwProductName} — ${krwText} (${usdText})`;
+    } else {
+      summaryEl.textContent = `${activePaymentContext.usdProductName} — ${usdText} (${krwText})`;
+    }
+  }
+  
+  closePricingModal();
+  const modal = qs("#paymentMethodModal");
+  if (modal) {
+    modal.classList.remove("hidden");
+  }
+};
+
+window.closePaymentMethodModal = function() {
+  const modal = qs("#paymentMethodModal");
+  if (modal) {
+    modal.classList.add("hidden");
+  }
+};
+
+window.executePayment = function(method) {
+  if (!activePaymentContext) return;
+  closePaymentMethodModal();
+
+  const ctx = activePaymentContext;
+  if (method === "PayPal") {
+    openPaypalOverlay(ctx.plan, ctx.usdProductName, ctx.usdAmount, ctx.currentUser, ctx.buyerName, ctx.buyerPhone);
+  } else if (method === "Inicis") {
+    if (!window.PortOne || !window.PortOne.requestPayment) {
+      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+      return;
+    }
+
+    const krwPaymentId = ctx.type === "subscription" 
+      ? `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`
+      : `order_essay_${Date.now()}`;
+    
+    const channelKey = ctx.type === "subscription"
+      ? "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a"
+      : "channel-key-inicis-live";
+    
+    PortOne.requestPayment({
+      storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
+      channelKey: channelKey,
+      paymentId: krwPaymentId,
+      orderName: ctx.krwProductName,
+      totalAmount: ctx.krwAmount,
+      currency: "CURRENCY_KRW",
+      payMethod: "CARD",
+      customer: {
+        fullName: ctx.buyerName,
+        phoneNumber: ctx.buyerPhone,
+        email: ctx.currentUser
+      },
+      redirectUrl: `${window.location.origin}${window.location.pathname}${window.location.search}`
+    }).then(async function(rsp) {
+      if (rsp.code !== undefined) {
+        console.error("KG Inicis payment failed:", rsp.code, rsp.message);
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.message || "결제가 취소되었거나 실패했습니다."));
+        return;
+      }
+
+      try {
+        const verifyResponse = await fetch('/api/payments/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            paymentId: rsp.paymentId || krwPaymentId,
+            plan: ctx.plan,
+            email: ctx.currentUser,
+            userId: supabaseUserSession?.user?.id
+          })
+        });
+        const verifyResult = await verifyResponse.json();
+        if (verifyResult.success) {
+          if (ctx.type === "subscription") {
+            applyPlanUpgrade(ctx.plan, verifyResult.essayCredits);
+          } else {
+            applyEssayCreditsPurchase();
+          }
+        } else {
+          alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+        }
+      } catch (e) {
+        console.error("Payment verification request failed:", e);
+        alert(t("payment_failed", "Payment verification failed."));
+      }
+    }).catch(function(err) {
+      console.error("KG Inicis payment failed with error:", err);
+      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", err.message || "결제 진행 중 오류가 발생했습니다."));
+    });
   }
 };
 
@@ -5928,64 +6005,24 @@ window.buyStandaloneEssayPass = async function() {
   const buyerName = userProfile.name || currentUser.split("@")[0] || "Customer";
   const buyerPhone = userProfile.phone || "010-0000-0000";
 
-  const isKo = (state.language || "ko") === "ko";
-  const payCurrency = isKo ? "KRW" : "USD";
-  const payAmount = isKo ? 9900 : 8; // $8 USD for AI Target Essay Pass
-  const productName = isKo ? "AI 에세이 대학교 프리패스" : "AI Target Essay Pass (1 School Unlimited)";
+  const krwAmount = 9900;
+  const usdAmount = 8;
+  const krwProductName = "AI 에세이 대학교 프리패스";
+  const usdProductName = "AI Target Essay Pass (1 School Unlimited)";
 
-  if (payCurrency === "USD") {
-    // Portone V2 SDK — PayPal SPB (Smart Payment Button)
-    openPaypalOverlay("Essay Pass", productName, payAmount, currentUser, buyerName, buyerPhone);
-  } else {
-    // Portone V1 SDK for KG Inicis (KRW)
-    const IMP = window.IMP;
-    if (!IMP) {
-      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
-      return;
-    }
-    IMP.init("imp81577133"); // Portone Live Store ID
+  activePaymentContext = {
+    type: "essay",
+    plan: "Essay Pass",
+    buyerName: buyerName,
+    buyerPhone: buyerPhone,
+    currentUser: currentUser,
+    krwAmount: krwAmount,
+    usdAmount: usdAmount,
+    krwProductName: krwProductName,
+    usdProductName: usdProductName
+  };
 
-    IMP.request_pay({
-      pg: "html5_inicis",
-      pay_method: "card",
-      merchant_uid: `order_essay_${Date.now()}`,
-      name: productName,
-      amount: payAmount,
-      currency: payCurrency,
-      buyer_name: buyerName,
-      buyer_tel: buyerPhone,
-      m_redirect_url: `${window.location.origin}${window.location.pathname}`
-    }, async function(rsp) {
-      if (rsp.success) {
-        // Verify on server then apply
-        try {
-          const verifyResponse = await fetch('/api/payments/verify', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              imp_uid: rsp.imp_uid,
-              merchant_uid: rsp.merchant_uid,
-              plan: "Essay Pass",
-              email: currentUser,
-              userId: supabaseUserSession?.user?.id
-            })
-          });
-          const verifyResult = await verifyResponse.json();
-          if (verifyResult.success) {
-            applyEssayCreditsPurchase();
-          } else {
-            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
-          }
-        } catch (e) {
-          console.error("Essay payment verification failed:", e);
-          alert(t("payment_failed", "Payment verification failed."));
-        }
-      } else {
-        console.error("Essay KG Inicis payment failed:", rsp.error_code, rsp.error_msg);
-        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.error_msg || "결제가 취소되었거나 실패했습니다."));
-      }
-    });
-  }
+  openPaymentMethodModal();
 };
 
 
@@ -6119,11 +6156,6 @@ async function init() {
   // Fetch real-time exchange rate
   await fetchExchangeRate();
 
-  // Initialize Portone V1 SDK for KG Inicis (KRW)
-  const IMP = window.IMP;
-  if (IMP) {
-    IMP.init("imp81577133"); // Portone Live Store ID for TransferChek
-  }
   // PortOne V2 SDK auto-initializes via the browser-sdk.js script tag (used for PayPal)
   if (window.PortOne) {
     console.log("PortOne V2 SDK loaded successfully.");
