@@ -1725,11 +1725,11 @@ window.selectUserPlan = async function(plan) {
 
     const krwAmount = plan === "Premium" ? 29900 : 9900;
     const usdAmount = plan === "Premium" ? 22 : 8;
-    const krwProductName = `${plan} Plan (${plan === "Premium" ? "프리미엄" : "프로"} 구독)`;
+    const krwProductName = plan === "Premium" ? "Premium Plan (프리미엄 구독)" : "Pro Plan (프로 1개월권)";
     const usdProductName = `TransferChek ${plan} Plan (1 Month)`;
 
     activePaymentContext = {
-      type: "subscription",
+      type: plan === "Premium" ? "subscription" : "onetime",
       plan: plan,
       buyerName: buyerName,
       buyerPhone: buyerPhone,
@@ -1783,67 +1783,116 @@ window.executePayment = function(method) {
   if (method === "PayPal") {
     openPaypalOverlay(ctx.plan, ctx.usdProductName, ctx.usdAmount, ctx.currentUser, ctx.buyerName, ctx.buyerPhone);
   } else if (method === "Inicis") {
-    if (!window.PortOne || !window.PortOne.requestPayment) {
-      alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
-      return;
-    }
-
-    const krwPaymentId = ctx.type === "subscription" 
-      ? `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`
-      : `order_essay_${Date.now()}`;
-    
-    const channelKey = "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a";
-    
-    PortOne.requestPayment({
-      storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
-      channelKey: channelKey,
-      paymentId: krwPaymentId,
-      orderName: ctx.krwProductName,
-      totalAmount: ctx.krwAmount,
-      currency: "CURRENCY_KRW",
-      payMethod: "CARD",
-      customer: {
-        fullName: ctx.buyerName,
-        phoneNumber: ctx.buyerPhone,
-        email: ctx.currentUser
-      },
-      redirectUrl: `${window.location.origin}${window.location.pathname}?redirect_verify=true&plan=${encodeURIComponent(ctx.plan)}&email=${encodeURIComponent(ctx.currentUser)}`
-    }).then(async function(rsp) {
-      if (rsp.code !== undefined) {
-        console.error("KG Inicis payment failed:", rsp.code, rsp.message);
-        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.message || "결제가 취소되었거나 실패했습니다."));
+    if (ctx.type === "subscription") {
+      // Use PortOne V2 for subscription (registers billing key)
+      if (!window.PortOne || !window.PortOne.requestPayment) {
+        alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
         return;
       }
-
-      try {
-        const verifyResponse = await fetch('/api/payments/verify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            paymentId: rsp.paymentId || krwPaymentId,
-            plan: ctx.plan,
-            email: ctx.currentUser,
-            userId: supabaseUserSession?.user?.id
-          })
-        });
-        const verifyResult = await verifyResponse.json();
-        if (verifyResult.success) {
-          if (ctx.type === "subscription") {
+      const krwPaymentId = `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
+      PortOne.requestPayment({
+        storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
+        channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
+        paymentId: krwPaymentId,
+        orderName: ctx.krwProductName,
+        totalAmount: ctx.krwAmount,
+        currency: "CURRENCY_KRW",
+        payMethod: "CARD",
+        customer: {
+          fullName: ctx.buyerName,
+          phoneNumber: ctx.buyerPhone,
+          email: ctx.currentUser
+        },
+        redirectUrl: `${window.location.origin}${window.location.pathname}?redirect_verify=true&plan=${encodeURIComponent(ctx.plan)}&email=${encodeURIComponent(ctx.currentUser)}`
+      }).then(async function(rsp) {
+        if (rsp.code !== undefined) {
+          console.error("KG Inicis payment failed:", rsp.code, rsp.message);
+          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.message || "결제가 취소되었거나 실패했습니다."));
+          return;
+        }
+        try {
+          const verifyResponse = await fetch('/api/payments/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              paymentId: rsp.paymentId || krwPaymentId,
+              plan: ctx.plan,
+              email: ctx.currentUser,
+              userId: supabaseUserSession?.user?.id
+            })
+          });
+          const verifyResult = await verifyResponse.json();
+          if (verifyResult.success) {
             applyPlanUpgrade(ctx.plan, verifyResult.essayCredits);
           } else {
-            applyEssayCreditsPurchase();
+            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
           }
-        } else {
-          alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+        } catch (e) {
+          console.error("Payment verification request failed:", e);
+          alert(t("payment_failed", "Payment verification failed."));
         }
-      } catch (e) {
-        console.error("Payment verification request failed:", e);
-        alert(t("payment_failed", "Payment verification failed."));
+      }).catch(function(err) {
+        console.error("KG Inicis payment failed with error:", err);
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", err.message || "결제 진행 중 오류가 발생했습니다."));
+      });
+    } else {
+      // Use PortOne V2 for onetime payment (opens regular 카드사 인증창)
+      if (!window.PortOne || !window.PortOne.requestPayment) {
+        alert(t("payment_sdk_error", "Payment module is loading. Please try again in a moment."));
+        return;
       }
-    }).catch(function(err) {
-      console.error("KG Inicis payment failed with error:", err);
-      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", err.message || "결제 진행 중 오류가 발생했습니다."));
-    });
+      
+      const krwPaymentId = `order_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
+      PortOne.requestPayment({
+        storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
+        channelKey: "channel-key-inicis-live",
+        paymentId: krwPaymentId,
+        orderName: ctx.krwProductName,
+        totalAmount: ctx.krwAmount,
+        currency: "CURRENCY_KRW",
+        payMethod: "CARD",
+        customer: {
+          fullName: ctx.buyerName,
+          phoneNumber: ctx.buyerPhone,
+          email: ctx.currentUser
+        },
+        redirectUrl: `${window.location.origin}${window.location.pathname}?redirect_verify=true&plan=${encodeURIComponent(ctx.plan)}&email=${encodeURIComponent(ctx.currentUser)}`
+      }).then(async function(rsp) {
+        if (rsp.code !== undefined) {
+          console.error("KG Inicis payment failed:", rsp.code, rsp.message);
+          alert(t("payment_failed", "Payment failed: {error}").replace("{error}", rsp.message || "결제가 취소되었거나 실패했습니다."));
+          return;
+        }
+        try {
+          const verifyResponse = await fetch('/api/payments/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              paymentId: rsp.paymentId || krwPaymentId,
+              plan: ctx.plan,
+              email: ctx.currentUser,
+              userId: supabaseUserSession?.user?.id
+            })
+          });
+          const verifyResult = await verifyResponse.json();
+          if (verifyResult.success) {
+            if (ctx.plan === "Essay Pass" || ctx.plan === "Essay") {
+              applyEssayCreditsPurchase();
+            } else {
+              applyPlanUpgrade(ctx.plan, verifyResult.essayCredits);
+            }
+          } else {
+            alert(t("payment_failed", "Payment verification failed: {error}").replace("{error}", verifyResult.message || "Unknown error"));
+          }
+        } catch (e) {
+          console.error("Payment verification request failed:", e);
+          alert(t("payment_failed", "Payment verification failed."));
+        }
+      }).catch(function(err) {
+        console.error("KG Inicis payment failed with error:", err);
+        alert(t("payment_failed", "Payment failed: {error}").replace("{error}", err.message || "결제 진행 중 오류가 발생했습니다."));
+      });
+    }
   }
 };
 
@@ -6687,6 +6736,9 @@ async function handleRedirectPaymentResult() {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('redirect_verify') === 'true') {
     const paymentId = urlParams.get('payment_id');
+    const impUid = urlParams.get('imp_uid');
+    const merchantUid = urlParams.get('merchant_uid');
+    const impSuccess = urlParams.get('imp_success');
     const plan = urlParams.get('plan');
     const email = urlParams.get('email');
     const code = urlParams.get('code');
@@ -6696,13 +6748,21 @@ async function handleRedirectPaymentResult() {
     const cleanUrl = window.location.origin + window.location.pathname;
     window.history.replaceState({}, document.title, cleanUrl);
 
+    // Handle V1 checkout failure on redirect
+    if (impSuccess === 'false') {
+      const errorMsg = urlParams.get('error_msg') || "결제가 취소되었거나 실패했습니다.";
+      alert(t("payment_failed", "Payment failed: {error}").replace("{error}", errorMsg));
+      return;
+    }
+
+    // Handle V2 checkout failure on redirect
     if (code) {
       console.error("Payment failed on redirect:", code, message);
       alert(t("payment_failed", "Payment failed: {error}").replace("{error}", message || "결제가 취소되었거나 실패했습니다."));
       return;
     }
 
-    if (!paymentId) {
+    if (!paymentId && !impUid) {
       alert(t("payment_failed", "Payment failed: No payment ID returned."));
       return;
     }
