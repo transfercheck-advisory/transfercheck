@@ -38,7 +38,9 @@
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
     <!-- Supabase SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <link rel="stylesheet" href="./styles.css?v=20260616-v1360" />
+    <script>
+      document.write('<link rel="stylesheet" href="./styles.css?v=' + Date.now() + '" />');
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -1087,11 +1089,14 @@
       </div>
     </div>
 
-    <!-- Data scripts -->
-    <script src="./transfer-data.js?v=20260616-v1360"></script>
-    <script src="./course-catalog.js?v=20260616-v1360"></script>
-    <script src="./admissions-cases.js?v=20260616-v1360"></script>
-    <script src="./app.js?v=20260616-v1360"></script>
+    <!-- Data scripts with absolute cache busting -->
+    <script>
+      const ts = Date.now();
+      document.write('<script src="./transfer-data.js?v=' + ts + '"><\/script>');
+      document.write('<script src="./course-catalog.js?v=' + ts + '"><\/script>');
+      document.write('<script src="./admissions-cases.js?v=' + ts + '"><\/script>');
+      document.write('<script src="./app.js?v=' + ts + '"><\/script>');
+    </script>
 
   </body>
 </html>
