@@ -74,7 +74,30 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
   - Forced client CDN updates by bumping cache-busting version query string to `v1280` for `styles.css` and all JS assets.
   - Cleaned up temporary debug APIs from the production backend (verified 404 cleanup).
 
+---
 
+## 🛠️ UC Database Sync & UI Contrast Walkthrough (June 2026)
 
+### 1️⃣ Undefined Foreground & Invisible Text Color Fixes
+* **[styles.css](file:///c:/Users/user/OneDrive/바탕 화면/transfer app/styles.css)**: Defined `--foreground: var(--ink);` inside `:root` to ensure that any elements using `var(--foreground)` default to the slate text color `#0f172a` instead of blending invisibly into the ivory background `#fbfaf7`.
+* **[app.js](file:///c:/Users/user/OneDrive/바탕 화면/transfer app/app.js)**: Replaced all instances of `var(--foreground)` with `var(--ink)` (lines 3805, 4030, 4081, 4096, 5697) to restore high contrast text visibility for:
+  - Prerequisite Finder placeholder title
+  - Holistic evaluation explanation banner
+  - Official syllabus summary block
+  - "Visit Official Page" outline button
+  - Essay library expander cards
+* **Hardcoded White Stats Text**: Changed line 3396 (`color: #ffffff;` -> `color: var(--ink);`) to fix the invisible Fall Deadline stats display on premium transfer cards.
 
+### 2️⃣ Database Synchronization (45/45 UC Majors)
+* Created and executed [apply-uc-verification.js](file:///c:/Users/user/OneDrive/바탕 화면/transfer app/scratch/apply-uc-verification.js) to synchronize verified UC-specific prerequisites from [uc-verification-review.json](file:///c:/Users/user/OneDrive/바탕 화면/transfer app/uc-verification-review.json) into [transfer-data.js](file:///c:/Users/user/OneDrive/바탕 화면/transfer app/transfer-data.js).
+* Successfully updated **45 majors** across **UC San Diego, UC Irvine, and UC Berkeley (COE)**, replacing placeholder holistic lists with exact ASSIST.org articulated course codes.
+* Preserved the `verified` confidence rating in [update-database-confidence.js](file:///c:/Users/user/OneDrive/바탕 화면/transfer app/update-database-confidence.js) for our newly synchronized UC majors, preventing them from being reset to `high_risk`.
 
+### 3️⃣ Note Simplification & Clean Bullets
+* Purged long, cluttered URL addresses, verification banners, and block quotes from the `note` fields of the UC schools.
+* Replaced them with simple, clean Korean bullet points detailing the core requirements:
+  - 가을학기만 지원 가능 (11월 1~30일 접수)
+  - 최소 60학점 이수 및 GPA 기준 (UCB: 3.5, UCI: 3.0, UCSD: 2.4/2.8)
+  - IGETC 인정 불가 및 필수 전공선수과목 100% 완료 기한
+  - 1월 중 Major Prerequisite Admissions Form 제출 요건
+  - 전공별 특이사항 (조인트 전공 변경 가능 범위 및 단과대학 정보)

@@ -539,11 +539,38 @@
                   </div>
                 </div>
 
-                <div class="verification-alert" style="margin-top: 0; margin-bottom: 20px; border-color: rgba(99, 102, 241, 0.25); background: rgba(99, 102, 241, 0.06); color: #374151;">
-                  <strong data-i18n="essay_info_banner_title" style="color: #4f46e5; font-weight: 800; font-size: 13.5px; display: flex; align-items: center; gap: 6px;">💡 AI Knowledge Base & Policy Notice</strong>
-                  <span data-i18n="essay_info_banner_body" style="color: #475569; font-size: 12px; line-height: 1.6; margin-top: 6px; display: block; font-weight: 500;">
-                    Our AI engine is calibrated with admissions criteria and transfer essay style guides for 58 top schools. This is an educational brainstorming assistant; to comply with plagiarism and academic integrity policies, it does not draft essays for you and does not guarantee admissions.
-                  </span>
+                <!-- Upgraded 3-Step Interactive Wizard Guide -->
+                <div class="essay-wizard-guide" id="essayWizardGuide" style="margin-top: 0; margin-bottom: 24px; display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: rgba(99, 102, 241, 0.03);">
+                  <div style="font-weight: 800; font-size: 13.5px; color: var(--ink); display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 16px;">🎯</span>
+                    <span data-i18n="essay_guide_main_title">AI Essay Blueprint Wizard (3-Step Guide)</span>
+                  </div>
+                  <div class="wizard-steps-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 4px;">
+                    <div class="wizard-step" id="wizardStep1" style="display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); transition: all 0.2s;">
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Step 1</span>
+                        <span class="step-status-icon" style="font-size: 11px;">⚪</span>
+                      </div>
+                      <span style="font-size: 12px; font-weight: 700; color: var(--ink);" data-i18n="essay_guide_step1_title">Target Setup</span>
+                      <span style="font-size: 10px; color: var(--muted); line-height: 1.3;" data-i18n="essay_guide_step1_desc">Select target & prompt</span>
+                    </div>
+                    <div class="wizard-step" id="wizardStep2" style="display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); transition: all 0.2s;">
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Step 2</span>
+                        <span class="step-status-icon" style="font-size: 11px;">⚪</span>
+                      </div>
+                      <span style="font-size: 12px; font-weight: 700; color: var(--ink);" data-i18n="essay_guide_step2_title">AI Interview</span>
+                      <span style="font-size: 10px; color: var(--muted); line-height: 1.3;" data-i18n="essay_guide_step2_desc">Extract core stories</span>
+                    </div>
+                    <div class="wizard-step" id="wizardStep3" style="display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); transition: all 0.2s;">
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Step 3</span>
+                        <span class="step-status-icon" style="font-size: 11px;">⚪</span>
+                      </div>
+                      <span style="font-size: 12px; font-weight: 700; color: var(--ink);" data-i18n="essay_guide_step3_title">Exec Blueprint</span>
+                      <span style="font-size: 10px; color: var(--muted); line-height: 1.3;" data-i18n="essay_guide_step3_desc">Senior consult prescription</span>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- 3-in-1 EssayAI Subtabs -> Upgraded to 4-in-1 -->

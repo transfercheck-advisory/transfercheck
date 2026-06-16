@@ -265,6 +265,13 @@ const TRANSLATIONS = {
     "tag_dos": "DOs (Key Strengths to Highlight)",
     "tag_donts": "DON'Ts (Mistakes to Avoid)",
     "tag_example": "High-Quality Writing Example",
+    "essay_guide_main_title": "AI Essay Blueprint Wizard (3-Step Guide)",
+    "essay_guide_step1_title": "1. Target Setup",
+    "essay_guide_step1_desc": "Select target & prompt",
+    "essay_guide_step2_title": "2. AI Interview",
+    "essay_guide_step2_desc": "Extract core stories",
+    "essay_guide_step3_title": "3. Exec Blueprint",
+    "essay_guide_step3_desc": "Senior consult prescription",
     "essay_info_banner_title": "Calibrated AI Knowledge Base & Legal Safeguards",
     "essay_info_banner_body": "Our AI engine is calibrated with admissions criteria and transfer essay style guides for 58 top target universities (with 100% major coverage via AI real-time engine), leveraging data patterns from 120,000+ successful transfer essays. This is an educational brainstorming assistant; to comply with plagiarism and academic integrity policies, it does not draft essays for you and does not guarantee admissions.",
     "essay_mode_direct": "Direct Input",
@@ -680,6 +687,13 @@ const TRANSLATIONS = {
     "tag_dos": "추천 서술 방향 (DOs)",
     "tag_donts": "작성 시 금기 사항 (DON'Ts)",
     "tag_example": "우수 영문 서술 예시",
+    "essay_guide_main_title": "AI 에세이 설계 마법사 (3단계 진행 가이드)",
+    "essay_guide_step1_title": "1단계: 대학/주제 설정",
+    "essay_guide_step1_desc": "목표 대학 및 에세이 질문 입력",
+    "essay_guide_step2_title": "2단계: AI 인터뷰 진행",
+    "essay_guide_step2_desc": "핵심 스토리 및 전공 스펙 추출",
+    "essay_guide_step3_title": "3단계: 처방전 실행",
+    "essay_guide_step3_desc": "수석 컨설턴트 에세이 설계도 확인",
     "essay_info_banner_title": "AI 에세이 학습 상태 및 법적 안내",
     "essay_info_banner_body": "본 AI 엔진은 58개 명문 대학교의 편입 요건뿐만 아니라, 120,000건 이상의 실제 명문대 합격 에세이 패턴 분석 데이터에 기반하여 정교하게 칼리브레이션되어 있습니다. 입력하신 학생 활동을 최적의 뼈대로 엮는 브레인스토밍 가이드를 제공하며, 대학의 학업적 성실성 원칙에 의거하여 대필은 제공하지 않으며 입학을 보장하지 않습니다.",
     "essay_mode_direct": "직접 입력",
@@ -3341,10 +3355,10 @@ function renderEligibilityResults() {
 
         const holisticStrategyHtml = isHolistic ? `
           <div class="holistic-strategy-guide" style="margin: 14px 0; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #818cf8; padding: 14px; border-radius: 8px; font-size: 12.5px; line-height: 1.55;">
-            <strong style="color: #a5b4fc; display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 13.5px; font-weight: 800;">
+            <strong style="color: #4f46e5; display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 13.5px; font-weight: 800;">
               🔑 ${isKo ? "아이비리그/명문대 종합평가(Holistic) 합격 전략 가이드" : "Premium Holistic Strategy Guide"}
             </strong>
-            <div style="display: flex; flex-direction: column; gap: 8px; color: #e2e8f0; font-weight: 500;">
+            <div style="display: flex; flex-direction: column; gap: 8px; color: var(--ink); font-weight: 500;">
               <div>🎯 <strong>${isKo ? "차별화 스펙 (Spike)" : "Spike Strategy"}:</strong> ${isKo ? "단순 GPA 학업 외에 전공과 긴밀히 연계된 독보적 프로젝트 개발, 오픈소스 기여, 혹은 대학 연구 보조원 등 실천적 학업 열정 어필 필수." : "Must showcase a deep, focused project or external academic contribution."}</div>
               <div>📝 <strong>${isKo ? "교수 추천서 공략" : "Rec Letters Guide"}:</strong> ${isKo ? "학문적 호기심과 성실성을 강력히 보증해줄 수 있는 기초 이공/전공 교수 2인에게서 '최상위 평가(Top 1-2%)' 추천서 확보 필수." : "Obtain strong letters from 2 professors testifying to your intellectual curiosity."}</div>
               <div>🏆 <strong>${isKo ? "에세이 차별화 테마" : "Essay Theme"}:</strong> ${isKo ? "이전 대학의 환경적 한계를 넘어서 스탠포드/아이비리그의 연구 자원과 교사진이 본인에게 왜 절실히 필요한가 논리적 타당성 입증." : "Explain why you need target university resources to achieve your academic mission."}</div>
@@ -3357,7 +3371,7 @@ function renderEligibilityResults() {
             <div style="font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
               ⚠️ ${isKo ? "필수 선수과목 미이수 경고 (Prerequisite Gap)" : "Prerequisite Gap Warning"}
             </div>
-            <div style="font-weight: 500; color: #fda4af;">
+            <div style="font-weight: 500; color: #b91c1c;">
               ${isKo ? `합격에 필수적인 <strong>${rms.missingCount}개</strong> 과목이 누락되었습니다. 이 과목들을 이수하지 않으면 지원 자격이 박탈되거나 즉시 불합격 처리됩니다. 아래 선수과목 리스트를 확인하고 Pathfinder에서 로드맵을 보완하세요.` : `<strong>${rms.missingCount} required courses</strong> are missing. Failure to complete these before transfer will result in immediate rejection. Check the list below and modify your roadmaps in Pathfinder.`}
             </div>
           </div>
@@ -3379,7 +3393,7 @@ function renderEligibilityResults() {
               <div class="card-stats-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 12px; margin: 14px 0; font-size: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0;">
                 <div><span style="color: var(--muted);">${isKo ? "국제학생 합격률" : "Int'l Rate"}:</span> <strong style="color: #fbbf24;">${stats.rateInternational}</strong></div>
                 <div><span style="color: var(--muted);">${isKo ? "타주학생 합격률" : "Out-of-State"}:</span> <strong style="color: #f43f5e;">${stats.rateOutOfState}</strong></div>
-                <div><span style="color: var(--muted);">${isKo ? "가을학기 마감일" : "Fall Deadline"}:</span> <strong style="color: #ffffff;">${stats.deadlineFall}</strong></div>
+                <div><span style="color: var(--muted);">${isKo ? "가을학기 마감일" : "Fall Deadline"}:</span> <strong style="color: var(--ink);">${stats.deadlineFall}</strong></div>
                 <div><span style="color: var(--muted);">${isKo ? "합격 평균 GPA" : "Admitted GPA"}:</span> <strong style="color: #60a5fa;">${stats.avgGpa}</strong></div>
               </div>
 
@@ -3788,7 +3802,7 @@ function renderRequirementDetail(programId) {
     container.innerHTML = `
       <div class="placeholder-view" style="text-align: center; padding: 60px 20px;">
         <div style="font-size: 48px; margin-bottom: 20px;">🔍</div>
-        <h3 style="color: var(--foreground); margin-bottom: 8px;" data-i18n="req_finder_placeholder_title">${escapeHtml(t("req_finder_placeholder_title"))}</h3>
+        <h3 style="color: var(--ink); margin-bottom: 8px;" data-i18n="req_finder_placeholder_title">${escapeHtml(t("req_finder_placeholder_title"))}</h3>
         <p style="color: var(--muted); font-size: 14px; max-width: 400px; margin: 0 auto;" data-i18n="req_finder_placeholder_desc">${escapeHtml(t("req_finder_placeholder_desc"))}</p>
       </div>
     `;
@@ -3858,9 +3872,9 @@ function renderRequirementDetail(programId) {
                 </span>
               </div>
               <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 12px; margin-bottom: 6px;">
-                <div><span style="color: var(--muted); font-size: 12px;">GPA:</span> <strong style="color: #ffffff;">${c.gpa}</strong></div>
-                <div><span style="color: var(--muted); font-size: 12px;">${isKo ? "출신 대학" : "Origin"}:</span> <strong style="color: #ffffff;">${c.origin}</strong></div>
-                <div><span style="color: var(--muted); font-size: 12px;">${isKo ? "유학생 여부" : "International"}:</span> <strong style="color: #ffffff;">${c.international}</strong></div>
+                <div><span style="color: var(--muted); font-size: 12px;">GPA:</span> <strong style="color: var(--ink);">${c.gpa}</strong></div>
+                <div><span style="color: var(--muted); font-size: 12px;">${isKo ? "출신 대학" : "Origin"}:</span> <strong style="color: var(--ink);">${c.origin}</strong></div>
+                <div><span style="color: var(--muted); font-size: 12px;">${isKo ? "유학생 여부" : "International"}:</span> <strong style="color: var(--ink);">${c.international}</strong></div>
                 <div style="grid-column: span 2;"><span style="color: var(--muted); font-size: 12px;">${isKo ? "최종 결과" : "Outcome"}:</span> <strong style="color: #fbbf24;">${c.outcome}</strong></div>
               </div>
               <div style="margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.5; background: rgba(0,0,0,0.1); padding: 8px; border-radius: 4px;">
@@ -3887,7 +3901,7 @@ function renderRequirementDetail(programId) {
           <span style="font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 2px;">
             ${isKo ? "합격생 평균 GPA 범위" : "Competitive GPA Range"}
           </span>
-          <strong style="color: #ffffff; font-size: 15px;">${compProfile.gpaRange}</strong>
+          <strong style="color: var(--ink); font-size: 15px;">${compProfile.gpaRange}</strong>
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
           <span style="font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 2px;">
@@ -3904,12 +3918,12 @@ function renderRequirementDetail(programId) {
       </div>
 
       <div style="margin-bottom: 14px;">
-        <strong style="color: #ffffff; font-size: 13px; display: block; margin-bottom: 6px;">
+        <strong style="color: var(--ink); font-size: 13px; display: block; margin-bottom: 6px;">
           📘 ${isKo ? "추천 권장 선수 과목 (Recommended Electives)" : "Recommended Electives"}
         </strong>
         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
           ${compProfile.electives.map(e => `
-            <span style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 4px; padding: 3px 8px; font-size: 12px; color: #a5b4fc;">
+            <span style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 4px; padding: 3px 8px; font-size: 12px; color: #4f46e5;">
               ${e}
             </span>
           `).join("")}
@@ -3917,7 +3931,7 @@ function renderRequirementDetail(programId) {
       </div>
 
       <div>
-        <strong style="color: #ffffff; font-size: 13px; display: block; margin-bottom: 6px;">
+        <strong style="color: var(--ink); font-size: 13px; display: block; margin-bottom: 6px;">
           🏆 ${isKo ? "권장 비교과 활동 마일스톤 (Extracurriculars)" : "Extracurricular Milestones"}
         </strong>
         <ul style="margin: 0; padding-left: 18px; color: var(--muted); font-size: 12.5px; line-height: 1.6;">
@@ -3960,15 +3974,15 @@ function renderRequirementDetail(programId) {
       <!-- Acceptance Rate Breakdown Table/Grid -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 16px;">
         <div style="background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 8px; padding: 12px; text-align: center;">
-          <span style="font-size: 11px; color: #a7f3d0; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "주내 학생 합격률" : "In-State Transfer"}</span>
+          <span style="font-size: 11px; color: #047857; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "주내 학생 합격률" : "In-State Transfer"}</span>
           <strong style="color: #10b981; font-size: 18px; font-weight: 900;">${stats.rateInState}</strong>
         </div>
         <div style="background: rgba(244, 63, 94, 0.04); border: 1px solid rgba(244, 63, 94, 0.15); border-radius: 8px; padding: 12px; text-align: center;">
-          <span style="font-size: 11px; color: #fecdd3; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "타주 학생 합격률" : "Out-of-State Transfer"}</span>
+          <span style="font-size: 11px; color: #be123c; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "타주 학생 합격률" : "Out-of-State Transfer"}</span>
           <strong style="color: #f43f5e; font-size: 18px; font-weight: 900;">${stats.rateOutOfState}</strong>
         </div>
         <div style="background: rgba(251, 191, 36, 0.04); border: 1px solid rgba(251, 191, 36, 0.15); border-radius: 8px; padding: 12px; text-align: center;">
-          <span style="font-size: 11px; color: #fef08a; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "국제학생 합격률" : "Int'l Student Transfer"}</span>
+          <span style="font-size: 11px; color: #b45309; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "국제학생 합격률" : "Int'l Student Transfer"}</span>
           <strong style="color: #fbbf24; font-size: 18px; font-weight: 900;">${stats.rateInternational}</strong>
         </div>
       </div>
@@ -3977,30 +3991,30 @@ function renderRequirementDetail(programId) {
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; font-size: 13px;">
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
           <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "가을학기 원서 마감" : "Fall Deadline"}</span>
-          <strong style="color: #ffffff;">${stats.deadlineFall}</strong>
+          <strong style="color: var(--ink);">${stats.deadlineFall}</strong>
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
           <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "봄학기 원서 마감" : "Spring Deadline"}</span>
-          <strong style="color: #ffffff;">${stats.deadlineSpring}</strong>
+          <strong style="color: var(--ink);">${stats.deadlineSpring}</strong>
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
           <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "편입 연간 지원자 수" : "Annual Applicants"}</span>
-          <strong style="color: #60a5fa;">${stats.applicants.toLocaleString()} ${isKo ? "명" : "students"}</strong>
+          <strong style="color: #1d4ed8;">${stats.applicants.toLocaleString()} ${isKo ? "명" : "students"}</strong>
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
           <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "합격자 평균 GPA" : "Admitted Avg GPA"}</span>
-          <strong style="color: #a5b4fc;">${stats.avgGpa}</strong>
+          <strong style="color: #4f46e5;">${stats.avgGpa}</strong>
         </div>
       </div>
 
       <!-- AP & Advising Note -->
       <div style="margin-bottom: 12px; font-size: 12.5px; line-height: 1.5; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 10px; border-radius: 6px;">
-        <strong style="color: #a5b4fc; display: block; margin-bottom: 4px;">📐 AP / IB 학점 인정 정책 (AP/IB Waiver Policy)</strong>
-        <span style="color: #cbd5e1;">${stats.apPolicy}</span>
+        <strong style="color: #4f46e5; display: block; margin-bottom: 4px;">📐 AP / IB 학점 인정 정책 (AP/IB Waiver Policy)</strong>
+        <span style="color: var(--ink);">${stats.apPolicy}</span>
       </div>
       <div style="font-size: 12.5px; line-height: 1.5; background: rgba(244, 63, 94, 0.03); border-left: 3px solid #f43f5e; padding: 10px; border-radius: 0 6px 6px 0;">
-        <strong style="color: #fca5a5; display: block; margin-bottom: 4px;">💡 유학원 총괄이사 전술 조언 (Strategic Advising Note)</strong>
-        <span style="color: #fecdd3; font-weight: 500;">${stats.advisingNote}</span>
+        <strong style="color: #b91c1c; display: block; margin-bottom: 4px;">💡 수석 컨설턴트 핵심 전술 조언 (Senior Consultant's Strategic Advising Note)</strong>
+        <span style="color: var(--ink); font-weight: 500;">${stats.advisingNote}</span>
       </div>
     </article>
   `;
@@ -4013,7 +4027,7 @@ function renderRequirementDetail(programId) {
         <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px;">
           <span>ℹ️</span> ${escapeHtml(t("holistic_eval_title"))}
         </h3>
-        <p style="font-size: 15px; line-height: 1.6; color: var(--foreground); margin-top: 10px;">
+        <p style="font-size: 15px; line-height: 1.6; color: var(--ink); margin-top: 10px;">
           ${escapeHtml(t("holistic_eval_desc"))}
         </p>
       </article>
@@ -4064,7 +4078,7 @@ function renderRequirementDetail(programId) {
             <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.4;">
               ⚠️ AI 분석과 대조할 수 있도록 수집된 요강 원문을 요약하여 보여줍니다. 최종 지원 시에는 반드시 아래 링크의 대학교 공식 페이지를 한 번 더 확인하시기 바랍니다.
             </p>
-            <div style="margin-bottom: 16px; padding: 14px; background: rgba(197, 168, 128, 0.05); border: 1px dashed rgba(197, 168, 128, 0.3); border-radius: 8px; font-size: 13.5px; color: var(--foreground); line-height: 1.6;">
+            <div style="margin-bottom: 16px; padding: 14px; background: rgba(197, 168, 128, 0.05); border: 1px dashed rgba(197, 168, 128, 0.3); border-radius: 8px; font-size: 13.5px; color: var(--ink); line-height: 1.6;">
               <strong style="color: var(--primary); display: block; margin-bottom: 6px;">📝 핵심 요약 (Summary Guide):</strong>
               <ul style="margin: 0; padding-left: 20px; list-style-type: disc;">
                 <li><strong>Minimum GPA Requirement:</strong> ${escapeHtml(program.rawMinGpa || t("unspecified_gpa"))}</li>
@@ -4079,7 +4093,7 @@ function renderRequirementDetail(programId) {
               <div class="raw-official-text-box" style="margin-top: 12px; max-height: 250px; overflow-y: auto; font-family: monospace; font-size: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-all; color: #bbb; border-top: 1px solid var(--line); padding-top: 12px;">${escapeHtml(program.rawOfficialText)}</div>
             </details>
             <div style="margin-top: 12px;">
-              <a href="${escapeHtml(program.officialSourceUrl || "#")}" target="_blank" class="outline-btn compact" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--line); font-size: 12px; color: var(--foreground); transition: background 0.2s;">
+              <a href="${escapeHtml(program.officialSourceUrl || "#")}" target="_blank" class="outline-btn compact" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--line); font-size: 12px; color: var(--ink); transition: background 0.2s;">
                 🌐 공식 페이지 방문하기 (Visit Official Page)
               </a>
             </div>
@@ -4340,7 +4354,7 @@ function renderAdvisoryMilestones(termStr, track, isInternational) {
           ${escapeHtml(m.badge)}
         </span>
       </div>
-      <strong style="color: #ffffff; font-size: 13px; font-weight: 700; display: block; margin-top: 2px;">${escapeHtml(m.title)}</strong>
+      <strong style="color: var(--ink); font-size: 13px; font-weight: 700; display: block; margin-top: 2px;">${escapeHtml(m.title)}</strong>
       <p style="margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5;">${escapeHtml(m.desc)}</p>
     </div>
   `).join("");
@@ -4549,7 +4563,7 @@ function buildRoadmap() {
   const track = getStudentTrack(selectedPrograms);
   const isInternational = state.international;
 
-  qs("#roadmapTimeline").innerHTML = buckets
+  const timelineHtml = buckets
     .map(
       (bucket) => {
         const requireds = bucket.courses.filter(item => item.priority !== "recommended");
@@ -4592,15 +4606,21 @@ function buildRoadmap() {
         if (totalWorkload > 10) {
           workloadWarningHtml = `
             <div class="workload-warning-alert" style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 6px; padding: 8px 12px; margin-top: 10px; font-size: 11.5px; color: #d97706; font-weight: 600; line-height: 1.45;">
-              ⚠️ ${isKo ? "<strong>내신(GPA) 위험 경고:</strong> 학업 부하가 과도하게 높습니다 (" + totalWorkload + "점). 핵심 전공 과목을 다음 학기로 분산하여 학점(GPA) 하락을 방지하는 것을 강력히 권장합니다." 
-                        : "<strong>GPA Warning:</strong> Semester workload is extremely high (" + totalWorkload + " pts). We strongly recommend spreading core requirements to protect your GPA."}
+              ⚠️ ${isKo ? "<strong>내신(GPA) 위험 경고:</strong> 학업 부하가 과도하게 높습니다 (직전 학기 대비 수강 난이도 매우 높음). 핵심 전공 과목을 다음 학기로 분산하여 학점(GPA) 하락을 방지하는 것을 강력히 권장합니다." 
+                        : "<strong>GPA Warning:</strong> Semester workload difficulty is extremely high. We strongly recommend spreading core requirements to protect your GPA."}
             </div>
           `;
         }
         
+        const workloadLabel = totalWorkload > 10 
+          ? (isKo ? '학업 부하: 매우 높음' : 'Workload: Very High')
+          : (totalWorkload > 6 
+              ? (isKo ? '학업 부하: 높음' : 'Workload: High')
+              : (isKo ? '학업 부하: 보통' : 'Workload: Normal'));
+
         const workloadBadgeHtml = bucket.courses.length > 0 ? `
-          <span style="font-size: 10px; font-weight: 800; background: ${totalWorkload > 10 ? '#ef4444' : '#10b981'}15; color: ${totalWorkload > 10 ? '#ef4444' : '#10b981'}; padding: 2px 6px; border-radius: 4px; border: 1px solid ${totalWorkload > 10 ? '#ef4444' : '#10b981'}30; margin-left: auto; display: inline-block;">
-            ${isKo ? '학업 부하: ' : 'Workload: '}${totalWorkload}
+          <span style="font-size: 10px; font-weight: 800; background: ${totalWorkload > 10 ? '#ef4444' : (totalWorkload > 6 ? '#f59e0b' : '#10b981')}15; color: ${totalWorkload > 10 ? '#ef4444' : (totalWorkload > 6 ? '#f59e0b' : '#10b981')}; padding: 2px 6px; border-radius: 4px; border: 1px solid ${totalWorkload > 10 ? '#ef4444' : (totalWorkload > 6 ? '#f59e0b' : '#10b981')}30; margin-left: auto; display: inline-block;">
+            ${workloadLabel}
           </span>
         ` : "";
 
@@ -4629,6 +4649,80 @@ function buildRoadmap() {
       }
     )
     .join("");
+
+  // Build strategic advice block based on track
+  let strategicAdviceHtml = "";
+  if (selectedPrograms.length > 0) {
+    let adviceTitle = isKo ? "🎓 수석 컨설턴트 로드맵 전략 가이드" : "🎓 Senior Consultant's Strategic Roadmap Guide";
+    let adviceSubtitle = isKo 
+      ? "목표 대학교 합격률을 극대화하기 위한 시간표 구성 및 비교과 전략입니다." 
+      : "Timetable configuration and extracurricular strategy to maximize target admissions.";
+    
+    let adviceContent = "";
+    if (track === "stem") {
+      adviceContent = isKo 
+        ? `
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
+            <li><strong>선수과목 이수 후 공석 관리:</strong> 기본 필수과목(Calculus I/II, Physics, CS 등)을 모두 이수한 후 남는 학점에는 <strong>Calculus III(다변수미적분학), Linear Algebra(선형대수학), Differential Equations(미분방정식)</strong> 등 난이도가 높은 상위 수학/과학 과목을 채워 학업적 깊이(Academic Rigor)를 입증하십시오.</li>
+            <li><strong>GPA 보호 전략:</strong> STEM 전공은 GPA 3.8 이상이 필수적입니다. 과도한 전공 과목 동시 수강을 피하고, 교양 과목을 징검다리로 배치하여 성적을 관리하십시오.</li>
+            <li><strong>추천 비교과 활동:</strong> 전공 연구실(Lab) 컨택, 로보틱스/코딩 학술 동아리 주도, 혹은 학과 튜터(Peer Tutor) 활동을 로드맵 일정에 맞춰 반드시 병행하십시오.</li>
+          </ul>
+        `
+        : `
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
+            <li><strong>Fill Remaining Credits with Advanced Courses:</strong> After satisfying baseline prerequisites (Calculus I/II, Physics, CS), use elective slots to take advanced courses like <strong>Calculus III, Linear Algebra, or Differential Equations</strong> to prove your academic rigor to selective admissions committees.</li>
+            <li><strong>GPA Protection:</strong> A STEM transfer GPA of 3.8+ is critical. Avoid overloading technical courses in a single semester; buffer with general education courses.</li>
+            <li><strong>Recommended Milestones:</strong> Prioritize securing research assistant roles, leading academic/technical clubs, or acting as a peer tutor in physics/calculus.</li>
+          </ul>
+        `;
+    } else if (track === "business") {
+      adviceContent = isKo 
+        ? `
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
+            <li><strong>선수과목 이수 후 공석 관리:</strong> 기본 경제학 원론(Micro/Macro)과 회계학(Financial/Managerial)을 완수했다면, <strong>Business Statistics(경영통계학), Intermediate Microeconomics(중급미시경제학)</strong> 또는 <strong>Calculus II</strong> 등의 심화 과목을 수강하여 타 지원자 대비 수학적/분석적 우위를 확보하십시오.</li>
+            <li><strong>리더십 스펙 다지기:</strong> 경영학 편입은 학점만큼 리더십이 중요합니다. 전적대 모의투자 클럽 창설, 창업 동아리 임원, 혹은 비즈니스 경진대회(Case Competition) 참가를 학기 로드맵에 맞게 설계하십시오.</li>
+            <li><strong>인턴십 및 실무 연계:</strong> 편입 직전 여름/겨울 방학에는 스타트업 인턴십이나 소기업 컨설팅 프로젝트를 수행하여 에세이의 실무 스토리라인을 미리 확보해야 합니다.</li>
+          </ul>
+        `
+        : `
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
+            <li><strong>Differentiate with Quantitative Electives:</strong> Once core Micro/Macroeconomics and Accounting are complete, take advanced courses like <strong>Business Statistics, Intermediate Microeconomics, or Calculus II</strong> to display analytical superiority.</li>
+            <li><strong>Leadership Extracurriculars:</strong> Business transfer values leadership alongside GPA. Plan to launch a finance club, hold officer roles in business student associations, or compete in case competitions.</li>
+            <li><strong>Professional Internships:</strong> Schedule summer/winter internships or startup advisory projects before application season to secure impactful material for your essays.</li>
+          </ul>
+        `;
+    } else {
+      adviceContent = isKo 
+        ? `
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
+            <li><strong>선수과목 이수 후 공석 관리:</strong> 기본 작문 및 인문 과목 이수 후 남는 시간표에는 <strong>Critical Thinking, Advanced Academic Writing, 혹은 목표 전공의 300번대(고학년) 전공 입문 과목</strong>을 선수강하여 인문/사회과학 부문의 학술적 준비 수준을 어필하십시오.</li>
+            <li><strong>독창적 리서치 프로젝트:</strong> 교수님과의 독립 연구(Independent Study)를 신청하거나, 전공 관련 학술지에 독자적인 에세이/리포트를 기고하여 뛰어난 지적 집요함(Intellectual Curiosity)을 입증하는 스펙을 쌓으십시오.</li>
+            <li><strong>작문 역량 및 에세이 빌드업:</strong> 편입 에세이가 당락의 40% 이상을 좌우합니다. 교내 작문 클리닉(Writing Center)을 적극 활용하고, 토론/학회 등 글쓰기와 소통 능력을 보여주는 마일스톤을 추가하십시오.</li>
+          </ul>
+        `
+        : `
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
+            <li><strong>Enhance Writing & Research Rigor:</strong> After basic English Composition, fill elective space with courses like <strong>Critical Thinking, Advanced Academic Writing, or junior-level introductory courses</strong> in your humanities/social science field.</li>
+            <li><strong>Intellectual Curiosity Projects:</strong> Plan an Independent Study with a professor or aim to draft and submit a research paper to student journals.</li>
+            <li><strong>Essay Writing Focus:</strong> Essays decide up to 40% of humanities admissions. Plan to actively use writing centers and participate in debates or student government.</li>
+          </ul>
+        `;
+    }
+
+    strategicAdviceHtml = `
+      <div class="requirement-card" style="margin-top: 24px; border-left: 4px solid var(--accent); background: rgba(197, 168, 128, 0.04); padding: 20px; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow-soft); width: 100%;">
+        <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 15.5px; font-weight: 800; margin-bottom: 6px;">
+          <span>💡</span> ${adviceTitle}
+        </h3>
+        <p style="font-size: 12.5px; color: var(--muted); margin-bottom: 14px; font-weight: 500;">${adviceSubtitle}</p>
+        <div style="font-size: 13px; color: var(--ink); line-height: 1.6;">
+          ${adviceContent}
+        </div>
+      </div>
+    `;
+  }
+
+  qs("#roadmapTimeline").innerHTML = timelineHtml + strategicAdviceHtml;
 }
 
 function bindEvents() {
@@ -5504,6 +5598,43 @@ function bindEssay() {
       if (resultDesc) resultDesc.textContent = isKo 
         ? "Common App용 150자 및 UC 원서용 350자 글자수 맞춤형 고영향력(High-impact) 최적화 설명입니다."
         : "Polished descriptions matching Common App 150-char and UC 350-char limits.";
+
+      // Display optimization results structure
+      const resultsPanel = qs("#essayResultPanel");
+      if (resultsPanel && window.latestOptimizationData) {
+        const data = window.latestOptimizationData;
+        resultsPanel.innerHTML = `
+          <div style="display: grid; gap: 20px;">
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span style="font-size: 11px; font-weight: 800; color: #4f46e5; background: rgba(99, 102, 241, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Common App Description (Max 150 Chars)</span>
+                <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.commonAppVersion.characterCount)} / 150 chars</span>
+              </div>
+              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
+                ${escapeHtml(data.commonAppVersion.text)}
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.commonAppVersion.actionVerbsUsed)}</strong></span>
+                <button type="button" id="copyCommonAppBtn" onclick="copyToClipboard('${escapeHtml(data.commonAppVersion.text.replace(/'/g, "\\'"))}', 'copyCommonAppBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
+              </div>
+            </div>
+            
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span style="font-size: 11px; font-weight: 800; color: #047857; background: rgba(16, 185, 129, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">UC Description (Max 350 Chars)</span>
+                <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.ucVersion.characterCount)} / 350 chars</span>
+              </div>
+              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
+                ${escapeHtml(data.ucVersion.text)}
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.ucVersion.actionVerbsUsed)}</strong></span>
+                <button type="button" id="copyUcBtn" onclick="copyToClipboard('${escapeHtml(data.ucVersion.text.replace(/'/g, "\\'"))}', 'copyUcBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
     } else if (subtab === "library") {
       qs("#essayForm")?.classList.add("hidden");
       qs("#essayResultPanel")?.classList.add("hidden");
@@ -5563,7 +5694,7 @@ function bindEssay() {
       <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
         ${filteredCases.map((c) => `
           <details class="essay-library-card" style="border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.01); padding: 16px; transition: all 0.2s; width: 100%;">
-            <summary style="cursor: pointer; font-weight: 800; font-size: 14.5px; color: var(--foreground); display: flex; flex-direction: column; gap: 4px; outline: none; list-style: none;">
+            <summary style="cursor: pointer; font-weight: 800; font-size: 14.5px; color: var(--ink); display: flex; flex-direction: column; gap: 4px; outline: none; list-style: none;">
               <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 8px;">
                 <span style="color: var(--accent); font-weight: 900; font-size: 14.5px;">★ ${escapeHtml(c.title)}</span>
                 <span style="font-size: 11px; background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); padding: 2px 8px; border-radius: 4px; font-weight: 700;">
@@ -5575,28 +5706,28 @@ function bindEssay() {
             
             <div style="margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px; display: flex; flex-direction: column; gap: 12px; font-size: 13px; line-height: 1.5;">
               <div>
-                <strong style="color: #fbbf24; display: block; margin-bottom: 2px;">❓ ${isKo ? "에세이 질문 (Prompt)" : "Essay Prompt"}</strong>
-                <span style="color: #e2e8f0; font-family: monospace;">${escapeHtml(c.prompt)}</span>
+                <strong style="color: var(--gold); display: block; margin-bottom: 2px;">❓ ${isKo ? "에세이 질문 (Prompt)" : "Essay Prompt"}</strong>
+                <span style="color: var(--ink); font-family: monospace;">${escapeHtml(c.prompt)}</span>
               </div>
               
               <div>
-                <strong style="color: #60a5fa; display: block; margin-bottom: 2px;">🪝 ${isKo ? "도입부 훅 전략 (Hook Strategy)" : "Hook Strategy"}</strong>
-                <span style="color: #cbd5e1;">${escapeHtml(c.hook)}</span>
+                <strong style="color: #1d4ed8; display: block; margin-bottom: 2px;">🪝 ${isKo ? "도입부 훅 전략 (Hook Strategy)" : "Hook Strategy"}</strong>
+                <span style="color: var(--muted);">${escapeHtml(c.hook)}</span>
               </div>
               
               <div>
-                <strong style="color: #a78bfa; display: block; margin-bottom: 2px;">📈 ${isKo ? "전체 스토리라인 전개 (Narrative Arc)" : "Narrative Arc"}</strong>
-                <span style="color: #cbd5e1;">${escapeHtml(c.narrativeArc)}</span>
+                <strong style="color: #6d28d9; display: block; margin-bottom: 2px;">📈 ${isKo ? "전체 스토리라인 전개 (Narrative Arc)" : "Narrative Arc"}</strong>
+                <span style="color: var(--muted);">${escapeHtml(c.narrativeArc)}</span>
               </div>
               
               <div style="background: rgba(16, 185, 129, 0.06); border: 1px dashed rgba(16, 185, 129, 0.3); border-radius: 6px; padding: 10px;">
-                <strong style="color: #34d399; display: block; margin-bottom: 2px;">🎯 ${isKo ? "합격 결정적 요인 (Winning Point)" : "Winning Point"}</strong>
-                <span style="color: #e2e8f0; font-weight: 500;">${escapeHtml(c.winningPoint)}</span>
+                <strong style="color: #047857; display: block; margin-bottom: 2px;">🎯 ${isKo ? "합격 결정적 요인 (Winning Point)" : "Winning Point"}</strong>
+                <span style="color: var(--ink); font-weight: 500;">${escapeHtml(c.winningPoint)}</span>
               </div>
               
               <div style="background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; padding: 8px 12px;">
-                <strong style="color: #fca5a5; display: block; margin-bottom: 2px;">💡 ${isKo ? "유학원 총괄이사 코칭 (Counselor Tip)" : "Counselor Tip"}</strong>
-                <span style="color: #f87171; font-weight: 500;">${escapeHtml(c.counselorTip)}</span>
+                <strong style="color: #b91c1c; display: block; margin-bottom: 2px;">💡 ${isKo ? "수석 컨설턴트 코칭 (Senior Consultant Tip)" : "Senior Consultant Tip"}</strong>
+                <span style="color: var(--ink); font-weight: 500;">${escapeHtml(c.counselorTip)}</span>
               </div>
             </div>
           </details>
@@ -5889,47 +6020,47 @@ function bindEssay() {
       if (activeSubtab === "critic") {
         let rewritesHtml = data.nativeRewrites.map((r, idx) => `
           <tr style="border-bottom: 1px solid var(--line);">
-            <td style="padding: 10px; color: #f87171; font-size: 12.5px; font-family: monospace;">"${escapeHtml(r.original)}"</td>
-            <td style="padding: 10px; color: #34d399; font-size: 13px; font-family: monospace; font-weight: 600;">
+            <td style="padding: 10px; color: #be123c; font-size: 12.5px; font-family: monospace;">"${escapeHtml(r.original)}"</td>
+            <td style="padding: 10px; color: #047857; font-size: 13px; font-family: monospace; font-weight: 600;">
               "${escapeHtml(r.rewritten)}"
-              <button type="button" id="copyRewriteBtn${idx}" onclick="copyToClipboard('${escapeHtml(r.rewritten.replace(/'/g, "\\'"))}', 'copyRewriteBtn${idx}')" style="display: block; margin-top: 6px; background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 2px 6px; font-size: 10px; cursor: pointer;">Copy</button>
+              <button type="button" id="copyRewriteBtn${idx}" onclick="copyToClipboard('${escapeHtml(r.rewritten.replace(/'/g, "\\'"))}', 'copyRewriteBtn${idx}')" style="display: block; margin-top: 6px; background: var(--line); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: 2px 6px; font-size: 10px; cursor: pointer;">Copy</button>
             </td>
             <td style="padding: 10px; color: var(--muted); font-size: 12px; line-height: 1.5;">${escapeHtml(r.explanation)}</td>
           </tr>
         `).join("");
 
         outlineContent.innerHTML = `
-          <div style="background: rgba(99, 102, 241, 0.05); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 20px;">
             <div style="display: flex; gap: 16px; margin-bottom: 14px; flex-wrap: wrap;">
-              <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 140px;">
+              <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 140px;">
                 <span style="font-size: 11px; color: var(--muted); font-weight: 700; display: block; text-transform: uppercase;">AI Similarity Index</span>
-                <strong style="color: #34d399; font-size: 18px; font-weight: 800;">${escapeHtml(data.aiSimilarityIndex)}</strong>
+                <strong style="color: #047857; font-size: 18px; font-weight: 800;">${escapeHtml(data.aiSimilarityIndex)}</strong>
               </div>
-              <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 140px;">
+              <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 140px;">
                 <span style="font-size: 11px; color: var(--muted); font-weight: 700; display: block; text-transform: uppercase;">Turnitin Originality</span>
-                <strong style="color: #34d399; font-size: 18px; font-weight: 800;">${escapeHtml(data.turnitinStatus)}</strong>
+                <strong style="color: #047857; font-size: 18px; font-weight: 800;">${escapeHtml(data.turnitinStatus)}</strong>
               </div>
             </div>
             
             <div style="margin-bottom: 14px;">
-              <strong style="color: #ffffff; font-size: 13.5px; display: block; margin-bottom: 4px;">📢 ${isKo ? "어조 분석 (Tone Analysis)" : "Tone Analysis"}</strong>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;">${escapeHtml(data.toneAnalysis)}</p>
+              <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-bottom: 4px;">📢 ${isKo ? "어조 분석 (Tone Analysis)" : "Tone Analysis"}</strong>
+              <p style="margin: 0; color: var(--ink); font-size: 13px; line-height: 1.6;">${escapeHtml(data.toneAnalysis)}</p>
             </div>
             <div style="margin-bottom: 14px; border-top: 1px solid var(--line); padding-top: 12px;">
-              <strong style="color: #ffffff; font-size: 13.5px; display: block; margin-bottom: 4px;">🎓 ${isKo ? "대학 인재상 적합성 (Admissions Fit)" : "Admissions Fit"}</strong>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;">${escapeHtml(data.admissionsFit)}</p>
+              <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-bottom: 4px;">🎓 ${isKo ? "대학 인재상 적합성 (Admissions Fit)" : "Admissions Fit"}</strong>
+              <p style="margin: 0; color: var(--ink); font-size: 13px; line-height: 1.6;">${escapeHtml(data.admissionsFit)}</p>
             </div>
             <div style="border-top: 1px solid var(--line); padding-top: 12px;">
-              <strong style="color: #ffffff; font-size: 13.5px; display: block; margin-bottom: 4px;">📝 ${isKo ? "종합 개선 가이드 (Critique Details)" : "Critique Details"}</strong>
-              <p style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6;">${escapeHtml(data.critiqueDetails)}</p>
+              <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-bottom: 4px;">📝 ${isKo ? "종합 개선 가이드 (Critique Details)" : "Critique Details"}</strong>
+              <p style="margin: 0; color: var(--ink); font-size: 13px; line-height: 1.6;">${escapeHtml(data.critiqueDetails)}</p>
             </div>
           </div>
 
           <div style="margin-top: 20px;">
-            <h4 style="color: #ffffff; font-size: 14.5px; margin-bottom: 12px; font-weight: 800;">✍️ ${isKo ? "네이티브 표현 교정 클리닉 (Native Phrase Clinic)" : "Native Phrase Clinic"}</h4>
-            <table style="width: 100%; border-collapse: collapse; text-align: left; background: rgba(0,0,0,0.15); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;">
+            <h4 style="color: var(--ink); font-size: 14.5px; margin-bottom: 12px; font-weight: 800;">✍️ ${isKo ? "네이티브 표현 교정 클리닉 (Native Phrase Clinic)" : "Native Phrase Clinic"}</h4>
+            <table style="width: 100%; border-collapse: collapse; text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;">
               <thead>
-                <tr style="background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--line);">
+                <tr style="background: var(--surface-hover); border-bottom: 1px solid var(--line);">
                   <th style="padding: 10px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Original Draft</th>
                   <th style="padding: 10px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Native Polish</th>
                   <th style="padding: 10px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Rationale</th>
@@ -5945,11 +6076,11 @@ function bindEssay() {
         let styleGuideHtml = "";
         if (data.targetStyleGuide) {
           styleGuideHtml = `
-            <div style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 12px; padding: 18px; margin-bottom: 20px; box-shadow: var(--shadow-soft);">
-              <strong style="color: #a5b4fc; font-size: 14.5px; display: block; margin-bottom: 6px; font-weight: 800; text-transform: uppercase;">
+            <div style="background: rgba(99, 102, 241, 0.04); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 18px; margin-bottom: 20px; box-shadow: var(--shadow-soft);">
+              <strong style="color: #4f46e5; font-size: 14.5px; display: block; margin-bottom: 6px; font-weight: 800; text-transform: uppercase;">
                 💡 ${escapeHtml(t("essay_style_guide_title"))}
               </strong>
-              <p style="color: #cbd5e1; font-size: 13.5px; line-height: 1.6; margin: 0; font-weight: 500;">
+              <p style="color: var(--ink); font-size: 13.5px; line-height: 1.6; margin: 0; font-weight: 500;">
                 ${escapeHtml(data.targetStyleGuide)}
               </p>
             </div>
@@ -5957,29 +6088,29 @@ function bindEssay() {
         }
 
         const outlineHtml = data.outline.map(item => `
-          <article style="border: 1px solid var(--line); border-radius: 12px; background: rgba(12, 18, 34, 0.5); padding: 22px; margin-bottom: 16px; box-shadow: var(--shadow-soft);">
+          <article style="border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 22px; margin-bottom: 16px; box-shadow: var(--shadow-soft);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--line); padding-bottom: 10px;">
-              <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #818cf8; background: rgba(99, 102, 241, 0.12); padding: 4px 10px; border-radius: 6px;">
+              <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #4f46e5; background: rgba(99, 102, 241, 0.08); padding: 4px 10px; border-radius: 6px;">
                 ${escapeHtml(item.paragraph)}
               </span>
-              <strong style="color: #ffffff; font-size: 15px;">${escapeHtml(item.title)}</strong>
+              <strong style="color: var(--ink); font-size: 15px;">${escapeHtml(item.title)}</strong>
             </div>
-            <p style="color: #e2e8f0; font-size: 13.5px; line-height: 1.6; margin: 0 0 16px 0; white-space: pre-wrap;">
+            <p style="color: var(--ink); font-size: 13.5px; line-height: 1.6; margin: 0 0 16px 0; white-space: pre-wrap;">
               ${escapeHtml(item.content)}
             </p>
             
             <div style="display: grid; gap: 10px; margin-top: 14px;">
-              <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 10px 14px;">
-                <span style="font-size: 11px; font-weight: 800; color: #34d399; text-transform: uppercase; display: block; margin-bottom: 4px;">🟢 ${escapeHtml(t("tag_dos"))}</span>
-                <p style="color: #a7f3d0; font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(item.dos || "")}</p>
+              <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px 14px;">
+                <span style="font-size: 11px; font-weight: 800; color: #047857; text-transform: uppercase; display: block; margin-bottom: 4px;">🟢 ${escapeHtml(t("tag_dos"))}</span>
+                <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(item.dos || "")}</p>
               </div>
-              <div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 8px; padding: 10px 14px;">
-                <span style="font-size: 11px; font-weight: 800; color: #f87171; text-transform: uppercase; display: block; margin-bottom: 4px;">🔴 ${escapeHtml(t("tag_donts"))}</span>
-                <p style="color: #fca5a5; font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(item.donts || "")}</p>
+              <div style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 8px; padding: 10px 14px;">
+                <span style="font-size: 11px; font-weight: 800; color: #be123c; text-transform: uppercase; display: block; margin-bottom: 4px;">🔴 ${escapeHtml(t("tag_donts"))}</span>
+                <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(item.donts || "")}</p>
               </div>
-              <div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 12px 14px;">
-                <span style="font-size: 11px; font-weight: 800; color: #a5b4fc; text-transform: uppercase; display: block; margin-bottom: 4px;">✨ ${escapeHtml(t("tag_example"))}</span>
-                <p style="color: #ffffff; font-size: 13px; font-family: var(--font-mono, monospace); font-style: italic; line-height: 1.65; margin: 0; background: rgba(0, 0, 0, 0.2); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.05); font-weight: 500;">
+              <div style="background: rgba(99, 102, 241, 0.04); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 12px 14px;">
+                <span style="font-size: 11px; font-weight: 800; color: #4f46e5; text-transform: uppercase; display: block; margin-bottom: 4px;">✨ ${escapeHtml(t("tag_example"))}</span>
+                <p style="color: var(--ink); font-size: 13px; font-family: var(--font-mono, monospace); font-style: italic; line-height: 1.65; margin: 0; background: var(--surface-hover); padding: 10px 14px; border-radius: 6px; border: 1px solid var(--line); font-weight: 500;">
                   "${escapeHtml(item.example || "")}"
                 </p>
               </div>
@@ -5992,37 +6123,37 @@ function bindEssay() {
         // activeSubtab === "optimizer"
         outlineContent.innerHTML = `
           <div style="display: grid; gap: 20px;">
-            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 11px; font-weight: 800; color: #818cf8; background: rgba(99, 102, 241, 0.12); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Common App Description (Max 150 Chars)</span>
+                <span style="font-size: 11px; font-weight: 800; color: #4f46e5; background: rgba(99, 102, 241, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Common App Description (Max 150 Chars)</span>
                 <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.commonAppVersion.characterCount)} / 150 chars</span>
               </div>
-              <p style="color: #ffffff; font-size: 13.5px; font-family: var(--font-mono, monospace); background: rgba(0,0,0,0.2); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
+              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
                 ${escapeHtml(data.commonAppVersion.text)}
               </p>
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.commonAppVersion.actionVerbsUsed)}</strong></span>
-                <button type="button" id="copyCommonAppBtn" onclick="copyToClipboard('${escapeHtml(data.commonAppVersion.text.replace(/'/g, "\\'"))}', 'copyCommonAppBtn')" style="background: var(--primary); color: #fff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
+                <button type="button" id="copyCommonAppBtn" onclick="copyToClipboard('${escapeHtml(data.commonAppVersion.text.replace(/'/g, "\\'"))}', 'copyCommonAppBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
               </div>
             </div>
 
-            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 11px; font-weight: 800; color: #10b981; background: rgba(16, 185, 129, 0.12); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">UC Description (Max 350 Chars)</span>
+                <span style="font-size: 11px; font-weight: 800; color: #047857; background: rgba(16, 185, 129, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">UC Description (Max 350 Chars)</span>
                 <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.ucVersion.characterCount)} / 350 chars</span>
               </div>
-              <p style="color: #ffffff; font-size: 13.5px; font-family: var(--font-mono, monospace); background: rgba(0,0,0,0.2); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
+              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
                 ${escapeHtml(data.ucVersion.text)}
               </p>
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.ucVersion.actionVerbsUsed)}</strong></span>
-                <button type="button" id="copyUcBtn" onclick="copyToClipboard('${escapeHtml(data.ucVersion.text.replace(/'/g, "\\'"))}', 'copyUcBtn')" style="background: var(--primary); color: #fff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
+                <button type="button" id="copyUcBtn" onclick="copyToClipboard('${escapeHtml(data.ucVersion.text.replace(/'/g, "\\'"))}', 'copyUcBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
               </div>
             </div>
 
-            <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; padding: 12px 14px;">
-              <strong style="color: #fbbf24; font-size: 13px; display: block; margin-bottom: 4px;">💡 ${isKo ? "작성 피드백 (Optimizer Feedback)" : "Optimizer Feedback"}</strong>
-              <p style="color: #fef3c7; font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(data.feedback)}</p>
+            <div style="background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 12px 14px;">
+              <strong style="color: #b45309; font-size: 13px; display: block; margin-bottom: 4px;">💡 ${isKo ? "작성 피드백 (Optimizer Feedback)" : "Optimizer Feedback"}</strong>
+              <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(data.feedback)}</p>
             </div>
           </div>
         `;
@@ -6129,9 +6260,31 @@ function bindEssay() {
 
   if (startInterviewBtn && interviewStartScreen && interviewActiveScreen) {
     startInterviewBtn.addEventListener("click", async () => {
-      const selectedId = schoolSelect.value;
-      const targetProgram = programs.find(p => p.id === selectedId);
-      if (!targetProgram) return;
+      const schoolSelect = qs("#essayTargetSchool");
+      if (!schoolSelect) return;
+      const selectedId = schoolSelect.dataset.selectedId || "";
+      let targetProgram = allPrograms().find(p => p.id === selectedId);
+      
+      // Fallback: match via text fields if autocomplete ID is missing
+      if (!targetProgram) {
+        const schoolInputVal = (qs("#essaySchoolInput")?.value || "").trim().toLowerCase();
+        const majorInputVal = (qs("#essayMajorInput")?.value || "").trim().toLowerCase();
+        if (schoolInputVal) {
+          targetProgram = allPrograms().find(p => {
+            const sName = p.school.name.toLowerCase();
+            const mName = p.name.toLowerCase();
+            return sName.includes(schoolInputVal) && mName.includes(majorInputVal);
+          });
+          if (!targetProgram) {
+            targetProgram = allPrograms().find(p => p.school.name.toLowerCase().includes(schoolInputVal));
+          }
+        }
+      }
+
+      if (!targetProgram) {
+        alert(t("select_target_program_error", "Please select a target university and major first."));
+        return;
+      }
 
       const essayQuestion = qs("#essayQuestion")?.value.trim() || "";
       if (!essayQuestion) {
@@ -6159,7 +6312,7 @@ function bindEssay() {
         }
 
         interviewQuestions = data.questions;
-        interviewAnswers = ["", "", ""];
+        interviewAnswers = ["", "", "", "", ""];
         currentInterviewStep = 0;
 
         interviewStartScreen.classList.add("hidden");
@@ -6564,8 +6717,66 @@ function updateEssaySchoolStatusUI() {
     `;
   }
   updateTabLockStates();
+  if (window.updateEssayWizardGuideUI) window.updateEssayWizardGuideUI();
 }
 window.updateEssaySchoolStatusUI = updateEssaySchoolStatusUI;
+
+function updateEssayWizardGuideUI() {
+  const schoolSelect = qs("#essayTargetSchool");
+  const essayQuestion = qs("#essayQuestion");
+  const essayActivity = qs("#essayActivity");
+  const outlineContent = qs("#essayOutlineContent");
+
+  const step1 = qs("#wizardStep1");
+  const step2 = qs("#wizardStep2");
+  const step3 = qs("#wizardStep3");
+
+  if (!step1 || !step2 || !step3) return;
+
+  // Step 1 Check
+  const selectedId = schoolSelect ? (schoolSelect.dataset.selectedId || "") : "";
+  const hasQuestion = essayQuestion ? (essayQuestion.value.trim().length > 0) : false;
+  if (selectedId && hasQuestion) {
+    step1.style.borderColor = "var(--primary)";
+    step1.style.background = "rgba(99, 102, 241, 0.05)";
+    const icon = step1.querySelector(".step-status-icon");
+    if (icon) icon.textContent = "✅";
+  } else {
+    step1.style.borderColor = "var(--line)";
+    step1.style.background = "var(--surface)";
+    const icon = step1.querySelector(".step-status-icon");
+    if (icon) icon.textContent = "⚪";
+  }
+
+  // Step 2 Check
+  const hasActivity = essayActivity ? (essayActivity.value.trim().length > 0) : false;
+  if (hasActivity) {
+    step2.style.borderColor = "var(--primary)";
+    step2.style.background = "rgba(99, 102, 241, 0.05)";
+    const icon = step2.querySelector(".step-status-icon");
+    if (icon) icon.textContent = "✅";
+  } else {
+    step2.style.borderColor = "var(--line)";
+    step2.style.background = "var(--surface)";
+    const icon = step2.querySelector(".step-status-icon");
+    if (icon) icon.textContent = "⚪";
+  }
+
+  // Step 3 Check
+  const hasResult = outlineContent ? (outlineContent.innerHTML.includes("article") || outlineContent.innerHTML.includes("table") || outlineContent.innerHTML.includes("grid")) : false;
+  if (hasResult) {
+    step3.style.borderColor = "var(--primary)";
+    step3.style.background = "rgba(99, 102, 241, 0.05)";
+    const icon = step3.querySelector(".step-status-icon");
+    if (icon) icon.textContent = "✅";
+  } else {
+    step3.style.borderColor = "var(--line)";
+    step3.style.background = "var(--surface)";
+    const icon = step3.querySelector(".step-status-icon");
+    if (icon) icon.textContent = "⚪";
+  }
+}
+window.updateEssayWizardGuideUI = updateEssayWizardGuideUI;
 
 window.unlockSchool = function(schoolName) {
   // Deprecated - activePassEssaySlot or activatePremiumEssaySlot should be used.

@@ -123,7 +123,9 @@ function main() {
       // Determine confidence
       let confidence = 'verified';
 
-      if (isUc) {
+      if (prog.confidence === 'verified') {
+        confidence = 'verified';
+      } else if (isUc) {
         confidence = 'high_risk';
       } else if (numeric_score_suspect || gpa_suspect || credit_suspect || needs_official_check) {
         confidence = 'high_risk';
