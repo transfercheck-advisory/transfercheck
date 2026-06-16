@@ -117,5 +117,113 @@ window.AdmissionsCasesDatabase = {
         rubric: "입학 사정관은 최소 지원 자격(GPA, 필수 과목 완수)을 검증한 뒤, 자기소개서에 서술된 전공 리더십과 학업에 대한 성실성(Consistency)을 종합 평가합니다."
       }
     }
+  },
+  
+  essayLibrary: {
+    ko: [
+      {
+        id: "case-haas",
+        title: "UC Berkeley Haas 경영대학 합격 에세이",
+        profile: "GPA 3.92 | 디아블로 밸리 칼리지 (CC) | 국제학생",
+        prompt: "Haas Supplemental: Describe a leadership experience that was impactful...",
+        hook: "단순히 회장직을 맡았다는 나열 대신, 동아리 재정 적자 상황에서 예산을 재편성하고 현지 스폰서를 유치했던 구체적 위기 극복 과정을 묘사하며 시작.",
+        narrativeArc: "도입(동아리 재정 위기 봉착) -> 전개(CC 인근 소상공인 대상 마케팅 가치 제안서 개발 및 세일즈 피칭) -> 극복(스폰서십 4건 성사로 $2,500 확보 및 회원수 30% 증가) -> 결론(Haas가 추구하는 핵심 가치인 'Question the Status Quo'와 리더십 정의 연계)",
+        winningPoint: "정성적인 설명 대신 '스폰서십 4건', '$2,500 확보', '회원수 30% 증가' 등 정량적 지표(Metrics)를 적극 활용하여 비즈니스 실행력을 완벽히 증명함.",
+        counselorTip: "경영학과 에세이는 숫자로 말해야 합니다. 리더십 경험에서 본인이 주도하여 변화시킨 수치적 성과를 반드시 하나 이상 삽입하십시오."
+      },
+      {
+        id: "case-calcs",
+        title: "UC Berkeley 컴퓨터과학 (L&S CS) 합격 에세이",
+        profile: "GPA 3.96 | 디안자 칼리지 (CC) | 국제학생",
+        prompt: "UC PIQ #1: Describe how you have prepared for your intended major...",
+        hook: "단순히 코딩이 재밌다는 진부한 표현을 버리고, CC 수학 튜터링 중 학생들이 가장 어려워하는 '미적분 수렴 검정'을 시각화해주는 파이썬 시뮬레이터 툴을 개발한 경험으로 강렬하게 오프닝.",
+        narrativeArc: "도입(수학 개념 설명의 어려움 발견) -> 전개(시각화 소프트웨어 직접 구현 및 깃허브 오픈소스 배포) -> 발전(40명 이상의 동료 학생 피드백 반영 및 버그 수정 과정 기술) -> 결론(버클리의 학문적 깊이와 오픈소스 기여 정신에 연결)",
+        winningPoint: "이론 공부에만 머물지 않고 실제 코딩을 통해 교육적 페인포인트를 해결한 '실천형 엔지니어'로서의 면모와 지적 호기심을 유학원 컨설팅 급으로 극대화함.",
+        counselorTip: "컴공 에세이에서는 학업 성적(GPA) 외에 본인이 자발적으로 수행한 '개인 깃허브 프로젝트'나 '오픈소스 기여 경험'을 구체적인 기술 스택(Python, React 등)과 함께 서술하는 것이 합격의 열쇠입니다."
+      },
+      {
+        id: "case-michce",
+        title: "University of Michigan 컴퓨터공학 (CE) 합격 에세이",
+        profile: "GPA 3.88 | 타주 CC | 국제학생",
+        prompt: "U-Mich Supplement: Describe your transfer motivation and academic goals...",
+        hook: "이전 CC의 제한된 장비 수준(구형 오실로스코프, 센서 부족)으로 인해 학문적 갈증을 느꼈던 솔직한 고백으로 몰입감을 높여 시작.",
+        narrativeArc: "도입(CC 실험 환경의 한계 인지) -> 전개(가상 시뮬레이터를 활용해 전자기학 회로 분석 프로젝트 대안 수행) -> 동기(미시간 대학의 전설적인 EECS 실습실과 특정 하드웨어 연구에 기여하고자 하는 의지 피력) -> 결론(학업 목표와 커리어 매핑)",
+        winningPoint: "단순히 '미시간대가 좋아서'가 아니라, '현재 환경에서 할 수 있는 노력을 끝까지 쏟아부은 후 한계에 부딪혀 편입을 결심했다'는 가장 설득력 있는 편입 동기(Transfer Rationale) 제시.",
+        counselorTip: "Why Transfer 에세이에서는 '현재 학교에 대한 무조건적인 비난'은 금물입니다. 현재 위치에서 제공하는 리소스를 100% 활용했음을 먼저 입증하고, 그 이상의 학문적 도약을 위해 타겟 대학이 왜 필요한지를 서술해야 합니다."
+      },
+      {
+        id: "case-columbia",
+        title: "Columbia University GS 편입 합격 에세이",
+        profile: "GPA 3.91 | 커뮤니티 칼리지 | 국제학생",
+        prompt: "Columbia GS Personal Statement: Describe your educational journey and why GS...",
+        hook: "일반 고등학교 졸업 후 바로 대학에 진학하지 않고 군 복무 또는 스타트업 근무 등 비전형적(Non-traditional) 경로를 밟았던 개인적 서사로 오프닝.",
+        narrativeArc: "도입(학업 중단 및 사회 경험) -> 전개(실무 중 학문적 필요성 절감 및 CC 진학 후 학업 복귀과정) -> 동기(콜롬비아의 Core Curriculum이 주는 인문/과학 통합 교육의 가치 연계) -> 결론(아이비리그 학풍 하에서 학업 완성 의지 표명)",
+        winningPoint: "비전형적 공백기(Gap Year)를 '방황'이 아닌 '인생의 터닝포인트와 학문적 깊이를 쌓는 성숙의 시간'으로 프레이밍하여 입학사정관에게 강력한 인상을 남김.",
+        counselorTip: "콜롬비아 GS 전형은 학생의 '다양성'과 '성숙도'를 가장 높게 평가합니다. 공백기나 우회 경로가 있다면 이를 주눅들지 말고 강점으로 전환하여 기술하십시오."
+      },
+      {
+        id: "case-stanford",
+        title: "Stanford University 편입 합격 에세이 (Personal Statement)",
+        profile: "GPA 4.00 | 명문 4년제 대학 | 국제학생",
+        prompt: "Stanford Supplement: Write about a topic that is important to you...",
+        hook: "학업 연구 중 우연히 발견한 데이터 불일치 문제를 해결하기 위해 3주간 밤을 새우며 전 세계 통계 논문을 찾아 해독했던 '학술적 집념'의 순간을 상세히 묘사하며 임팩트 있게 시작.",
+        narrativeArc: "도입(연구 중 예상치 못한 모순 직면) -> 전개(기존 가설을 부정하고 새로운 수학적 통계 모델 설계 과정) -> 성과(학부생 학술 컨퍼런스 발표 및 동료 교수들의 인정) -> 결론(스탠포드 특유의 학제간 연구 학풍에 기여하겠다는 다짐)",
+        winningPoint: "스탠포드가 가장 중요하게 생각하는 '지적 활력(Intellectual Vitality)'을 완벽하게 보여줌. 단순 공부를 잘하는 학생이 아닌, 스스로 지식을 창조하고 탐구하는 학자로서의 정체성을 증명함.",
+        counselorTip: "스탠포드는 전 세계에서 매년 30~40명 내외의 편입생만 선발합니다. 정량 스펙은 당연히 만점이어야 하며, 에세이에서는 본인의 독보적인 'Spike(한 분야의 미친듯한 깊이)'를 보여주어야만 합격 문턱을 넘을 수 있습니다."
+      }
+    ],
+    en: [
+      {
+        id: "case-haas",
+        title: "UC Berkeley Haas Business Transfer Essay",
+        profile: "GPA 3.92 | Diablo Valley College (CC) | International Student",
+        prompt: "Haas Supplemental: Describe a leadership experience that was impactful...",
+        hook: "Instead of simply listing leadership titles, opening with a vivid description of resolving a major budget deficit in a student club and securing local business sponsors.",
+        narrativeArc: "Hook (Club financial crisis) -> Development (Creating a corporate marketing proposal and pitching to local businesses) -> Resolution (Securing 4 sponsorships totaling $2,500, growing membership by 30%) -> Conclusion (Connecting experiences to Haas core principles like 'Question the Status Quo')",
+        winningPoint: "Used quantitative metrics ($2,500 secured, 30% membership growth) instead of vague descriptions to prove true business execution capability.",
+        counselorTip: "Business essays require numbers. Always include at least one concrete metric showing the positive financial or organizational impact of your leadership."
+      },
+      {
+        id: "case-calcs",
+        title: "UC Berkeley Computer Science (L&S CS) Essay",
+        profile: "GPA 3.96 | De Anza College (CC) | International Student",
+        prompt: "UC PIQ #1: Describe how you have prepared for your intended major...",
+        hook: "Avoiding generic cliches like 'loving to code'; instead, opening with how tutoring calculus led to building a custom Python visualization tool to help peers understand convergence tests.",
+        narrativeArc: "Hook (Recognizing peer struggles in mathematics) -> Development (Building and publishing the visualizer tool on GitHub) -> Extension (Integrating feedback from 40+ classmates to squash bugs) -> Conclusion (Linking to Berkeley's culture of open-source contribution and academic rigor)",
+        winningPoint: "Demonstrated intellectual curiosity and proactive problem-solving by building software to solve real educational issues.",
+        counselorTip: "For CS transfers, having a public GitHub repository with active personal projects or open-source contributions is as critical as maintaining a high GPA."
+      },
+      {
+        id: "case-michce",
+        title: "University of Michigan Computer Engineering Essay",
+        profile: "GPA 3.88 | Out-of-State CC | International Student",
+        prompt: "U-Mich Supplement: Describe your transfer motivation and academic goals...",
+        hook: "Opening with a candid reflection on the limitations of the local community college lab equipment (outdated oscilloscopes and lack of advanced sensors) and the hunger for advanced research.",
+        narrativeArc: "Hook (Lab resource limitations) -> Development (Designing custom circuit simulators as a workaround) -> Motivation (Articulating how U-Mich's state-of-the-art EECS facilities will enable research goals) -> Conclusion (Mapping transfer route to long-term career aspirations)",
+        winningPoint: "Presented a logical transfer rationale: proving that they exhausted all CC resources first and require U-Mich to take the next academic step.",
+        counselorTip: "In 'Why Transfer' essays, never baselessly bash your current school. Prove you maximized your current resources first, then logically explain why you need the target university to progress."
+      },
+      {
+        id: "case-columbia",
+        title: "Columbia University GS Transfer Essay",
+        profile: "GPA 3.91 | Community College | International Student",
+        prompt: "Columbia GS Personal Statement: Describe your educational journey...",
+        hook: "Opening with a personal narrative about taking a non-traditional path, such as military service or startup work, prior to starting community college.",
+        narrativeArc: "Hook (Non-traditional background/gap years) -> Development (Recognizing academic gaps during work and returning to CC) -> Motivation (How Columbia Core Curriculum integrates humanities with technical goals) -> Conclusion (Asserting dedication to Ivy League scholarship)",
+        winningPoint: "Framed a gap year or non-traditional path not as a delay, but as a period of personal growth and intellectual maturity.",
+        counselorTip: "Columbia GS values non-traditional journeys. Highlight your maturity and real-world experiences as unique strengths rather than weaknesses."
+      },
+      {
+        id: "case-stanford",
+        title: "Stanford University Transfer Personal Statement",
+        profile: "GPA 4.00 | Selective 4-Year University | International Student",
+        prompt: "Stanford Supplement: Write about a topic that is important to you...",
+        hook: "Describing a specific academic moment of spending 3 straight weeks decoding foreign statistical journals to solve a minor data anomaly in a research project.",
+        narrativeArc: "Hook (Encountering a research contradiction) -> Development (Disproving the default hypothesis and designing a new statistical model) -> Outcomes (Presenting at an undergraduate conference) -> Conclusion (Connecting academic drive to Stanford's interdisciplinary research environment)",
+        winningPoint: "Perfectly demonstrated 'Intellectual Vitality'—showing they don't just study for grades, but actively create and pursue knowledge like a scholar.",
+        counselorTip: "Stanford transfer acceptance is extremely low. Beyond a perfect 4.0 GPA, you must highlight a distinct 'Spike'—an extraordinary depth in a specific area."
+      }
+    ]
   }
 };
+

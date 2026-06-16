@@ -3145,5 +3145,53 @@ textarea:focus {
   }
 }
 
+/* Premium Facts & Admissions Stats UI */
+.card-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  margin: 14px 0;
+}
+
+.rms-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Essay Library Master Class Styles */
+.essay-library-card {
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 16px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.essay-library-card:hover {
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.02);
+}
+
+.essay-library-card summary {
+  list-style: none;
+  outline: none;
+}
+
+.essay-library-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.holistic-strategy-guide {
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.05);
+}
+
 
 

@@ -546,11 +546,12 @@
                   </span>
                 </div>
 
-                <!-- 3-in-1 EssayAI Subtabs -->
-                <div class="essay-subtabs" style="display: flex; gap: 8px; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; background: rgba(255, 255, 255, 0.02); width: 100%;">
-                  <button type="button" class="subtab-btn active" data-subtab="critic" style="flex: 1; padding: 10px; border: none; border-radius: 8px; background: var(--primary); color: #ffffff; font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_critic">에세이 문단 클리닉 (Critic & Clinic)</button>
-                  <button type="button" class="subtab-btn" data-subtab="mapper" style="flex: 1; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_mapper">소재 & 스토리 매핑 (Narrative Mapper)</button>
-                  <button type="button" class="subtab-btn" data-subtab="optimizer" style="flex: 1; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_optimizer">활동 이력 압축기 (Activity Optimizer)</button>
+                <!-- 3-in-1 EssayAI Subtabs -> Upgraded to 4-in-1 -->
+                <div class="essay-subtabs" style="display: flex; gap: 8px; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; background: rgba(255, 255, 255, 0.02); width: 100%; flex-wrap: wrap;">
+                  <button type="button" class="subtab-btn active" data-subtab="critic" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: var(--primary); color: #ffffff; font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_critic">에세이 문단 클리닉 (Critic & Clinic)</button>
+                  <button type="button" class="subtab-btn" data-subtab="mapper" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_mapper">소재 & 스토리 매핑 (Narrative Mapper)</button>
+                  <button type="button" class="subtab-btn" data-subtab="optimizer" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_optimizer">활동 이력 압축기 (Activity Optimizer)</button>
+                  <button type="button" class="subtab-btn" data-subtab="library" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_library">합격 에세이 라이브러리 (Master Class Library)</button>
                 </div>
 
                 <!-- Interactive Pre-fill Examples -->
@@ -665,6 +666,20 @@
                   <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0;">
                     <p data-i18n="essay_placeholder">Enter your activities on the left and click generate to build your custom outline guide.</p>
                   </div>
+                </div>
+              </div>
+              
+              <!-- Essay Library Master Class Panel (Hidden by default) -->
+              <div class="panel hidden" id="essayLibraryDashboard" style="width: 100%;">
+                <div class="panel-heading">
+                  <span class="step">★</span>
+                  <div>
+                    <h3 data-i18n="essay_library_title">Admissions Essay Master Class Library</h3>
+                    <p data-i18n="essay_library_desc">Explore structural breakdowns and winning themes from real successful transfer student essays.</p>
+                  </div>
+                </div>
+                <div style="padding: 20px;" id="essayLibraryContent">
+                  <!-- Case items will be rendered dynamically -->
                 </div>
               </div>
             </div>
