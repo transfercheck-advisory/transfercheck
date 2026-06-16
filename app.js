@@ -1792,9 +1792,7 @@ window.executePayment = function(method) {
       ? `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`
       : `order_essay_${Date.now()}`;
     
-    const channelKey = PORTONE_TEST_MODE 
-      ? "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a"
-      : PORTONE_V1_CHANNEL_KEY;
+    const channelKey = "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a";
     
     PortOne.requestPayment({
       storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
