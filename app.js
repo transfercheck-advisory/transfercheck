@@ -1841,7 +1841,7 @@ window.executePayment = function(method) {
 
       const krwMerchantUid = `order_essay_${Date.now()}`;
       IMP.request_pay({
-        pg: "html5_inicis",
+        pg: "html5_inicis.E3MEZTV7YM65W",
         pay_method: "card",
         merchant_uid: krwMerchantUid,
         name: ctx.krwProductName,

@@ -1347,6 +1347,28 @@ You MUST write all explanations, guides, guidelines, and feedback (targetStyleGu
           return;
         }
 
+        // Write to local feedback-logs.json for the autonomous crawler/developer loop
+        try {
+          const logPath = path.join(__dirname, 'feedback-logs.json');
+          let currentLogs = [];
+          if (fs.existsSync(logPath)) {
+            try {
+              currentLogs = JSON.parse(fs.readFileSync(logPath, 'utf8') || '[]');
+            } catch (pe) {
+              currentLogs = [];
+            }
+          }
+          currentLogs.push({
+            timestamp: new Date().toISOString(),
+            message: message,
+            status: 'pending_auto_resolve'
+          });
+          fs.writeFileSync(logPath, JSON.stringify(currentLogs, null, 2), 'utf8');
+          console.log('📝 Feedback logged locally in feedback-logs.json');
+        } catch (logErr) {
+          console.error('Failed to write local feedback log:', logErr);
+        }
+
         const smtpUser = process.env.SMTP_USER;
         const smtpPass = process.env.SMTP_PASS;
         const smtpReceiver = process.env.SMTP_RECEIVER;
