@@ -1780,6 +1780,11 @@ window.executePayment = function(method) {
   closePaymentMethodModal();
 
   const ctx = activePaymentContext;
+  console.log("=== executePayment ===");
+  console.log("Active Plan:", ctx.plan);
+  console.log("Payment Type:", ctx.type);
+  console.log("Method:", method);
+
   if (method === "PayPal") {
     openPaypalOverlay(ctx.plan, ctx.usdProductName, ctx.usdAmount, ctx.currentUser, ctx.buyerName, ctx.buyerPhone);
   } else if (method === "Inicis") {
@@ -1790,6 +1795,7 @@ window.executePayment = function(method) {
         return;
       }
       const krwPaymentId = `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
+      console.log("[Subscription Checkout] Triggering PortOne V2 (Subscription) with channelKey: channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a");
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
         channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
@@ -1843,6 +1849,7 @@ window.executePayment = function(method) {
       }
       
       const krwPaymentId = `order_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
+      console.log("[Onetime Checkout] Triggering PortOne V2 (Onetime) with channelKey: channel-key-4315c137-b0a6-441f-8d01-c627c177e1a7");
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
         channelKey: "channel-key-4315c137-b0a6-441f-8d01-c627c177e1a7",
