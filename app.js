@@ -686,7 +686,7 @@ const TRANSLATIONS = {
     "section_review_title": "별도 확인 필요",
     "section_extra_title": "추가 정보",
     "roadmap_tag_required": "필수과목",
-    "roadmap_tag_recommended": "권장과목",
+    "roadmap_tag_recommended": "권장",
     "roadmap_tag_choice": "택1 필수",
     "roadmap_eng_first_term": "첫 번째 학기 고정",
     "roadmap_eng_second_term": "두 번째 학기 고정",
@@ -1115,7 +1115,7 @@ const TRANSLATIONS = {
     "section_review_title": "需人工验证项",
     "section_extra_title": "额外信息参考",
     "roadmap_tag_required": "必修科目",
-    "roadmap_tag_recommended": "推荐科目",
+    "roadmap_tag_recommended": "推荐",
     "roadmap_tag_choice": "必修多选一",
     "roadmap_eng_first_term": "固定在第一学期",
     "roadmap_eng_second_term": "固定在第二学期",
@@ -4914,11 +4914,87 @@ function buildRoadmap() {
   });
 
   const track = getStudentTrack(selectedPrograms);
+  
+  // Suggest additional advanced courses in the last academic semester if space is available
+  let lastAcademicBucket = null;
+  for (let i = buckets.length - 1; i >= 0; i--) {
+    if (!buckets[i].term.toLowerCase().includes("summer")) {
+      lastAcademicBucket = buckets[i];
+      break;
+    }
+  }
+  if (!lastAcademicBucket && buckets.length > 0) {
+    lastAcademicBucket = buckets[buckets.length - 1];
+  }
+  if (lastAcademicBucket) {
+    const trackLower = (track || "").toLowerCase();
+    let advancedCandidates = [];
+    if (trackLower === "stem") {
+      advancedCandidates = ["calc-3", "diff-eq", "linear-algebra", "physics-3", "discrete-math", "intro-programming", "data-structures", "oop"];
+    } else if (trackLower === "business") {
+      advancedCandidates = ["statistics", "calc-2", "calc-3", "linear-algebra", "micro-econ", "macro-econ", "fin-acctg", "man-acctg", "bus-law"];
+    } else {
+      advancedCandidates = ["statistics", "micro-econ", "macro-econ", "eng-comp-2"];
+    }
+
+    const finalCandidates = [];
+    for (let cid of advancedCandidates) {
+      if (isCourseSatisfied(cid)) continue;
+      const isPlaced = buckets.some(b => b.courses.some(c => c.id === cid));
+      if (isPlaced) continue;
+      
+      const prereqs = ROADMAP_PREREQUISITES[cid] || [];
+      const lastIdx = buckets.indexOf(lastAcademicBucket);
+      let prereqsOk = true;
+      for (let preId of prereqs) {
+        const preSatisfied = isCourseSatisfied(preId);
+        const prePlacedBefore = buckets.some((b, idx) => idx < lastIdx && b.courses.some(c => c.id === preId));
+        if (!preSatisfied && !prePlacedBefore) {
+          prereqsOk = false;
+          break;
+        }
+      }
+      if (!prereqsOk) continue;
+
+      const courseObj = courseCatalog.find(c => c.id === cid);
+      if (courseObj) {
+        finalCandidates.push({
+          ...courseObj,
+          priority: "recommended",
+          label: t("roadmap_tag_recommended")
+        });
+      }
+    }
+
+    let currentUnits = bucketUnits(lastAcademicBucket);
+    for (let c of finalCandidates) {
+      if (currentUnits + courseUnits(c) <= 4) {
+        lastAcademicBucket.courses.push(c);
+        currentUnits += courseUnits(c);
+
+        const childLab = courseCatalog.find(item => item.linkedTo === c.id && item.isLab);
+        if (childLab) {
+          const isLabPlaced = buckets.some(b => b.courses.some(item => item.id === childLab.id));
+          if (!isLabPlaced) {
+            lastAcademicBucket.courses.push({
+              ...childLab,
+              priority: "recommended",
+              label: t("roadmap_tag_recommended")
+            });
+          }
+        }
+      } else {
+        break;
+      }
+    }
+  }
+
   const isInternational = state.international;
 
   const timelineHtml = buckets
     .map(
       (bucket) => {
+        const isKo = (state.language || "ko") === "ko";
         const requireds = bucket.courses.filter(item => item.priority !== "recommended");
         const recommendeds = bucket.courses.filter(item => item.priority === "recommended");
         
@@ -4945,6 +5021,9 @@ function buildRoadmap() {
                   <div class="term-course ${item.priority}">
                     <strong>${escapeHtml(item.name)}</strong>
                     <small>${escapeHtml(item.label)} · ${escapeHtml(item.category)}${item.isLab ? " · Lab" : ""}</small>
+                    <span class="recommendation-badge" style="font-size: 10px; color: #818cf8; font-weight: 600; display: block; margin-top: 4px;">
+                      * ${isKo ? "더욱 경쟁력 있는 지원자가 되기 위한 과목입니다." : "This course makes your profile more competitive."}
+                    </span>
                   </div>
                 `).join("")}
               </div>
@@ -4953,7 +5032,6 @@ function buildRoadmap() {
         }
         
         const advisoryHtml = renderAdvisoryMilestones(bucket.term, track, isInternational);
-        const isKo = (state.language || "ko") === "ko";
         const totalWorkload = bucket.courses.reduce((sum, c) => sum + getCourseWorkloadDifficulty(c), 0);
         let workloadWarningHtml = "";
         if (totalWorkload > 10) {
