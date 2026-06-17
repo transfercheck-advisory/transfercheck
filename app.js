@@ -1864,7 +1864,7 @@ window.executePayment = function(method) {
       }
       const krwPaymentId = `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
       console.log("[Subscription Checkout] Triggering PortOne V2 (Subscription) with channelKey: channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a");
-      alert("[디버그 - 구독결제 호출]\n- 상품명: " + ctx.krwProductName + "\n- 호출 채널키: channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a\n- 결제창 유형: 정기결제(카드수동입력)");
+
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
         channelKey: "channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a",
@@ -1919,7 +1919,7 @@ window.executePayment = function(method) {
       
       const krwPaymentId = `order_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
       console.log("[Onetime Checkout] Triggering PortOne V2 (Onetime) with channelKey: channel-key-204f4d54-8104-4280-846c-5a20149714ff");
-      alert("[디버그 - 일반결제 호출]\n- 상품명: " + ctx.krwProductName + "\n- 호출 채널키: channel-key-204f4d54-8104-4280-846c-5a20149714ff\n- 결제창 유형: 일반결제(카드사인증화면)");
+
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
         channelKey: "channel-key-204f4d54-8104-4280-846c-5a20149714ff",
