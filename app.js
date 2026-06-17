@@ -493,7 +493,7 @@ const TRANSLATIONS = {
     "btn_signup": "회원가입",
     "btn_logout": "로그아웃",
     "hero_eyebrow": "미국 대학 편입 올인원 전략 엔진",
-    "hero_title": "수천만 원의 편입 전략, 이제 데이터로 설계하세요.",
+    "hero_title": "수천만 원의 편입 전략,<br>이제 데이터로 설계하세요.",
     "hero_lead": "TransferChek은 미국 대학 입학처의 공식 가이드라인을 정밀 파싱하여 편입에 필요한 모든 핵심 전략(지원 자격 진단, 선수과목 매핑, 수강 로드맵, 에세이 설계)을 실시간 자동화 엔진으로 설계합니다.",
     "hero_cta_demo": "전략 엔진 시작하기",
     "hero_cta_solution": "서비스 핵심 기능 보기",
@@ -3946,7 +3946,34 @@ function getCompetitiveProfile(program) {
   };
 }
 
-function renderRequirementDetail(programId) {
+async function ensureMajorLoaded(programId) {
+  if (!database || !database.schools) return null;
+  let foundMajor = null;
+  for (const school of database.schools) {
+    const major = school.majors.find(m => m.id === programId);
+    if (major) {
+      foundMajor = major;
+      break;
+    }
+  }
+  if (!foundMajor) return null;
+  if (foundMajor.requiredCourses !== undefined) {
+    return foundMajor;
+  }
+  try {
+    const response = await fetch(`/api/majors/${encodeURIComponent(programId)}`);
+    const result = await response.json();
+    if (result.success && result.major) {
+      Object.assign(foundMajor, result.major);
+      return foundMajor;
+    }
+  } catch (e) {
+    console.error("Failed to load major from server:", e);
+  }
+  return null;
+}
+
+async function renderRequirementDetail(programId) {
   const container = qs("#requirementDetail");
   if (!container) return;
   const isSearchEmpty = !qs("#reqSchoolInput")?.value?.trim() || !qs("#reqMajorInput")?.value?.trim();
@@ -3960,6 +3987,31 @@ function renderRequirementDetail(programId) {
     `;
     return;
   }
+
+  // Show inline loading spinner
+  container.innerHTML = `
+    <div style="text-align: center; padding: 60px 20px;">
+      <div style="width: 40px; height: 40px; border: 4px solid var(--line); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px auto;"></div>
+      <p style="color: var(--muted); font-size: 14px;">데이터베이스에서 전공 요건을 불러오는 중...</p>
+      <style>
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+    </div>
+  `;
+
+  const loaded = await ensureMajorLoaded(programId);
+  if (!loaded) {
+    container.innerHTML = `
+      <div style="text-align: center; padding: 60px 20px; color: var(--ink);">
+        <p>요건 데이터를 데이터베이스에서 불러오지 못했습니다. 다시 시도해 주세요.</p>
+      </div>
+    `;
+    return;
+  }
+
   const program = allPrograms().find((item) => item.id === programId);
   if (!program) return;
   const summary = summarizeProgramCourses(program);
@@ -7665,9 +7717,13 @@ async function handleOnDemandScrape(event) {
   submitBtn.disabled = true;
   
   try {
+    const reqHeaders = { "Content-Type": "application/json" };
+    if (supabaseUserSession && supabaseUserSession.access_token) {
+      reqHeaders["Authorization"] = `Bearer ${supabaseUserSession.access_token}`;
+    }
     const response = await fetch("/api/requirements/generate", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: reqHeaders,
       body: JSON.stringify({ schoolName, majorName })
     });
     const result = await response.json();
