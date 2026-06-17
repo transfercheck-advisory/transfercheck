@@ -4740,6 +4740,8 @@ function buildRoadmap() {
     const timeline = qs("#roadmapTimeline");
     if (!timeline) return;
 
+    const isKo = (state.language || "ko") === "ko";
+
     if (state.selectedRoadmapTargets.length === 0) {
       timeline.innerHTML = `
         <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0; border: 1px dashed var(--line); border-radius: 12px; width: 100%;">
@@ -5009,8 +5011,9 @@ function buildRoadmap() {
       ? "목표 대학교 합격률을 극대화하기 위한 시간표 구성 및 비교과 전략입니다." 
       : "Timetable configuration and extracurricular strategy to maximize target admissions.";
     
+    const trackLower = (track || "").toLowerCase();
     let adviceContent = "";
-    if (track === "stem") {
+    if (trackLower === "stem") {
       adviceContent = isKo 
         ? `
           <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
@@ -5026,7 +5029,7 @@ function buildRoadmap() {
             <li><strong>Recommended Milestones:</strong> Prioritize securing research assistant roles, leading academic/technical clubs, or acting as a peer tutor in physics/calculus.</li>
           </ul>
         `;
-    } else if (track === "business") {
+    } else if (trackLower === "business") {
       adviceContent = isKo 
         ? `
           <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; list-style-type: disc;">
@@ -7987,7 +7990,8 @@ Object.assign(TRANSLATIONS.en, {
   "essay_library_collapsible_title": "Admissions Master Class Library (Cases)",
   "essay_s4_title": "Unlimited Essay Revision Editor",
   "essay_s4_desc": "Edit your draft and request infinite AI reviews, Turnitin simulation check, and sentence clinic updates.",
-  "btn_critique_polish": "Request Revision & Polish Review"
+  "btn_critique_polish": "Request Revision & Polish Review",
+  "completed_courses_sync_notice": "💡 Coursework checked in Feature 01 (Eligibility Diagnostics) is automatically synced and integrated into your roadmap planning."
 });
 
 Object.assign(TRANSLATIONS.ko, {
@@ -8014,7 +8018,8 @@ Object.assign(TRANSLATIONS.ko, {
   "essay_library_collapsible_title": "합격 에세이 라이브러리 연동 조회 (Admissions Master Class Library)",
   "essay_s4_title": "에세이 무제한 첨삭 에디터 (Revision Clinic)",
   "essay_s4_desc": "예시를 바탕으로 직접 에세이를 작성하고 무제한으로 AI 정밀 첨삭 및 원어민 표현 교정 피드백을 받아보세요.",
-  "btn_critique_polish": "무제한 AI 첨삭 및 표현 교정 받기"
+  "btn_critique_polish": "무제한 AI 첨삭 및 표현 교정 받기",
+  "completed_courses_sync_notice": "💡 1번 기능(지원 가능 판단)에서 입력하신 수강 과목 정보가 로드맵 설계에 자동으로 연동되어 반영됩니다."
 });
 
 Object.assign(TRANSLATIONS.zh, {
@@ -8041,5 +8046,6 @@ Object.assign(TRANSLATIONS.zh, {
   "essay_library_collapsible_title": "成功案例库连通查询 (Admissions Master Class Library)",
   "essay_s4_title": "论文无限制润色编辑器 (Revision Clinic)",
   "essay_s4_desc": "在左侧编辑器中撰写您的草稿，无限制获取 Turnitin 查重和句级表达修改建议。",
-  "btn_critique_polish": "获取无限制 AI 润色和表达建议"
+  "btn_critique_polish": "获取无限制 AI 润色和表达建议",
+  "completed_courses_sync_notice": "💡 在功能 01（申请资格评估）中勾选的已修课程将自动同步并纳入课程路线图规划。"
 });
