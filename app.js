@@ -1863,7 +1863,7 @@ window.executePayment = function(method) {
         return;
       }
       const krwPaymentId = `order_sub_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
-      console.log("[Subscription Checkout] Triggering PortOne V2 (Subscription) with channelKey: channel-key-f632325d-bb6a-440f-bc43-d7f65c94340a");
+
 
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
@@ -1918,7 +1918,7 @@ window.executePayment = function(method) {
       }
       
       const krwPaymentId = `order_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
-      console.log("[Onetime Checkout] Triggering PortOne V2 (Onetime) with channelKey: channel-key-204f4d54-8104-4280-846c-5a20149714ff");
+
 
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
