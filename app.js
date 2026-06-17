@@ -4775,6 +4775,32 @@ function buildRoadmap() {
     summary.recommended.choices.forEach(choice => allChoices.push(choice));
   });
 
+  const injTrack = getStudentTrack(programsToPlan);
+  if (injTrack === "STEM") {
+    const hasMath = [...allRequiredCourses.values()].some(c => (c.category || "").toLowerCase() === "math");
+    if (!hasMath) {
+      const c1 = courseCatalog.find(c => c.id === "calc-1");
+      const c2 = courseCatalog.find(c => c.id === "calc-2");
+      if (c1) allRecommendedCourses.set(c1.id, c1);
+      if (c2) allRecommendedCourses.set(c2.id, c2);
+    }
+  } else if (injTrack === "Business") {
+    const hasMathOrEcon = [...allRequiredCourses.values()].some(c => {
+      const cat = (c.category || "").toLowerCase();
+      return cat === "math" || c.id.includes("econ");
+    });
+    if (!hasMathOrEcon) {
+      const c1 = courseCatalog.find(c => c.id === "calc-1");
+      const stat = courseCatalog.find(c => c.id === "statistics");
+      const micro = courseCatalog.find(c => c.id === "micro-econ");
+      const macro = courseCatalog.find(c => c.id === "macro-econ");
+      if (c1) allRecommendedCourses.set(c1.id, c1);
+      if (stat) allRecommendedCourses.set(stat.id, stat);
+      if (micro) allRecommendedCourses.set(micro.id, micro);
+      if (macro) allRecommendedCourses.set(macro.id, macro);
+    }
+  }
+
   for (let reqId of allRequiredCourses.keys()) {
     allRecommendedCourses.delete(reqId);
   }
@@ -5002,33 +5028,20 @@ function buildRoadmap() {
         if (bucket.courses.length === 0) {
           coursesHtml = `<div class="term-course"><strong>${escapeHtml(t("buffer_term_title"))}</strong><small>${escapeHtml(t("buffer_term_desc"))}</small></div>`;
         } else {
-          if (requireds.length > 0) {
-            coursesHtml += requireds.map(item => `
+          coursesHtml = bucket.courses.map(item => {
+            const isRec = item.priority === "recommended";
+            return `
               <div class="term-course ${item.priority}">
                 <strong>${escapeHtml(item.name)}</strong>
                 <small>${escapeHtml(item.label)} · ${escapeHtml(item.category)}${item.isLab ? " · Lab" : ""}</small>
-              </div>
-            `).join("");
-          }
-          if (recommendeds.length > 0) {
-            coursesHtml += `
-              <button type="button" class="link-btn toggle-recommended-btn" onclick="toggleRecommendedCourses(this)" style="margin-top: 8px; margin-bottom: 8px; font-size: 11.5px; color: #818cf8; font-weight: 700; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 0;">
-                <span>👁️</span> 
-                <span>${escapeHtml(t("btn_toggle_recommended", "Toggle Recommended"))}</span>
-              </button>
-              <div class="recommended-wrapper hidden" style="display: grid; gap: 8px; width: 100%;">
-                ${recommendeds.map(item => `
-                  <div class="term-course ${item.priority}">
-                    <strong>${escapeHtml(item.name)}</strong>
-                    <small>${escapeHtml(item.label)} · ${escapeHtml(item.category)}${item.isLab ? " · Lab" : ""}</small>
-                    <span class="recommendation-badge" style="font-size: 10px; color: #818cf8; font-weight: 600; display: block; margin-top: 4px;">
-                      * ${isKo ? "더욱 경쟁력 있는 지원자가 되기 위한 과목입니다." : "This course makes your profile more competitive."}
-                    </span>
-                  </div>
-                `).join("")}
+                ${isRec ? `
+                  <span class="recommendation-badge" style="font-size: 10px; color: #818cf8; font-weight: 600; display: block; margin-top: 4px;">
+                    * ${isKo ? "더욱 경쟁력 있는 지원자가 되기 위한 과목입니다." : "This course makes your profile more competitive."}
+                  </span>
+                ` : ""}
               </div>
             `;
-          }
+          }).join("");
         }
         
         const advisoryHtml = renderAdvisoryMilestones(bucket.term, track, isInternational);
