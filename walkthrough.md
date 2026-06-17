@@ -116,6 +116,11 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
 * **Real-Time Integration**: Verified that completed coursework checked in Feature 1 (Eligibility Diagnostics) is automatically stored in `state.completedCourses` and dynamically linked into `buildRoadmap()` to exclude completed prerequisites from the roadmap.
 * **Notice Element & Translations**: Confirmed the notice block in `index.html` (line 602) displaying that completed coursework is automatically synchronized. Added translation keys for `completed_courses_sync_notice` to the English, Korean, and Chinese dynamic translation dictionaries in `app.js`.
 
-### 4️⃣ Verification & Deployment
-* **Automated Sandbox Tests**: Ran a mock verification suite on all 2,075 target combinations. Verified that all programs generate the roadmap timeline successfully without ReferenceErrors.
-* **Production Deployment**: Committed the fixes and pushed them to `origin/master`, successfully triggering the automatic Vercel production deployment.
+### 4️⃣ Suggest Advanced Electives for Profile Boosting
+* **Adaptive Elective Suggestions**: Implemented logic in `buildRoadmap()` to check if the last academic semester has remaining space (below 4 units). If so, it dynamically suggests advanced major-specific electives (e.g. Multivariable Calculus/Data Structures/OOP for STEM; Accounting/Finance/Economics for Business; Economics/Composition for Humanities) which the student hasn't taken and meets prerequisites for.
+* **Competitiveness Badges**: Added a visual competitive boost subtitle to all recommended courses: `* 더욱 경쟁력 있는 지원자가 되기 위한 과목입니다.` (This course makes your profile more competitive.).
+* **Label Optimization**: Renamed non-required course tags in Korean from "권장과목" to "권장" and in Chinese from "推荐科目" to "推荐" for a cleaner UI footprint.
+
+### 5️⃣ Verification & Deployment
+* **Automated Sandbox Tests**: Re-ran the verification suite across all 2,075 target combinations. Confirmed all programs generate the roadmap and advanced electives successfully without any errors.
+* **Production Deployment**: Committed the changes and pushed them to `origin/master`, deploying the final enhancements to Vercel.
