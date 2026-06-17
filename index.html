@@ -110,6 +110,10 @@
               <strong data-i18n="hero_proof_cost">Optimize Tuition</strong>
               <span data-i18n="hero_proof_cost_desc">Focus only on required courses to prevent wasting time and money.</span>
             </div>
+            <div>
+              <strong data-i18n="hero_proof_search">ReqRadar Search</strong>
+              <span data-i18n="hero_proof_search_desc">Search and cross-analyze prerequisites, credits, and requirements for 4,000+ U.S. colleges.</span>
+            </div>
           </div>
         </div>
       </section>
@@ -134,16 +138,50 @@
         </div>
         <div class="coverage-summary" id="schoolCoverageSummary"></div>
         <div class="coverage-banner" style="margin-top: 24px;">
-          <div class="placeholder-gradient coverage-banner-placeholder">
-            <span class="icon">🏫</span>
-            <span class="text" data-i18n="ph_coverage_title">Academic Coverage Engine</span>
-            <span class="subtext" data-i18n="ph_coverage_desc">Comprehensive database covering top-tier US universities</span>
-          </div>
+          <img src="./academic_coverage_map.png" alt="Academic Coverage Map" style="width: 100%; border-radius: 16px; border: 1px solid var(--line); box-shadow: var(--shadow-soft); display: block;" />
         </div>
         <div class="school-chip-list" id="schoolCoverageList" style="margin-top: 20px;"></div>
       </section>
 
+      <!-- Value Proposition Section -->
+      <section class="value-proposition-section" id="value-proposition" aria-label="Value Proposition">
+        <div class="section-heading" style="text-align: center; margin-bottom: 48px;">
+          <p class="eyebrow" data-i18n="value_eyebrow" style="color: var(--accent); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Premium Strategy Partner</p>
+          <h2 data-i18n="value_heading" style="font-size: clamp(24px, 4vw, 36px); font-weight: 900; color: var(--primary-dark); margin-top: 10px;">스마트하게 소유하는 컨설팅급 인텔리전스</h2>
+          <p data-i18n="value_desc" style="font-size: 15px; color: var(--muted); max-width: 700px; margin: 12px auto 0 auto; line-height: 1.6;">
+            수작업으로 진행되던 복잡한 편입 분석을 디지털 기술로 자동화하여, 오직 합격 전략 수립에만 집중할 수 있도록 든든한 동반자가 되어 드립니다.
+          </p>
+        </div>
 
+        <div class="value-grid">
+          <!-- Card 1 -->
+          <div class="value-card">
+            <div class="value-icon-box">🧠</div>
+            <h3 data-i18n="value_card1_title">오프라인 컨설팅의 디지털 자동화</h3>
+            <p data-i18n="value_card1_body">
+              수천만 원 상당의 유학원 오프라인 컨설팅에서 수행하는 복잡한 선수과목 검증, 최적 학기 로드맵 배치, 에세이 방향성 설계를 엔진에 그대로 녹여내어 단 29,000원에 실시간 무제한으로 누릴 수 있습니다.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="value-card">
+            <div class="value-icon-box">🤝</div>
+            <h3 data-i18n="value_card2_title">오프라인 유학원과의 하이브리드 시너지</h3>
+            <p data-i18n="value_card2_body">
+              유학원의 세심한 휴먼 멘토링과 TransferChek의 정밀한 데이터 엔진이 결합될 때 합격률이 극대화됩니다. 유학원 상담 전후의 필수 자가 점검 도구이자 B2B 협업 파트너로서 조화롭게 공존합니다.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="value-card">
+            <div class="value-icon-box">🛡️</div>
+            <h3 data-i18n="value_card3_title">유학 비용 낭비 및 지연 리스크 예방</h3>
+            <p data-i18n="value_card3_body">
+              선수과목 조건 하나만 놓쳐도 편입 지원 타이밍이 1년 밀려 수천만 원의 현지 체류비와 학비가 낭비됩니다. 커피 몇 잔 값의 투자로 수천만 원 상당의 잠재적 리스크를 미연에 완벽히 예방할 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section class="section" id="solution">
         <div class="section-heading">
@@ -270,64 +308,13 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto;">
+        <div style="max-width: 700px; margin: 0 auto;">
           <!-- Card 1: Official Sources -->
-          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-soft);">
-            <div style="font-size: 32px;">🏛️</div>
-            <h3 style="font-size: 18px; font-weight: 800; color: var(--primary); margin: 0;">공식 CDS & 요강 다이렉트 매핑</h3>
-            <p style="font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0;">
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-soft);">
+            <div style="font-size: 36px; text-align: center;">🏛️</div>
+            <h3 style="font-size: 20px; font-weight: 800; color: var(--primary); margin: 0; text-align: center;">공식 CDS & 요강 다이렉트 매핑</h3>
+            <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7; margin: 0; text-align: center;">
               각 대학교의 연도별 공식 Common Data Set (CDS) 입학 통계 및 단과대/전공별 공식 Transfer Guide 요강을 다이렉트로 분석 및 크롤링하여 데이터베이스를 정제합니다.
-            </p>
-          </div>
-          
-          <!-- Card 2: Auto Audit -->
-          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-soft);">
-            <div style="font-size: 32px;">🤖</div>
-            <h3 style="font-size: 18px; font-weight: 800; color: var(--primary); margin: 0;">자동화 오타 및 규격 감사 시스템</h3>
-            <p style="font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0;">
-              날짜가 어학 성적으로 파싱되거나, GPA 범위를 초과하거나, 렉처와 랩이 오매핑되는 데이터 오류를 잡아내는 독자적인 Ingestion Audit Engine을 통해 요강 무결성을 유지합니다.
-            </p>
-          </div>
-
-          
-        </div>
-      </section>
-
-      <!-- Value Proposition Section -->
-      <section class="value-proposition-section" id="value-proposition" aria-label="Value Proposition">
-        <div class="section-heading" style="text-align: center; margin-bottom: 48px;">
-          <p class="eyebrow" data-i18n="value_eyebrow" style="color: var(--accent); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Premium Strategy Partner</p>
-          <h2 data-i18n="value_heading" style="font-size: clamp(24px, 4vw, 36px); font-weight: 900; color: var(--primary-dark); margin-top: 10px;">스마트하게 소유하는 컨설팅급 인텔리전스</h2>
-          <p data-i18n="value_desc" style="font-size: 15px; color: var(--muted); max-width: 700px; margin: 12px auto 0 auto; line-height: 1.6;">
-            수작업으로 진행되던 복잡한 편입 분석을 디지털 기술로 자동화하여, 오직 합격 전략 수립에만 집중할 수 있도록 든든한 동반자가 되어 드립니다.
-          </p>
-        </div>
-
-        <div class="value-grid">
-          <!-- Card 1 -->
-          <div class="value-card">
-            <div class="value-icon-box">🧠</div>
-            <h3 data-i18n="value_card1_title">오프라인 컨설팅의 디지털 자동화</h3>
-            <p data-i18n="value_card1_body">
-              수천만 원 상당의 유학원 오프라인 컨설팅에서 수행하는 복잡한 선수과목 검증, 최적 학기 로드맵 배치, 에세이 방향성 설계를 엔진에 그대로 녹여내어 단 29,000원에 실시간 무제한으로 누릴 수 있습니다.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="value-card">
-            <div class="value-icon-box">🤝</div>
-            <h3 data-i18n="value_card2_title">오프라인 유학원과의 하이브리드 시너지</h3>
-            <p data-i18n="value_card2_body">
-              유학원의 세심한 휴먼 멘토링과 TransferChek의 정밀한 데이터 엔진이 결합될 때 합격률이 극대화됩니다. 유학원 상담 전후의 필수 자가 점검 도구이자 B2B 협업 파트너로서 조화롭게 공존합니다.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="value-card">
-            <div class="value-icon-box">🛡️</div>
-            <h3 data-i18n="value_card3_title">유학 비용 낭비 및 지연 리스크 예방</h3>
-            <p data-i18n="value_card3_body">
-              선수과목 조건 하나만 놓쳐도 편입 지원 타이밍이 1년 밀려 수천만 원의 현지 체류비와 학비가 낭비됩니다. 커피 몇 잔 값의 투자로 수천만 원 상당의 잠재적 리스크를 미연에 완벽히 예방할 수 있습니다.
             </p>
           </div>
         </div>
@@ -429,11 +416,6 @@
                     <h3 data-i18n="profile_title">Academic Profile</h3>
                     <p data-i18n="profile_desc">Input your current GPA, credits, residency status, and completed courses.</p>
                   </div>
-                </div>
-                <div class="placeholder-gradient panel-placeholder-compact">
-                  <span class="icon">📊</span>
-                  <span class="text" data-i18n="ph_diagnostics_title">Eligibility Diagnostics</span>
-                  <span class="subtext" data-i18n="ph_diagnostics_desc">Input your metrics to check admission coverage</span>
                 </div>
 
                 <div class="form-row">
@@ -539,11 +521,6 @@
                   <p data-i18n="req_desc">Search top programs to instantly load official prerequisite criteria.</p>
                 </div>
               </div>
-              <div class="placeholder-gradient panel-placeholder-large">
-                <span class="icon">🔍</span>
-                <span class="text" data-i18n="ph_finder_title">Prerequisite Articulation Finder</span>
-                <span class="subtext" data-i18n="ph_finder_desc">Search databases for credit transfer and GPA thresholds</span>
-              </div>
               <div class="search-bar">
                 <div class="target-inputs-group requirement-search-field" style="margin-bottom: 12px; display: flex; flex-flow: row wrap; gap: 12px; width: 100%;">
                   <div class="form-row search-field autocomplete-container" id="reqSchoolContainer" data-autocomplete-type="school" style="position: relative; margin-bottom: 0; flex: 1 1 200px;">
@@ -593,11 +570,6 @@
                     <h3 data-i18n="roadmap_title">Optimized Roadmap Builder Planner</h3>
                     <p data-i18n="roadmap_desc">Generate a semester roadmap ensuring no wasted time, credits, or GPA.</p>
                   </div>
-                </div>
-                <div class="placeholder-gradient panel-placeholder-normal">
-                  <span class="icon">📅</span>
-                  <span class="text" data-i18n="ph_roadmap_title">Optimized Transfer Roadmap</span>
-                  <span class="subtext" data-i18n="ph_roadmap_desc">Term-by-term prerequisite sequence compliance planner</span>
                 </div>
                 <div class="form-row">
                   <label for="admissionYear" data-i18n="label_admission_year">Expected Admission Year</label>

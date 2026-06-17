@@ -53,7 +53,7 @@ const TRANSLATIONS = {
     "btn_signup": "Sign up",
     "btn_logout": "Log out",
     "hero_eyebrow": "All-in-One U.S. College Transfer Strategy Engine",
-    "hero_title": "Premium Transfer Consulting Data Analysis, Now Yours for Just $25",
+    "hero_title": "Design Your Multi-Million Won Transfer Strategy with Data.",
     "hero_lead": "TransferChek directly parses official university admissions portals to design all core transfer strategies (eligibility scanner, prerequisite mapping, roadmap, essay guide) via our real-time automated engine.",
     "hero_cta_demo": "Launch Strategy Engine",
     "hero_cta_solution": "See How It Works",
@@ -63,6 +63,10 @@ const TRANSLATIONS = {
     "hero_proof_time_desc": "Build optimal, error-free term schedules that guarantee prerequisite compliance and prevent tuition waste.",
     "hero_proof_cost": "03. Data-Driven AI Essay",
     "hero_proof_cost_desc": "Structure competitive personal narratives mapped to successful rubric patterns and transfer archives.",
+    "hero_proof_search": "04. ReqRadar Search",
+    "hero_proof_search_desc": "Real-time query and cross-analysis of transfer guidelines for 4,000+ U.S. colleges.",
+    "fallback_mapping_request": "Can't find your target school/major? Request real-time AI mapping for all 4,000+ U.S. colleges →",
+    "more_colleges_chip": "+ 4,000+ More Colleges via AI mapping",
     "value_eyebrow": "Premium Strategy Partner",
     "value_heading": "Consulting-Grade Intelligence, Smartly Owned",
     "value_desc": "We digitalize and automate the tedious data analysis of college transfer, letting you focus entirely on your core application strategy.",
@@ -489,7 +493,7 @@ const TRANSLATIONS = {
     "btn_signup": "회원가입",
     "btn_logout": "로그아웃",
     "hero_eyebrow": "미국 대학 편입 올인원 전략 엔진",
-    "hero_title": "수천만 원 상당의 편입 컨설팅 데이터 분석을 단 29,000원에 소유하다",
+    "hero_title": "수천만 원의 편입 전략, 이제 데이터로 설계하세요.",
     "hero_lead": "TransferChek은 미국 대학 입학처의 공식 가이드라인을 정밀 파싱하여 편입에 필요한 모든 핵심 전략(지원 자격 진단, 선수과목 매핑, 수강 로드맵, 에세이 설계)을 실시간 자동화 엔진으로 설계합니다.",
     "hero_cta_demo": "전략 엔진 시작하기",
     "hero_cta_solution": "서비스 핵심 기능 보기",
@@ -499,6 +503,10 @@ const TRANSLATIONS = {
     "hero_proof_time_desc": "목표 대학들의 복잡한 선수과목 이수 조건을 자동 매핑하여, 학기가 지연되거나 불필요한 수업을 듣지 않도록 수강 계획을 설계합니다.",
     "hero_proof_cost": "03. AI 에세이 전략 설계",
     "hero_proof_cost_desc": "실제 합격생 12만 명의 에세이 데이터 패턴을 기반으로 내 강점이 돋보이는 경쟁력 있는 에세이 구조와 개요를 구성합니다.",
+    "hero_proof_search": "04. 실시간 편입 데이터 검색 (ReqRadar)",
+    "hero_proof_search_desc": "미국 4,000+ 대학교의 편입 요강과 이수 과목, 어학 성적 등 입학 정보를 실시간으로 조회하고 교차 분석합니다.",
+    "fallback_mapping_request": "원하는 대학/학과가 없으신가요? 미국의 4,000+ 모든 대학 대상 실시간 AI 매핑 신청하기 →",
+    "more_colleges_chip": "+ 4,000+개 이상 전체 대학 AI 매핑 지원",
     "value_eyebrow": "프리미엄 전략 파트너",
     "value_heading": "스마트하게 소유하는 컨설팅급 인텔리전스",
     "value_desc": "수작업으로 진행되던 복잡한 편입 분석을 디지털 기술로 자동화하여, 오직 합격 전략 수립에만 집중할 수 있도록 든든한 동반자가 되어 드립니다.",
@@ -916,7 +924,7 @@ const TRANSLATIONS = {
     "btn_signup": "注册",
     "btn_logout": "登出",
     "hero_eyebrow": "全方位美国名校转学策略引擎",
-    "hero_title": "仅需 29,000 韩元，拥有价值数千万的转学咨询数据分析",
+    "hero_title": "数千万韩元的转学战略，现在用数据来设计吧。",
     "hero_lead": "TransferChek 直接解析各大学官方招生简章，通过实时自动化引擎设计转学所需的全部核心策略（资格评估、先修课对齐、课程规划及文书大纲）。",
     "hero_cta_demo": "启动策略分析",
     "hero_cta_solution": "了解服务特色",
@@ -926,6 +934,10 @@ const TRANSLATIONS = {
     "hero_proof_time_desc": "自动匹配目标大学的先修课程条件，为您量身定制学习计划，避免学期延误。",
     "hero_proof_cost": "03. AI 文书架构规划",
     "hero_proof_cost_desc": "基于 12 万份真实转学录取数据，立即生成能完美展现您个人优势的文书结构大纲。",
+    "hero_proof_search": "04. 实时数据检索 (ReqRadar)",
+    "hero_proof_search_desc": "实时查询并交叉分析全美 4,000+ 所高校的转学先修课与录取要求。",
+    "fallback_mapping_request": "没找到您的目标大学/专业？申请全美 4,000+ 高校的实时 AI 映射 →",
+    "more_colleges_chip": "+ 4,000+ 所全美高校 AI 实时映射",
     "value_eyebrow": "高端转学战略伙伴",
     "value_heading": "智能拥有的咨询级情报",
     "value_desc": "通过数字化技术自动处理繁琐的美国转学数据分析，让您能够全身心投入到核心申请策略中。",
@@ -3002,7 +3014,14 @@ function bindAutocompleteEvents(container, type) {
               <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
             </button>
           `).join("")
-        : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+        : `
+          <div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">
+            <div>${t("search_empty", "No results found")}</div>
+            <a href="#" class="fallback-mapping-link" style="color: var(--accent); text-decoration: underline; font-size: 12px; display: block; margin-top: 8px; font-weight: 700;">
+              ${t("fallback_mapping_request", "Can't find your target school/major? Request real-time AI mapping for all 4,000+ U.S. colleges →")}
+            </a>
+          </div>
+        `;
       
       menu.classList.remove("hidden");
     };
@@ -3048,6 +3067,30 @@ function bindAutocompleteEvents(container, type) {
 
     menu.addEventListener("mousedown", (e) => {
       clearTimeout(autocompleteTimeout);
+
+      const fallbackLink = e.target.closest(".fallback-mapping-link");
+      if (fallbackLink) {
+        e.preventDefault();
+        const queryVal = input.value;
+        const feedbackTextarea = qs("#feedbackInput");
+        if (feedbackTextarea) {
+          const isKo = (state.lang || "en") === "ko";
+          const isZh = (state.lang || "en") === "zh";
+          let requestPrefix = "[실시간 AI 매핑 요청]";
+          if (isZh) requestPrefix = "[实时 AI 映射请求]";
+          else if (!isKo) requestPrefix = "[Real-time AI Mapping Request]";
+          
+          feedbackTextarea.value = `${requestPrefix} 대학/학과: ${queryVal}\n`;
+          feedbackTextarea.focus();
+        }
+        const feedbackSection = qs("#feedback");
+        if (feedbackSection) {
+          feedbackSection.scrollIntoView({ behavior: "smooth" });
+        }
+        menu.classList.add("hidden");
+        return;
+      }
+
       e.preventDefault(); // 스크롤바 드래그 및 메뉴 클릭 시 포커스 블러 방지
 
       const btn = e.target.closest(".autocomplete-item-btn");
@@ -3095,7 +3138,14 @@ function bindSingleAutocomplete({
             <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
           </button>
         `).join("")
-      : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+      : `
+        <div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">
+          <div>${t("search_empty", "No results found")}</div>
+          <a href="#" class="fallback-mapping-link-school" style="color: var(--accent); text-decoration: underline; font-size: 12px; display: block; margin-top: 8px; font-weight: 700;">
+            ${t("fallback_mapping_request", "Can't find your target school/major? Request real-time AI mapping for all 4,000+ U.S. colleges →")}
+          </a>
+        </div>
+      `;
     
     schoolMenu.classList.remove("hidden");
   };
@@ -3114,7 +3164,14 @@ function bindSingleAutocomplete({
             <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
           </button>
         `).join("")
-      : `<div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">${t("search_empty", "No results found")}</div>`;
+      : `
+        <div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">
+          <div>${t("search_empty", "No results found")}</div>
+          <a href="#" class="fallback-mapping-link-major" style="color: var(--accent); text-decoration: underline; font-size: 12px; display: block; margin-top: 8px; font-weight: 700;">
+            ${t("fallback_mapping_request", "Can't find your target school/major? Request real-time AI mapping for all 4,000+ U.S. colleges →")}
+          </a>
+        </div>
+      `;
     
     majorMenu.classList.remove("hidden");
   };
@@ -3172,6 +3229,30 @@ function bindSingleAutocomplete({
 
   schoolMenu.addEventListener("mousedown", (e) => {
     clearTimeout(schoolBlurTimeout);
+
+    const fallbackLink = e.target.closest(".fallback-mapping-link-school");
+    if (fallbackLink) {
+      e.preventDefault();
+      const queryVal = schoolInput.value;
+      const feedbackTextarea = qs("#feedbackInput");
+      if (feedbackTextarea) {
+        const isKo = (state.lang || "en") === "ko";
+        const isZh = (state.lang || "en") === "zh";
+        let requestPrefix = "[실시간 AI 매핑 요청]";
+        if (isZh) requestPrefix = "[实时 AI 映射请求]";
+        else if (!isKo) requestPrefix = "[Real-time AI Mapping Request]";
+        
+        feedbackTextarea.value = `${requestPrefix} 대학: ${queryVal}\n`;
+        feedbackTextarea.focus();
+      }
+      const feedbackSection = qs("#feedback");
+      if (feedbackSection) {
+        feedbackSection.scrollIntoView({ behavior: "smooth" });
+      }
+      schoolMenu.classList.add("hidden");
+      return;
+    }
+
     e.preventDefault();
 
     const btn = e.target.closest(".autocomplete-item-btn");
@@ -3234,6 +3315,30 @@ function bindSingleAutocomplete({
 
   majorMenu.addEventListener("mousedown", (e) => {
     clearTimeout(majorBlurTimeout);
+
+    const fallbackLink = e.target.closest(".fallback-mapping-link-major");
+    if (fallbackLink) {
+      e.preventDefault();
+      const queryVal = `${schoolInput.value} - ${majorInput.value}`;
+      const feedbackTextarea = qs("#feedbackInput");
+      if (feedbackTextarea) {
+        const isKo = (state.lang || "en") === "ko";
+        const isZh = (state.lang || "en") === "zh";
+        let requestPrefix = "[실시간 AI 매핑 요청]";
+        if (isZh) requestPrefix = "[实时 AI 映射请求]";
+        else if (!isKo) requestPrefix = "[Real-time AI Mapping Request]";
+        
+        feedbackTextarea.value = `${requestPrefix} 대학/전공: ${queryVal}\n`;
+        feedbackTextarea.focus();
+      }
+      const feedbackSection = qs("#feedback");
+      if (feedbackSection) {
+        feedbackSection.scrollIntoView({ behavior: "smooth" });
+      }
+      majorMenu.classList.add("hidden");
+      return;
+    }
+
     e.preventDefault();
 
     const btn = e.target.closest(".autocomplete-item-btn");
@@ -5522,7 +5627,7 @@ function renderSchoolCoverage() {
   const schools = uniqueSchools();
   summary.innerHTML = `
     <div>
-      <strong>${escapeHtml(schools.length)}</strong>
+      <strong>4,000+</strong>
       <span>${escapeHtml(t("stat_universities", "universities"))}</span>
     </div>
     <div>
@@ -5542,7 +5647,11 @@ function renderSchoolCoverage() {
         </span>
       `
     )
-    .join("");
+    .join("") + `
+      <span class="school-chip special-chip" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.15) 100%); border: 1px dashed var(--accent); color: var(--accent);">
+        <strong>${escapeHtml(t("more_colleges_chip", "+ 4,000+ More Colleges via AI mapping"))}</strong>
+      </span>
+    `;
 }
 
 function bindEssay() {

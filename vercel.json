@@ -13,7 +13,12 @@
     { "src": "preview.png", "use": "@vercel/static" },
     { "src": "admin.html", "use": "@vercel/static" },
     { "src": "robots.txt", "use": "@vercel/static" },
-    { "src": "sitemap.xml", "use": "@vercel/static" }
+    { "src": "sitemap.xml", "use": "@vercel/static" },
+    { "src": "academic_coverage_map.png", "use": "@vercel/static" },
+    { "src": "eligibility_diagnostics.png", "use": "@vercel/static" },
+    { "src": "prerequisite_finder.png", "use": "@vercel/static" },
+    { "src": "roadmap_builder.png", "use": "@vercel/static" },
+    { "src": "essay_strategist.png", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.js" },
