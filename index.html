@@ -627,90 +627,70 @@
               </div>
             </div>
 
-            <div class="essay-layout">
-              <form class="panel form-panel" id="essayForm" style="width: 100%;">
+            <div id="essayCreditsBadge" style="margin-bottom: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                <span>
+                  <span data-i18n="essay_credits_remaining">Remaining Credits:</span> 
+                  <strong id="essayCreditsCount" style="font-weight: 800; color: #047857; margin-left: 4px;">1</strong>
+                </span>
+                <button type="button" id="buyEssayCreditsBtn" style="background: var(--gold); border: none; border-radius: 4px; padding: 6px 12px; font-size: 11px; font-weight: 800; color: #000000; cursor: pointer; transition: opacity 0.2s;" onclick="buyStandaloneEssayPass()" data-i18n="btn_buy_credits">
+                  Buy Target School Pass (9,900 KRW)
+                </button>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 8px; width: 100%;">
+                <span>
+                  <span>Unassigned University Passes:</span>
+                  <strong id="essayPendingPassesCount" style="font-weight: 800; color: #b45309; margin-left: 4px;">0</strong>
+                </span>
+                <span id="unlockedSchoolsList" style="font-size: 11px; color: var(--muted); text-align: right;"></span>
+              </div>
+            </div>
+
+            <!-- New 4-Step Wizard Header Progress -->
+            <div class="wizard-header-steps">
+              <div class="wizard-header-step active" id="essayStep1Header">
+                <span class="step-num">Step 1</span>
+                <span class="step-name" data-i18n="essay_wizard_s1">목표 설정 (Target)</span>
+                <span class="step-status" id="essayStep1StatusIcon">📍</span>
+              </div>
+              <div class="wizard-header-step" id="essayStep2Header">
+                <span class="step-num">Step 2</span>
+                <span class="step-name" data-i18n="essay_wizard_s2">인터뷰 & 큐레이션</span>
+                <span class="step-status" id="essayStep2StatusIcon">⚪</span>
+              </div>
+              <div class="wizard-header-step" id="essayStep3Header">
+                <span class="step-num">Step 3</span>
+                <span class="step-name" data-i18n="essay_wizard_s3">가이드 & 예시</span>
+                <span class="step-status" id="essayStep3StatusIcon">⚪</span>
+              </div>
+              <div class="wizard-header-step" id="essayStep4Header">
+                <span class="step-num">Step 4</span>
+                <span class="step-name" data-i18n="essay_wizard_s4">무한 첨삭 에디터</span>
+                <span class="step-status" id="essayStep4StatusIcon">⚪</span>
+              </div>
+            </div>
+
+            <!-- WIZARD STEP 1: TARGET SETUP -->
+            <div class="essay-step-view" id="essayStep1View">
+              <div class="panel" style="width: 100%;">
                 <div class="panel-heading">
-                  <span class="step">04</span>
+                  <span class="step">01</span>
                   <div>
-                    <h3 data-i18n="essay_title">EssayAI Planner</h3>
-                    <p data-i18n="essay_desc">Input your key achievements to generate an admissions-focused essay blueprint.</p>
+                    <h3 data-i18n="essay_s1_title">목표 대학 및 학과 설정</h3>
+                    <p data-i18n="essay_s1_desc">편입 목표 학교와 학과, 에세이 질문을 입력하여 합격 전략 설계를 준비합니다.</p>
                   </div>
                 </div>
 
-                <div id="essayCreditsBadge" style="margin-bottom: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-                    <span>
-                      <span data-i18n="essay_credits_remaining">Remaining Credits:</span> 
-                      <strong id="essayCreditsCount" style="font-weight: 800; color: #047857; margin-left: 4px;">1</strong>
-                    </span>
-                    <button type="button" id="buyEssayCreditsBtn" style="background: var(--gold); border: none; border-radius: 4px; padding: 6px 12px; font-size: 11px; font-weight: 800; color: #000000; cursor: pointer; transition: opacity 0.2s;" onclick="buyStandaloneEssayPass()" data-i18n="btn_buy_credits">
-                      Buy Target School Pass (9,900 KRW)
-                    </button>
-                  </div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 8px; width: 100%;">
-                    <span>
-                      <span>Unassigned University Passes:</span>
-                      <strong id="essayPendingPassesCount" style="font-weight: 800; color: #b45309; margin-left: 4px;">0</strong>
-                    </span>
-                    <span id="unlockedSchoolsList" style="font-size: 11px; color: var(--muted); text-align: right;"></span>
-                  </div>
-                </div>
-
-                <!-- Upgraded 3-Step Interactive Wizard Guide -->
-                <div class="essay-wizard-guide" id="essayWizardGuide" style="margin-top: 0; margin-bottom: 24px; display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: rgba(99, 102, 241, 0.03);">
-                  <div style="font-weight: 800; font-size: 13.5px; color: var(--ink); display: flex; align-items: center; gap: 8px;">
-                    <span style="font-size: 16px;">🎯</span>
-                    <span data-i18n="essay_guide_main_title">AI Essay Blueprint Wizard (3-Step Guide)</span>
-                  </div>
-                  <div class="wizard-steps-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 4px;">
-                    <div class="wizard-step" id="wizardStep1" style="display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); transition: all 0.2s;">
-                      <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Step 1</span>
-                        <span class="step-status-icon" style="font-size: 11px;">⚪</span>
-                      </div>
-                      <span style="font-size: 12px; font-weight: 700; color: var(--ink);" data-i18n="essay_guide_step1_title">Target Setup</span>
-                      <span style="font-size: 10px; color: var(--muted); line-height: 1.3;" data-i18n="essay_guide_step1_desc">Select target & prompt</span>
-                    </div>
-                    <div class="wizard-step" id="wizardStep2" style="display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); transition: all 0.2s;">
-                      <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Step 2</span>
-                        <span class="step-status-icon" style="font-size: 11px;">⚪</span>
-                      </div>
-                      <span style="font-size: 12px; font-weight: 700; color: var(--ink);" data-i18n="essay_guide_step2_title">AI Interview</span>
-                      <span style="font-size: 10px; color: var(--muted); line-height: 1.3;" data-i18n="essay_guide_step2_desc">Extract core stories</span>
-                    </div>
-                    <div class="wizard-step" id="wizardStep3" style="display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); transition: all 0.2s;">
-                      <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Step 3</span>
-                        <span class="step-status-icon" style="font-size: 11px;">⚪</span>
-                      </div>
-                      <span style="font-size: 12px; font-weight: 700; color: var(--ink);" data-i18n="essay_guide_step3_title">Exec Blueprint</span>
-                      <span style="font-size: 10px; color: var(--muted); line-height: 1.3;" data-i18n="essay_guide_step3_desc">Senior consult prescription</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3-in-1 EssayAI Subtabs -> Upgraded to 4-in-1 -->
-                <div class="essay-subtabs" style="display: flex; gap: 8px; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; background: rgba(255, 255, 255, 0.02); width: 100%; flex-wrap: wrap;">
-                  <button type="button" class="subtab-btn active" data-subtab="critic" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: var(--primary); color: #ffffff; font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_critic">에세이 문단 클리닉 (Critic & Clinic)</button>
-                  <button type="button" class="subtab-btn" data-subtab="mapper" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_mapper">소재 & 스토리 매핑 (Narrative Mapper)</button>
-                  <button type="button" class="subtab-btn" data-subtab="optimizer" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_optimizer">활동 이력 압축기 (Activity Optimizer)</button>
-                  <button type="button" class="subtab-btn" data-subtab="library" style="flex: 1 1 120px; padding: 10px; border: none; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 800; cursor: pointer; transition: all 0.2s;" data-i18n="essay_subtab_library">합격 에세이 라이브러리 (Master Class Library)</button>
-                </div>
-
-                <!-- Interactive Pre-fill Examples -->
                 <div class="essay-examples-row" style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; width: 100%;">
                   <button type="button" class="secondary-btn compact" id="loadEssayExample1" data-i18n="btn_essay_example1" style="font-size: 12.5px; padding: 8px 14px; flex: 1; min-height: 38px;">📝 Example 1: CS Project (U-Mich)</button>
                   <button type="button" class="secondary-btn compact" id="loadEssayExample2" data-i18n="btn_essay_example2" style="font-size: 12.5px; padding: 8px 14px; flex: 1; min-height: 38px;">⚙️ Example 2: ME Robotics (Georgia Tech)</button>
                 </div>
 
-                <!-- 3-Column horizontal inputs grid -->
-                <div class="essay-inputs-grid">
-                  <!-- Column 1: School & Limit -->
-                  <div class="essay-input-col" style="display: flex; flex-direction: column; gap: 16px;">
-                    <div id="essayTargetContainer" style="margin-bottom: 0; position: relative;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                  <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div id="essayTargetContainer" style="position: relative;">
                       <input type="hidden" id="essayTargetSchool" value="" data-selected-id="" />
-                      <div class="target-inputs-group" style="display: flex; flex-direction: column; gap: 12px;">
+                      <div style="display: flex; flex-direction: column; gap: 12px;">
                         <div class="form-row search-field autocomplete-container" id="essaySchoolContainer" data-autocomplete-type="school" style="position: relative; margin-bottom: 0; width: 100%;">
                           <label for="essaySchoolInput" data-i18n="label_school">School</label>
                           <div style="position: relative; display: flex; align-items: center;">
@@ -730,120 +710,246 @@
                       </div>
                     </div>
                     <div id="essaySchoolPassStatus" style="font-size: 12px; margin-top: 6px; display: none; line-height: 1.4; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; width: 100%;"></div>
+                  </div>
+
+                  <div style="display: flex; flex-direction: column; gap: 16px;">
                     <div class="form-row" style="margin-bottom: 0;">
                       <label for="essayLimit" data-i18n="label_essay_limit">Word Limit / Length</label>
                       <input id="essayLimit" type="text" placeholder="E.g., 350 words, 500 words, 1 page..." data-i18n-placeholder="essay_limit_placeholder" style="width: 100%; min-height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 0 12px;" />
                     </div>
                   </div>
+                </div>
 
-                  <!-- Column 2: Essay Question -->
-                  <div class="essay-input-col">
-                    <div class="form-row" style="height: 100%; display: flex; flex-direction: column; margin-bottom: 0;">
-                      <label for="essayQuestion" data-i18n="label_essay_question">Essay Question / Prompt</label>
-                      <textarea id="essayQuestion" rows="3" placeholder="Paste the university essay question or prompt here..." data-i18n-placeholder="essay_question_placeholder" style="flex: 1; min-height: 110px; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 12px; resize: none;"></textarea>
+                <div class="form-row" style="margin-bottom: 20px;">
+                  <label for="essayQuestion" data-i18n="label_essay_question">Essay Question / Prompt</label>
+                  <textarea id="essayQuestion" rows="3" placeholder="Paste the university essay question or prompt here..." data-i18n-placeholder="essay_question_placeholder" style="width: 100%; min-height: 100px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 12px; resize: none;"></textarea>
+                </div>
+
+                <button type="button" class="primary-btn full" id="essayToStep2Btn" style="font-weight: 800;">
+                  다음: AI 인터뷰 & 활동 이력 큐레이션 →
+                </button>
+              </div>
+            </div>
+
+            <!-- WIZARD STEP 2: AI INTERVIEW & NARRATIVE CURATION -->
+            <div class="essay-step-view hidden" id="essayStep2View">
+              <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;">
+                <!-- Left: AI Interview Panel -->
+                <div class="panel" style="display: flex; flex-direction: column;">
+                  <div class="panel-heading">
+                    <span class="step">02</span>
+                    <div>
+                      <h3 data-i18n="essay_s2_title">AI 심층 인터뷰 & 활동 입력</h3>
+                      <p data-i18n="essay_s2_desc">질문에 답변하거나 핵심 이력을 입력하면 인재상 핏에 맞는 스토리라인을 매핑하고 불필요한 세부내용을 정화합니다.</p>
                     </div>
                   </div>
 
-                  <!-- Column 3: Activities & Input mode -->
-                  <div class="essay-input-col" style="display: flex; flex-direction: column;">
-                    <!-- Input Mode Switcher -->
-                    <div class="essay-mode-switcher" style="display: flex; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
-                      <button type="button" class="mode-tab active" id="modeTabDirect" style="flex: 1; padding: 6px; border: none; border-radius: 6px; background: var(--primary); color: #ffffff; font-size: 11.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_direct">Direct Input</button>
-                      <button type="button" class="mode-tab" id="modeTabInterview" style="flex: 1; padding: 6px; border: none; border-radius: 6px; background: transparent; color: var(--muted); font-size: 11.5px; font-weight: 700; cursor: pointer; transition: all 0.2s;" data-i18n="essay_mode_interview">AI Interview Guide</button>
+                  <!-- Start Interview Screen -->
+                  <div id="interviewStartScreen" style="text-align: center; padding: 30px 20px;">
+                    <div style="font-size: 48px; margin-bottom: 12px;">💬</div>
+                    <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 8px;" data-i18n="interview_start_hdr">Premium AI 1:1 Interview</h4>
+                    <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 20px; line-height: 1.5;" data-i18n="interview_start_desc">
+                      선택하신 목표 대학 및 학과 에세이 분석 데이터에 기반한 5가지 핵심 기여도 질문을 통해 최고의 에세이 소스를 추출합니다.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto;">
+                      <button type="button" class="primary-btn" id="startInterviewBtn" data-i18n="btn_start_interview">인터뷰 시작하기</button>
+                      <button type="button" class="secondary-btn" id="skipToDirectBtn" style="font-size: 12px;">직접 텍스트로 활동 입력하기</button>
+                    </div>
+                  </div>
+
+                  <!-- Active Interview Chat Screen -->
+                  <div id="interviewActiveScreen" class="hidden" style="display: flex; flex-direction: column; gap: 14px; flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+                      <span style="font-size: 11px; font-weight: 800; color: var(--accent); text-transform: uppercase;" id="interviewStepLabel">Question 1 of 5</span>
+                      <div style="width: 120px; height: 5px; background: rgba(0,0,0,0.06); border-radius: 4px; overflow: hidden;">
+                        <div id="interviewProgressBar" style="width: 20%; height: 100%; background: var(--accent); transition: width 0.3s ease;"></div>
+                      </div>
                     </div>
 
-                    <!-- Mode 1: Direct Input -->
-                    <div class="form-row" id="essayDirectInputWrapper" style="flex: 1; display: flex; flex-direction: column; margin-bottom: 0;">
-                      <label for="essayActivity" data-i18n="label_essay_activity">Core Activities & Projects</label>
-                      <textarea id="essayActivity" placeholder="E.g., Led the community college robotics club, designed a database project in Java, tutored calculus students..." style="flex: 1; min-height: 110px; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 12px; resize: none;"></textarea>
+                    <div class="interview-chat-container" id="interviewChatHistory">
+                      <!-- Chat bubbles will go here -->
                     </div>
 
-                    <!-- Mode 2: AI Interview -->
-                    <div id="essayInterviewWrapper" class="hidden" style="flex: 1; display: flex; flex-direction: column; gap: 8px; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--line); border-radius: 10px; padding: 12px; min-height: 110px;">
-                      <!-- Start Screen -->
-                      <div id="interviewStartScreen" style="text-align: center; padding: 4px 0;">
-                        <p style="font-size: 11.5px; color: var(--muted); margin-bottom: 8px; line-height: 1.4;" data-i18n="interview_start_desc">
-                          Answer 5 tailored questions based on your target program to extract your key academic experiences and fit.
-                        </p>
-                        <button type="button" class="primary-btn" id="startInterviewBtn" style="font-size: 11.5px; padding: 6px 12px; min-height: 32px;" data-i18n="btn_start_interview">Start AI Interview</button>
-                      </div>
+                    <div class="interview-input-row">
+                      <textarea id="interviewAnswerInput" class="interview-textarea" placeholder="인터뷰 답변을 자세하게 입력하세요..." data-i18n-placeholder="interview_answer_placeholder"></textarea>
+                      <button type="button" class="primary-btn" id="nextInterviewBtn" style="min-width: 80px; min-height: 54px;">전송</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+                      <button type="button" class="link-btn" id="prevInterviewBtn" style="font-size: 12px; color: var(--muted); cursor: pointer;">이전 질문</button>
+                      <button type="button" class="link-btn" id="quitInterviewBtn" style="font-size: 12px; color: var(--danger); cursor: pointer;">인터뷰 중단</button>
+                    </div>
+                  </div>
 
-                      <!-- Active Interview Screen -->
-                      <div id="interviewActiveScreen" class="hidden">
-                        <!-- Progress Bar -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                          <span style="font-size: 10px; font-weight: 800; color: #4f46e5; text-transform: uppercase;" id="interviewStepLabel">Step 1 of 5</span>
-                          <span style="font-size: 10px; color: var(--muted); font-weight: 700;" id="interviewStepPercent">20%</span>
-                        </div>
-                        <div style="height: 3px; background: rgba(0,0,0,0.06); border-radius: 2px; margin-bottom: 8px; overflow: hidden;">
-                          <div id="interviewProgressBar" style="width: 20%; height: 100%; background: linear-gradient(90deg, #6366f1 0%, #10b981 100%); transition: width 0.3s ease;"></div>
-                        </div>
-
-                        <!-- Question box -->
-                        <div style="margin-bottom: 8px;">
-                          <strong id="interviewQuestionText" style="font-size: 11.5px; color: var(--primary); display: block; margin-bottom: 4px; line-height: 1.4;">Question text...</strong>
-                          <textarea id="interviewAnswerInput" rows="2" placeholder="Type your answer here..." style="width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); padding: 6px 8px; font-size: 11.5px; outline: none; transition: border-color 0.2s;" data-i18n-placeholder="interview_answer_placeholder"></textarea>
-                        </div>
-
-                        <!-- Navigation controls -->
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                          <button type="button" class="secondary-btn" id="prevInterviewBtn" style="font-size: 11px; padding: 4px 8px; min-height: 28px;" data-i18n="btn_prev">Previous</button>
-                          <button type="button" class="primary-btn" id="nextInterviewBtn" style="font-size: 11px; padding: 4px 8px; min-height: 28px;" data-i18n="btn_next">Next</button>
-                        </div>
-                      </div>
+                  <!-- Direct Raw Input Container -->
+                  <div id="directInputContainer" class="hidden" style="display: flex; flex-direction: column; gap: 12px;">
+                    <label for="essayActivity" style="font-weight: 800; font-size: 13px; color: var(--primary);" data-i18n="label_essay_activity">나의 활동 이력 및 원본 스토리 (Raw Story & Activities)</label>
+                    <textarea id="essayActivity" placeholder="에세이에 쓰고 싶은 활동들과 경험들을 적어주세요. 사소한 내용이나 정돈되지 않은 글이어도 괜찮습니다. 전문가 필터를 거쳐 강력하게 정돈됩니다..." style="width: 100%; min-height: 180px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; color: var(--ink); font-size: 13px; resize: vertical; outline: none;"></textarea>
+                    <div style="display: flex; gap: 10px; margin-top: 8px;">
+                      <button type="button" class="secondary-btn" id="backToInterviewStartBtn" style="flex: 1;">인터뷰 방식으로 변경</button>
+                      <button type="button" class="primary-btn" id="triggerOptimizationBtn" style="flex: 1.5; font-weight: 800;">활동 이력 큐레이션 및 스토리 매핑</button>
                     </div>
                   </div>
                 </div>
 
-                <button class="primary-btn full" id="generateEssayBtn" type="button" style="margin-top: 10px;" data-i18n="btn_generate_essay">Generate Essay Storyline Guide</button>
-              </form>
-
-              <div class="panel" id="essayResultPanel" style="width: 100%;">
-                <div class="panel-heading compact">
-                  <span class="step">✓</span>
-                  <div>
-                    <h3 data-i18n="essay_outline_title">AI Essay Blueprint</h3>
-                    <p data-i18n="essay_outline_desc">Tailored paragraph structure connecting your activities to school goals.</p>
+                <!-- Right: Expert Curation Catcher -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                  <!-- Activity Optimizer Card -->
+                  <div class="panel" style="padding: 20px;">
+                    <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                      <span>⚡</span> <span data-i18n="curation_opt_title">활동 이력 압축기 (Activity Optimizer)</span>
+                    </h4>
+                    <p style="font-size: 12px; color: var(--muted); margin-bottom: 14px;" data-i18n="curation_opt_desc">
+                      미사여구와 불필요한 요소를 배제하고 원어민 수준의 행동 동사(Action Verbs)와 숫자로 성과를 부각합니다.
+                    </p>
+                    <div id="optOutputContainer" style="font-size: 12.5px; display: flex; flex-direction: column; gap: 12px;">
+                      <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 20px 0;">
+                        인터뷰를 진행하거나 활동 이력을 입력하시면 최적화 결과를 실시간으로 표시합니다.
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="essay-outline" id="essayOutlineContent">
-                  <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0;">
-                    <p data-i18n="essay_placeholder">Enter your activities on the left and click generate to build your custom outline guide.</p>
+
+                  <!-- Narrative Mapper Card -->
+                  <div class="panel" style="padding: 20px;">
+                    <h4 style="font-weight: 800; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                      <span>🎯</span> <span data-i18n="curation_map_title">소재 & 스토리 매핑 (Narrative Mapper)</span>
+                    </h4>
+                    <p style="font-size: 12px; color: var(--muted); margin-bottom: 14px;" data-i18n="curation_map_desc">
+                      학생이 작성한 원본 내용 중 굳이 넣지 않아도 될 곁다리 소재는 과감하게 드롭(Drop)하고, 합격선에 가까운 핵심 줄기(Core Spine)만 선별합니다.
+                    </p>
+                    <div id="mapperOutputContainer" style="font-size: 12.5px; display: flex; flex-direction: column; gap: 12px;">
+                      <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 20px 0;">
+                        스토리 매핑 다이어그램 및 컨설턴트 큐레이션 노트를 여기에 표시합니다.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              <!-- Essay Library Master Class Panel (Hidden by default) -->
-              <div class="panel hidden" id="essayLibraryDashboard" style="width: 100%;">
+
+              <!-- Navigation Footer -->
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 10px;">
+                <button type="button" class="secondary-btn" id="essayStep2BackBtn">← Step 1: 목표 재설정</button>
+                <button type="button" class="primary-btn" id="essayToStep3Btn" style="font-weight: 800; min-width: 200px;" disabled>
+                  가이드 & 에세이 예시 생성 →
+                </button>
+              </div>
+            </div>
+
+            <!-- WIZARD STEP 3: OUTLINES & BESPOKE EXAMPLES -->
+            <div class="essay-step-view hidden" id="essayStep3View">
+              <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px;">
+                <!-- Left: Paragraph Guides -->
+                <div class="panel" style="max-height: 700px; overflow-y: auto;">
+                  <div class="panel-heading">
+                    <span class="step">03</span>
+                    <div>
+                      <h3 data-i18n="essay_s3_title">합격 에세이 문단별 가이드</h3>
+                      <p data-i18n="essay_s3_desc">역대 합격자 통계 루브릭을 바탕으로 한 문단별 핵심 설계 기준(DOs & DON'Ts)입니다.</p>
+                    </div>
+                  </div>
+                  <div id="essayParagraphGuides" style="display: flex; flex-direction: column; gap: 16px; padding: 4px;">
+                    <!-- Guides rendered dynamically -->
+                  </div>
+                </div>
+
+                <!-- Right: Bespoke Draft Examples -->
+                <div class="panel" style="display: flex; flex-direction: column;">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                    <div>
+                      <h3 style="font-size: 18px; font-weight: 900; color: var(--primary);" data-i18n="bespoke_examples_hdr">나만의 맞춤형 에세이 예시 (2가지)</h3>
+                      <p style="font-size: 12.5px; color: var(--muted);" data-i18n="bespoke_examples_desc">인터뷰 내용 및 최적화된 스토리를 종합하여 완전히 새롭게 구성한 문단별 예시 템플릿입니다.</p>
+                    </div>
+                    <!-- Korean Language toggle button wrapper -->
+                    <div class="essay-lang-toggle" id="essayLangToggleWrapper" style="display: none;">
+                      <button type="button" class="essay-lang-btn active" id="essayLangEngBtn">영문 (ENG)</button>
+                      <button type="button" class="essay-lang-btn" id="essayLangKorBtn">국문 (KOR)</button>
+                    </div>
+                  </div>
+
+                  <div id="essayExamplesContent" style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 20px;">
+                    <!-- Two drafts rendered dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Collapsible Master Class library (Collapsible) -->
+              <details class="panel" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 10px;">
+                <summary style="cursor: pointer; padding: 18px 24px; font-weight: 800; font-size: 15px; color: var(--primary); outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.01);">
+                  <span>★ <span data-i18n="essay_library_collapsible_title">합격 에세이 라이브러리 연동 조회 (Admissions Master Class Library)</span></span>
+                  <span style="font-size: 11px; background: rgba(99, 102, 241, 0.1); color: #818cf8; padding: 2px 8px; border-radius: 4px;">클릭하여 펼치기</span>
+                </summary>
+                <div style="border-top: 1px solid var(--line); padding: 16px;">
+                  <div class="essay-filter-controls" style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--line); margin-bottom: 14px; padding-bottom: 10px;">
+                    <input type="text" id="essaySearchInput" data-i18n-placeholder="essay_search_placeholder" placeholder="Search essays..." style="flex: 1; min-width: 200px; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 13px;" oninput="filterEssayLibrary()">
+                    <select id="essayMajorFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 13px; min-width: 140px;" onchange="filterEssayLibrary()">
+                      <option value="" data-i18n="essay_filter_all_majors">All Majors</option>
+                      <option value="computer science">Computer Science</option>
+                      <option value="computer engineering">Computer Engineering</option>
+                      <option value="business">Business / Economics</option>
+                      <option value="engineering">Engineering</option>
+                    </select>
+                    <select id="essaySchoolFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 13px; min-width: 140px;" onchange="filterEssayLibrary()">
+                      <option value="" data-i18n="essay_filter_all_schools">All Universities</option>
+                      <option value="berkeley">UC Berkeley</option>
+                      <option value="michigan">U-Mich</option>
+                      <option value="columbia">Columbia</option>
+                      <option value="stanford">Stanford</option>
+                    </select>
+                  </div>
+                  <div id="essayLibraryContent" style="display: flex; flex-direction: column; gap: 12px;"></div>
+                </div>
+              </details>
+
+              <!-- Navigation Footer -->
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 10px;">
+                <button type="button" class="secondary-btn" id="essayStep3BackBtn">← Step 2: 인터뷰 편집</button>
+                <button type="button" class="primary-btn" id="essayToStep4Btn" style="font-weight: 800; min-width: 200px;">
+                  무한 첨삭 에디터로 진입 →
+                </button>
+              </div>
+            </div>
+
+            <!-- WIZARD STEP 4: UNLIMITED ESSAY REVISION EDITOR -->
+            <div class="essay-step-view hidden" id="essayStep4View">
+              <div class="panel" style="width: 100%;">
                 <div class="panel-heading">
-                  <span class="step">★</span>
+                  <span class="step">04</span>
                   <div>
-                    <h3 data-i18n="essay_library_title">Admissions Essay Master Class Library</h3>
-                    <p data-i18n="essay_library_desc">Explore structural breakdowns and winning themes from real successful transfer student essays.</p>
+                    <h3 data-i18n="essay_s4_title">에세이 무제한 첨삭 에디터 (Revision Clinic)</h3>
+                    <p data-i18n="essay_s4_desc">예시를 바탕으로 직접 에세이를 작성하고 무제한으로 AI 정밀 첨삭 및 원어민 표현 교정 피드백을 받아보세요.</p>
                   </div>
                 </div>
-                <!-- Essay Filter controls -->
-                <div class="essay-filter-controls" style="padding: 0 20px 14px 20px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--line); margin-bottom: 10px;">
-                  <input type="text" id="essaySearchInput" data-i18n-placeholder="essay_search_placeholder" placeholder="Search essays (e.g. Haas, computer science...)" style="flex: 1; min-width: 200px; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--card-bg); color: var(--text); font-size: 13px;" oninput="filterEssayLibrary()">
-                  <select id="essayMajorFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--card-bg); color: var(--text); font-size: 13px; min-width: 140px;" onchange="filterEssayLibrary()">
-                    <option value="" data-i18n="essay_filter_all_majors">All Majors</option>
-                    <option value="computer science">Computer Science</option>
-                    <option value="computer engineering">Computer Engineering</option>
-                    <option value="business">Business / Economics</option>
-                    <option value="engineering">Engineering</option>
-                  </select>
-                  <select id="essaySchoolFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--card-bg); color: var(--text); font-size: 13px; min-width: 140px;" onchange="filterEssayLibrary()">
-                    <option value="" data-i18n="essay_filter_all_schools">All Universities</option>
-                    <option value="berkeley">UC Berkeley</option>
-                    <option value="michigan">U-Mich</option>
-                    <option value="columbia">Columbia</option>
-                    <option value="stanford">Stanford</option>
-                  </select>
-                </div>
-                <div style="padding: 20px;" id="essayLibraryContent">
-                  <!-- Case items will be rendered dynamically -->
+
+                <div class="essay-editor-container">
+                  <!-- Left: Interactive Textarea Editor -->
+                  <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span style="font-size: 12px; font-weight: 700; color: var(--primary);">Interactive Draft Editor</span>
+                      <span style="font-size: 11.5px; color: var(--muted);" id="editorCharCount">0 words</span>
+                    </div>
+                    <textarea class="essay-editor-textarea" id="essayStep4DraftEditor" placeholder="여기에 합격 가이드라인과 예시를 참고하여 본인의 에세이를 입력하거나 붙여넣으세요..."></textarea>
+                    <button type="button" class="primary-btn full" id="essayCritiqueBtn" style="font-weight: 800; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                      <span>✨</span> <span data-i18n="btn_critique_polish">무제한 AI 첨삭 및 표현 교정 받기</span>
+                    </button>
+                  </div>
+
+                  <!-- Right: Real-time Advisor Feedback Pane -->
+                  <div class="essay-feedback-pane" id="essayStep4FeedbackPane">
+                    <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 80px 20px; background: rgba(0,0,0,0.01); border: 1px dashed var(--line); border-radius: 12px;">
+                      <div style="font-size: 36px; margin-bottom: 12px;">🔍</div>
+                      <h5 style="font-weight: 800; color: var(--primary); margin-bottom: 6px;">첨삭 분석 대기 중</h5>
+                      <p style="font-size: 12px; color: var(--muted); line-height: 1.5; max-width: 260px; margin: 0 auto;">
+                        왼쪽 편집기에 작성 중인 에세이를 적고 아래 버튼을 누르면 Turnitin 표절 지수 및 문단 교정 피드백이 무제한으로 제공됩니다.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <!-- Navigation Footer -->
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 10px;">
+                <button type="button" class="secondary-btn" id="essayStep4BackBtn">← Step 3: 가이드 및 예시 보기</button>
+              </div>
+            </div>
             </div>
           </section>
         </div>
@@ -970,10 +1076,6 @@
           Select the best plan to optimize your target transfer path. Upgrade anytime.
         </p>
 
-        <!-- Free Beta Promo Banner -->
-        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; color: #047857; font-weight: 700; font-size: 14px; text-align: center; line-height: 1.5;" data-i18n="pricing_free_beta_notice">
-          현재 무료로 제공 중입니다. 원하시는 모델을 선택하신 후 바로 사용하시면 됩니다.
-        </div>
         
         <!-- Active Plan Status -->
         <div style="background: rgba(15, 30, 54, 0.03); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
