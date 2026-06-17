@@ -3465,7 +3465,7 @@ function bindSingleAutocomplete({
   });
 }
 
-async function syncSelectedRoadmapTargetsFromSlots() {
+function syncSelectedRoadmapTargetsFromSlots() {
   try {
     const seen = new Set();
     state.roadmapTargetSlots.forEach((slot, index) => {
@@ -3497,7 +3497,25 @@ async function syncSelectedRoadmapTargetsFromSlots() {
     
     state.selectedRoadmapTargets = [...new Set(ids)];
     saveProfileToLocalStorage();
-    await buildRoadmap();
+    
+    // 1. Build roadmap immediately using currently available in-memory data
+    buildRoadmap();
+
+    // 2. Fetch pending (lazy loaded) majors in background if needed
+    const pendingIds = ids.filter(id => {
+      const prog = allPrograms().find(p => p.id === id);
+      return prog && prog.requiredCourses === undefined;
+    });
+
+    if (pendingIds.length > 0) {
+      Promise.all(pendingIds.map(id => ensureMajorLoaded(id)))
+        .then(() => {
+          buildRoadmap();
+        })
+        .catch(err => {
+          console.warn("Background major loading failed, retaining current roadmap:", err);
+        });
+    }
   } catch (e) {
     console.error("Error in syncSelectedRoadmapTargetsFromSlots:", e);
   }
@@ -4717,7 +4735,7 @@ function getCourseWorkloadDifficulty(course) {
   return 2;
 }
 
-async function buildRoadmap() {
+function buildRoadmap() {
   try {
     const timeline = qs("#roadmapTimeline");
     if (!timeline) return;
@@ -4730,9 +4748,6 @@ async function buildRoadmap() {
       `;
       return;
     }
-
-    // Lazy load major requirement data for all selected roadmap targets
-    await Promise.all(state.selectedRoadmapTargets.map(id => ensureMajorLoaded(id)));
 
     const selectedPrograms = allPrograms().filter((p) => state.selectedRoadmapTargets.includes(p.id));
     if (selectedPrograms.length === 0) {
