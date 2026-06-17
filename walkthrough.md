@@ -101,3 +101,21 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
   - IGETC 인정 불가 및 필수 전공선수과목 100% 완료 기한
   - 1월 중 Major Prerequisite Admissions Form 제출 요건
   - 전공별 특이사항 (조인트 전공 변경 가능 범위 및 단과대학 정보)
+
+---
+
+## 🛠️ Feature 3 (Roadmap Builder) Resolution & Synchronization (June 2026)
+
+### 1️⃣ ReferenceError Fix
+* **Scoping Issue**: Defined `const isKo` at the top-level of `buildRoadmap()`, resolving the JavaScript scoping ReferenceError when generating the senior consultant's strategic advice card. This fix resolves the blank screen issue.
+
+### 2️⃣ Track Check Case-Sensitivity Alignment
+* **Advice Casing Matching**: Modified `buildRoadmap()` in `app.js` to convert `track` to lowercase (`const trackLower = (track || "").toLowerCase()`) before performing comparisons. This prevents the advice card from silently defaulting to the Humanities template for STEM and Business majors.
+
+### 3️⃣ Real-Time Coursework Synchronization & Notice
+* **Real-Time Integration**: Verified that completed coursework checked in Feature 1 (Eligibility Diagnostics) is automatically stored in `state.completedCourses` and dynamically linked into `buildRoadmap()` to exclude completed prerequisites from the roadmap.
+* **Notice Element & Translations**: Confirmed the notice block in `index.html` (line 602) displaying that completed coursework is automatically synchronized. Added translation keys for `completed_courses_sync_notice` to the English, Korean, and Chinese dynamic translation dictionaries in `app.js`.
+
+### 4️⃣ Verification & Deployment
+* **Automated Sandbox Tests**: Ran a mock verification suite on all 2,075 target combinations. Verified that all programs generate the roadmap timeline successfully without ReferenceErrors.
+* **Production Deployment**: Committed the fixes and pushed them to `origin/master`, successfully triggering the automatic Vercel production deployment.
