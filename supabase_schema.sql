@@ -64,3 +64,67 @@ DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+
+-- 4. Prevent users from manually modifying 'plan' and 'essay_credits' via RLS
+CREATE OR REPLACE FUNCTION public.prevent_profile_field_tampering()
+RETURNS trigger AS $$
+BEGIN
+  IF (OLD.plan IS DISTINCT FROM NEW.plan OR OLD.essay_credits IS DISTINCT FROM NEW.essay_credits) THEN
+    -- Check if the current database role is 'service_role' (which indicates server-side supabaseAdmin context)
+    IF current_setting('role', true) <> 'service_role' THEN
+      NEW.plan := OLD.plan;
+      NEW.essay_credits := OLD.essay_credits;
+    END IF;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+DROP TRIGGER IF EXISTS on_profile_update_prevent_tampering ON public.profiles;
+CREATE TRIGGER on_profile_update_prevent_tampering
+  BEFORE UPDATE ON public.profiles
+  FOR EACH ROW EXECUTE FUNCTION public.prevent_profile_field_tampering();
+
+-- 5. Create schools table
+CREATE TABLE IF NOT EXISTS public.schools (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  short_name TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 6. Create majors table
+CREATE TABLE IF NOT EXISTS public.majors (
+  id TEXT PRIMARY KEY,
+  school_id TEXT REFERENCES public.schools(id) ON DELETE CASCADE NOT NULL,
+  name TEXT NOT NULL,
+  min_gpa NUMERIC(3, 2),
+  raw_min_gpa TEXT,
+  min_credits INTEGER,
+  raw_min_credits TEXT,
+  required_courses JSONB DEFAULT '[]'::jsonb,
+  recommended_courses JSONB DEFAULT '[]'::jsonb,
+  raw_required TEXT,
+  raw_recommended TEXT,
+  english_reqs JSONB DEFAULT '{}'::jsonb,
+  english_exemption TEXT,
+  note TEXT,
+  source_file TEXT,
+  confidence TEXT,
+  raw_official_text TEXT,
+  official_source_url TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Enable Row Level Security (RLS)
+ALTER TABLE public.schools ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.majors ENABLE ROW LEVEL SECURITY;
+
+-- Create RLS Policies
+DROP POLICY IF EXISTS "Allow public read access to schools" ON public.schools;
+CREATE POLICY "Allow public read access to schools" ON public.schools FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Allow public read access to majors" ON public.majors;
+CREATE POLICY "Allow public read access to majors" ON public.majors FOR SELECT USING (true);
+
+

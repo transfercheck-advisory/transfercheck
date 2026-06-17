@@ -1,6 +1,6 @@
-import { evaluateEligibility, DbUniversity, DbRawCourseMapping } from './algorithms/matching';
-import { generateRoadmap } from './algorithms/scheduler';
-import { UserProfile } from './algorithms/types';
+import { evaluateEligibility, DbUniversity, DbRawCourseMapping } from './matching';
+import { generateRoadmap } from './scheduler';
+import { UserProfile } from './types';
 
 // ============================================================================
 // 1. MOCK DATABASE SEEDING
@@ -109,7 +109,7 @@ function runTests() {
   console.log("미이수 필수 교과목 (Canonical):", result.missingCourses);
 
   console.log("\n세부 세션 매칭 로그:");
-  result.details.forEach(d => {
+  result.details.forEach((d: any) => {
     const statusSymbol = d.status === 'SATISFIED' ? '✅' : d.status === 'MANUAL_REVIEW' ? '⚠️' : '❌';
     console.log(`  ${statusSymbol} [${d.category}] ${d.canonicalName}: ${d.reason}`);
   });
@@ -130,7 +130,7 @@ function runTests() {
   const scheduleResult = generateRoadmap(missingCourses, completedCanonical, 2); // 2 courses max per semester to show sequencing
   
   console.log("\n생성된 학기별 로드맵 (최대 이수 제한: 2과목):");
-  scheduleResult.roadmap.forEach(sem => {
+  scheduleResult.roadmap.forEach((sem: any) => {
     console.log(`  [학기 ${sem.semesterNumber}] : ${sem.courses.join(', ')}`);
   });
   

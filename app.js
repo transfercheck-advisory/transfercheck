@@ -2818,8 +2818,12 @@ function programsForSchoolName(schoolName) {
   const normalized = normalizeText(schoolName);
   if (!normalized) return [];
   return allPrograms()
-    .filter((program) => normalizeText(program.school.name) === normalized || normalizeText(program.school.shortName) === normalized)
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .filter((program) => {
+      const sName = program?.school?.name;
+      const sShortName = program?.school?.shortName;
+      return (sName && normalizeText(sName) === normalized) || (sShortName && normalizeText(sShortName) === normalized);
+    })
+    .sort((a, b) => (a.name || "").localeCompare(b.name || ""));
 }
 
 function syncSelectedTargetsFromSlots() {
@@ -3046,17 +3050,17 @@ function bindAutocompleteEvents(container, type) {
           const matched = schools.find(s => s.name.toLowerCase() === val.toLowerCase()) ||
                           schools.find(s => s.name.toLowerCase().includes(val.toLowerCase()));
           if (matched) {
-            if (slots[idx].school !== matched.name) {
+            if (slots[idx] && slots[idx].school !== matched.name) {
               slots[idx].school = matched.name;
               slots[idx].major = "";
               syncFunc();
               renderFunc();
               resultsFunc();
-            } else {
+            } else if (slots[idx]) {
               input.value = matched.name;
             }
           } else if (val === "") {
-            if (slots[idx].school !== "") {
+            if (slots[idx] && slots[idx].school !== "") {
               slots[idx].school = "";
               slots[idx].major = "";
               syncFunc();
@@ -3065,7 +3069,7 @@ function bindAutocompleteEvents(container, type) {
             }
           } else {
             input.value = "";
-            if (slots[idx].school !== "") {
+            if (slots[idx] && slots[idx].school !== "") {
               slots[idx].school = "";
               slots[idx].major = "";
               syncFunc();
@@ -3074,21 +3078,21 @@ function bindAutocompleteEvents(container, type) {
             }
           }
         } else {
-          const selectedSchool = slots[idx].school;
+          const selectedSchool = slots[idx] ? slots[idx].school : "";
           const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
           const matched = majors.find(m => m.name.toLowerCase() === val.toLowerCase()) ||
                           majors.find(m => m.name.toLowerCase().includes(val.toLowerCase()));
           if (matched) {
-            if (slots[idx].major !== matched.name) {
+            if (slots[idx] && slots[idx].major !== matched.name) {
               slots[idx].major = matched.name;
               syncFunc();
               renderFunc();
               resultsFunc();
-            } else {
+            } else if (slots[idx]) {
               input.value = matched.name;
             }
           } else if (val === "") {
-            if (slots[idx].major !== "") {
+            if (slots[idx] && slots[idx].major !== "") {
               slots[idx].major = "";
               syncFunc();
               renderFunc();
@@ -3096,7 +3100,7 @@ function bindAutocompleteEvents(container, type) {
             }
           } else {
             input.value = "";
-            if (slots[idx].major !== "") {
+            if (slots[idx] && slots[idx].major !== "") {
               slots[idx].major = "";
               syncFunc();
               renderFunc();
@@ -3164,11 +3168,13 @@ function bindAutocompleteEvents(container, type) {
       menu.classList.add("hidden");
 
       const slots = getSlots();
-      if (acType === "school") {
-        slots[idx].school = val;
-        slots[idx].major = "";
-      } else {
-        slots[idx].major = val;
+      if (slots[idx]) {
+        if (acType === "school") {
+          slots[idx].school = val;
+          slots[idx].major = "";
+        } else {
+          slots[idx].major = val;
+        }
       }
 
       syncFunc();
@@ -3460,35 +3466,41 @@ function bindSingleAutocomplete({
 }
 
 function syncSelectedRoadmapTargetsFromSlots() {
-  const seen = new Set();
-  state.roadmapTargetSlots.forEach((slot, index) => {
-    const sName = slot.school?.trim();
-    const mName = slot.major?.trim();
-    if (sName && mName) {
-      const key = `${normalizeText(sName)}:${normalizeText(mName)}`;
-      if (seen.has(key)) {
-        slot.school = "";
-        slot.major = "";
-        const schoolInput = qs(`#roadmapTargetSchool${index}`);
-        const majorInput = qs(`#roadmapTargetMajor${index}`);
-        if (schoolInput) schoolInput.value = "";
-        if (majorInput) majorInput.value = "";
-      } else {
-        seen.add(key);
+  try {
+    const seen = new Set();
+    state.roadmapTargetSlots.forEach((slot, index) => {
+      if (!slot) return;
+      const sName = slot.school?.trim();
+      const mName = slot.major?.trim();
+      if (sName && mName) {
+        const key = `${normalizeText(sName)}:${normalizeText(mName)}`;
+        if (seen.has(key)) {
+          slot.school = "";
+          slot.major = "";
+          const schoolInput = qs(`#roadmapTargetSchool${index}`);
+          const majorInput = qs(`#roadmapTargetMajor${index}`);
+          if (schoolInput) schoolInput.value = "";
+          if (majorInput) majorInput.value = "";
+        } else {
+          seen.add(key);
+        }
       }
-    }
-  });
+    });
 
-  const ids = state.roadmapTargetSlots
-    .map((slot) => {
-      const match = programsForSchoolName(slot.school).find((program) => normalizeText(program.name) === normalizeText(slot.major));
-      return match?.id;
-    })
-    .filter(Boolean);
-  
-  state.selectedRoadmapTargets = [...new Set(ids)];
-  saveProfileToLocalStorage();
-  buildRoadmap();
+    const ids = state.roadmapTargetSlots
+      .map((slot) => {
+        if (!slot || !slot.school) return null;
+        const match = programsForSchoolName(slot.school).find((program) => normalizeText(program.name) === normalizeText(slot.major));
+        return match?.id;
+      })
+      .filter(Boolean);
+    
+    state.selectedRoadmapTargets = [...new Set(ids)];
+    saveProfileToLocalStorage();
+    buildRoadmap();
+  } catch (e) {
+    console.error("Error in syncSelectedRoadmapTargetsFromSlots:", e);
+  }
 }
 
 function renderRoadmapTargetPicker() {
@@ -4706,7 +4718,8 @@ function getCourseWorkloadDifficulty(course) {
 }
 
 function buildRoadmap() {
-  const selectedPrograms = allPrograms().filter((p) => state.selectedRoadmapTargets.includes(p.id));
+  try {
+    const selectedPrograms = allPrograms().filter((p) => state.selectedRoadmapTargets.includes(p.id));
   const timeline = qs("#roadmapTimeline");
   if (!timeline) return;
 
@@ -5034,6 +5047,9 @@ function buildRoadmap() {
   }
 
   qs("#roadmapTimeline").innerHTML = timelineHtml + strategicAdviceHtml;
+  } catch (e) {
+    console.error("Error in buildRoadmap:", e);
+  }
 }
 
 function bindEvents() {
