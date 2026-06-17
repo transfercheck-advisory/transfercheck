@@ -31,8 +31,8 @@ window.transferDatabase = {
       "sheet": "Transfer Requirements"
     }
   ],
-  "schoolCount": 58,
-  "programCount": 2075,
+  "schoolCount": 57,
+  "programCount": 2025,
   "schools": [
     {
       "id": "university-of-washington-2fde0bf4",
@@ -3781,8 +3781,7 @@ window.transferDatabase = {
     },
     {
       "id": "uiuc-766d754c",
-      "name": "UIUC",
-      "shortName": "UIUC",
+      "name": "University of Illinois Urbana-Champaign (UIUC)",
       "majors": [
         {
           "id": "uiuc-766d754c-computer-science-genuine",
@@ -5353,8 +5352,7 @@ window.transferDatabase = {
     },
     {
       "id": "nyu-tandon-4665a194",
-      "name": "NYU Tandon",
-      "shortName": "NYU Tandon",
+      "name": "New York University",
       "majors": [
         {
           "id": "nyu-tandon-4665a194-computer-science-genuine",
@@ -6544,8 +6542,7 @@ window.transferDatabase = {
     },
     {
       "id": "texas-a-m-6e734225",
-      "name": "Texas A&M",
-      "shortName": "Texas A&M",
+      "name": "Texas A&M University",
       "majors": [
         {
           "id": "texas-a-m-6e734225-computer-science-genuine",
@@ -9171,1074 +9168,6 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "uc-system-fadfc473",
-      "name": "UC System",
-      "shortName": "UC System",
-      "majors": [
-        {
-          "id": "uc-system-fadfc473-computer-science-genuine",
-          "name": "Computer Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-data-science-genuine",
-          "name": "Data Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-information-technology-genuine",
-          "name": "Information Technology",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-computer-engineering-genuine",
-          "name": "Computer Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-electrical-engineering-genuine",
-          "name": "Electrical Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-mechanical-engineering-genuine",
-          "name": "Mechanical Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-civil-engineering-genuine",
-          "name": "Civil Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-chemical-engineering-genuine",
-          "name": "Chemical Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-biomedical-engineering-genuine",
-          "name": "Biomedical Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-industrial-engineering-genuine",
-          "name": "Industrial Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-aerospace-engineering-genuine",
-          "name": "Aerospace Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-business-administration-genuine",
-          "name": "Business Administration",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-finance-genuine",
-          "name": "Finance",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-accounting-genuine",
-          "name": "Accounting",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-marketing-genuine",
-          "name": "Marketing",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-management-genuine",
-          "name": "Management",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-economics-genuine",
-          "name": "Economics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-psychology-genuine",
-          "name": "Psychology",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-political-science-genuine",
-          "name": "Political Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-sociology-genuine",
-          "name": "Sociology",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-history-genuine",
-          "name": "History",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-english-genuine",
-          "name": "English",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-communications-genuine",
-          "name": "Communications",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-biology-genuine",
-          "name": "Biology",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-biochemistry-genuine",
-          "name": "Biochemistry",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-chemistry-genuine",
-          "name": "Chemistry",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-physics-genuine",
-          "name": "Physics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-mathematics-genuine",
-          "name": "Mathematics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-statistics-genuine",
-          "name": "Statistics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-public-health-genuine",
-          "name": "Public Health",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-nursing-genuine",
-          "name": "Nursing",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-international-relations-genuine",
-          "name": "International Relations",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-fadfc473-philosophy-genuine",
-          "name": "Philosophy",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admission.universityofcalifornia.edu",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-system-uc-berkeley-college-of-engineering-953487c7",
-          "name": "UC Berkeley — College of Engineering",
-          "rawMinGpa": "3.5 (avg admitted ~3.86)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 3.5,
-          "minCredits": 60,
-          "requiredCourses": [
-            "ASSIST.org 필수 (학과별 공식 목록 미게시)",
-            "공통 필수로 알려진 것: English Composition (R1A+R1B, C- 이상)",
-            "Calculus 1+2+3",
-            "Differential Equations",
-            "Linear Algebra",
-            "Physics 3-series",
-            "Chemistry 1",
-            "IGETC 강력 비권장 (공식: 'strongly discourages')",
-            "IGETC 사용 시 lower-division GE 미충족 가능",
-            "R1A+R1B = Berkeley 고유 English Composition 시퀀스 (C- 이상)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "ASSIST.org 필수 (학과별 공식 목록 미게시) | 공통 필수로 알려진 것: English Composition (R1A+R1B, C- 이상) | Calculus 1+2+3 | Differential Equations | Linear Algebra | Physics 3-series | Chemistry 1 | IGETC 강력 비권장 (공식: 'strongly discourages') | IGETC 사용 시 lower-division GE 미충족 가능 | R1A+R1B = Berkeley 고유 English Composition 시퀀스 (C- 이상)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 80+ (선호 100) / IELTS: 6.5+ / DET: 115+",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-ucla-henry-samueli-school-of-engineering-hsseas-9d6969ab",
-          "name": "UCLA — Henry Samueli School of Engineering (HSSEAS)",
-          "rawMinGpa": "3.4 (competitive avg 3.8+)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 3.4,
-          "minCredits": 60,
-          "requiredCourses": [
-            "공식 페이지에 학과별 과목 게시됨 (admission.ucla.edu/apply/transfer 확인 필요)",
-            "공통 필수로 알려진 것: English Composition 2과목",
-            "Calculus 1+2+3",
-            "Linear Algebra",
-            "Physics 3-series + 학과별 추가",
-            "IGETC 불인정 (partial IGETC도 불인정)",
-            "Alternate major 옵션 없음",
-            "CS/AE/ME 전공은 전공 변경 불가"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 페이지에 학과별 과목 게시됨 (admission.ucla.edu/apply/transfer 확인 필요) | 공통 필수로 알려진 것: English Composition 2과목 | Calculus 1+2+3 | Linear Algebra | Physics 3-series + 학과별 추가 | IGETC 불인정 (partial IGETC도 불인정) | Alternate major 옵션 없음 | CS/AE/ME 전공은 전공 변경 불가",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 100+ (신척도 5+, sub 5+) / IELTS: 7.5+ / DET: 135+",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-uc-davis-college-of-engineering-65a2e14b",
-          "name": "UC Davis — College of Engineering",
-          "rawMinGpa": "Min 2.80 (전체 최소)\n비TAG: 3.10 cumulative + 3.20 major prereqs\nTAG: 3.50\nCS: 각 시리즈 3.40+",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 2.8,
-          "minCredits": 60,
-          "requiredCourses": [
-            "공식 페이지에 학과별 과목 게시됨 (ucdavis.edu/admissions/transfer/major-requirements-college-engineering)",
-            "공통 필수: Calculus 1+2+3+4 (MAT 21A/B/C/D)",
-            "Diff Eq + Linear Alg (MAT 22A/B)",
-            "Physics 3-series (PHY 9A/B/C) + 학과별 추가",
-            "CS: 각 시리즈 GPA 3.40+ 필수",
-            "Fall 2027~: CS에 MAT 22A (Linear Algebra) 추가 필수 예정"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 페이지에 학과별 과목 게시됨 (ucdavis.edu/admissions/transfer/major-requirements-college-engineering) | 공통 필수: Calculus 1+2+3+4 (MAT 21A/B/C/D) | Diff Eq + Linear Alg (MAT 22A/B) | Physics 3-series (PHY 9A/B/C) + 학과별 추가 | CS: 각 시리즈 GPA 3.40+ 필수 | Fall 2027~: CS에 MAT 22A (Linear Algebra) 추가 필수 예정",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 80+ (신척도 4.5+) / IELTS: 6.5+ / DET: 115+",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-uc-santa-barbara-robert-mehrabian-college-of-engin-0f534b8e",
-          "name": "UC Santa Barbara — Robert Mehrabian College of Engineering",
-          "rawMinGpa": "공식 최소 미명시 (holistic)\nTAG: 3.0~3.5 (전공별 상이)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 3,
-          "minCredits": 60,
-          "requiredCourses": [
-            "전 학과 공통 필수: Calculus 2학기 + Differential Equations + Linear Algebra",
-            "학과별 추가 (공식 페이지 확인 필요):",
-            "ChemE: Physics 3-series+lab",
-            "Gen Chem 1년+lab",
-            "MATLAB",
-            "CompE: Physics 3-series+lab",
-            "C/C++ Programming",
-            "Data Structures in C++",
-            "CS: C/C++ Programming",
-            "Discrete Math (★ FALL 2024~: Physics 더 이상 필수 아님)",
-            "EE: Physics 3-series+lab",
-            "C/C++/Python 1과목",
-            "ME: Physics 3-series+lab",
-            "Gen Chem 1과목+lab",
-            "Statics",
-            "전공 변경 불가 (transfer 후)",
-            "Physics/Chemistry 시리즈는 동일 학교에서 이수 권장"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "전 학과 공통 필수: Calculus 2학기 + Differential Equations + Linear Algebra | 학과별 추가 (공식 페이지 확인 필요): | ChemE: Physics 3-series+lab | Gen Chem 1년+lab | MATLAB | CompE: Physics 3-series+lab | C/C++ Programming | Data Structures in C++ | CS: C/C++ Programming | Discrete Math (★ FALL 2024~: Physics 더 이상 필수 아님) | EE: Physics 3-series+lab | C/C++/Python 1과목 | ME: Physics 3-series+lab | Gen Chem 1과목+lab | Statics | 전공 변경 불가 (transfer 후) | Physics/Chemistry 시리즈는 동일 학교에서 이수 권장",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 80+ / IELTS: 6.5+ / DET: 115+\n- 영어 면제: C 이상 (B 아님)",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-uc-irvine-henry-samueli-school-of-engineering-8ab506da",
-          "name": "UC Irvine — Henry Samueli School of Engineering",
-          "rawMinGpa": "3.0 cumulative\n+ 3.0 in major prereqs (별도)\nTAG: 3.4 (CS&E 제외)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 3,
-          "minCredits": 60,
-          "requiredCourses": [
-            "전 학과 공통 필수: Calculus 1+2 (1년)",
-            "Multivariable Calculus",
-            "Differential Equations (CS&E 제외)",
-            "Linear Algebra (CS&E 제외)",
-            "MATLAB or programming (학과별 상이)",
-            "+ 학과별 Physics / Chemistry 추가 (UCI 별도 시트 참조)",
-            "CS&E: 최소 성적 B (다른 학과 C와 다름)",
-            "CS&E: Diff Eq / Linear Alg 불필요 / 1yr OOP 필수 (C/C#/VB 불인정)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "전 학과 공통 필수: Calculus 1+2 (1년) | Multivariable Calculus | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | MATLAB or programming (학과별 상이) | + 학과별 Physics / Chemistry 추가 (UCI 별도 시트 참조) | CS&E: 최소 성적 B (다른 학과 C와 다름) | CS&E: Diff Eq / Linear Alg 불필요 / 1yr OOP 필수 (C/C#/VB 불인정)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 80+ / IELTS: 6.5+ / DET: 115+",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-uc-santa-cruz-jack-baskin-school-of-engineering-3c1b5635",
-          "name": "UC Santa Cruz — Jack Baskin School of Engineering",
-          "rawMinGpa": "CS: 3.0+ (5과목 합산)\nEE: 2.8+ (해당 과목 합산)\nTAG: 3.0 (CS 제외)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 3,
-          "minCredits": 60,
-          "requiredCourses": [
-            "CS (Impacted): CSE 12 + CSE 16 + CSE 30 + MATH 19A + MATH 19B — 5과목 합산 GPA 3.0+",
-            "CS는 반드시 CS로 지원해야 함 (입학 후 변경 불가)",
-            "EE: MATH 19A+19B + Linear Alg + Diff Eq + Physics 3-series+labs (GPA 2.8+)",
-            "EFFECTIVE FALL 2026: EE에 CSE 12 추가 필수",
-            "기타 전공: UCSC 카탈로그 및 ASSIST.org 확인"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "CS (Impacted): CSE 12 + CSE 16 + CSE 30 + MATH 19A + MATH 19B — 5과목 합산 GPA 3.0+ | CS는 반드시 CS로 지원해야 함 (입학 후 변경 불가) | EE: MATH 19A+19B + Linear Alg + Diff Eq + Physics 3-series+labs (GPA 2.8+) | EFFECTIVE FALL 2026: EE에 CSE 12 추가 필수 | 기타 전공: UCSC 카탈로그 및 ASSIST.org 확인",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 4.5+ (신척도) / IELTS: 6.5+ / DET: 115+\n- 영어 면제: B 이상 필요",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-uc-riverside-bcoe-cf554d70",
-          "name": "UC Riverside — BCOE",
-          "rawMinGpa": "2.8 cumulative\n+ 2.5 Calc 시리즈\n+ 2.5 추가 전공과목 시리즈",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 2.8,
-          "minCredits": 60,
-          "requiredCourses": [
-            "ASSIST.org 필수 — UCR은 학과별 필수과목 목록을 공식 웹에 게시하지 않음",
-            "공식: 'Use ASSIST.org to see the prerequisites'",
-            "학과별 세부 과목은 ASSIST.org에서 학교-BCOE 아티큘레이션 확인"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "ASSIST.org 필수 — UCR은 학과별 필수과목 목록을 공식 웹에 게시하지 않음 | 공식: 'Use ASSIST.org to see the prerequisites' | 학과별 세부 과목은 ASSIST.org에서 학교-BCOE 아티큘레이션 확인",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 80+ / IELTS: 6.5+ / DET: 115+\n- 공식 과목 목록 없음 — ASSIST.org 필수",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        },
-        {
-          "id": "uc-system-uc-merced-school-of-engineering-184a587d",
-          "name": "UC Merced — School of Engineering",
-          "rawMinGpa": "2.4 (CA) / 2.8 (비CA)\nTAG: 3.0\n⚠️ CSE: CSE 020+021에서 B 이상",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable\nFall only (UCSC/UCM 예외)",
-          "minGpa": 2.4,
-          "minCredits": 60,
-          "requiredCourses": [
-            "공통: CHEM 002 + MATH 021+022+023+024 + Physics 008+008L + Physics 009+009L",
-            "CSE 추가: CSE 020+021 (B 이상 필수) + CSE 030",
-            "IGETC 강력 비권장",
-            "English Composition: 1과목 C 이상으로 충족 (다른 UC 2과목과 다름)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공통: CHEM 002 + MATH 021+022+023+024 + Physics 008+008L + Physics 009+009L | CSE 추가: CSE 020+021 (B 이상 필수) + CSE 030 | IGETC 강력 비권장 | English Composition: 1과목 C 이상으로 충족 (다른 UC 2과목과 다름)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "UC 시스템 공통: TOEFL iBT (≤Jan 20 2026): 80+ | TOEFL iBT (≥Jan 21 2026, 신척도): 4.5+\nIELTS: 6.5+ | Duolingo: 115+ | 유효기간: 2년\n★ 캠퍼스별 더 높은 기준:\nUCLA: TOEFL 100+ (신척도 5+, sub 5+) / IELTS 7.5+ / DET 135+\nUCSD: TOEFL 83+ / IELTS 7.0+ / DET 115+\nUCB: TOEFL 80+ (선호 100) / IELTS 6.5+ / DET 115+",
-            "TOEFL": 80,
-            "TOEFL_2026": 5,
-            "IELTS": 6.5,
-            "Duolingo": 115
-          },
-          "englishExemption": "English Composition 2과목:\n- C 이상: Berkeley, Davis, Irvine, Merced, Riverside, UCSB\n- B 이상: UCLA, UCSD, UCSC (더 엄격)\n[Source: admission.universityofcalifornia.edu/...english-language-proficiency]",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 각 캠퍼스별 GPA 기준 충족 필수\n[특이사항]\n- TOEFL: 80+ / IELTS: 6.5+ / DET: 115+",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
-          "confidence": "verified",
-          "rawOfficialText": "Admissions | University of California Skip to main content Admissions Requirements How to apply Tuition &amp; financial aid Campuses &amp; majors Apply now Twitter Facebook Search First-year requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels Applying as a first year Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Native American Opportunity Plan &#160; Who can get financial aid How aid works Estimate your aid Apply for financial aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors First-year admit data Transfer admit data Search Search Admissions Search Requirements Freshman requirements Subject requirement (A-G) GPA requirement Admission by exception English language proficiency UC graduation requirements Additional information for California residents Out-of-state students Home-schooled students Transfer requirements Understanding UC transfer Preparing to transfer UC transfer programs Transfer planning tools International applicants Applying for admission English language proficiency (TOEFL/IELTS) Passports &amp; visas Living accommodations Health care &amp; insurance AP &amp; Exam credits AP credits IB credits A-levels How to apply Applying as a freshman Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Applying as a transfer Filling out the application Dates &amp; deadlines Personal insight questions How applications are reviewed After you apply Tuition &amp; financial aid Types of aid Grants &amp; scholarships Loans Jobs &amp; work-study California DREAM Loan Program Blue and Gold Opportunity Plan Native American Opportunity Plan Who can get financial aid How aid works Estimate your aid Apply for aid Tuition &amp; cost of attendance Glossary &amp; resources Campuses &amp; majors Berkeley Davis Irvine UCLA Merced Riverside San Diego Santa Barbara Santa Cruz Campus program &amp; support services Check majors Freshman admit data Transfer admit data Apply now Twitter Facebook Now is the time to apply for financial aid.&#160; &#160; Financial aid is available to students from all types of backgrounds.&#160; Apply now Nine campuses. One application. All UC campuses are now closed for fall 2026 admission. Already applied? See what you should do next.&#160;&#160; &#160; First-year applicants Transfer applicants Dates &amp; deadlines&#160; July 1 Winter/spring 2026 application opens for select campuses&#160; August 1 Fall 2026 application opens&#160; &#160; October 1 - December 1&#160; Submission period for fall 2026 application&#160; &#160; Future first years: Our doors are open Every year, we welcome nearly 40,000 first-year students from all over California &#8212; and the world. It adds up to an eye-opening, boundary-breaking, horizon-stretching mix of backgrounds, cultures and ethnicities. Come be a part of it. First-year admission requirements How to apply International applicants Transferring to UC? We&#8217;re ready when you are We make sure that California community college students are first in line for admissions. And if you&#8217;re well-prepared, you can even get a guaranteed place at some of our campuses. Transfer admission requirements How to apply International applicants What makes UC unique? Extraordinary students from across California . Explore the data 2 out of 3 California students who applied to UC last year got in. You've got what it takes to get a UC degree. So what are you waiting for? Find everything you need to apply to the best public university system in the world. Applying as a first year Applying as a transfer A UC degree opens doors. Money shouldn&#8217;t close them. A UC degree opens our students to a lifetime of opportunity. And with one of the best financial aid programs anywhere, we make sure those opportunities are open to everyone. Find out how financial aid can help you 54% of CA undergrads pay no tuition And 67% receive grants and scholarships (money that you don&#8217;t need to repay). $ 0 Most California families earning up to $100,000, and that qualify for financial aid, pay no tuition.&#160; Life at UC Beautiful sunset at Little Corona del Mar near @ucirvine , with a nice and clear view! | Photo credit and caption: @alexucimartinez @uofcalifornia instagram image/svg+xml UC Davis UC Berkeley UC Merced UC Santa Cruz UC Santa Barbara UC Riverside UC Irvine UC San Diego UCLA With nine amazing campuses, you can&#8217;t go wrong. From the program, to the setting, to the vibe: each of our nine campuses has something different to offer. But no matter which campus you choose, you&#8217;ll find a culture of academic excellence, and fellow students and faculty who&#8217;ll inspire you every day. Explore our campuses Admissions universityofcalifornia.edu Counselors Contact us Accessibility Privacy Statement Terms of use Copyright © Regents of the University of California",
-          "officialSourceUrl": "https://admission.universityofcalifornia.edu"
-        }
-      ]
-    },
-    {
       "id": "uc-irvine-a176fec7",
       "name": "UC Irvine",
       "shortName": "UC Irvine",
@@ -11359,8 +10288,7 @@ window.transferDatabase = {
     },
     {
       "id": "cornell-duffield-30aa90f4",
-      "name": "Cornell (Duffield)",
-      "shortName": "Cornell (Duffield)",
+      "name": "Cornell University",
       "majors": [
         {
           "id": "cornell-duffield-30aa90f4-computer-science-genuine",
@@ -12635,8 +11563,7 @@ window.transferDatabase = {
     },
     {
       "id": "uw-madison-951baa16",
-      "name": "UW-Madison",
-      "shortName": "UW-Madison",
+      "name": "University of Wisconsin-Madison",
       "majors": [
         {
           "id": "uw-madison-951baa16-computer-science-genuine",
@@ -13695,8 +12622,7 @@ window.transferDatabase = {
     },
     {
       "id": "ut-austin-cockrell-ed8d09cf",
-      "name": "UT Austin (Cockrell)",
-      "shortName": "UT Austin (Cockrell)",
+      "name": "University of Texas at Austin",
       "majors": [
         {
           "id": "ut-austin-cockrell-ed8d09cf-computer-science-genuine",
@@ -14320,8 +13246,7 @@ window.transferDatabase = {
     },
     {
       "id": "purdue-39671bc6",
-      "name": "Purdue",
-      "shortName": "Purdue",
+      "name": "Purdue University",
       "majors": [
         {
           "id": "purdue-39671bc6-computer-science-genuine",
@@ -15512,8 +14437,7 @@ window.transferDatabase = {
     },
     {
       "id": "georgia-tech-776cb90e",
-      "name": "Georgia Tech",
-      "shortName": "Georgia Tech",
+      "name": "Georgia Institute of Technology",
       "majors": [
         {
           "id": "georgia-tech-computer-science-2469aec6",
@@ -16109,105 +15033,8 @@ window.transferDatabase = {
     },
     {
       "id": "uc-berkeley-coe-362f972e",
-      "name": "UC Berkeley (COE)",
-      "shortName": "UC Berkeley (COE)",
+      "name": "UC Berkeley",
       "majors": [
-        {
-          "id": "uc-berkeley-coe-362f972e-bioengineering-genuine",
-          "name": "Bioengineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-civil-engineering-genuine",
-          "name": "Civil Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-computer-science-genuine",
-          "name": "Computer Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-electrical-engineering-computer-sciences-eecs-genuine",
-          "name": "Electrical Engineering & Computer Sciences (EECS)",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
         {
           "id": "uc-berkeley-coe-362f972e-energy-engineering-genuine",
           "name": "Energy Engineering",
@@ -16305,176 +15132,8 @@ window.transferDatabase = {
           "confidence": "high_risk"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-industrial-engineering-operations-research-genuine",
-          "name": "Industrial Engineering & Operations Research",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-materials-science-engineering-genuine",
-          "name": "Materials Science & Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-mechanical-engineering-genuine",
-          "name": "Mechanical Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
           "id": "uc-berkeley-coe-362f972e-nuclear-engineering-genuine",
           "name": "Nuclear Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-business-administration-genuine",
-          "name": "Business Administration",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-economics-genuine",
-          "name": "Economics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-data-science-genuine",
-          "name": "Data Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://engineering.berkeley.edu/admissions",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-berkeley-coe-362f972e-cognitive-science-genuine",
-          "name": "Cognitive Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
           "minGpa": null,
@@ -16847,13 +15506,79 @@ window.transferDatabase = {
           "confidence": "verified",
           "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+        },
+        {
+          "id": "uc-berkeley-coe-362f972e-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "A minimum 3.0 UC GPA is required to be considered for admission. However, due to the extremely competitive nature of the major, successful applicants typically present a GPA of 3.8 or higher, with an even higher GPA in major prerequisite courses.",
+          "rawMinCredits": "A minimum of 60 UC-transferable semester units (or 90 quarter units) is required.",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 1A - Calculus",
+            "MATH 1B - Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "CS 61A - The Structure and Interpretation of Computer Programs",
+            "CS 61B - Data Structures",
+            "CS 70 - Discrete Mathematics and Probability Theory",
+            "Lower-division Reading and Composition (two courses)"
+          ],
+          "recommendedCourses": [
+            "PHYS 7A - Physics for Scientists and Engineers, Part I",
+            "PHYS 7B - Physics for Scientists and Engineers, Part II",
+            "Lower-division breadth courses for the College of Letters and Science"
+          ],
+          "rawRequired": "MATH 1A - Calculus\nMATH 1B - Calculus\nMATH 54 - Linear Algebra and Differential Equations\nCS 61A - The Structure and Interpretation of Computer Programs\nCS 61B - Data Structures\nCS 70 - Discrete Mathematics and Probability Theory\nLower-division Reading and Composition (two courses)",
+          "rawRecommended": "PHYS 7A - Physics for Scientists and Engineers, Part I\nPHYS 7B - Physics for Scientists and Engineers, Part II\nLower-division breadth courses for the College of Letters and Science",
+          "english": {
+            "raw": "Applicants must satisfy the UC Entry Level Writing Requirement and the second-level Reading and Composition (R&C) requirement. International applicants must also demonstrate English proficiency through one of the approved examinations (e.g., TOEFL, IELTS, Duolingo English Test) if they have not completed two full years of academic work in a high school or university where English is the sole language of instruction.",
+            "TOEFL": 80,
+            "TOEFL_2026": 100,
+            "IELTS": 6.5,
+            "Duolingo": 120
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Computer Science at UC Berkeley is an extremely selective major. All major prerequisite courses must be completed with a strong GPA, ideally with mostly A's. It is highly recommended to complete all major preparation by the end of the spring term prior to fall enrollment. While Physics courses (PHYS 7A, 7B, 7C) are required for the major, they are not strictly required for *admission* to L&S Computer Science; however, completing them will strengthen an application and prepare for the major.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://lsadvising.berkeley.edu/major-maps/computer-science"
+        },
+        {
+          "id": "uc-berkeley-coe-362f972e-cognitive-science",
+          "name": "Cognitive Science",
+          "rawMinGpa": "Minimum 3.0, but competitive applicants typically have a 3.7+ GPA.",
+          "rawMinCredits": "60 UC-transferable semester units (90 quarter units)",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "STAT 2 - Introduction to Statistics",
+            "COMPSCI 61A - The Structure and Interpretation of Computer Programs",
+            "PSYCH 1 - General Psychology",
+            "COGN SCI 1 - Introduction to Cognitive Science",
+            "PHILOS 2 - Individual Morality and Social Justice (or PHILOS 3 - The Nature of Mind or equivalent introductory philosophy course)",
+            "LINGUIS 5 - General Linguistics (or equivalent introductory linguistics course)"
+          ],
+          "recommendedCourses": [],
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nSTAT 2 - Introduction to Statistics\nCOMPSCI 61A - The Structure and Interpretation of Computer Programs\nPSYCH 1 - General Psychology\nCOGN SCI 1 - Introduction to Cognitive Science\nPHILOS 2 - Individual Morality and Social Justice (or PHILOS 3 - The Nature of Mind or equivalent introductory philosophy course)\nLINGUIS 5 - General Linguistics (or equivalent introductory linguistics course)",
+          "rawRecommended": "",
+          "english": {
+            "raw": "Applicants must demonstrate English language proficiency. Scores are generally required unless specific criteria for waiver are met.",
+            "TOEFL": 80,
+            "IELTS": 6.5,
+            "Duolingo": 115
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "UC Berkeley's Cognitive Science major is highly selective. Completion of all lower-division major preparation coursework with a strong GPA (typically 3.7 or higher) is essential for admission. All major prerequisite courses must be completed with a grade of C or higher.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/major-preparation-selective-majors.html"
         }
-      ]
+      ],
+      "shortName": "UC Berkeley"
     },
     {
       "id": "penn-state-f1c5c43f",
-      "name": "Penn State",
-      "shortName": "Penn State",
+      "name": "Pennsylvania State University",
       "majors": [
         {
           "id": "penn-state-f1c5c43f-computer-science-genuine",
@@ -19304,8 +18029,7 @@ window.transferDatabase = {
     },
     {
       "id": "university-of-virginia-uva-d1b41986",
-      "name": "University of Virginia (UVA)",
-      "shortName": "University of Virginia (UVA)",
+      "name": "University of Virginia",
       "majors": [
         {
           "id": "university-of-virginia-uva-d1b41986-computer-science-genuine",
@@ -20457,8 +19181,7 @@ window.transferDatabase = {
     },
     {
       "id": "washington-university-in-st-louis-washu-e309faa1",
-      "name": "Washington University in St. Louis (WashU)",
-      "shortName": "Washington University in St. Louis (WashU)",
+      "name": "Washington University in St. Louis",
       "majors": [
         {
           "id": "washington-university-in-st-louis-washu-computer-science-32f3a2d4",
@@ -21504,8 +20227,7 @@ window.transferDatabase = {
     },
     {
       "id": "unc-chapel-hill-d480815f",
-      "name": "UNC Chapel Hill",
-      "shortName": "UNC Chapel Hill",
+      "name": "University of North Carolina at Chapel Hill",
       "majors": [
         {
           "id": "unc-chapel-hill-d480815f-computer-science-genuine",
@@ -22377,8 +21099,7 @@ window.transferDatabase = {
     },
     {
       "id": "mit-7abc1a23",
-      "name": "MIT",
-      "shortName": "MIT",
+      "name": "Massachusetts Institute of Technology",
       "majors": [
         {
           "id": "mit-7abc1a23-computer-science-and-engineering-genuine",
@@ -38662,8 +37383,7 @@ window.transferDatabase = {
     },
     {
       "id": "university-of-maryland-college-park-umd-6f986a9a",
-      "name": "University of Maryland, College Park (UMD)",
-      "shortName": "University of Maryland, College Park (UMD)",
+      "name": "University of Maryland, College Park",
       "majors": [
         {
           "id": "university-of-maryland-college-park-umd--computer-science-a5678b90",
@@ -42717,8 +41437,7 @@ window.transferDatabase = {
     },
     {
       "id": "usc-university-of-southern-california-608be272",
-      "name": "USC (University of Southern California)",
-      "shortName": "USC (University of Southern California)",
+      "name": "University of Southern California",
       "majors": [
         {
           "id": "usc-university-of-southern-california-608be272-computer-science-genuine",
@@ -49429,8 +48148,7 @@ window.transferDatabase = {
     },
     {
       "id": "university-at-buffalo-3cd4e2a8",
-      "name": "University at Buffalo (SUNY Buffalo)",
-      "shortName": "University at Buffalo",
+      "name": "University at Buffalo",
       "majors": [
         {
           "id": "university-at-buffalo-3cd4e2a8-computer-science-genuine",
