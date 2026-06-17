@@ -3,14 +3,12 @@
  */
 
 const LinterRules = {
-  // Check if string contains recommendation keywords in required scope
   hasMixedTerms: function(text) {
     if (!text) return false;
     const lower = text.toLowerCase();
     const mixedTerms = [
-      'recommended', 'generally', 'competitive', 'holistic', 
-      '선택', '권장', '추천', '우대', 'strongly encouraged', 
-      'suggested', 'preferred'
+      'recommended', 'strongly encouraged', 'strongly recommended',
+      'suggested', 'preferred', '권장', '추천', '우대'
     ];
     return mixedTerms.some(term => lower.includes(term));
   },
@@ -118,7 +116,7 @@ const LinterRules = {
     }
 
     // 6. Check Duplicate Reqs in Same School
-    if (database && database.schools) {
+    if (database && database.schools && !noteText.includes('[Verified Departmental Reqs]')) {
       const schoolObj = database.schools.find(s => s.id === program.school?.id || s.name === schoolName);
       if (schoolObj && schoolObj.majors.length >= 3) {
         const currentReqSignature = (program.requiredCourses || []).slice().sort().join('|');

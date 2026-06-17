@@ -16,9 +16,8 @@ function hasMixedTerms(text) {
   if (!text) return false;
   const lower = text.toLowerCase();
   const mixedTerms = [
-    'recommended', 'generally', 'competitive', 'holistic', 
-    '선택', '권장', '추천', '우대', 'strongly encouraged', 
-    'suggested', 'preferred'
+    'recommended', 'strongly encouraged', 'strongly recommended',
+    'suggested', 'preferred', '권장', '추천', '우대'
   ];
   return mixedTerms.some(term => lower.includes(term));
 }
@@ -178,7 +177,7 @@ function main() {
     const schoolMajorCount = prog.school.majors.length;
     
     // If school has at least 3 majors, and this requirements signature is shared by more than half of them, or shared by >= 3 majors
-    if (schoolMajorCount >= 3 && schoolMap && schoolMap.get(reqSignature) >= 3) {
+    if (schoolMajorCount >= 3 && schoolMap && schoolMap.get(reqSignature) >= 3 && !noteText.includes('[Verified Departmental Reqs]')) {
       same_requirements_as_other_majors = true;
       notes.push(`Same required courses shared by ${schoolMap.get(reqSignature)} majors in this school`);
     }

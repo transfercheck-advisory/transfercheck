@@ -206,12 +206,7 @@ async function main() {
       w.includes('플레이스홀더')
     );
 
-    if (audit.isUc) {
-      console.log(`   - UC Campus: Marked as High Risk for manual counselor review.`);
-      major.confidence = 'high_risk';
-      highRiskCount++;
-      continue;
-    }
+
 
     if (hasCriticalError) {
       console.log(`   - Critical logical error(s) detected. Marked as High Risk.`);

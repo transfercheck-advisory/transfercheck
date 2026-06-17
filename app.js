@@ -1452,7 +1452,7 @@ const state = {
   roadmapTargetSlots: Array.from({ length: 7 }, () => ({ school: "", major: "" })),
   selectedRoadmapTargets: [],
   plan: localStorage.getItem("transferCompassPlan") || "Free",
-  language: localStorage.getItem("transferCompassLang") || "en",
+  language: localStorage.getItem("transferCompassLang") || "ko",
   essayCredits: parseInt(localStorage.getItem("transferCompassEssayCredits") || (localStorage.getItem("transferCompassPlan") === "Premium" ? "1" : "0"), 10),
   pendingPasses: parseInt(localStorage.getItem("transferCompassPendingPasses") || "0", 10),
   unlockedSchools: (() => {
@@ -2067,11 +2067,7 @@ const database = window.transferDatabase;
 function allPrograms() {
   return database.schools.flatMap((school) =>
     school.majors.map((major) => {
-      let confidence = major.confidence;
-      const schoolNameLower = (school.name || "").toLowerCase();
-      if (schoolNameLower.includes("berkeley") || schoolNameLower.includes("los angeles") || schoolNameLower.includes("ucla")) {
-        confidence = "verified";
-      }
+      let confidence = major.confidence || "needs_source_check";
       return {
         ...major,
         confidence,
@@ -2169,6 +2165,7 @@ function isUcProgram(program) {
 }
 
 function verificationNoticeForProgram(program) {
+  if (program.confidence === "verified") return null;
   if (!isUcProgram(program)) return null;
   return {
     label: t("uc_notice_label"),
@@ -3041,6 +3038,51 @@ function bindAutocompleteEvents(container, type) {
     input.addEventListener("blur", () => {
       autocompleteTimeout = setTimeout(() => {
         menu.classList.add("hidden");
+
+        const slots = getSlots();
+        const val = input.value.trim();
+
+        if (acType === "school") {
+          const schoolExists = schools.some(s => normalizeText(s.name) === normalizeText(val));
+          if (schoolExists) {
+            const matchedSchool = schools.find(s => normalizeText(s.name) === normalizeText(val)).name;
+            if (slots[idx].school !== matchedSchool) {
+              slots[idx].school = matchedSchool;
+              slots[idx].major = "";
+              syncFunc();
+              renderFunc();
+              resultsFunc();
+            }
+          } else if (val === "") {
+            if (slots[idx].school !== "") {
+              slots[idx].school = "";
+              slots[idx].major = "";
+              syncFunc();
+              renderFunc();
+              resultsFunc();
+            }
+          }
+        } else {
+          const selectedSchool = slots[idx].school;
+          const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
+          const majorExists = majors.some(p => normalizeText(p.name) === normalizeText(val));
+          if (majorExists) {
+            const matchedMajor = majors.find(p => normalizeText(p.name) === normalizeText(val)).name;
+            if (slots[idx].major !== matchedMajor) {
+              slots[idx].major = matchedMajor;
+              syncFunc();
+              renderFunc();
+              resultsFunc();
+            }
+          } else if (val === "") {
+            if (slots[idx].major !== "") {
+              slots[idx].major = "";
+              syncFunc();
+              renderFunc();
+              resultsFunc();
+            }
+          }
+        }
       }, 200);
     });
 
@@ -3194,6 +3236,34 @@ function bindSingleAutocomplete({
   schoolInput.addEventListener("blur", () => {
     schoolBlurTimeout = setTimeout(() => {
       schoolMenu.classList.add("hidden");
+      const typed = schoolInput.value.trim();
+      if (typed) {
+        const matched = schools.find(s => s.name.toLowerCase() === typed.toLowerCase()) ||
+                        schools.find(s => s.name.toLowerCase().includes(typed.toLowerCase()));
+        if (matched) {
+          schoolInput.value = matched.name;
+          safeRemoveAttr(majorInput, "disabled");
+          safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
+          majorInput.placeholder = t("select_major_placeholder", "Select Major");
+          if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
+          onSelected(matched.name, majorInput.value.trim());
+        } else {
+          schoolInput.value = "";
+          majorInput.value = "";
+          safeSetAttr(majorInput, "disabled", "true");
+          safeSetAttr(majorInput, "data-i18n-placeholder", "select_school_first_placeholder");
+          majorInput.placeholder = t("select_school_first_placeholder", "Select School First");
+          if (majorToggle) safeSetAttr(majorToggle, "disabled", "true");
+          onSelected("", "");
+        }
+      } else {
+        majorInput.value = "";
+        safeSetAttr(majorInput, "disabled", "true");
+        safeSetAttr(majorInput, "data-i18n-placeholder", "select_school_first_placeholder");
+        majorInput.placeholder = t("select_school_first_placeholder", "Select School First");
+        if (majorToggle) safeSetAttr(majorToggle, "disabled", "true");
+        onSelected("", "");
+      }
     }, 200);
   });
 
@@ -3285,6 +3355,22 @@ function bindSingleAutocomplete({
   majorInput.addEventListener("blur", () => {
     majorBlurTimeout = setTimeout(() => {
       majorMenu.classList.add("hidden");
+      const selectedSchool = schoolInput.value.trim();
+      const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
+      const typed = majorInput.value.trim();
+      if (typed && selectedSchool) {
+        const matched = majors.find(m => m.name.toLowerCase() === typed.toLowerCase()) ||
+                        majors.find(m => m.name.toLowerCase().includes(typed.toLowerCase()));
+        if (matched) {
+          majorInput.value = matched.name;
+          onSelected(selectedSchool, matched.name);
+        } else {
+          majorInput.value = "";
+          onSelected(selectedSchool, "");
+        }
+      } else if (!typed && selectedSchool) {
+        onSelected(selectedSchool, "");
+      }
     }, 200);
   });
 
