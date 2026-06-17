@@ -3043,17 +3043,28 @@ function bindAutocompleteEvents(container, type) {
         const val = input.value.trim();
 
         if (acType === "school") {
-          const schoolExists = schools.some(s => normalizeText(s.name) === normalizeText(val));
-          if (schoolExists) {
-            const matchedSchool = schools.find(s => normalizeText(s.name) === normalizeText(val)).name;
-            if (slots[idx].school !== matchedSchool) {
-              slots[idx].school = matchedSchool;
+          const matched = schools.find(s => s.name.toLowerCase() === val.toLowerCase()) ||
+                          schools.find(s => s.name.toLowerCase().includes(val.toLowerCase()));
+          if (matched) {
+            if (slots[idx].school !== matched.name) {
+              slots[idx].school = matched.name;
+              slots[idx].major = "";
+              syncFunc();
+              renderFunc();
+              resultsFunc();
+            } else {
+              input.value = matched.name;
+            }
+          } else if (val === "") {
+            if (slots[idx].school !== "") {
+              slots[idx].school = "";
               slots[idx].major = "";
               syncFunc();
               renderFunc();
               resultsFunc();
             }
-          } else if (val === "") {
+          } else {
+            input.value = "";
             if (slots[idx].school !== "") {
               slots[idx].school = "";
               slots[idx].major = "";
@@ -3065,16 +3076,26 @@ function bindAutocompleteEvents(container, type) {
         } else {
           const selectedSchool = slots[idx].school;
           const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
-          const majorExists = majors.some(p => normalizeText(p.name) === normalizeText(val));
-          if (majorExists) {
-            const matchedMajor = majors.find(p => normalizeText(p.name) === normalizeText(val)).name;
-            if (slots[idx].major !== matchedMajor) {
-              slots[idx].major = matchedMajor;
+          const matched = majors.find(m => m.name.toLowerCase() === val.toLowerCase()) ||
+                          majors.find(m => m.name.toLowerCase().includes(val.toLowerCase()));
+          if (matched) {
+            if (slots[idx].major !== matched.name) {
+              slots[idx].major = matched.name;
+              syncFunc();
+              renderFunc();
+              resultsFunc();
+            } else {
+              input.value = matched.name;
+            }
+          } else if (val === "") {
+            if (slots[idx].major !== "") {
+              slots[idx].major = "";
               syncFunc();
               renderFunc();
               resultsFunc();
             }
-          } else if (val === "") {
+          } else {
+            input.value = "";
             if (slots[idx].major !== "") {
               slots[idx].major = "";
               syncFunc();

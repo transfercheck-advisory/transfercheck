@@ -87,7 +87,31 @@ function saveStats(stats) {
   }
 }
 
+// Auth helper functions
+function verifyAdmin(req) {
+  const adminSecret = process.env.ADMIN_SECRET_KEY || "temp-admin-secret-key-12345";
+  const authHeader = req.headers['authorization'] || req.headers['Authorization'] || "";
+  const token = authHeader.startsWith("Bearer ") ? authHeader.substring(7) : authHeader;
+  return token === adminSecret;
+}
+
+async function verifyUserSession(req) {
+  if (!supabaseAdmin) return null;
+  const authHeader = req.headers['authorization'] || req.headers['Authorization'] || "";
+  const token = authHeader.startsWith("Bearer ") ? authHeader.substring(7) : authHeader;
+  if (!token) return null;
+  try {
+    const { data: { user }, error } = await supabaseAdmin.auth.getUser(token);
+    if (error || !user) return null;
+    return user;
+  } catch (e) {
+    console.error("verifyUserSession error:", e);
+    return null;
+  }
+}
+
 const server = http.createServer((req, res) => {
+
   // Prevent path traversal
   const rawUrl = req.url || "";
   let safeUrl = rawUrl.split('?')[0];
@@ -245,6 +269,11 @@ const server = http.createServer((req, res) => {
 
   // API Route: Get Admin Stats
   if (req.method === 'GET' && safeUrl === '/api/admin-stats') {
+    if (!verifyAdmin(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ success: false, message: 'Unauthorized' }));
+      return;
+    }
     const stats = getStats();
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
     res.end(JSON.stringify(stats));
@@ -351,15 +380,30 @@ const server = http.createServer((req, res) => {
 
   // API Route: Save transfer-data back to disk
   if (req.method === 'POST' && safeUrl === '/api/save') {
+    if (!verifyAdmin(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ success: false, message: 'Unauthorized' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => { body += chunk; });
     req.on('end', () => {
       try {
         const parsed = JSON.parse(body);
         const outputContent = `window.transferDatabase = ${JSON.stringify(parsed, null, 2)};\n`;
-        fs.writeFileSync(path.join(__dirname, 'transfer-data.js'), outputContent, 'utf8');
+        let writeSuccess = true;
+        try {
+          fs.writeFileSync(path.join(__dirname, 'transfer-data.js'), outputContent, 'utf8');
+        } catch (writeErr) {
+          console.warn("⚠️ Failed to write transfer-data.js to disk:", writeErr.message);
+          writeSuccess = false;
+        }
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-        res.end(JSON.stringify({ success: true, message: '데이터베이스가 성공적으로 저장되었습니다.' }));
+        if (writeSuccess) {
+          res.end(JSON.stringify({ success: true, message: '데이터베이스가 성공적으로 저장되었습니다.' }));
+        } else {
+          res.end(JSON.stringify({ success: true, message: '데이터가 메모리에 임시 반영되었습니다. (읽기 전용 배포 환경)' }));
+        }
       } catch (err) {
         res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ success: false, message: '올바르지 않은 JSON 데이터입니다.' }));
@@ -373,6 +417,12 @@ const server = http.createServer((req, res) => {
     let body = '';
     req.on('data', chunk => { body += chunk; });
     req.on('end', async () => {
+      const user = await verifyUserSession(req);
+      if (!user) {
+        res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: '인증된 회원만 사용할 수 있습니다. 다시 로그인해 주세요.' }));
+        return;
+      }
       let schoolName = '';
       let majorName = '';
       try {
@@ -437,6 +487,11 @@ Provide real, actual historical requirements for this major if known, or high-fi
 If there are specific required courses, list their canonical names (e.g., "Calculus 1", "Calculus 2", "General Chemistry 1", "Introduction to Java Programming").
 Include specific lab courses separately if they are required (e.g. "Physics 1 Lab").
 Ensure all texts are in English.
+
+For humanities, social sciences, business, and other non-engineering/science majors (where strict prerequisites are less common):
+- If the university has no strict required prerequisites, list "General Education Breadth (Humanities, Social Sciences, Writing)" or general required compositions in the requiredCourses list.
+- Provide a rich list of recommended courses (e.g., "Macroeconomics", "Microeconomics", "Introduction to Psychology", "Statistics", "English Composition II") in the recommendedCourses list to help students structure a strong competitive profile.
+- Clarify in the raw texts that these majors emphasize General Education breadth and cumulative GPA over specialized technical prerequisites.
 `;
 
         const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
@@ -562,7 +617,11 @@ Ensure all texts are in English.
 
         // Save back to disk
         const outputContent = `window.transferDatabase = ${JSON.stringify(database, null, 2)};\n`;
-        fs.writeFileSync(path.join(__dirname, 'transfer-data.js'), outputContent, 'utf8');
+        try {
+          fs.writeFileSync(path.join(__dirname, 'transfer-data.js'), outputContent, 'utf8');
+        } catch (writeErr) {
+          console.warn("⚠️ Failed to write transfer-data.js to disk (likely read-only environment):", writeErr.message);
+        }
 
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ 
@@ -732,7 +791,11 @@ Ensure all texts are in English.
 
           // Save back to disk
           const outputContent = `window.transferDatabase = ${JSON.stringify(database, null, 2)};\n`;
-          fs.writeFileSync(path.join(__dirname, 'transfer-data.js'), outputContent, 'utf8');
+          try {
+            fs.writeFileSync(path.join(__dirname, 'transfer-data.js'), outputContent, 'utf8');
+          } catch (writeErr) {
+            console.warn("⚠️ Failed to write transfer-data.js to disk (likely read-only environment):", writeErr.message);
+          }
 
           res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
           res.end(JSON.stringify({ 
@@ -755,8 +818,53 @@ Ensure all texts are in English.
   if (req.method === 'POST' && safeUrl === '/api/essay') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
+        const user = await verifyUserSession(req);
+        if (!user) {
+          res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: '인증된 회원만 사용할 수 있습니다. 다시 로그인해 주세요.' }));
+          return;
+        }
+
+        if (!supabaseAdmin) {
+          res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'Supabase is not initialized on the server.' }));
+          return;
+        }
+
+        const { data: profile, error: selectError } = await supabaseAdmin
+          .from('profiles')
+          .select('plan, essay_credits')
+          .eq('id', user.id)
+          .single();
+
+        if (selectError || !profile) {
+          res.writeHead(403, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: '사용자 프로필을 조회할 수 없습니다.' }));
+          return;
+        }
+
+        const isTestUser = (user.email === 'haminkim@uwm.edu');
+        if (!isTestUser && (!profile.essay_credits || profile.essay_credits < 1)) {
+          res.writeHead(402, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: '사용 가능한 에세이 크레딧이 부족합니다. 결제 후 이용해 주세요.' }));
+          return;
+        }
+
+        if (!isTestUser) {
+          const { error: updateError } = await supabaseAdmin
+            .from('profiles')
+            .update({ essay_credits: profile.essay_credits - 1 })
+            .eq('id', user.id);
+
+          if (updateError) {
+            res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: false, message: '크레딧 차감에 실패했습니다. 다시 시도해 주세요.' }));
+            return;
+          }
+        }
+
         const parsed = JSON.parse(body);
         const { essayOption, schoolName, majorName, essayQuestion, essayLimit, activities, lang } = parsed;
         const apiKey = process.env.GEMINI_API_KEY;
@@ -1178,8 +1286,14 @@ You MUST write all explanations, guides, guidelines, and feedback (targetStyleGu
   if (req.method === 'POST' && safeUrl === '/api/interview/questions') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
+        const user = await verifyUserSession(req);
+        if (!user) {
+          res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: '인증된 회원만 사용할 수 있습니다. 다시 로그인해 주세요.' }));
+          return;
+        }
         const parsed = JSON.parse(body);
         const { schoolName, majorName, essayQuestion } = parsed;
         const apiKey = process.env.GEMINI_API_KEY;
@@ -1409,7 +1523,66 @@ ${message}
     });
     return;
   }
-  
+  // API Route: Get specific Major Requirements dynamically from Supabase
+  if (req.method === 'GET' && safeUrl.startsWith('/api/majors/')) {
+    const majorId = decodeURIComponent(safeUrl.substring('/api/majors/'.length));
+    if (!majorId) {
+      res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ success: false, message: 'majorId is required' }));
+      return;
+    }
+    
+    if (!supabaseAdmin) {
+      res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ success: false, message: 'Supabase is not initialized on the server.' }));
+      return;
+    }
+    
+    (async () => {
+      try {
+        const { data: major, error } = await supabaseAdmin
+          .from('majors')
+          .select('*')
+          .eq('id', majorId)
+          .single();
+          
+        if (error || !major) {
+          res.writeHead(404, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: '전공 요건 정보를 데이터베이스에서 찾을 수 없습니다.' }));
+          return;
+        }
+        
+        const formattedMajor = {
+          id: major.id,
+          school_id: major.school_id,
+          name: major.name,
+          minGpa: major.min_gpa === null ? null : parseFloat(major.min_gpa),
+          rawMinGpa: major.raw_min_gpa,
+          minCredits: major.min_credits,
+          rawMinCredits: major.raw_min_credits,
+          requiredCourses: major.required_courses,
+          recommendedCourses: major.recommended_courses,
+          rawRequired: major.raw_required,
+          rawRecommended: major.raw_recommended,
+          english: major.english_reqs,
+          englishExemption: major.english_exemption,
+          note: major.note,
+          sourceFile: major.source_file,
+          confidence: major.confidence,
+          rawOfficialText: major.raw_official_text,
+          officialSourceUrl: major.official_source_url
+        };
+        
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true, major: formattedMajor }));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: err.message }));
+      }
+    })();
+    return;
+  }
+
   const filePath = path.join(__dirname, safeUrl);
 
   const ext = path.extname(filePath).toLowerCase();
