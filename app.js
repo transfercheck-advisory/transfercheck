@@ -3465,7 +3465,7 @@ function bindSingleAutocomplete({
   });
 }
 
-function syncSelectedRoadmapTargetsFromSlots() {
+async function syncSelectedRoadmapTargetsFromSlots() {
   try {
     const seen = new Set();
     state.roadmapTargetSlots.forEach((slot, index) => {
@@ -3497,7 +3497,7 @@ function syncSelectedRoadmapTargetsFromSlots() {
     
     state.selectedRoadmapTargets = [...new Set(ids)];
     saveProfileToLocalStorage();
-    buildRoadmap();
+    await buildRoadmap();
   } catch (e) {
     console.error("Error in syncSelectedRoadmapTargetsFromSlots:", e);
   }
@@ -4717,22 +4717,34 @@ function getCourseWorkloadDifficulty(course) {
   return 2;
 }
 
-function buildRoadmap() {
+async function buildRoadmap() {
   try {
+    const timeline = qs("#roadmapTimeline");
+    if (!timeline) return;
+
+    if (state.selectedRoadmapTargets.length === 0) {
+      timeline.innerHTML = `
+        <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0; border: 1px dashed var(--line); border-radius: 12px; width: 100%;">
+          <p>${escapeHtml(t("no_targets_selected", "No target programs selected."))}</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Lazy load major requirement data for all selected roadmap targets
+    await Promise.all(state.selectedRoadmapTargets.map(id => ensureMajorLoaded(id)));
+
     const selectedPrograms = allPrograms().filter((p) => state.selectedRoadmapTargets.includes(p.id));
-  const timeline = qs("#roadmapTimeline");
-  if (!timeline) return;
+    if (selectedPrograms.length === 0) {
+      timeline.innerHTML = `
+        <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0; border: 1px dashed var(--line); border-radius: 12px; width: 100%;">
+          <p>${escapeHtml(t("no_targets_selected", "No target programs selected."))}</p>
+        </div>
+      `;
+      return;
+    }
 
-  if (selectedPrograms.length === 0) {
-    timeline.innerHTML = `
-      <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0; border: 1px dashed var(--line); border-radius: 12px; width: 100%;">
-        <p>${escapeHtml(t("no_targets_selected", "No target programs selected."))}</p>
-      </div>
-    `;
-    return;
-  }
-
-  const programsToPlan = selectedPrograms;
+    const programsToPlan = selectedPrograms;
 
   const allRequiredCourses = new Map();
   const allRecommendedCourses = new Map();
