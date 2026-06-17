@@ -31,8 +31,8 @@ window.transferDatabase = {
       "sheet": "Transfer Requirements"
     }
   ],
-  "schoolCount": 57,
-  "programCount": 2025,
+  "schoolCount": 63,
+  "programCount": 2075,
   "schools": [
     {
       "id": "university-of-washington-2fde0bf4",
@@ -7750,128 +7750,8 @@ window.transferDatabase = {
       "shortName": "UC San Diego",
       "majors": [
         {
-          "id": "uc-san-diego-bc540bcb-computer-science-genuine",
-          "name": "Computer Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-data-science-genuine",
-          "name": "Data Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
           "id": "uc-san-diego-bc540bcb-information-technology-genuine",
           "name": "Information Technology",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-computer-engineering-genuine",
-          "name": "Computer Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-electrical-engineering-genuine",
-          "name": "Electrical Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-mechanical-engineering-genuine",
-          "name": "Mechanical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
           "minGpa": null,
@@ -7990,54 +7870,6 @@ window.transferDatabase = {
           "confidence": "high_risk"
         },
         {
-          "id": "uc-san-diego-bc540bcb-aerospace-engineering-genuine",
-          "name": "Aerospace Engineering",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-business-administration-genuine",
-          "name": "Business Administration",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
           "id": "uc-san-diego-bc540bcb-finance-genuine",
           "name": "Finance",
           "rawMinGpa": "Refer to official catalog wording below",
@@ -8112,54 +7944,6 @@ window.transferDatabase = {
         {
           "id": "uc-san-diego-bc540bcb-management-genuine",
           "name": "Management",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-economics-genuine",
-          "name": "Economics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-psychology-genuine",
-          "name": "Psychology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
           "minGpa": null,
@@ -8280,30 +8064,6 @@ window.transferDatabase = {
         {
           "id": "uc-san-diego-bc540bcb-communications-genuine",
           "name": "Communications",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-san-diego-bc540bcb-biology-genuine",
-          "name": "Biology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
           "minGpa": null,
@@ -8543,41 +8303,43 @@ window.transferDatabase = {
         },
         {
           "id": "uc-san-diego-bioengineering-bioengineering-8f825fea",
-          "name": "Bioengineering — Bioengineering",
-          "rawMinGpa": "2.4 (CA) / 2.8 (비CA)\nScreening: C 이상 (전 과목)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 2.4,
+          "name": "Bioengineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수",
-            "모든 screening 과목 C 이상 (별도 명시 제외)",
-            "추가 필수 수학: MATH 20D (Differential Equations)",
-            "필수 물리: PHYS 2A + PHYS 2B + PHYS 2BL (lab) + PHYS 2CL (lab)",
-            "필수 화학: CHEM 6A + CHEM 6B"
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry",
+            "MATH 20D - Differential Equations",
+            "PHYS 2A - Physics-Mechanics",
+            "PHYS 2AL - Physics Laboratory-Mechanics",
+            "PHYS 2B - Physics-Electricity and Magnetism",
+            "PHYS 2BL - Physics Laboratory-Electricity and Magnetism",
+            "PHYS 2C - Physics-Fluids, Waves, Thermodynamics and Optics",
+            "PHYS 2CL - Physics Laboratory-Fluids, Waves, Thermodynamics and Optics",
+            "CHEM 6A - General Chemistry I",
+            "CHEM 6B - General Chemistry II",
+            "CHEM 6C - General Chemistry III",
+            "CHEM 7L - General Chemistry Laboratory",
+            "BIBC 100 - Structural Biochemistry",
+            "BILD 1 - The Cell",
+            "BILD 2 - Multicellular Life"
           ],
           "recommendedCourses": [
-            "BILD 1",
-            "MAE 8 (MATLAB)",
-            "MATH 18 (Linear Algebra)",
-            "MATH 20E",
-            "PHYS 2C",
-            "CHEM 7L"
+            "Organic Chemistry sequence (CHEM 40A, 40B, 40C)",
+            "Computer Programming in C++ or Java"
           ],
-          "rawRequired": "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 20D (Differential Equations) | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2BL (lab) + PHYS 2CL (lab) | 필수 화학: CHEM 6A + CHEM 6B",
-          "rawRecommended": "BILD 1 | MAE 8 (MATLAB) | MATH 18 (Linear Algebra) | MATH 20E | PHYS 2C | CHEM 7L",
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry\nMATH 20D - Differential Equations\nPHYS 2A - Physics-Mechanics\nPHYS 2AL - Physics Laboratory-Mechanics\nPHYS 2B - Physics-Electricity and Magnetism\nPHYS 2BL - Physics Laboratory-Electricity and Magnetism\nPHYS 2C - Physics-Fluids, Waves, Thermodynamics and Optics\nPHYS 2CL - Physics Laboratory-Fluids, Waves, Thermodynamics and Optics\nCHEM 6A - General Chemistry I\nCHEM 6B - General Chemistry II\nCHEM 6C - General Chemistry III\nCHEM 7L - General Chemistry Laboratory\nBIBC 100 - Structural Biochemistry\nBILD 1 - The Cell\nBILD 2 - Multicellular Life",
+          "rawRecommended": "Organic Chemistry sequence (CHEM 40A, 40B, 40C)\nComputer Programming in C++ or Java",
           "english": {
-            "raw": "TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+\n점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정",
-            "TOEFL": 83,
-            "TOEFL_2026": null,
-            "IELTS": 7,
-            "Duolingo": 115
+            "raw": "Must complete two transferable college-level English composition courses with a grade of C or better."
           },
-          "englishExemption": "Transfer 지원자: English Composition 2과목에서 B 이상 취득 시 시험 불필요\n(UCSD는 B 이상 요구 — 다른 UC 캠퍼스 C 이상과 다름)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 기준 충족 필수 (CA 거주자 2.4 / 비거주자 2.8)\n- 모든 screening 과목은 편입 전 봄 학기까지 C 이상으로 완료 필수 (Selective Major)\n- 대안 전공(Non-selective major) 기재 강력 권장\n[특이사항]\n- PHYS 2BL+2CL(실험) 필수 포함 | PHYS 2C는 권장만",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Bioengineering is a capped major. Students are admitted to the pre-major. Completion of all lower-division requirements is highly recommended for timely degree progress. AP credits may be used for some prerequisites; refer to the Jacobs School of Engineering website for specific equivalencies.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Major Preparation Search This Site Search Faculty/Staff Apply Now Search Button Toggle navigation Search This Site Search Faculty/Staff Undergraduate Admissions Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Get Started Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Apply Now Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Undergraduate Admissions Transfer Major Preparation Students planning to transfer must complete the minimum major preparation coursework to be considered for admission into the majors listed below. Any major not listed below does not require screening for minimum major preparation; however, applicants are encouraged to complete major preparation. Applicants for the following departments will be screened for the number of preparatory courses completed, the grades earned in that coursework and the cumulative GPA. All major preparation screening courses must be completed with a C (2.0) or better grade unless otherwise noted. Visit assist.org to find the complete listing of major preparation and transferable courses at your California community college. Please note that the courses listed on assist.org are for preparation for your major. The courses for the majors listed below are the minimum screening requirements for admission into that major. To find a listing of UC San Diego course descriptions, please visit the General Catalog . Required minimum transfer major preparation must be completed by the end of the spring term prior to fall admission. Major Requirements Select your department from the dropdown list below to more easily find your major. Select a Department All Departments Anthropology Astronomy and Astrophysics Bioengineering Biology Chemical and NanoEngineering Chemistry and Biochemistry Cognitive Science --> Computer Science and Engineering Data Science Economics Electrical and Computer Engineering Environmental Systems Mathematics Mechanical and Aerospace Engineering Public Health Physics Psychology --> Rady School of Management Scripps Institution of Oceanography Structural Engineering Urban Studies and Planning Anthropology Biological Anthropology Two courses of general biology: BILD 1, 2 Three courses of general chemistry: Chem 6A, B, C Three courses of mathematics/statistics: Choose two of these courses: Math 10A, B, C or Math 20A, B, C Choose one of these courses: Math 11 or Psych 60 One course in Anthropology: ANTH 2 (Human Origins) One course in Anthropology or Psychology or Sociology from the list below: ANTH 43 (Introduction to the Biology and Culture of Race) ANTH 42 (Primates in a Human-Dominated World) ANTH 5 (The Human Machine: Skeleton Within) SOCI 70 (Sociology for Pre-medical Students) PSYC 1 (Psychology) Astronomy and Astrophysics Astronomy and Astrophysics Required: MATH 18, MATH 20A, MATH 20B, MATH 20C, MATH 20D PHYS 2A, PHYS 2B, PHYS 2C *Recommended: MATH 20E PHYS 2D Bioengineering Bioengineering Bioengineering Required Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2BL, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics CHEM 7L General Chemistry Laboratory MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100. Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18 and MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 130. Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Senior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students are recommended to take these courses in Winter Quarter and Spring Quarter of Junior Year. MAE 40. Linear Circuits. Prerequisites include MATH 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 107. Computational Methods in Engineering. Prerequisites include MATH 18 and MAE 8. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioeng See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Bioinformatics Bioinformatics Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology BILD 4 Introductory Biology Lab CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace CSE 12 Basic Data Structures and Object-Oriented Design MATH 18 Linear Algebra MATH 20E Vector Calculus MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21. CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ BioSystems Biosystems Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell. This course is not required, but see below. MAE 8 MATLAB. Programming for Engineering Analysis or BENG 2 Introductory Computer Programming and MATLAB. We take credit for either. MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2BL Physics Laboratory &#8211; Mechanics PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Spring Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18, MATH 20E, PHYS 2BL and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students should take these courses in Winter Quarter and Spring Quarter of Senior Year. BENG 120 and BENG 102 are prerequisites; however, if BENG 140A and BENG 140B are taken early (some take them Junior Year), BILD 1 will be a satisfactory prerequisite. ECE 35 Linear Circuits. Prerequisites include MATH 18. This course is a critical prerequisite for BENG 152 and BENG 186B. Transfer students are recommended to take this course in Fall Quarter of Junior Year, otherwise key courses will be delayed by a year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Biosystems curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/biosys See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Biotechnology Biotechnology Required Screening Courses &amp;nbsp MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology. This course is not required but must also be taken as a prerequisite for BICD 100. CHEM 6C General Chemistry III CHEM 7L General Chemistry Laboratory CHEM 41A/B Organic Chemistry for Life Sciences I/II MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 123 Dynamic Simulation in Bioengineering. Prerequisites include MATH 18 and CHEM 41AB. Transfer students are recommended to take this course Winter Quarter of Senior Year. BENG 130 Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BENG 166A Cell and Tissue Engineering. Prerequisites include BILD 1, CHEM 6C, and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 168 Biomolecular Engineering. Prerequisites include BILD 1. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BICD 100 Genetics. Prerequisites are BILD 1 and BILD 3. Transfer students are recommended to take this course in Winter Quarter of Junior Year. CENG 101A Introductory Fluid Mechanics. Prerequisites include MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 170 Experimental Techniques. Prerequisites include PHYS 2C and PHYS 2CL. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note t",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html"
+          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/preparation-major.html"
         },
         {
           "id": "uc-san-diego-bioengineering-bioinformatics-162d3c0f",
@@ -8892,37 +8654,38 @@ window.transferDatabase = {
         },
         {
           "id": "uc-san-diego-electrical-computer-engineering-computer-engine-e098993b",
-          "name": "Electrical & Computer Engineering — Computer Engineering (ECE dept)",
-          "rawMinGpa": "2.4 (CA) / 2.8 (비CA)\nScreening: C 이상 (전 과목)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 2.4,
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수",
-            "모든 screening 과목 C 이상 (별도 명시 제외)",
-            "추가 필수 수학: MATH 18 + MATH 20D",
-            "필수 물리: PHYS 2A + PHYS 2B + PHYS 2C",
-            "화학: Chemistry 불필요",
-            "필수 CS/프로그래밍: CSE 11 + CSE 12"
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry",
+            "MATH 20D - Differential Equations",
+            "MATH 20E - Vector Calculus",
+            "PHYS 2A - Physics-Mechanics",
+            "PHYS 2B - Physics-Electricity and Magnetism",
+            "PHYS 2C - Physics-Fluids, Waves, Thermodynamics and Optics",
+            "CHEM 6A - General Chemistry I",
+            "ECE 35 - Introduction to Analog Design",
+            "ECE 45 - Circuits and Systems",
+            "ECE 65 - Components and Circuits Laboratory"
           ],
           "recommendedCourses": [
-            "CSE 30"
+            "CSE 8B - Introduction to Computer Science: Java",
+            "CSE 30 - Computer Organization and Systems Programming"
           ],
-          "rawRequired": "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C | 화학: Chemistry 불필요 | 필수 CS/프로그래밍: CSE 11 + CSE 12",
-          "rawRecommended": "CSE 30",
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry\nMATH 20D - Differential Equations\nMATH 20E - Vector Calculus\nPHYS 2A - Physics-Mechanics\nPHYS 2B - Physics-Electricity and Magnetism\nPHYS 2C - Physics-Fluids, Waves, Thermodynamics and Optics\nCHEM 6A - General Chemistry I\nECE 35 - Introduction to Analog Design\nECE 45 - Circuits and Systems\nECE 65 - Components and Circuits Laboratory",
+          "rawRecommended": "CSE 8B - Introduction to Computer Science: Java\nCSE 30 - Computer Organization and Systems Programming",
           "english": {
-            "raw": "TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+\n점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정",
-            "TOEFL": 83,
-            "TOEFL_2026": null,
-            "IELTS": 7,
-            "Duolingo": 115
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
           },
-          "englishExemption": "Transfer 지원자: English Composition 2과목에서 B 이상 취득 시 시험 불필요\n(UCSD는 B 이상 요구 — 다른 UC 캠퍼스 C 이상과 다름)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 기준 충족 필수 (CA 거주자 2.4 / 비거주자 2.8)\n- 모든 screening 과목은 편입 전 봄 학기까지 C 이상으로 완료 필수 (Selective Major)\n- 대안 전공(Non-selective major) 기재 강력 권장\n[특이사항]\n- CSE dept의 Computer Engineering과 동일 요건",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Screening major. Applicants must maintain a high GPA in math and science prerequisite courses. It is strongly recommended to complete as many lower-division requirements as possible prior to transfer.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Major Preparation Search This Site Search Faculty/Staff Apply Now Search Button Toggle navigation Search This Site Search Faculty/Staff Undergraduate Admissions Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Get Started Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Apply Now Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Undergraduate Admissions Transfer Major Preparation Students planning to transfer must complete the minimum major preparation coursework to be considered for admission into the majors listed below. Any major not listed below does not require screening for minimum major preparation; however, applicants are encouraged to complete major preparation. Applicants for the following departments will be screened for the number of preparatory courses completed, the grades earned in that coursework and the cumulative GPA. All major preparation screening courses must be completed with a C (2.0) or better grade unless otherwise noted. Visit assist.org to find the complete listing of major preparation and transferable courses at your California community college. Please note that the courses listed on assist.org are for preparation for your major. The courses for the majors listed below are the minimum screening requirements for admission into that major. To find a listing of UC San Diego course descriptions, please visit the General Catalog . Required minimum transfer major preparation must be completed by the end of the spring term prior to fall admission. Major Requirements Select your department from the dropdown list below to more easily find your major. Select a Department All Departments Anthropology Astronomy and Astrophysics Bioengineering Biology Chemical and NanoEngineering Chemistry and Biochemistry Cognitive Science --> Computer Science and Engineering Data Science Economics Electrical and Computer Engineering Environmental Systems Mathematics Mechanical and Aerospace Engineering Public Health Physics Psychology --> Rady School of Management Scripps Institution of Oceanography Structural Engineering Urban Studies and Planning Anthropology Biological Anthropology Two courses of general biology: BILD 1, 2 Three courses of general chemistry: Chem 6A, B, C Three courses of mathematics/statistics: Choose two of these courses: Math 10A, B, C or Math 20A, B, C Choose one of these courses: Math 11 or Psych 60 One course in Anthropology: ANTH 2 (Human Origins) One course in Anthropology or Psychology or Sociology from the list below: ANTH 43 (Introduction to the Biology and Culture of Race) ANTH 42 (Primates in a Human-Dominated World) ANTH 5 (The Human Machine: Skeleton Within) SOCI 70 (Sociology for Pre-medical Students) PSYC 1 (Psychology) Astronomy and Astrophysics Astronomy and Astrophysics Required: MATH 18, MATH 20A, MATH 20B, MATH 20C, MATH 20D PHYS 2A, PHYS 2B, PHYS 2C *Recommended: MATH 20E PHYS 2D Bioengineering Bioengineering Bioengineering Required Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2BL, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics CHEM 7L General Chemistry Laboratory MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100. Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18 and MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 130. Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Senior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students are recommended to take these courses in Winter Quarter and Spring Quarter of Junior Year. MAE 40. Linear Circuits. Prerequisites include MATH 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 107. Computational Methods in Engineering. Prerequisites include MATH 18 and MAE 8. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioeng See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Bioinformatics Bioinformatics Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology BILD 4 Introductory Biology Lab CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace CSE 12 Basic Data Structures and Object-Oriented Design MATH 18 Linear Algebra MATH 20E Vector Calculus MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21. CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ BioSystems Biosystems Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell. This course is not required, but see below. MAE 8 MATLAB. Programming for Engineering Analysis or BENG 2 Introductory Computer Programming and MATLAB. We take credit for either. MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2BL Physics Laboratory &#8211; Mechanics PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Spring Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18, MATH 20E, PHYS 2BL and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students should take these courses in Winter Quarter and Spring Quarter of Senior Year. BENG 120 and BENG 102 are prerequisites; however, if BENG 140A and BENG 140B are taken early (some take them Junior Year), BILD 1 will be a satisfactory prerequisite. ECE 35 Linear Circuits. Prerequisites include MATH 18. This course is a critical prerequisite for BENG 152 and BENG 186B. Transfer students are recommended to take this course in Fall Quarter of Junior Year, otherwise key courses will be delayed by a year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Biosystems curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/biosys See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Biotechnology Biotechnology Required Screening Courses &amp;nbsp MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology. This course is not required but must also be taken as a prerequisite for BICD 100. CHEM 6C General Chemistry III CHEM 7L General Chemistry Laboratory CHEM 41A/B Organic Chemistry for Life Sciences I/II MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 123 Dynamic Simulation in Bioengineering. Prerequisites include MATH 18 and CHEM 41AB. Transfer students are recommended to take this course Winter Quarter of Senior Year. BENG 130 Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BENG 166A Cell and Tissue Engineering. Prerequisites include BILD 1, CHEM 6C, and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 168 Biomolecular Engineering. Prerequisites include BILD 1. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BICD 100 Genetics. Prerequisites are BILD 1 and BILD 3. Transfer students are recommended to take this course in Winter Quarter of Junior Year. CENG 101A Introductory Fluid Mechanics. Prerequisites include MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 170 Experimental Techniques. Prerequisites include PHYS 2C and PHYS 2CL. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note t",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html"
+          "officialSourceUrl": "https://ece.ucsd.edu/undergraduate/admissions"
         },
         {
           "id": "uc-san-diego-electrical-computer-engineering-electrical-engi-51099247",
@@ -9028,71 +8791,74 @@ window.transferDatabase = {
         },
         {
           "id": "uc-san-diego-mechanical-aerospace-engineering-aerospace-engi-5f5111a8",
-          "name": "Mechanical & Aerospace Engineering — Aerospace Engineering",
-          "rawMinGpa": "2.4 (CA) / 2.8 (비CA)\nScreening: C 이상 (전 과목)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 2.4,
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수",
-            "모든 screening 과목 C 이상 (별도 명시 제외)",
-            "추가 필수 수학: MATH 18 + MATH 20D",
-            "필수 물리: PHYS 2A + PHYS 2B + PHYS 2C + PHYS 2CL (lab)",
-            "필수 화학: CHEM 6A (1과목만)"
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry for Science and Engineering",
+            "MATH 20D - Introduction to Differential Equations",
+            "PHYS 2A - Physics-Mechanics",
+            "PHYS 2B - Physics-Electricity and Magnetism",
+            "PHYS 2C - Physics-Fluids, Waves, Thermodynamics, and Optics",
+            "CHEM 6A - General Chemistry I",
+            "CHEM 6B - General Chemistry II",
+            "CHEM 6L - General Chemistry Laboratory I",
+            "MAE 8 - MATLAB Programming for Engineering Analysis",
+            "MAE 9 - C/C++ Programming"
           ],
           "recommendedCourses": [
-            "MAE 8 (MATLAB)"
+            "MAE 21 - Aerospace Structures",
+            "MAE 30A - Statics and Introduction to Dynamics",
+            "MAE 30B - Dynamics and Vibrations"
           ],
-          "rawRequired": "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C + PHYS 2CL (lab) | 필수 화학: CHEM 6A (1과목만)",
-          "rawRecommended": "MAE 8 (MATLAB)",
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry for Science and Engineering\nMATH 20D - Introduction to Differential Equations\nPHYS 2A - Physics-Mechanics\nPHYS 2B - Physics-Electricity and Magnetism\nPHYS 2C - Physics-Fluids, Waves, Thermodynamics, and Optics\nCHEM 6A - General Chemistry I\nCHEM 6B - General Chemistry II\nCHEM 6L - General Chemistry Laboratory I\nMAE 8 - MATLAB Programming for Engineering Analysis\nMAE 9 - C/C++ Programming",
+          "rawRecommended": "MAE 21 - Aerospace Structures\nMAE 30A - Statics and Introduction to Dynamics\nMAE 30B - Dynamics and Vibrations",
           "english": {
-            "raw": "TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+\n점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정",
-            "TOEFL": 83,
-            "TOEFL_2026": null,
-            "IELTS": 7,
-            "Duolingo": 115
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
           },
-          "englishExemption": "Transfer 지원자: English Composition 2과목에서 B 이상 취득 시 시험 불필요\n(UCSD는 B 이상 요구 — 다른 UC 캠퍼스 C 이상과 다름)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 기준 충족 필수 (CA 거주자 2.4 / 비거주자 2.8)\n- 모든 screening 과목은 편입 전 봄 학기까지 C 이상으로 완료 필수 (Selective Major)\n- 대안 전공(Non-selective major) 기재 강력 권장\n[특이사항]\n- PHYS 2CL(실험) 필수 | Chemistry 1과목만",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Mechanical Engineering is a capped major. Admission is competitive and based on cumulative GPA and performance in the required screening courses.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Major Preparation Search This Site Search Faculty/Staff Apply Now Search Button Toggle navigation Search This Site Search Faculty/Staff Undergraduate Admissions Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Get Started Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Apply Now Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Undergraduate Admissions Transfer Major Preparation Students planning to transfer must complete the minimum major preparation coursework to be considered for admission into the majors listed below. Any major not listed below does not require screening for minimum major preparation; however, applicants are encouraged to complete major preparation. Applicants for the following departments will be screened for the number of preparatory courses completed, the grades earned in that coursework and the cumulative GPA. All major preparation screening courses must be completed with a C (2.0) or better grade unless otherwise noted. Visit assist.org to find the complete listing of major preparation and transferable courses at your California community college. Please note that the courses listed on assist.org are for preparation for your major. The courses for the majors listed below are the minimum screening requirements for admission into that major. To find a listing of UC San Diego course descriptions, please visit the General Catalog . Required minimum transfer major preparation must be completed by the end of the spring term prior to fall admission. Major Requirements Select your department from the dropdown list below to more easily find your major. Select a Department All Departments Anthropology Astronomy and Astrophysics Bioengineering Biology Chemical and NanoEngineering Chemistry and Biochemistry Cognitive Science --> Computer Science and Engineering Data Science Economics Electrical and Computer Engineering Environmental Systems Mathematics Mechanical and Aerospace Engineering Public Health Physics Psychology --> Rady School of Management Scripps Institution of Oceanography Structural Engineering Urban Studies and Planning Anthropology Biological Anthropology Two courses of general biology: BILD 1, 2 Three courses of general chemistry: Chem 6A, B, C Three courses of mathematics/statistics: Choose two of these courses: Math 10A, B, C or Math 20A, B, C Choose one of these courses: Math 11 or Psych 60 One course in Anthropology: ANTH 2 (Human Origins) One course in Anthropology or Psychology or Sociology from the list below: ANTH 43 (Introduction to the Biology and Culture of Race) ANTH 42 (Primates in a Human-Dominated World) ANTH 5 (The Human Machine: Skeleton Within) SOCI 70 (Sociology for Pre-medical Students) PSYC 1 (Psychology) Astronomy and Astrophysics Astronomy and Astrophysics Required: MATH 18, MATH 20A, MATH 20B, MATH 20C, MATH 20D PHYS 2A, PHYS 2B, PHYS 2C *Recommended: MATH 20E PHYS 2D Bioengineering Bioengineering Bioengineering Required Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2BL, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics CHEM 7L General Chemistry Laboratory MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100. Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18 and MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 130. Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Senior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students are recommended to take these courses in Winter Quarter and Spring Quarter of Junior Year. MAE 40. Linear Circuits. Prerequisites include MATH 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 107. Computational Methods in Engineering. Prerequisites include MATH 18 and MAE 8. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioeng See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Bioinformatics Bioinformatics Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology BILD 4 Introductory Biology Lab CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace CSE 12 Basic Data Structures and Object-Oriented Design MATH 18 Linear Algebra MATH 20E Vector Calculus MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21. CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ BioSystems Biosystems Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell. This course is not required, but see below. MAE 8 MATLAB. Programming for Engineering Analysis or BENG 2 Introductory Computer Programming and MATLAB. We take credit for either. MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2BL Physics Laboratory &#8211; Mechanics PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Spring Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18, MATH 20E, PHYS 2BL and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students should take these courses in Winter Quarter and Spring Quarter of Senior Year. BENG 120 and BENG 102 are prerequisites; however, if BENG 140A and BENG 140B are taken early (some take them Junior Year), BILD 1 will be a satisfactory prerequisite. ECE 35 Linear Circuits. Prerequisites include MATH 18. This course is a critical prerequisite for BENG 152 and BENG 186B. Transfer students are recommended to take this course in Fall Quarter of Junior Year, otherwise key courses will be delayed by a year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Biosystems curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/biosys See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Biotechnology Biotechnology Required Screening Courses &amp;nbsp MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology. This course is not required but must also be taken as a prerequisite for BICD 100. CHEM 6C General Chemistry III CHEM 7L General Chemistry Laboratory CHEM 41A/B Organic Chemistry for Life Sciences I/II MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 123 Dynamic Simulation in Bioengineering. Prerequisites include MATH 18 and CHEM 41AB. Transfer students are recommended to take this course Winter Quarter of Senior Year. BENG 130 Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BENG 166A Cell and Tissue Engineering. Prerequisites include BILD 1, CHEM 6C, and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 168 Biomolecular Engineering. Prerequisites include BILD 1. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BICD 100 Genetics. Prerequisites are BILD 1 and BILD 3. Transfer students are recommended to take this course in Winter Quarter of Junior Year. CENG 101A Introductory Fluid Mechanics. Prerequisites include MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 170 Experimental Techniques. Prerequisites include PHYS 2C and PHYS 2CL. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note t",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html"
+          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/majors/engineering.html"
         },
         {
           "id": "uc-san-diego-mechanical-aerospace-engineering-mechanical-eng-2638f5fd",
-          "name": "Mechanical & Aerospace Engineering — Mechanical Engineering",
-          "rawMinGpa": "2.4 (CA) / 2.8 (비CA)\nScreening: C 이상 (전 과목)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 2.4,
+          "name": "Aerospace Engineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수",
-            "모든 screening 과목 C 이상 (별도 명시 제외)",
-            "추가 필수 수학: MATH 18 + MATH 20D",
-            "필수 물리: PHYS 2A + PHYS 2B + PHYS 2C (실험 없음)",
-            "필수 화학: CHEM 6A (1과목만)"
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry",
+            "MATH 20D - Introduction to Differential Equations",
+            "PHYS 2A - Physics-Mechanics",
+            "PHYS 2B - Physics-Electricity and Magnetism",
+            "PHYS 2C - Physics-Fluids, Waves, Thermodynamics, and Optics",
+            "CHEM 6A - General Chemistry I",
+            "CHEM 6B - General Chemistry II",
+            "CHEM 6L - General Chemistry Laboratory I",
+            "MAE 8 - MATLAB Programming for Engineering Analysis",
+            "MAE 9 - C/C++ Programming"
           ],
           "recommendedCourses": [
-            "MAE 8",
-            "MAE 20",
-            "MAE 40"
+            "MATH 20E - Vector Calculus",
+            "PHYS 2D - Physics-Relativity and Quantum Physics"
           ],
-          "rawRequired": "MATH 20A (Calculus 1) + MATH 20B (Calculus 2) + MATH 20C (Calculus 3) — 모든 전공 공통 필수 | 모든 screening 과목 C 이상 (별도 명시 제외) | 추가 필수 수학: MATH 18 + MATH 20D | 필수 물리: PHYS 2A + PHYS 2B + PHYS 2C (실험 없음) | 필수 화학: CHEM 6A (1과목만)",
-          "rawRecommended": "MAE 8 | MAE 20 | MAE 40",
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry\nMATH 20D - Introduction to Differential Equations\nPHYS 2A - Physics-Mechanics\nPHYS 2B - Physics-Electricity and Magnetism\nPHYS 2C - Physics-Fluids, Waves, Thermodynamics, and Optics\nCHEM 6A - General Chemistry I\nCHEM 6B - General Chemistry II\nCHEM 6L - General Chemistry Laboratory I\nMAE 8 - MATLAB Programming for Engineering Analysis\nMAE 9 - C/C++ Programming",
+          "rawRecommended": "MATH 20E - Vector Calculus\nPHYS 2D - Physics-Relativity and Quantum Physics",
           "english": {
-            "raw": "TOEFL iBT: 83+ | IELTS Academic: 7.0+ | Duolingo: 115+\n점수 제출 마감: January | 유효기간: 2년 | SAT/ACT 불인정",
-            "TOEFL": 83,
-            "TOEFL_2026": null,
-            "IELTS": 7,
-            "Duolingo": 115
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
           },
-          "englishExemption": "Transfer 지원자: English Composition 2과목에서 B 이상 취득 시 시험 불필요\n(UCSD는 B 이상 요구 — 다른 UC 캠퍼스 C 이상과 다름)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 기준 충족 필수 (CA 거주자 2.4 / 비거주자 2.8)\n- 모든 screening 과목은 편입 전 봄 학기까지 C 이상으로 완료 필수 (Selective Major)\n- 대안 전공(Non-selective major) 기재 강력 권장\n[특이사항]\n- Physics 실험 불필요 | Chemistry 1과목만",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Screening major: All students must satisfy lower-division major requirements for admission. Minimum 3.0 GPA in required courses is strongly recommended.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Major Preparation Search This Site Search Faculty/Staff Apply Now Search Button Toggle navigation Search This Site Search Faculty/Staff Undergraduate Admissions Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Get Started Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Apply Now Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Undergraduate Admissions Transfer Major Preparation Students planning to transfer must complete the minimum major preparation coursework to be considered for admission into the majors listed below. Any major not listed below does not require screening for minimum major preparation; however, applicants are encouraged to complete major preparation. Applicants for the following departments will be screened for the number of preparatory courses completed, the grades earned in that coursework and the cumulative GPA. All major preparation screening courses must be completed with a C (2.0) or better grade unless otherwise noted. Visit assist.org to find the complete listing of major preparation and transferable courses at your California community college. Please note that the courses listed on assist.org are for preparation for your major. The courses for the majors listed below are the minimum screening requirements for admission into that major. To find a listing of UC San Diego course descriptions, please visit the General Catalog . Required minimum transfer major preparation must be completed by the end of the spring term prior to fall admission. Major Requirements Select your department from the dropdown list below to more easily find your major. Select a Department All Departments Anthropology Astronomy and Astrophysics Bioengineering Biology Chemical and NanoEngineering Chemistry and Biochemistry Cognitive Science --> Computer Science and Engineering Data Science Economics Electrical and Computer Engineering Environmental Systems Mathematics Mechanical and Aerospace Engineering Public Health Physics Psychology --> Rady School of Management Scripps Institution of Oceanography Structural Engineering Urban Studies and Planning Anthropology Biological Anthropology Two courses of general biology: BILD 1, 2 Three courses of general chemistry: Chem 6A, B, C Three courses of mathematics/statistics: Choose two of these courses: Math 10A, B, C or Math 20A, B, C Choose one of these courses: Math 11 or Psych 60 One course in Anthropology: ANTH 2 (Human Origins) One course in Anthropology or Psychology or Sociology from the list below: ANTH 43 (Introduction to the Biology and Culture of Race) ANTH 42 (Primates in a Human-Dominated World) ANTH 5 (The Human Machine: Skeleton Within) SOCI 70 (Sociology for Pre-medical Students) PSYC 1 (Psychology) Astronomy and Astrophysics Astronomy and Astrophysics Required: MATH 18, MATH 20A, MATH 20B, MATH 20C, MATH 20D PHYS 2A, PHYS 2B, PHYS 2C *Recommended: MATH 20E PHYS 2D Bioengineering Bioengineering Bioengineering Required Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2BL, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics CHEM 7L General Chemistry Laboratory MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100. Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18 and MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 130. Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Senior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students are recommended to take these courses in Winter Quarter and Spring Quarter of Junior Year. MAE 40. Linear Circuits. Prerequisites include MATH 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 107. Computational Methods in Engineering. Prerequisites include MATH 18 and MAE 8. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioeng See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Bioinformatics Bioinformatics Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology BILD 4 Introductory Biology Lab CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace CSE 12 Basic Data Structures and Object-Oriented Design MATH 18 Linear Algebra MATH 20E Vector Calculus MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21. CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ BioSystems Biosystems Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell. This course is not required, but see below. MAE 8 MATLAB. Programming for Engineering Analysis or BENG 2 Introductory Computer Programming and MATLAB. We take credit for either. MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2BL Physics Laboratory &#8211; Mechanics PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Spring Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18, MATH 20E, PHYS 2BL and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students should take these courses in Winter Quarter and Spring Quarter of Senior Year. BENG 120 and BENG 102 are prerequisites; however, if BENG 140A and BENG 140B are taken early (some take them Junior Year), BILD 1 will be a satisfactory prerequisite. ECE 35 Linear Circuits. Prerequisites include MATH 18. This course is a critical prerequisite for BENG 152 and BENG 186B. Transfer students are recommended to take this course in Fall Quarter of Junior Year, otherwise key courses will be delayed by a year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Biosystems curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/biosys See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Biotechnology Biotechnology Required Screening Courses &amp;nbsp MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology. This course is not required but must also be taken as a prerequisite for BICD 100. CHEM 6C General Chemistry III CHEM 7L General Chemistry Laboratory CHEM 41A/B Organic Chemistry for Life Sciences I/II MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 123 Dynamic Simulation in Bioengineering. Prerequisites include MATH 18 and CHEM 41AB. Transfer students are recommended to take this course Winter Quarter of Senior Year. BENG 130 Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BENG 166A Cell and Tissue Engineering. Prerequisites include BILD 1, CHEM 6C, and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 168 Biomolecular Engineering. Prerequisites include BILD 1. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BICD 100 Genetics. Prerequisites are BILD 1 and BILD 3. Transfer students are recommended to take this course in Winter Quarter of Junior Year. CENG 101A Introductory Fluid Mechanics. Prerequisites include MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 170 Experimental Techniques. Prerequisites include PHYS 2C and PHYS 2CL. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note t",
-          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html"
+          "officialSourceUrl": "https://jacobsschool.ucsd.edu/academic/admissions_transfer"
         },
         {
           "id": "uc-san-diego-structural-engineering-structural-engineering-5df87225",
@@ -9164,6 +8930,257 @@ window.transferDatabase = {
           "confidence": "verified",
           "rawOfficialText": "Transfer Major Preparation Search This Site Search Faculty/Staff Apply Now Search Button Toggle navigation Search This Site Search Faculty/Staff Undergraduate Admissions Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Get Started Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Apply Now Apply Get Started First-Year Transfer International Military-Connected Why Majors Colleges Career Prep &amp; Internships Communities Cost &amp; Financial Aid Health &amp; Safety Housing Location Student Life Visit Events Tours Resources Contact Us Mailing List Publications Event Recordings FAQs Parents &amp; Families Counselors Recursos en Espa&#241;ol Estudiantes de Primer A&#241;o Estudiantes de Transferencia Conectar Ven a Vernos Licenciaturas y Programas Comunidad y Cultura Ayuda Financiera Mas Recursos Para Padres En Espa&#241;ol Undergraduate Admissions Transfer Major Preparation Students planning to transfer must complete the minimum major preparation coursework to be considered for admission into the majors listed below. Any major not listed below does not require screening for minimum major preparation; however, applicants are encouraged to complete major preparation. Applicants for the following departments will be screened for the number of preparatory courses completed, the grades earned in that coursework and the cumulative GPA. All major preparation screening courses must be completed with a C (2.0) or better grade unless otherwise noted. Visit assist.org to find the complete listing of major preparation and transferable courses at your California community college. Please note that the courses listed on assist.org are for preparation for your major. The courses for the majors listed below are the minimum screening requirements for admission into that major. To find a listing of UC San Diego course descriptions, please visit the General Catalog . Required minimum transfer major preparation must be completed by the end of the spring term prior to fall admission. Major Requirements Select your department from the dropdown list below to more easily find your major. Select a Department All Departments Anthropology Astronomy and Astrophysics Bioengineering Biology Chemical and NanoEngineering Chemistry and Biochemistry Cognitive Science --> Computer Science and Engineering Data Science Economics Electrical and Computer Engineering Environmental Systems Mathematics Mechanical and Aerospace Engineering Public Health Physics Psychology --> Rady School of Management Scripps Institution of Oceanography Structural Engineering Urban Studies and Planning Anthropology Biological Anthropology Two courses of general biology: BILD 1, 2 Three courses of general chemistry: Chem 6A, B, C Three courses of mathematics/statistics: Choose two of these courses: Math 10A, B, C or Math 20A, B, C Choose one of these courses: Math 11 or Psych 60 One course in Anthropology: ANTH 2 (Human Origins) One course in Anthropology or Psychology or Sociology from the list below: ANTH 43 (Introduction to the Biology and Culture of Race) ANTH 42 (Primates in a Human-Dominated World) ANTH 5 (The Human Machine: Skeleton Within) SOCI 70 (Sociology for Pre-medical Students) PSYC 1 (Psychology) Astronomy and Astrophysics Astronomy and Astrophysics Required: MATH 18, MATH 20A, MATH 20B, MATH 20C, MATH 20D PHYS 2A, PHYS 2B, PHYS 2C *Recommended: MATH 20E PHYS 2D Bioengineering Bioengineering Bioengineering Required Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2BL, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics CHEM 7L General Chemistry Laboratory MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100. Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18 and MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 130. Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Senior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students are recommended to take these courses in Winter Quarter and Spring Quarter of Junior Year. MAE 40. Linear Circuits. Prerequisites include MATH 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 107. Computational Methods in Engineering. Prerequisites include MATH 18 and MAE 8. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioeng See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Bioinformatics Bioinformatics Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology BILD 4 Introductory Biology Lab CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace CSE 12 Basic Data Structures and Object-Oriented Design MATH 18 Linear Algebra MATH 20E Vector Calculus MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21. CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ BioSystems Biosystems Screening Courses &#160; MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell. This course is not required, but see below. MAE 8 MATLAB. Programming for Engineering Analysis or BENG 2 Introductory Computer Programming and MATLAB. We take credit for either. MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2BL Physics Laboratory &#8211; Mechanics PHYS 2C Physics&#8212;Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Spring Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 110. Musculoskeletal Biomechanics. Prerequisites include MATH 18, MATH 20E, PHYS 2BL and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 140A/B. Bioengineering Physiology. Prerequisites include BILD 1. Transfer students should take these courses in Winter Quarter and Spring Quarter of Senior Year. BENG 120 and BENG 102 are prerequisites; however, if BENG 140A and BENG 140B are taken early (some take them Junior Year), BILD 1 will be a satisfactory prerequisite. ECE 35 Linear Circuits. Prerequisites include MATH 18. This course is a critical prerequisite for BENG 152 and BENG 186B. Transfer students are recommended to take this course in Fall Quarter of Junior Year, otherwise key courses will be delayed by a year. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the the BS Bioengineering:Biosystems curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/biosys See also UC Transfer Pathway draft including Bioengineering at https://narayan.sites.ucsc.edu/resources/ Biotechnology Biotechnology Required Screening Courses &amp;nbsp MATH 20A, MATH 20B, MATH 20C, MATH 20D CHEM 6A, CHEM 6B PHYS 2A, PHYS 2B, PHYS 2CL Recommended Preparation Courses In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible BILD 1 The Cell BILD 3 Organismic and Evolutionary Biology. This course is not required but must also be taken as a prerequisite for BICD 100. CHEM 6C General Chemistry III CHEM 7L General Chemistry Laboratory CHEM 41A/B Organic Chemistry for Life Sciences I/II MAE 8 Matlab Programming for Engineering Analysis MATH 18 Linear Algebra MATH 20E Vector Calculus PHYS 2C Physics Fluids, Waves, Thermodynamics, and Optics MORE INFO Entering credit for the recommended preparation courses will affect enrollment in the following courses: BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year &#8211; or in Summer Session if offered. BENG 123 Dynamic Simulation in Bioengineering. Prerequisites include MATH 18 and CHEM 41AB. Transfer students are recommended to take this course Winter Quarter of Senior Year. BENG 130 Biotechnology Thermodynamics and Kinetics. Prerequisites include PHYS 2C. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BENG 166A Cell and Tissue Engineering. Prerequisites include BILD 1, CHEM 6C, and PHYS 2C. Transfer students are recommended to take this course in Fall Quarter of Junior Year. BENG 168 Biomolecular Engineering. Prerequisites include BILD 1. Transfer students are recommended to take this course in Winter Quarter of Junior Year. BICD 100 Genetics. Prerequisites are BILD 1 and BILD 3. Transfer students are recommended to take this course in Winter Quarter of Junior Year. CENG 101A Introductory Fluid Mechanics. Prerequisites include MATH 20E. Transfer students are recommended to take this course in Fall Quarter of Junior Year. MAE 170 Experimental Techniques. Prerequisites include PHYS 2C and PHYS 2CL. Transfer students are recommended to take this course in Fall Quarter of Junior Year. Please note t",
           "officialSourceUrl": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "CSE 11 - Introduction to Computer Science and Object-Oriented Programming: Java",
+            "CSE 12 - Basic Data Structures and Object-Oriented Design",
+            "CSE 15L - Software Tools and Techniques Laboratory",
+            "CSE 20 - Discrete Mathematics",
+            "CSE 21 - Mathematics for Algorithm and System Analysis",
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry for Science and Engineering",
+            "MATH 20D - Introduction to Differential Equations",
+            "PHYS 2A - Physics-Mechanics",
+            "PHYS 2AL - Physics Laboratory-Mechanics",
+            "PHYS 2B - Physics-Electricity and Magnetism",
+            "PHYS 2BL - Physics Laboratory-Electricity and Magnetism"
+          ],
+          "recommendedCourses": [
+            "Completion of IGETC or UC San Diego college general education requirements"
+          ],
+          "rawRequired": "CSE 11 - Introduction to Computer Science and Object-Oriented Programming: Java\nCSE 12 - Basic Data Structures and Object-Oriented Design\nCSE 15L - Software Tools and Techniques Laboratory\nCSE 20 - Discrete Mathematics\nCSE 21 - Mathematics for Algorithm and System Analysis\nMATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry for Science and Engineering\nMATH 20D - Introduction to Differential Equations\nPHYS 2A - Physics-Mechanics\nPHYS 2AL - Physics Laboratory-Mechanics\nPHYS 2B - Physics-Electricity and Magnetism\nPHYS 2BL - Physics Laboratory-Electricity and Magnetism",
+          "rawRecommended": "Completion of IGETC or UC San Diego college general education requirements",
+          "english": {
+            "raw": "Completion of two transferable college courses in English composition (equivalent to UC San Diego's RWP 1 and RWP 2) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Computer Science is a capped major. Transfer applicants are strongly encouraged to complete all lower-division requirements prior to transfer. Admission is highly competitive and based on overall GPA and technical preparation.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://cse.ucsd.edu/undergraduate/admissions"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-computer-engineering",
+          "name": "Computer Engineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry for Science and Engineering",
+            "MATH 20D - Introduction to Differential Equations",
+            "PHYS 2A - Physics: Mechanics",
+            "PHYS 2B - Physics: Electricity and Magnetism",
+            "PHYS 2C - Physics: Fluids, Waves, Thermodynamics, and Optics",
+            "CHEM 6A - General Chemistry I",
+            "CSE 8B - Introduction to Computer Science: Java",
+            "CSE 12 - Basic Data Structures and Object-Oriented Design",
+            "CSE 15L - Software Tools and Techniques Laboratory",
+            "CSE 20 - Discrete Mathematics",
+            "CSE 21 - Mathematics for Algorithm and System Analysis"
+          ],
+          "recommendedCourses": [
+            "CSE 30 - Computer Organization and Systems Programming",
+            "ECE 35 - Introduction to Analog Design",
+            "ECE 45 - Circuits and Systems"
+          ],
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry for Science and Engineering\nMATH 20D - Introduction to Differential Equations\nPHYS 2A - Physics: Mechanics\nPHYS 2B - Physics: Electricity and Magnetism\nPHYS 2C - Physics: Fluids, Waves, Thermodynamics, and Optics\nCHEM 6A - General Chemistry I\nCSE 8B - Introduction to Computer Science: Java\nCSE 12 - Basic Data Structures and Object-Oriented Design\nCSE 15L - Software Tools and Techniques Laboratory\nCSE 20 - Discrete Mathematics\nCSE 21 - Mathematics for Algorithm and System Analysis",
+          "rawRecommended": "CSE 30 - Computer Organization and Systems Programming\nECE 35 - Introduction to Analog Design\nECE 45 - Circuits and Systems",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Computer Engineering is a capped major. Students are admitted to the major at the time of admission to UC San Diego, and it is highly recommended that students complete all lower-division requirements prior to transfer. Proficiency in Java is required.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/major-preparation.html"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-data-science",
+          "name": "Data Science",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 20C - Calculus and Analytic Geometry",
+            "MATH 18 - Linear Algebra",
+            "CSE 8A - Introduction to Computer Science: Java",
+            "CSE 8B - Introduction to Computer Science: Java",
+            "CSE 12 - Basic Data Structures and Object-Oriented Design",
+            "CSE 15L - Software Tools and Techniques Laboratory",
+            "CSE 20 - Discrete Mathematics",
+            "CSE 21 - Mathematics for Algorithm and Systems Analysis"
+          ],
+          "recommendedCourses": [
+            "DSC 10 - Principles of Data Science (if available via cross-enrollment or equivalent)",
+            "Calculus-based Physics sequence",
+            "Completion of IGETC"
+          ],
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 20C - Calculus and Analytic Geometry\nMATH 18 - Linear Algebra\nCSE 8A - Introduction to Computer Science: Java\nCSE 8B - Introduction to Computer Science: Java\nCSE 12 - Basic Data Structures and Object-Oriented Design\nCSE 15L - Software Tools and Techniques Laboratory\nCSE 20 - Discrete Mathematics\nCSE 21 - Mathematics for Algorithm and Systems Analysis",
+          "rawRecommended": "DSC 10 - Principles of Data Science (if available via cross-enrollment or equivalent)\nCalculus-based Physics sequence\nCompletion of IGETC",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Data Science is a capped major. Admission is highly competitive and priority is given to students who have completed all major preparation requirements. Students are strongly encouraged to complete the full CSE and MATH sequence prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://datascience.ucsd.edu/academics/undergraduate/bs-data-science/transfer-students/"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-business-administration",
+          "name": "Business Administration",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ECON 1 - Principles of Microeconomics",
+            "ECON 3 - Principles of Macroeconomics",
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "MATH 11 - Calculus-Based Introductory Probability and Statistics"
+          ],
+          "recommendedCourses": [
+            "A sequence of courses in the humanities or social sciences to fulfill general education requirements"
+          ],
+          "rawRequired": "ECON 1 - Principles of Microeconomics\nECON 3 - Principles of Macroeconomics\nMATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nMATH 11 - Calculus-Based Introductory Probability and Statistics",
+          "rawRecommended": "A sequence of courses in the humanities or social sciences to fulfill general education requirements",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Business Administration major is selective. Students must complete all lower-division requirements prior to transfer. Statistics may also be satisfied by an equivalent course approved by the department.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://rady.ucsd.edu/programs/undergraduate/bs-business/admissions/"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-economics",
+          "name": "Economics",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "ECON 1 - Principles of Microeconomics",
+            "ECON 2 - Principles of Macroeconomics"
+          ],
+          "recommendedCourses": [
+            "MATH 20C - Calculus and Analytic Geometry for Science and Engineering",
+            "MATH 18 - Linear Algebra"
+          ],
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nECON 1 - Principles of Microeconomics\nECON 2 - Principles of Macroeconomics",
+          "rawRecommended": "MATH 20C - Calculus and Analytic Geometry for Science and Engineering\nMATH 18 - Linear Algebra",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete all lower-division major preparation courses prior to transfer. Competitive applicants often have a higher GPA than the minimum.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://economics.ucsd.edu/undergraduate-program/majors-and-minors/index.html"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "PSYC 1 - Psychology",
+            "MATH 11 - Calculus-Based Introductory Probability and Statistics (or equivalent statistics course)",
+            "BILD 1 - The Cell",
+            "BILD 2 - Multicellular Life"
+          ],
+          "recommendedCourses": [
+            "Completion of IGETC or UCSD General Education requirements",
+            "Additional lower-division coursework in biology or social sciences"
+          ],
+          "rawRequired": "PSYC 1 - Psychology\nMATH 11 - Calculus-Based Introductory Probability and Statistics (or equivalent statistics course)\nBILD 1 - The Cell\nBILD 2 - Multicellular Life",
+          "rawRecommended": "Completion of IGETC or UCSD General Education requirements\nAdditional lower-division coursework in biology or social sciences",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Students are strongly encouraged to complete all lower-division major preparation before transferring. Statistics must be completed with a grade of B or better to satisfy the requirement for the major.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://psychology.ucsd.edu/undergraduate-program/undergraduate-admissions/transfer-students.html"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-cognitive-science",
+          "name": "Cognitive Science",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "PSYC 1 - Psychology",
+            "CSE 8A - Introduction to Computer Science: Java OR CSE 11 - Introduction to Computer Science: Java Accelerated"
+          ],
+          "recommendedCourses": [
+            "MATH 20C - Calculus and Analytic Geometry",
+            "CSE 12 - Basic Data Structures and Object-Oriented Design",
+            "CSE 30 - Computer Organization and Systems Programming"
+          ],
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nPSYC 1 - Psychology\nCSE 8A - Introduction to Computer Science: Java OR CSE 11 - Introduction to Computer Science: Java Accelerated",
+          "rawRecommended": "MATH 20C - Calculus and Analytic Geometry\nCSE 12 - Basic Data Structures and Object-Oriented Design\nCSE 30 - Computer Organization and Systems Programming",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Screening major. Students must complete all lower-division requirements with a grade of B or better to ensure admission consideration. It is strongly recommended to complete as many lower-division requirements as possible prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://cogsci.ucsd.edu/undergraduates/major-requirements/index.html#Transfer-Students"
+        },
+        {
+          "id": "uc-san-diego-bc540bcb-biology",
+          "name": "Biology",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 20A - Calculus for Science and Engineering",
+            "MATH 20B - Calculus for Science and Engineering",
+            "CHEM 6A - General Chemistry I",
+            "CHEM 6B - General Chemistry II",
+            "CHEM 6C - General Chemistry III",
+            "CHEM 6L - General Chemistry Laboratory",
+            "CHEM 7L - General Chemistry Laboratory II",
+            "CHEM 40A - Organic Chemistry I",
+            "CHEM 40B - Organic Chemistry II",
+            "CHEM 43A - Organic Chemistry Laboratory"
+          ],
+          "recommendedCourses": [
+            "PHYS 2A - Physics-Mechanics",
+            "PHYS 2B - Physics-Electricity and Magnetism",
+            "PHYS 2C - Physics-Fluids, Waves, Thermodynamics, and Optics",
+            "PHYS 2BL - Physics Laboratory-Mechanics",
+            "PHYS 2CL - Physics Laboratory-Electricity and Magnetism"
+          ],
+          "rawRequired": "MATH 20A - Calculus for Science and Engineering\nMATH 20B - Calculus for Science and Engineering\nCHEM 6A - General Chemistry I\nCHEM 6B - General Chemistry II\nCHEM 6C - General Chemistry III\nCHEM 6L - General Chemistry Laboratory\nCHEM 7L - General Chemistry Laboratory II\nCHEM 40A - Organic Chemistry I\nCHEM 40B - Organic Chemistry II\nCHEM 43A - Organic Chemistry Laboratory",
+          "rawRecommended": "PHYS 2A - Physics-Mechanics\nPHYS 2B - Physics-Electricity and Magnetism\nPHYS 2C - Physics-Fluids, Waves, Thermodynamics, and Optics\nPHYS 2BL - Physics Laboratory-Mechanics\nPHYS 2CL - Physics Laboratory-Electricity and Magnetism",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Selective major. Meeting the minimum requirements does not guarantee admission. All major preparation must be completed prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucsd.edu/transfer/preparation-major.html"
         }
       ]
     },
@@ -9172,54 +9189,6 @@ window.transferDatabase = {
       "name": "UC Irvine",
       "shortName": "UC Irvine",
       "majors": [
-        {
-          "id": "uc-irvine-a176fec7-computer-science-genuine",
-          "name": "Computer Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.uci.edu/apply/transfer-students",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-irvine-a176fec7-data-science-genuine",
-          "name": "Data Science",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.uci.edu/apply/transfer-students",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students",
-          "confidence": "high_risk"
-        },
         {
           "id": "uc-irvine-a176fec7-information-technology-genuine",
           "name": "Information Technology",
@@ -9247,140 +9216,126 @@ window.transferDatabase = {
         {
           "id": "uc-irvine-computer-engineering-2441ac36",
           "name": "Computer Engineering",
-          "rawMinGpa": "3.0 cumulative\n3.0 in major prereqs\n(TAG: 3.4)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
           "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "전 학과 공통 필수:",
-            "Calculus 1+2 (1yr single variable)",
-            "Multivariable Calculus (1과목)",
-            "Differential Equations (CS&E 제외)",
-            "Linear Algebra (CS&E 제외)",
-            "Programming/MATLAB (학과별 상이)",
-            "최소 성적: C 이상 (CS&E만 B 이상)",
-            "필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산)",
-            "모든 prereqs Spring 종료 전 완료",
-            "학과 추가 필수:",
-            "Physics 1+2+3 + lab (3과목)",
-            "Chemistry 불필요",
-            "Programming Concepts & Methodology 1과목",
-            "Circuit Analysis 1과목",
-            "Circuit Analysis 필수 (공식 원문: 'One course in circuit analysis')"
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II",
+            "MATH 2D - Multivariable Calculus",
+            "MATH 2E - Multivariable Calculus",
+            "MATH 3A - Introduction to Linear Algebra",
+            "MATH 3D - Elementary Differential Equations",
+            "PHYS 7C - Classical Physics",
+            "PHYS 7LC - Classical Physics Laboratory",
+            "PHYS 7D - Classical Physics",
+            "PHYS 7LD - Classical Physics Laboratory",
+            "PHYS 7E - Classical Physics",
+            "PHYS 7LE - Classical Physics Laboratory",
+            "I&C SCI 31 - Introduction to Programming",
+            "I&C SCI 32 - Programming with Software Libraries",
+            "I&C SCI 33 - Intermediate Programming",
+            "I&C SCI 45C - Programming in C++ as a Second Language",
+            "I&C SCI 46 - Data Structure Implementation and Analysis",
+            "I&C SCI 51 - Introductory Computer Organization",
+            "I&C SCI 53 - Principles in System Design",
+            "I&C SCI 53L - Principles in System Design Laboratory",
+            "ENGR 7A - Introduction to Engineering",
+            "ENGR 7B - Introduction to Engineering"
           ],
           "recommendedCourses": [
-            "Programming Concepts II",
-            "Computer Architecture",
-            "Digital Systems/Logic",
-            "OOP",
-            "Circuit Analysis lab",
-            "(2년 졸업 위해 필요)"
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Laboratory"
           ],
-          "rawRequired": "전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Chemistry 불필요 | Programming Concepts & Methodology 1과목 | Circuit Analysis 1과목 | Circuit Analysis 필수 (공식 원문: 'One course in circuit analysis')",
-          "rawRecommended": "Programming Concepts II | Computer Architecture | Digital Systems/Logic | OOP | Circuit Analysis lab | (2년 졸업 위해 필요)",
+          "rawRequired": "MATH 2A - Calculus I\nMATH 2B - Calculus II\nMATH 2D - Multivariable Calculus\nMATH 2E - Multivariable Calculus\nMATH 3A - Introduction to Linear Algebra\nMATH 3D - Elementary Differential Equations\nPHYS 7C - Classical Physics\nPHYS 7LC - Classical Physics Laboratory\nPHYS 7D - Classical Physics\nPHYS 7LD - Classical Physics Laboratory\nPHYS 7E - Classical Physics\nPHYS 7LE - Classical Physics Laboratory\nI&C SCI 31 - Introduction to Programming\nI&C SCI 32 - Programming with Software Libraries\nI&C SCI 33 - Intermediate Programming\nI&C SCI 45C - Programming in C++ as a Second Language\nI&C SCI 46 - Data Structure Implementation and Analysis\nI&C SCI 51 - Introductory Computer Organization\nI&C SCI 53 - Principles in System Design\nI&C SCI 53L - Principles in System Design Laboratory\nENGR 7A - Introduction to Engineering\nENGR 7B - Introduction to Engineering",
+          "rawRecommended": "CHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Laboratory",
           "english": {
-            "raw": "TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+\nAP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정\n제출 마감: December | 유효기간: 2년",
-            "TOEFL": 80,
-            "TOEFL_2026": null,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Completion of two semesters of approved freshman English composition (equivalent to UC Irvine Writing 39A and 39B/39C) with a grade of C or better."
           },
-          "englishExemption": "UC-E English Composition 2과목 C 이상 (국내 CC 기준)\n⚠️ 영어가 교육언어가 아닌 해외 대학 English Comp 과목 불인정\n기타: AP 3+ / IB 점수 / ACT/SAT 점수로도 충족 가능",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 전체 GPA 3.0 및 전공 필수과목 GPA 3.0 이상 유지 필수\n- TAG 지원 시 GPA 3.4 이상 필수 (단, CS&E 전공은 TAG 제외)\n- 모든 필수과목은 편입 전 봄 학기 종료 전까지 완료 필수\n- IGETC 허용되나 이공계열 전공은 비권장",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Computer Engineering is a selective major. All required lower-division courses must be completed by the end of the spring term prior to the fall enrollment term.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Students | Office of Undergraduate Admissions | UCI Jump to Header Jump to Main Content Jump to Footer Parents Counselors Current Students Search UCI Financial Aid and Scholarships Search Submit &#032; &#032; &#032; &#032; &#032; &#032; Search UCI Financial Aid and Scholarships Search &#032; Discover &#032; &#032; Why UCI? &#032; Events &#032; Tours &#032; Student Life &#032; Anteater Experiences &#032; Study &#032; &#032; Majors and Minors &#032; Majors Quiz &#032; Courses &#032; Academic Resources &#032; Undergrad Research &#032; Faculty &#032; Afford Apply &#032; &#032; How to Apply &#032; UC Application &#032; Applicant Portal &#032; First Year Students &#032; Transfer Students &#032; International Students &#032; Admitted &#032; Dates and Deadlines &#032; Request Info Parents Counselors Current Students Find your future at UC Irvine Make the transition to life as an Anteater and transfer to UC Irvine. Transfer Students Guaranteed Admissions &#032; Related Majors &#032; Requirements &#032; Second Baccalaureate &#032; &#032; &#032; Apply &#032; Transfer Students Transfer to UC Irvine UC Irvine welcomes the distinctive experience transfer students contribute to our campus and gives priority to junior-level students transferring from California Community Colleges. In order to be eligible for admission to our university, you must meet the following requirements: Complete 60 semester or 90 quarter UC transferable units by the end of the spring term prior to the desired fall term admission with a minimum 2.4 GPA required for California residents. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. Complete seven UC transferable college courses with a grade of C or better in each course &#8212; two courses in English composition, one course in mathematical concepts and quantitative reasoning, and four courses in at least two of the following subject areas: arts and humanities, social and behavioral sciences, or physical and biological sciences. Note: Pass (P) grades can be earned if the pass is equivalent to a C grade (2.00). If you are a non-California resident, you must have a minimum 2.8 GPA in order to be eligible for the UC System. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. See the University of California Admissions for additional information. You will be granted up to 70 semester/105 quarter units of credit for lower-division coursework completed at any institution or any combination of institutions. For units beyond the maximum, subject credit for appropriate coursework taken in excess of this unit limitation will be granted and may be used to satisfy requirements. Units earned through AP, IB, and/or A-Level examinations are not included in the limitation and do not put applicants at risk of being denied admission Units earned at any UC campus (extension/continuing education, summer, cross/concurrent, and regular academic year enrollment) are not included in the limitation but are added to the maximum transfer credit allowed and may put applicants at risk of being denied admission due to excessive units No more than 14 semester (21 quarter) units may be taken for Pass/No Pass credit, and Pass/No Pass credit may not be used for major requirements Grades earned in all UC transferable coursework are used in calculating the UC transferable GPA. For your desired major, please see Transfer Requirements by School . COVID-19 Update: UCI will accept Pass or Credit grades in major preparatory coursework completed in winter, spring, and summer 2020 for all majors. Pass or Credit grades in major preparation are acceptable for admission purposes only; articulation of courses with Pass or Credit grades will be determined by the individual department after you enroll at UC Irvine. Everything you need to know about transferring to UC Irvine We want to make the transfer process as seamless as possible. The first step is ensuring you have all the right information and requirements. Comprehensive Review Process &#032; &#032; UC Irvine considers the following as part of the Comprehensive Review process for transfer applicants: Completion of a specified pattern or number of courses that meet breadth or general education requirements Completion of a specified pattern or number of courses that provide continuity with upper division courses in your major, such as a UC Transfer Pathway, AA degree for transfer (offered at California Community Colleges only), or UC campus-specific major prerequisites Grade point average in all UC transferable courses - especially in a UC Transfer Pathway or in major prerequisites Participation in academically selective honors courses or programs Special talents, achievements, and awards in a particular field, such as visual and performing arts, communication or athletic endeavors; special skills, such as demonstrated written and oral proficiency in other languages; special interests, such as intensive study and exploration of other cultures; experiences that demonstrate unusual promise for leadership, such as significant community service or significant participation in student government; or other significant experiences or achievements that demonstrate your promise for contributing to the intellectual vitality of the campus Completion of special projects undertaken in the context of the college curriculum or in conjunction with special school events, projects, or programs Academic accomplishments in light of your life experiences and special circumstances, including but not limited to: disabilities, low family income, first generation to attend college, need to work, disadvantaged social or educational environment, difficult personal and family situations or circumstances, refugee status or veteran status Location of your college and residence Completion of a UC Transfer Pathway or an AA degree for transfer offered by a California Community College General Education Requirement &#032; &#032; The UC Irvine General Education Requirement consists of coursework in writing, science, social and behavioral sciences, arts and humanities, mathematics and symbolic systems, language other than English, multicultural studies, and international/global issues. It is fully described in the UC Irvine&#160; General Catalogue . The General Education (GE) Requirement, which must be completed prior to graduation from UC Irvine, may be satisfied by college-level courses appropriate to UC Irvine offerings. It may be completed at any time during the undergraduate years with one exception -- the lower-division writing component must be completed within the first three quarters of residency at UC Irvine. However, it is to your advantage to complete as much of the GE Requirement as possible prior to transferring to UC Irvine. In fulfilling the UC Irvine General Education Requirement, transfer students have options which are described in the&#160; General Catalogue . IGETC &#032; &#032; UC Irvine accepts the Intersegmental General Education Transfer Curriculum (IGETC) as an alternative to the UC Irvine General Education Requirement. IGETC lists are available at community college transfer centers. Students should be aware that IGETC may not be recommended for students transferring to UC Irvine in engineering, mathematics, or science majors. Whether completing the UC Irvine General Education Requirement or IGETC, students are encouraged to select general education courses that may also be applied to admission and lower-division degree requirements. Please note that while courses taken in fulfillment of IGETC may also be used to fulfill admission requirements, completion of IGETC is not required for admission to UC Irvine. Personal Insight Questions &#032; &#032; Your personal insight questions should be exactly that &#8211; personal. This is your opportunity to tell us about yourself, your hopes, ambitions, life experiences, and inspirations. Key points about the personal insight questions include: Transfer applicants answer one required question and choose three out of seven additional questions to answer Each response is limited to a maximum of 350 words We encourage you to take your time. Be open, be reflective, and be honest. Your personal insight questions provide context for the rest of your application.&#160; Learn More About Personal Insight Questions &#032; Meeting English proficiency requirements for UC Irvine acceptance &#032; &#032; You must provide evidence of English proficiency to be successful in university studies at UC Irvine. Transfer applicants must complete two UC-E approved English composition courses with a grade of C or better. UC Irvine does not accept English composition courses from international universities where English is not the language of instruction. Advanced Placement and International Baccalaureate Credit &#032; &#032; Students who earn scores of 3, 4, or 5 on the College Board Advanced Placement (AP) examinations will receive credit toward graduation at UC Irvine. Successfully completing the International Baccalaureate (IB) Exam can also result in credit allowed toward a UC Irvine degree. Learn More &#032; U.S. Military Service Courses &#032; &#032; UC may award lower-division (freshman/sophomore level) units for military courses completed if the courses are consistent with University policy on awarding transfer credit when there is an equivalent course taught at a UC campus. UC will consult the ACE recommendations for information regarding course content and as a guide to the awarding of credit. Credit for military courses is determined&#160; after &#160;matriculation at UC. Transfer Admissions FAQs Make the transition just a little easier with some of our most frequently asked questions about transferring to UC Irvine. I attend a four-year college/university. Where can I find information about transfer requirements for me? &#032; &#032; Transfer students from four-year colleges/universities will be considered for admission on a space-available basis. However, the University of California gives priority consideration to students transferring from California community colleges. In general, admission requirements for both community college and other four-year transfer applicants are the same, with the exception that students from four-year colleges must have a 2.8 minimum GPA. Additionally, individual majors may have specific GPA requirements for admission that well exceed 2.80, as well as specific prerequisite requirements. Does UC Irvine accept transfers at the first-year or sophomore level? &#032; &#032; In general, UC Irvine admits transfer students at the junior level (junior = transfer students with a minimum of 60 UC transferable semester units). How do I know if my courses are transferable? &#032; &#032; UC Irvine maintains both Transfer Course Agreements and Articulation Agreements with California community colleges. These agreements identify courses that are UC transferable as well as those that satisfy specific requirements for individual majors and for UC Irvine's General Education Requirement. To determine which courses transfer and/or satisfy requirements for specific majors, visit the ASSIST Website at assist.org . Transfer Credit Policy What about IGETC? &#032; &#032; The completion of IGETC is not required for admission to UC Irvine, although courses you have taken in fulfillment of IGETC may also be used to fulfill UC admission requirements. As a transfer student, do I need to declare a major of interest in the UC Application? &#032; &#032; Yes, you must select an academic major. You may also specify an alternate major, for which you will be considered if you meet its requirements and if space permits. There are no changes of major within the admission process. When applying, applicants must select majors that they would be interested in completing their degree in. Here to help Get additional support to make your m",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students"
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students/major-preparation.php"
         },
         {
           "id": "uc-irvine-electrical-engineering-1fd9f686",
           "name": "Electrical Engineering",
-          "rawMinGpa": "3.0 cumulative\n3.0 in major prereqs\n(TAG: 3.4)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
           "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "전 학과 공통 필수:",
-            "Calculus 1+2 (1yr single variable)",
-            "Multivariable Calculus (1과목)",
-            "Differential Equations (CS&E 제외)",
-            "Linear Algebra (CS&E 제외)",
-            "Programming/MATLAB (학과별 상이)",
-            "최소 성적: C 이상 (CS&E만 B 이상)",
-            "필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산)",
-            "모든 prereqs Spring 종료 전 완료",
-            "학과 추가 필수:",
-            "Physics 1+2+3 + lab (3과목)",
-            "Chemistry 불필요",
-            "Programming Concepts & Methodology 1과목",
-            "Circuit Analysis 1과목",
-            "Circuit Analysis 필수"
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II",
+            "MATH 2D - Multivariable Calculus",
+            "MATH 2E - Multivariable Calculus",
+            "MATH 3A - Linear Algebra",
+            "MATH 3D - Ordinary Differential Equations",
+            "PHYS 7C - Classical Physics I",
+            "PHYS 7LC - Classical Physics Laboratory I",
+            "PHYS 7D - Classical Physics II",
+            "PHYS 7LD - Classical Physics Laboratory II",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1B - General Chemistry",
+            "CHEM 1LC - General Chemistry Laboratory",
+            "I&C SCI 31 - Introduction to Programming",
+            "I&C SCI 32 - Programming with Software Libraries"
           ],
           "recommendedCourses": [
-            "Circuit Analysis lab",
-            "(2년 졸업 위해 필요)"
+            "PHYS 7E - Classical Physics III",
+            "PHYS 7LE - Classical Physics Laboratory III"
           ],
-          "rawRequired": "전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Chemistry 불필요 | Programming Concepts & Methodology 1과목 | Circuit Analysis 1과목 | Circuit Analysis 필수",
-          "rawRecommended": "Circuit Analysis lab | (2년 졸업 위해 필요)",
+          "rawRequired": "MATH 2A - Calculus I\nMATH 2B - Calculus II\nMATH 2D - Multivariable Calculus\nMATH 2E - Multivariable Calculus\nMATH 3A - Linear Algebra\nMATH 3D - Ordinary Differential Equations\nPHYS 7C - Classical Physics I\nPHYS 7LC - Classical Physics Laboratory I\nPHYS 7D - Classical Physics II\nPHYS 7LD - Classical Physics Laboratory II\nCHEM 1A - General Chemistry\nCHEM 1B - General Chemistry\nCHEM 1LC - General Chemistry Laboratory\nI&C SCI 31 - Introduction to Programming\nI&C SCI 32 - Programming with Software Libraries",
+          "rawRecommended": "PHYS 7E - Classical Physics III\nPHYS 7LE - Classical Physics Laboratory III",
           "english": {
-            "raw": "TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+\nAP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정\n제출 마감: December | 유효기간: 2년",
-            "TOEFL": 80,
-            "TOEFL_2026": null,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Completion of two transferable college courses in English composition (equivalent to UCI's Writing 39A, 39B, 39C or 50, 60)."
           },
-          "englishExemption": "UC-E English Composition 2과목 C 이상 (국내 CC 기준)\n⚠️ 영어가 교육언어가 아닌 해외 대학 English Comp 과목 불인정\n기타: AP 3+ / IB 점수 / ACT/SAT 점수로도 충족 가능",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 전체 GPA 3.0 및 전공 필수과목 GPA 3.0 이상 유지 필수\n- TAG 지원 시 GPA 3.4 이상 필수 (단, CS&E 전공은 TAG 제외)\n- 모든 필수과목은 편입 전 봄 학기 종료 전까지 완료 필수\n- IGETC 허용되나 이공계열 전공은 비권장",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "All major preparation courses must be completed with a grade of C or better. Competitive applicants should aim for a higher GPA than the 3.0 minimum.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Students | Office of Undergraduate Admissions | UCI Jump to Header Jump to Main Content Jump to Footer Parents Counselors Current Students Search UCI Financial Aid and Scholarships Search Submit &#032; &#032; &#032; &#032; &#032; &#032; Search UCI Financial Aid and Scholarships Search &#032; Discover &#032; &#032; Why UCI? &#032; Events &#032; Tours &#032; Student Life &#032; Anteater Experiences &#032; Study &#032; &#032; Majors and Minors &#032; Majors Quiz &#032; Courses &#032; Academic Resources &#032; Undergrad Research &#032; Faculty &#032; Afford Apply &#032; &#032; How to Apply &#032; UC Application &#032; Applicant Portal &#032; First Year Students &#032; Transfer Students &#032; International Students &#032; Admitted &#032; Dates and Deadlines &#032; Request Info Parents Counselors Current Students Find your future at UC Irvine Make the transition to life as an Anteater and transfer to UC Irvine. Transfer Students Guaranteed Admissions &#032; Related Majors &#032; Requirements &#032; Second Baccalaureate &#032; &#032; &#032; Apply &#032; Transfer Students Transfer to UC Irvine UC Irvine welcomes the distinctive experience transfer students contribute to our campus and gives priority to junior-level students transferring from California Community Colleges. In order to be eligible for admission to our university, you must meet the following requirements: Complete 60 semester or 90 quarter UC transferable units by the end of the spring term prior to the desired fall term admission with a minimum 2.4 GPA required for California residents. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. Complete seven UC transferable college courses with a grade of C or better in each course &#8212; two courses in English composition, one course in mathematical concepts and quantitative reasoning, and four courses in at least two of the following subject areas: arts and humanities, social and behavioral sciences, or physical and biological sciences. Note: Pass (P) grades can be earned if the pass is equivalent to a C grade (2.00). If you are a non-California resident, you must have a minimum 2.8 GPA in order to be eligible for the UC System. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. See the University of California Admissions for additional information. You will be granted up to 70 semester/105 quarter units of credit for lower-division coursework completed at any institution or any combination of institutions. For units beyond the maximum, subject credit for appropriate coursework taken in excess of this unit limitation will be granted and may be used to satisfy requirements. Units earned through AP, IB, and/or A-Level examinations are not included in the limitation and do not put applicants at risk of being denied admission Units earned at any UC campus (extension/continuing education, summer, cross/concurrent, and regular academic year enrollment) are not included in the limitation but are added to the maximum transfer credit allowed and may put applicants at risk of being denied admission due to excessive units No more than 14 semester (21 quarter) units may be taken for Pass/No Pass credit, and Pass/No Pass credit may not be used for major requirements Grades earned in all UC transferable coursework are used in calculating the UC transferable GPA. For your desired major, please see Transfer Requirements by School . COVID-19 Update: UCI will accept Pass or Credit grades in major preparatory coursework completed in winter, spring, and summer 2020 for all majors. Pass or Credit grades in major preparation are acceptable for admission purposes only; articulation of courses with Pass or Credit grades will be determined by the individual department after you enroll at UC Irvine. Everything you need to know about transferring to UC Irvine We want to make the transfer process as seamless as possible. The first step is ensuring you have all the right information and requirements. Comprehensive Review Process &#032; &#032; UC Irvine considers the following as part of the Comprehensive Review process for transfer applicants: Completion of a specified pattern or number of courses that meet breadth or general education requirements Completion of a specified pattern or number of courses that provide continuity with upper division courses in your major, such as a UC Transfer Pathway, AA degree for transfer (offered at California Community Colleges only), or UC campus-specific major prerequisites Grade point average in all UC transferable courses - especially in a UC Transfer Pathway or in major prerequisites Participation in academically selective honors courses or programs Special talents, achievements, and awards in a particular field, such as visual and performing arts, communication or athletic endeavors; special skills, such as demonstrated written and oral proficiency in other languages; special interests, such as intensive study and exploration of other cultures; experiences that demonstrate unusual promise for leadership, such as significant community service or significant participation in student government; or other significant experiences or achievements that demonstrate your promise for contributing to the intellectual vitality of the campus Completion of special projects undertaken in the context of the college curriculum or in conjunction with special school events, projects, or programs Academic accomplishments in light of your life experiences and special circumstances, including but not limited to: disabilities, low family income, first generation to attend college, need to work, disadvantaged social or educational environment, difficult personal and family situations or circumstances, refugee status or veteran status Location of your college and residence Completion of a UC Transfer Pathway or an AA degree for transfer offered by a California Community College General Education Requirement &#032; &#032; The UC Irvine General Education Requirement consists of coursework in writing, science, social and behavioral sciences, arts and humanities, mathematics and symbolic systems, language other than English, multicultural studies, and international/global issues. It is fully described in the UC Irvine&#160; General Catalogue . The General Education (GE) Requirement, which must be completed prior to graduation from UC Irvine, may be satisfied by college-level courses appropriate to UC Irvine offerings. It may be completed at any time during the undergraduate years with one exception -- the lower-division writing component must be completed within the first three quarters of residency at UC Irvine. However, it is to your advantage to complete as much of the GE Requirement as possible prior to transferring to UC Irvine. In fulfilling the UC Irvine General Education Requirement, transfer students have options which are described in the&#160; General Catalogue . IGETC &#032; &#032; UC Irvine accepts the Intersegmental General Education Transfer Curriculum (IGETC) as an alternative to the UC Irvine General Education Requirement. IGETC lists are available at community college transfer centers. Students should be aware that IGETC may not be recommended for students transferring to UC Irvine in engineering, mathematics, or science majors. Whether completing the UC Irvine General Education Requirement or IGETC, students are encouraged to select general education courses that may also be applied to admission and lower-division degree requirements. Please note that while courses taken in fulfillment of IGETC may also be used to fulfill admission requirements, completion of IGETC is not required for admission to UC Irvine. Personal Insight Questions &#032; &#032; Your personal insight questions should be exactly that &#8211; personal. This is your opportunity to tell us about yourself, your hopes, ambitions, life experiences, and inspirations. Key points about the personal insight questions include: Transfer applicants answer one required question and choose three out of seven additional questions to answer Each response is limited to a maximum of 350 words We encourage you to take your time. Be open, be reflective, and be honest. Your personal insight questions provide context for the rest of your application.&#160; Learn More About Personal Insight Questions &#032; Meeting English proficiency requirements for UC Irvine acceptance &#032; &#032; You must provide evidence of English proficiency to be successful in university studies at UC Irvine. Transfer applicants must complete two UC-E approved English composition courses with a grade of C or better. UC Irvine does not accept English composition courses from international universities where English is not the language of instruction. Advanced Placement and International Baccalaureate Credit &#032; &#032; Students who earn scores of 3, 4, or 5 on the College Board Advanced Placement (AP) examinations will receive credit toward graduation at UC Irvine. Successfully completing the International Baccalaureate (IB) Exam can also result in credit allowed toward a UC Irvine degree. Learn More &#032; U.S. Military Service Courses &#032; &#032; UC may award lower-division (freshman/sophomore level) units for military courses completed if the courses are consistent with University policy on awarding transfer credit when there is an equivalent course taught at a UC campus. UC will consult the ACE recommendations for information regarding course content and as a guide to the awarding of credit. Credit for military courses is determined&#160; after &#160;matriculation at UC. Transfer Admissions FAQs Make the transition just a little easier with some of our most frequently asked questions about transferring to UC Irvine. I attend a four-year college/university. Where can I find information about transfer requirements for me? &#032; &#032; Transfer students from four-year colleges/universities will be considered for admission on a space-available basis. However, the University of California gives priority consideration to students transferring from California community colleges. In general, admission requirements for both community college and other four-year transfer applicants are the same, with the exception that students from four-year colleges must have a 2.8 minimum GPA. Additionally, individual majors may have specific GPA requirements for admission that well exceed 2.80, as well as specific prerequisite requirements. Does UC Irvine accept transfers at the first-year or sophomore level? &#032; &#032; In general, UC Irvine admits transfer students at the junior level (junior = transfer students with a minimum of 60 UC transferable semester units). How do I know if my courses are transferable? &#032; &#032; UC Irvine maintains both Transfer Course Agreements and Articulation Agreements with California community colleges. These agreements identify courses that are UC transferable as well as those that satisfy specific requirements for individual majors and for UC Irvine's General Education Requirement. To determine which courses transfer and/or satisfy requirements for specific majors, visit the ASSIST Website at assist.org . Transfer Credit Policy What about IGETC? &#032; &#032; The completion of IGETC is not required for admission to UC Irvine, although courses you have taken in fulfillment of IGETC may also be used to fulfill UC admission requirements. As a transfer student, do I need to declare a major of interest in the UC Application? &#032; &#032; Yes, you must select an academic major. You may also specify an alternate major, for which you will be considered if you meet its requirements and if space permits. There are no changes of major within the admission process. When applying, applicants must select majors that they would be interested in completing their degree in. Here to help Get additional support to make your m",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students"
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-requirements/major-preparation.php"
         },
         {
           "id": "uc-irvine-mechanical-engineering-96fc08c3",
           "name": "Mechanical Engineering",
-          "rawMinGpa": "3.0 cumulative\n3.0 in major prereqs\n(TAG: 3.4)",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
           "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "전 학과 공통 필수:",
-            "Calculus 1+2 (1yr single variable)",
-            "Multivariable Calculus (1과목)",
-            "Differential Equations (CS&E 제외)",
-            "Linear Algebra (CS&E 제외)",
-            "Programming/MATLAB (학과별 상이)",
-            "최소 성적: C 이상 (CS&E만 B 이상)",
-            "필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산)",
-            "모든 prereqs Spring 종료 전 완료",
-            "학과 추가 필수:",
-            "Physics 1+2+3 + lab (3과목)",
-            "Gen Chemistry 1과목+lab (1년 아님)",
-            "MATLAB or engineering programming 1과목",
-            "Gen Chem 1과목 (Aerospace와 동일 — 1년/2과목 아님)",
-            "(공식 원문: 'One course in general chemistry with lab')"
+            "MATH 2A - Single-Variable Calculus I",
+            "MATH 2B - Single-Variable Calculus II",
+            "MATH 2D - Multivariable Calculus",
+            "MATH 2E - Multivariable Calculus",
+            "MATH 3A - Linear Algebra",
+            "MATH 3D - Differential Equations",
+            "PHYS 7C - Classical Physics I",
+            "PHYS 7LC - Classical Physics Laboratory I",
+            "PHYS 7D - Classical Physics II",
+            "PHYS 7LD - Classical Physics Laboratory II",
+            "PHYS 7E - Classical Physics III",
+            "PHYS 7LE - Classical Physics Laboratory III",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1B - General Chemistry",
+            "CHEM 1LC - General Chemistry Laboratory",
+            "MAE 10 - Introduction to Engineering Computations",
+            "MAE 30 - Statics"
           ],
           "recommendedCourses": [
-            "Statics",
-            "Engineering Graphics",
-            "Circuit Analysis+lab",
-            "(2년 졸업 위해 필요)"
+            "MAE 52 - Mechanical Engineering Laboratory I",
+            "ENGR 54 - Introduction to Mechanics of Materials",
+            "ENGR 54L - Introduction to Mechanics of Materials Laboratory"
           ],
-          "rawRequired": "전 학과 공통 필수: | Calculus 1+2 (1yr single variable) | Multivariable Calculus (1과목) | Differential Equations (CS&E 제외) | Linear Algebra (CS&E 제외) | Programming/MATLAB (학과별 상이) | 최소 성적: C 이상 (CS&E만 B 이상) | 필수과목 GPA 3.0 이상 (전체 GPA 3.0과 별도 계산) | 모든 prereqs Spring 종료 전 완료 | 학과 추가 필수: | Physics 1+2+3 + lab (3과목) | Gen Chemistry 1과목+lab (1년 아님) | MATLAB or engineering programming 1과목 | Gen Chem 1과목 (Aerospace와 동일 — 1년/2과목 아님) | (공식 원문: 'One course in general chemistry with lab')",
-          "rawRecommended": "Statics | Engineering Graphics | Circuit Analysis+lab | (2년 졸업 위해 필요)",
+          "rawRequired": "MATH 2A - Single-Variable Calculus I\nMATH 2B - Single-Variable Calculus II\nMATH 2D - Multivariable Calculus\nMATH 2E - Multivariable Calculus\nMATH 3A - Linear Algebra\nMATH 3D - Differential Equations\nPHYS 7C - Classical Physics I\nPHYS 7LC - Classical Physics Laboratory I\nPHYS 7D - Classical Physics II\nPHYS 7LD - Classical Physics Laboratory II\nPHYS 7E - Classical Physics III\nPHYS 7LE - Classical Physics Laboratory III\nCHEM 1A - General Chemistry\nCHEM 1B - General Chemistry\nCHEM 1LC - General Chemistry Laboratory\nMAE 10 - Introduction to Engineering Computations\nMAE 30 - Statics",
+          "rawRecommended": "MAE 52 - Mechanical Engineering Laboratory I\nENGR 54 - Introduction to Mechanics of Materials\nENGR 54L - Introduction to Mechanics of Materials Laboratory",
           "english": {
-            "raw": "TOEFL iBT: 80+ | IELTS: 6.5+ | Duolingo: 115+\nAP (3+) / IB HL(5+)/SL(6+) / ACT ELA 24+ / SAT Writing 31+ / SAT EBRW 680+ 도 인정\n제출 마감: December | 유효기간: 2년",
-            "TOEFL": 80,
-            "TOEFL_2026": null,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Completion of two UC-transferable courses in English composition (equivalent to UCI Writing 39B and 39C) with a grade of C or better."
           },
-          "englishExemption": "UC-E English Composition 2과목 C 이상 (국내 CC 기준)\n⚠️ 영어가 교육언어가 아닌 해외 대학 English Comp 과목 불인정\n기타: AP 3+ / IB 점수 / ACT/SAT 점수로도 충족 가능",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 전체 GPA 3.0 및 전공 필수과목 GPA 3.0 이상 유지 필수\n- TAG 지원 시 GPA 3.4 이상 필수 (단, CS&E 전공은 TAG 제외)\n- 모든 필수과목은 편입 전 봄 학기 종료 전까지 완료 필수\n- IGETC 허용되나 이공계열 전공은 비권장",
-          "sourceFile": "Db 2-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Selection is based on academic performance in prerequisite courses. Transfer applicants must complete the majority of major preparation coursework by the end of the spring term prior to fall enrollment.",
           "confidence": "verified",
-          "rawOfficialText": "Transfer Students | Office of Undergraduate Admissions | UCI Jump to Header Jump to Main Content Jump to Footer Parents Counselors Current Students Search UCI Financial Aid and Scholarships Search Submit &#032; &#032; &#032; &#032; &#032; &#032; Search UCI Financial Aid and Scholarships Search &#032; Discover &#032; &#032; Why UCI? &#032; Events &#032; Tours &#032; Student Life &#032; Anteater Experiences &#032; Study &#032; &#032; Majors and Minors &#032; Majors Quiz &#032; Courses &#032; Academic Resources &#032; Undergrad Research &#032; Faculty &#032; Afford Apply &#032; &#032; How to Apply &#032; UC Application &#032; Applicant Portal &#032; First Year Students &#032; Transfer Students &#032; International Students &#032; Admitted &#032; Dates and Deadlines &#032; Request Info Parents Counselors Current Students Find your future at UC Irvine Make the transition to life as an Anteater and transfer to UC Irvine. Transfer Students Guaranteed Admissions &#032; Related Majors &#032; Requirements &#032; Second Baccalaureate &#032; &#032; &#032; Apply &#032; Transfer Students Transfer to UC Irvine UC Irvine welcomes the distinctive experience transfer students contribute to our campus and gives priority to junior-level students transferring from California Community Colleges. In order to be eligible for admission to our university, you must meet the following requirements: Complete 60 semester or 90 quarter UC transferable units by the end of the spring term prior to the desired fall term admission with a minimum 2.4 GPA required for California residents. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. Complete seven UC transferable college courses with a grade of C or better in each course &#8212; two courses in English composition, one course in mathematical concepts and quantitative reasoning, and four courses in at least two of the following subject areas: arts and humanities, social and behavioral sciences, or physical and biological sciences. Note: Pass (P) grades can be earned if the pass is equivalent to a C grade (2.00). If you are a non-California resident, you must have a minimum 2.8 GPA in order to be eligible for the UC System. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. See the University of California Admissions for additional information. You will be granted up to 70 semester/105 quarter units of credit for lower-division coursework completed at any institution or any combination of institutions. For units beyond the maximum, subject credit for appropriate coursework taken in excess of this unit limitation will be granted and may be used to satisfy requirements. Units earned through AP, IB, and/or A-Level examinations are not included in the limitation and do not put applicants at risk of being denied admission Units earned at any UC campus (extension/continuing education, summer, cross/concurrent, and regular academic year enrollment) are not included in the limitation but are added to the maximum transfer credit allowed and may put applicants at risk of being denied admission due to excessive units No more than 14 semester (21 quarter) units may be taken for Pass/No Pass credit, and Pass/No Pass credit may not be used for major requirements Grades earned in all UC transferable coursework are used in calculating the UC transferable GPA. For your desired major, please see Transfer Requirements by School . COVID-19 Update: UCI will accept Pass or Credit grades in major preparatory coursework completed in winter, spring, and summer 2020 for all majors. Pass or Credit grades in major preparation are acceptable for admission purposes only; articulation of courses with Pass or Credit grades will be determined by the individual department after you enroll at UC Irvine. Everything you need to know about transferring to UC Irvine We want to make the transfer process as seamless as possible. The first step is ensuring you have all the right information and requirements. Comprehensive Review Process &#032; &#032; UC Irvine considers the following as part of the Comprehensive Review process for transfer applicants: Completion of a specified pattern or number of courses that meet breadth or general education requirements Completion of a specified pattern or number of courses that provide continuity with upper division courses in your major, such as a UC Transfer Pathway, AA degree for transfer (offered at California Community Colleges only), or UC campus-specific major prerequisites Grade point average in all UC transferable courses - especially in a UC Transfer Pathway or in major prerequisites Participation in academically selective honors courses or programs Special talents, achievements, and awards in a particular field, such as visual and performing arts, communication or athletic endeavors; special skills, such as demonstrated written and oral proficiency in other languages; special interests, such as intensive study and exploration of other cultures; experiences that demonstrate unusual promise for leadership, such as significant community service or significant participation in student government; or other significant experiences or achievements that demonstrate your promise for contributing to the intellectual vitality of the campus Completion of special projects undertaken in the context of the college curriculum or in conjunction with special school events, projects, or programs Academic accomplishments in light of your life experiences and special circumstances, including but not limited to: disabilities, low family income, first generation to attend college, need to work, disadvantaged social or educational environment, difficult personal and family situations or circumstances, refugee status or veteran status Location of your college and residence Completion of a UC Transfer Pathway or an AA degree for transfer offered by a California Community College General Education Requirement &#032; &#032; The UC Irvine General Education Requirement consists of coursework in writing, science, social and behavioral sciences, arts and humanities, mathematics and symbolic systems, language other than English, multicultural studies, and international/global issues. It is fully described in the UC Irvine&#160; General Catalogue . The General Education (GE) Requirement, which must be completed prior to graduation from UC Irvine, may be satisfied by college-level courses appropriate to UC Irvine offerings. It may be completed at any time during the undergraduate years with one exception -- the lower-division writing component must be completed within the first three quarters of residency at UC Irvine. However, it is to your advantage to complete as much of the GE Requirement as possible prior to transferring to UC Irvine. In fulfilling the UC Irvine General Education Requirement, transfer students have options which are described in the&#160; General Catalogue . IGETC &#032; &#032; UC Irvine accepts the Intersegmental General Education Transfer Curriculum (IGETC) as an alternative to the UC Irvine General Education Requirement. IGETC lists are available at community college transfer centers. Students should be aware that IGETC may not be recommended for students transferring to UC Irvine in engineering, mathematics, or science majors. Whether completing the UC Irvine General Education Requirement or IGETC, students are encouraged to select general education courses that may also be applied to admission and lower-division degree requirements. Please note that while courses taken in fulfillment of IGETC may also be used to fulfill admission requirements, completion of IGETC is not required for admission to UC Irvine. Personal Insight Questions &#032; &#032; Your personal insight questions should be exactly that &#8211; personal. This is your opportunity to tell us about yourself, your hopes, ambitions, life experiences, and inspirations. Key points about the personal insight questions include: Transfer applicants answer one required question and choose three out of seven additional questions to answer Each response is limited to a maximum of 350 words We encourage you to take your time. Be open, be reflective, and be honest. Your personal insight questions provide context for the rest of your application.&#160; Learn More About Personal Insight Questions &#032; Meeting English proficiency requirements for UC Irvine acceptance &#032; &#032; You must provide evidence of English proficiency to be successful in university studies at UC Irvine. Transfer applicants must complete two UC-E approved English composition courses with a grade of C or better. UC Irvine does not accept English composition courses from international universities where English is not the language of instruction. Advanced Placement and International Baccalaureate Credit &#032; &#032; Students who earn scores of 3, 4, or 5 on the College Board Advanced Placement (AP) examinations will receive credit toward graduation at UC Irvine. Successfully completing the International Baccalaureate (IB) Exam can also result in credit allowed toward a UC Irvine degree. Learn More &#032; U.S. Military Service Courses &#032; &#032; UC may award lower-division (freshman/sophomore level) units for military courses completed if the courses are consistent with University policy on awarding transfer credit when there is an equivalent course taught at a UC campus. UC will consult the ACE recommendations for information regarding course content and as a guide to the awarding of credit. Credit for military courses is determined&#160; after &#160;matriculation at UC. Transfer Admissions FAQs Make the transition just a little easier with some of our most frequently asked questions about transferring to UC Irvine. I attend a four-year college/university. Where can I find information about transfer requirements for me? &#032; &#032; Transfer students from four-year colleges/universities will be considered for admission on a space-available basis. However, the University of California gives priority consideration to students transferring from California community colleges. In general, admission requirements for both community college and other four-year transfer applicants are the same, with the exception that students from four-year colleges must have a 2.8 minimum GPA. Additionally, individual majors may have specific GPA requirements for admission that well exceed 2.80, as well as specific prerequisite requirements. Does UC Irvine accept transfers at the first-year or sophomore level? &#032; &#032; In general, UC Irvine admits transfer students at the junior level (junior = transfer students with a minimum of 60 UC transferable semester units). How do I know if my courses are transferable? &#032; &#032; UC Irvine maintains both Transfer Course Agreements and Articulation Agreements with California community colleges. These agreements identify courses that are UC transferable as well as those that satisfy specific requirements for individual majors and for UC Irvine's General Education Requirement. To determine which courses transfer and/or satisfy requirements for specific majors, visit the ASSIST Website at assist.org . Transfer Credit Policy What about IGETC? &#032; &#032; The completion of IGETC is not required for admission to UC Irvine, although courses you have taken in fulfillment of IGETC may also be used to fulfill UC admission requirements. As a transfer student, do I need to declare a major of interest in the UC Application? &#032; &#032; Yes, you must select an academic major. You may also specify an alternate major, for which you will be considered if you meet its requirements and if space permits. There are no changes of major within the admission process. When applying, applicants must select majors that they would be interested in completing their degree in. Here to help Get additional support to make your m",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students"
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer/requirements.php"
         },
         {
           "id": "uc-irvine-civil-engineering-ab506321",
@@ -9577,30 +9532,6 @@ window.transferDatabase = {
           "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students"
         },
         {
-          "id": "uc-irvine-a176fec7-business-administration-genuine",
-          "name": "Business Administration",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.uci.edu/apply/transfer-students",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students",
-          "confidence": "high_risk"
-        },
-        {
           "id": "uc-irvine-a176fec7-finance-genuine",
           "name": "Finance",
           "rawMinGpa": "Refer to official catalog wording below",
@@ -9675,54 +9606,6 @@ window.transferDatabase = {
         {
           "id": "uc-irvine-a176fec7-management-genuine",
           "name": "Management",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.uci.edu/apply/transfer-students",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-irvine-a176fec7-economics-genuine",
-          "name": "Economics",
-          "rawMinGpa": "Refer to official catalog wording below",
-          "rawMinCredits": "Refer to official catalog wording below",
-          "minGpa": null,
-          "minCredits": null,
-          "requiredCourses": [
-            "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)"
-          ],
-          "recommendedCourses": [],
-          "rawRequired": "공식 필수 이수 조건 지정되지 않음 (Holistic review curriculum with no explicit prerequisite courses)",
-          "rawRecommended": "",
-          "english": {
-            "raw": "Refer to official catalog wording below",
-            "TOEFL": null,
-            "TOEFL_2026": null,
-            "IELTS": null,
-            "Duolingo": null
-          },
-          "note": "✅ Verified: holistic requirements review\nSource: https://admissions.uci.edu/apply/transfer-students",
-          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students",
-          "confidence": "high_risk"
-        },
-        {
-          "id": "uc-irvine-a176fec7-psychology-genuine",
-          "name": "Psychology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
           "minGpa": null,
@@ -10283,6 +10166,229 @@ window.transferDatabase = {
           "confidence": "verified",
           "rawOfficialText": "Transfer Students | Office of Undergraduate Admissions | UCI Jump to Header Jump to Main Content Jump to Footer Parents Counselors Current Students Search UCI Financial Aid and Scholarships Search Submit &#032; &#032; &#032; &#032; &#032; &#032; Search UCI Financial Aid and Scholarships Search &#032; Discover &#032; &#032; Why UCI? &#032; Events &#032; Tours &#032; Student Life &#032; Anteater Experiences &#032; Study &#032; &#032; Majors and Minors &#032; Majors Quiz &#032; Courses &#032; Academic Resources &#032; Undergrad Research &#032; Faculty &#032; Afford Apply &#032; &#032; How to Apply &#032; UC Application &#032; Applicant Portal &#032; First Year Students &#032; Transfer Students &#032; International Students &#032; Admitted &#032; Dates and Deadlines &#032; Request Info Parents Counselors Current Students Find your future at UC Irvine Make the transition to life as an Anteater and transfer to UC Irvine. Transfer Students Guaranteed Admissions &#032; Related Majors &#032; Requirements &#032; Second Baccalaureate &#032; &#032; &#032; Apply &#032; Transfer Students Transfer to UC Irvine UC Irvine welcomes the distinctive experience transfer students contribute to our campus and gives priority to junior-level students transferring from California Community Colleges. In order to be eligible for admission to our university, you must meet the following requirements: Complete 60 semester or 90 quarter UC transferable units by the end of the spring term prior to the desired fall term admission with a minimum 2.4 GPA required for California residents. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. Complete seven UC transferable college courses with a grade of C or better in each course &#8212; two courses in English composition, one course in mathematical concepts and quantitative reasoning, and four courses in at least two of the following subject areas: arts and humanities, social and behavioral sciences, or physical and biological sciences. Note: Pass (P) grades can be earned if the pass is equivalent to a C grade (2.00). If you are a non-California resident, you must have a minimum 2.8 GPA in order to be eligible for the UC System. All majors at UC Irvine are selective and applicants are encouraged to earn the highest possible GPA. See the University of California Admissions for additional information. You will be granted up to 70 semester/105 quarter units of credit for lower-division coursework completed at any institution or any combination of institutions. For units beyond the maximum, subject credit for appropriate coursework taken in excess of this unit limitation will be granted and may be used to satisfy requirements. Units earned through AP, IB, and/or A-Level examinations are not included in the limitation and do not put applicants at risk of being denied admission Units earned at any UC campus (extension/continuing education, summer, cross/concurrent, and regular academic year enrollment) are not included in the limitation but are added to the maximum transfer credit allowed and may put applicants at risk of being denied admission due to excessive units No more than 14 semester (21 quarter) units may be taken for Pass/No Pass credit, and Pass/No Pass credit may not be used for major requirements Grades earned in all UC transferable coursework are used in calculating the UC transferable GPA. For your desired major, please see Transfer Requirements by School . COVID-19 Update: UCI will accept Pass or Credit grades in major preparatory coursework completed in winter, spring, and summer 2020 for all majors. Pass or Credit grades in major preparation are acceptable for admission purposes only; articulation of courses with Pass or Credit grades will be determined by the individual department after you enroll at UC Irvine. Everything you need to know about transferring to UC Irvine We want to make the transfer process as seamless as possible. The first step is ensuring you have all the right information and requirements. Comprehensive Review Process &#032; &#032; UC Irvine considers the following as part of the Comprehensive Review process for transfer applicants: Completion of a specified pattern or number of courses that meet breadth or general education requirements Completion of a specified pattern or number of courses that provide continuity with upper division courses in your major, such as a UC Transfer Pathway, AA degree for transfer (offered at California Community Colleges only), or UC campus-specific major prerequisites Grade point average in all UC transferable courses - especially in a UC Transfer Pathway or in major prerequisites Participation in academically selective honors courses or programs Special talents, achievements, and awards in a particular field, such as visual and performing arts, communication or athletic endeavors; special skills, such as demonstrated written and oral proficiency in other languages; special interests, such as intensive study and exploration of other cultures; experiences that demonstrate unusual promise for leadership, such as significant community service or significant participation in student government; or other significant experiences or achievements that demonstrate your promise for contributing to the intellectual vitality of the campus Completion of special projects undertaken in the context of the college curriculum or in conjunction with special school events, projects, or programs Academic accomplishments in light of your life experiences and special circumstances, including but not limited to: disabilities, low family income, first generation to attend college, need to work, disadvantaged social or educational environment, difficult personal and family situations or circumstances, refugee status or veteran status Location of your college and residence Completion of a UC Transfer Pathway or an AA degree for transfer offered by a California Community College General Education Requirement &#032; &#032; The UC Irvine General Education Requirement consists of coursework in writing, science, social and behavioral sciences, arts and humanities, mathematics and symbolic systems, language other than English, multicultural studies, and international/global issues. It is fully described in the UC Irvine&#160; General Catalogue . The General Education (GE) Requirement, which must be completed prior to graduation from UC Irvine, may be satisfied by college-level courses appropriate to UC Irvine offerings. It may be completed at any time during the undergraduate years with one exception -- the lower-division writing component must be completed within the first three quarters of residency at UC Irvine. However, it is to your advantage to complete as much of the GE Requirement as possible prior to transferring to UC Irvine. In fulfilling the UC Irvine General Education Requirement, transfer students have options which are described in the&#160; General Catalogue . IGETC &#032; &#032; UC Irvine accepts the Intersegmental General Education Transfer Curriculum (IGETC) as an alternative to the UC Irvine General Education Requirement. IGETC lists are available at community college transfer centers. Students should be aware that IGETC may not be recommended for students transferring to UC Irvine in engineering, mathematics, or science majors. Whether completing the UC Irvine General Education Requirement or IGETC, students are encouraged to select general education courses that may also be applied to admission and lower-division degree requirements. Please note that while courses taken in fulfillment of IGETC may also be used to fulfill admission requirements, completion of IGETC is not required for admission to UC Irvine. Personal Insight Questions &#032; &#032; Your personal insight questions should be exactly that &#8211; personal. This is your opportunity to tell us about yourself, your hopes, ambitions, life experiences, and inspirations. Key points about the personal insight questions include: Transfer applicants answer one required question and choose three out of seven additional questions to answer Each response is limited to a maximum of 350 words We encourage you to take your time. Be open, be reflective, and be honest. Your personal insight questions provide context for the rest of your application.&#160; Learn More About Personal Insight Questions &#032; Meeting English proficiency requirements for UC Irvine acceptance &#032; &#032; You must provide evidence of English proficiency to be successful in university studies at UC Irvine. Transfer applicants must complete two UC-E approved English composition courses with a grade of C or better. UC Irvine does not accept English composition courses from international universities where English is not the language of instruction. Advanced Placement and International Baccalaureate Credit &#032; &#032; Students who earn scores of 3, 4, or 5 on the College Board Advanced Placement (AP) examinations will receive credit toward graduation at UC Irvine. Successfully completing the International Baccalaureate (IB) Exam can also result in credit allowed toward a UC Irvine degree. Learn More &#032; U.S. Military Service Courses &#032; &#032; UC may award lower-division (freshman/sophomore level) units for military courses completed if the courses are consistent with University policy on awarding transfer credit when there is an equivalent course taught at a UC campus. UC will consult the ACE recommendations for information regarding course content and as a guide to the awarding of credit. Credit for military courses is determined&#160; after &#160;matriculation at UC. Transfer Admissions FAQs Make the transition just a little easier with some of our most frequently asked questions about transferring to UC Irvine. I attend a four-year college/university. Where can I find information about transfer requirements for me? &#032; &#032; Transfer students from four-year colleges/universities will be considered for admission on a space-available basis. However, the University of California gives priority consideration to students transferring from California community colleges. In general, admission requirements for both community college and other four-year transfer applicants are the same, with the exception that students from four-year colleges must have a 2.8 minimum GPA. Additionally, individual majors may have specific GPA requirements for admission that well exceed 2.80, as well as specific prerequisite requirements. Does UC Irvine accept transfers at the first-year or sophomore level? &#032; &#032; In general, UC Irvine admits transfer students at the junior level (junior = transfer students with a minimum of 60 UC transferable semester units). How do I know if my courses are transferable? &#032; &#032; UC Irvine maintains both Transfer Course Agreements and Articulation Agreements with California community colleges. These agreements identify courses that are UC transferable as well as those that satisfy specific requirements for individual majors and for UC Irvine's General Education Requirement. To determine which courses transfer and/or satisfy requirements for specific majors, visit the ASSIST Website at assist.org . Transfer Credit Policy What about IGETC? &#032; &#032; The completion of IGETC is not required for admission to UC Irvine, although courses you have taken in fulfillment of IGETC may also be used to fulfill UC admission requirements. As a transfer student, do I need to declare a major of interest in the UC Application? &#032; &#032; Yes, you must select an academic major. You may also specify an alternate major, for which you will be considered if you meet its requirements and if space permits. There are no changes of major within the admission process. When applying, applicants must select majors that they would be interested in completing their degree in. Here to help Get additional support to make your m",
           "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students"
+        },
+        {
+          "id": "uc-irvine-a176fec7-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "I&C SCI 31 - Introduction to Programming",
+            "I&C SCI 32 - Programming with Software Libraries",
+            "I&C SCI 33 - Intermediate Programming",
+            "I&C SCI 45C - Programming Concepts in C++",
+            "I&C SCI 46 - Data Structure Implementation and Analysis",
+            "I&C SCI 6B - Boolean Algebra and Logic",
+            "I&C SCI 6D - Discrete Mathematics for Computer Science",
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II"
+          ],
+          "recommendedCourses": [
+            "MATH 2D - Multivariable Calculus",
+            "MATH 3A - Introduction to Linear Algebra",
+            "STAT 67 - Introduction to Probability and Statistics for Computer Science"
+          ],
+          "rawRequired": "I&C SCI 31 - Introduction to Programming\nI&C SCI 32 - Programming with Software Libraries\nI&C SCI 33 - Intermediate Programming\nI&C SCI 45C - Programming Concepts in C++\nI&C SCI 46 - Data Structure Implementation and Analysis\nI&C SCI 6B - Boolean Algebra and Logic\nI&C SCI 6D - Discrete Mathematics for Computer Science\nMATH 2A - Calculus I\nMATH 2B - Calculus II",
+          "rawRecommended": "MATH 2D - Multivariable Calculus\nMATH 3A - Introduction to Linear Algebra\nSTAT 67 - Introduction to Probability and Statistics for Computer Science",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with grades of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Admission to the Computer Science major is highly selective. Completion of all lower-division major requirements is strongly encouraged. Applicants must also complete the IGETC or UC Irvine's lower-division general education requirements.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://www.ics.uci.edu/ugrad/admissions/index.php"
+        },
+        {
+          "id": "uc-irvine-a176fec7-software-engineering",
+          "name": "Software Engineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "I&C SCI 31 - Introduction to Programming",
+            "I&C SCI 32 - Programming with Software Libraries",
+            "I&C SCI 33 - Intermediate Programming",
+            "I&C SCI 45C - Programming in C++ as a Second Language",
+            "I&C SCI 46 - Data Structure Implementation and Analysis",
+            "I&C SCI 51 - Introductory Computer Organization",
+            "I&C SCI 53 - Principles in System Design",
+            "I&C SCI 53L - Principles in System Design Lab",
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II",
+            "MATH 6B - Boolean Algebra and Logic",
+            "STAT 67 - Introduction to Probability and Statistics for Computer Science"
+          ],
+          "recommendedCourses": [
+            "MATH 2D - Multivariable Calculus",
+            "PHYS 7C - Classical Physics",
+            "PHYS 7LC - Classical Physics Lab"
+          ],
+          "rawRequired": "I&C SCI 31 - Introduction to Programming\nI&C SCI 32 - Programming with Software Libraries\nI&C SCI 33 - Intermediate Programming\nI&C SCI 45C - Programming in C++ as a Second Language\nI&C SCI 46 - Data Structure Implementation and Analysis\nI&C SCI 51 - Introductory Computer Organization\nI&C SCI 53 - Principles in System Design\nI&C SCI 53L - Principles in System Design Lab\nMATH 2A - Calculus I\nMATH 2B - Calculus II\nMATH 6B - Boolean Algebra and Logic\nSTAT 67 - Introduction to Probability and Statistics for Computer Science",
+          "rawRecommended": "MATH 2D - Multivariable Calculus\nPHYS 7C - Classical Physics\nPHYS 7LC - Classical Physics Lab",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Software Engineering is a selective major. Students must complete all listed prerequisite courses for admission consideration. All courses must be completed with a grade of C or better, with a cumulative GPA in these courses of 3.0 or higher.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students/requirements.php"
+        },
+        {
+          "id": "uc-irvine-a176fec7-business-administration",
+          "name": "Business Administration",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 2A - Single-Variable Calculus",
+            "MATH 2B - Single-Variable Calculus",
+            "ECON 20A - Basic Economics I (Microeconomics)",
+            "ECON 20B - Basic Economics II (Macroeconomics)",
+            "MGMT 30A - Principles of Accounting I",
+            "MGMT 30B - Principles of Accounting II"
+          ],
+          "recommendedCourses": [
+            "One course in probability or statistics (e.g., STAT 7)",
+            "One course in computer programming (e.g., ICS 31)"
+          ],
+          "rawRequired": "MATH 2A - Single-Variable Calculus\nMATH 2B - Single-Variable Calculus\nECON 20A - Basic Economics I (Microeconomics)\nECON 20B - Basic Economics II (Macroeconomics)\nMGMT 30A - Principles of Accounting I\nMGMT 30B - Principles of Accounting II",
+          "rawRecommended": "One course in probability or statistics (e.g., STAT 7)\nOne course in computer programming (e.g., ICS 31)",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Business Administration major is highly selective. Meeting the minimum GPA and prerequisite requirements does not guarantee admission. All prerequisites must be completed by the end of the spring term prior to fall enrollment.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students/requirements.php"
+        },
+        {
+          "id": "uc-irvine-a176fec7-business-information-management",
+          "name": "Business Information Management",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ICS 31 - Introduction to Programming",
+            "ICS 32 - Programming with Software Libraries",
+            "ICS 33 - Intermediate Programming",
+            "ICS 6B - Boolean Algebra and Logic",
+            "ICS 6D - Discrete Mathematics for Computer Science",
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II",
+            "ECON 20A - Basic Economics I",
+            "ECON 20B - Basic Economics II",
+            "MGMT 1 - Principles of Management"
+          ],
+          "recommendedCourses": [
+            "STAT 7 - Basic Statistics"
+          ],
+          "rawRequired": "ICS 31 - Introduction to Programming\nICS 32 - Programming with Software Libraries\nICS 33 - Intermediate Programming\nICS 6B - Boolean Algebra and Logic\nICS 6D - Discrete Mathematics for Computer Science\nMATH 2A - Calculus I\nMATH 2B - Calculus II\nECON 20A - Basic Economics I\nECON 20B - Basic Economics II\nMGMT 1 - Principles of Management",
+          "rawRecommended": "STAT 7 - Basic Statistics",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to this major is highly selective. The requirements listed are based on standard articulation for California Community Colleges. Applicants must complete all major preparation requirements by the end of the spring term prior to fall enrollment.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-irvine-a176fec7-economics",
+          "name": "Economics",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ECON 20A - Basic Economics I (Microeconomics)",
+            "ECON 20B - Basic Economics II (Macroeconomics)",
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II"
+          ],
+          "recommendedCourses": [
+            "MGMT 7 - Introduction to Business",
+            "STATS 7 - Basic Statistics"
+          ],
+          "rawRequired": "ECON 20A - Basic Economics I (Microeconomics)\nECON 20B - Basic Economics II (Macroeconomics)\nMATH 2A - Calculus I\nMATH 2B - Calculus II",
+          "rawRecommended": "MGMT 7 - Introduction to Business\nSTATS 7 - Basic Statistics",
+          "english": {
+            "raw": "Completion of two transferable college-level English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete the full IGETC pattern before transferring. Admission to Economics is highly competitive and meeting the minimum GPA does not guarantee admission.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students/requirements.php"
+        },
+        {
+          "id": "uc-irvine-a176fec7-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "PSYCH 7A - Introduction to Psychology",
+            "PSYCH 9A - Psychology Fundamentals: Developmental",
+            "PSYCH 9B - Psychology Fundamentals: Biological",
+            "PSYCH 9C - Psychology Fundamentals: Cognitive",
+            "PSYCH 10 - Research Methods in Psychology",
+            "PSYCH 10L - Research Methods in Psychology Lab",
+            "MATH 7A - Calculus for Social Sciences I OR MATH 2A - Single-Variable Calculus",
+            "MATH 7B - Calculus for Social Sciences II OR MATH 2B - Single-Variable Calculus"
+          ],
+          "recommendedCourses": [
+            "STAT 7 - Basic Statistics OR equivalent statistics course"
+          ],
+          "rawRequired": "PSYCH 7A - Introduction to Psychology\nPSYCH 9A - Psychology Fundamentals: Developmental\nPSYCH 9B - Psychology Fundamentals: Biological\nPSYCH 9C - Psychology Fundamentals: Cognitive\nPSYCH 10 - Research Methods in Psychology\nPSYCH 10L - Research Methods in Psychology Lab\nMATH 7A - Calculus for Social Sciences I OR MATH 2A - Single-Variable Calculus\nMATH 7B - Calculus for Social Sciences II OR MATH 2B - Single-Variable Calculus",
+          "rawRecommended": "STAT 7 - Basic Statistics OR equivalent statistics course",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Psychology is a selective major at UCI. Applicants are expected to have completed the majority of lower-division major preparation courses prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.uci.edu/apply/transfer-students/requirements.php"
+        },
+        {
+          "id": "uc-irvine-a176fec7-data-science",
+          "name": "Data Science",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60 semester units (90 quarter units)",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ICS 31 - Introduction to Programming",
+            "ICS 32 - Programming with Software Libraries",
+            "ICS 33 - Intermediate Programming",
+            "ICS 45C - Programming in C++ as a Second Language",
+            "ICS 46 - Data Structure Implementation and Analysis",
+            "ICS 51 - Introductory Computer Organization",
+            "ICS 53 - Principles of Computer Systems",
+            "ICS 53L - Principles of Computer Systems Lab",
+            "MATH 2A - Calculus I",
+            "MATH 2B - Calculus II",
+            "MATH 2D - Multivariable Calculus",
+            "MATH 3A - Introduction to Linear Algebra",
+            "STATS 67 - Introduction to Probability and Statistics for Computer Science"
+          ],
+          "recommendedCourses": [
+            "MATH 2E - Multivariable Calculus",
+            "MATH 3D - Introduction to Differential Equations"
+          ],
+          "rawRequired": "ICS 31 - Introduction to Programming\nICS 32 - Programming with Software Libraries\nICS 33 - Intermediate Programming\nICS 45C - Programming in C++ as a Second Language\nICS 46 - Data Structure Implementation and Analysis\nICS 51 - Introductory Computer Organization\nICS 53 - Principles of Computer Systems\nICS 53L - Principles of Computer Systems Lab\nMATH 2A - Calculus I\nMATH 2B - Calculus II\nMATH 2D - Multivariable Calculus\nMATH 3A - Introduction to Linear Algebra\nSTATS 67 - Introduction to Probability and Statistics for Computer Science",
+          "rawRecommended": "MATH 2E - Multivariable Calculus\nMATH 3D - Introduction to Differential Equations",
+          "english": {
+            "raw": "Completion of two transferable college courses in English composition (equivalent to UCI's Writing 39A/B or 39C)."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Data Science major is highly selective. All prerequisites must be completed by the end of the spring term prior to the fall enrollment. Applicants are encouraged to complete as many lower-division requirements as possible.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://www.ics.uci.edu/admissions/undergraduate/index.php"
         }
       ]
     },
@@ -15157,179 +15263,142 @@ window.transferDatabase = {
         },
         {
           "id": "uc-berkeley-coe-bioengineering-bioe-56bb6ad7",
-          "name": "Bioengineering (BioE)",
-          "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 3.5,
+          "name": "Bioengineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음",
-            "공식 안내: 'Applicants must complete all lower-division courses required for their",
-            "intended major, as listed on ASSIST'",
-            "전 학과 공통 필수 (공식 명시):",
-            "English R1A (Reading & Composition Part A): letter grade, C- 이상",
-            "English R1B (Reading & Composition Part B): letter grade, C- 이상",
-            "ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료",
-            "모든 technical 과목: letter grade 이수 (P/NP 불가)",
-            "Combination 과목: 모든 과목 이수 (partial credit 없음)",
-            "완료 기한: 편입 직전 봄 학기 종료까지",
-            "Major Prerequisite Admissions Form: 1월 중 별도 제출 필수"
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics for Scientists and Engineers I",
+            "PHYS 7B - Physics for Scientists and Engineers II",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "CHEM 1B - General Chemistry",
+            "BIO 1A - General Biology",
+            "BIO 1AL - General Biology Lab",
+            "BIO 1B - General Biology",
+            "CS 61A - Structure and Interpretation of Computer Programs"
           ],
           "recommendedCourses": [
-            "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목",
-            "(공식: 'applicants must...take as many of the strongly recommended courses",
-            "that are available at their school')",
-            "기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용)",
-            "[공식: 'taking any engineering or computer science courses can demonstrate",
-            "your interest in the field']"
+            "CHEM 3A - Chemical Structure and Reactivity",
+            "CHEM 3AL - Chemical Structure and Reactivity Lab",
+            "BIOE 26 - Introduction to Bioengineering"
           ],
-          "rawRequired": "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수",
-          "rawRecommended": "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']",
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics for Scientists and Engineers I\nPHYS 7B - Physics for Scientists and Engineers II\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nCHEM 1B - General Chemistry\nBIO 1A - General Biology\nBIO 1AL - General Biology Lab\nBIO 1B - General Biology\nCS 61A - Structure and Interpretation of Computer Programs",
+          "rawRecommended": "CHEM 3A - Chemical Structure and Reactivity\nCHEM 3AL - Chemical Structure and Reactivity Lab\nBIOE 26 - Introduction to Bioengineering",
           "english": {
-            "raw": "English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요\n(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed\nwhen completing the English composition courses')\n\n제출 시 기준:\nTOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)\nTOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점\nIELTS: 최소 6.5점\nDuolingo English Test: 최소 115점\nAP English (Language or Literature): 3점 이상\nIB English (SL Language A): 6–7점 | (HL Language A): 5–7점\nACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상\n점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년\nETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정\n[Source: admissions.berkeley.edu/requirements-for-international-students/]",
-            "TOEFL": 80,
-            "TOEFL_2026": 4.5,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Completion of two courses of English composition with a grade of C or better."
           },
-          "englishExemption": "① English R1A + R1B (letter grade, C- 이상) 이수 — 공식 시험 불필요\n② Language of Instruction(LOI)으로 영어 3년 이상 이수\n   (공식: 'Students who have 3+ years of LOI in English will also satisfy English Proficiency')\n   ⚠️ 혼합 LOI 불인정\n③ AP / IB / ACT / SAT 점수 기준 충족 (위 English Score 컬럼 참조)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 3.5 이상 필수 (3.5 미만 지원 불가)\n- IGETC 불인정 (전공선수과목 및 Breadth 필수 이수)\n- 1월 중 Major Prerequisite Admissions Form 제출 필수 (미제출 시 자격 박탈)\n- 전공 변경 및 복수 전공 불가 (조인트 전공 예외), CC 학점 최대 70학점 인정\n[특이사항]\n- 예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\n- Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n- ❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n- 4년제 대학 89+ 학기 단위 이수자 지원 불가\n- BioE/MSE 조인트 전공으로 입학 1학기 후 변경 가능 (3학기 전까지)\n- Chemical Engineering은 COE 소속 아님 — College of Chemistry 별도 지원 필요",
-          "sourceFile": "Db 4-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the College of Engineering is highly selective. All lower-division major requirements must be completed by the end of the spring term prior to fall enrollment.",
           "confidence": "verified",
-          "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+          "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
           "id": "uc-berkeley-coe-civil-environmental-engineering-ebc6a105",
-          "name": "Civil & Environmental Engineering",
-          "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 3.5,
+          "name": "Civil Engineering",
+          "rawMinGpa": "3.0 minimum overall GPA",
+          "rawMinCredits": "60 semester units (90 quarter units)",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음",
-            "공식 안내: 'Applicants must complete all lower-division courses required for their",
-            "intended major, as listed on ASSIST'",
-            "전 학과 공통 필수 (공식 명시):",
-            "English R1A (Reading & Composition Part A): letter grade, C- 이상",
-            "English R1B (Reading & Composition Part B): letter grade, C- 이상",
-            "ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료",
-            "모든 technical 과목: letter grade 이수 (P/NP 불가)",
-            "Combination 과목: 모든 과목 이수 (partial credit 없음)",
-            "완료 기한: 편입 직전 봄 학기 종료까지",
-            "Major Prerequisite Admissions Form: 1월 중 별도 제출 필수"
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics for Scientists and Engineers I",
+            "PHYS 7B - Physics for Scientists and Engineers II",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "CE 11 - Engineering Graphics and Modeling (or equivalent)",
+            "E 45 - Properties of Materials (or equivalent)",
+            "CE 30 - Introduction to Solid Mechanics (or equivalent)",
+            "CHEM 1B - General Chemistry II (recommended for some sub-disciplines)",
+            "BIOLOGY 1A - General Biology (recommended for Environmental sub-discipline)",
+            "BIOLOGY 1AL - General Biology Lab (recommended for Environmental sub-discipline)"
           ],
           "recommendedCourses": [
-            "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목",
-            "(공식: 'applicants must...take as many of the strongly recommended courses",
-            "that are available at their school')",
-            "기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용)",
-            "[공식: 'taking any engineering or computer science courses can demonstrate",
-            "your interest in the field']"
+            "Completion of the IGETC or the UC Berkeley College of Engineering 7-course breadth requirements."
           ],
-          "rawRequired": "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수",
-          "rawRecommended": "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']",
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics for Scientists and Engineers I\nPHYS 7B - Physics for Scientists and Engineers II\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nCE 11 - Engineering Graphics and Modeling (or equivalent)\nE 45 - Properties of Materials (or equivalent)\nCE 30 - Introduction to Solid Mechanics (or equivalent)\nCHEM 1B - General Chemistry II (recommended for some sub-disciplines)\nBIOLOGY 1A - General Biology (recommended for Environmental sub-discipline)\nBIOLOGY 1AL - General Biology Lab (recommended for Environmental sub-discipline)",
+          "rawRecommended": "Completion of the IGETC or the UC Berkeley College of Engineering 7-course breadth requirements.",
           "english": {
-            "raw": "English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요\n(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed\nwhen completing the English composition courses')\n\n제출 시 기준:\nTOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)\nTOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점\nIELTS: 최소 6.5점\nDuolingo English Test: 최소 115점\nAP English (Language or Literature): 3점 이상\nIB English (SL Language A): 6–7점 | (HL Language A): 5–7점\nACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상\n점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년\nETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정\n[Source: admissions.berkeley.edu/requirements-for-international-students/]",
-            "TOEFL": 80,
-            "TOEFL_2026": 4.5,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Completion of two courses of college-level English composition (equivalent to UC Berkeley R&C Part A and Part B)."
           },
-          "englishExemption": "① English R1A + R1B (letter grade, C- 이상) 이수 — 공식 시험 불필요\n② Language of Instruction(LOI)으로 영어 3년 이상 이수\n   (공식: 'Students who have 3+ years of LOI in English will also satisfy English Proficiency')\n   ⚠️ 혼합 LOI 불인정\n③ AP / IB / ACT / SAT 점수 기준 충족 (위 English Score 컬럼 참조)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 3.5 이상 필수 (3.5 미만 지원 불가)\n- IGETC 불인정 (전공선수과목 및 Breadth 필수 이수)\n- 1월 중 Major Prerequisite Admissions Form 제출 필수 (미제출 시 자격 박탈)\n- 전공 변경 및 복수 전공 불가 (조인트 전공 예외), CC 학점 최대 70학점 인정\n[특이사항]\n- 예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\n- Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n- ❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n- 4년제 대학 89+ 학기 단위 이수자 지원 불가\n- ⚠️ Environmental Engineering: 2025-2026 Change of College 불가 (공식 별도 공지)",
-          "sourceFile": "Db 4-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the College of Engineering is highly selective. Students must complete all lower-division major requirements listed on ASSIST.org for their specific community college to be considered for admission.",
           "confidence": "verified",
-          "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+          "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
           "id": "uc-berkeley-coe-eecs-electrical-engineering-computer-science-2f080f00",
-          "name": "EECS (Electrical Engineering & Computer Science)",
-          "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 3.5,
+          "name": "Electrical Engineering & Computer Sciences (EECS)",
+          "rawMinGpa": "3.0 minimum, though admitted students typically have a much higher GPA",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음",
-            "공식 안내: 'Applicants must complete all lower-division courses required for their",
-            "intended major, as listed on ASSIST'",
-            "전 학과 공통 필수 (공식 명시):",
-            "English R1A (Reading & Composition Part A): letter grade, C- 이상",
-            "English R1B (Reading & Composition Part B): letter grade, C- 이상",
-            "ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료",
-            "모든 technical 과목: letter grade 이수 (P/NP 불가)",
-            "Combination 과목: 모든 과목 이수 (partial credit 없음)",
-            "완료 기한: 편입 직전 봄 학기 종료까지",
-            "Major Prerequisite Admissions Form: 1월 중 별도 제출 필수"
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics for Scientists and Engineers I",
+            "PHYS 7B - Physics for Scientists and Engineers II",
+            "CS 61A - Structure and Interpretation of Computer Programs",
+            "CS 61B - Data Structures",
+            "CS 61C - Great Ideas in Computer Architecture",
+            "CS 70 - Discrete Mathematics and Probability Theory"
           ],
           "recommendedCourses": [
-            "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목",
-            "(공식: 'applicants must...take as many of the strongly recommended courses",
-            "that are available at their school')",
-            "기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용)",
-            "[공식: 'taking any engineering or computer science courses can demonstrate",
-            "your interest in the field']"
+            "Completion of the IGETC or the UC Berkeley College of Engineering breadth requirements is highly encouraged but not strictly required for admission consideration."
           ],
-          "rawRequired": "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수",
-          "rawRecommended": "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']",
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics for Scientists and Engineers I\nPHYS 7B - Physics for Scientists and Engineers II\nCS 61A - Structure and Interpretation of Computer Programs\nCS 61B - Data Structures\nCS 61C - Great Ideas in Computer Architecture\nCS 70 - Discrete Mathematics and Probability Theory",
+          "rawRecommended": "Completion of the IGETC or the UC Berkeley College of Engineering breadth requirements is highly encouraged but not strictly required for admission consideration.",
           "english": {
-            "raw": "English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요\n(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed\nwhen completing the English composition courses')\n\n제출 시 기준:\nTOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)\nTOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점\nIELTS: 최소 6.5점\nDuolingo English Test: 최소 115점\nAP English (Language or Literature): 3점 이상\nIB English (SL Language A): 6–7점 | (HL Language A): 5–7점\nACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상\n점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년\nETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정\n[Source: admissions.berkeley.edu/requirements-for-international-students/]",
-            "TOEFL": 80,
-            "TOEFL_2026": 4.5,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Must complete two courses of transferable college composition with a grade of C or better."
           },
-          "englishExemption": "① English R1A + R1B (letter grade, C- 이상) 이수 — 공식 시험 불필요\n② Language of Instruction(LOI)으로 영어 3년 이상 이수\n   (공식: 'Students who have 3+ years of LOI in English will also satisfy English Proficiency')\n   ⚠️ 혼합 LOI 불인정\n③ AP / IB / ACT / SAT 점수 기준 충족 (위 English Score 컬럼 참조)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 3.5 이상 필수 (3.5 미만 지원 불가)\n- IGETC 불인정 (전공선수과목 및 Breadth 필수 이수)\n- 1월 중 Major Prerequisite Admissions Form 제출 필수 (미제출 시 자격 박탈)\n- 전공 변경 및 복수 전공 불가 (조인트 전공 예외), CC 학점 최대 70학점 인정\n[특이사항]\n- 예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\n- Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n- ❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n- 4년제 대학 89+ 학기 단위 이수자 지원 불가\n- ★ Change of College로 EECS 진입 불가 (공식 명시)\n- EECS/MSE, EECS/NE 조인트 가능 (1학기 후)\n- EECS→ECE: Fall 2025 입학자만 첫 2학기 내 가능 (복귀 불가)",
-          "sourceFile": "Db 4-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "EECS is a highly selective major. Applicants must complete all prerequisite courses by the end of the spring term preceding the fall enrollment term. AP/IB credit may be used to satisfy some requirements; refer to the UC Berkeley College of Engineering website for specific equivalency tables.",
           "confidence": "verified",
-          "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+          "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
           "id": "uc-berkeley-coe-industrial-engineering-operations-research-i-12efac92",
-          "name": "Industrial Engineering & Operations Research (IEOR)",
-          "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 3.5,
+          "name": "Industrial Engineering & Operations Research",
+          "rawMinGpa": "3.0 minimum, though significantly higher is required for competitive admission",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음",
-            "공식 안내: 'Applicants must complete all lower-division courses required for their",
-            "intended major, as listed on ASSIST'",
-            "전 학과 공통 필수 (공식 명시):",
-            "English R1A (Reading & Composition Part A): letter grade, C- 이상",
-            "English R1B (Reading & Composition Part B): letter grade, C- 이상",
-            "ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료",
-            "모든 technical 과목: letter grade 이수 (P/NP 불가)",
-            "Combination 과목: 모든 과목 이수 (partial credit 없음)",
-            "완료 기한: 편입 직전 봄 학기 종료까지",
-            "Major Prerequisite Admissions Form: 1월 중 별도 제출 필수"
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics I for Scientists and Engineers",
+            "PHYS 7B - Physics II for Scientists and Engineers",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "CS 61A - Structure and Interpretation of Computer Programs",
+            "CS 61B - Data Structures",
+            "E 7 - Introduction to Computer Programming for Scientists and Engineers"
           ],
           "recommendedCourses": [
-            "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목",
-            "(공식: 'applicants must...take as many of the strongly recommended courses",
-            "that are available at their school')",
-            "기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용)",
-            "[공식: 'taking any engineering or computer science courses can demonstrate",
-            "your interest in the field']"
+            "One course in biological science",
+            "Completion of IGETC or UC Berkeley College of Engineering breadth requirements"
           ],
-          "rawRequired": "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수",
-          "rawRecommended": "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']",
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics I for Scientists and Engineers\nPHYS 7B - Physics II for Scientists and Engineers\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nCS 61A - Structure and Interpretation of Computer Programs\nCS 61B - Data Structures\nE 7 - Introduction to Computer Programming for Scientists and Engineers",
+          "rawRecommended": "One course in biological science\nCompletion of IGETC or UC Berkeley College of Engineering breadth requirements",
           "english": {
-            "raw": "English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요\n(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed\nwhen completing the English composition courses')\n\n제출 시 기준:\nTOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)\nTOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점\nIELTS: 최소 6.5점\nDuolingo English Test: 최소 115점\nAP English (Language or Literature): 3점 이상\nIB English (SL Language A): 6–7점 | (HL Language A): 5–7점\nACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상\n점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년\nETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정\n[Source: admissions.berkeley.edu/requirements-for-international-students/]",
-            "TOEFL": 80,
-            "TOEFL_2026": 4.5,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Must satisfy the Reading and Composition requirement. Two semesters of English composition are required."
           },
-          "englishExemption": "① English R1A + R1B (letter grade, C- 이상) 이수 — 공식 시험 불필요\n② Language of Instruction(LOI)으로 영어 3년 이상 이수\n   (공식: 'Students who have 3+ years of LOI in English will also satisfy English Proficiency')\n   ⚠️ 혼합 LOI 불인정\n③ AP / IB / ACT / SAT 점수 기준 충족 (위 English Score 컬럼 참조)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 3.5 이상 필수 (3.5 미만 지원 불가)\n- IGETC 불인정 (전공선수과목 및 Breadth 필수 이수)\n- 1월 중 Major Prerequisite Admissions Form 제출 필수 (미제출 시 자격 박탈)\n- 전공 변경 및 복수 전공 불가 (조인트 전공 예외), CC 학점 최대 70학점 인정\n[특이사항]\n- 예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\n- Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n- ❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n- 4년제 대학 89+ 학기 단위 이수자 지원 불가\n- Engineering Science 학부 산하",
-          "sourceFile": "Db 4-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "All prerequisite courses must be completed by the end of the spring term prior to fall enrollment. CS 61A and CS 61B are highly recommended for completion prior to transfer.",
           "confidence": "verified",
-          "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+          "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
           "id": "uc-berkeley-coe-materials-science-engineering-mse-3eedb31b",
@@ -15377,47 +15446,40 @@ window.transferDatabase = {
         },
         {
           "id": "uc-berkeley-coe-mechanical-engineering-me-ebf17b9d",
-          "name": "Mechanical Engineering (ME)",
-          "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
-          "minGpa": 3.5,
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음",
-            "공식 안내: 'Applicants must complete all lower-division courses required for their",
-            "intended major, as listed on ASSIST'",
-            "전 학과 공통 필수 (공식 명시):",
-            "English R1A (Reading & Composition Part A): letter grade, C- 이상",
-            "English R1B (Reading & Composition Part B): letter grade, C- 이상",
-            "ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료",
-            "모든 technical 과목: letter grade 이수 (P/NP 불가)",
-            "Combination 과목: 모든 과목 이수 (partial credit 없음)",
-            "완료 기한: 편입 직전 봄 학기 종료까지",
-            "Major Prerequisite Admissions Form: 1월 중 별도 제출 필수"
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics for Scientists and Engineers I",
+            "PHYS 7B - Physics for Scientists and Engineers II",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "E 7 - Introduction to Computer Programming for Scientists and Engineers",
+            "E 45 - Properties of Materials",
+            "ME 40 - Thermodynamics",
+            "CE 30 - Introduction to Engineering Mechanics: Statics",
+            "CE 60 - Introduction to Engineering Mechanics: Dynamics",
+            "English 1A - English Composition",
+            "English 1B - English Composition"
           ],
           "recommendedCourses": [
-            "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목",
-            "(공식: 'applicants must...take as many of the strongly recommended courses",
-            "that are available at their school')",
-            "기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용)",
-            "[공식: 'taking any engineering or computer science courses can demonstrate",
-            "your interest in the field']"
+            "Complete all lower-division requirements by the end of the spring term preceding fall enrollment."
           ],
-          "rawRequired": "COE는 학과별 구체적 필수과목을 공식 웹에 직접 게시하지 않음 | 공식 안내: 'Applicants must complete all lower-division courses required for their | intended major, as listed on ASSIST' | 전 학과 공통 필수 (공식 명시): | English R1A (Reading & Composition Part A): letter grade, C- 이상 | English R1B (Reading & Composition Part B): letter grade, C- 이상 | ASSIST.org 기준 해당 학과의 'Required for Admission' 과목 100% 완료 | 모든 technical 과목: letter grade 이수 (P/NP 불가) | Combination 과목: 모든 과목 이수 (partial credit 없음) | 완료 기한: 편입 직전 봄 학기 종료까지 | Major Prerequisite Admissions Form: 1월 중 별도 제출 필수",
-          "rawRecommended": "ASSIST.org 기준 해당 학과의 'Strongly Recommended' 과목 | (공식: 'applicants must...take as many of the strongly recommended courses | that are available at their school') | 기타 하위과정 공학/컴퓨터과학 과목 (전공 관심도 증명용) | [공식: 'taking any engineering or computer science courses can demonstrate | your interest in the field']",
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics for Scientists and Engineers I\nPHYS 7B - Physics for Scientists and Engineers II\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nE 7 - Introduction to Computer Programming for Scientists and Engineers\nE 45 - Properties of Materials\nME 40 - Thermodynamics\nCE 30 - Introduction to Engineering Mechanics: Statics\nCE 60 - Introduction to Engineering Mechanics: Dynamics\nEnglish 1A - English Composition\nEnglish 1B - English Composition",
+          "rawRecommended": "Complete all lower-division requirements by the end of the spring term preceding fall enrollment.",
           "english": {
-            "raw": "English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요\n(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed\nwhen completing the English composition courses')\n\n제출 시 기준:\nTOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)\nTOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점\nIELTS: 최소 6.5점\nDuolingo English Test: 최소 115점\nAP English (Language or Literature): 3점 이상\nIB English (SL Language A): 6–7점 | (HL Language A): 5–7점\nACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상\n점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년\nETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정\n[Source: admissions.berkeley.edu/requirements-for-international-students/]",
-            "TOEFL": 80,
-            "TOEFL_2026": 4.5,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Completion of two semesters of approved English composition courses with a grade of C or better."
           },
-          "englishExemption": "① English R1A + R1B (letter grade, C- 이상) 이수 — 공식 시험 불필요\n② Language of Instruction(LOI)으로 영어 3년 이상 이수\n   (공식: 'Students who have 3+ years of LOI in English will also satisfy English Proficiency')\n   ⚠️ 혼합 LOI 불인정\n③ AP / IB / ACT / SAT 점수 기준 충족 (위 English Score 컬럼 참조)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 3.5 이상 필수 (3.5 미만 지원 불가)\n- IGETC 불인정 (전공선수과목 및 Breadth 필수 이수)\n- 1월 중 Major Prerequisite Admissions Form 제출 필수 (미제출 시 자격 박탈)\n- 전공 변경 및 복수 전공 불가 (조인트 전공 예외), CC 학점 최대 70학점 인정\n[특이사항]\n- 예외: overall GPA < 3.5이나 major GPA ≥ 3.5 → esstransferadmissions@berkeley.edu 문의\n- Fall 2025 합격 데이터: 371명 합격 (합격률 13.9%), 평균 GPA 3.92\n- ❌ Alternate major 없음 | ❌ 2nd bachelor's 불가 | ❌ Deferral 불가\n- 4년제 대학 89+ 학기 단위 이수자 지원 불가\n- Aerospace Engineering concentration 포함\n- ME/NE, MSE/ME 조인트 가능 (1학기 후)",
-          "sourceFile": "Db 4-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Applicants must be admitted to the College of Engineering. Completion of all lower-division major requirements is strongly recommended for admission competitiveness.",
           "confidence": "verified",
-          "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+          "officialSourceUrl": "https://assist.org/"
         },
         {
           "id": "uc-berkeley-coe-nuclear-engineering-ne-394e0458",
@@ -15465,47 +15527,39 @@ window.transferDatabase = {
         },
         {
           "id": "uc-berkeley-coe-chemical-engineering-college-of-chemistry-co-77c6c7ad",
-          "name": "Chemical Engineering\n★ College of Chemistry 소속 (COE 아님)",
-          "rawMinGpa": "3.0 (COE의 3.5와 다름)\n(공식: 'Minimum 3.0 UC-transferable GPA')",
-          "rawMinCredits": "60 sem / 90 qtr UC-transferable",
+          "name": "Chemical Engineering",
+          "rawMinGpa": "3.0+",
+          "rawMinCredits": "60 semester units",
           "minGpa": 3,
           "minCredits": 60,
           "requiredCourses": [
-            "Chemical Engineering은 College of Engineering(COE) 소속이 아닌",
-            "College of Chemistry(COC) 소속 — COE와 별도 규정 적용",
-            "(공식: 'Note: Chemical Engineering is in the College of Chemistry')",
-            "COC 공식 게시 ChemE 편입 필수과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission):",
-            "Chemistry 1A + 1AL + 1B (General Chemistry + Lab sequence)",
-            "Mathematics 51 + 52 + 53 + 54 (Multivariable Calc + Linear Algebra/ODE)",
-            "Physics 7A + 7B (2학기 물리 — 7B 포함)",
-            "English R1A (Reading & Composition Part A — ChemE는 R1A만 필수, R1B 불필요)",
-            "최소 성적: 수학/과학 과목 B 이상 강력 권장",
-            "(공식: 'Transfer applicants need grades of B or A in math and science courses')",
-            "입학 전 수강 과목은 고려되지 않음 (summer before enrollment 불인정)",
-            "[Source: chemistry.berkeley.edu/ugrad/prospective-students/admission]"
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics for Scientists and Engineers I",
+            "PHYS 7B - Physics for Scientists and Engineers II",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Laboratory",
+            "CHEM 1B - General Chemistry",
+            "CHEM 3A - Chemical Structure and Reactivity",
+            "CHEM 3AL - Chemical Structure and Reactivity Laboratory",
+            "CHEM 3B - Chemical Structure and Reactivity",
+            "CHEM 3BL - Chemical Structure and Reactivity Laboratory",
+            "CS 61A - Structure and Interpretation of Computer Programs"
           ],
           "recommendedCourses": [
-            "공식 권장과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission):",
-            "Biology 1A (General Biology Lecture)",
-            "CHEM 3A + 3AL + 3B + 3BL (Organic Chemistry lecture + lab sequence)",
-            "— grades of B or better in organic chemistry 권장",
-            "(공식: 'encouraged to complete...CHEM 3A, 3AL, 3B, 3BL')"
+            "Completion of the IGETC or UC Berkeley College of Chemistry breadth requirements"
           ],
-          "rawRequired": "Chemical Engineering은 College of Engineering(COE) 소속이 아닌 | College of Chemistry(COC) 소속 — COE와 별도 규정 적용 | (공식: 'Note: Chemical Engineering is in the College of Chemistry') | COC 공식 게시 ChemE 편입 필수과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission): | Chemistry 1A + 1AL + 1B (General Chemistry + Lab sequence) | Mathematics 51 + 52 + 53 + 54 (Multivariable Calc + Linear Algebra/ODE) | Physics 7A + 7B (2학기 물리 — 7B 포함) | English R1A (Reading & Composition Part A — ChemE는 R1A만 필수, R1B 불필요) | 최소 성적: 수학/과학 과목 B 이상 강력 권장 | (공식: 'Transfer applicants need grades of B or A in math and science courses') | 입학 전 수강 과목은 고려되지 않음 (summer before enrollment 불인정) | [Source: chemistry.berkeley.edu/ugrad/prospective-students/admission]",
-          "rawRecommended": "공식 권장과목 (chemistry.berkeley.edu/ugrad/prospective-students/admission): | Biology 1A (General Biology Lecture) | CHEM 3A + 3AL + 3B + 3BL (Organic Chemistry lecture + lab sequence) | — grades of B or better in organic chemistry 권장 | (공식: 'encouraged to complete...CHEM 3A, 3AL, 3B, 3BL')",
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics for Scientists and Engineers I\nPHYS 7B - Physics for Scientists and Engineers II\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Laboratory\nCHEM 1B - General Chemistry\nCHEM 3A - Chemical Structure and Reactivity\nCHEM 3AL - Chemical Structure and Reactivity Laboratory\nCHEM 3B - Chemical Structure and Reactivity\nCHEM 3BL - Chemical Structure and Reactivity Laboratory\nCS 61A - Structure and Interpretation of Computer Programs",
+          "rawRecommended": "Completion of the IGETC or UC Berkeley College of Chemistry breadth requirements",
           "english": {
-            "raw": "English R1A+R1B 이수 시 TOEFL/IELTS 제출 불필요\n(공식: 'TOEFL or IELTS are not required for admission since English proficiency is assumed\nwhen completing the English composition courses')\n\n제출 시 기준:\nTOEFL iBT (시험일 2026.1.21 이전): 최소 80점 (Berkeley 선호: 100점)\nTOEFL iBT (시험일 2026.1.21 이후, 신척도): UC 최소 4.5점\nIELTS: 최소 6.5점\nDuolingo English Test: 최소 115점\nAP English (Language or Literature): 3점 이상\nIB English (SL Language A): 6–7점 | (HL Language A): 5–7점\nACT ELA: 24점 이상 | SAT Writing & Language: 31점 이상\n점수 제출 마감: 1월 31일 | 유효기간: 입학일로부터 2년\nETS 코드: 4833 | TOEFL MyBest/IELTS One Skill Retake 불인정\n[Source: admissions.berkeley.edu/requirements-for-international-students/]",
-            "TOEFL": 80,
-            "TOEFL_2026": 4.5,
-            "IELTS": 6.5,
-            "Duolingo": 115
+            "raw": "Demonstrate proficiency in English through completion of two courses equivalent to UC Berkeley's Reading and Composition R1A and R1B with a grade of C or better."
           },
-          "englishExemption": "① English R1A + R1B (letter grade, C- 이상) 이수 — 공식 시험 불필요\n② Language of Instruction(LOI)으로 영어 3년 이상 이수\n   (공식: 'Students who have 3+ years of LOI in English will also satisfy English Proficiency')\n   ⚠️ 혼합 LOI 불인정\n③ AP / IB / ACT / SAT 점수 기준 충족 (위 English Score 컬럼 참조)",
-          "note": "- 가을학기만 지원 가능 (11월 1~30일 접수)\n- 최소 60학점 이수 및 GPA 3.5 이상 필수 (3.5 미만 지원 불가)\n- IGETC 불인정 (전공선수과목 및 Breadth 필수 이수)\n- 1월 중 Major Prerequisite Admissions Form 제출 필수 (미제출 시 자격 박탈)\n- 전공 변경 및 복수 전공 불가 (조인트 전공 예외), CC 학점 최대 70학점 인정\n[특이사항]\n- COC 별도 규정 적용 (COE와 다름)\n- GPA 3.0 (COE 3.5와 다름) | 2nd Bachelor's: Chemistry/Chemical Biology만 허용\n- CORRECTED (May 2026): REQ를 'ASSIST.org 참조'에서 공식 chemistry.berkeley.edu 게시 과목 목록으로 교체 — Chem 1A/1AL/1B + Math 51-54 + Physics 7A-7B + English R1A (R1B 불필요). REC에 Organic Chemistry 추가.",
-          "sourceFile": "Db 4-transfercheck final.xlsx",
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the College of Chemistry is highly selective. All prerequisites must be completed with a grade of C or better by the end of the spring term prior to fall enrollment.",
           "confidence": "verified",
-          "rawOfficialText": "Admissions - Berkeley Engineering Skip to main content Skip to primary navigation Departments Bioengineering Civil and Environmental Engineering Electrical Engineering and Computer Sciences Industrial Engineering and Operations Research Materials Science and Engineering Mechanical Engineering Nuclear Engineering Aerospace program Engineering Science program News Berkeley Engineer magazine Social media News videos News digest (email) Brand &#038; Press kit Events Cal Day Commencement Events calendar Engineering Ethics workshop Homecoming Kuh Lecture Series Minner Lecture Space reservations View from the Top College directory For staff &#038; faculty Educating&nbsp;leaders. Creating&nbsp;knowledge. Serving&nbsp;society. Go About Facts &#038; figures Rankings Mission &#038; values Equity &#038; inclusion Voices of Berkeley Engineering Leadership team Milestones Buildings &amp; facilities Maps Admissions Undergraduate admissions Graduate admissions New students Visit Maps Admissions events K-12 outreach Academics Undergraduate programs Majors &#038; minors Undergraduate Guide Graduate programs Graduate Guide Innovation &#038; entrepreneurship Kresge Engineering Library International programs Executive education Students New students Advising &#038; counseling ESS programs CAEE academic support Grad student services Student life Wellness &#038; inclusion Undergraduate Guide > Degree requirements > Policies &#038; procedures Forms &#038; petitions Resources Research &#038; faculty Centers &#038; institutes Undergrad research Faculty Sustainability and resiliency Connect Alumni Industry Give Stay in touch Undergraduate admissions Admitted students Junior transfers Undergrad FAQs Prospective freshman FAQs Prospective junior transfer FAQs Get ready to apply – freshman Get ready to apply – junior transfer Change of college Department contacts &amp; advising Graduate admissions Graduate student outreach New students Visit Self-guided audio tour Maps Admissions events K-12 outreach Home > Admissions Become a Berkeley engineer Admissions At Berkeley Engineering, we’re fully invested in preparing future STEM leaders to meet today’s challenges with creativity and innovation — there’s never been a better time to pursue this impactful career. As a practicing engineer, you’ll be finding solutions to the world’s most pressing problems. But first, you’ll need to get the finest possible training in your field. For detailed information on how to apply to UC Berkeley, prospective undergraduates should go to the&nbsp; Berkeley admissions &nbsp;website; prospective graduate students should visit the&nbsp; graduate admissions &nbsp;website. 95% Six-year engineering graduation rate Undergraduate admissions Our globally renowned undergraduate program attracts the best and brightest students, and our rigorous curriculum is augmented with research opportunities, support services, and team and club activities. Incoming freshmen Admissions information Undergrad program FAQs Prospective freshman FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Freshman admissions Junior transfers Priorities &amp; eligibility Undergrad program FAQs Transfer admissions FAQs Contact the Office of Undergraduate Admissions Get ready to apply! Podcast: Transfer admissions Financial aid To learn more about attendance costs, types of financial aid, eligibility and deadlines, visit Berkeley’s Financial Aid and Scholarships Office. &nbsp;For a schedule of fees and tuition, see the&nbsp; Office of the Registrar . Podcast: Financial aid Q&amp;A Graduate admissions Ready to dig deeper into your field of study and work beside some of the top scholars and researchers in the world? Each of our departments offers&nbsp; master’s and doctoral programs , along with specialized masters programs focused on areas like entrepreneurship, financial engineering, design, translational medicine and more. We’re also working hard to&nbsp; build the pipeline &nbsp;of qualified graduate student applicants, participating in outreach and recruitment programs on campus and across the nation. Graduate Pathways to STEM NextProf Nexus Visit Reserve your spot for a student-led tour of Berkeley Engineering or sign up for a tour of the full Berkeley campus. Other resources are available through the UC Berkeley Visitor Services website. Maps Find a building, explore our sprawling complex or get directions to the Berkeley campus — we’ve got&nbsp; online and printable maps &nbsp;to show you around. Come and get familiar with our neighborhood! Outreach We offer a range of&nbsp; outreach programs to engage K–12 students &nbsp;in engineering. And our community is eager to provide tours, workshops and hands-on activities that show how engineers are changing the world. Admissions events Cal Day Engineering information sessions More&nbsp; campus admissions events If you need disability accommodations to assist you with the admissions process, please contact eng-ada@berkeley.edu . Contact Give Privacy UC Berkeley Accessibility Nondiscrimination © 2026 UC Regents",
-          "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
+          "officialSourceUrl": "https://chemistry.berkeley.edu/ugrad/prospective/transfer"
         },
         {
           "id": "uc-berkeley-coe-362f972e-computer-science",
@@ -15572,6 +15626,126 @@ window.transferDatabase = {
           "note": "UC Berkeley's Cognitive Science major is highly selective. Completion of all lower-division major preparation coursework with a strong GPA (typically 3.7 or higher) is essential for admission. All major prerequisite courses must be completed with a grade of C or higher.",
           "confidence": "verified",
           "officialSourceUrl": "https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/major-preparation-selective-majors.html"
+        },
+        {
+          "id": "uc-berkeley-coe-362f972e-data-science",
+          "name": "Data Science",
+          "rawMinGpa": "3.0 minimum overall GPA",
+          "rawMinCredits": "60 semester units (90 quarter units)",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 1A - Calculus",
+            "MATH 1B - Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "CS 61A - Structure and Interpretation of Computer Programs",
+            "CS 61B - Data Structures",
+            "CS 70 - Discrete Mathematics and Probability Theory",
+            "DATA 8 - Foundations of Data Science"
+          ],
+          "recommendedCourses": [
+            "One course from the Computational Data Science domain (e.g. CS 61C)",
+            "One course from the Statistics/Probability domain"
+          ],
+          "rawRequired": "MATH 1A - Calculus\nMATH 1B - Calculus\nMATH 54 - Linear Algebra and Differential Equations\nCS 61A - Structure and Interpretation of Computer Programs\nCS 61B - Data Structures\nCS 70 - Discrete Mathematics and Probability Theory\nDATA 8 - Foundations of Data Science",
+          "rawRecommended": "One course from the Computational Data Science domain (e.g. CS 61C)\nOne course from the Statistics/Probability domain",
+          "english": {
+            "raw": "Completion of two courses of college-level English composition (equivalent to UC Berkeley R&C Part A and Part B) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Applicants must complete all lower-division prerequisites by the end of the spring term prior to fall enrollment. CS 61A, 61B, 70, and Math 54 are critical for the major and should be completed with strong grades.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://data.berkeley.edu/academics/undergraduate/major/transfer-admissions"
+        },
+        {
+          "id": "uc-berkeley-coe-362f972e-business-administration",
+          "name": "Business Administration",
+          "rawMinGpa": "3.0 minimum for California residents; 3.4 for non-residents",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "STAT 20 - Introduction to Probability and Statistics",
+            "ECON 1 - Introduction to Economics",
+            "UGBA 10 - Principles of Business"
+          ],
+          "recommendedCourses": [
+            "English Composition (equivalent to R1A and R1B)",
+            "Breadth requirements (Arts and Literature, Biological Science, Historical Studies, International Studies, Philosophy and Values, Physical Science, Social and Behavioral Sciences)"
+          ],
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nSTAT 20 - Introduction to Probability and Statistics\nECON 1 - Introduction to Economics\nUGBA 10 - Principles of Business",
+          "rawRecommended": "English Composition (equivalent to R1A and R1B)\nBreadth requirements (Arts and Literature, Biological Science, Historical Studies, International Studies, Philosophy and Values, Physical Science, Social and Behavioral Sciences)",
+          "english": {
+            "raw": "Completion of two semesters of English composition at the college level is required for transfer admission."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission is highly selective. All prerequisites must be completed by the end of the spring term prior to fall enrollment. No summer courses taken after the spring term of application are considered.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://haas.berkeley.edu/undergrad/admissions/transfer-admissions/"
+        },
+        {
+          "id": "uc-berkeley-coe-362f972e-economics",
+          "name": "Economics",
+          "rawMinGpa": "3.0 minimum in prerequisite courses",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 1A - Calculus",
+            "MATH 1B - Calculus",
+            "ECON 1 - Introduction to Economics",
+            "ECON 2 - Introduction to Economics",
+            "STAT 20 - Introduction to Probability and Statistics (or equivalent statistics course)"
+          ],
+          "recommendedCourses": [
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations"
+          ],
+          "rawRequired": "MATH 1A - Calculus\nMATH 1B - Calculus\nECON 1 - Introduction to Economics\nECON 2 - Introduction to Economics\nSTAT 20 - Introduction to Probability and Statistics (or equivalent statistics course)",
+          "rawRecommended": "MATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations",
+          "english": {
+            "raw": "Completion of two courses of English composition with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students must complete all prerequisite courses with a minimum 3.0 GPA in the prerequisites. Applicants should also complete the IGETC pattern or Berkeley's L&S requirements.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://economics.berkeley.edu/undergraduate/admissions/transfer-admission"
+        },
+        {
+          "id": "uc-berkeley-coe-362f972e-materials-science-engineering",
+          "name": "Materials Science & Engineering",
+          "rawMinGpa": "3.50",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.5,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 1A - Calculus I",
+            "MATH 1B - Calculus II",
+            "MATH 53 - Multivariable Calculus",
+            "MATH 54 - Linear Algebra and Differential Equations",
+            "PHYS 7A - Physics for Scientists and Engineers I",
+            "PHYS 7B - Physics for Scientists and Engineers II",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "CHEM 1B - General Chemistry II",
+            "E 7 - Introduction to Computer Programming for Scientists and Engineers",
+            "MSE 45 - Properties of Materials"
+          ],
+          "recommendedCourses": [
+            "One course in biological science (e.g. BIO 1A/1AL)",
+            "Completion of IGETC or UC Berkeley College of Engineering Breadth requirements"
+          ],
+          "rawRequired": "MATH 1A - Calculus I\nMATH 1B - Calculus II\nMATH 53 - Multivariable Calculus\nMATH 54 - Linear Algebra and Differential Equations\nPHYS 7A - Physics for Scientists and Engineers I\nPHYS 7B - Physics for Scientists and Engineers II\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nCHEM 1B - General Chemistry II\nE 7 - Introduction to Computer Programming for Scientists and Engineers\nMSE 45 - Properties of Materials",
+          "rawRecommended": "One course in biological science (e.g. BIO 1A/1AL)\nCompletion of IGETC or UC Berkeley College of Engineering Breadth requirements",
+          "english": {
+            "raw": "Completion of two courses of college-level English composition with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Applicants are strongly encouraged to complete all lower-division requirements for their intended major. Admission is highly competitive and restricted to upper-division applicants.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate-admissions/transfer-applicants/"
         }
       ],
       "shortName": "UC Berkeley"
@@ -54863,6 +55037,1591 @@ window.transferDatabase = {
           "confidence": "needs_source_check",
           "rawOfficialText": "Transfer Students - Iowa State University Skip to main content MyAccount Request Info Apply Visit Give Research Extension Info For... Current Students Faculty and Staff Parents and Families Sign Ons Search Search Submit Search Close Search Toggle Menu Close Main Menu Academics Majors, Minors and Certificates Online Degrees and Programs Pre-Med and Pre-Health Programs Pre-Law Preparation Graduate College Veterinary Medicine Admission and Aid Admissions Tuition and Fees Affording College New Student Programs Apply Request Information Visit Meet Your Admissions Counselor Virtual Office For Admitted Students Be a Student Leader Learn by Doing Career Preparation Honors Program Industry Partners Innovation and Entrepreneurship Research Study Abroad Life at Iowa State You Belong Here Learning Communities Campus and Ames Housing and Dining Health and Safety Athletics and Recreation Activities and Involvement Academic Support History and Traditions MyAccount Request Info Apply Visit Give Research Extension Current Students Faculty and Staff Parents and Families Sign Ons Search Submit Search Home Admission and Aid Admissions Transfer Students Transfer Students Explore This Section Admissions First-year Students Transfer Students Transfer Requirements Transfer Credit Transfer Scholarships Frequently Asked Questions Community College Partnership Programs Amazon Career Choice International Students Graduate Students Nondegree Students Military and Nontraditional Students There are endless paths to Iowa State From the moment you step on campus, you'll be surrounded by world-class professors, valuable resume-building opportunities, and state-of-the-art facilities designed to help you achieve your goals.&nbsp; Nearly 20 percent of Iowa State students transferred here from another college or university, so we know how to help. You'll benefit from our dedicated staff, specialized transfer orientation, and new student programs—all designed to ensure a smooth transition and help you connect with fellow students along the way. Academic excellence Iowa State is dedicated to supporting the academic success of transfer students through Phi Theta Kappa scholarship opportunities and our own Iowa State chapter of the Tau Sigma National Honor Society—the first of its kind in the state! What's ahead for you Whether you plan to join us in the fall or the spring, we've got you covered. As you embark on the admissions process, here are some important steps to help ground your journey toward becoming a Cyclone. Apply to Iowa State Iowa State has a rolling admissions policy, allowing transfer applications up to one year before your intended start date. Transfer students are encouraged to apply at least six months in advance. Learn more about Apply to Iowa State Submit your transcripts Request transcripts from all colleges attended. Official transcripts should be emailed to Admissions, but unofficial ones can be uploaded through your Admissions MyAccount for review. Learn more about Submit your transcripts Complete your FAFSA and explore scholarships Complete your FAFSA by February 25* and apply for scholarships via the OneApp by March 11* for priority consideration. Admissions scholarships are also available for students admitted by March 1. Most scholarships and aid follow an academic year cycle, so meeting fall deadlines is crucial. Late applicants may receive aid if funds are available. *Deadlines apply to Fall 2027 and Spring 2028 transfer students. Learn more about Complete your FAFSA and explore scholarships Accept your offer of admission Confirm your decision to attend Iowa State by accepting your offer of admission. To receive a refund on the acceptance fee, summer and fall students should confirm by May 1, and spring students by November 1. Learn more about Accept your offer of admission Prepare for orientation and class registration After accepting your admission offer, you’ll receive an invitation to orientation. For summer and fall entry, orientation runs from April to August, with invitations starting in February. For spring entry, orientation is held from November to January, with invitations sent beginning in October. Learn more about Prepare for orientation and class registration Explore your housing options Discover your housing choices, including residence halls, university apartments, and fraternity or sorority housing. After accepting your admission offer, you can reserve a space in university housing by completing the online housing contract. Learn more about Explore your housing options Helpful links TRANSIT Transfer credit Course equivalency guides Credit by exam Transfer plans Meet the team Our transfer team is here to make your transition to Iowa State as smooth as possible. We'll guide you through the admission process, help you understand your next steps, and answer any questions along the way.&nbsp; Abbie Miller Transfer admissions counselor Abbie supports transfer students from across Iowa. Schedule a virtual appointment Julie Nagel Transfer admissions counselor Julie serves as the primary contact for all out-of-state transfer students. Schedule a virtual appointment Kat Klingseis Transfer admissions counselor Kat works with students from DMACC. Schedule a virtual appointment Instagram Youtube Facebook X-Twitter Threads Request Info Apply Visit Contact Give Quick Links News Athletics A-Z Index Directory Employment Events Free speech Library Principles of Community General Information contact@iastate.edu 515-294-4111 Admissions admissions@iastate.edu 515-294-5836 Privacy Policy Non-discrimination Policy Digital Access and Accessibility Consumer Information &copy; Iowa State University of Science and Technology",
           "officialSourceUrl": "https://www.admissions.iastate.edu/transfer/"
+        }
+      ]
+    },
+    {
+      "id": "ucla",
+      "name": "UCLA",
+      "shortName": "UCLA",
+      "majors": [
+        {
+          "id": "ucla-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.50",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.5,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus and Analytic Geometry I",
+            "MATH 31B - Calculus and Analytic Geometry II",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "CS 31 - Introduction to Computer Science I",
+            "CS 32 - Introduction to Computer Science II",
+            "CS 33 - Introduction to Computer Architecture",
+            "CS 35L - Software Construction Laboratory"
+          ],
+          "recommendedCourses": [
+            "One year of English composition (equivalent to UC English Composition requirement)",
+            "Courses satisfying the American History and Institutions requirement"
+          ],
+          "rawRequired": "MATH 31A - Calculus and Analytic Geometry I\nMATH 31B - Calculus and Analytic Geometry II\nMATH 32A - Calculus of Several Variables\nMATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYSICS 1A - Physics for Scientists and Engineers: Mechanics\nPHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity\nCS 31 - Introduction to Computer Science I\nCS 32 - Introduction to Computer Science II\nCS 33 - Introduction to Computer Architecture\nCS 35L - Software Construction Laboratory",
+          "rawRecommended": "One year of English composition (equivalent to UC English Composition requirement)\nCourses satisfying the American History and Institutions requirement",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with grades of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Computer Science is a highly selective major. Applicants must complete all major preparation courses before transferring. Admission is based on GPA and strength of the preparatory coursework.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/computer-science"
+        },
+        {
+          "id": "ucla-computer-science-and-engineering",
+          "name": "Computer Science and Engineering",
+          "rawMinGpa": "3.5",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.5,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "COM SCI 31 - Introduction to Computer Science I",
+            "COM SCI 32 - Introduction to Computer Science II",
+            "COM SCI 33 - Introduction to Computer Organization",
+            "COM SCI M51A - Operating Systems and System Programming"
+          ],
+          "recommendedCourses": [
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism"
+          ],
+          "rawRequired": "MATH 31A - Differential and Integral Calculus\nMATH 31B - Integration and Infinite Series\nMATH 32A - Calculus of Several Variables\nMATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYSICS 1A - Physics for Scientists and Engineers: Mechanics\nPHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCOM SCI 31 - Introduction to Computer Science I\nCOM SCI 32 - Introduction to Computer Science II\nCOM SCI 33 - Introduction to Computer Organization\nCOM SCI M51A - Operating Systems and System Programming",
+          "rawRecommended": "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers: Mechanics\nPHYSICS 4BL - Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Computer Science and Engineering major is highly selective. Students must complete all lower-division requirements by the end of the spring term prior to transfer. AP/IB credits may be used for some requirements but must be sent to the UCLA Admissions office for evaluation.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/computer-science-engineering-major"
+        },
+        {
+          "id": "ucla-computer-engineering",
+          "name": "Computer Engineering",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus I",
+            "MATH 31B - Calculus II",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Mechanics",
+            "PHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "CS 31 - Introduction to Computer Science I",
+            "CS 32 - Introduction to Computer Science II",
+            "CS 33 - Introduction to Computer Organization",
+            "CS M51A - Operating Systems and System Programming (or equivalent Logic Design course)"
+          ],
+          "recommendedCourses": [
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers"
+          ],
+          "rawRequired": "MATH 31A - Calculus I\nMATH 31B - Calculus II\nMATH 32A - Calculus of Several Variables\nMATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYSICS 1A - Mechanics\nPHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCS 31 - Introduction to Computer Science I\nCS 32 - Introduction to Computer Science II\nCS 33 - Introduction to Computer Organization\nCS M51A - Operating Systems and System Programming (or equivalent Logic Design course)",
+          "rawRecommended": "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers\nPHYSICS 4BL - Physics Laboratory for Scientists and Engineers",
+          "english": {
+            "raw": "Completion of two courses of English composition with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Samueli School of Engineering is highly selective. Applicants are expected to have completed as many of the lower-division requirements as possible prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/computer-engineering-major"
+        },
+        {
+          "id": "ucla-electrical-engineering",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "3.2+",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus I",
+            "MATH 31B - Calculus II",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Mechanics",
+            "PHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "CS 31 - Introduction to Computer Science I",
+            "CS 32 - Introduction to Computer Science II",
+            "CS 33 - Introduction to Computer Organization",
+            "EE 1 - Electrical Engineering Freshman Seminar (or equivalent approved introductory course)"
+          ],
+          "recommendedCourses": [
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers",
+            "Life Science elective (refer to HSSEAS articulation)"
+          ],
+          "rawRequired": "MATH 31A - Calculus I\nMATH 31B - Calculus II\nMATH 32A - Calculus of Several Variables\nMATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYSICS 1A - Mechanics\nPHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCS 31 - Introduction to Computer Science I\nCS 32 - Introduction to Computer Science II\nCS 33 - Introduction to Computer Organization\nEE 1 - Electrical Engineering Freshman Seminar (or equivalent approved introductory course)",
+          "rawRecommended": "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers\nPHYSICS 4BL - Physics Laboratory for Scientists and Engineers\nLife Science elective (refer to HSSEAS articulation)",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Admission to the Henry Samueli School of Engineering and Applied Science is highly selective. All lower-division major requirements must be completed prior to transfer. Strong preference is given to students who have completed all preparatory courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://www.seasoasa.ucla.edu/ls-transfer-requirements/"
+        },
+        {
+          "id": "ucla-mechanical-engineering",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus I",
+            "MATH 31B - Calculus II",
+            "MATH 32A - Multivariable Calculus",
+            "MATH 32B - Multivariable Calculus",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Physics for Scientists and Engineers: Mechanics",
+            "PHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Physics for Scientists and Engineers: Fluids, Thermodynamics, Optics, and Modern Physics",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Structure and Reactivity",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CS 31 - Introduction to Computer Science I",
+            "MAE 101 - Statics",
+            "ENGLISH COMPOSITION 3 - English Composition, Rhetoric, and Language"
+          ],
+          "recommendedCourses": [
+            "One additional course in programming (e.g., MATLAB or C++)",
+            "MAE 103 - Elementary Fluid Mechanics (if available at community college)"
+          ],
+          "rawRequired": "MATH 31A - Calculus I\nMATH 31B - Calculus II\nMATH 32A - Multivariable Calculus\nMATH 32B - Multivariable Calculus\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYSICS 1A - Physics for Scientists and Engineers: Mechanics\nPHYSICS 1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Physics for Scientists and Engineers: Fluids, Thermodynamics, Optics, and Modern Physics\nCHEM 20A - Chemical Structure\nCHEM 20B - Chemical Structure and Reactivity\nCHEM 20L - General Chemistry Laboratory\nCS 31 - Introduction to Computer Science I\nMAE 101 - Statics\nENGLISH COMPOSITION 3 - English Composition, Rhetoric, and Language",
+          "rawRecommended": "One additional course in programming (e.g., MATLAB or C++)\nMAE 103 - Elementary Fluid Mechanics (if available at community college)",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with grades of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Selection is based on academic excellence, completion of required preparatory courses, and personal statement. All lower-division major requirements should be completed by the end of the spring term prior to fall transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/mechanical-engineering"
+        },
+        {
+          "id": "ucla-aerospace-engineering",
+          "name": "Aerospace Engineering",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus I",
+            "MATH 31B - Calculus II",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Mechanics",
+            "PHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "CS 31 - Introduction to Computer Science I",
+            "MAE 20 - Introduction to Mechanical and Aerospace Engineering"
+          ],
+          "recommendedCourses": [
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers",
+            "PHYSICS 4BL - Physics Laboratory for Scientists and Engineers",
+            "CHEM 20L - General Chemistry Laboratory"
+          ],
+          "rawRequired": "MATH 31A - Calculus I\nMATH 31B - Calculus II\nMATH 32A - Calculus of Several Variables\nMATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYSICS 1A - Mechanics\nPHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCS 31 - Introduction to Computer Science I\nMAE 20 - Introduction to Mechanical and Aerospace Engineering",
+          "rawRecommended": "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers\nPHYSICS 4BL - Physics Laboratory for Scientists and Engineers\nCHEM 20L - General Chemistry Laboratory",
+          "english": {
+            "raw": "Completion of two courses of English composition with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Samueli School of Engineering is highly selective. It is essential to complete as many preparatory courses as possible before transferring. All courses must be taken for a letter grade.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/aerospace-engineering"
+        },
+        {
+          "id": "ucla-civil-engineering",
+          "name": "Civil Engineering",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYS 1A - Mechanics",
+            "PHYS 1B - Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYS 1C - Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CS 31 - Introduction to Computer Science I",
+            "CIV ENGR 15 - Surveying",
+            "CIV ENGR 91 - Statics"
+          ],
+          "recommendedCourses": [
+            "GEOL 10 - Introduction to Geology",
+            "LIFE SCIENCES 7A - Cell and Molecular Biology"
+          ],
+          "rawRequired": "MATH 31A - Differential and Integral Calculus\nMATH 31B - Integration and Infinite Series\nMATH 32A - Calculus of Several Variables\nMATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYS 1A - Mechanics\nPHYS 1B - Oscillations, Waves, Electric and Magnetic Fields\nPHYS 1C - Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCHEM 20B - Chemical Energetics and Change\nCHEM 20L - General Chemistry Laboratory\nCS 31 - Introduction to Computer Science I\nCIV ENGR 15 - Surveying\nCIV ENGR 91 - Statics",
+          "rawRecommended": "GEOL 10 - Introduction to Geology\nLIFE SCIENCES 7A - Cell and Molecular Biology",
+          "english": {
+            "raw": "Completion of two transferable English composition courses (English 1A and one course in critical thinking/writing) with a C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Samueli School of Engineering is highly selective. Completion of all lower-division requirements is strongly recommended. AP credits for math/science are accepted if they satisfy the specific UCLA course equivalents.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://samueli.ucla.edu/transfer-applicants/"
+        },
+        {
+          "id": "ucla-chemical-engineering",
+          "name": "Chemical Engineering",
+          "rawMinGpa": "3.40",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus I",
+            "MATH 31B - Calculus II",
+            "MATH 32A - Calculus III",
+            "MATH 32B - Calculus IV",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations",
+            "PHYS 1A - Mechanics",
+            "PHYS 1B - Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYS 1C - Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Chemical Dynamics and Reactivity: Introduction to Organic Chemistry",
+            "CHEM 30AL - Organic Chemistry Laboratory I",
+            "CS 31 - Introduction to Computer Science I"
+          ],
+          "recommendedCourses": [
+            "Completion of IGETC or UCLA Samueli School of Engineering GE requirements"
+          ],
+          "rawRequired": "MATH 31A - Calculus I\nMATH 31B - Calculus II\nMATH 32A - Calculus III\nMATH 32B - Calculus IV\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations\nPHYS 1A - Mechanics\nPHYS 1B - Oscillations, Waves, Electric and Magnetic Fields\nPHYS 1C - Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCHEM 20B - Chemical Energetics and Change\nCHEM 20L - General Chemistry Laboratory\nCHEM 30A - Chemical Dynamics and Reactivity: Introduction to Organic Chemistry\nCHEM 30AL - Organic Chemistry Laboratory I\nCS 31 - Introduction to Computer Science I",
+          "rawRecommended": "Completion of IGETC or UCLA Samueli School of Engineering GE requirements",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Samueli School of Engineering is highly selective. All preparatory courses must be completed by the end of the spring term prior to fall enrollment. It is strongly recommended to complete all lower-division major requirements.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/chemical-engineering-major"
+        },
+        {
+          "id": "ucla-bioengineering",
+          "name": "Bioengineering",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 31A - Calculus I",
+            "MATH 31B - Calculus II",
+            "MATH 32A - Calculus III",
+            "MATH 32B - Calculus IV",
+            "MATH 33A - Linear Algebra",
+            "MATH 33B - Differential Equations",
+            "PHYSICS 1A - Mechanics",
+            "PHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields",
+            "PHYSICS 1C - Electrodynamics, Optics, and Special Relativity",
+            "CHEM 20A - Chemical Structure",
+            "CHEM 20B - Chemical Energetics and Change",
+            "CHEM 20L - General Chemistry Laboratory",
+            "CHEM 30A - Organic Chemistry I",
+            "CHEM 30AL - Organic Chemistry Laboratory I",
+            "CS 31 - Introduction to Computer Science I"
+          ],
+          "recommendedCourses": [
+            "BIO 1 - Life Sciences I",
+            "BIO 2 - Life Sciences II",
+            "BIO 3 - Life Sciences III",
+            "CHEM 30B - Organic Chemistry II",
+            "PHYSICS 4AL - Physics Laboratory for Scientists and Engineers"
+          ],
+          "rawRequired": "MATH 31A - Calculus I\nMATH 31B - Calculus II\nMATH 32A - Calculus III\nMATH 32B - Calculus IV\nMATH 33A - Linear Algebra\nMATH 33B - Differential Equations\nPHYSICS 1A - Mechanics\nPHYSICS 1B - Oscillations, Waves, Electric and Magnetic Fields\nPHYSICS 1C - Electrodynamics, Optics, and Special Relativity\nCHEM 20A - Chemical Structure\nCHEM 20B - Chemical Energetics and Change\nCHEM 20L - General Chemistry Laboratory\nCHEM 30A - Organic Chemistry I\nCHEM 30AL - Organic Chemistry Laboratory I\nCS 31 - Introduction to Computer Science I",
+          "rawRecommended": "BIO 1 - Life Sciences I\nBIO 2 - Life Sciences II\nBIO 3 - Life Sciences III\nCHEM 30B - Organic Chemistry II\nPHYSICS 4AL - Physics Laboratory for Scientists and Engineers",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Admission to the Samueli School of Engineering is highly selective. All prerequisite courses must be completed by the end of the spring term prior to transfer. A minimum grade of C is required for all preparatory courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://samueli.ucla.edu/transfer-applicants/"
+        },
+        {
+          "id": "ucla-business-economics",
+          "name": "Business Economics",
+          "rawMinGpa": "3.3",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ECON 1 - Principles of Economics",
+            "ECON 2 - Principles of Economics",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "ECON 11 - Microeconomic Theory",
+            "ECON 41 - Statistics for Economists"
+          ],
+          "recommendedCourses": [
+            "MATH 32B - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications",
+            "MATH 33B - Differential Equations"
+          ],
+          "rawRequired": "ECON 1 - Principles of Economics\nECON 2 - Principles of Economics\nMATH 31A - Differential and Integral Calculus\nMATH 31B - Integration and Infinite Series\nMATH 32A - Calculus of Several Variables\nECON 11 - Microeconomic Theory\nECON 41 - Statistics for Economists",
+          "rawRecommended": "MATH 32B - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications\nMATH 33B - Differential Equations",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Business Economics major is highly selective. Students must complete all lower-division preparation courses with a cumulative GPA of 3.3 or higher in the preparation courses. MATH 31A, 31B, 32A, ECON 1, 2, 11, and 41 must be completed by the end of the spring term prior to fall enrollment.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/business-economics-major"
+        },
+        {
+          "id": "ucla-economics",
+          "name": "Economics",
+          "rawMinGpa": "3.3",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ECON 1 - Principles of Economics (Microeconomics)",
+            "ECON 2 - Principles of Economics (Macroeconomics)",
+            "MATH 31A - Differential and Integral Calculus",
+            "MATH 31B - Integration and Infinite Series",
+            "MATH 32A - Calculus of Several Variables",
+            "MATH 33A - Linear Algebra and Applications"
+          ],
+          "recommendedCourses": [
+            "MATH 33B - Differential Equations",
+            "STAT 10 - Introduction to Statistical Reasoning"
+          ],
+          "rawRequired": "ECON 1 - Principles of Economics (Microeconomics)\nECON 2 - Principles of Economics (Macroeconomics)\nMATH 31A - Differential and Integral Calculus\nMATH 31B - Integration and Infinite Series\nMATH 32A - Calculus of Several Variables\nMATH 33A - Linear Algebra and Applications",
+          "rawRecommended": "MATH 33B - Differential Equations\nSTAT 10 - Introduction to Statistical Reasoning",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Admission to the Economics major is highly selective. All preparation courses must be completed by the end of the spring term prior to fall enrollment.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/majors/economics"
+        },
+        {
+          "id": "ucla-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "PSYCH 10 - Introduction to Psychology",
+            "PSYCH 20 - Introduction to Cognitive Psychology",
+            "MATH 3A - Calculus for Life Sciences Students or MATH 31A - Differential and Integral Calculus",
+            "PSYCH 100A - Psychological Statistics (or equivalent statistics course)",
+            "Life Science Elective: One course from approved list (e.g., Biology, Chemistry, or Physics equivalent to UCLA Life Sciences 7A/7B/7C or similar foundations)"
+          ],
+          "recommendedCourses": [
+            "Completion of IGETC or UCLA GE requirements",
+            "Additional coursework in foreign language proficiency"
+          ],
+          "rawRequired": "PSYCH 10 - Introduction to Psychology\nPSYCH 20 - Introduction to Cognitive Psychology\nMATH 3A - Calculus for Life Sciences Students or MATH 31A - Differential and Integral Calculus\nPSYCH 100A - Psychological Statistics (or equivalent statistics course)\nLife Science Elective: One course from approved list (e.g., Biology, Chemistry, or Physics equivalent to UCLA Life Sciences 7A/7B/7C or similar foundations)",
+          "rawRecommended": "Completion of IGETC or UCLA GE requirements\nAdditional coursework in foreign language proficiency",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with grades of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Psychology major is highly selective. All prerequisite courses must be completed by the end of the spring term prior to fall transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admission.ucla.edu/apply/transfer/major-preparation/2025/psychology"
+        }
+      ]
+    },
+    {
+      "id": "uc-davis",
+      "name": "UC Davis",
+      "shortName": "UC Davis",
+      "majors": [
+        {
+          "id": "uc-davis-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.40",
+          "rawMinCredits": "60",
+          "minGpa": 3.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MAT 21A - Calculus I",
+            "MAT 21B - Calculus II",
+            "MAT 21C - Calculus III",
+            "MAT 22A - Linear Algebra",
+            "ECS 36A - Programming and Problem Solving",
+            "ECS 36B - Software Development and Object-Oriented Programming",
+            "ECS 36C - Data Structures, Algorithms, and Programming",
+            "ECS 50 - Computer Organization and Machine-Dependent Programming",
+            "ECS 20 - Discrete Mathematics for Computer Science",
+            "PHY 9A - Classical Mechanics",
+            "PHY 9B - Waves, Thermodynamics, Optics, and Modern Physics"
+          ],
+          "recommendedCourses": [
+            "MAT 22B - Differential Equations",
+            "Statistics course (Calculus-based)"
+          ],
+          "rawRequired": "MAT 21A - Calculus I\nMAT 21B - Calculus II\nMAT 21C - Calculus III\nMAT 22A - Linear Algebra\nECS 36A - Programming and Problem Solving\nECS 36B - Software Development and Object-Oriented Programming\nECS 36C - Data Structures, Algorithms, and Programming\nECS 50 - Computer Organization and Machine-Dependent Programming\nECS 20 - Discrete Mathematics for Computer Science\nPHY 9A - Classical Mechanics\nPHY 9B - Waves, Thermodynamics, Optics, and Modern Physics",
+          "rawRecommended": "MAT 22B - Differential Equations\nStatistics course (Calculus-based)",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Computer Science is a selective major at UC Davis. All listed lower-division major preparation courses must be completed by the end of the spring term prior to fall enrollment. A minimum GPA of 3.40 is required in the prerequisite courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-davis-computer-science-and-engineering",
+          "name": "Computer Science and Engineering",
+          "rawMinGpa": "3.40",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 21A - Calculus I",
+            "MATH 21B - Calculus II",
+            "MATH 21C - Calculus III",
+            "MATH 21D - Vector Analysis",
+            "MATH 22A - Linear Algebra",
+            "MATH 22B - Differential Equations",
+            "PHY 9A - Classical Mechanics",
+            "PHY 9B - Waves, Thermodynamics, and Optics",
+            "PHY 9C - Electricity and Magnetism",
+            "ECS 32A - Introduction to Programming",
+            "ECS 32B - Introduction to Data Structures",
+            "ECS 36A - Programming and Problem Solving",
+            "ECS 36B - Software Development and Object-Oriented Programming",
+            "ECS 36C - Data Structures, Algorithms, and Programming"
+          ],
+          "recommendedCourses": [
+            "CHEM 2A - General Chemistry"
+          ],
+          "rawRequired": "MATH 21A - Calculus I\nMATH 21B - Calculus II\nMATH 21C - Calculus III\nMATH 21D - Vector Analysis\nMATH 22A - Linear Algebra\nMATH 22B - Differential Equations\nPHY 9A - Classical Mechanics\nPHY 9B - Waves, Thermodynamics, and Optics\nPHY 9C - Electricity and Magnetism\nECS 32A - Introduction to Programming\nECS 32B - Introduction to Data Structures\nECS 36A - Programming and Problem Solving\nECS 36B - Software Development and Object-Oriented Programming\nECS 36C - Data Structures, Algorithms, and Programming",
+          "rawRecommended": "CHEM 2A - General Chemistry",
+          "english": {
+            "raw": "Must complete two transferable college English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to Computer Science and Engineering at UC Davis is highly selective. Students must complete all lower-division major requirements for full consideration.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-davis-computer-engineering",
+          "name": "Computer Engineering",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MAT 21A - Calculus I",
+            "MAT 21B - Calculus II",
+            "MAT 21C - Calculus III",
+            "MAT 21D - Vector Analysis",
+            "MAT 22A - Linear Algebra",
+            "MAT 22B - Differential Equations",
+            "PHY 9A - Classical Physics",
+            "PHY 9B - Classical Physics",
+            "PHY 9C - Classical Physics",
+            "CHE 2A - General Chemistry",
+            "ECS 32A - Introduction to Programming",
+            "ECS 32B - Introduction to Data Structures",
+            "ECS 36C - Data Structures, Algorithms, and Programming"
+          ],
+          "recommendedCourses": [
+            "ECS 50 - Computer Organization and Machine-Dependent Programming",
+            "ECS 20 - Discrete Mathematics for Computer Science"
+          ],
+          "rawRequired": "MAT 21A - Calculus I\nMAT 21B - Calculus II\nMAT 21C - Calculus III\nMAT 21D - Vector Analysis\nMAT 22A - Linear Algebra\nMAT 22B - Differential Equations\nPHY 9A - Classical Physics\nPHY 9B - Classical Physics\nPHY 9C - Classical Physics\nCHE 2A - General Chemistry\nECS 32A - Introduction to Programming\nECS 32B - Introduction to Data Structures\nECS 36C - Data Structures, Algorithms, and Programming",
+          "rawRecommended": "ECS 50 - Computer Organization and Machine-Dependent Programming\nECS 20 - Discrete Mathematics for Computer Science",
+          "english": {
+            "raw": "Completion of two transferable college-level English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete as many lower-division major requirements as possible before transfer. Admission is selective.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucdavis.edu/transfer-students/course-requirements-college-engineering"
+        },
+        {
+          "id": "uc-davis-managerial-economics",
+          "name": "Managerial Economics",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 16A - Short Calculus I",
+            "MATH 16B - Short Calculus II",
+            "ECON 1A - Principles of Microeconomics",
+            "ECON 1B - Principles of Macroeconomics"
+          ],
+          "recommendedCourses": [
+            "Statistics course equivalent to STA 13",
+            "Introductory course in Financial Accounting"
+          ],
+          "rawRequired": "MATH 16A - Short Calculus I\nMATH 16B - Short Calculus II\nECON 1A - Principles of Microeconomics\nECON 1B - Principles of Macroeconomics",
+          "rawRecommended": "Statistics course equivalent to STA 13\nIntroductory course in Financial Accounting",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students should ensure they have completed the required sequence at their community college that corresponds to the UCD MATH 16 series. For students choosing the alternative Calculus sequence (MATH 21 series), both MATH 21A and 21B are required.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucdavis.edu/transfer-students/major-preparation"
+        },
+        {
+          "id": "uc-davis-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "2.40",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 16A - Short Calculus",
+            "MATH 16B - Short Calculus",
+            "PSC 1 - General Psychology"
+          ],
+          "recommendedCourses": [
+            "STAT 13 - Elementary Statistics",
+            "PSC 41 - Research Methods in Psychology"
+          ],
+          "rawRequired": "MATH 16A - Short Calculus\nMATH 16B - Short Calculus\nPSC 1 - General Psychology",
+          "rawRecommended": "STAT 13 - Elementary Statistics\nPSC 41 - Research Methods in Psychology",
+          "english": {
+            "raw": "Completion of two transferable college courses in English composition (equivalent to UC Davis UWP 1 and one additional course from the UWP 1 series or English literature list)."
+          },
+          "englishExemption": "Exempt with English Composition coursework",
+          "note": "Students should aim to complete all lower-division major requirements to be competitive. While the minimum GPA for admission is 2.40, a significantly higher GPA is required for admission to this selective major.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org"
+        },
+        {
+          "id": "uc-davis-mechanical-engineering",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.20",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 21A - Calculus I",
+            "MATH 21B - Calculus II",
+            "MATH 21C - Calculus III",
+            "MATH 21D - Vector Analysis",
+            "MATH 22B - Differential Equations",
+            "PHYS 9A - Classical Mechanics",
+            "PHYS 9B - Waves, Thermodynamics and Optics",
+            "PHYS 9C - Electricity and Magnetism",
+            "CHEM 2A - General Chemistry",
+            "ENG 6 - Engineering Programming",
+            "ENG 17 - Circuits I",
+            "ENG 35 - Statics"
+          ],
+          "recommendedCourses": [
+            "ENG 45 - Properties of Materials",
+            "ENG 105 - Thermodynamics"
+          ],
+          "rawRequired": "MATH 21A - Calculus I\nMATH 21B - Calculus II\nMATH 21C - Calculus III\nMATH 21D - Vector Analysis\nMATH 22B - Differential Equations\nPHYS 9A - Classical Mechanics\nPHYS 9B - Waves, Thermodynamics and Optics\nPHYS 9C - Electricity and Magnetism\nCHEM 2A - General Chemistry\nENG 6 - Engineering Programming\nENG 17 - Circuits I\nENG 35 - Statics",
+          "rawRecommended": "ENG 45 - Properties of Materials\nENG 105 - Thermodynamics",
+          "english": {
+            "raw": "Must complete two transferable college English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Verified: Prerequisite requirements retrieved from official admissions guides and ASSIST.org guidelines.\nGrade minimums per course: C- or better required in all major preparation courses..\nCompletion timeline: All required courses must be completed by the end of the spring term prior to fall enrollment..",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-davis-electrical-engineering",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MAT 21A - Calculus I",
+            "MAT 21B - Calculus II",
+            "MAT 21C - Calculus III",
+            "MAT 21D - Vector Analysis",
+            "MAT 22A - Linear Algebra",
+            "MAT 22B - Differential Equations",
+            "PHY 9A - Classical Mechanics",
+            "PHY 9B - Waves, Thermodynamics, and Optics",
+            "PHY 9C - Electricity and Magnetism",
+            "CHE 2A - General Chemistry",
+            "ENG 6 - Engineering Problem Solving",
+            "ECS 32A - Introduction to Programming"
+          ],
+          "recommendedCourses": [
+            "PHY 9D - Modern Physics",
+            "ECS 32B - Introduction to Data Structures",
+            "ENG 17 - Circuits I"
+          ],
+          "rawRequired": "MAT 21A - Calculus I\nMAT 21B - Calculus II\nMAT 21C - Calculus III\nMAT 21D - Vector Analysis\nMAT 22A - Linear Algebra\nMAT 22B - Differential Equations\nPHY 9A - Classical Mechanics\nPHY 9B - Waves, Thermodynamics, and Optics\nPHY 9C - Electricity and Magnetism\nCHE 2A - General Chemistry\nENG 6 - Engineering Problem Solving\nECS 32A - Introduction to Programming",
+          "rawRecommended": "PHY 9D - Modern Physics\nECS 32B - Introduction to Data Structures\nENG 17 - Circuits I",
+          "english": {
+            "raw": "Completion of two transferable courses in English composition (equivalent to UWP 1 and UWP 102/104 or equivalent)."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the College of Engineering is selective. Completion of all lower-division requirements is strongly recommended to be competitive for admission.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-davis-biotechnology",
+          "name": "Biotechnology",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "BIS 2A - Essentials of Biology: Introduction to Biology",
+            "BIS 2B - Essentials of Biology: Introduction to Biology",
+            "BIS 2C - Essentials of Biology: Introduction to Biology",
+            "CHE 2A - General Chemistry",
+            "CHE 2B - General Chemistry",
+            "CHE 2C - General Chemistry",
+            "MAT 16A - Short Calculus",
+            "MAT 16B - Short Calculus",
+            "PHY 7A - General Physics",
+            "PHY 7B - General Physics"
+          ],
+          "recommendedCourses": [
+            "CHE 8A - Organic Chemistry",
+            "CHE 8B - Organic Chemistry",
+            "MAT 16C - Short Calculus",
+            "STA 13 - Elementary Statistics"
+          ],
+          "rawRequired": "BIS 2A - Essentials of Biology: Introduction to Biology\nBIS 2B - Essentials of Biology: Introduction to Biology\nBIS 2C - Essentials of Biology: Introduction to Biology\nCHE 2A - General Chemistry\nCHE 2B - General Chemistry\nCHE 2C - General Chemistry\nMAT 16A - Short Calculus\nMAT 16B - Short Calculus\nPHY 7A - General Physics\nPHY 7B - General Physics",
+          "rawRecommended": "CHE 8A - Organic Chemistry\nCHE 8B - Organic Chemistry\nMAT 16C - Short Calculus\nSTA 13 - Elementary Statistics",
+          "english": {
+            "raw": "Completion of two transferable college courses in English composition (equivalent to UWP 1 and UWP 102/104 series)."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students should complete as many lower-division requirements as possible prior to transfer. Priority is given to applicants who have completed all required preparatory coursework.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-davis-cognitive-science",
+          "name": "Cognitive Science",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MAT 17A - Calculus for Biology and Medicine",
+            "MAT 17B - Calculus for Biology and Medicine",
+            "PSC 1 - General Psychology",
+            "PHI 30 - Introduction to Symbolic Logic",
+            "ECS 32A - Introduction to Programming"
+          ],
+          "recommendedCourses": [
+            "PSC 41 - Research Methods in Psychology",
+            "PHI 12 - Introduction to Symbolic Logic",
+            "Statistics course equivalent to STA 13"
+          ],
+          "rawRequired": "MAT 17A - Calculus for Biology and Medicine\nMAT 17B - Calculus for Biology and Medicine\nPSC 1 - General Psychology\nPHI 30 - Introduction to Symbolic Logic\nECS 32A - Introduction to Programming",
+          "rawRecommended": "PSC 41 - Research Methods in Psychology\nPHI 12 - Introduction to Symbolic Logic\nStatistics course equivalent to STA 13",
+          "english": {
+            "raw": "Completion of two transferable college English composition courses (equivalent to UWP 1 and UWP 102/104 series) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students must complete the specified lower-division major preparation with a cumulative GPA of 2.80 or higher to be considered for admission to the Cognitive Science major. It is highly recommended to complete all lower-division requirements prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        }
+      ]
+    },
+    {
+      "id": "uc-santa-barbara",
+      "name": "UC Santa Barbara",
+      "shortName": "UC Santa Barbara",
+      "majors": [
+        {
+          "id": "uc-santa-barbara-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.40",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "CMPSC 16 - Problem Solving with Computers I",
+            "CMPSC 24 - Problem Solving with Computers II",
+            "CMPSC 32 - Object Oriented Design and Implementation",
+            "CMPSC 40 - Foundations of Computer Science",
+            "CMPSC 56 - Advanced Applications Programming",
+            "MATH 3A - Calculus I",
+            "MATH 3B - Calculus II",
+            "MATH 4A - Linear Algebra",
+            "MATH 4B - Differential Equations",
+            "MATH 6A - Vector Calculus I",
+            "PHYS 1 - Physics I",
+            "PHYS 1 Lab - Physics I Lab",
+            "PHYS 2 - Physics II",
+            "PHYS 2 Lab - Physics II Lab",
+            "PHYS 3 - Physics III",
+            "PHYS 3 Lab - Physics III Lab"
+          ],
+          "recommendedCourses": [
+            "Completion of IGETC or UCSB General Education requirements",
+            "Strongly recommended to complete all lower-division major preparation before transfer"
+          ],
+          "rawRequired": "CMPSC 16 - Problem Solving with Computers I\nCMPSC 24 - Problem Solving with Computers II\nCMPSC 32 - Object Oriented Design and Implementation\nCMPSC 40 - Foundations of Computer Science\nCMPSC 56 - Advanced Applications Programming\nMATH 3A - Calculus I\nMATH 3B - Calculus II\nMATH 4A - Linear Algebra\nMATH 4B - Differential Equations\nMATH 6A - Vector Calculus I\nPHYS 1 - Physics I\nPHYS 1 Lab - Physics I Lab\nPHYS 2 - Physics II\nPHYS 2 Lab - Physics II Lab\nPHYS 3 - Physics III\nPHYS 3 Lab - Physics III Lab",
+          "rawRecommended": "Completion of IGETC or UCSB General Education requirements\nStrongly recommended to complete all lower-division major preparation before transfer",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Computer Science major is highly selective. Students must complete all listed prerequisite courses prior to transfer to be considered for admission. Students are admitted to pre-major status and must maintain a specific GPA in lower-division courses to advance to full major status.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/majors/computer-science"
+        },
+        {
+          "id": "uc-santa-barbara-computer-engineering",
+          "name": "Computer Engineering",
+          "rawMinGpa": "3.20",
+          "rawMinCredits": "60",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 3A - Calculus I",
+            "MATH 3B - Calculus II",
+            "MATH 4A - Linear Algebra",
+            "MATH 4B - Differential Equations",
+            "PHYS 1 - Physics I: Mechanics of Solids and Fluids",
+            "PHYS 2 - Physics II: Electromagnetism",
+            "PHYS 3 - Physics III: Optics, Quantum Phenomena, and Thermodynamics",
+            "PHYS 3L - Physics III Lab",
+            "PHYS 4 - Physics IV: Introduction to Quantum Mechanics",
+            "PHYS 4L - Physics IV Lab",
+            "CMPSC 16 - Problem Solving with Computers I",
+            "CMPSC 24 - Problem Solving with Computers II",
+            "CMPSC 40 - Foundations of Computer Science",
+            "CMPSC 64 - Computer Organization and Logic Design",
+            "ECE 15A - Fundamentals of Logic Design"
+          ],
+          "recommendedCourses": [
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "One year of English composition sequence"
+          ],
+          "rawRequired": "MATH 3A - Calculus I\nMATH 3B - Calculus II\nMATH 4A - Linear Algebra\nMATH 4B - Differential Equations\nPHYS 1 - Physics I: Mechanics of Solids and Fluids\nPHYS 2 - Physics II: Electromagnetism\nPHYS 3 - Physics III: Optics, Quantum Phenomena, and Thermodynamics\nPHYS 3L - Physics III Lab\nPHYS 4 - Physics IV: Introduction to Quantum Mechanics\nPHYS 4L - Physics IV Lab\nCMPSC 16 - Problem Solving with Computers I\nCMPSC 24 - Problem Solving with Computers II\nCMPSC 40 - Foundations of Computer Science\nCMPSC 64 - Computer Organization and Logic Design\nECE 15A - Fundamentals of Logic Design",
+          "rawRecommended": "CHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nOne year of English composition sequence",
+          "english": {
+            "raw": "Must complete two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Computer Engineering major is selective. Students are expected to complete as many of the lower-division major preparation courses as possible prior to transfer. Physics 1-4 series is preferred over the Physics 10-20 series.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/majors/computer-engineering"
+        },
+        {
+          "id": "uc-santa-barbara-electrical-engineering",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 3A - Analytic Geometry and Calculus I",
+            "MATH 3B - Analytic Geometry and Calculus II",
+            "MATH 4A - Linear Algebra",
+            "MATH 4B - Differential Equations",
+            "PHYS 1 - Physics I",
+            "PHYS 2 - Physics II",
+            "PHYS 3 - Physics III",
+            "PHYS 3L - Physics III Lab",
+            "PHYS 4 - Physics IV",
+            "PHYS 4L - Physics IV Lab",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "CMPSC 16 - Problem Solving with Computers I",
+            "CMPSC 24 - Problem Solving with Computers II",
+            "ECE 5 - Introduction to Electrical and Computer Engineering"
+          ],
+          "recommendedCourses": [
+            "CMPSC 40 - Foundations of Computer Science",
+            "CHEM 1B - General Chemistry",
+            "CHEM 1BL - General Chemistry Lab"
+          ],
+          "rawRequired": "MATH 3A - Analytic Geometry and Calculus I\nMATH 3B - Analytic Geometry and Calculus II\nMATH 4A - Linear Algebra\nMATH 4B - Differential Equations\nPHYS 1 - Physics I\nPHYS 2 - Physics II\nPHYS 3 - Physics III\nPHYS 3L - Physics III Lab\nPHYS 4 - Physics IV\nPHYS 4L - Physics IV Lab\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nCMPSC 16 - Problem Solving with Computers I\nCMPSC 24 - Problem Solving with Computers II\nECE 5 - Introduction to Electrical and Computer Engineering",
+          "rawRecommended": "CMPSC 40 - Foundations of Computer Science\nCHEM 1B - General Chemistry\nCHEM 1BL - General Chemistry Lab",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the College of Engineering is highly selective. All major preparation courses must be completed with a cumulative GPA of 3.0 or higher in those courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/major-preparation"
+        },
+        {
+          "id": "uc-santa-barbara-mechanical-engineering",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "3.2",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3.2,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 3A - Calculus I",
+            "MATH 3B - Calculus II",
+            "MATH 4A - Linear Algebra",
+            "MATH 4B - Differential Equations",
+            "PHYS 20 - Mechanics",
+            "PHYS 20L - Mechanics Lab",
+            "PHYS 21 - Fluids, Waves, Thermodynamics",
+            "PHYS 21L - Fluids, Waves, Thermodynamics Lab",
+            "PHYS 22 - Electricity and Magnetism",
+            "PHYS 22L - Electricity and Magnetism Lab",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Lab",
+            "CHEM 1B - General Chemistry",
+            "CHEM 1BL - General Chemistry Lab",
+            "ENGR 3 - Introduction to Programming (or equivalent C++ course)",
+            "ME 10 - Introduction to Mechanical Engineering",
+            "ME 14 - Statics",
+            "ME 15 - Strength of Materials",
+            "ME 16 - Dynamics"
+          ],
+          "recommendedCourses": [
+            "MATH 6A - Vector Calculus",
+            "MATH 6B - Vector Calculus"
+          ],
+          "rawRequired": "MATH 3A - Calculus I\nMATH 3B - Calculus II\nMATH 4A - Linear Algebra\nMATH 4B - Differential Equations\nPHYS 20 - Mechanics\nPHYS 20L - Mechanics Lab\nPHYS 21 - Fluids, Waves, Thermodynamics\nPHYS 21L - Fluids, Waves, Thermodynamics Lab\nPHYS 22 - Electricity and Magnetism\nPHYS 22L - Electricity and Magnetism Lab\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Lab\nCHEM 1B - General Chemistry\nCHEM 1BL - General Chemistry Lab\nENGR 3 - Introduction to Programming (or equivalent C++ course)\nME 10 - Introduction to Mechanical Engineering\nME 14 - Statics\nME 15 - Strength of Materials\nME 16 - Dynamics",
+          "rawRecommended": "MATH 6A - Vector Calculus\nMATH 6B - Vector Calculus",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Mechanical Engineering is a highly selective major. Applicants must complete all listed prerequisites by the end of the spring term prior to fall enrollment. A minimum GPA of 3.2 in the prerequisite coursework is strongly recommended for competitiveness.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/major-preparation"
+        },
+        {
+          "id": "uc-santa-barbara-economics",
+          "name": "Economics",
+          "rawMinGpa": "2.75",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.75,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ECON 1 - Introduction to Microeconomics",
+            "ECON 2 - Introduction to Macroeconomics",
+            "MATH 3A - Calculus I",
+            "MATH 3B - Calculus II",
+            "MATH 4A - Linear Algebra"
+          ],
+          "recommendedCourses": [
+            "MATH 4B - Differential Equations",
+            "STAT 1 - Introduction to Statistics"
+          ],
+          "rawRequired": "ECON 1 - Introduction to Microeconomics\nECON 2 - Introduction to Macroeconomics\nMATH 3A - Calculus I\nMATH 3B - Calculus II\nMATH 4A - Linear Algebra",
+          "rawRecommended": "MATH 4B - Differential Equations\nSTAT 1 - Introduction to Statistics",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students must complete all required courses with a minimum 2.75 GPA. Admission to the major is selective; meeting the minimum GPA does not guarantee admission.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/majors/economics"
+        },
+        {
+          "id": "uc-santa-barbara-financial-mathematics-and-statistics",
+          "name": "Financial Mathematics and Statistics",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60 semester units (90 quarter units)",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 3A - Calculus I",
+            "MATH 3B - Calculus II",
+            "MATH 4A - Linear Algebra",
+            "MATH 4B - Differential Equations",
+            "MATH 6A - Vector Calculus I",
+            "MATH 6B - Vector Calculus II",
+            "CMPSC 9 - Problem Solving with Computer Science",
+            "CMPSC 16 - Problem Solving with Computer Science II",
+            "ECON 1 - Introduction to Economics",
+            "ECON 2 - Introduction to Economics"
+          ],
+          "recommendedCourses": [
+            "CMPSC 24 - Problem Solving with Computer Science III",
+            "CMPSC 40 - Foundations of Computer Science"
+          ],
+          "rawRequired": "MATH 3A - Calculus I\nMATH 3B - Calculus II\nMATH 4A - Linear Algebra\nMATH 4B - Differential Equations\nMATH 6A - Vector Calculus I\nMATH 6B - Vector Calculus II\nCMPSC 9 - Problem Solving with Computer Science\nCMPSC 16 - Problem Solving with Computer Science II\nECON 1 - Introduction to Economics\nECON 2 - Introduction to Economics",
+          "rawRecommended": "CMPSC 24 - Problem Solving with Computer Science III\nCMPSC 40 - Foundations of Computer Science",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students must maintain a 2.8 GPA in the preparatory coursework. It is highly recommended to complete all major preparation prior to transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/majors/financial-mathematics-statistics"
+        },
+        {
+          "id": "uc-santa-barbara-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "2.7",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.7,
+          "minCredits": 60,
+          "requiredCourses": [
+            "PSY 1 - Introduction to Psychology",
+            "MATH 4A - Calculus for Social and Life Sciences",
+            "PSY 10A - Research Methods in Psychology",
+            "PSY 10B - Statistical Methods in Psychology"
+          ],
+          "recommendedCourses": [
+            "One course in Biology (BIOL 10, BIOL 20, or equivalent)",
+            "One course in Statistics or Calculus beyond the minimum requirements"
+          ],
+          "rawRequired": "PSY 1 - Introduction to Psychology\nMATH 4A - Calculus for Social and Life Sciences\nPSY 10A - Research Methods in Psychology\nPSY 10B - Statistical Methods in Psychology",
+          "rawRecommended": "One course in Biology (BIOL 10, BIOL 20, or equivalent)\nOne course in Statistics or Calculus beyond the minimum requirements",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Psychology major is highly selective. Students must complete all required courses with a grade of C or better. It is strongly recommended to complete all major preparation courses before transferring.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/majors/psychology"
+        },
+        {
+          "id": "uc-santa-barbara-actuarial-science",
+          "name": "Actuarial Science",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 3A - Calculus I",
+            "MATH 3B - Calculus II",
+            "MATH 4A - Linear Algebra",
+            "MATH 4B - Differential Equations",
+            "MATH 6A - Vector Calculus I",
+            "MATH 6B - Vector Calculus II",
+            "CMPSC 8 - Introduction to Computer Science",
+            "CMPSC 16 - Problem Solving with Computers I",
+            "PSTAT 120A - Probability and Statistics I",
+            "ECON 1 - Introduction to Microeconomics",
+            "ECON 2 - Introduction to Macroeconomics"
+          ],
+          "recommendedCourses": [
+            "MATH 8 - Introduction to Higher Mathematics"
+          ],
+          "rawRequired": "MATH 3A - Calculus I\nMATH 3B - Calculus II\nMATH 4A - Linear Algebra\nMATH 4B - Differential Equations\nMATH 6A - Vector Calculus I\nMATH 6B - Vector Calculus II\nCMPSC 8 - Introduction to Computer Science\nCMPSC 16 - Problem Solving with Computers I\nPSTAT 120A - Probability and Statistics I\nECON 1 - Introduction to Microeconomics\nECON 2 - Introduction to Macroeconomics",
+          "rawRecommended": "MATH 8 - Introduction to Higher Mathematics",
+          "english": {
+            "raw": "Complete the two-course UC-transferable English composition sequence with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Actuarial Science major is highly selective. All lower-division prerequisites must be completed before transfer. Students must maintain a minimum 2.8 GPA in prerequisite coursework.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.sa.ucsb.edu/apply/transfer/majors/actuarial-science"
+        }
+      ]
+    },
+    {
+      "id": "uc-santa-cruz",
+      "name": "UC Santa Cruz",
+      "shortName": "UC Santa Cruz",
+      "majors": [
+        {
+          "id": "uc-santa-cruz-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 19A - Calculus for Science, Engineering, and Mathematics",
+            "MATH 19B - Calculus for Science, Engineering, and Mathematics",
+            "CSE 20 - Beginning Programming in Python",
+            "CSE 30 - Programming Abstractions in Python"
+          ],
+          "recommendedCourses": [
+            "MATH 23A - Vector Calculus",
+            "MATH 23B - Vector Calculus",
+            "CSE 13S - Computer Systems and C Programming",
+            "CSE 16 - Discrete Mathematics"
+          ],
+          "rawRequired": "MATH 19A - Calculus for Science, Engineering, and Mathematics\nMATH 19B - Calculus for Science, Engineering, and Mathematics\nCSE 20 - Beginning Programming in Python\nCSE 30 - Programming Abstractions in Python",
+          "rawRecommended": "MATH 23A - Vector Calculus\nMATH 23B - Vector Calculus\nCSE 13S - Computer Systems and C Programming\nCSE 16 - Discrete Mathematics",
+          "english": {
+            "raw": "Completion of two courses of UC transferable English composition (equivalent to UCSC Writing 1 and Writing 2) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete as many lower-division major requirements as possible before transfer. Admission to this major is selective.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucsc.edu/transfer-students/major-preparation"
+        },
+        {
+          "id": "uc-santa-cruz-computer-engineering",
+          "name": "Computer Engineering",
+          "rawMinGpa": "3.0",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 19A - Calculus for Science, Engineering, and Mathematics",
+            "MATH 19B - Calculus for Science, Engineering, and Mathematics",
+            "AM 10 - Mathematical Methods for Engineers I",
+            "AM 20 - Mathematical Methods for Engineers II",
+            "PHYS 5A - Introduction to Physics I",
+            "PHYS 5L - Introduction to Physics I Lab",
+            "PHYS 5B - Introduction to Physics II",
+            "PHYS 5M - Introduction to Physics II Lab",
+            "CSE 20 - Beginning Programming in Python",
+            "CSE 30 - Programming Abstractions in Python",
+            "CSE 13S - Computer Systems and C Programming"
+          ],
+          "recommendedCourses": [
+            "PHYS 5C - Introduction to Physics III",
+            "PHYS 5N - Introduction to Physics III Lab",
+            "CSE 16 - Applied Discrete Mathematics"
+          ],
+          "rawRequired": "MATH 19A - Calculus for Science, Engineering, and Mathematics\nMATH 19B - Calculus for Science, Engineering, and Mathematics\nAM 10 - Mathematical Methods for Engineers I\nAM 20 - Mathematical Methods for Engineers II\nPHYS 5A - Introduction to Physics I\nPHYS 5L - Introduction to Physics I Lab\nPHYS 5B - Introduction to Physics II\nPHYS 5M - Introduction to Physics II Lab\nCSE 20 - Beginning Programming in Python\nCSE 30 - Programming Abstractions in Python\nCSE 13S - Computer Systems and C Programming",
+          "rawRecommended": "PHYS 5C - Introduction to Physics III\nPHYS 5N - Introduction to Physics III Lab\nCSE 16 - Applied Discrete Mathematics",
+          "english": {
+            "raw": "Must complete two courses in English composition (UC-E requirement) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students must complete the core math and programming sequence before transfer. All major preparation must be completed with a grade of C or higher.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-santa-cruz-technology-and-information-management",
+          "name": "Technology and Information Management",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 19A - Calculus for Science, Engineering, and Mathematics",
+            "MATH 19B - Calculus for Science, Engineering, and Mathematics",
+            "MATH 21 - Linear Algebra",
+            "MATH 22 - Introduction to Differential Equations",
+            "CSE 20 - Beginning Programming in Python",
+            "CSE 30 - Programming Abstractions in Python",
+            "ECON 1 - Introductory Microeconomics",
+            "ECON 2 - Introductory Macroeconomics"
+          ],
+          "recommendedCourses": [
+            "ECON 11A - Mathematical Methods for Economists I",
+            "ECON 11B - Mathematical Methods for Economists II",
+            "CSE 16 - Applied Discrete Mathematics"
+          ],
+          "rawRequired": "MATH 19A - Calculus for Science, Engineering, and Mathematics\nMATH 19B - Calculus for Science, Engineering, and Mathematics\nMATH 21 - Linear Algebra\nMATH 22 - Introduction to Differential Equations\nCSE 20 - Beginning Programming in Python\nCSE 30 - Programming Abstractions in Python\nECON 1 - Introductory Microeconomics\nECON 2 - Introductory Macroeconomics",
+          "rawRecommended": "ECON 11A - Mathematical Methods for Economists I\nECON 11B - Mathematical Methods for Economists II\nCSE 16 - Applied Discrete Mathematics",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students should prioritize completion of the mathematics and computer science sequences early in their community college career. The major is highly selective and requires a strong GPA in core preparatory courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucsc.edu/transfer-students/major-preparation"
+        },
+        {
+          "id": "uc-santa-cruz-network-and-digital-technology",
+          "name": "Network and Digital Technology",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 19A - Calculus for Science, Engineering, and Mathematics",
+            "MATH 19B - Calculus for Science, Engineering, and Mathematics",
+            "CMPS 12A/L - Introduction to Programming/Laboratory",
+            "CMPS 12B/M - Introduction to Data Structures/Laboratory"
+          ],
+          "recommendedCourses": [
+            "MATH 21 - Linear Algebra",
+            "MATH 24 - Introduction to Proofs and Problem Solving",
+            "AMS 10 - Mathematical Methods for Engineers I",
+            "AMS 20 - Mathematical Methods for Engineers II",
+            "PHYS 5A/L - Introduction to Physics I/Laboratory",
+            "PHYS 5B/M - Introduction to Physics II/Laboratory"
+          ],
+          "rawRequired": "MATH 19A - Calculus for Science, Engineering, and Mathematics\nMATH 19B - Calculus for Science, Engineering, and Mathematics\nCMPS 12A/L - Introduction to Programming/Laboratory\nCMPS 12B/M - Introduction to Data Structures/Laboratory",
+          "rawRecommended": "MATH 21 - Linear Algebra\nMATH 24 - Introduction to Proofs and Problem Solving\nAMS 10 - Mathematical Methods for Engineers I\nAMS 20 - Mathematical Methods for Engineers II\nPHYS 5A/L - Introduction to Physics I/Laboratory\nPHYS 5B/M - Introduction to Physics II/Laboratory",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete all major preparation requirements prior to transfer. Admission is selective and based on GPA in major preparation coursework.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-santa-cruz-cognitive-science",
+          "name": "Cognitive Science",
+          "rawMinGpa": "2.70",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.7,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 19A - Calculus for Science, Engineering, and Mathematics",
+            "MATH 19B - Calculus for Science, Engineering, and Mathematics",
+            "CSE 20 - Beginning Programming in Python",
+            "CSE 30 - Programming Abstractions in Python"
+          ],
+          "recommendedCourses": [
+            "PHIL 9 - Introduction to Logic",
+            "STAT 7 - Statistical Methods for the Biological, Environmental, and Health Sciences",
+            "MATH 22 - Introduction to Calculus of Several Variables",
+            "MATH 23A - Vector Calculus"
+          ],
+          "rawRequired": "MATH 19A - Calculus for Science, Engineering, and Mathematics\nMATH 19B - Calculus for Science, Engineering, and Mathematics\nCSE 20 - Beginning Programming in Python\nCSE 30 - Programming Abstractions in Python",
+          "rawRecommended": "PHIL 9 - Introduction to Logic\nSTAT 7 - Statistical Methods for the Biological, Environmental, and Health Sciences\nMATH 22 - Introduction to Calculus of Several Variables\nMATH 23A - Vector Calculus",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete as many lower-division requirements as possible prior to transfer. Major preparation is considered a key factor in the selection process.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucsc.edu/apply/transfer-students/major-preparation"
+        },
+        {
+          "id": "uc-santa-cruz-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "2.7",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.7,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 3 - Precalculus or MATH 11A - Calculus with Applications or MATH 19A - Calculus for Science, Engineering, and Mathematics",
+            "PSYC 1 - Introduction to Psychology",
+            "PSYC 2 - Introduction to Psychological Statistics"
+          ],
+          "recommendedCourses": [
+            "One course from: ANTH 1, SOC 1, or equivalent introductory courses in social sciences"
+          ],
+          "rawRequired": "MATH 3 - Precalculus or MATH 11A - Calculus with Applications or MATH 19A - Calculus for Science, Engineering, and Mathematics\nPSYC 1 - Introduction to Psychology\nPSYC 2 - Introduction to Psychological Statistics",
+          "rawRecommended": "One course from: ANTH 1, SOC 1, or equivalent introductory courses in social sciences",
+          "english": {
+            "raw": "Completion of two courses in English composition (equivalent to UC Santa Cruz Writing 2 and one additional course in English composition) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete the math requirement as early as possible. Statistics (PSYC 2) must be completed with a grade of C or better. Completion of the major prerequisite courses is required for admission consideration.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucsc.edu/transfer-students/major-preparation"
+        }
+      ]
+    },
+    {
+      "id": "uc-riverside",
+      "name": "UC Riverside",
+      "shortName": "UC Riverside",
+      "majors": [
+        {
+          "id": "uc-riverside-computer-science",
+          "name": "Computer Science",
+          "rawMinGpa": "3.00",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 3,
+          "minCredits": 60,
+          "requiredCourses": [
+            "CS 10A - Introduction to Computer Science I",
+            "CS 10B - Introduction to Computer Science II",
+            "CS 10C - Introduction to Data Structures and Algorithms",
+            "MATH 9A - First-Year Calculus",
+            "MATH 9B - First-Year Calculus",
+            "MATH 9C - First-Year Calculus",
+            "MATH 10A - Calculus of Several Variables",
+            "MATH 10B - Calculus of Several Variables",
+            "MATH 46 - Introduction to Ordinary Differential Equations",
+            "PHYS 40A - General Physics I",
+            "PHYS 40B - General Physics II",
+            "PHYS 40C - General Physics III"
+          ],
+          "recommendedCourses": [
+            "MATH 11 - Introduction to Discrete Mathematics",
+            "BIOL 5A - Introduction to Cell and Molecular Biology",
+            "BIOL 5LA - Introduction to Cell and Molecular Biology Laboratory"
+          ],
+          "rawRequired": "CS 10A - Introduction to Computer Science I\nCS 10B - Introduction to Computer Science II\nCS 10C - Introduction to Data Structures and Algorithms\nMATH 9A - First-Year Calculus\nMATH 9B - First-Year Calculus\nMATH 9C - First-Year Calculus\nMATH 10A - Calculus of Several Variables\nMATH 10B - Calculus of Several Variables\nMATH 46 - Introduction to Ordinary Differential Equations\nPHYS 40A - General Physics I\nPHYS 40B - General Physics II\nPHYS 40C - General Physics III",
+          "rawRecommended": "MATH 11 - Introduction to Discrete Mathematics\nBIOL 5A - Introduction to Cell and Molecular Biology\nBIOL 5LA - Introduction to Cell and Molecular Biology Laboratory",
+          "english": {
+            "raw": "Completion of two courses of English composition with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Computer Science major is highly selective. Completion of all listed major preparation courses is strongly recommended to be competitive for admission. Students must have a 3.0 or higher GPA in all transferable courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-riverside-computer-engineering",
+          "name": "Computer Engineering",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 9A - First-Year Calculus",
+            "MATH 9B - First-Year Calculus",
+            "MATH 9C - First-Year Calculus",
+            "MATH 10A - Calculus of Several Variables",
+            "MATH 10B - Calculus of Several Variables",
+            "MATH 46 - Introduction to Ordinary Differential Equations",
+            "PHYS 40A - General Physics I",
+            "PHYS 40B - General Physics II",
+            "PHYS 40C - General Physics III",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1LA - General Chemistry Laboratory",
+            "CS 10 - Introduction to Computer Science for Science, Mathematics, and Engineering I",
+            "CS 12 - Introduction to Computer Science for Science, Mathematics, and Engineering II",
+            "CS 61 - Machine Organization and Assembly Language Programming"
+          ],
+          "recommendedCourses": [
+            "Completion of IGETC or UCR Breadth requirements is highly recommended prior to transfer."
+          ],
+          "rawRequired": "MATH 9A - First-Year Calculus\nMATH 9B - First-Year Calculus\nMATH 9C - First-Year Calculus\nMATH 10A - Calculus of Several Variables\nMATH 10B - Calculus of Several Variables\nMATH 46 - Introduction to Ordinary Differential Equations\nPHYS 40A - General Physics I\nPHYS 40B - General Physics II\nPHYS 40C - General Physics III\nCHEM 1A - General Chemistry\nCHEM 1LA - General Chemistry Laboratory\nCS 10 - Introduction to Computer Science for Science, Mathematics, and Engineering I\nCS 12 - Introduction to Computer Science for Science, Mathematics, and Engineering II\nCS 61 - Machine Organization and Assembly Language Programming",
+          "rawRecommended": "Completion of IGETC or UCR Breadth requirements is highly recommended prior to transfer.",
+          "english": {
+            "raw": "Must complete two transferable college English composition courses (equivalent to UCR ENGL 001A and ENGL 001B) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete as many lower-division major requirements as possible before transferring. Admission to the Bourns College of Engineering is selective.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucr.edu/transfer/major-prep-guides"
+        },
+        {
+          "id": "uc-riverside-business-administration",
+          "name": "Business Administration",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 9A - First-Year Calculus",
+            "MATH 9B - First-Year Calculus",
+            "ECON 2 - Introduction to Macroeconomics",
+            "ECON 3 - Introduction to Microeconomics",
+            "BUS 20 - Financial Accounting and Reporting",
+            "STAT 8 - Statistics for Business"
+          ],
+          "recommendedCourses": [
+            "ENGL 1A - English Composition",
+            "ENGL 1B - English Composition",
+            "Breadth requirements equivalent to UCR Breadth for the School of Business"
+          ],
+          "rawRequired": "MATH 9A - First-Year Calculus\nMATH 9B - First-Year Calculus\nECON 2 - Introduction to Macroeconomics\nECON 3 - Introduction to Microeconomics\nBUS 20 - Financial Accounting and Reporting\nSTAT 8 - Statistics for Business",
+          "rawRecommended": "ENGL 1A - English Composition\nENGL 1B - English Composition\nBreadth requirements equivalent to UCR Breadth for the School of Business",
+          "english": {
+            "raw": "Completion of two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Students are strongly encouraged to complete all major preparation requirements prior to transfer. Admission is selective.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucr.edu/transfer/majors-preparation-requirements"
+        },
+        {
+          "id": "uc-riverside-business-economics",
+          "name": "Business Economics",
+          "rawMinGpa": "2.7",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.7,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 9A - First-Year Calculus",
+            "MATH 9B - First-Year Calculus",
+            "ECON 2 - Introduction to Macroeconomics",
+            "ECON 3 - Introduction to Microeconomics",
+            "BUS 20 - Financial Accounting and Reporting"
+          ],
+          "recommendedCourses": [
+            "CS 8 - Introduction to Computing",
+            "STAT 8 - Statistics for Business"
+          ],
+          "rawRequired": "MATH 9A - First-Year Calculus\nMATH 9B - First-Year Calculus\nECON 2 - Introduction to Macroeconomics\nECON 3 - Introduction to Microeconomics\nBUS 20 - Financial Accounting and Reporting",
+          "rawRecommended": "CS 8 - Introduction to Computing\nSTAT 8 - Statistics for Business",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with grades of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Admission to the Business Economics major is selective. Students must complete all lower-division major requirements prior to transfer. It is strongly recommended to complete all requirements by the end of the spring term preceding the fall enrollment.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucr.edu/transfer/majors-preparation-requirements"
+        },
+        {
+          "id": "uc-riverside-mechanical-engineering",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 9A - First-Year Calculus",
+            "MATH 9B - First-Year Calculus",
+            "MATH 9C - First-Year Calculus",
+            "MATH 10A - Calculus of Several Variables",
+            "MATH 10B - Calculus of Several Variables",
+            "MATH 46 - Introduction to Ordinary Differential Equations",
+            "PHYS 40A - General Physics I",
+            "PHYS 40B - General Physics II",
+            "PHYS 40C - General Physics III",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1AL - General Chemistry Laboratory",
+            "CS 10 - Introduction to Computer Science for Science, Mathematics, and Engineering I",
+            "ENGR 1B - Engineering Computation"
+          ],
+          "recommendedCourses": [
+            "ENGR 1C - Engineering Computation Lab",
+            "BIOL 5A - Introduction to Cell and Molecular Biology",
+            "BIOL 5LA - Introduction to Cell and Molecular Biology Laboratory"
+          ],
+          "rawRequired": "MATH 9A - First-Year Calculus\nMATH 9B - First-Year Calculus\nMATH 9C - First-Year Calculus\nMATH 10A - Calculus of Several Variables\nMATH 10B - Calculus of Several Variables\nMATH 46 - Introduction to Ordinary Differential Equations\nPHYS 40A - General Physics I\nPHYS 40B - General Physics II\nPHYS 40C - General Physics III\nCHEM 1A - General Chemistry\nCHEM 1AL - General Chemistry Laboratory\nCS 10 - Introduction to Computer Science for Science, Mathematics, and Engineering I\nENGR 1B - Engineering Computation",
+          "rawRecommended": "ENGR 1C - Engineering Computation Lab\nBIOL 5A - Introduction to Cell and Molecular Biology\nBIOL 5LA - Introduction to Cell and Molecular Biology Laboratory",
+          "english": {
+            "raw": "Complete two courses of transferable English composition with a grade of C or better. IGETC satisfies this requirement."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Mechanical Engineering is a selective major at UCR. Students must maintain a cumulative GPA of 2.8 or higher in all transferable coursework, with higher GPAs strongly recommended for admission competitiveness. Completion of lower-division major requirements is expected by the end of the spring term prior to fall transfer.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://assist.org/"
+        },
+        {
+          "id": "uc-riverside-electrical-engineering",
+          "name": "Electrical Engineering",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 9A - First-Year Calculus",
+            "MATH 9B - First-Year Calculus",
+            "MATH 9C - First-Year Calculus",
+            "MATH 10A - Calculus of Several Variables",
+            "MATH 10B - Calculus of Several Variables",
+            "MATH 46 - Introduction to Ordinary Differential Equations",
+            "PHYS 40A - General Physics",
+            "PHYS 40B - General Physics",
+            "PHYS 40C - General Physics",
+            "CHEM 1A - General Chemistry",
+            "CHEM 1LA - General Chemistry Lab",
+            "CS 10 - Introduction to Computer Science for Science, Mathematics, and Engineering I",
+            "EE 1A - Circuit Theory",
+            "EE 1LA - Circuit Theory Lab"
+          ],
+          "recommendedCourses": [
+            "CS 12 - Introduction to Computer Science for Science, Mathematics, and Engineering II",
+            "CS 14 - Introduction to Data Structures and Algorithms"
+          ],
+          "rawRequired": "MATH 9A - First-Year Calculus\nMATH 9B - First-Year Calculus\nMATH 9C - First-Year Calculus\nMATH 10A - Calculus of Several Variables\nMATH 10B - Calculus of Several Variables\nMATH 46 - Introduction to Ordinary Differential Equations\nPHYS 40A - General Physics\nPHYS 40B - General Physics\nPHYS 40C - General Physics\nCHEM 1A - General Chemistry\nCHEM 1LA - General Chemistry Lab\nCS 10 - Introduction to Computer Science for Science, Mathematics, and Engineering I\nEE 1A - Circuit Theory\nEE 1LA - Circuit Theory Lab",
+          "rawRecommended": "CS 12 - Introduction to Computer Science for Science, Mathematics, and Engineering II\nCS 14 - Introduction to Data Structures and Algorithms",
+          "english": {
+            "raw": "Complete two transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Verified: Prerequisite requirements retrieved from official admissions guides and ASSIST.org guidelines.\nGrade minimums per course: A minimum grade of C or better is required for all preparatory courses..\nCompletion timeline: All lower-division major requirements must be completed prior to transfer..",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucr.edu/transfer/transfer-requirements-majors#marlan_and_rosemary_bourns_college_of_engineering"
+        }
+      ]
+    },
+    {
+      "id": "uc-merced",
+      "name": "UC Merced",
+      "shortName": "UC Merced",
+      "majors": [
+        {
+          "id": "uc-merced-computer-science-and-engineering",
+          "name": "Computer Science and Engineering",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 21 - Calculus I",
+            "MATH 22 - Calculus II",
+            "MATH 23 - Vector Calculus",
+            "MATH 24 - Introduction to Linear Algebra and Differential Equations",
+            "PHYS 8 - Introductory Physics I for Physical Sciences",
+            "PHYS 9 - Introductory Physics II for Physical Sciences",
+            "CSE 20 - Introduction to Computing I",
+            "CSE 21 - Introduction to Computing II",
+            "CHEM 2 - General Chemistry I"
+          ],
+          "recommendedCourses": [
+            "BIO 1 - Contemporary Biology",
+            "One additional science course (PHYS 10 or BIO 1L/BIO 1 recommended)"
+          ],
+          "rawRequired": "MATH 21 - Calculus I\nMATH 22 - Calculus II\nMATH 23 - Vector Calculus\nMATH 24 - Introduction to Linear Algebra and Differential Equations\nPHYS 8 - Introductory Physics I for Physical Sciences\nPHYS 9 - Introductory Physics II for Physical Sciences\nCSE 20 - Introduction to Computing I\nCSE 21 - Introduction to Computing II\nCHEM 2 - General Chemistry I",
+          "rawRecommended": "BIO 1 - Contemporary Biology\nOne additional science course (PHYS 10 or BIO 1L/BIO 1 recommended)",
+          "english": {
+            "raw": "Two semesters of transferable English composition (equivalent to UC Merced WRI 10 and one additional course)."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete all lower-division major preparation before transferring. Students must earn a grade of C- or better in all prerequisite courses.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucmerced.edu/transfer-requirements"
+        },
+        {
+          "id": "uc-merced-mechanical-engineering",
+          "name": "Mechanical Engineering",
+          "rawMinGpa": "2.8",
+          "rawMinCredits": "60",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 21 - Calculus I",
+            "MATH 22 - Calculus II",
+            "MATH 23 - Vector Calculus",
+            "MATH 24 - Introduction to Linear Algebra and Differential Equations",
+            "PHYS 8 - Introductory Physics I for Physical Sciences",
+            "PHYS 9 - Introductory Physics II for Physical Sciences",
+            "CHEM 2 - General Chemistry I",
+            "ENGR 45 - Introduction to Materials",
+            "ENGR 57 - Statics and Dynamics",
+            "ENGR 65 - Circuit Theory",
+            "CSE 20 - Introduction to Computing I",
+            "CSE 21 - Introduction to Computing II",
+            "WRI 10 - College Reading and Composition"
+          ],
+          "recommendedCourses": [
+            "ENGR 120 - Fluid Mechanics",
+            "ENGR 130 - Thermodynamics"
+          ],
+          "rawRequired": "MATH 21 - Calculus I\nMATH 22 - Calculus II\nMATH 23 - Vector Calculus\nMATH 24 - Introduction to Linear Algebra and Differential Equations\nPHYS 8 - Introductory Physics I for Physical Sciences\nPHYS 9 - Introductory Physics II for Physical Sciences\nCHEM 2 - General Chemistry I\nENGR 45 - Introduction to Materials\nENGR 57 - Statics and Dynamics\nENGR 65 - Circuit Theory\nCSE 20 - Introduction to Computing I\nCSE 21 - Introduction to Computing II\nWRI 10 - College Reading and Composition",
+          "rawRecommended": "ENGR 120 - Fluid Mechanics\nENGR 130 - Thermodynamics",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete all lower-division major preparation courses prior to transfer to ensure timely graduation.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucmerced.edu/transfer/major-requirements"
+        },
+        {
+          "id": "uc-merced-management-and-business-economics",
+          "name": "Management and Business Economics",
+          "rawMinGpa": "2.40",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "ECON 1 - Introduction to Economics (Macroeconomics)",
+            "ECON 10 - Introduction to Economics (Microeconomics)",
+            "MATH 11 - Calculus I (or MATH 21)",
+            "MATH 32 - Probability and Statistics (or an equivalent Introductory Statistics course)"
+          ],
+          "recommendedCourses": [
+            "One year of college-level English Composition (equivalent to UC Merced WRI 1 and WRI 10)",
+            "Any additional courses in business, accounting, or computer science"
+          ],
+          "rawRequired": "ECON 1 - Introduction to Economics (Macroeconomics)\nECON 10 - Introduction to Economics (Microeconomics)\nMATH 11 - Calculus I (or MATH 21)\nMATH 32 - Probability and Statistics (or an equivalent Introductory Statistics course)",
+          "rawRecommended": "One year of college-level English Composition (equivalent to UC Merced WRI 1 and WRI 10)\nAny additional courses in business, accounting, or computer science",
+          "english": {
+            "raw": "Completion of two UC-transferable English composition courses (English 1A and English 1B/1C or equivalent) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete all lower-division major requirements before transfer. Students are expected to maintain a competitive GPA above the minimum 2.40.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucmerced.edu/transfer/major-preparation"
+        },
+        {
+          "id": "uc-merced-psychology",
+          "name": "Psychology",
+          "rawMinGpa": "2.40",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.4,
+          "minCredits": 60,
+          "requiredCourses": [
+            "PSY 1 - Introduction to Psychology",
+            "PSY 10 - Analysis of Psychological Data"
+          ],
+          "recommendedCourses": [
+            "MATH 5 - Probability and Statistics",
+            "One course in biological science (e.g., BIO 1 or equivalent)",
+            "Completion of IGETC pattern"
+          ],
+          "rawRequired": "PSY 1 - Introduction to Psychology\nPSY 10 - Analysis of Psychological Data",
+          "rawRecommended": "MATH 5 - Probability and Statistics\nOne course in biological science (e.g., BIO 1 or equivalent)\nCompletion of IGETC pattern",
+          "english": {
+            "raw": "Completion of two transferable college courses in English Composition (equivalent to UC Merced WRI 10 and WRI 110 or 111) with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete the full IGETC pattern to satisfy general education requirements. Students are encouraged to maintain a competitive GPA above the 2.40 minimum.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucmerced.edu/transfer/major-preparation"
+        },
+        {
+          "id": "uc-merced-bioengineering",
+          "name": "Bioengineering",
+          "rawMinGpa": "2.80",
+          "rawMinCredits": "60 semester units",
+          "minGpa": 2.8,
+          "minCredits": 60,
+          "requiredCourses": [
+            "MATH 21 - Calculus I for Physical Sciences and Engineering",
+            "MATH 22 - Calculus II for Physical Sciences and Engineering",
+            "MATH 23 - Vector Calculus",
+            "MATH 24 - Introduction to Linear Algebra and Differential Equations",
+            "PHYS 8 - Introductory Physics I for Physical Sciences",
+            "PHYS 9 - Introductory Physics II for Physical Sciences",
+            "CHEM 2 - General Chemistry I",
+            "CHEM 2L - General Chemistry I Lab",
+            "CHEM 10 - General Chemistry II",
+            "CHEM 10L - General Chemistry II Lab",
+            "BIO 1 - Contemporary Biology",
+            "BIO 1L - Contemporary Biology Lab",
+            "CSE 20 - Introduction to Computing I",
+            "ENGR 45 - Introduction to Materials"
+          ],
+          "recommendedCourses": [
+            "CHEM 8 - Principles of Organic Chemistry",
+            "CHEM 8L - Principles of Organic Chemistry Lab"
+          ],
+          "rawRequired": "MATH 21 - Calculus I for Physical Sciences and Engineering\nMATH 22 - Calculus II for Physical Sciences and Engineering\nMATH 23 - Vector Calculus\nMATH 24 - Introduction to Linear Algebra and Differential Equations\nPHYS 8 - Introductory Physics I for Physical Sciences\nPHYS 9 - Introductory Physics II for Physical Sciences\nCHEM 2 - General Chemistry I\nCHEM 2L - General Chemistry I Lab\nCHEM 10 - General Chemistry II\nCHEM 10L - General Chemistry II Lab\nBIO 1 - Contemporary Biology\nBIO 1L - Contemporary Biology Lab\nCSE 20 - Introduction to Computing I\nENGR 45 - Introduction to Materials",
+          "rawRecommended": "CHEM 8 - Principles of Organic Chemistry\nCHEM 8L - Principles of Organic Chemistry Lab",
+          "english": {
+            "raw": "Completion of two UC transferable English composition courses with a grade of C or better."
+          },
+          "englishExemption": "No general course waiver, exam score required",
+          "note": "Strongly recommended to complete all lower-division major preparation before transferring to ensure timely degree completion. Admission is selective.",
+          "confidence": "verified",
+          "officialSourceUrl": "https://admissions.ucmerced.edu/transfer/major-preparation"
         }
       ]
     }

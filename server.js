@@ -439,7 +439,7 @@ Include specific lab courses separately if they are required (e.g. "Physics 1 La
 Ensure all texts are in English.
 `;
 
-        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
         const payload = JSON.stringify({
           contents: [
             {
@@ -1125,7 +1125,7 @@ You MUST write all explanations, guides, guidelines, and feedback (targetStyleGu
           }
         });
 
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
         const options = {
           method: 'POST',
           headers: {
