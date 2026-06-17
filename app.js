@@ -252,6 +252,7 @@ const TRANSLATIONS = {
     "roadmap_eng_second_term": "Second semester fixed",
     "buffer_term_title": "Buffer Term",
     "buffer_term_desc": "Review application, recommendations, essays",
+    "roadmap_generate_placeholder": "Select your target schools/majors and click 'Generate Roadmap' below to view your optimized plan.",
     "essay_alert_no_activity": "Please enter your core activities!",
     "essay_loading_text": "AI is mapping your activities to target prerequisites. Please wait...",
     "essay_generating_label": "Generating...",
@@ -692,6 +693,7 @@ const TRANSLATIONS = {
     "roadmap_eng_second_term": "두 번째 학기 고정",
     "buffer_term_title": "버퍼 학기 (Buffer Term)",
     "buffer_term_desc": "지원서 점검 및 추천서/에세이 작성",
+    "roadmap_generate_placeholder": "목표 학교/학과를 선택하고 아래 '로드맵 생성하기' 버튼을 누르면 최적의 학기별 수강 계획이 여기에 표시됩니다.",
     "essay_alert_no_activity": "주요 교내외 활동 내용을 입력해 주세요!",
     "essay_loading_text": "AI가 목표 대학의 편입 요건에 맞추어 에세이 아웃라인을 설계하고 있습니다. 잠시만 기다려 주세요...",
     "essay_generating_label": "생성 중...",
@@ -1121,6 +1123,7 @@ const TRANSLATIONS = {
     "roadmap_eng_second_term": "固定在第二学期",
     "buffer_term_title": "缓冲学期 (Buffer Term)",
     "buffer_term_desc": "检查申请材料、推荐信以及文书润色",
+    "roadmap_generate_placeholder": "选择目标学校和专业后，点击下方的 '生成路线图' 按钮即可在此查看优化的学期选课计划。",
     "essay_alert_no_activity": "请填写您的核心 activity 经历！",
     "essay_loading_text": "AI 正在结合目标先修课定制大纲，请稍候...",
     "essay_generating_label": "生成中...",
@@ -1474,7 +1477,8 @@ const state = {
   admissionYear: 2026,
   admissionTerm: "Fall",
   track: "stem",
-  strategyTrack: "stem"
+  strategyTrack: "stem",
+  roadmapGenerated: false
 };
 
 function saveAnalyzedSchoolsToLocalStorage() {
@@ -3498,7 +3502,8 @@ function syncSelectedRoadmapTargetsFromSlots() {
     state.selectedRoadmapTargets = [...new Set(ids)];
     saveProfileToLocalStorage();
     
-    // 1. Build roadmap immediately using currently available in-memory data
+    // Reset roadmapGenerated to false when targets change
+    state.roadmapGenerated = false;
     buildRoadmap();
 
     // 2. Fetch pending (lazy loaded) majors in background if needed
@@ -4735,12 +4740,25 @@ function getCourseWorkloadDifficulty(course) {
   return 2;
 }
 
-function buildRoadmap() {
+function buildRoadmap(explicit = false) {
   try {
     const timeline = qs("#roadmapTimeline");
     if (!timeline) return;
 
     const isKo = (state.language || "ko") === "ko";
+
+    if (explicit === true) {
+      state.roadmapGenerated = true;
+    }
+
+    if (!state.roadmapGenerated) {
+      timeline.innerHTML = `
+        <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0; border: 1px dashed var(--line); border-radius: 12px; width: 100%;">
+          <p>${escapeHtml(t("roadmap_generate_placeholder", "목표 학교/학과를 선택하고 아래 '로드맵 생성하기' 버튼을 누르면 최적의 학기별 수강 계획이 여기에 표시됩니다."))}</p>
+        </div>
+      `;
+      return;
+    }
 
     if (state.selectedRoadmapTargets.length === 0) {
       timeline.innerHTML = `
@@ -5292,19 +5310,26 @@ function bindEvents() {
     scrollToSection("#eligibilityResults");
   });
 
-  qs("#buildRoadmapBtn")?.addEventListener("click", buildRoadmap);
+  qs("#buildRoadmapBtn")?.addEventListener("click", () => {
+    buildRoadmap(true);
+  });
   const roadmapTarget = qs("#roadmapTarget");
   if (roadmapTarget) {
-    roadmapTarget.addEventListener("change", buildRoadmap);
+    roadmapTarget.addEventListener("change", () => {
+      state.roadmapGenerated = false;
+      buildRoadmap();
+    });
   }
   qs("#admissionYear")?.addEventListener("change", (event) => {
     state.admissionYear = Number(event.target.value);
     saveProfileToLocalStorage();
+    state.roadmapGenerated = false;
     buildRoadmap();
   });
   qs("#admissionTerm")?.addEventListener("change", (event) => {
     state.admissionTerm = event.target.value;
     saveProfileToLocalStorage();
+    state.roadmapGenerated = false;
     buildRoadmap();
   });
 
@@ -7593,12 +7618,27 @@ async function init() {
   initScrollEffects();
   initStatsText();
   
+  // Scroll restoration setup to prevent browser from jumping down on reload
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   const initialTab = location.hash.replace("#", "");
   if (initialTab === "demo") {
     activateProductTab("eligibility", false);
   } else if (["eligibility", "requirements", "roadmap", "essay"].includes(initialTab)) {
     activateProductTab(initialTab, false);
   }
+
+  // Clear hash to prevent visual browser jump down to sections matching the hash
+  if (location.hash && location.hash !== "#top") {
+    history.replaceState(null, null, window.location.pathname + window.location.search);
+  }
+  
+  // Double-check scroll to top on next ticks to override browser default scroll behaviors
+  setTimeout(() => window.scrollTo(0, 0), 0);
+  setTimeout(() => window.scrollTo(0, 0), 100);
 }
 
 init().catch(e => console.error("Init failed:", e));
