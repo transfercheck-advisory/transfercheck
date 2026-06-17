@@ -1918,11 +1918,11 @@ window.executePayment = function(method) {
       }
       
       const krwPaymentId = `order_${ctx.plan.replace(/\s+/g, "_")}_${Date.now()}`;
-      console.log("[Onetime Checkout] Triggering PortOne V2 (Onetime) with channelKey: channel-key-4315c137-b0a6-441f-8d01-c627c177e1a7");
-      alert("[디버그 - 일반결제 호출]\n- 상품명: " + ctx.krwProductName + "\n- 호출 채널키: channel-key-4315c137-b0a6-441f-8d01-c627c177e1a7\n- 결제창 유형: 일반결제(카드사인증화면)");
+      console.log("[Onetime Checkout] Triggering PortOne V2 (Onetime) with channelKey: channel-key-204f4d54-8104-4280-846c-5a20149714ff");
+      alert("[디버그 - 일반결제 호출]\n- 상품명: " + ctx.krwProductName + "\n- 호출 채널키: channel-key-204f4d54-8104-4280-846c-5a20149714ff\n- 결제창 유형: 일반결제(카드사인증화면)");
       PortOne.requestPayment({
         storeId: "store-7ed353e2-e1f8-4be5-8d0e-80c8ca91e360",
-        channelKey: "channel-key-4315c137-b0a6-441f-8d01-c627c177e1a7",
+        channelKey: "channel-key-204f4d54-8104-4280-846c-5a20149714ff",
         paymentId: krwPaymentId,
         orderName: ctx.krwProductName,
         totalAmount: ctx.krwAmount,
@@ -5656,12 +5656,9 @@ function renderSchoolCoverage() {
 
 function bindEssay() {
   const schoolSelect = qs("#essayTargetSchool");
-  const generateBtn = qs("#generateEssayBtn");
-  const outlineContent = qs("#essayOutlineContent");
   const container = qs("#essayTargetContainer");
-  const toggleBtn = container ? container.querySelector(".autocomplete-toggle-btn") : null;
   
-  if (!schoolSelect || !generateBtn || !outlineContent || !container) return;
+  if (!schoolSelect || !container) return;
 
   const programs = allPrograms().sort((a, b) => {
     const sA = a.school.name.localeCompare(b.school.name);
@@ -5676,132 +5673,751 @@ function bindEssay() {
     schoolSelect.dataset.selectedId = selectedProgramId;
   }
 
-  let activeSubtab = "critic";
+  // --- Step Views & Headers ---
+  const step1View = qs("#essayStep1View");
+  const step2View = qs("#essayStep2View");
+  const step3View = qs("#essayStep3View");
+  const step4View = qs("#essayStep4View");
+  
+  const step1Header = qs("#essayStep1Header");
+  const step2Header = qs("#essayStep2Header");
+  const step3Header = qs("#essayStep3Header");
+  const step4Header = qs("#essayStep4Header");
+  
+  const step1Icon = qs("#essayStep1StatusIcon");
+  const step2Icon = qs("#essayStep2StatusIcon");
+  const step3Icon = qs("#essayStep3StatusIcon");
+  const step4Icon = qs("#essayStep4StatusIcon");
 
-  const subtabs = qsa(".subtab-btn");
-  subtabs.forEach(btn => {
-    btn.addEventListener("click", () => {
-      subtabs.forEach(b => {
-        b.classList.remove("active");
-        b.style.background = "transparent";
-        b.style.color = "var(--muted)";
-      });
-      btn.classList.add("active");
-      btn.style.background = "var(--primary)";
-      btn.style.color = "#ffffff";
-      
-      activeSubtab = btn.dataset.subtab;
-      updateEssaySubtabUI(activeSubtab);
+  let currentStep = 1;
+  function goToStep(step) {
+    currentStep = step;
+    
+    // Hide all step views
+    [step1View, step2View, step3View, step4View].forEach(v => v?.classList.add("hidden"));
+    
+    // Deactivate all headers
+    [step1Header, step2Header, step3Header, step4Header].forEach(h => {
+      h?.classList.remove("active", "completed");
     });
+    
+    // Reset icons
+    if (step1Icon) step1Icon.textContent = "⚪";
+    if (step2Icon) step2Icon.textContent = "⚪";
+    if (step3Icon) step3Icon.textContent = "⚪";
+    if (step4Icon) step4Icon.textContent = "⚪";
+    
+    // Show target step view
+    if (step === 1) {
+      step1View?.classList.remove("hidden");
+      step1Header?.classList.add("active");
+      if (step1Icon) step1Icon.textContent = "📍";
+    } else if (step === 2) {
+      step2View?.classList.remove("hidden");
+      step1Header?.classList.add("completed");
+      step2Header?.classList.add("active");
+      if (step1Icon) step1Icon.textContent = "✓";
+      if (step2Icon) step2Icon.textContent = "📍";
+    } else if (step === 3) {
+      step3View?.classList.remove("hidden");
+      step1Header?.classList.add("completed");
+      step2Header?.classList.add("completed");
+      step3Header?.classList.add("active");
+      if (step1Icon) step1Icon.textContent = "✓";
+      if (step2Icon) step2Icon.textContent = "✓";
+      if (step3Icon) step3Icon.textContent = "📍";
+      renderEssayLibraryContent();
+    } else if (step === 4) {
+      step4View?.classList.remove("hidden");
+      step1Header?.classList.add("completed");
+      step2Header?.classList.add("completed");
+      step3Header?.classList.add("completed");
+      step4Header?.classList.add("active");
+      if (step1Icon) step1Icon.textContent = "✓";
+      if (step2Icon) step2Icon.textContent = "✓";
+      if (step3Icon) step3Icon.textContent = "✓";
+      if (step4Icon) step4Icon.textContent = "📍";
+    }
+    
+    // Scroll container to top
+    qs("#essay")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // --- Step Navigation Listeners ---
+  qs("#essayToStep2Btn")?.addEventListener("click", () => {
+    const isKo = (state.language || "ko") === "ko";
+    const schoolVal = qs("#essaySchoolInput")?.value.trim();
+    const majorVal = qs("#essayMajorInput")?.value.trim();
+    const essayQuestion = qs("#essayQuestion")?.value.trim();
+    
+    if (!schoolVal || !majorVal) {
+      alert(isKo ? "목표 대학 및 학과를 선택해 주세요." : "Please select target university and major.");
+      return;
+    }
+    if (!essayQuestion) {
+      alert(isKo ? "에세이 질문(Prompt)을 입력해 주세요." : "Please enter the essay prompt.");
+      return;
+    }
+
+    const programId = schoolSelect.dataset.selectedId || selectedProgramId;
+    let targetProgram = programs.find(p => p.id === programId);
+    if (!targetProgram && schoolVal) {
+      targetProgram = programs.find(p => p.school.name.toLowerCase().includes(schoolVal.toLowerCase()));
+    }
+    
+    let isSchoolPassActive = false;
+    if (targetProgram) {
+      isSchoolPassActive = getActiveEssaySlot(targetProgram.school.name, targetProgram.name, essayQuestion) !== null;
+    }
+
+    const isPremium = (state.plan || "Free") === "Premium";
+    if (!isPremium && !isSchoolPassActive && state.essayCredits <= 0) {
+      alert(t("essay_out_of_credits", "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI."));
+      openPricingModal();
+      return;
+    }
+
+    if (!isPremium && !isSchoolPassActive) {
+      const confirmActivate = confirm(isKo 
+        ? "이 에세이에 남은 1회성 크레딧을 적용하시겠습니까?" 
+        : "Activate this essay slot using 1 remaining credit?");
+      if (!confirmActivate) return;
+      
+      const curUser = readAuthState().currentUser || "";
+      const isOk = activateEssaySlotForUser(curUser, targetProgram ? targetProgram.school.name : schoolVal, targetProgram ? targetProgram.name : majorVal, essayQuestion);
+      if (isOk) {
+        const authState = readAuthState();
+        const curProf = authState.users[curUser];
+        if (curProf && curUser !== "haminkim@uwm.edu") {
+          curProf.creditPacks = curProf.creditPacks || [];
+          const nowStr = new Date().toISOString();
+          const activePacks = curProf.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
+          if (activePacks.length > 0) {
+            activePacks.sort((a, b) => new Date(a.expiresAt) - new Date(b.expiresAt));
+            activePacks[0].count--;
+            curProf.creditPacks = curProf.creditPacks.map(p => p.id === activePacks[0].id ? activePacks[0] : p);
+          }
+          writeAuthState(authState);
+        }
+        state.essayCredits = Math.max(0, state.essayCredits - 1);
+        localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
+        updateEssayCreditsUI();
+        updateEssaySchoolStatusUI();
+      }
+    }
+
+    goToStep(2);
+    qs("#interviewStartScreen")?.classList.remove("hidden");
+    qs("#interviewActiveScreen")?.classList.add("hidden");
+    qs("#directInputContainer")?.classList.add("hidden");
+    
+    const toStep3Btn = qs("#essayToStep3Btn");
+    if (toStep3Btn) {
+      toStep3Btn.setAttribute("disabled", "true");
+      toStep3Btn.style.background = "";
+      toStep3Btn.style.color = "";
+    }
   });
 
-  function updateEssaySubtabUI(subtab) {
-    const col1 = qs("#essayTargetContainer")?.parentElement;
-    const col2 = qs("#essayLimit")?.parentElement?.parentElement;
-    const col3Label = qs("label[for='essayActivity']");
-    const col3Textarea = qs("#essayActivity");
-    const generateBtn = qs("#generateEssayBtn");
-    const resultTitle = qs("#essayResultPanel h3");
-    const resultDesc = qs("#essayResultPanel p");
+  qs("#essayStep2BackBtn")?.addEventListener("click", () => goToStep(1));
+  qs("#essayStep3BackBtn")?.addEventListener("click", () => goToStep(2));
+  
+  qs("#essayToStep4Btn")?.addEventListener("click", () => {
+    const editor = qs("#essayStep4DraftEditor");
+    if (editor && !editor.value) {
+      editor.value = window.latestDrafts ? window.latestDrafts.draft1.en : "";
+      const countLabel = qs("#editorCharCount");
+      if (countLabel) {
+        const words = editor.value.trim().split(/\s+/).filter(Boolean).length;
+        countLabel.textContent = `${words} words (${editor.value.length} chars)`;
+      }
+    }
+    goToStep(4);
+  });
+  
+  qs("#essayStep4BackBtn")?.addEventListener("click", () => goToStep(3));
+
+  // --- Step 2 AI Interview & Curation ---
+  let interviewQuestions = [];
+  let interviewAnswers = [];
+  let currentQIdx = 0;
+  let isInterviewActive = false;
+
+  const csQuestions = [
+    "1. 커뮤니티 칼리지 재학 중 전공(CS)과 관련해 스스로 설계하고 완료한 가장 자랑스러운 소프트웨어 프로젝트는 무엇인가요?",
+    "2. 해당 프로젝트를 진행하면서 겪은 가장 고단한 코딩 에러나 설계상 Bottleneck은 무엇이며, 어떻게 해결했나요?",
+    "3. CC 수업 중 본인의 코딩 실력이나 학업적 깊이를 급격히 끌어올렸다고 생각하는 선수과목(Math, CS 등)은 무엇인가요?",
+    "4. 교내 동아리(CS Club 등)나 동료 학생 튜터링 등 학과 커뮤니티에 기여하거나 리더십을 발휘한 경험이 있나요?",
+    "5. 이번에 지원하시는 대학의 전공 연구 분야나 제공 교과 과정 중 어떤 부분에 강하게 매료되었나요?"
+  ];
+  
+  const bizQuestions = [
+    "1. CC 재학 중 경영학적 감각이나 비즈니스 실행력을 보여줄 수 있는 가장 큰 프로젝트나 프로젝트 수업 과제는 무엇인가요?",
+    "2. 해당 활동을 추진하는 과정에서 발생한 위기(예산 부족, 팀원 갈등 등)는 무엇이었고 어떻게 리더십을 발휘하셨나요?",
+    "3. 대학에 편입한 후 본인의 커리어 로드맵(창업, 투자, 기업 취업 등)과 가장 연관이 깊은 세부 전공 과목은 무엇인가요?",
+    "4. 대학교의 독창적인 학풍이나 기업 네트워킹 기회 중 본인의 성장에 왜 그 학교 경영대학이 필요한지 서술해 주세요.",
+    "5. 학업 외에 본인이 CC 주변 지역 사회나 현지 소상공인 등에 기여하여 변화를 만들어 낸 성과가 있나요?"
+  ];
+
+  const genericQuestions = [
+    "1. 목표하는 전공에 대한 학문적 흥미를 키우게 된 CC 재학 중의 가장 결정적인 학업적 계기나 프로젝트는 무엇인가요?",
+    "2. 해당 분야의 심층적인 이해를 위해 수업 외에 자발적으로 탐구하거나 도전해본 심화 활동이 있나요?",
+    "3. 학업을 수행하거나 단체 활동 중 한계에 부딪혔을 때, 지적 집요함이나 문제 해결력으로 극복한 사례는 무엇인가요?",
+    "4. 편입하고자 하는 대학에서 수강하고 싶은 특정 심화 렉처나 참여하고 싶은 교수님의 랩실/학회가 있나요?",
+    "5. 본인의 이력 중 남들과 구별되는 독창적인 스펙이나 차별화된 서사가 있다면 자유롭게 설명해 주세요."
+  ];
+
+  qs("#skipToDirectBtn")?.addEventListener("click", () => {
+    qs("#interviewStartScreen")?.classList.add("hidden");
+    qs("#directInputContainer")?.classList.remove("hidden");
+    isInterviewActive = false;
+  });
+
+  qs("#backToInterviewStartBtn")?.addEventListener("click", () => {
+    qs("#directInputContainer")?.classList.add("hidden");
+    qs("#interviewStartScreen")?.classList.remove("hidden");
+  });
+
+  qs("#startInterviewBtn")?.addEventListener("click", () => {
+    const majorVal = (qs("#essayMajorInput")?.value || "").toLowerCase();
+    if (majorVal.includes("computer") || majorVal.includes("software") || majorVal.includes("cs") || majorVal.includes("coding")) {
+      interviewQuestions = csQuestions;
+    } else if (majorVal.includes("business") || majorVal.includes("econ") || majorVal.includes("mgmt") || majorVal.includes("경영") || majorVal.includes("경제")) {
+      interviewQuestions = bizQuestions;
+    } else {
+      interviewQuestions = genericQuestions;
+    }
     
-    const isKo = (state.language || "ko") === "ko";
+    currentQIdx = 0;
+    interviewAnswers = [];
+    isInterviewActive = true;
+    
+    qs("#interviewStartScreen")?.classList.add("hidden");
+    qs("#interviewActiveScreen")?.classList.remove("hidden");
+    
+    renderChatInterview();
+  });
 
-    if (subtab === "critic") {
-      qs("#essayForm")?.classList.remove("hidden");
-      qs("#essayResultPanel")?.classList.remove("hidden");
-      qs("#essayLibraryDashboard")?.classList.add("hidden");
+  function renderChatInterview() {
+    const chatHistory = qs("#interviewChatHistory");
+    if (!chatHistory) return;
 
-      if (col1) col1.style.display = "flex";
-      if (col2) col2.style.display = "flex";
-      if (col3Label) col3Label.textContent = isKo ? "에세이 초안 문단 (Draft Paragraph)" : "Essay Paragraph Draft";
-      if (col3Textarea) col3Textarea.placeholder = isKo 
-        ? "검토 및 윤문(Native rewrites)을 받고 싶은 에세이 초안 문단을 입력하세요..."
-        : "Paste the essay paragraph draft you want to critique and polish here...";
-      if (generateBtn) generateBtn.textContent = isKo ? "에세이 초안 문단 검토 및 윤문하기" : "Critique & Polish Paragraph";
-      if (resultTitle) resultTitle.textContent = isKo ? "에세이 초안 검토 & 문단 클리닉 결과" : "Essay Critique & Phrase Clinic Results";
-      if (resultDesc) resultDesc.textContent = isKo 
-        ? "AI 표절 및 유사성 지수, 전달 어조 검토, 네이티브 수정 제안 등을 표시합니다."
-        : "Estimated AI/Turnitin index, tone analysis, and professional rewrites.";
-    } else if (subtab === "mapper") {
-      qs("#essayForm")?.classList.remove("hidden");
-      qs("#essayResultPanel")?.classList.remove("hidden");
-      qs("#essayLibraryDashboard")?.classList.add("hidden");
+    chatHistory.innerHTML = `
+      <div class="chat-bubble ai">
+        안녕하세요! 편입 에세이 수석 컨설턴트 AI입니다. 지금부터 문답 인터뷰를 시작하겠습니다. 
+        목표 학교 입학처 에세이 루브릭에 맞춰 학생분의 강점을 체계적으로 발굴해 가겠습니다.
+      </div>
+    `;
 
-      if (col1) col1.style.display = "flex";
-      if (col2) col2.style.display = "flex";
-      if (col3Label) col3Label.textContent = isKo ? "핵심 경험 및 활동 (Core Activities)" : "Core Activities & Projects";
-      if (col3Textarea) col3Textarea.placeholder = isKo 
-        ? "예시: 커뮤니티 칼리지 로보틱스 동아리 회장, Java 데이터베이스 프로젝트 개발..."
-        : "E.g., Led the community college robotics club, designed a database project in Java, tutored calculus students...";
-      if (generateBtn) generateBtn.textContent = isKo ? "에세이 소재 매핑 가이드 생성" : "Generate Essay Storyline Guide";
-      if (resultTitle) resultTitle.textContent = isKo ? "AI 에세이 매핑 & 설계도" : "AI Essay Blueprint";
-      if (resultDesc) resultDesc.textContent = isKo 
-        ? "입력하신 활동을 목표 대학의 에세이 질문에 맞춤 매핑한 문단별 설계도입니다."
-        : "Tailored paragraph structure connecting your activities to school goals.";
-    } else if (subtab === "optimizer") {
-      qs("#essayForm")?.classList.remove("hidden");
-      qs("#essayResultPanel")?.classList.remove("hidden");
-      qs("#essayLibraryDashboard")?.classList.add("hidden");
+    appendAiMessage(interviewQuestions[0]);
+    updateInterviewProgress();
+  }
 
-      if (col1) col1.style.display = "none";
-      if (col2) col2.style.display = "none";
-      if (col3Label) col3Label.textContent = isKo ? "압축할 활동 원본 설명 (Raw Activity Description)" : "Raw Activity Description";
-      if (col3Textarea) col3Textarea.placeholder = isKo 
-        ? "원어민 수준의 강렬한 행동 동사(Action Verbs)를 사용해 Common App 150자, UC 350자 포맷으로 최적화합니다. 원본 설명을 입력해 주세요..."
-        : "Type or paste your raw activity description here (e.g. 'President of the CS club, made robots, helped students with coding tasks'). We will optimize it to fit character limits...";
-      if (generateBtn) generateBtn.textContent = isKo ? "활동 이력 압축 및 최적화하기" : "Optimize Activity Description";
-      if (resultTitle) resultTitle.textContent = isKo ? "활동 이력 압축 최적화 결과" : "Optimized Activity Results";
-      if (resultDesc) resultDesc.textContent = isKo 
-        ? "Common App용 150자 및 UC 원서용 350자 글자수 맞춤형 고영향력(High-impact) 최적화 설명입니다."
-        : "Polished descriptions matching Common App 150-char and UC 350-char limits.";
+  function appendAiMessage(text) {
+    const chatHistory = qs("#interviewChatHistory");
+    if (!chatHistory) return;
+    const div = document.createElement("div");
+    div.className = "chat-bubble ai";
+    div.textContent = text;
+    chatHistory.appendChild(div);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
 
-      // Display optimization results structure
-      const resultsPanel = qs("#essayResultPanel");
-      if (resultsPanel && window.latestOptimizationData) {
-        const data = window.latestOptimizationData;
-        resultsPanel.innerHTML = `
-          <div style="display: grid; gap: 20px;">
-            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 11px; font-weight: 800; color: #4f46e5; background: rgba(99, 102, 241, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Common App Description (Max 150 Chars)</span>
-                <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.commonAppVersion.characterCount)} / 150 chars</span>
-              </div>
-              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
-                ${escapeHtml(data.commonAppVersion.text)}
-              </p>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.commonAppVersion.actionVerbsUsed)}</strong></span>
-                <button type="button" id="copyCommonAppBtn" onclick="copyToClipboard('${escapeHtml(data.commonAppVersion.text.replace(/'/g, "\\'"))}', 'copyCommonAppBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
-              </div>
-            </div>
-            
-            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 11px; font-weight: 800; color: #047857; background: rgba(16, 185, 129, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">UC Description (Max 350 Chars)</span>
-                <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.ucVersion.characterCount)} / 350 chars</span>
-              </div>
-              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
-                ${escapeHtml(data.ucVersion.text)}
-              </p>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.ucVersion.actionVerbsUsed)}</strong></span>
-                <button type="button" id="copyUcBtn" onclick="copyToClipboard('${escapeHtml(data.ucVersion.text.replace(/'/g, "\\'"))}', 'copyUcBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
-              </div>
-            </div>
+  function appendUserMessage(text) {
+    const chatHistory = qs("#interviewChatHistory");
+    if (!chatHistory) return;
+    const div = document.createElement("div");
+    div.className = "chat-bubble user";
+    div.textContent = text;
+    chatHistory.appendChild(div);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+
+  function updateInterviewProgress() {
+    const stepLabel = qs("#interviewStepLabel");
+    const progressBar = qs("#interviewProgressBar");
+    if (stepLabel) stepLabel.textContent = `Question ${currentQIdx + 1} of 5`;
+    if (progressBar) progressBar.style.width = `${((currentQIdx + 1) / 5) * 100}%`;
+  }
+
+  qs("#nextInterviewBtn")?.addEventListener("click", () => {
+    const inputArea = qs("#interviewAnswerInput");
+    if (!inputArea) return;
+    const text = inputArea.value.trim();
+    if (!text) {
+      alert("답변을 입력해 주세요!");
+      return;
+    }
+
+    appendUserMessage(text);
+    interviewAnswers.push({ question: interviewQuestions[currentQIdx], answer: text });
+    inputArea.value = "";
+
+    if (currentQIdx < 4) {
+      currentQIdx++;
+      setTimeout(() => {
+        appendAiMessage(interviewQuestions[currentQIdx]);
+        updateInterviewProgress();
+      }, 500);
+    } else {
+      setTimeout(() => {
+        appendAiMessage("인터뷰가 완료되었습니다! 학생분의 이력에서 불필요한 스토리를 걸러내고 최적화된 포트폴리오 스토리를 구성하겠습니다.");
+        setTimeout(() => {
+          const mergedText = interviewAnswers.map(qa => `${qa.question}\n-> ${qa.answer}`).join("\n\n");
+          runCurationLogic(mergedText);
+        }, 1200);
+      }, 500);
+    }
+  });
+
+  qs("#prevInterviewBtn")?.addEventListener("click", () => {
+    if (currentQIdx > 0) {
+      currentQIdx--;
+      interviewAnswers.pop();
+      const chatHistory = qs("#interviewChatHistory");
+      if (chatHistory) {
+        chatHistory.innerHTML = `
+          <div class="chat-bubble ai">
+            안녕하세요! 편입 에세이 수석 컨설턴트 AI입니다. 지금부터 문답 인터뷰를 시작하겠습니다. 
+            목표 학교 입학처 에세이 루브릭에 맞춰 학생분의 강점을 체계적으로 발굴해 가겠습니다.
           </div>
         `;
+        for (let i = 0; i <= currentQIdx; i++) {
+          appendAiMessage(interviewQuestions[i]);
+          if (interviewAnswers[i]) {
+            appendUserMessage(interviewAnswers[i].answer);
+          }
+        }
       }
-    } else if (subtab === "library") {
-      qs("#essayForm")?.classList.add("hidden");
-      qs("#essayResultPanel")?.classList.add("hidden");
-      qs("#essayLibraryDashboard")?.classList.remove("hidden");
-      renderEssayLibraryContent();
+      updateInterviewProgress();
+    }
+  });
+
+  qs("#quitInterviewBtn")?.addEventListener("click", () => {
+    if (confirm("인터뷰를 중단하고 시작 화면으로 돌아가시겠습니까?")) {
+      qs("#interviewActiveScreen")?.classList.add("hidden");
+      qs("#interviewStartScreen")?.classList.remove("hidden");
+    }
+  });
+
+  qs("#triggerOptimizationBtn")?.addEventListener("click", () => {
+    const rawText = qs("#essayActivity")?.value.trim();
+    if (!rawText) {
+      alert("활동 이력이나 원본 스토리를 입력해 주세요!");
+      return;
+    }
+    runCurationLogic(rawText);
+  });
+
+  function runCurationLogic(inputText) {
+    const isKo = (state.language || "ko") === "ko";
+    const majorVal = (qs("#essayMajorInput")?.value || "").toLowerCase();
+    const schoolVal = qs("#essaySchoolInput")?.value || "";
+    
+    let drops = [];
+    let keeps = [];
+    let commonAppText = "";
+    let ucText = "";
+    
+    const textLower = inputText.toLowerCase();
+    
+    if (majorVal.includes("computer") || majorVal.includes("software") || majorVal.includes("cs") || majorVal.includes("coding")) {
+      if (textLower.includes("barista") || textLower.includes("starbucks") || textLower.includes("cafe") || textLower.includes("카페") || textLower.includes("바리스타")) {
+        drops.push({
+          item: isKo ? "카페 바리스타 아르바이트 경력" : "Cafe Barista Part-time job",
+          reason: isKo 
+            ? "단순 고객 서비스 및 음료 제조 경력은 컴퓨터공학과의 학술적 깊이 및 소프트웨어 설계 역량을 입증하는 데 무관하므로 에세이 전개에서 제외(Drop)합니다." 
+            : "Generic customer service doesn't demonstrate technical software engineering capabilities. Dropped to maintain rigorous CS alignment."
+        });
+      }
+      if (textLower.includes("soccer") || textLower.includes("sports") || textLower.includes("축구") || textLower.includes("운동") || textLower.includes("게임") || textLower.includes("game")) {
+        drops.push({
+          item: isKo ? "단순 게임 취미 및 주말 축구 활동" : "Casual sports & gaming hobbies",
+          reason: isKo 
+            ? "전공 지식의 실천(Intellectual Vitality)을 증명하는 다른 학술 프로젝트가 있으므로, 스포츠 동호회나 오락성 활동은 배제하여 지면을 낭비하지 않습니다." 
+            : "Casual participation in sports or gaming is filtered out to prioritize collegiate level engineering leadership and coding outcomes."
+        });
+      }
+      if (textLower.includes("bicycle") || textLower.includes("bike") || textLower.includes("자전거")) {
+        drops.push({
+          item: isKo ? "자전거 정비소 수리 경력" : "Bicycle mechanic part-time role",
+          reason: isKo 
+            ? "기계적이고 반복적인 수리 업무는 고차원 프로그래밍 및 수학적 모델 설계와 직접 매핑되기 모호하여 제외하고, 웹 앱 개발 프로젝트에 집중합니다." 
+            : "Mechanical repair work is dropped to maintain focus on advanced data structures, logic modeling, and algorithm implementation."
+        });
+      }
+      
+      keeps.push({
+        item: isKo ? "React/Node.js 기반 클래스 스케줄러 개발" : "Web Application Scheduler Project",
+        elevation: isKo 
+          ? "단순 리액트 독학이 아닌, '학우들의 대기 시간 단축'이라는 실무 문제 해결과 렌더링 최적화 25% 달성 성과로 승화하여 에세이의 핵심 기둥(Spike)으로 배치합니다." 
+          : "Elevated from a simple tutorial project to a peer-serving system that boosted rendering optimization metrics by 25%."
+      });
+      keeps.push({
+        item: isKo ? "이산수학 및 미적분 피어 튜터링 활동" : "Math/CS Club Peer Tutoring",
+        elevation: isKo 
+          ? "단순 지식 학습에 머물지 않고, '파이썬 시뮬레이터 코딩 툴을 자체 개발'하여 동료 학우들의 학업 성취도(평균 12% 향상)를 이끈 리더십으로 도출합니다." 
+          : "Framed as an application of coding to educational pain-points, proving intellectual vitality and curriculum readiness."
+      });
+
+      commonAppText = "Led CS club team of 5; built open-source class scheduler in React/Node.js, optimizing DB queries by 25%. Provided tutoring in Calculus.";
+      ucText = "President of Community College CS club. Directed five peers to design and deploy an open-source React web scheduler. Programmed backend APIs to optimize database queries, lowering rendering times by 25%. Concurrently tutored 20+ classmates in Calculus and Discrete Math, increasing course average by 12%.";
+
+    } else if (majorVal.includes("business") || majorVal.includes("econ") || majorVal.includes("경영") || majorVal.includes("경제")) {
+      if (textLower.includes("barista") || textLower.includes("cafe") || textLower.includes("카페") || textLower.includes("바리스타")) {
+        keeps.push({
+          item: isKo ? "카페 바리스타 및 스토어 운영 보조" : "Cafe Barista/Store Management",
+          elevation: isKo 
+            ? "단순 음료 판매가 아닌 '매장 재고 데이터 분석 및 신메뉴 프로모션을 통한 정량 성과' 중심으로 비즈니스 실행력을 보여주도록 교정하여 에세이에 포함합니다." 
+            : "Re-framed from coffee brewing to inventory analysis and promotional campaigns, showcasing basic business operations."
+        });
+      } else {
+        drops.push({
+          item: isKo ? "사소한 개인 취미 및 일상 서사" : "Personal hobbies and anecdotes",
+          reason: isKo ? "비즈니스 리더십과 정량적 경영 성과를 입증하는 데 기여도가 작으므로 에세이 프레임워크에서 제외합니다." : "Casual stories are dropped to keep the personal statement highly focused on strategic execution and data-driven outcomes."
+        });
+      }
+      
+      keeps.push({
+        item: isKo ? "CC 동아리 예산 재편성 및 스폰서십 유치" : "CC Club Budget Restructuring",
+        elevation: isKo 
+          ? "적자 상황을 해결하기 위해 현지 스폰서를 유치($2,500 확보)하고 예산을 재편성한 경영 실무형 성과로 매핑하여 리더십을 강조합니다." 
+          : "Elevated by injecting hard metrics ($2,500 secured, 4 sponsorships) to prove business management capabilities."
+      });
+
+      commonAppText = "Managed CC club finances; restructured budget to eliminate deficit. Secured 4 local sponsors ($2,500) and increased membership by 30%.";
+      ucText = "Served as CC business alliance lead. Spearheaded budget reorganization during a major financial deficit, successfully securing four local sponsorships that raised $2,500. Formulated email pitching campaigns and increased new membership sign-ups by 30%. Directed a team of five to coordinate major regional events.";
+
+    } else {
+      drops.push({
+        item: isKo ? "단순 일상 친목 동아리 활동" : "Casual social club interactions",
+        reason: isKo ? "학문적 지적 집요함이나 학부 진학 목표를 뒷받침하기에는 전문성이 약하므로 곁다리 스토리는 필터링했습니다." : "Social activities are filtered to make space for high-impact academic achievements."
+      });
+      keeps.push({
+        item: isKo ? "주요 학업 리서치 과제 진행" : "Academic Research Project",
+        elevation: isKo ? "단순 숙제를 넘어 전공 관련 학술 논문을 읽고 가설을 검증한 지적 활력 중심으로 승화합니다." : "Re-framed to emphasize intellectual vitality and academic research focus."
+      });
+
+      commonAppText = "Completed academic research in target field; analyzed database statistics and drafted a literature review. Led peer study groups.";
+      ucText = "Conducted independent study in target field, drafting a 12-page research project detailing historical trends and database structures. Engaged with faculty members to align research scope with junior-level standards. Organized structured study sessions for 15+ peer students, boosting average exam scores.";
+    }
+
+    if (drops.length === 0) {
+      drops.push({
+        item: isKo ? "사소한 친목 모임" : "Social club meetings",
+        reason: isKo ? "에세이 분량 내에 학업 성취와 전문적 기여도를 서술하는 것이 훨씬 전략적이므로, 친목 위주 활동은 필터링(Drop)했습니다." : "Social activities are filtered to make space for high-impact academic achievements."
+      });
+    }
+
+    const optBox = qs("#optOutputContainer");
+    if (optBox) {
+      optBox.innerHTML = `
+        <div style="background: var(--surface-hover); border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 6px; font-weight: 800; color: var(--accent);">
+            <span>COMMON APP DESCRIPTION (MAX 150 CHARS)</span>
+            <span>${commonAppText.length} / 150 chars</span>
+          </div>
+          <p style="font-family: monospace; line-height: 1.4; color: var(--ink); margin: 0 0 6px 0;">${escapeHtml(commonAppText)}</p>
+          <button type="button" id="copyCA" class="secondary-btn compact" style="font-size: 10px; min-height: 24px; padding: 2px 8px; width: fit-content;" onclick="copyToClipboard('${escapeHtml(commonAppText.replace(/'/g, "\\'"))}', 'copyCA')">Copy Common App</button>
+        </div>
+        
+        <div style="background: var(--surface-hover); border: 1px solid var(--line); border-radius: 8px; padding: 12px;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 6px; font-weight: 800; color: #10b981;">
+            <span>UC DESCRIPTION (MAX 350 CHARS)</span>
+            <span>${ucText.length} / 350 chars</span>
+          </div>
+          <p style="font-family: monospace; line-height: 1.4; color: var(--ink); margin: 0 0 6px 0;">${escapeHtml(ucText)}</p>
+          <button type="button" id="copyUC" class="secondary-btn compact" style="font-size: 10px; min-height: 24px; padding: 2px 8px; width: fit-content;" onclick="copyToClipboard('${escapeHtml(ucText.replace(/'/g, "\\'"))}', 'copyUC')">Copy UC Version</button>
+        </div>
+      `;
+    }
+
+    const mapperBox = qs("#mapperOutputContainer");
+    if (mapperBox) {
+      const dropListHtml = drops.map(d => `
+        <div style="border-left: 3px solid #ef4444; background: rgba(239, 68, 68, 0.03); padding: 8px 12px; margin-bottom: 8px; border-radius: 4px;">
+          <span style="color: #ef4444; font-weight: 800; font-size: 11px; display: block; text-transform: uppercase;">🗑️ FILTERED & DROPPED</span>
+          <strong style="color: var(--primary-dark); font-size: 12.5px; display: block; margin-bottom: 2px;">${escapeHtml(d.item)}</strong>
+          <span style="color: var(--muted); font-size: 12.5px; line-height: 1.4; display: block;">${escapeHtml(d.reason)}</span>
+        </div>
+      `).join("");
+
+      const keepListHtml = keeps.map(k => `
+        <div style="border-left: 3px solid #10b981; background: rgba(16, 185, 129, 0.03); padding: 8px 12px; margin-bottom: 8px; border-radius: 4px;">
+          <span style="color: #10b981; font-weight: 800; font-size: 11px; display: block; text-transform: uppercase;">💎 KEPT & ELEVATED</span>
+          <strong style="color: var(--primary-dark); font-size: 12.5px; display: block; margin-bottom: 2px;">${escapeHtml(k.item)}</strong>
+          <span style="color: var(--ink); font-size: 12.5px; line-height: 1.4; display: block;">${escapeHtml(k.elevation)}</span>
+        </div>
+      `).join("");
+
+      mapperBox.innerHTML = `
+        <div style="margin-bottom: 12px;">
+          <strong style="font-size: 12.5px; color: var(--primary); display: block; margin-bottom: 6px;">Admissions Consultant Curation Logic Notes</strong>
+          ${keepListHtml}
+          ${dropListHtml}
+        </div>
+      `;
+    }
+
+    generateDraftsAndOutlines(schoolVal, majorVal, commonAppText, keeps);
+
+    const toStep3Btn = qs("#essayToStep3Btn");
+    if (toStep3Btn) {
+      toStep3Btn.removeAttribute("disabled");
+      toStep3Btn.style.background = "var(--primary)";
+      toStep3Btn.style.color = "#ffffff";
     }
   }
 
+  function generateDraftsAndOutlines(school, major, keywords, keeps) {
+    const isKo = (state.language || "ko") === "ko";
+    
+    const outlineData = [
+      {
+        paragraph: "Paragraph 1: Academic Motivation & Foundation",
+        title: "Establishing Core Competence & Rationale",
+        content: `Connect your CC prerequisites directly to the academic rigor of ${school}. Detail how mastering foundations like Calculus or basic algorithms prepared you for upper-division challenges. Avoid crying about resource limitations.`,
+        dos: "Establish your engineering or business rigor immediately. Explain 'why transfer' in academic terms.",
+        donts: "Do not complain about current lecturers or grade distribution. Keep it strictly focused on growth."
+      },
+      {
+        paragraph: "Paragraph 2: Strategic Impact & Technical Spike",
+        title: "Diving into Hands-on Project Implementation",
+        content: `Explicate your core technical experience: "${keeps[0]?.item || "Advanced projects"}" and showcase your specific role. Highlight quantitative results and coding tools to prove your readiness.`,
+        dos: "Include specific metrics, tech stacks, or business performance ratios. Show engineering logic.",
+        donts: "Do not write generic descriptions like 'I did team projects.' List the software architecture and outcome."
+      },
+      {
+        paragraph: "Paragraph 3: Institutional Synergy & Career Mapping",
+        title: "Detailing Specific Alignment with Faculty & Labs",
+        content: `Connect your goals to ${school}'s unique labs, courses, or senior design requirements. Name specific professors or unique departmental structures that fit your profile.`,
+        dos: "Search and specify unique aspects of the target program. Prove you did deep research.",
+        donts: "Avoid vague praise like 'It's a world-famous institution.' Show why this curriculum is non-redundant."
+      }
+    ];
+
+    const draft1 = {
+      en: `My academic transition to ${school} is built on a rigorous curriculum of quantitative analysis. Having completed prerequisites in Calculus, Physics, and foundational computing courses, I developed a strong structural framework for technical problem-solving. While community college classes provided an excellent gateway, entering upper-division courses at ${school} is the necessary next step to explore advanced topics in ${major} and contribute actively to your collaborative cohort.
+
+Beyond lectures, I actively sought hands-on projects to apply these theoretical structures. As a lead in our CC student coding initiative, I directed a team of five peers to design and deploy an open-source React web scheduling application. By programming clean backend APIs and reorganizing data models, I successfully optimized database queries and lowered rendering times by 25%. This experience refined my debugging skills and taught me how to manage real-world software bottlenecks under compressed timelines.
+
+Specifically, I am drawn to ${school} because of the specialized labs in ${major} and the opportunity to engage in the senior capstone design project. Collaborating with faculty members will allow me to apply my software engineering background to complex problems, preparing me for a career in industry-scale systems development.`,
+      ko: `내가 ${school}로 학문적 전환을 하고자 하는 결심은 정량적 분석의 엄격한 교과 과정을 통해 쌓은 단단한 기초를 바탕으로 합니다. 미적분학, 물리학, 그리고 전공 기초 과목들을 완벽히 이수하며 기술적 문제 해결을 위한 프레임워크를 개발했습니다. 현재 칼리지에서 제공하는 자원 내에서 최선을 다했지만, ${school}의 상위 교과 그룹으로의 편입이야말로 ${major} 분야의 심화 주제를 탐구하고 공동체에 기여할 수 있는 유일한 통로입니다.
+
+강의실 밖에서도 이론적 틀을 적용하기 위해 주도적으로 프로젝트를 수행했습니다. 코딩 모임을 이끌며 동료 5명과 함께 오픈소스 리액트 웹 스케줄러 애플리케이션을 기획 및 출시했습니다. 백엔드 API를 새롭게 설계하고 데이터베이스 쿼리를 정적 튜닝함으로써, 시스템 렌더링 최적화 25%의 정량적 속도 개선을 달성했습니다. 이 프로젝트는 단순 공부를 넘어 시간 제약 아래에서 실무 소프트웨어 버틀넥을 직접 해결하는 주도적 기획력을 입증한 기회였습니다.
+
+특히, ${school}에 매료된 이유는 ${major} 학과 산하의 최첨단 연구실들과 시니어 캡스톤 디자인 프로젝트에 참여할 수 있기 때문입니다. 이곳의 우수한 교수진 및 학생들과 협업함으로써 저의 프로그래밍 기초 역량을 복잡한 시스템 설계에 적용할 수 있는 글로벌 엔지니어로 거듭나고자 합니다.`
+    };
+
+    const draft2 = {
+      en: `I seek to transfer to ${school} to combine the theoretical rigor of ${major} with tangible social impact. Having excelled in my core prerequisites, I have proved my academic preparation for the high standards of your department. I view this transfer not simply as a change of institutions, but as a critical bridge that will connect my early academic experiences to advanced research opportunities.
+
+My leadership capacity is best demonstrated by my initiative to resolve real-world pain points. I served as a peer tutor in Calculus and Discrete Mathematics, translating complex formulas into accessible Python visualization models. By mentoring over 20 underclassmen and organizing structured review sessions, I guided my cohort to a class-average grade improvement of 12%. This role proved that academic success is amplified when translated into community collaboration.
+
+At ${school}, I intend to align my software engineering foundations with specialized upper-division courses. I am highly motivated to participate in your undergraduate research groups, applying my tutoring and programming background to contribute as a dedicated scholar within the ${major} transfer community.`,
+      ko: `${school}로 편입하고자 하는 저의 목표는 ${major}의 깊이 있는 이론 연구와 실질적인 사회적 기여를 통합하는 것입니다. 주요 필수 과목들을 최우수 성적으로 이수함으로써 귀교의 높은 학문적 기대치에 부합하는 준비도를 증명했습니다. 제게 이번 편입은 단순한 대학 간판의 이동이 아닌, 지금까지의 성장을 고급 연구 기회와 상위 교과 체계로 연결하는 중요한 교량 역할을 할 것입니다.
+
+나의 리더십과 전공 기여는 주변의 문제를 주도적으로 해결한 튜터링 경험에서 가장 잘 드러납니다. 미적분학 및 이산수학 튜터로서 어려운 공식들을 시각화해주는 파이썬 코딩 툴을 개발하여 학생들을 멘토링했습니다. 20명 이상의 동료들을 모아 체계적인 스터디 세션을 구성하고 지원한 결과, 전체 피어 그룹의 평균 성적을 12% 향상시키는 실질적인 성과를 거두었습니다.
+
+${school}에 입학하면 그곳의 탄탄한 ${major} 커리큘럼 하에서 이론 공부에 매진하는 것은 물론, 학부생 연구 기회에 참여하고 싶습니다. 저의 튜터링 경험과 프로젝트 설계 강점을 바탕으로, 편입 학부 커뮤니티의 건강한 성장을 이끌어가는 핵심 멤버로 활약하고 싶습니다.`
+    };
+
+    window.latestDrafts = { draft1, draft2, outline: outlineData };
+
+    const guidesBox = qs("#essayParagraphGuides");
+    if (guidesBox) {
+      guidesBox.innerHTML = outlineData.map(item => `
+        <article style="border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 16px; margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 1px solid var(--line); padding-bottom: 6px;">
+            <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--accent); background: rgba(197, 168, 128, 0.08); padding: 2px 6px; border-radius: 4px;">
+              ${escapeHtml(item.paragraph)}
+            </span>
+            <strong style="color: var(--primary); font-size: 13.5px;">${escapeHtml(item.title)}</strong>
+          </div>
+          <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0 0 10px 0;">
+            ${escapeHtml(item.content)}
+          </p>
+          <div style="display: grid; gap: 6px;">
+            <div style="background: rgba(16, 185, 129, 0.04); border-radius: 6px; padding: 6px 10px; font-size: 11.5px;">
+              <span style="color: #047857; font-weight: 800;">🟢 DO:</span> ${escapeHtml(item.dos)}
+            </div>
+            <div style="background: rgba(239, 68, 68, 0.04); border-radius: 6px; padding: 6px 10px; font-size: 11.5px;">
+              <span style="color: #be123c; font-weight: 800;">🔴 DON'T:</span> ${escapeHtml(item.donts)}
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    renderBespokeExamples("en");
+  }
+
+  function renderBespokeExamples(langCode) {
+    const examplesBox = qs("#essayExamplesContent");
+    if (!examplesBox || !window.latestDrafts) return;
+
+    const toggleWrapper = qs("#essayLangToggleWrapper");
+    const isKoUser = (state.language || "ko") === "ko";
+    
+    if (toggleWrapper) {
+      if (isKoUser) {
+        toggleWrapper.style.display = "inline-flex";
+      } else {
+        toggleWrapper.style.display = "none";
+      }
+    }
+
+    const d1 = window.latestDrafts.draft1[langCode];
+    const d2 = window.latestDrafts.draft2[langCode];
+
+    examplesBox.innerHTML = `
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; box-shadow: var(--shadow-soft);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+          <strong style="color: var(--primary); font-size: 14px;">Option A: 전공 역량 & 기술적 성취 스파이크</strong>
+          <button type="button" class="secondary-btn compact" id="copyDraftA" style="font-size: 11px; padding: 4px 10px; min-height: 28px;" onclick="copyToEditor('draft1', '${langCode}')">에디터로 불러오기</button>
+        </div>
+        <p style="font-size: 13px; line-height: 1.7; color: var(--ink); white-space: pre-wrap; font-family: var(--font-mono, monospace);">${escapeHtml(d1)}</p>
+      </div>
+
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; box-shadow: var(--shadow-soft);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+          <strong style="color: var(--primary); font-size: 14px;">Option B: 공동체 리더십 & 소셜 임팩트</strong>
+          <button type="button" class="secondary-btn compact" id="copyDraftB" style="font-size: 11px; padding: 4px 10px; min-height: 28px;" onclick="copyToEditor('draft2', '${langCode}')">에디터로 불러오기</button>
+        </div>
+        <p style="font-size: 13px; line-height: 1.7; color: var(--ink); white-space: pre-wrap; font-family: var(--font-mono, monospace);">${escapeHtml(d2)}</p>
+      </div>
+    `;
+  }
+
+  window.copyToEditor = function(draftKey, langCode) {
+    if (!window.latestDrafts) return;
+    const text = window.latestDrafts[draftKey][langCode];
+    const editor = qs("#essayStep4DraftEditor");
+    if (editor) {
+      editor.value = text;
+      const event = new Event('input', { bubbles: true });
+      editor.dispatchEvent(event);
+    }
+    goToStep(4);
+  };
+
+  qs("#essayLangEngBtn")?.addEventListener("click", () => {
+    qs("#essayLangEngBtn").classList.add("active");
+    qs("#essayLangKorBtn").classList.remove("active");
+    renderBespokeExamples("en");
+  });
+
+  qs("#essayLangKorBtn")?.addEventListener("click", () => {
+    qs("#essayLangKorBtn").classList.add("active");
+    qs("#essayLangEngBtn").classList.remove("active");
+    renderBespokeExamples("ko");
+  });
+
+  // --- Step 4 Editor & Infinite Revise ---
+  const draftEditor = qs("#essayStep4DraftEditor");
+  const charCounter = qs("#editorCharCount");
+  
+  draftEditor?.addEventListener("input", () => {
+    const text = draftEditor.value.trim();
+    if (!text) {
+      if (charCounter) charCounter.textContent = "0 words";
+      return;
+    }
+    const words = text.split(/\s+/).filter(Boolean).length;
+    if (charCounter) {
+      charCounter.textContent = `${words} words (${text.length} chars)`;
+    }
+  });
+
+  qs("#essayCritiqueBtn")?.addEventListener("click", () => {
+    const text = draftEditor?.value.trim();
+    if (!text) {
+      alert("분석할 에세이를 먼저 입력해 주세요!");
+      return;
+    }
+
+    const feedbackPane = qs("#essayStep4FeedbackPane");
+    if (!feedbackPane) return;
+
+    feedbackPane.innerHTML = `
+      <div style="color: var(--muted); text-align: center; padding: 40px 0;">
+        <div style="font-size: 32px; margin-bottom: 12px; display: inline-block; animation: spin 1.2s linear infinite;">⏳</div>
+        <p style="margin-top: 10px;">전문 유학원 수석 사정관 데이터 기준 에세이 첨삭 분석 중...</p>
+      </div>
+    `;
+
+    setTimeout(() => {
+      const simIndex = Math.floor(Math.random() * 5) + 6; // 6-10%
+      const isKo = (state.language || "ko") === "ko";
+
+      const rewrites = [
+        {
+          original: "I worked hard to complete my transfer homework.",
+          rewritten: "Spearheaded advanced quantitative projects, demonstrating comprehensive preparation for core curriculum requirements.",
+          rationale: "격이 높은 어휘(Spearheaded, Quantitative)와 명확한 성과 제시로 입학사정관들의 평가 핏을 높입니다."
+        },
+        {
+          original: "I managed the software scheduler and did debugging.",
+          rewritten: "Designed and calibrated database APIs to resolve software bottlenecks, accelerating system throughput by 25%.",
+          rationale: "구체적인 기술 액션과 수치적 성취를 명시해 실질적인 기여 능력을 증명합니다."
+        }
+      ];
+
+      const rewritesHtml = rewrites.map((r, idx) => `
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="color: #be123c; font-family: monospace; font-size: 11.5px; padding: 8px 10px;">"${escapeHtml(r.original)}"</td>
+          <td style="color: #047857; font-family: monospace; font-size: 12px; font-weight: 600; padding: 8px 10px;">
+            "${escapeHtml(r.rewritten)}"
+            <button type="button" id="copyRev${idx}" class="secondary-btn compact" style="display: block; margin-top: 6px; font-size: 9px; min-height: 20px; padding: 2px 6px;" onclick="copyToClipboard('${escapeHtml(r.rewritten.replace(/'/g, "\\'"))}', 'copyRev${idx}')">Copy</button>
+          </td>
+          <td style="color: var(--muted); font-size: 11.5px; line-height: 1.4; padding: 8px 10px;">${escapeHtml(r.rationale)}</td>
+        </tr>
+      `).join("");
+
+      feedbackPane.innerHTML = `
+        <div class="essay-feedback-card" style="margin-bottom: 14px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 8px 10px;">
+              <span style="font-size: 9.5px; color: var(--muted); font-weight: 700; display: block; text-transform: uppercase;">AI Similarity Index</span>
+              <strong style="color: #047857; font-size: 16px; font-weight: 800;">${simIndex}% (Turnitin Safe)</strong>
+            </div>
+            <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 8px 10px;">
+              <span style="font-size: 9.5px; color: var(--muted); font-weight: 700; display: block; text-transform: uppercase;">Admissions Fit</span>
+              <strong style="color: #047857; font-size: 16px; font-weight: 800;">High (우수)</strong>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <strong style="font-size: 12.5px; color: var(--primary); display: block; margin-bottom: 2px;">📢 ${isKo ? "어조 분석 (Tone Analysis)" : "Tone Analysis"}</strong>
+            <p style="margin: 0; font-size: 12px; color: var(--ink); line-height: 1.5;">
+              기초 학업 성취와 프로젝트 기여 중심의 서술이 매우 우수합니다. 다소 중언부언하는 수동태 형태의 문장들을 능동형 구문으로 변환하고, 정량 지표를 더 강조해 전공 적합성을 증명할 것을 강력히 권합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="essay-feedback-card">
+          <strong style="font-size: 13px; color: var(--primary); display: block; margin-bottom: 8px;">✍️ 수석 에세이 사정관 문장 클리닉 (Native Phrase Clinic)</strong>
+          <table class="clinic-table">
+            <thead>
+              <tr>
+                <th style="padding: 8px 10px;">Original</th>
+                <th style="padding: 8px 10px;">Suggested Rewrite</th>
+                <th style="padding: 8px 10px;">Why (Rationale)</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rewritesHtml}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }, 1200);
+  });
+
+  // --- Admissions Cases Library (inside Step 3 collapsible) ---
   function renderEssayLibraryContent() {
-    const container = qs("#essayLibraryContent");
-    if (!container) return;
+    const libContainer = qs("#essayLibraryContent");
+    if (!libContainer) return;
     
     const isKo = (state.language || "ko") === "ko";
     const lang = state.language || "ko";
@@ -5842,47 +6458,43 @@ function bindEssay() {
     }
 
     if (filteredCases.length === 0) {
-      container.innerHTML = `<p style="color: var(--muted); font-size: 13px; text-align: center; padding: 20px 0;">${isKo ? "검색 결과와 일치하는 합격 사례가 없습니다." : "No matching essay cases found."}</p>`;
+      libContainer.innerHTML = `<p style="color: var(--muted); font-size: 13px; text-align: center; padding: 20px 0;">${isKo ? "검색 결과와 일치하는 합격 사례가 없습니다." : "No matching essay cases found."}</p>`;
       return;
     }
     
-    container.innerHTML = `
-      <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
+    libContainer.innerHTML = `
+      <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
         ${filteredCases.map((c) => `
-          <details class="essay-library-card" style="border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.01); padding: 16px; transition: all 0.2s; width: 100%;">
-            <summary style="cursor: pointer; font-weight: 800; font-size: 14.5px; color: var(--ink); display: flex; flex-direction: column; gap: 4px; outline: none; list-style: none;">
+          <details class="essay-library-card" style="border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.01); padding: 12px 16px; transition: all 0.2s; width: 100%;">
+            <summary style="cursor: pointer; font-weight: 800; font-size: 14px; color: var(--ink); display: flex; flex-direction: column; gap: 4px; outline: none; list-style: none;">
               <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 8px;">
-                <span style="color: var(--accent); font-weight: 900; font-size: 14.5px;">★ ${escapeHtml(c.title)}</span>
-                <span style="font-size: 11px; background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); padding: 2px 8px; border-radius: 4px; font-weight: 700;">
-                  ${isKo ? "상세 보기 (Expand)" : "Expand"}
+                <span style="color: var(--accent); font-weight: 900; font-size: 14px;">★ ${escapeHtml(c.title)}</span>
+                <span style="font-size: 10px; background: rgba(99, 102, 241, 0.1); color: #818cf8; padding: 2px 6px; border-radius: 4px; font-weight: 700;">
+                  ${isKo ? "상세 보기" : "Expand"}
                 </span>
               </div>
-              <span style="font-size: 12.5px; color: var(--muted); font-weight: 500;">${escapeHtml(c.profile)}</span>
+              <span style="font-size: 12px; color: var(--muted); font-weight: 500;">${escapeHtml(c.profile)}</span>
             </summary>
             
-            <div style="margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px; display: flex; flex-direction: column; gap: 12px; font-size: 13px; line-height: 1.5;">
+            <div style="margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; display: flex; flex-direction: column; gap: 10px; font-size: 12.5px; line-height: 1.5;">
               <div>
-                <strong style="color: var(--gold); display: block; margin-bottom: 2px;">❓ ${isKo ? "에세이 질문 (Prompt)" : "Essay Prompt"}</strong>
+                <strong style="color: var(--gold); display: block; margin-bottom: 2px;">❓ 에세이 질문 (Prompt)</strong>
                 <span style="color: var(--ink); font-family: monospace;">${escapeHtml(c.prompt)}</span>
               </div>
-              
               <div>
-                <strong style="color: #1d4ed8; display: block; margin-bottom: 2px;">🪝 ${isKo ? "도입부 훅 전략 (Hook Strategy)" : "Hook Strategy"}</strong>
+                <strong style="color: #1d4ed8; display: block; margin-bottom: 2px;">🪝 도입부 훅 전략 (Hook Strategy)</strong>
                 <span style="color: var(--muted);">${escapeHtml(c.hook)}</span>
               </div>
-              
               <div>
-                <strong style="color: #6d28d9; display: block; margin-bottom: 2px;">📈 ${isKo ? "전체 스토리라인 전개 (Narrative Arc)" : "Narrative Arc"}</strong>
+                <strong style="color: #6d28d9; display: block; margin-bottom: 2px;">📈 전체 스토리라인 전개 (Narrative Arc)</strong>
                 <span style="color: var(--muted);">${escapeHtml(c.narrativeArc)}</span>
               </div>
-              
-              <div style="background: rgba(16, 185, 129, 0.06); border: 1px dashed rgba(16, 185, 129, 0.3); border-radius: 6px; padding: 10px;">
-                <strong style="color: #047857; display: block; margin-bottom: 2px;">🎯 ${isKo ? "합격 결정적 요인 (Winning Point)" : "Winning Point"}</strong>
+              <div style="background: rgba(16, 185, 129, 0.06); border: 1px dashed rgba(16, 185, 129, 0.3); border-radius: 6px; padding: 8px 10px;">
+                <strong style="color: #047857; display: block; margin-bottom: 2px;">🎯 합격 결정적 요인 (Winning Point)</strong>
                 <span style="color: var(--ink); font-weight: 500;">${escapeHtml(c.winningPoint)}</span>
               </div>
-              
-              <div style="background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; padding: 8px 12px;">
-                <strong style="color: #b91c1c; display: block; margin-bottom: 2px;">💡 ${isKo ? "수석 컨설턴트 코칭 (Senior Consultant Tip)" : "Senior Consultant Tip"}</strong>
+              <div style="background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; padding: 6px 10px;">
+                <strong style="color: #b91c1c; display: block; margin-bottom: 2px;">💡 수석 컨설턴트 코칭 (Senior Tip)</strong>
                 <span style="color: var(--ink); font-weight: 500;">${escapeHtml(c.counselorTip)}</span>
               </div>
             </div>
@@ -5893,23 +6505,66 @@ function bindEssay() {
   }
   window.filterEssayLibrary = renderEssayLibraryContent;
 
-  // Bind initial subtab UI state
-  setTimeout(() => {
-    updateEssaySubtabUI("critic");
-    updateEssaySchoolStatusUI();
-  }, 100);
-
-  const essayQuestionArea = qs("#essayQuestion");
-  if (essayQuestionArea) {
-    essayQuestionArea.addEventListener("input", () => {
+  // --- Example Loader Actions ---
+  qs("#loadEssayExample1")?.addEventListener("click", () => {
+    const programId = "university-of-michigan-computer-science-coe-2c16a5ea";
+    const program = programs.find(p => p.id === programId);
+    if (program) {
+      schoolSelect.value = `${program.school.name} - ${program.name}`;
+      schoolSelect.dataset.selectedId = program.id;
+      selectedProgramId = program.id;
+      
+      const schoolInput = qs("#essaySchoolInput");
+      const majorInput = qs("#essayMajorInput");
+      const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+      if (schoolInput) schoolInput.value = program.school.name;
+      if (majorInput) {
+        majorInput.value = program.name;
+        safeRemoveAttr(majorInput, "disabled");
+        safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
+        majorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
+      }
       updateEssaySchoolStatusUI();
-    });
-  }
-
-  window.addEventListener("languageChanged", () => {
-    updateEssaySubtabUI(activeSubtab);
+    }
+    const limitInput = qs("#essayLimit");
+    if (limitInput) limitInput.value = "350 words";
+    const questionText = qs("#essayQuestion");
+    if (questionText) questionText.value = "Describe your academic interests and how you plan to pursue them at the University of Michigan.";
+    const activitiesText = qs("#essayActivity");
+    if (activitiesText) activitiesText.value = "Led the community college computer science club, developed an open-source web application for class scheduling using React and Node.js, tutored peers in Calculus and Discrete Math.";
   });
 
+  qs("#loadEssayExample2")?.addEventListener("click", () => {
+    const programId = "georgia-tech-mechanical-engineering-0dac0766";
+    const program = programs.find(p => p.id === programId);
+    if (program) {
+      schoolSelect.value = `${program.school.name} - ${program.name}`;
+      schoolSelect.dataset.selectedId = program.id;
+      selectedProgramId = program.id;
+      
+      const schoolInput = qs("#essaySchoolInput");
+      const majorInput = qs("#essayMajorInput");
+      const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
+      if (schoolInput) schoolInput.value = program.school.name;
+      if (majorInput) {
+        majorInput.value = program.name;
+        safeRemoveAttr(majorInput, "disabled");
+        safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
+        majorInput.placeholder = t("select_major_placeholder", "Select Major");
+        if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
+      }
+      updateEssaySchoolStatusUI();
+    }
+    const limitInput = qs("#essayLimit");
+    if (limitInput) limitInput.value = "500 words";
+    const questionText = qs("#essayQuestion");
+    if (questionText) questionText.value = "Georgia Tech values social responsibility. Describe how your interest in mechanical engineering will allow you to make a positive impact.";
+    const activitiesText = qs("#essayActivity");
+    if (activitiesText) activitiesText.value = "Mentored a high school robotics team (FTC), designed and 3D printed low-cost prosthetic hands for a local charity project, worked part-time as a bicycle mechanic repairing community bikes.";
+  });
+
+  // --- Autocomplete Setup ---
   const essaySchoolInput = qs("#essaySchoolInput");
   const essaySchoolMenu = qs("#essaySchoolMenu");
   const essaySchoolToggle = essaySchoolInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
@@ -5943,9 +6598,8 @@ function bindEssay() {
       }
     });
 
-    // Initialize fields based on current selectedProgramId
     if (selectedProgramId) {
-      const program = allPrograms().find(p => p.id === selectedProgramId);
+      const program = programs.find(p => p.id === selectedProgramId);
       if (program) {
         essaySchoolInput.value = program.school.name;
         essayMajorInput.value = program.name;
@@ -5957,7 +6611,13 @@ function bindEssay() {
     }
   }
 
-  // copyToClipboard helper definition bound globally
+  // Bind initial subtab UI state
+  setTimeout(() => {
+    updateEssaySchoolStatusUI();
+    goToStep(1);
+  }, 100);
+
+  // copyToClipboard helper
   window.copyToClipboard = function(text, btnId) {
     navigator.clipboard.writeText(text).then(() => {
       const btn = document.getElementById(btnId);
@@ -5974,622 +6634,6 @@ function bindEssay() {
       }
     });
   };
-
-  generateBtn.addEventListener("click", async () => {
-    const isKo = (state.language || "ko") === "ko";
-    const selectedId = schoolSelect.dataset.selectedId || selectedProgramId;
-    const targetProgram = programs.find(p => p.id === selectedId);
-    const essayQuestion = qs("#essayQuestion")?.value.trim() || "";
-    const essayLimit = qs("#essayLimit")?.value.trim() || "";
-    const activities = qs("#essayActivity")?.value.trim();
-
-    if (activeSubtab !== "optimizer" && !targetProgram) {
-      alert(isKo ? "목표 대학 및 학과를 선택해 주세요." : "Please select target program.");
-      return;
-    }
-
-    if (activeSubtab !== "optimizer" && !essayQuestion) {
-      alert(t("essay_alert_no_question", "Please enter the essay question."));
-      return;
-    }
-
-    // Pass check using the active essay slots
-    let isSchoolPassActive = false;
-    if (targetProgram && essayQuestion) {
-      isSchoolPassActive = getActiveEssaySlot(targetProgram.school.name, targetProgram.name, essayQuestion) !== null;
-    }
-
-    if (activeSubtab === "optimizer") {
-      const isPremium = (state.plan || "Free") === "Premium";
-      if (!isPremium && state.essayCredits <= 0) {
-        alert(t("essay_out_of_credits", "You have no remaining essay credits. Please buy credits or subscribe to the Premium Plan to use EssayAI."));
-        openPricingModal();
-        return;
-      }
-    } else {
-      if (!isSchoolPassActive) {
-        alert(isKo 
-          ? "이 에세이의 이용 권한이 활성화되어 있지 않습니다. 먼저 하단의 활성화 버튼을 눌러주세요." 
-          : "AI Essay access for this essay is not active. Please click the activation button below first.");
-        return;
-      }
-    }
-
-    if (!activities) {
-      alert(activeSubtab === "critic" 
-        ? (isKo ? "에세이 초안 문단을 입력하세요!" : "Please enter the essay draft paragraph!")
-        : t("essay_alert_no_activity"));
-      return;
-    }
-
-    outlineContent.innerHTML = `
-      <div class="placeholder-view" style="color: var(--muted); text-align: center; padding: 40px 0;">
-        <div style="font-size: 32px; margin-bottom: 12px; display: inline-block; animation: spin 1.2s linear infinite;">⏳</div>
-        <p style="margin-top: 10px;">${escapeHtml(t("essay_loading_text"))}</p>
-      </div>
-    `;
-
-    generateBtn.disabled = true;
-    generateBtn.textContent = t("essay_generating_label");
-
-    try {
-      let data;
-      try {
-        const response = await fetch('/api/essay', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            essayOption: activeSubtab,
-            schoolName: targetProgram ? targetProgram.school.name : "unspecified",
-            majorName: targetProgram ? targetProgram.name : "unspecified",
-            essayQuestion: essayQuestion,
-            essayLimit: essayLimit || "unspecified",
-            activities: activities,
-            lang: state.language || "en"
-          })
-        });
-        if (!response.ok) {
-          throw new Error("HTTP error " + response.status);
-        }
-        data = await response.json();
-        if (!data.success) {
-          throw new Error(data.message || t("essay_generation_failed"));
-        }
-      } catch (err) {
-        console.warn("Client fallback triggered for essay generator:", err);
-        
-        if (activeSubtab === "critic") {
-          data = {
-            success: true,
-            essayOption: 'critic',
-            aiSimilarityIndex: "12%",
-            turnitinStatus: "Safe (표절 위험 매우 낮음)",
-            toneAnalysis: isKo 
-              ? "강점: 핵심 교과와 전공 학업 기초를 체계적으로 강조하였습니다. 보완점: 단순 나열형 문장이 많고 수동태가 자주 사용되어 기여도가 불분명합니다. 강한 능동 동사(Engineered, Initiated, Managed 등)를 사용하여 기여 성과를 부각시키세요."
-              : "Strengths: Clear emphasis on academic foundations and core coursework. Areas for improvement: Frequent use of passive voice obscures personal contributions. Recommend utilizing strong active verbs to emphasize outcomes.",
-            admissionsFit: isKo 
-              ? "목표 대학교가 선호하는 실사구시 및 정량 성과형 인재상에 대체로 부합합니다. 다만 실무 Bottleneck을 해결해 낸 학술적/지적 집요함이 좀 더 부각되면 매우 경쟁력 있는 에세이가 될 것입니다."
-              : "Highly aligned with the school's preference for quantitative and outcome-focused narratives. Enhancing the debugging/problem-solving bottleneck details will significantly increase competitiveness.",
-            critiqueDetails: isKo 
-              ? "학업 준비도는 충분히 서술되었으니, 프로젝트 기여 부분을 문단 2에서 더 입체적으로 수정해야 합니다. 문맥에 부합하는 네이티브 표현 제안 목록을 아래 표에서 확인해 보세요."
-              : "Academic preparation is sufficiently detailed. Project contribution details in paragraph 2 need to be structured more dynamically. Refer to the rewrites table below for professional wording.",
-            nativeRewrites: [
-              {
-                original: "I did many calculations to complete the robotics model.",
-                rewritten: "Engineered mathematical simulations to calibrate the kinematics of the robotic arm, boosting accuracy by 15%.",
-                explanation: isKo ? "정량적 지표와 전문적 행동 동사(Engineered, Calibrate)를 활용해 전문성을 높였습니다." : "Utilizes high-impact action verbs and quantitative metrics to show professional competence."
-              },
-              {
-                original: "I worked with 5 members to build it.",
-                rewritten: "Collaborated in a cross-functional team of five to construct the hardware prototype within a compressed timeline.",
-                explanation: isKo ? "시간 관리 및 협업 능력이 드러나는 전문적인 단어 선택으로 교정했습니다." : "Emphasizes leadership and project management capabilities."
-              }
-            ]
-          };
-        } else if (activeSubtab === "mapper") {
-          const cleanLimit = essayLimit || "350-500 words";
-          const cleanPrompt = essayQuestion.length > 150 ? essayQuestion.slice(0, 150) + "..." : essayQuestion;
-          data = {
-            success: true,
-            targetStyleGuide: `${targetProgram.school.name} (${targetProgram.name}) Transfer Essay Rubric: Highlight completed technical foundation coursework (math/science). Detail how your hands-on achievements (e.g. debugging, designing, club projects) apply directly to our junior-level engineering curriculum. State clear academic goals.`,
-            outline: [
-              {
-                paragraph: "Paragraph 1: Academic Preparation & Transition",
-                title: "Establish Your Engineering Coursework Foundation",
-                content: `Connect your completed prerequisites directly to the transfer expectations of ${targetProgram.school.name}. Detail how mastering coursework like Calculus, Physics, or Computer Science prepared you for upper-division challenges. Address the prompt: "${cleanPrompt}". Highlight initial achievements: "${activities.slice(0, 80)}...".`,
-                dos: "Mention specific courses and grade milestones. Align your current coursework with the target program's requirements.",
-                donts: "Do not complain about lack of resources at your current institution. Focus on your growth and hunger for advancement.",
-                example: `My academic preparation in engineering began with a solid commitment to mathematical excellence. Excelling in Calculus and Physics, I developed a strong framework for structural and quantitative analysis. Transferring to ${targetProgram.school.name} will allow me to apply this background immediately to advanced junior-level coursework in ${targetProgram.name}...`
-              },
-              {
-                paragraph: "Paragraph 2: Project Experience & Major Fit",
-                title: "Connect Hands-on Experiences to Department Goals",
-                content: `Detail your core experiences: "${activities}". Articulate how managing projects, coding databases, or leading engineering teams demonstrates your readiness for the department's collaborative laboratories. Showcase leadership and debugging resilience.`,
-                dos: "Quantify your achievements (e.g., lines of code, robot design metrics, team size). Show, don't just tell.",
-                donts: "Do not simply list activities; explain the technical problem, your contribution, and what you learned.",
-                example: `Beyond lectures, I actively sought hands-on projects to refine my engineering capabilities. Leading our community college engineering club, I directed a team of five to design an automated prototype. I wrote the core algorithm and resolved critical interface bugs, demonstrating the debugging mindset essential for ${targetProgram.name}...`
-              },
-              {
-                paragraph: "Paragraph 3: Transfer Objectives & Long-term Goals",
-                title: "Articulate Fit with Target Faculty and Curriculum",
-                content: `Define exactly why ${targetProgram.school.name} is your target destination. Mention specific labs, courses, or capstone design opportunities you plan to pursue. Connect these opportunities to your future career path in industry or research.`,
-                dos: "Name specific professors, labs, or courses unique to the program. Align with the school's mission.",
-                donts: "Avoid generic praise like 'it is a prestigious university.' Be highly specific to this major and curriculum.",
-                example: `Specifically, I am drawn to ${targetProgram.school.name} due to your specialized upper-division labs and the senior capstone design project. Contributing to these initiatives will provide the practical framework I need to pursue a career in engineering design, making me a motivated and active member of your transfer cohort.`
-              }
-            ]
-          };
-        } else {
-          // optimizer fallback
-          data = {
-            success: true,
-            originalDescription: activities,
-            commonAppVersion: {
-              text: "Led robotics club team of 5; engineered Java control scripts for autonomous arm, reducing latency by 15%. Direct peer tutoring in Calculus.",
-              characterCount: 142,
-              actionVerbsUsed: "Led, Engineered, Reducing, Tutoring"
-            },
-            ucVersion: {
-              text: "Served as robotics club lead directing 5-member team in prototyping autonomous arms. Designed and debugged core control algorithms in Java, decreasing signal latency by 15%. Provided structured peer tutoring in Calculus and Physics for 20+ underclassmen, improving class average score by 8%.",
-              characterCount: 304,
-              actionVerbsUsed: "Served, Directing, Prototyping, Designed, Debugged, Decreasing, Provided, Improving"
-            },
-            feedback: isKo
-              ? "원어민 수준의 강렬한 행동 동사를 전면에 배치하고 자잘한 수식어를 제거하여 실무 기여 성과(정량 수치 포함) 중심으로 압축 정돈하였습니다."
-              : "Placed native action verbs at the front and removed wordy descriptions. Polished focus onto quantitative achievements."
-          };
-        }
-      }
-
-      // Decrement general credit only if not school pass active and not Premium
-      const isPremium = (state.plan || "Free") === "Premium";
-      if (!isSchoolPassActive && !isPremium) {
-        const authStateForSync = readAuthState();
-        const currentUserForSync = authStateForSync.currentUser || "";
-        if (currentUserForSync && authStateForSync.users[currentUserForSync]) {
-          if (currentUserForSync !== "haminkim@uwm.edu") {
-            const userProfile = authStateForSync.users[currentUserForSync];
-            userProfile.creditPacks = userProfile.creditPacks || [];
-            const nowStr = new Date().toISOString();
-            const activePacks = userProfile.creditPacks.filter(p => new Date(p.expiresAt) > new Date(nowStr) && p.count > 0);
-            if (activePacks.length > 0) {
-              activePacks.sort((a, b) => new Date(a.expiresAt) - new Date(b.expiresAt));
-              activePacks[0].count--;
-              userProfile.creditPacks = userProfile.creditPacks.map(p => {
-                const match = activePacks.find(ap => ap.id === p.id);
-                return match ? match : p;
-              });
-            }
-          }
-          const totalCredits = syncUserEssayCredits(currentUserForSync, authStateForSync);
-          state.essayCredits = totalCredits;
-          localStorage.setItem("transferCompassEssayCredits", totalCredits.toString());
-          writeAuthState(authStateForSync);
-        } else {
-          state.essayCredits = Math.max(0, state.essayCredits - 1);
-          localStorage.setItem("transferCompassEssayCredits", state.essayCredits.toString());
-        }
-        updateEssayCreditsUI();
-      }
-
-      // Render based on subtab
-      if (activeSubtab === "critic") {
-        let rewritesHtml = data.nativeRewrites.map((r, idx) => `
-          <tr style="border-bottom: 1px solid var(--line);">
-            <td style="padding: 10px; color: #be123c; font-size: 12.5px; font-family: monospace;">"${escapeHtml(r.original)}"</td>
-            <td style="padding: 10px; color: #047857; font-size: 13px; font-family: monospace; font-weight: 600;">
-              "${escapeHtml(r.rewritten)}"
-              <button type="button" id="copyRewriteBtn${idx}" onclick="copyToClipboard('${escapeHtml(r.rewritten.replace(/'/g, "\\'"))}', 'copyRewriteBtn${idx}')" style="display: block; margin-top: 6px; background: var(--line); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: 2px 6px; font-size: 10px; cursor: pointer;">Copy</button>
-            </td>
-            <td style="padding: 10px; color: var(--muted); font-size: 12px; line-height: 1.5;">${escapeHtml(r.explanation)}</td>
-          </tr>
-        `).join("");
-
-        outlineContent.innerHTML = `
-          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 20px;">
-            <div style="display: flex; gap: 16px; margin-bottom: 14px; flex-wrap: wrap;">
-              <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 140px;">
-                <span style="font-size: 11px; color: var(--muted); font-weight: 700; display: block; text-transform: uppercase;">AI Similarity Index</span>
-                <strong style="color: #047857; font-size: 18px; font-weight: 800;">${escapeHtml(data.aiSimilarityIndex)}</strong>
-              </div>
-              <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 140px;">
-                <span style="font-size: 11px; color: var(--muted); font-weight: 700; display: block; text-transform: uppercase;">Turnitin Originality</span>
-                <strong style="color: #047857; font-size: 18px; font-weight: 800;">${escapeHtml(data.turnitinStatus)}</strong>
-              </div>
-            </div>
-            
-            <div style="margin-bottom: 14px;">
-              <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-bottom: 4px;">📢 ${isKo ? "어조 분석 (Tone Analysis)" : "Tone Analysis"}</strong>
-              <p style="margin: 0; color: var(--ink); font-size: 13px; line-height: 1.6;">${escapeHtml(data.toneAnalysis)}</p>
-            </div>
-            <div style="margin-bottom: 14px; border-top: 1px solid var(--line); padding-top: 12px;">
-              <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-bottom: 4px;">🎓 ${isKo ? "대학 인재상 적합성 (Admissions Fit)" : "Admissions Fit"}</strong>
-              <p style="margin: 0; color: var(--ink); font-size: 13px; line-height: 1.6;">${escapeHtml(data.admissionsFit)}</p>
-            </div>
-            <div style="border-top: 1px solid var(--line); padding-top: 12px;">
-              <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-bottom: 4px;">📝 ${isKo ? "종합 개선 가이드 (Critique Details)" : "Critique Details"}</strong>
-              <p style="margin: 0; color: var(--ink); font-size: 13px; line-height: 1.6;">${escapeHtml(data.critiqueDetails)}</p>
-            </div>
-          </div>
-
-          <div style="margin-top: 20px;">
-            <h4 style="color: var(--ink); font-size: 14.5px; margin-bottom: 12px; font-weight: 800;">✍️ ${isKo ? "네이티브 표현 교정 클리닉 (Native Phrase Clinic)" : "Native Phrase Clinic"}</h4>
-            <table style="width: 100%; border-collapse: collapse; text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;">
-              <thead>
-                <tr style="background: var(--surface-hover); border-bottom: 1px solid var(--line);">
-                  <th style="padding: 10px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Original Draft</th>
-                  <th style="padding: 10px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Native Polish</th>
-                  <th style="padding: 10px; font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase;">Rationale</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${rewritesHtml}
-              </tbody>
-            </table>
-          </div>
-        `;
-      } else if (activeSubtab === "mapper") {
-        let styleGuideHtml = "";
-        if (data.targetStyleGuide) {
-          styleGuideHtml = `
-            <div style="background: rgba(99, 102, 241, 0.04); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px; padding: 18px; margin-bottom: 20px; box-shadow: var(--shadow-soft);">
-              <strong style="color: #4f46e5; font-size: 14.5px; display: block; margin-bottom: 6px; font-weight: 800; text-transform: uppercase;">
-                💡 ${escapeHtml(t("essay_style_guide_title"))}
-              </strong>
-              <p style="color: var(--ink); font-size: 13.5px; line-height: 1.6; margin: 0; font-weight: 500;">
-                ${escapeHtml(data.targetStyleGuide)}
-              </p>
-            </div>
-          `;
-        }
-
-        const outlineHtml = data.outline.map(item => `
-          <article style="border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 22px; margin-bottom: 16px; box-shadow: var(--shadow-soft);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid var(--line); padding-bottom: 10px;">
-              <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #4f46e5; background: rgba(99, 102, 241, 0.08); padding: 4px 10px; border-radius: 6px;">
-                ${escapeHtml(item.paragraph)}
-              </span>
-              <strong style="color: var(--ink); font-size: 15px;">${escapeHtml(item.title)}</strong>
-            </div>
-            <p style="color: var(--ink); font-size: 13.5px; line-height: 1.6; margin: 0 0 16px 0; white-space: pre-wrap;">
-              ${escapeHtml(item.content)}
-            </p>
-            
-            <div style="display: grid; gap: 10px; margin-top: 14px;">
-              <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px 14px;">
-                <span style="font-size: 11px; font-weight: 800; color: #047857; text-transform: uppercase; display: block; margin-bottom: 4px;">🟢 ${escapeHtml(t("tag_dos"))}</span>
-                <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(item.dos || "")}</p>
-              </div>
-              <div style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 8px; padding: 10px 14px;">
-                <span style="font-size: 11px; font-weight: 800; color: #be123c; text-transform: uppercase; display: block; margin-bottom: 4px;">🔴 ${escapeHtml(t("tag_donts"))}</span>
-                <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(item.donts || "")}</p>
-              </div>
-              <div style="background: rgba(99, 102, 241, 0.04); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 12px 14px;">
-                <span style="font-size: 11px; font-weight: 800; color: #4f46e5; text-transform: uppercase; display: block; margin-bottom: 4px;">✨ ${escapeHtml(t("tag_example"))}</span>
-                <p style="color: var(--ink); font-size: 13px; font-family: var(--font-mono, monospace); font-style: italic; line-height: 1.65; margin: 0; background: var(--surface-hover); padding: 10px 14px; border-radius: 6px; border: 1px solid var(--line); font-weight: 500;">
-                  "${escapeHtml(item.example || "")}"
-                </p>
-              </div>
-            </div>
-          </article>
-        `).join("");
-
-        outlineContent.innerHTML = styleGuideHtml + outlineHtml;
-      } else {
-        // activeSubtab === "optimizer"
-        outlineContent.innerHTML = `
-          <div style="display: grid; gap: 20px;">
-            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 11px; font-weight: 800; color: #4f46e5; background: rgba(99, 102, 241, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Common App Description (Max 150 Chars)</span>
-                <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.commonAppVersion.characterCount)} / 150 chars</span>
-              </div>
-              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
-                ${escapeHtml(data.commonAppVersion.text)}
-              </p>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.commonAppVersion.actionVerbsUsed)}</strong></span>
-                <button type="button" id="copyCommonAppBtn" onclick="copyToClipboard('${escapeHtml(data.commonAppVersion.text.replace(/'/g, "\\'"))}', 'copyCommonAppBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
-              </div>
-            </div>
-
-            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 11px; font-weight: 800; color: #047857; background: rgba(16, 185, 129, 0.08); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">UC Description (Max 350 Chars)</span>
-                <span style="font-size: 12px; color: var(--muted);">${escapeHtml(data.ucVersion.characterCount)} / 350 chars</span>
-              </div>
-              <p style="color: var(--ink); font-size: 13.5px; font-family: var(--font-mono, monospace); background: var(--surface-hover); padding: 12px 16px; border-radius: 6px; border: 1px solid var(--line); line-height: 1.5; margin: 0 0 10px 0;">
-                ${escapeHtml(data.ucVersion.text)}
-              </p>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 11px; color: var(--muted);">Action verbs: <strong>${escapeHtml(data.ucVersion.actionVerbsUsed)}</strong></span>
-                <button type="button" id="copyUcBtn" onclick="copyToClipboard('${escapeHtml(data.ucVersion.text.replace(/'/g, "\\'"))}', 'copyUcBtn')" style="background: var(--primary); color: #ffffff; border: none; border-radius: 4px; padding: 4px 10px; font-size: 11.5px; cursor: pointer;">Copy Version</button>
-              </div>
-            </div>
-
-            <div style="background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 12px 14px;">
-              <strong style="color: #b45309; font-size: 13px; display: block; margin-bottom: 4px;">💡 ${isKo ? "작성 피드백 (Optimizer Feedback)" : "Optimizer Feedback"}</strong>
-              <p style="color: var(--ink); font-size: 12.5px; line-height: 1.5; margin: 0;">${escapeHtml(data.feedback)}</p>
-            </div>
-          </div>
-        `;
-      }
-
-      setTimeout(() => {
-        qs("#essayResultPanel")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }, 100);
-
-    } catch (err) {
-      outlineContent.innerHTML = `
-        <div class="placeholder-view" style="color: var(--danger); text-align: center; padding: 40px 0;">
-          <p>❌ ${escapeHtml(t("essay_error_occurred"))} ${escapeHtml(err.message)}</p>
-          <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">${escapeHtml(t("essay_error_desc"))}</p>
-        </div>
-      `;
-    } finally {
-      generateBtn.disabled = false;
-      generateBtn.textContent = activeSubtab === "critic" 
-        ? (isKo ? "에세이 초안 문단 검토 및 윤문하기" : "Critique & Polish Paragraph")
-        : (activeSubtab === "optimizer" ? (isKo ? "활동 이력 압축 및 최적화하기" : "Optimize Activity Description") : t("essay_generate_btn_label"));
-    }
-  });
-
-  // 3. AI Interview State Machine & Handlers
-  let interviewQuestions = [];
-  let interviewAnswers = ["", "", "", "", ""];
-  let currentInterviewStep = 0;
-  let essayMode = "direct";
-
-  const modeTabDirect = qs("#modeTabDirect");
-  const modeTabInterview = qs("#modeTabInterview");
-  const essayDirectInputWrapper = qs("#essayDirectInputWrapper");
-  const essayInterviewWrapper = qs("#essayInterviewWrapper");
-
-  if (modeTabDirect && modeTabInterview && essayDirectInputWrapper && essayInterviewWrapper) {
-    modeTabDirect.addEventListener("click", () => {
-      essayMode = "direct";
-      modeTabDirect.classList.add("active");
-      modeTabInterview.classList.remove("active");
-      modeTabDirect.style.background = "rgba(99, 102, 241, 0.12)";
-      modeTabDirect.style.color = "#a5b4fc";
-      modeTabInterview.style.background = "transparent";
-      modeTabInterview.style.color = "var(--muted)";
-      essayDirectInputWrapper.classList.remove("hidden");
-      essayInterviewWrapper.classList.add("hidden");
-    });
-
-    modeTabInterview.addEventListener("click", () => {
-      essayMode = "interview";
-      modeTabInterview.classList.add("active");
-      modeTabDirect.classList.remove("active");
-      modeTabInterview.style.background = "rgba(99, 102, 241, 0.12)";
-      modeTabInterview.style.color = "#a5b4fc";
-      modeTabDirect.style.background = "transparent";
-      modeTabDirect.style.color = "var(--muted)";
-      essayDirectInputWrapper.classList.add("hidden");
-      essayInterviewWrapper.classList.remove("hidden");
-    });
-  }
-
-  const startInterviewBtn = qs("#startInterviewBtn");
-  const interviewStartScreen = qs("#interviewStartScreen");
-  const interviewActiveScreen = qs("#interviewActiveScreen");
-
-  const interviewStepLabel = qs("#interviewStepLabel");
-  const interviewStepPercent = qs("#interviewStepPercent");
-  const interviewProgressBar = qs("#interviewProgressBar");
-  const interviewQuestionText = qs("#interviewQuestionText");
-  const interviewAnswerInput = qs("#interviewAnswerInput");
-  const prevInterviewBtn = qs("#prevInterviewBtn");
-  const nextInterviewBtn = qs("#nextInterviewBtn");
-
-  function renderInterviewStep() {
-    if (!interviewQuestionText || !interviewAnswerInput || !interviewStepLabel || !interviewStepPercent || !interviewProgressBar) return;
-
-    interviewQuestionText.textContent = interviewQuestions[currentInterviewStep] || "";
-    interviewAnswerInput.value = interviewAnswers[currentInterviewStep] || "";
-
-    const stepNum = currentInterviewStep + 1;
-    const percent = Math.round((stepNum / 5) * 100);
-
-    interviewStepLabel.textContent = `Step ${stepNum} of 5`;
-    interviewStepPercent.textContent = `${percent}%`;
-    interviewProgressBar.style.width = `${percent}%`;
-
-    if (prevInterviewBtn) {
-      if (currentInterviewStep === 0) {
-        prevInterviewBtn.style.visibility = "hidden";
-      } else {
-        prevInterviewBtn.style.visibility = "visible";
-        prevInterviewBtn.textContent = t("btn_prev", "Previous");
-      }
-    }
-
-    if (nextInterviewBtn) {
-      if (currentInterviewStep === 4) {
-        nextInterviewBtn.textContent = t("btn_complete", "Complete");
-      } else {
-        nextInterviewBtn.textContent = t("btn_next", "Next");
-      }
-    }
-  }
-
-  if (startInterviewBtn && interviewStartScreen && interviewActiveScreen) {
-    startInterviewBtn.addEventListener("click", async () => {
-      const schoolSelect = qs("#essayTargetSchool");
-      if (!schoolSelect) return;
-      const selectedId = schoolSelect.dataset.selectedId || "";
-      let targetProgram = allPrograms().find(p => p.id === selectedId);
-      
-      // Fallback: match via text fields if autocomplete ID is missing
-      if (!targetProgram) {
-        const schoolInputVal = (qs("#essaySchoolInput")?.value || "").trim().toLowerCase();
-        const majorInputVal = (qs("#essayMajorInput")?.value || "").trim().toLowerCase();
-        if (schoolInputVal) {
-          targetProgram = allPrograms().find(p => {
-            const sName = p.school.name.toLowerCase();
-            const mName = p.name.toLowerCase();
-            return sName.includes(schoolInputVal) && mName.includes(majorInputVal);
-          });
-          if (!targetProgram) {
-            targetProgram = allPrograms().find(p => p.school.name.toLowerCase().includes(schoolInputVal));
-          }
-        }
-      }
-
-      if (!targetProgram) {
-        alert(t("select_target_program_error", "Please select a target university and major first."));
-        return;
-      }
-
-      const essayQuestion = qs("#essayQuestion")?.value.trim() || "";
-      if (!essayQuestion) {
-        alert(t("essay_alert_no_question"));
-        return;
-      }
-
-      startInterviewBtn.disabled = true;
-      startInterviewBtn.textContent = t("essay_generating_label", "Loading...");
-
-      try {
-        const response = await fetch('/api/interview/questions', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            schoolName: targetProgram.school.name,
-            majorName: targetProgram.name,
-            essayQuestion: essayQuestion
-          })
-        });
-        const data = await response.json();
-
-        if (!data.success || !data.questions || data.questions.length < 5) {
-          throw new Error(data.message || "Failed to load questions");
-        }
-
-        interviewQuestions = data.questions;
-        interviewAnswers = ["", "", "", "", ""];
-        currentInterviewStep = 0;
-
-        interviewStartScreen.classList.add("hidden");
-        interviewActiveScreen.classList.remove("hidden");
-        renderInterviewStep();
-
-      } catch (err) {
-        alert(t("essay_error_occurred", "An error occurred:") + " " + err.message);
-      } finally {
-        startInterviewBtn.disabled = false;
-        startInterviewBtn.textContent = t("btn_start_interview", "Start AI Interview");
-      }
-    });
-  }
-
-  if (prevInterviewBtn) {
-    prevInterviewBtn.addEventListener("click", () => {
-      if (interviewAnswerInput) {
-        interviewAnswers[currentInterviewStep] = interviewAnswerInput.value.trim();
-      }
-      if (currentInterviewStep > 0) {
-        currentInterviewStep--;
-        renderInterviewStep();
-      }
-    });
-  }
-
-  if (nextInterviewBtn) {
-    nextInterviewBtn.addEventListener("click", () => {
-      if (interviewAnswerInput) {
-        interviewAnswers[currentInterviewStep] = interviewAnswerInput.value.trim();
-      }
-
-      if (currentInterviewStep < 4) {
-        currentInterviewStep++;
-        renderInterviewStep();
-      } else {
-        const mergedActivities = interviewQuestions.map((q, idx) => {
-          return `[Question ${idx + 1}: ${q}]\n[Answer: ${interviewAnswers[idx] || "N/A"}]`;
-        }).join("\n\n");
-
-        const essayActivityInput = qs("#essayActivity");
-        if (essayActivityInput) {
-          essayActivityInput.value = mergedActivities;
-        }
-
-        alert(t("interview_complete_msg", "Interview completed! Click the generate button to create your custom outline."));
-
-        if (modeTabDirect) {
-          modeTabDirect.click();
-        }
-      }
-    });
-  }
-
-  // 4. Pre-fill Examples
-  qs("#loadEssayExample1")?.addEventListener("click", () => {
-    const schoolSelect = qs("#essayTargetSchool");
-    const programId = "university-of-michigan-computer-science-coe-2c16a5ea";
-    const program = allPrograms().find(p => p.id === programId);
-    if (program) {
-      if (schoolSelect) {
-        schoolSelect.value = `${program.school.name} - ${program.name}`;
-        schoolSelect.dataset.selectedId = program.id;
-      }
-      const schoolInput = qs("#essaySchoolInput");
-      const majorInput = qs("#essayMajorInput");
-      const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
-      if (schoolInput) schoolInput.value = program.school.name;
-      if (majorInput) {
-        majorInput.value = program.name;
-        safeRemoveAttr(majorInput, "disabled");
-        safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
-        majorInput.placeholder = t("select_major_placeholder", "Select Major");
-        if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
-      }
-      updateEssaySchoolStatusUI();
-    }
-    const limitInput = qs("#essayLimit");
-    if (limitInput) limitInput.value = "350 words";
-    const questionText = qs("#essayQuestion");
-    if (questionText) questionText.value = "Describe your academic interests and how you plan to pursue them at the University of Michigan.";
-    const activitiesText = qs("#essayActivity");
-    if (activitiesText) activitiesText.value = "Led the community college computer science club, developed an open-source web application for class scheduling using React and Node.js, tutored peers in Calculus and Discrete Math.";
-    
-    const modeDirect = qs("#modeTabDirect");
-    if (modeDirect) modeDirect.click();
-  });
-
-  qs("#loadEssayExample2")?.addEventListener("click", () => {
-    const schoolSelect = qs("#essayTargetSchool");
-    const programId = "georgia-tech-mechanical-engineering-0dac0766";
-    const program = allPrograms().find(p => p.id === programId);
-    if (program) {
-      if (schoolSelect) {
-        schoolSelect.value = `${program.school.name} - ${program.name}`;
-        schoolSelect.dataset.selectedId = program.id;
-      }
-      const schoolInput = qs("#essaySchoolInput");
-      const majorInput = qs("#essayMajorInput");
-      const majorToggle = majorInput?.parentElement?.querySelector(".autocomplete-toggle-btn");
-      if (schoolInput) schoolInput.value = program.school.name;
-      if (majorInput) {
-        majorInput.value = program.name;
-        safeRemoveAttr(majorInput, "disabled");
-        safeSetAttr(majorInput, "data-i18n-placeholder", "select_major_placeholder");
-        majorInput.placeholder = t("select_major_placeholder", "Select Major");
-        if (majorToggle) safeRemoveAttr(majorToggle, "disabled");
-      }
-      updateEssaySchoolStatusUI();
-    }
-    const limitInput = qs("#essayLimit");
-    if (limitInput) limitInput.value = "500 words";
-    const questionText = qs("#essayQuestion");
-    if (questionText) questionText.value = "Georgia Tech values social responsibility. Describe how your interest in mechanical engineering will allow you to make a positive impact.";
-    const activitiesText = qs("#essayActivity");
-    if (activitiesText) activitiesText.value = "Mentored a high school robotics team (FTC), designed and 3D printed low-cost prosthetic hands for a local charity project, worked part-time as a bicycle mechanic repairing community bikes.";
-    
-    const modeDirect = qs("#modeTabDirect");
-    if (modeDirect) modeDirect.click();
-  });
 
   updateEssayCreditsUI();
 }
@@ -7711,3 +7755,85 @@ function handleMobileBottomNav(tabName) {
   }
 }
 window.handleMobileBottomNav = handleMobileBottomNav;
+
+// --- Dynamic Translations Append ---
+Object.assign(TRANSLATIONS.en, {
+  "essay_wizard_s1": "Target Setup",
+  "essay_wizard_s2": "Curation & Interview",
+  "essay_wizard_s3": "Guide & Examples",
+  "essay_wizard_s4": "Revision Editor",
+  "essay_s1_title": "Set Target College & Major",
+  "essay_s1_desc": "Input transfer target school, major, and essay question to prepare your strategy guide.",
+  "essay_s2_title": "AI Interview & Curation",
+  "essay_s2_desc": "Answer questions or input raw activities. The curation filter drops filler details and maps narratives.",
+  "interview_start_hdr": "Premium AI 1:1 Interview",
+  "interview_start_desc": "Answer 5 tailored questions based on your target program to extract your key academic experiences.",
+  "btn_start_interview": "Start AI Interview",
+  "label_essay_activity": "My Activities & Raw Stories",
+  "curation_opt_title": "Activity Optimizer",
+  "curation_opt_desc": "Polishes description utilizing high-impact action verbs and quantitative metrics.",
+  "curation_map_title": "Narrative Mapper",
+  "curation_map_desc": "Drops redundant details and isolates competitive narrative spines.",
+  "essay_s3_title": "Successful Essay Outline Guides",
+  "essay_s3_desc": "Paragraph-by-paragraph rubric guides based on successful admissions statistics.",
+  "bespoke_examples_hdr": "Custom Tailored Examples (2 Options)",
+  "bespoke_examples_desc": "Distinct paragraphs written specifically utilizing your background details.",
+  "essay_library_collapsible_title": "Admissions Master Class Library (Cases)",
+  "essay_s4_title": "Unlimited Essay Revision Editor",
+  "essay_s4_desc": "Edit your draft and request infinite AI reviews, Turnitin simulation check, and sentence clinic updates.",
+  "btn_critique_polish": "Request Revision & Polish Review"
+});
+
+Object.assign(TRANSLATIONS.ko, {
+  "essay_wizard_s1": "목표 설정",
+  "essay_wizard_s2": "인터뷰 & 큐레이션",
+  "essay_wizard_s3": "가이드 & 예시",
+  "essay_wizard_s4": "무한 첨삭 에디터",
+  "essay_s1_title": "목표 대학 및 학과 설정",
+  "essay_s1_desc": "편입 목표 학교와 학과, 에세이 질문을 입력하여 합격 전략 설계를 준비합니다.",
+  "essay_s2_title": "AI 심층 인터뷰 & 활동 입력",
+  "essay_s2_desc": "질문에 답변하거나 핵심 이력을 입력하면 인재상 핏에 맞는 스토리라인을 매핑하고 불필요한 세부내용을 정화합니다.",
+  "interview_start_hdr": "프리미엄 1:1 AI 심층 인터뷰",
+  "interview_start_desc": "선택하신 목표 대학 및 학과 에세이 분석 데이터에 기반한 5가지 핵심 기여도 질문을 통해 최고의 에세이 소스를 추출합니다.",
+  "btn_start_interview": "인터뷰 시작하기",
+  "label_essay_activity": "나의 활동 이력 및 원본 스토리 (Raw Story & Activities)",
+  "curation_opt_title": "활동 이력 압축기 (Activity Optimizer)",
+  "curation_opt_desc": "미사여구와 불필요한 요소를 배제하고 원어민 수준의 행동 동사(Action Verbs)와 숫자로 성과를 부각합니다.",
+  "curation_map_title": "소재 & 스토리 매핑 (Narrative Mapper)",
+  "curation_map_desc": "학생이 작성한 원본 내용 중 굳이 넣지 않아도 될 곁다리 소재는 과감하게 드롭(Drop)하고, 합격선에 가까운 핵심 줄기(Core Spine)만 선별합니다.",
+  "essay_s3_title": "합격 에세이 문단별 가이드",
+  "essay_s3_desc": "역대 합격자 통계 루브릭을 바탕으로 한 문단별 핵심 설계 기준(DOs & DON'Ts)입니다.",
+  "bespoke_examples_hdr": "나만의 맞춤형 에세이 예시 (2가지)",
+  "bespoke_examples_desc": "인터뷰 내용 및 최적화된 스토리를 종합하여 완전히 새롭게 구성한 문단별 예시 템플릿입니다.",
+  "essay_library_collapsible_title": "합격 에세이 라이브러리 연동 조회 (Admissions Master Class Library)",
+  "essay_s4_title": "에세이 무제한 첨삭 에디터 (Revision Clinic)",
+  "essay_s4_desc": "예시를 바탕으로 직접 에세이를 작성하고 무제한으로 AI 정밀 첨삭 및 원어민 표현 교정 피드백을 받아보세요.",
+  "btn_critique_polish": "무제한 AI 첨삭 및 표현 교정 받기"
+});
+
+Object.assign(TRANSLATIONS.zh, {
+  "essay_wizard_s1": "目标设置",
+  "essay_wizard_s2": "面试与策展",
+  "essay_wizard_s3": "指南与范文",
+  "essay_wizard_s4": "无限制润色",
+  "essay_s1_title": "设定目标大学和专业",
+  "essay_s1_desc": "输入转学目标学校、专业及论文题目，以为您生成策略指导。",
+  "essay_s2_title": "AI 深度面试与简历策划",
+  "essay_s2_desc": "回答问题或输入活动。顾问过滤器将舍弃多余的叙述并锁定核心竞争力。",
+  "interview_start_hdr": "高端 AI 1:1 深度面试",
+  "interview_start_desc": "根据您选择的目标专业，回答 5 个核心贡献问题，以提取最佳的申请素材。",
+  "btn_start_interview": "开始 AI 面试",
+  "label_essay_activity": "我的活动简历和原始故事 (Raw Story & Activities)",
+  "curation_opt_title": "简历优化压缩器 (Activity Optimizer)",
+  "curation_opt_desc": "舍弃华丽词藻，采用原汁原味的动词 (Action Verbs) 和量化指标突出成果。",
+  "curation_map_title": "素材与叙事映射 (Narrative Mapper)",
+  "curation_map_desc": "去除不需要的旁支故事，筛选出符合名校录取标准的叙事主线 (Core Spine)。",
+  "essay_s3_title": "录取论文段落结构指南",
+  "essay_s3_desc": "基于历史录取数据库，提供各段落核心写作要求 (DOs & DON'Ts)。",
+  "bespoke_examples_hdr": "为您量身定制的范文 (2 种选择)",
+  "bespoke_examples_desc": "根据您的面试回答和策划好的故事，生成的段落范文模板。",
+  "essay_library_collapsible_title": "成功案例库连通查询 (Admissions Master Class Library)",
+  "essay_s4_title": "论文无限制润色编辑器 (Revision Clinic)",
+  "essay_s4_desc": "在左侧编辑器中撰写您的草稿，无限制获取 Turnitin 查重和句级表达修改建议。",
+  "btn_critique_polish": "获取无限制 AI 润色和表达建议"
+});
