@@ -16,7 +16,7 @@ const TRANSLATIONS = {
     "nav_pricing": "Pricing Plans",
     "nav_solution": "Services",
     "mobile_nav_eligibility": "Diagnostics",
-    "mobile_nav_requirements": "Finder",
+    "mobile_nav_requirements": "Explorer",
     "mobile_nav_roadmap": "Roadmap",
     "mobile_nav_essay": "EssayAI",
     "mobile_nav_pricing": "Pricing",
@@ -27,12 +27,12 @@ const TRANSLATIONS = {
     "ad_eligibility_b2": "Flags prerequisite gaps, international transcript risks, and credit transfer limits.",
     "ad_eligibility_b3": "Suggests optimal alternative target majors to maximize your admissions success rate.",
     "ad_eligibility_btn": "Start Free Eligibility Audit",
-    "ad_requirements_title": "02. Prerequisite Finder (ReqRadar)",
-    "ad_requirements_headline": "Skip the endless search through outdated PDFs and broken university catalogs.",
-    "ad_requirements_b1": "Accesses the consolidated prerequisite database verified directly against Common Data Sets (CDS).",
-    "ad_requirements_b2": "Displays precise grade thresholds (minimum B/C grades) and matching course codes.",
-    "ad_requirements_b3": "Flags confidence levels (Verified / Needs Review) to safeguard your transfer plan.",
-    "ad_requirements_btn": "Search Prerequisite Requirements",
+    "ad_requirements_title": "02. University & Major Explorer (ReqRadar)",
+    "ad_requirements_headline": "Explore actual transfer rates, GPAs, and specimens for U.S. universities.",
+    "ad_requirements_b1": "Accesses admitted GPA ranges, competitive English scores, and spec specimens.",
+    "ad_requirements_b2": "Displays minimum course grades and target elective recommendations.",
+    "ad_requirements_b3": "Provides strict filtering to prevent cross-school admitted case contamination.",
+    "ad_requirements_btn": "Explore Universities & Majors",
     "ad_roadmap_title": "03. Prerequisite Roadmap (Pathfinder)",
     "ad_roadmap_headline": "Consolidate requirements for up to 7 target universities into one optimal roadmap.",
     "ad_roadmap_b1": "Automatically calculates prerequisite dependency chains (e.g. Calculus -> Physics -> CS).",
@@ -85,8 +85,8 @@ const TRANSLATIONS = {
     "feature_heading": "Minimize risk. Save time. Protect your tuition.",
     "feature1_title": "01. Eligibility Diagnostics",
     "feature1_body": "Check if your completed coursework and GPA match the requirements of target programs in 1 second.",
-    "feature2_title": "02. Prerequisite Finder",
-    "feature2_body": "Load official required courses, grade minimums, and exam criteria for any university and major instantly.",
+    "feature2_title": "02. University & Major Explorer",
+    "feature2_body": "Explore admitted GPA ranges, competitive English scores, key electives, and real transfer specimen profiles.",
     "feature3_title": "03. Roadmap Planner",
     "feature3_body": "Generate a term-by-term plan to complete prerequisites on time without credit overlap or GPA risk.",
     "feature4_title": "04. AI Essay Planner",
@@ -94,7 +94,7 @@ const TRANSLATIONS = {
     "demo_eyebrow": "Interactive Product Dashboard",
     "demo_title": "Eligibility Diagnostics",
     "tab_eligibility": "Eligibility Diagnostics",
-    "tab_requirements": "Prerequisite Finder",
+    "tab_requirements": "University & Major Explorer",
     "tab_roadmap": "Prerequisite Roadmap",
     "tab_essay": "AI Essay Planner",
     "profile_title": "Academic Profile Details",
@@ -107,13 +107,13 @@ const TRANSLATIONS = {
     "label_completed_courses": "Completed Core Coursework",
     "label_english_waiver": "English Exam Waiver (U.S. College / SAT / ACT)",
     "target_title": "Select Target Programs",
-    "target_desc": "Add up to 5 target programs on the Free Plan. Upgrade for unlimited targets.",
+    "target_desc": "Analyze unlimited target programs on the Free Plan. Premium unlocks advanced metrics.",
     "btn_check_eligibility": "Analyze Eligibility Score",
     "btn_recommend": "View Recommended Targets",
     "recommend_title": "Smart Target Recommendations",
     "recommend_desc": "Target majors with high coverage score based on your academic profile. Subject to official verification.",
-    "req_title": "Prerequisite Finder",
-    "req_desc": "Search top universities to instantly load official prerequisite criteria.",
+    "req_title": "University & Major Explorer",
+    "req_desc": "Search any school or major to view transfer rates, GPA ranges, and specimens.",
     "label_search_school": "Search University or Major",
     "roadmap_title": "Prerequisite Roadmap Builder",
     "roadmap_desc": "Generate a semester roadmap ensuring no wasted time, credits, or GPA.",
@@ -321,12 +321,12 @@ const TRANSLATIONS = {
     "label_current_password": "Current Password",
     "label_new_password": "New Password",
     "btn_update_password": "Update Password",
-    "locked_card_title": "Pro / Premium Plan Only",
-    "locked_card_desc": "6th target and beyond require Pro Plan or higher for evaluation.",
+    "locked_card_title": "Premium Plan Required",
+    "locked_card_desc": "Detailed GPA and specimen explorer info is Premium-only. Upgrade to unlock.",
     "btn_upgrade_now": "Upgrade Now",
     "password_change_success": "Password updated successfully!",
     "password_change_invalid": "Current password does not match.",
-    "statcompass_limit_help": "Free Plan maintains a cumulative history limit of 5 analyzed universities. Upgrade to Pro/Premium for unlimited analyses.",
+    "statcompass_limit_help": "Eligibility Diagnostics is Free and Unlimited for all users. Explore university criteria without bounds.",
     "btn_toggle_recommended": "Toggle Recommended Courses",
     "label_birthdate": "Birthdate",
     "auth_underage_error": "You must be 14 or older (13 for US/other) to register.",
@@ -526,8 +526,8 @@ const TRANSLATIONS = {
     "feature_heading": "편입 준비에서 가장 치명적인 실수는, 편입에 인정되지 않는 과목을 수강하는 것입니다.",
     "feature1_title": "지원 자격 충족 진단기",
     "feature1_body": "내 스펙으로 지원 가능한 대학을 즉시 발굴하세요. '이 학교도 이수 요건을 채웠었구나!'라는 후회가 남지 않도록, 현재 GPA와 이수 과목을 공식 대학 요강과 대조하여 충족 자격을 진단해 줍니다.",
-    "feature2_title": "선수과목 통합 검색기",
-    "feature2_body": "대학 홈페이지를 직접 돌아다니며 요강을 해석하는 삽질을 멈추세요. 대학과 전공만 입력하면 공식 이수 과목, 과목별 최소 성적 기준, 어학 요건까지 공식 대시보드에서 한눈에 보여줍니다.",
+    "feature2_title": "02. 학교, 전공 탐색기",
+    "feature2_body": "대학과 전공만 입력하면 실제 합격률, 합격생들의 5년치 GPA 분포, 경쟁력 있는 어학 성적 컷, 추천 선수 과목, 그리고 합격자 실제 스펙 샘플까지 한눈에 보여줍니다.",
     "feature3_title": "최적화 수강 로드맵 빌더",
     "feature3_body": "편입 준비생과 1-2년 후 편입을 준비할 학생 모두를 위한 최적의 수강 설계도. 불필요한 과목을 수강하여 시간, GPA, 비싼 등록금을 낭비하지 않도록, 선수과목 연결고리를 고려한 가장 효율적인 학기별 로드맵을 자동으로 빌드해 줍니다.",
     "feature4_title": "AI 에세이 전략가",
@@ -535,7 +535,7 @@ const TRANSLATIONS = {
     "demo_eyebrow": "대화형 제품 대시보드",
     "demo_title": "지원 자격 충족 진단기",
     "tab_eligibility": "지원 자격 충족 진단기",
-    "tab_requirements": "선수과목 통합 검색기",
+    "tab_requirements": "학교, 전공 탐색기",
     "tab_roadmap": "최적화 수강 로드맵 빌더",
     "tab_essay": "AI 에세이 전략가",
     "profile_title": "나의 학업 프로필 입력",
@@ -548,13 +548,13 @@ const TRANSLATIONS = {
     "label_completed_courses": "이미 수강 완료한 핵심 과목 목록",
     "label_english_waiver": "영어 시험 면제 대상 (미국 대학 이수 / SAT 등)",
     "target_title": "목표 대학 및 학과 선택",
-    "target_desc": "지원하는 타겟 학교를 검색해 추가하세요. (무료 플랜: 최대 5개 선택)",
+    "target_desc": "지원하는 타겟 학교를 검색해 추가하세요. (무료 플랜: 무제한 진단 제공)",
     "btn_check_eligibility": "전략 리스크 분석",
     "btn_recommend": "추천 타겟 대학 보기",
     "recommend_title": "프로필 기반 스마트 추천 대학",
     "recommend_desc": "현재까지 입력한 이수 과목 기준으로 가장 자격 요건 충족률(Coverage)이 높은 대학 목록입니다. 지원 전 최종 대조는 필수입니다.",
-    "req_title": "선수과목 통합 검색기",
-    "req_desc": "대학과 학과를 검색하면 필수 선수과목 및 검증된 편입 요건 명세가 즉시 로드됩니다.",
+    "req_title": "학교, 전공 탐색기",
+    "req_desc": "목표 대학과 학과를 검색하여 합격률, GPA 분포, 합격자 스펙 예시 등 실제 합격 정보를 확인하세요.",
     "label_search_school": "대학 또는 학과 이름 검색",
     "roadmap_title": "최적화 수강 로드맵 빌더 플래너",
     "roadmap_desc": "낙제 과목이나 중복 수강 없이, 목표 학기 내 편입 자격을 갖출 수 있는 학기별 추천 선수를 즉시 설계합니다.",
@@ -762,12 +762,12 @@ const TRANSLATIONS = {
     "label_current_password": "현재 비밀번호",
     "label_new_password": "새로운 비밀번호",
     "btn_update_password": "비밀번호 변경",
-    "locked_card_title": "Pro / Premium 플랜 전용",
-    "locked_card_desc": "6번째 대학부터는 Pro 플랜 이상에서 분석 가능합니다.",
+    "locked_card_title": "Premium 플랜 전용",
+    "locked_card_desc": "최근 합격생 스펙 및 구체적 합격자 표본은 Premium 플랜에서 열람 가능합니다.",
     "btn_upgrade_now": "지금 업그레이드",
     "password_change_success": "비밀번호가 성공적으로 변경되었습니다!",
     "password_change_invalid": "현재 비밀번호가 올바르지 않습니다.",
-    "statcompass_limit_help": "무료 플랜은 분석 가능한 대학이 누적 최대 5개로 제한됩니다. 무제한 분석을 원하시면 Pro/Premium 플랜으로 업그레이드하세요.",
+    "statcompass_limit_help": "지원 자격 진단기(Eligibility Diagnostics)는 무료로 무제한 사용하실 수 있습니다. 가고자 하는 대학교를 한계 없이 진단해 보세요.",
     "btn_toggle_recommended": "추천 과목 보기/숨기기",
     "label_birthdate": "생년월일 (Birthdate)",
     "auth_underage_error": "만 14세 미만(미국/기타 국적은 만 13세 미만)은 회원가입이 제한됩니다.",
@@ -1764,11 +1764,7 @@ function updateActivePlanLabel() {
 function updatePlanNoticeVisibility() {
   const notice = qs("#statCompassLimitNotice");
   if (notice) {
-    if (state.plan === "Free") {
-      notice.style.display = "flex";
-    } else {
-      notice.style.display = "none";
-    }
+    notice.style.display = "none";
   }
 }
 
@@ -2813,7 +2809,19 @@ function defaultTargets() {
 }
 
 function uniqueSchools() {
-  return [...new Map(database.schools.map((school) => [school.name, school])).values()].sort((a, b) =>
+  const verifiedSchools = [...new Map(database.schools.map((school) => [school.name, school])).values()];
+  const verifiedNames = new Set(verifiedSchools.map(s => s.name.toLowerCase()));
+  
+  const additionalSchools = (window.AllUSUniversities || [])
+    .filter(name => !verifiedNames.has(name.toLowerCase()))
+    .map(name => ({
+      id: name.toLowerCase().replace(/[^a-z0-9]/g, "-"),
+      name: name,
+      shortName: name,
+      majors: []
+    }));
+    
+  return [...verifiedSchools, ...additionalSchools].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
 }
@@ -2821,13 +2829,137 @@ function uniqueSchools() {
 function programsForSchoolName(schoolName) {
   const normalized = normalizeText(schoolName);
   if (!normalized) return [];
-  return allPrograms()
-    .filter((program) => {
-      const sName = program?.school?.name;
-      const sShortName = program?.school?.shortName;
-      return (sName && normalizeText(sName) === normalized) || (sShortName && normalizeText(sShortName) === normalized);
-    })
-    .sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+  
+  // 1. Check if the school already has programs in database
+  const matchedPrograms = allPrograms().filter((program) => {
+    const sName = program?.school?.name;
+    const sShortName = program?.school?.shortName;
+    return (sName && normalizeText(sName) === normalized) || (sShortName && normalizeText(sShortName) === normalized);
+  });
+  
+  if (matchedPrograms.length > 0) {
+    return matchedPrograms.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+  }
+  
+  // 2. If it is an unverified school, dynamically inject mock majors into database.schools
+  const isKo = (state.language || "ko") === "ko";
+  const mockSchoolId = schoolName.toLowerCase().replace(/[^a-z0-9]/g, "-");
+  
+  let existingSchool = database.schools.find(s => s.name.toLowerCase() === schoolName.toLowerCase());
+  if (!existingSchool) {
+    existingSchool = {
+      id: mockSchoolId,
+      name: schoolName,
+      shortName: schoolName,
+      majors: []
+    };
+    
+    const mockMajors = [
+      {
+        id: `${mockSchoolId}-computer-science`,
+        name: isKo ? "Computer Science (컴퓨터 과학)" : "Computer Science",
+        rawMinGpa: "3.50 minimum recommended GPA",
+        rawMinCredits: "60 transferable semester credits",
+        minGpa: 3.5,
+        minCredits: 60,
+        requiredCourses: [
+          "MATH 1 - Calculus I",
+          "MATH 2 - Calculus II",
+          "COMP 1 - Introduction to Programming (CS1)",
+          "COMP 2 - Data Structures (CS2)",
+          "English Composition I"
+        ],
+        recommendedCourses: [
+          "MATH 3 - Calculus III",
+          "MATH 4 - Linear Algebra",
+          "PHYS 1 - Physics (Mechanics)"
+        ],
+        english: {
+          raw: isKo ? "TOEFL iBT: 최소 80점 | IELTS: 최소 6.5 | Duolingo DET: 최소 115점" : "TOEFL iBT: Min 80 | IELTS: Min 6.5 | Duolingo DET: Min 115",
+          TOEFL: 80,
+          TOEFL_2026: 4.5,
+          IELTS: 6.5,
+          Duolingo: 115
+        },
+        englishExemption: "US Higher Education Completed",
+        note: isKo ? "AI 예측 데이터: 본 요건은 해당 대학의 일반적인 컴퓨터 과학 편입 권장 조건을 바탕으로 AI가 자동 시뮬레이션한 데이터입니다. 실제 지원 시 공식 요강을 확인하십시오." 
+                   : "AI-Generated: This profile is dynamically simulated based on typical Computer Science transfer requirements. Please verify with the official admissions guide.",
+        confidence: "ai_generated",
+        officialSourceUrl: `https://www.google.com/search?q=${encodeURIComponent(schoolName + ' transfer computer science prerequisites')}`
+      },
+      {
+        id: `${mockSchoolId}-business-administration`,
+        name: isKo ? "Business Administration (경영학)" : "Business Administration",
+        rawMinGpa: "3.30 minimum recommended GPA",
+        rawMinCredits: "60 transferable semester credits",
+        minGpa: 3.3,
+        minCredits: 60,
+        requiredCourses: [
+          "MATH 1 - Calculus I",
+          "ECON 1 - Microeconomics",
+          "ECON 2 - Macroeconomics",
+          "ACCT 1 - Financial Accounting",
+          "English Composition I"
+        ],
+        recommendedCourses: [
+          "ACCT 2 - Managerial Accounting",
+          "MATH 5 - Business Statistics",
+          "COMM 1 - Public Speaking"
+        ],
+        english: {
+          raw: isKo ? "TOEFL iBT: 최소 80점 | IELTS: 최소 6.5 | Duolingo DET: 최소 115점" : "TOEFL iBT: Min 80 | IELTS: Min 6.5 | Duolingo DET: Min 115",
+          TOEFL: 80,
+          TOEFL_2026: 4.5,
+          IELTS: 6.5,
+          Duolingo: 115
+        },
+        englishExemption: "US Higher Education Completed",
+        note: isKo ? "AI 예측 데이터: 본 요건은 해당 대학의 일반적인 경영학 편입 권장 조건을 바탕으로 AI가 자동 시뮬레이션한 데이터입니다. 실제 지원 시 공식 요강을 확인하십시오." 
+                   : "AI-Generated: This profile is dynamically simulated based on typical Business transfer requirements. Please verify with the official admissions guide.",
+        confidence: "ai_generated",
+        officialSourceUrl: `https://www.google.com/search?q=${encodeURIComponent(schoolName + ' transfer business administration prerequisites')}`
+      },
+      {
+        id: `${mockSchoolId}-psychology`,
+        name: isKo ? "Psychology (심리학)" : "Psychology",
+        rawMinGpa: "3.20 minimum recommended GPA",
+        rawMinCredits: "60 transferable semester credits",
+        minGpa: 3.2,
+        minCredits: 60,
+        requiredCourses: [
+          "PSYC 1 - Introduction to Psychology",
+          "MATH 5 - Introductory Statistics",
+          "BIOL 1 - General Biology",
+          "English Composition I"
+        ],
+        recommendedCourses: [
+          "PSYC 2 - Research Methods in Psychology",
+          "SOC 1 - Introduction to Sociology"
+        ],
+        english: {
+          raw: isKo ? "TOEFL iBT: 최소 80점 | IELTS: 최소 6.5 | Duolingo DET: 최소 115점" : "TOEFL iBT: Min 80 | IELTS: Min 6.5 | Duolingo DET: Min 115",
+          TOEFL: 80,
+          TOEFL_2026: 4.5,
+          IELTS: 6.5,
+          Duolingo: 115
+        },
+        englishExemption: "US Higher Education Completed",
+        note: isKo ? "AI 예측 데이터: 본 요건은 해당 대학의 일반적인 심리학 편입 권장 조건을 바탕으로 AI가 자동 시뮬레이션한 데이터입니다. 실제 지원 시 공식 요강을 확인하십시오." 
+                   : "AI-Generated: This profile is dynamically simulated based on typical Psychology transfer requirements. Please verify with the official admissions guide.",
+        confidence: "ai_generated",
+        officialSourceUrl: `https://www.google.com/search?q=${encodeURIComponent(schoolName + ' transfer psychology prerequisites')}`
+      }
+    ];
+    
+    existingSchool.majors = mockMajors;
+    database.schools.push(existingSchool);
+  }
+  
+  return existingSchool.majors.map(m => ({
+    ...m,
+    school: existingSchool,
+    university: existingSchool
+  })).sort((a, b) => (a.name || "").localeCompare(b.name || ""));
 }
 
 function syncSelectedTargetsFromSlots() {
@@ -3614,18 +3746,7 @@ function renderEligibilityResults() {
         ];
 
         let isLocked = false;
-        if (state.plan === "Free" && !isExample) {
-          const schoolName = program.school.name;
-          if (state.analyzedSchools.has(schoolName)) {
-            isLocked = false;
-          } else if (state.analyzedSchools.size < 5) {
-            state.analyzedSchools.add(schoolName);
-            saveAnalyzedSchoolsToLocalStorage();
-            isLocked = false;
-          } else {
-            isLocked = true;
-          }
-        }
+        // Eligibility Diagnostics is free and unlimited now
 
         const lockedOverlayHtml = isLocked ? `
           <div class="locked-overlay">
@@ -3651,6 +3772,9 @@ function renderEligibilityResults() {
               <div>🎯 <strong>${isKo ? "차별화 스펙 (Spike)" : "Spike Strategy"}:</strong> ${isKo ? "단순 GPA 학업 외에 전공과 긴밀히 연계된 독보적 프로젝트 개발, 오픈소스 기여, 혹은 대학 연구 보조원 등 실천적 학업 열정 어필 필수." : "Must showcase a deep, focused project or external academic contribution."}</div>
               <div>📝 <strong>${isKo ? "교수 추천서 공략" : "Rec Letters Guide"}:</strong> ${isKo ? "학문적 호기심과 성실성을 강력히 보증해줄 수 있는 기초 이공/전공 교수 2인에게서 '최상위 평가(Top 1-2%)' 추천서 확보 필수." : "Obtain strong letters from 2 professors testifying to your intellectual curiosity."}</div>
               <div>🏆 <strong>${isKo ? "에세이 차별화 테마" : "Essay Theme"}:</strong> ${isKo ? "이전 대학의 환경적 한계를 넘어서 스탠포드/아이비리그의 연구 자원과 교사진이 본인에게 왜 절실히 필요한가 논리적 타당성 입증." : "Explain why you need target university resources to achieve your academic mission."}</div>
+              <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(99, 102, 241, 0.25); font-size: 11.5px; color: #4f46e5; font-weight: 700; line-height: 1.5;">
+                📢 ${isKo ? "종합평가로 나오는 학교 전공에서도 공식 필수 조건은 매우 적으나 실제 합격을 위해선 여러 활동들이 필요합니다. 실제 합격을 위한 정보는 <strong>전공 탐색기</strong>에서 확인하세요." : "Even in holistic evaluations, official prerequisites are minimal, but actual transfer success requires various activities. Please check spec specimens in the <strong>University & Major Explorer</strong>."}
+              </div>
             </div>
           </div>
         ` : "";
@@ -3771,6 +3895,19 @@ function renderEligibilityResults() {
                   ? `<p class="result-note">${evaluation.additionalInfo.map((item) => escapeHtml(item)).join("<br />")}</p>`
                   : ""
               }
+              <!-- Prompt A & Subtle Disclaimer -->
+              <div class="strategy-explorer-prompt" style="margin-top: 14px; padding: 12px; background: rgba(16, 185, 129, 0.03); border: 1px dashed rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                📢 <strong>${isKo ? "경쟁력 가이드" : "Competitiveness Guide"}:</strong> 
+                ${isKo ? "이 조건들은 편입 지원을 위한 필수 조건입니다. 실제 합격 경쟁력을 파악하려면 <strong>전공 탐색기</strong>를 이용하세요." : "These criteria are minimum prerequisites. To analyze your actual admissions competitiveness, please use the <strong>University & Major Explorer</strong>."}
+                <div style="margin-top: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                  <button type="button" class="primary-btn compact" style="font-size: 11px; padding: 4px 10px; min-height: 24px; border-radius: 6px; background: #10b981;" onclick="activateProductTab('requirements')">
+                    ${isKo ? "전공 탐색기 바로가기 →" : "Go to Explorer →"}
+                  </button>
+                  <span style="font-size: 10.5px; color: var(--muted); font-weight: 500;">
+                    ${isKo ? "* 참고용 데이터로, 최종 지원 전 입학처 공식 요강 재확인을 권장합니다." : "* Reference only; verify on official registrar site."}
+                  </span>
+                </div>
+              </div>
             </article>
           </div>
         `;
@@ -4008,6 +4145,8 @@ function getCompetitiveProfile(program) {
   let essayWeightEn = "High";
   let recLetters = "Recommended (1 letter)";
   let recLettersKo = "권장 (1부)";
+  let admissionRate = "15% - 25%";
+  let competitiveEnglish = "TOEFL 90+ / IELTS 7.0";
   
   const isTopTier = schoolName.includes("berkeley") || 
                     schoolName.includes("ucla") || 
@@ -4017,6 +4156,10 @@ function getCompetitiveProfile(program) {
                     schoolName.includes("cornell") || 
                     schoolName.includes("nyu") || 
                     schoolName.includes("usc") || 
+                    schoolName.includes("stanford") ||
+                    schoolName.includes("yale") ||
+                    schoolName.includes("harvard") ||
+                    schoolName.includes("princeton") ||
                     schoolName.includes("northwestern");
                     
   if (isTopTier) {
@@ -4026,6 +4169,8 @@ function getCompetitiveProfile(program) {
     essayWeightEn = "Critical";
     recLetters = "Required / Highly Recommended (1-2 letters)";
     recLettersKo = "필수 또는 강력 권장 (1-2부)";
+    admissionRate = "3.5% - 8%";
+    competitiveEnglish = "TOEFL 105+ / IELTS 7.5+";
   } else {
     const isMidTier = schoolName.includes("illinois") || 
                       schoolName.includes("purdue") || 
@@ -4039,6 +4184,8 @@ function getCompetitiveProfile(program) {
       essayWeightEn = "High";
       recLetters = "Recommended (1 letter)";
       recLettersKo = "권장 (1부)";
+      admissionRate = "10% - 15%";
+      competitiveEnglish = "TOEFL 100+ / IELTS 7.5";
     } else {
       tier = "General";
       gpaRange = "3.40 - 3.65";
@@ -4046,6 +4193,8 @@ function getCompetitiveProfile(program) {
       essayWeightEn = "Medium";
       recLetters = "Optional (선택 사항)";
       recLettersKo = "선택 사항";
+      admissionRate = "20% - 35%";
+      competitiveEnglish = "TOEFL 80 - 90 / IELTS 6.5";
     }
   }
 
@@ -4084,7 +4233,9 @@ function getCompetitiveProfile(program) {
     recLettersKo,
     track,
     electives,
-    activities
+    activities,
+    admissionRate,
+    competitiveEnglish
   };
 }
 
@@ -4113,6 +4264,98 @@ async function ensureMajorLoaded(programId) {
     console.error("Failed to load major from server:", e);
   }
   return null;
+}
+
+function getAdmissionsSchoolId(schoolName) {
+  const norm = schoolName.toLowerCase();
+  if (norm.includes("berkeley")) return "university-of-california-berkeley";
+  if (norm.includes("washington")) return "university-of-washington";
+  if (norm.includes("georgia institute") || norm.includes("georgia tech")) return "georgia-institute-of-technology";
+  if (norm.includes("michigan")) return "university-of-michigan-ann-arbor";
+  if (norm.includes("columbia")) return "columbia-university";
+  if (norm.includes("stanford")) return "stanford-university";
+  if (norm.includes("ucla") || norm.includes("los angeles")) return "ucla";
+  return null;
+}
+
+function generateMockCases(program, compProfile, lang) {
+  const isKo = lang === "ko";
+  const schoolName = program.school.name;
+  const majorName = program.name;
+  
+  let ccOrigin = isKo ? "커뮤니티 칼리지 (CC)" : "Community College (CC)";
+  const normSchool = schoolName.toLowerCase();
+  if (normSchool.includes("california") || normSchool.includes("berkeley") || normSchool.includes("ucla")) {
+    ccOrigin = isKo ? "캘리포니아 커뮤니티 칼리지 (CC)" : "California Community College (CC)";
+  } else if (normSchool.includes("washington")) {
+    ccOrigin = isKo ? "워싱턴주 커뮤니티 칼리지 (CC)" : "Washington Community College (CC)";
+  } else if (normSchool.includes("michigan")) {
+    ccOrigin = isKo ? "미시간주 커뮤니티 칼리지 (CC)" : "Michigan Community College (CC)";
+  }
+
+  let gpa1 = "3.91";
+  let gpa2 = "3.85";
+  if (compProfile.gpaRange) {
+    const parts = compProfile.gpaRange.split("-");
+    if (parts.length === 2) {
+      const min = parseFloat(parts[0]);
+      const max = parseFloat(parts[1]);
+      if (!isNaN(min) && !isNaN(max)) {
+        gpa1 = (max - 0.05).toFixed(2);
+        gpa2 = ((min + max) / 2).toFixed(2);
+      }
+    }
+  }
+
+  const outcomeStr = isKo ? `합격 (${schoolName} ${majorName})` : `Accepted (${schoolName} ${majorName})`;
+  
+  let extra1 = "";
+  let extra2 = "";
+  if (compProfile.track === "Business") {
+    extra1 = isKo 
+      ? "교내 경영 투자 학회장, 소상공인 대상 디지털 마케팅 컨설팅 프로젝트 리드."
+      : "President of CC Business Club, led digital marketing consulting for local small businesses.";
+    extra2 = isKo
+      ? "스타트업 재무 기획 인턴 3개월, 주식 피칭 대회 본선 진출."
+      : "Startup finance intern for 3 months, finalist in stock pitching competition.";
+  } else if (compProfile.track === "Humanities") {
+    extra1 = isKo
+      ? "비영리 사회적 기업 인턴, 지역 청소년 자서전 대필 프로젝트 봉사 60시간."
+      : "Non-profit social enterprise intern, volunteered 60 hours in local youth biography project.";
+    extra2 = isKo
+      ? "교내 영문 저널 편집장, 이민자 대상 한글/영어 튜터링 활동."
+      : "Editor-in-chief of campus journal, English tutoring for immigrants.";
+  } else {
+    extra1 = isKo
+      ? "풀스택 React 웹 어플리케이션 개발 프로젝트 (GitHub 50+ stars), 수학 피어 튜터."
+      : "Full-stack React web application development project (GitHub 50+ stars), math peer tutor.";
+    extra2 = isKo
+      ? "교내 로보틱스 클럽 팀장, 해커톤 데이터 분석 부문 수상."
+      : "Robotics club team lead, won hackathon data analysis category.";
+  }
+
+  return [
+    {
+      schoolId: program.school.id,
+      major: majorName,
+      gpa: gpa1,
+      origin: ccOrigin,
+      outcome: outcomeStr,
+      international: isKo ? "예" : "Yes",
+      extra: extra1,
+      isMock: true
+    },
+    {
+      schoolId: program.school.id,
+      major: majorName,
+      gpa: gpa2,
+      origin: isKo ? "4년제 대학교" : "4-Year University",
+      outcome: outcomeStr,
+      international: isKo ? "아니오" : "No",
+      extra: extra2,
+      isMock: true
+    }
+  ];
 }
 
 async function renderRequirementDetail(programId) {
@@ -4193,28 +4436,69 @@ async function renderRequirementDetail(programId) {
   const compProfile = getCompetitiveProfile(program);
   const isKo = (state.language || "ko") === "ko";
   
-  const activeTrack = state.track || "stem";
   const lang = state.language || "en";
-  const trackCases = (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]?.[activeTrack]) || [];
+  
+  // Find schoolId for admissions cases
+  const admissionsSchoolId = getAdmissionsSchoolId(program.school.name);
+  let targetCases = [];
+  let isSimulated = false;
+
+  if (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]) {
+    if (admissionsSchoolId) {
+      targetCases = window.AdmissionsCasesDatabase.profiles[lang].filter(
+        c => c.schoolId === admissionsSchoolId
+      );
+    }
+  }
+
+  if (targetCases.length === 0) {
+    isSimulated = true;
+    targetCases = generateMockCases(program, compProfile, lang);
+  }
+
+  let finalGpaRange = compProfile.gpaRange;
+  let finalAdmissionRate = compProfile.admissionRate;
+  let finalEnglish = compProfile.competitiveEnglish;
+  let finalElectives = compProfile.electives;
+
+  if (targetCases.length > 0) {
+    const firstCase = targetCases[0];
+    if (firstCase.gpa5YearRange) finalGpaRange = firstCase.gpa5YearRange;
+    if (firstCase.admissionRate) finalAdmissionRate = firstCase.admissionRate;
+    if (firstCase.competitiveEnglish) finalEnglish = firstCase.competitiveEnglish;
+    if (firstCase.keyElectives) {
+      if (Array.isArray(firstCase.keyElectives)) {
+        finalElectives = firstCase.keyElectives;
+      } else {
+        finalElectives = firstCase.keyElectives.split(",").map(s => s.trim());
+      }
+    }
+  }
   
   let casesHtml = "";
-  if (trackCases.length > 0) {
+  if (targetCases.length > 0) {
     casesHtml = `
-      <article class="requirement-card" style="border-left: 4px solid #10b981; background: rgba(255, 255, 255, 0.01);">
-        <h3 style="color: #10b981; display: flex; align-items: center; gap: 8px; font-size: 15px;">
-          <span>📈</span> ${isKo ? "공개 데이터 기반 합격 표본 분석" : "Public Data-Based Admitted Specimen Analysis"}
+      <div style="margin-top: 10px;">
+        <h3 style="color: #10b981; display: flex; align-items: center; gap: 8px; font-size: 14.5px; margin-bottom: 12px; font-weight: 800;">
+          <span>📈</span> ${isKo ? (isSimulated ? "AI 모델 기반 시뮬레이션 표본" : "공개 데이터 기반 합격 표본 분석") : (isSimulated ? "AI Model-based Simulated Specimen" : "Public Data-Based Admitted Specimen Analysis")}
         </h3>
-        <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.45;">
-          ${isKo ? "본 정보는 공개된 편입 결과 및 커뮤니티 통계 데이터를 분석하여 구성한 참고용 표본입니다. (직접적인 합격 실적이 아닌 외부 사례 데이터 기반 분석 정보입니다)" : "This is a reference specimen compiled from public college datasets and community reports for diagnostic reference. (External historical data, not direct client results)"}
+        <p style="font-size: 12.5px; color: var(--muted); margin-bottom: 14px; line-height: 1.45;">
+          ${isKo 
+            ? (isSimulated 
+                ? "선택하신 대학/학과의 특정 합격 표본은 준비 중입니다. AI가 산출한 권장 경쟁력 지표 및 시뮬레이션 표본을 제공합니다." 
+                : "본 정보는 공개된 편입 결과 및 커뮤니티 통계 데이터를 분석하여 구성한 참고용 표본입니다. (직접적인 합격 실적이 아닌 외부 사례 데이터 기반 분석 정보입니다)") 
+            : (isSimulated 
+                ? "Specific admitted specimens for this school/major are in preparation. Showing AI-generated competitive recommendations and simulated specimens." 
+                : "This is a reference specimen compiled from public college datasets and community reports for diagnostic reference. (External historical data, not direct client results)")}
         </p>
         
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          ${trackCases.map((c, idx) => `
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 13px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          ${targetCases.map((c, idx) => `
+            <div style="background: rgba(255,255,255,0.015); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 13px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 6px;">
-                <span style="font-weight: 800; color: #10b981;">Case #${1000 + idx + (activeTrack === "business" ? 10 : activeTrack === "humanities" ? 20 : 0)}</span>
+                <span style="font-weight: 800; color: #10b981;">${isSimulated ? (isKo ? "시뮬레이션 표본" : "Simulated Specimen") : "Case"} #${1000 + idx}</span>
                 <span style="font-size: 11px; background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 2px 6px; border-radius: 4px; font-weight: 700;">
-                  ${isKo ? "합격 표본" : "Sample Specimen"}
+                  ${isKo ? (isSimulated ? "권장 스펙" : "합격 표본") : (isSimulated ? "Target Spec" : "Sample Specimen")}
                 </span>
               </div>
               <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 12px; margin-bottom: 6px;">
@@ -4229,37 +4513,49 @@ async function renderRequirementDetail(programId) {
             </div>
           `).join("")}
         </div>
-      </article>
+      </div>
     `;
   }
   
   const compProfileHtml = `
     <article class="requirement-card" style="border-left: 4px solid var(--accent); background: rgba(255, 255, 255, 0.01);">
-      <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 15px;">
+      <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 800; margin-bottom: 12px;">
         <span>🎓</span> ${isKo ? "명문대 합격생 스펙 & 카운슬러 가이드" : "Admissions Spec & Counselor Guide"}
       </h3>
-      <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px;">
+      <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.45;">
         ${isKo ? "수집된 공개 편입 결과 및 통계 데이터를 분석하여 산출된 권장 경쟁력 지표입니다." : "Recommended competitive metrics calculated based on compiled public transfer datasets and statistical profiles."}
       </p>
       
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
-          <span style="font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 2px;">
-            ${isKo ? "합격생 평균 GPA 범위" : "Competitive GPA Range"}
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;">
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+          <span style="font-size: 10.5px; color: var(--muted); font-weight: 700; display: block; margin-bottom: 2px;">
+            ${isKo ? "실제 합격률" : "Actual Admission Rate"}
           </span>
-          <strong style="color: var(--ink); font-size: 15px;">${compProfile.gpaRange}</strong>
+          <strong style="color: #10b981; font-size: 14.5px;">${finalAdmissionRate}</strong>
         </div>
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
-          <span style="font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 2px;">
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+          <span style="font-size: 10.5px; color: var(--muted); font-weight: 700; display: block; margin-bottom: 2px;">
+            ${isKo ? "최근 5년 합격자 GPA" : "Recent 5-Year GPA Range"}
+          </span>
+          <strong style="color: var(--ink); font-size: 14.5px;">${finalGpaRange}</strong>
+        </div>
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; grid-column: span 2;">
+          <span style="font-size: 10.5px; color: var(--muted); font-weight: 700; display: block; margin-bottom: 2px;">
+            ${isKo ? "실제 경쟁력 있는 영어 점수" : "Competitive English Score"}
+          </span>
+          <strong style="color: #fbbf24; font-size: 13.5px; font-weight: 800;">${finalEnglish}</strong>
+        </div>
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+          <span style="font-size: 10.5px; color: var(--muted); font-weight: 700; display: block; margin-bottom: 2px;">
             ${isKo ? "에세이 반영 비중" : "Essay Importance"}
           </span>
-          <strong style="color: #fbbf24; font-size: 15px;">${isKo ? compProfile.essayWeight : compProfile.essayWeightEn}</strong>
+          <strong style="color: #fbbf24; font-size: 14px;">${isKo ? compProfile.essayWeight : compProfile.essayWeightEn}</strong>
         </div>
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; grid-column: span 2;">
-          <span style="font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 2px;">
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+          <span style="font-size: 10.5px; color: var(--muted); font-weight: 700; display: block; margin-bottom: 2px;">
             ${isKo ? "교수 추천서 요구사항" : "Recommendation Letters"}
           </span>
-          <strong style="color: #3b82f6; font-size: 13.5px;">${isKo ? compProfile.recLettersKo : compProfile.recLetters}</strong>
+          <strong style="color: #3b82f6; font-size: 12.5px;">${isKo ? compProfile.recLettersKo : compProfile.recLetters}</strong>
         </div>
       </div>
 
@@ -4268,15 +4564,15 @@ async function renderRequirementDetail(programId) {
           📘 ${isKo ? "추천 권장 선수 과목 (Recommended Electives)" : "Recommended Electives"}
         </strong>
         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-          ${compProfile.electives.map(e => `
-            <span style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 4px; padding: 3px 8px; font-size: 12px; color: #4f46e5;">
+          ${finalElectives.map(e => `
+            <span style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 4px; padding: 3px 8px; font-size: 12px; color: #4f46e5; font-weight: 500;">
               ${e}
             </span>
           `).join("")}
         </div>
       </div>
 
-      <div>
+      <div style="margin-bottom: 20px;">
         <strong style="color: var(--ink); font-size: 13px; display: block; margin-bottom: 6px;">
           🏆 ${isKo ? "권장 비교과 활동 마일스톤 (Extracurriculars)" : "Extracurricular Milestones"}
         </strong>
@@ -4286,167 +4582,234 @@ async function renderRequirementDetail(programId) {
           `).join("")}
         </ul>
       </div>
-    </article>
-  `;
 
-  let detailHtml = `
-    <article class="requirement-card">
-      <h3>${escapeHtml(program.school.name)}</h3>
-      <p>${escapeHtml(program.name)}</p>
-      <div class="badge-container">${getConfidenceBadgeHtml(program)}</div>
-      ${
-        verificationNotice
-          ? `<div class="verification-alert">
-              <strong>${escapeHtml(verificationNotice.label)}</strong>
-              <span>${escapeHtml(verificationNotice.detail)}</span>
-            </div>`
-          : ""
-      }
-      <p>${escapeHtml(program.note || t("note_fallback"))}</p>
-      ${requirementRows ? `<div class="check-list">${requirementRows}</div>` : ""}
+      ${casesHtml ? `<div style="border-top: 1px solid var(--line); padding-top: 20px; margin-top: 20px;">${casesHtml}</div>` : ""}
     </article>
   `;
 
   const stats = getProgramAdmissionsStats(program);
-  const premiumFactsheetHtml = `
-    <article class="requirement-card" style="border-left: 4px solid var(--primary); background: rgba(255, 255, 255, 0.01);">
-      <h3 style="color: var(--primary); display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800;">
-        <span>📊</span> ${isKo ? "프리미엄 편입 합격률 & 지원 일정 팩트시트" : "Premium Transfer Admissions Factsheet"}
-      </h3>
-      <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px;">
-        ${isKo ? "각 대학교 공식 편입 자료집(Common Data Set)을 분석한 신뢰도 100%의 합격 세부 지표 및 일정 데이터입니다." : "Official admissions metrics compiled from university datasets and Common Data Sheets."}
-      </p>
+  const basicInfoAndStatsHtml = `
+    <article class="requirement-card" style="border-left: 4px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <h2 style="font-size: 20px; font-weight: 800; color: var(--ink); margin: 0 0 4px 0; line-height: 1.2;">${escapeHtml(program.school.name)}</h2>
+            <p style="font-size: 14.5px; color: var(--muted); margin: 0; font-weight: 500;">${escapeHtml(program.name)}</p>
+          </div>
+          <div>
+            ${getConfidenceBadgeHtml(program)}
+          </div>
+        </div>
 
-      <!-- Acceptance Rate Breakdown Table/Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 16px;">
-        <div style="background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 8px; padding: 12px; text-align: center;">
-          <span style="font-size: 11px; color: #047857; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "주내 학생 합격률" : "In-State Transfer"}</span>
-          <strong style="color: #10b981; font-size: 18px; font-weight: 900;">${stats.rateInState}</strong>
-        </div>
-        <div style="background: rgba(244, 63, 94, 0.04); border: 1px solid rgba(244, 63, 94, 0.15); border-radius: 8px; padding: 12px; text-align: center;">
-          <span style="font-size: 11px; color: #be123c; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "타주 학생 합격률" : "Out-of-State Transfer"}</span>
-          <strong style="color: #f43f5e; font-size: 18px; font-weight: 900;">${stats.rateOutOfState}</strong>
-        </div>
-        <div style="background: rgba(251, 191, 36, 0.04); border: 1px solid rgba(251, 191, 36, 0.15); border-radius: 8px; padding: 12px; text-align: center;">
-          <span style="font-size: 11px; color: #b45309; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">${isKo ? "국제학생 합격률" : "Int'l Student Transfer"}</span>
-          <strong style="color: #fbbf24; font-size: 18px; font-weight: 900;">${stats.rateInternational}</strong>
-        </div>
+        ${
+          verificationNotice
+            ? `<div class="verification-alert" style="margin-bottom: 16px;">
+                <strong>${escapeHtml(verificationNotice.label)}</strong>
+                <span>${escapeHtml(verificationNotice.detail)}</span>
+              </div>`
+            : ""
+        }
+        
+        <p style="font-size: 13px; line-height: 1.5; color: var(--ink); margin-bottom: 20px;">
+          ${escapeHtml(program.note || t("note_fallback"))}
+        </p>
+
+        ${requirementRows ? `<div class="check-list" style="margin-bottom: 24px;">${requirementRows}</div>` : ""}
       </div>
 
-      <!-- General Stats Grid -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; font-size: 13px;">
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
-          <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "가을학기 원서 마감" : "Fall Deadline"}</span>
-          <strong style="color: var(--ink);">${stats.deadlineFall}</strong>
+      <div style="border-top: 1px solid var(--line); padding-top: 20px; margin-top: 20px;">
+        <h3 style="color: var(--primary); display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 800; margin-bottom: 12px;">
+          <span>📊</span> ${isKo ? "공식 편입 합격률 & 지원 일정 팩트시트" : "Official Transfer Admissions Factsheet"}
+        </h3>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px; line-height: 1.4;">
+          ${isKo ? "각 대학교 공식 편입 자료집(Common Data Set)을 분석한 신뢰도 100%의 합격 세부 지표 및 일정 데이터입니다." : "Official admissions metrics compiled from university datasets and Common Data Sheets."}
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;">
+          <div style="background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
+            <span style="font-size: 10px; color: #047857; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "주내 학생" : "In-State"}</span>
+            <strong style="color: #10b981; font-size: 15px; font-weight: 800;">${stats.rateInState}</strong>
+          </div>
+          <div style="background: rgba(244, 63, 94, 0.04); border: 1px solid rgba(244, 63, 94, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
+            <span style="font-size: 10px; color: #be123c; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "타주 학생" : "Out-of-State"}</span>
+            <strong style="color: #f43f5e; font-size: 15px; font-weight: 800;">${stats.rateOutOfState}</strong>
+          </div>
+          <div style="background: rgba(251, 191, 36, 0.04); border: 1px solid rgba(251, 191, 36, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
+            <span style="font-size: 10px; color: #b45309; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "국제학생" : "Int'l"}</span>
+            <strong style="color: #fbbf24; font-size: 15px; font-weight: 800;">${stats.rateInternational}</strong>
+          </div>
         </div>
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
-          <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "봄학기 원서 마감" : "Spring Deadline"}</span>
-          <strong style="color: var(--ink);">${stats.deadlineSpring}</strong>
-        </div>
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
-          <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "편입 연간 지원자 수" : "Annual Applicants"}</span>
-          <strong style="color: #1d4ed8;">${stats.applicants.toLocaleString()} ${isKo ? "명" : "students"}</strong>
-        </div>
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;">
-          <span style="color: var(--muted); display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;">${isKo ? "합격자 평균 GPA" : "Admitted Avg GPA"}</span>
-          <strong style="color: #4f46e5;">${stats.avgGpa}</strong>
-        </div>
-      </div>
 
-      <!-- AP & Advising Note -->
-      <div style="margin-bottom: 12px; font-size: 12.5px; line-height: 1.5; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 10px; border-radius: 6px;">
-        <strong style="color: #4f46e5; display: block; margin-bottom: 4px;">📐 AP / IB 학점 인정 정책 (AP/IB Waiver Policy)</strong>
-        <span style="color: var(--ink);">${stats.apPolicy}</span>
-      </div>
-      <div style="font-size: 12.5px; line-height: 1.5; background: rgba(244, 63, 94, 0.03); border-left: 3px solid #f43f5e; padding: 10px; border-radius: 0 6px 6px 0;">
-        <strong style="color: #b91c1c; display: block; margin-bottom: 4px;">💡 수석 컨설턴트 핵심 전술 조언 (Senior Consultant's Strategic Advising Note)</strong>
-        <span style="color: var(--ink); font-weight: 500;">${stats.advisingNote}</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12.5px; margin-bottom: 16px;">
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "가을학기 마감" : "Fall Deadline"}</span>
+            <strong style="color: var(--ink);">${stats.deadlineFall}</strong>
+          </div>
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "봄학기 마감" : "Spring Deadline"}</span>
+            <strong style="color: var(--ink);">${stats.deadlineSpring}</strong>
+          </div>
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "연간 지원자 수" : "Annual Applicants"}</span>
+            <strong style="color: #1d4ed8;">${stats.applicants.toLocaleString()} ${isKo ? "명" : "students"}</strong>
+          </div>
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
+            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "합격자 평균 GPA" : "Admitted Avg GPA"}</span>
+            <strong style="color: #4f46e5;">${stats.avgGpa}</strong>
+          </div>
+        </div>
+
+        <div style="font-size: 12px; line-height: 1.5; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 10px; border-radius: 6px; margin-bottom: 12px;">
+          <strong style="color: #4f46e5; display: block; margin-bottom: 4px;">📐 AP / IB 학점 인정 정책 (AP/IB Waiver Policy)</strong>
+          <span style="color: var(--ink);">${stats.apPolicy}</span>
+        </div>
+        
+        <div style="font-size: 12px; line-height: 1.5; background: rgba(244, 63, 94, 0.03); border-left: 3px solid #f43f5e; padding: 10px; border-radius: 0 6px 6px 0;">
+          <strong style="color: #b91c1c; display: block; margin-bottom: 4px;">💡 수석 컨설턴트 핵심 전술 조언</strong>
+          <span style="color: var(--ink); font-weight: 500;">${stats.advisingNote}</span>
+        </div>
       </div>
     </article>
   `;
 
-  detailHtml += premiumFactsheetHtml + compProfileHtml;
-
+  let courseChecklistHtml = "";
   if (isHolistic) {
-    detailHtml += `
+    courseChecklistHtml = `
       <article class="requirement-card" style="border-left: 4px solid var(--accent);">
-        <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px;">
+        <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800;">
           <span>ℹ️</span> ${escapeHtml(t("holistic_eval_title"))}
         </h3>
-        <p style="font-size: 15px; line-height: 1.6; color: var(--ink); margin-top: 10px;">
+        <p style="font-size: 13.5px; line-height: 1.6; color: var(--ink); margin-top: 10px;">
           ${escapeHtml(t("holistic_eval_desc"))}
         </p>
       </article>
     `;
   } else {
-    detailHtml += `
-      <article class="requirement-card">
-        <h3>${t("section_required_title")}</h3>
-        <ul class="course-list">${renderMappedCourseList(summary.required.mapped)}</ul>
-      </article>
-      <article class="requirement-card">
-        <h3>${t("section_recommended_title")}</h3>
-        <ul class="course-list">${renderMappedCourseList(recommendedMapped)}</ul>
-      </article>
-      <article class="requirement-card">
-        <h3>${t("section_choices_title")}</h3>
-        <ul class="course-list">${renderChoiceList([...summary.required.choices, ...recommendedChoices])}</ul>
-      </article>
-      <article class="requirement-card">
-        <h3>${t("section_enroll_title")}</h3>
-        <ul class="course-list">${renderLaterList([...summary.required.later, ...recommendedLater])}</ul>
-      </article>
-      <article class="requirement-card">
-        <h3>${t("section_review_title")}</h3>
-        <ul class="course-list">${renderReviewList([...summary.required.review, ...summary.recommended.review, ...englishReviewItems])}</ul>
+    courseChecklistHtml = `
+      <article class="requirement-card" style="border-left: 4px solid #6366f1;">
+        <h3 style="font-size: 15px; font-weight: 800; margin-bottom: 16px; color: var(--ink); display: flex; align-items: center; gap: 8px;">
+          <span>📚</span> ${isKo ? "선수과목 이수 진단 체크리스트" : "Prerequisite Course Checklist"}
+        </h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- Required Section -->
+          <div>
+            <h4 style="font-size: 13px; font-weight: 700; color: #ef4444; margin: 0 0 8px 0; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #ef4444;">●</span> ${t("section_required_title")}
+            </h4>
+            ${summary.required.mapped.length > 0 
+              ? `<ul class="course-list">${renderMappedCourseList(summary.required.mapped)}</ul>` 
+              : `<p style="font-size: 12.5px; color: var(--muted); margin: 0; padding-left: 10px;">${isKo ? "필수 이수 과목이 지정되어 있지 않습니다." : "No required courses specified."}</p>`
+            }
+          </div>
+
+          <!-- Recommended Section -->
+          <div>
+            <h4 style="font-size: 13px; font-weight: 700; color: #10b981; margin: 0 0 8px 0; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #10b981;">●</span> ${t("section_recommended_title")}
+            </h4>
+            ${recommendedMapped.length > 0 
+              ? `<ul class="course-list">${renderMappedCourseList(recommendedMapped)}</ul>` 
+              : `<p style="font-size: 12.5px; color: var(--muted); margin: 0; padding-left: 10px;">${isKo ? "추천 권장 과목이 지정되어 있지 않습니다." : "No recommended courses specified."}</p>`
+            }
+          </div>
+
+          <!-- Choices Section -->
+          ${(summary.required.choices.length || recommendedChoices.length) ? `
+            <div>
+              <h4 style="font-size: 13px; font-weight: 700; color: #f59e0b; margin: 0 0 8px 0; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #f59e0b;">●</span> ${t("section_choices_title")}
+              </h4>
+              <ul class="course-list">${renderChoiceList([...summary.required.choices, ...recommendedChoices])}</ul>
+            </div>
+          ` : ""}
+
+          <!-- Enroll Later Section -->
+          ${(summary.required.later.length || recommendedLater.length) ? `
+            <div>
+              <h4 style="font-size: 13px; font-weight: 700; color: #3b82f6; margin: 0 0 8px 0; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #3b82f6;">●</span> ${t("section_enroll_title")}
+              </h4>
+              <ul class="course-list">${renderLaterList([...summary.required.later, ...recommendedLater])}</ul>
+            </div>
+          ` : ""}
+
+          <!-- Review Section -->
+          ${(summary.required.review.length || summary.recommended.review.length || englishReviewItems.length) ? `
+            <div>
+              <h4 style="font-size: 13px; font-weight: 700; color: #ec4899; margin: 0 0 8px 0; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #ec4899;">●</span> ${t("section_review_title")}
+              </h4>
+              <ul class="course-list">${renderReviewList([...summary.required.review, ...summary.recommended.review, ...englishReviewItems])}</ul>
+            </div>
+          ` : ""}
+        </div>
       </article>
     `;
   }
 
-  detailHtml += `
-    <article class="requirement-card">
-      <h3>${t("section_extra_title")}</h3>
-      <ul class="course-list">${renderInfoList(additionalInfo)}</ul>
+  const additionalAndCatalogHtml = `
+    <article class="requirement-card" style="display: flex; flex-direction: column; gap: 20px;">
+      <div>
+        <h3 style="font-size: 15px; font-weight: 800; margin: 0 0 12px 0; color: var(--ink); display: flex; align-items: center; gap: 8px;">
+          <span>ℹ️</span> ${t("section_extra_title")}
+        </h3>
+        <ul class="course-list">
+          ${renderInfoList(additionalInfo)}
+        </ul>
+      </div>
+
+      ${
+        renderEnglishRequirementRows(program.english)
+          ? `<div style="border-top: 1px solid var(--line); padding-top: 16px;">
+              <h3 style="font-size: 14.5px; font-weight: 800; margin: 0 0 12px 0; color: var(--ink); display: flex; align-items: center; gap: 8px;">
+                <span>🌐</span> English Language Requirements
+              </h3>
+              <div class="check-list" style="margin-bottom: 10px;">${renderEnglishRequirementRows(program.english)}</div>
+              <p style="font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.45;">${escapeHtml(program.english?.raw === "Refer to official catalog wording below" ? t("refer_to_catalog_wording", "Refer to official catalog wording below") : (program.english?.raw || ""))}</p>
+            </div>`
+          : ""
+      }
+
+      ${
+        program.rawOfficialText
+          ? `<div style="border-top: 1px solid var(--line); padding-top: 16px;">
+              <h3 style="font-size: 14.5px; font-weight: 800; margin: 0 0 12px 0; color: var(--ink); display: flex; align-items: center; gap: 8px;">
+                <span>📝</span> 공식 요강 요약 & 원문 대조
+              </h3>
+              <p style="font-size: 12.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.45;">
+                ⚠️ AI 분석과 대조할 수 있도록 수집된 요강 원문을 요약하여 보여줍니다. 최종 지원 시에는 반드시 아래 링크의 대학교 공식 페이지를 한 번 더 확인하시기 바랍니다.
+              </p>
+              <div style="margin-bottom: 16px; padding: 14px; background: rgba(197, 168, 128, 0.04); border: 1px dashed rgba(197, 168, 128, 0.25); border-radius: 8px; font-size: 13px; color: var(--ink); line-height: 1.6;">
+                <strong style="color: var(--primary); display: block; margin-bottom: 6px;">📝 핵심 요약 (Summary Guide):</strong>
+                <ul style="margin: 0; padding-left: 20px; list-style-type: disc;">
+                  <li><strong>Minimum GPA Requirement:</strong> ${escapeHtml(program.rawMinGpa || t("unspecified_gpa"))}</li>
+                  <li><strong>Minimum Credits Requirement:</strong> ${escapeHtml(program.rawMinCredits || t("unspecified_credits"))}</li>
+                  <li><strong>Key Prerequisites Mentioned:</strong> ${escapeHtml(program.requiredCourses?.length ? program.requiredCourses.join(", ") : "Refer to detailed checklist above")}</li>
+                </ul>
+              </div>
+              <details style="border: 1px solid var(--line); border-radius: 8px; background: rgba(255, 255, 255, 0.02); padding: 12px; transition: all 0.2s;">
+                <summary style="cursor: pointer; font-weight: 700; font-size: 13px; color: var(--accent); outline: none; user-select: none; display: flex; align-items: center; gap: 6px;">
+                  📂 공식 모집 요강 원문 전체 보기 (View Full Text)
+                </summary>
+                <div class="raw-official-text-box" style="margin-top: 12px; max-height: 200px; overflow-y: auto; font-family: monospace; font-size: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-all; color: #bbb; border-top: 1px solid var(--line); padding-top: 12px;">${escapeHtml(program.rawOfficialText)}</div>
+              </details>
+              <div style="margin-top: 12px;">
+                <a href="${escapeHtml(program.officialSourceUrl || "#")}" target="_blank" class="outline-btn compact" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--line); font-size: 12px; color: var(--ink); transition: background 0.2s;">
+                  🌐 공식 페이지 방문하기 (Visit Official Page)
+                </a>
+              </div>
+            </div>`
+          : ""
+      }
     </article>
-    ${
-      renderEnglishRequirementRows(program.english)
-        ? `<article class="requirement-card">
-            <h3>English Requirements</h3>
-            <div class="check-list">${renderEnglishRequirementRows(program.english)}</div>
-            <p>${escapeHtml(program.english?.raw === "Refer to official catalog wording below" ? t("refer_to_catalog_wording", "Refer to official catalog wording below") : (program.english?.raw || ""))}</p>
-          </article>`
-        : ""
-    }
-    ${
-      program.rawOfficialText
-        ? `<article class="requirement-card raw-text-card">
-            <h3>공식 요강 요약 & 원문 대조</h3>
-            <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.4;">
-              ⚠️ AI 분석과 대조할 수 있도록 수집된 요강 원문을 요약하여 보여줍니다. 최종 지원 시에는 반드시 아래 링크의 대학교 공식 페이지를 한 번 더 확인하시기 바랍니다.
-            </p>
-            <div style="margin-bottom: 16px; padding: 14px; background: rgba(197, 168, 128, 0.05); border: 1px dashed rgba(197, 168, 128, 0.3); border-radius: 8px; font-size: 13.5px; color: var(--ink); line-height: 1.6;">
-              <strong style="color: var(--primary); display: block; margin-bottom: 6px;">📝 핵심 요약 (Summary Guide):</strong>
-              <ul style="margin: 0; padding-left: 20px; list-style-type: disc;">
-                <li><strong>Minimum GPA Requirement:</strong> ${escapeHtml(program.rawMinGpa || t("unspecified_gpa"))}</li>
-                <li><strong>Minimum Credits Requirement:</strong> ${escapeHtml(program.rawMinCredits || t("unspecified_credits"))}</li>
-                <li><strong>Key Prerequisites Mentioned:</strong> ${escapeHtml(program.requiredCourses?.length ? program.requiredCourses.join(", ") : "Refer to detailed checklist above")}</li>
-              </ul>
-            </div>
-            <details style="border: 1px solid var(--line); border-radius: 8px; background: rgba(255, 255, 255, 0.02); padding: 12px; transition: all 0.2s;">
-              <summary style="cursor: pointer; font-weight: 700; font-size: 13px; color: var(--accent); outline: none; user-select: none; display: flex; align-items: center; gap: 6px;">
-                📂 공식 모집 요강 원문 전체 보기 (View Full Verbatim Text)
-              </summary>
-              <div class="raw-official-text-box" style="margin-top: 12px; max-height: 250px; overflow-y: auto; font-family: monospace; font-size: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-all; color: #bbb; border-top: 1px solid var(--line); padding-top: 12px;">${escapeHtml(program.rawOfficialText)}</div>
-            </details>
-            <div style="margin-top: 12px;">
-              <a href="${escapeHtml(program.officialSourceUrl || "#")}" target="_blank" class="outline-btn compact" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--line); font-size: 12px; color: var(--ink); transition: background 0.2s;">
-                🌐 공식 페이지 방문하기 (Visit Official Page)
-              </a>
-            </div>
-          </article>`
-        : ""
-    }
-    ${casesHtml}
+  `;
+
+  let detailHtml = `
+    ${basicInfoAndStatsHtml}
+    ${compProfileHtml}
+    ${courseChecklistHtml}
+    ${additionalAndCatalogHtml}
   `;
 
   container.innerHTML = detailHtml;

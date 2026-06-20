@@ -63,7 +63,7 @@
         <a href="javascript:void(0)" id="openPricingBtn" data-i18n="nav_pricing">Subscription Plans</a>
         <a href="#solution" data-i18n="nav_solution">Features</a>
         <a href="javascript:void(0)" onclick="handleDrawerNavigation('eligibility')" data-i18n="nav_statcompass">01. 지원 가능 판단</a>
-        <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" data-i18n="nav_reqradar">02. 학교 학과별 편입 요건 파악</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" data-i18n="nav_reqradar">02. 학교, 전공 탐색기</a>
         <a href="javascript:void(0)" onclick="handleDrawerNavigation('roadmap')" data-i18n="nav_pathfinder">03. 수강 로드맵 생성</a>
         <a href="javascript:void(0)" onclick="handleDrawerNavigation('essay')" data-i18n="nav_essayai">04. EssayAI</a>
         <a href="#feedback" data-i18n="nav_feedback">Feedback</a>
@@ -195,9 +195,9 @@
             <p data-i18n="feature1_body">Don't let regret be your final grade. Instantly analyze your GPA and completed courses against official database profiles to discover hidden top-tier transfer options you didn't even know you qualified for.</p>
           </article>
           <article style="cursor: pointer;" onclick="handleDrawerNavigation('requirements')">
-            <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">02 • Prerequisite Finder</span>
-            <h3 data-i18n="feature2_title" style="margin-top: 8px;">Prerequisite Finder</h3>
-            <p data-i18n="feature2_body">Skip the endless hunt through confusing university catalog sites and broken PDF guides. Search any school or major to load canonical prerequisite lists and grade thresholds instantly.</p>
+            <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">02 • University & Major Explorer</span>
+            <h3 data-i18n="feature2_title" style="margin-top: 8px;">University & Major Explorer</h3>
+            <p data-i18n="feature2_body">Search any school or major to load actual admitted GPA ranges, competitive English scores, key electives, and real transfer specimen profiles.</p>
           </article>
           <article style="cursor: pointer;" onclick="handleDrawerNavigation('roadmap')">
             <span style="font-size: 12px; font-weight: 800; color: #818cf8; text-transform: uppercase;">03 • Roadmap Builder</span>
@@ -342,7 +342,7 @@
               <p style="font-size: 13px; color: var(--muted); margin: 0 0 24px 0; line-height: 1.5;" data-i18n="tier_free_desc">기본 지원 가능 대학 탐색용</p>
               <hr style="border: none; border-top: 1px solid var(--line); margin-bottom: 24px;">
               <ul style="padding-left: 18px; font-size: 13.5px; color: var(--muted); margin: 0; display: grid; gap: 12px; line-height: 1.5; list-style-type: disc;">
-                <li data-i18n="tier_free_feature1">지원 가능 판단 기능 내 대학 분석 최대 5개 제공</li>
+                <li data-i18n="tier_free_feature1">지원 가능 자격 진단 기능 무제한 분석 제공 (Free & Unlimited)</li>
                 <li data-i18n="tier_free_feature2">이수 완료 과목 기본 데이터 매핑 제공</li>
               </ul>
             </div>
@@ -361,7 +361,7 @@
               <p style="font-size: 13px; color: var(--muted); margin: 0 0 24px 0; line-height: 1.5;" data-i18n="tier_premium_desc">로드맵과 에세이 설계를 결합한 올인원 패키지</p>
               <hr style="border: none; border-top: 1px solid var(--line); margin-bottom: 24px;">
               <ul style="padding-left: 18px; font-size: 13.5px; color: var(--muted); margin: 0; display: grid; gap: 12px; line-height: 1.5; list-style-type: disc;">
-                <li data-i18n="tier_premium_feature1">지원 가능 진단 + 요건 검색 + 최적 수강 로드맵 빌더 무제한 제공</li>
+                <li data-i18n="tier_premium_feature1">요건 진단 무제한 + 학교/전공 탐색기 + 최적 수강 로드맵 빌더 제공</li>
                 <li data-i18n="tier_premium_feature2">AI 에세이: 1개 목표 대학교의 에세이 구조 분석 및 설계도 무제한 생성</li>
                 <li style="color: var(--gold); font-weight: 700;">★ 1:1 컨설팅 가이드 & 합격 포트폴리오 템플릿 즉시 잠금해제</li>
               </ul>
@@ -400,7 +400,7 @@
             </div>
             <nav class="tab-list" aria-label="Product Features">
               <button class="tab-button active" data-tab="eligibility" type="button" data-i18n="tab_eligibility">Eligibility Diagnostics</button>
-              <button class="tab-button" data-tab="requirements" type="button" data-i18n="tab_requirements">Prerequisite Finder</button>
+              <button class="tab-button" data-tab="requirements" type="button" data-i18n="tab_requirements">University & Major Explorer</button>
               <button class="tab-button" data-tab="roadmap" type="button" data-i18n="tab_roadmap">Roadmap Builder</button>
               <button class="tab-button" data-tab="essay" type="button" data-i18n="tab_essay">AI Essay Strategist</button>
             </nav>
@@ -517,8 +517,8 @@
               <div class="panel-heading">
                 <span class="step">02</span>
                 <div>
-                  <h3 data-i18n="req_title">Prerequisite Finder Search</h3>
-                  <p data-i18n="req_desc">Search top programs to instantly load official prerequisite criteria.</p>
+                  <h3 data-i18n="req_title">University & Major Explorer</h3>
+                  <p data-i18n="req_desc">Explore actual transfer rates, 5-year GPAs, English scores, and spec specimens.</p>
                 </div>
               </div>
               <div class="search-bar">
@@ -1326,8 +1326,8 @@
           <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" class="drawer-nav-item">
             <span class="num">02</span>
             <div class="txt">
-              <span class="title" data-i18n="drawer_nav2_title">02. 편입 요건 검색</span>
-              <span class="desc" data-i18n="drawer_nav2_desc">목표 대학/학과별 학점 및 과목 요건 조회</span>
+              <span class="title" data-i18n="drawer_nav2_title">02. 학교, 전공 탐색기</span>
+              <span class="desc" data-i18n="drawer_nav2_desc">합격률, 최근 5년치 GPA 및 스펙 예시 조회</span>
             </div>
           </a>
           <a href="javascript:void(0)" onclick="handleDrawerNavigation('roadmap')" class="drawer-nav-item">
@@ -1376,7 +1376,7 @@
       </button>
       <button onclick="handleMobileBottomNav('requirements')" id="btnMobileNavRequirements" class="mobile-nav-item">
         <span class="icon">🔍</span>
-        <span class="label" data-i18n="mobile_nav_requirements">선수과목</span>
+        <span class="label" data-i18n="mobile_nav_requirements">전공 탐색기</span>
       </button>
       <button onclick="handleMobileBottomNav('roadmap')" id="btnMobileNavRoadmap" class="mobile-nav-item">
         <span class="icon">📅</span>
@@ -1395,6 +1395,7 @@
     <!-- Data scripts with absolute cache busting -->
     <script>
       const ts = Date.now();
+      document.write('<script src="./all-universities.js?v=' + ts + '"><\/script>');
       document.write('<script src="./course-catalog.js?v=' + ts + '"><\/script>');
       document.write('<script src="./admissions-cases.js?v=' + ts + '"><\/script>');
       document.write('<script src="./app.js?v=' + ts + '"><\/script>');

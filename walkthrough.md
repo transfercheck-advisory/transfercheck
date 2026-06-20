@@ -124,3 +124,36 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
 ### 5️⃣ Verification & Deployment
 * **Automated Sandbox Tests**: Re-ran the verification suite across all 2,075 target combinations. Confirmed all programs generate the roadmap and advanced electives successfully without any errors.
 * **Production Deployment**: Committed the changes and pushed them to `origin/master`, deploying the final enhancements to Vercel.
+
+---
+
+## 🛠️ TransferChek Strategy Engine Enhancement (June 2026)
+
+### 1️⃣ Complete Free Plan Upgrade & Renaming
+* Renamed Feature 2 to **"학교, 전공 탐색기"** (University & Major Explorer) across all navigation menus, landing pages, mobile drawers, and support tooltips.
+* Removed the 5-target evaluation limit from Feature 1 (Eligibility Diagnostics) under the Free plan, making it 100% Free and Unlimited. Locked cards now remain unlocked (`isLocked = false` permanently).
+* Updated Pricing Plan cards to display: `"무제한 지원 자격 진단 및 분석 제공 (Free & Unlimited)"`.
+
+### 2️⃣ Precise Admissions Cases Mapping & School Isolation
+* Restructured `admissions-cases.js` to map admitted cases strictly by `schoolId` to prevent cross-school case contamination.
+* Enhanced `app.js` (`renderRequirementDetail`) to match school names with their corresponding admissions profile `schoolId` keys (UC Berkeley, UW, Georgia Tech, U-Mich, Columbia, Stanford, UCLA).
+* Implemented dynamic mock cases (simulated target spec profiles) generated on-the-fly for unlisted universities, preserving high-impact visual profiles while avoiding data contamination.
+
+### 3️⃣ Explorer Card Grid Synchronization
+* Mapped `admissionRate` and `competitiveEnglish` directly onto the explorer spec card layout.
+* The explorer card grid now successfully displays:
+  - **실제 합격률 (Actual Admission Rate)**
+  - **최근 5년 합격자 GPA (Recent 5-Year GPA Range)**
+  - **실제 경쟁력 있는 영어 점수 (Competitive English Score)**
+  - **에세이 반영 비중 및 추천서 요구사항**
+  - **추천 권장 선수 과목 (Recommended Electives)**
+  - **비교과 활동 마일스톤**
+
+### 4️⃣ Prompt Transitions & Legal Safeguards
+* Injected **Prompt A** (*"이 조건들은 편입 지원을 위한 필수 조건입니다..."*) inside the diagnostics results card footer.
+* Injected **Prompt B** (*"종합평가로 나오는 학교 전공에서도..."*) inside the holistic strategy guide.
+* Added a subtle disclaimer to result cards (*"본 정보는 참고용 데이터로, 최종 지원 전 입학처 공식 요강 재확인을 권장합니다."*) to prevent legal liabilities while preserving a premium dark-mode aesthetic.
+
+### 5️⃣ Autocomplete Expansion
+* Bound `all-universities.js` list of ~500 common U.S. universities and community colleges to the search autocomplete system, enabling on-demand AI modeling and fallback prerequisite generation.
+

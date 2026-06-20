@@ -1,42 +1,219 @@
 // TransferChek - Admitted Cases, Extracurricular Milestones & Essay Patterns Database
 window.AdmissionsCasesDatabase = {
+  // Profiles mapped strictly by schoolId to prevent cross-school contamination
   profiles: {
-    en: {
-      stem: [
-        { gpa: "3.94", origin: "De Anza College (CC)", outcome: "Accepted (UC Berkeley CS, UCLA CS)", international: "Yes", extra: "Built a React scheduling app, tutored calculus, joined Robotics Club." },
-        { gpa: "3.88", origin: "Pasadena City College (CC)", outcome: "Accepted (Georgia Tech ME)", international: "No", extra: "Formula SAE crew member, designed 3D printed prosthetic arm." },
-        { gpa: "3.91", origin: "Bellevue College (CC)", outcome: "Accepted (UW Allen School CS)", international: "Yes", extra: "Machine learning research assistant, founder of coding bootcamp club." },
-        { gpa: "3.85", origin: "Diablo Valley College (CC)", outcome: "Accepted (UIUC Civil Engineering)", international: "No", extra: "Concrete canoe design lead, volunteer math instructor." }
-      ],
-      business: [
-        { gpa: "3.92", origin: "Diablo Valley College (CC)", outcome: "Accepted (UC Berkeley Haas)", international: "Yes", extra: "Summer audit internship, President of CC Finance & Investment Society." },
-        { gpa: "3.89", origin: "Santa Monica College (CC)", outcome: "Accepted (USC Marshall Business)", international: "No", extra: "Won 2nd place in state-wide case competition, launched e-commerce store." },
-        { gpa: "3.90", origin: "Green River College (CC)", outcome: "Accepted (UW Foster School)", international: "Yes", extra: "Accounting tutor, completed non-profit consulting project." }
-      ],
-      humanities: [
-        { gpa: "3.87", origin: "Santa Monica College (CC)", outcome: "Accepted (UCLA Psychology)", international: "Yes", extra: "Crisis text line counselor, volunteer research assistant in cognitive lab." },
-        { gpa: "3.82", origin: "Orange Coast College (CC)", outcome: "Accepted (UC Berkeley Sociology)", international: "No", extra: "Editor of CC literary magazine, local social advocacy causes." },
-        { gpa: "3.89", origin: "Foothill College (CC)", outcome: "Accepted (NYU Media & Comm)", international: "Yes", extra: "Digital marketing intern at tech startup, local community podcast host." }
-      ]
-    },
-    ko: {
-      stem: [
-        { gpa: "3.94", origin: "디안자 칼리지 (CC)", outcome: "합격 (UC 버클리 컴공, UCLA 컴공)", international: "예", extra: "리액트 시간표 앱 개발, 미적분 튜터링, 로보틱스 클럽 참여." },
-        { gpa: "3.88", origin: "패서디나 시티 칼리지 (CC)", outcome: "합격 (조지아텍 기계공학)", international: "아니오", extra: "대학 포뮬러 SAE 크루 참여, 3D 프린터 의수 설계 프로젝트." },
-        { gpa: "3.91", origin: "벨뷰 칼리지 (CC)", outcome: "합격 (워싱턴 대학교 알렌 스쿨 컴공)", international: "예", extra: "머신러닝 학부연구생 어시스턴트, 코딩 캠프 동아리 창립." },
-        { gpa: "3.85", origin: "디아블로 밸리 칼리지 (CC)", outcome: "합격 (UIUC 토목공학)", international: "아니오", extra: "콘크리트 카누 설계 리드, 지역 수학 교육 봉사 단체장." }
-      ],
-      business: [
-        { gpa: "3.92", origin: "디아블로 밸리 칼리지 (CC)", outcome: "합격 (UC 버클리 하스 경영대)", international: "예", extra: "여름 회계 법인 인턴십, CC 금융투자 학회 학회장." },
-        { gpa: "3.89", origin: "산타모니카 칼리지 (CC)", outcome: "합격 (USC 마샬 경영대)", international: "아니오", extra: "주 단위 케이스 컴피티션 2위 입상, 독립 이커머스 스토어 창업." },
-        { gpa: "3.90", origin: "그린 리버 칼리지 (CC)", outcome: "합격 (워싱턴 대학교 포스터 경영대)", international: "예", extra: "회계학 교내 튜터, 지역 비영리 단체 비즈니스 컨설팅 수행." }
-      ],
-      humanities: [
-        { gpa: "3.87", origin: "산타모니카 칼리지 (CC)", outcome: "합격 (UCLA 심리학)", international: "예", extra: "위기 텍스트 라인 상담가, 대학 인지심리 연구소 학부 연구 조원." },
-        { gpa: "3.82", origin: "오렌지 코스트 칼리지 (CC)", outcome: "합격 (UC 버클리 사회학)", international: "아니오", extra: "CC 문예지 편집장, 지역 인권 캠페인 기획 리더." },
-        { gpa: "3.89", origin: "풋힐 칼리지 (CC)", outcome: "합격 (NYU 미디어 & 커뮤니케이션)", international: "예", extra: "IT 스타트업 디지털 마케팅 인턴, 지역 커뮤니티 팟캐스트 진행자." }
-      ]
-    }
+    ko: [
+      {
+        schoolId: "university-of-california-berkeley",
+        major: "Computer Science (컴공)",
+        gpa: "3.94",
+        origin: "디안자 칼리지 (CC)",
+        outcome: "합격 (UC Berkeley CS)",
+        international: "예",
+        extra: "리액트 시간표 앱 개발, 미적분 튜터링, 로보틱스 클럽 회장.",
+        gpa5YearRange: "3.88 - 4.00",
+        competitiveEnglish: "TOEFL 105+ / IELTS 7.5+",
+        admissionRate: "5.2%",
+        keyElectives: "이산수학, 선형대수학, 자료구조(C++)"
+      },
+      {
+        schoolId: "university-of-california-berkeley",
+        major: "Haas Business (경영학)",
+        gpa: "3.92",
+        origin: "디아블로 밸리 칼리지 (CC)",
+        outcome: "합격 (UC Berkeley Haas)",
+        international: "예",
+        extra: "여름 회계 법인 인턴십, CC 금융투자 학회 학회장.",
+        gpa5YearRange: "3.89 - 4.00",
+        competitiveEnglish: "TOEFL 108+ / IELTS 8.0",
+        admissionRate: "4.8%",
+        keyElectives: "재무회계, 거시경제학, 비즈니스 통계학"
+      },
+      {
+        schoolId: "university-of-washington",
+        major: "Computer Science (컴공)",
+        gpa: "3.91",
+        origin: "벨뷰 칼리지 (CC)",
+        outcome: "합격 (UW Allen School CS)",
+        international: "예",
+        extra: "머신러닝 학부연구생 어시스턴트, 코딩 캠프 동아리 창립.",
+        gpa5YearRange: "3.85 - 3.98",
+        competitiveEnglish: "TOEFL 100+ / IELTS 7.5",
+        admissionRate: "9.0%",
+        keyElectives: "Calculus III, 컴퓨터 프로그래밍 II, 기초 선형대수"
+      },
+      {
+        schoolId: "georgia-institute-of-technology",
+        major: "Mechanical Engineering (기계공학)",
+        gpa: "3.88",
+        origin: "패서디나 시티 칼리지 (CC)",
+        outcome: "합격 (Georgia Tech ME)",
+        international: "아니오",
+        extra: "대학 포뮬러 SAE 크루 참여, 3D 프린터 의수 설계 프로젝트.",
+        gpa5YearRange: "3.75 - 3.92",
+        competitiveEnglish: "TOEFL 95+ (미시민권/영주권 면제)",
+        admissionRate: "14%",
+        keyElectives: "미적분학 III, 미분방정식, 정역학, 동역학"
+      },
+      {
+        schoolId: "university-of-michigan-ann-arbor",
+        major: "Computer Engineering (컴퓨터공학)",
+        gpa: "3.88",
+        origin: "타주 CC",
+        outcome: "합격 (U-Mich CE)",
+        international: "예",
+        extra: "가상 시뮬레이터를 활용해 전자기학 회로 분석 프로젝트 대안 수행.",
+        gpa5YearRange: "3.80 - 3.95",
+        competitiveEnglish: "TOEFL 100+ / IELTS 7.0+",
+        admissionRate: "12%",
+        keyElectives: "물리학 II(전자기학), 선형대수학, 이산수학"
+      },
+      {
+        schoolId: "columbia-university",
+        major: "General Studies (GS 사회과학)",
+        gpa: "3.91",
+        origin: "커뮤니티 칼리지 (CC)",
+        outcome: "합격 (Columbia GS)",
+        international: "예",
+        extra: "군 복무 및 스타트업 인턴 경력, 영어 튜터 60시간.",
+        gpa5YearRange: "3.70 - 3.95",
+        competitiveEnglish: "TOEFL 105+ / IELTS 7.5+",
+        admissionRate: "20% (GS 기준)",
+        keyElectives: "영작문, 통계학 기초, 서양 문명사"
+      },
+      {
+        schoolId: "stanford-university",
+        major: "Computer Science (컴공)",
+        gpa: "4.00",
+        origin: "명문 4년제 대학",
+        outcome: "합격 (Stanford CS)",
+        international: "예",
+        extra: "학부생 학술 컨퍼런스 발표 및 데이터 통계 모델 독자 설계.",
+        gpa5YearRange: "3.98 - 4.00",
+        competitiveEnglish: "TOEFL 110+ / IELTS 8.0+",
+        admissionRate: "1.5%",
+        keyElectives: "Linear Algebra, 확률론, 알고리즘 분석"
+      },
+      {
+        schoolId: "ucla",
+        major: "Psychology (심리학)",
+        gpa: "3.87",
+        origin: "산타모니카 칼리지 (CC)",
+        outcome: "합격 (UCLA Psychology)",
+        international: "예",
+        extra: "위기 텍스트 라인 상담가, 대학 인지심리 연구소 학부 연구 조원.",
+        gpa5YearRange: "3.82 - 3.98",
+        competitiveEnglish: "TOEFL 100+ / IELTS 7.0+",
+        admissionRate: "8.5%",
+        keyElectives: "심리학 통계, 뇌 및 행동 기초, 생물학 기초"
+      }
+    ],
+    en: [
+      {
+        schoolId: "university-of-california-berkeley",
+        major: "Computer Science",
+        gpa: "3.94",
+        origin: "De Anza College (CC)",
+        outcome: "Accepted (UC Berkeley CS)",
+        international: "Yes",
+        extra: "Built a React scheduling app, tutored calculus, joined Robotics Club.",
+        gpa5YearRange: "3.88 - 4.00",
+        competitiveEnglish: "TOEFL 105+ / IELTS 7.5+",
+        admissionRate: "5.2%",
+        keyElectives: "Discrete Math, Linear Algebra, Data Structures (C++)"
+      },
+      {
+        schoolId: "university-of-california-berkeley",
+        major: "Haas Business",
+        gpa: "3.92",
+        origin: "Diablo Valley College (CC)",
+        outcome: "Accepted (UC Berkeley Haas)",
+        international: "Yes",
+        extra: "Summer audit internship, President of CC Finance & Investment Society.",
+        gpa5YearRange: "3.89 - 4.00",
+        competitiveEnglish: "TOEFL 108+ / IELTS 8.0",
+        admissionRate: "4.8%",
+        keyElectives: "Financial Accounting, Macroeconomics, Business Stats"
+      },
+      {
+        schoolId: "university-of-washington",
+        major: "Computer Science",
+        gpa: "3.91",
+        origin: "Bellevue College (CC)",
+        outcome: "Accepted (UW Allen School CS)",
+        international: "Yes",
+        extra: "Machine learning research assistant, founder of coding bootcamp club.",
+        gpa5YearRange: "3.85 - 3.98",
+        competitiveEnglish: "TOEFL 100+ / IELTS 7.5",
+        admissionRate: "9.0%",
+        keyElectives: "Calculus III, Programming II, Intro Linear Algebra"
+      },
+      {
+        schoolId: "georgia-institute-of-technology",
+        major: "Mechanical Engineering",
+        gpa: "3.88",
+        origin: "Pasadena City College (CC)",
+        outcome: "Accepted (Georgia Tech ME)",
+        international: "No",
+        extra: "Formula SAE crew member, designed 3D printed prosthetic arm.",
+        gpa5YearRange: "3.75 - 3.92",
+        competitiveEnglish: "TOEFL 95+ (Exempted for Citizens)",
+        admissionRate: "14%",
+        keyElectives: "Calculus III, Differential Equations, Statics, Dynamics"
+      },
+      {
+        schoolId: "university-of-michigan-ann-arbor",
+        major: "Computer Engineering",
+        gpa: "3.88",
+        origin: "Out-of-State CC",
+        outcome: "Accepted (U-Mich CE)",
+        international: "Yes",
+        extra: "Designed custom electromagnetism circuit simulator.",
+        gpa5YearRange: "3.80 - 3.95",
+        competitiveEnglish: "TOEFL 100+ / IELTS 7.0+",
+        admissionRate: "12%",
+        keyElectives: "Physics II (E&M), Linear Algebra, Discrete Math"
+      },
+      {
+        schoolId: "columbia-university",
+        major: "General Studies (Social Sciences)",
+        gpa: "3.91",
+        origin: "Community College",
+        outcome: "Accepted (Columbia GS)",
+        international: "Yes",
+        extra: "Military service, startup internship, 60 hours English tutoring.",
+        gpa5YearRange: "3.70 - 3.95",
+        competitiveEnglish: "TOEFL 105+ / IELTS 7.5+",
+        admissionRate: "20% (GS basis)",
+        keyElectives: "English Comp, Basic Statistics, Western Civilizations"
+      },
+      {
+        schoolId: "stanford-university",
+        major: "Computer Science",
+        gpa: "4.00",
+        origin: "Elite 4-Year University",
+        outcome: "Accepted (Stanford CS)",
+        international: "Yes",
+        extra: "Presented paper at undergraduate conference, modeled custom statistical model.",
+        gpa5YearRange: "3.98 - 4.00",
+        competitiveEnglish: "TOEFL 110+ / IELTS 8.0+",
+        admissionRate: "1.5%",
+        keyElectives: "Linear Algebra, Probability, Analysis of Algorithms"
+      },
+      {
+        schoolId: "ucla",
+        major: "Psychology",
+        gpa: "3.87",
+        origin: "Santa Monica College (CC)",
+        outcome: "Accepted (UCLA Psychology)",
+        international: "Yes",
+        extra: "Crisis text line counselor, volunteer research assistant in cognitive lab.",
+        gpa5YearRange: "3.82 - 3.98",
+        competitiveEnglish: "TOEFL 100+ / IELTS 7.0+",
+        admissionRate: "8.5%",
+        keyElectives: "Psych Statistics, Brain & Behavior, Basic Biology"
+      }
+    ]
   },
   
   milestones: {
@@ -226,4 +403,3 @@ window.AdmissionsCasesDatabase = {
     ]
   }
 };
-
