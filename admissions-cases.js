@@ -106,6 +106,32 @@ window.AdmissionsCasesDatabase = {
         competitiveEnglish: "TOEFL 100+ / IELTS 7.0+",
         admissionRate: "8.5%",
         keyElectives: "심리학 통계, 뇌 및 행동 기초, 생물학 기초"
+      },
+      {
+        schoolId: "mit",
+        major: "Mathematics (수학과)",
+        gpa: "4.00",
+        origin: "4년제 주립대학 (STEM)",
+        outcome: "합격 (MIT Mathematics)",
+        international: "예",
+        extra: "학술 저널 논문 게재 (기하학 분야), 국제 수학 경시 대회 상위 입상, 대학교 수학 튜터 및 연구 어시스턴트.",
+        gpa5YearRange: "3.96 - 4.00",
+        competitiveEnglish: "TOEFL 110+ / IELTS 8.0+",
+        admissionRate: "1.4%",
+        keyElectives: "Calculus 3 / Multivariable Calculus, Linear Algebra, Differential Equations, Physics 1"
+      },
+      {
+        schoolId: "mit",
+        major: "Computer Science and Engineering (컴공)",
+        gpa: "4.00",
+        origin: "명문 4년제 사립대학",
+        outcome: "합격 (MIT CS)",
+        international: "예",
+        extra: "오픈소스 컴파일러 코어 기여, 컴퓨터 그래픽스 학회 포스터 발표, 대학 IT 보안 시스템 취약점 개선 연구 참여.",
+        gpa5YearRange: "3.95 - 4.00",
+        competitiveEnglish: "TOEFL 112+ / IELTS 8.5",
+        admissionRate: "1.2%",
+        keyElectives: "Calculus 3 / Multivariable Calculus, Discrete Mathematics / Structures, Linear Algebra, Physics 1"
       }
     ],
     en: [
@@ -212,6 +238,32 @@ window.AdmissionsCasesDatabase = {
         competitiveEnglish: "TOEFL 100+ / IELTS 7.0+",
         admissionRate: "8.5%",
         keyElectives: "Psych Statistics, Brain & Behavior, Basic Biology"
+      },
+      {
+        schoolId: "mit",
+        major: "Mathematics",
+        gpa: "4.00",
+        origin: "4-year Public University (STEM)",
+        outcome: "Accepted (MIT Mathematics)",
+        international: "Yes",
+        extra: "Published paper in Geometry journal, top prize in Putnam math competition, math tutor & research assistant.",
+        gpa5YearRange: "3.96 - 4.00",
+        competitiveEnglish: "TOEFL 110+ / IELTS 8.0+",
+        admissionRate: "1.4%",
+        keyElectives: "Calculus 3 / Multivariable Calculus, Linear Algebra, Differential Equations, Physics 1"
+      },
+      {
+        schoolId: "mit",
+        major: "Computer Science and Engineering",
+        gpa: "4.00",
+        origin: "Elite 4-year Private University",
+        outcome: "Accepted (MIT CS)",
+        international: "Yes",
+        extra: "Core contributor to open-source compiler, poster presentation at graphics conference, university IT security audit assistant.",
+        gpa5YearRange: "3.95 - 4.00",
+        competitiveEnglish: "TOEFL 112+ / IELTS 8.5",
+        admissionRate: "1.2%",
+        keyElectives: "Calculus 3 / Multivariable Calculus, Discrete Mathematics / Structures, Linear Algebra, Physics 1"
       }
     ]
   },

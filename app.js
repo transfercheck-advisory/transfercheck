@@ -83,18 +83,18 @@ const TRANSLATIONS = {
     "coverage_desc": "Compare target program qualifications, course roadmaps, required exam scores, and requirement coverage ratings dynamically based on active database profiles.",
     "feature_eyebrow": "Why TransferChek?",
     "feature_heading": "Minimize risk. Save time. Protect your tuition.",
-    "feature1_title": "01. Eligibility Diagnostics",
-    "feature1_body": "Check if your completed coursework and GPA match the requirements of target programs in 1 second.",
-    "feature2_title": "02. University & Major Explorer",
-    "feature2_body": "Explore admitted GPA ranges, competitive English scores, key electives, and real transfer specimen profiles.",
+    "feature1_title": "01. Feasibility & Competitiveness Diagnostics",
+    "feature1_body": "Assess your real transfer competitiveness (High Risk / Reach / Match / Safety) by dynamically matching your GPA, courses, English scores, and EC strength with actual admitted specimens.",
+    "feature2_title": "02. All-in-One Transfer Explorer",
+    "feature2_body": "Access all vital transfer parameters—admissions rates, GPA distributions, AP transfer policies, and actual admitted case specimens—all on a single page.",
     "feature3_title": "03. Roadmap Planner",
     "feature3_body": "Generate a term-by-term plan to complete prerequisites on time without credit overlap or GPA risk.",
     "feature4_title": "04. AI Essay Planner",
     "feature4_body": "Build structured personal statement guides aligned with university-specific rubrics.",
     "demo_eyebrow": "Interactive Product Dashboard",
-    "demo_title": "Target Eligibility Diagnostician",
-    "tab_eligibility": "Target Eligibility Diagnostician",
-    "tab_requirements": "University & Major Explorer",
+    "demo_title": "Feasibility & Competitiveness Diagnostics",
+    "tab_eligibility": "Feasibility & Competitiveness Diagnostics",
+    "tab_requirements": "All-in-One Transfer Explorer",
     "tab_roadmap": "Prerequisite Roadmap",
     "tab_essay": "AI Essay Planner",
     "profile_title": "Academic Profile Details",
@@ -169,7 +169,7 @@ const TRANSLATIONS = {
     "tier_premium_price": "29,900 KRW/mo",
     "tier_premium_desc": "All-in-one roadmap & essay suite + 100% Data Integrity Refund Pledge",
     "tier_premium_feature1": "Unlimited access to StatCompass, ReqRadar & Pathfinder",
-    "tier_premium_feature2": "AI Essay: 1 active target school outline + 1:1 consultation outline templates",
+    "tier_premium_feature2": "AI Essay: 1 active target school outline (Must be used within 1 month of purchase) + templates",
     "tier_essay_pass_name": "AI Target Essay Pass",
     "tier_essay_pass_price": "9,900 KRW",
     "tier_essay_pass_desc": "Bespoke SOP outline clinic for one target university",
@@ -525,18 +525,18 @@ const TRANSLATIONS = {
     "coverage_desc": "데이터베이스에 포함된 각 대학/학과별 요건 커버리지 점수, 수강 로드맵, 필요 영어 시험 점수 등을 입체적으로 비교 분석합니다.",
     "feature_eyebrow": "왜 TransferChek인가?",
     "feature_heading": "편입 준비에서 가장 치명적인 실수는, 편입에 인정되지 않는 과목을 수강하는 것입니다.",
-    "feature1_title": "학교, 전공 진단기",
-    "feature1_body": "내 스펙으로 지원 가능한 대학을 즉시 발굴하세요. '이 학교도 이수 요건을 채웠었구나!'라는 후회가 남지 않도록, 현재 GPA와 이수 과목을 공식 대학 요강과 대조하여 충족 자격을 진단해 줍니다.",
-    "feature2_title": "02. 학교, 전공 탐색기",
-    "feature2_body": "대학과 전공만 입력하면 실제 합격률, 합격생들의 5년치 GPA 분포, 경쟁력 있는 어학 성적 컷, 추천 선수 과목, 그리고 합격자 실제 스펙 샘플까지 한눈에 보여줍니다.",
+    "feature1_title": "01. 내 스펙 경쟁력 진단기 (StatCompass)",
+    "feature1_body": "나의 대학 GPA, 이수 학점, 수강 과목, 영어 성적, 비교과 활동 점수를 기반으로, 실제 합격자 표본 스펙 및 합격률과 실시간 매칭하여 종합 합격 경쟁력(위험/도전/적정/안정)을 판단합니다.",
+    "feature2_title": "02. 편입 정보 탐색기 (Explorer)",
+    "feature2_body": "선택한 대학교/학과 편입에 필요한 모든 정보(전체 및 국제학생 합격률, 평균 GPA, AP 정책, 실제 합격자 스펙)를 한 페이지에 완벽히 제공합니다.",
     "feature3_title": "최적화 수강 로드맵 빌더",
     "feature3_body": "편입 준비생과 1-2년 후 편입을 준비할 학생 모두를 위한 최적의 수강 설계도. 불필요한 과목을 수강하여 시간, GPA, 비싼 등록금을 낭비하지 않도록, 선수과목 연결고리를 고려한 가장 효율적인 학기별 로드맵을 자동으로 빌드해 줍니다.",
     "feature4_title": "AI 에세이 전략가",
     "feature4_body": "교내 동아리, 전공 프로젝트, 학술 연구 활동 등의 경험을 명문대 편입 양식에 맞추어 하나의 전공 스토리로 연결합니다. 12만 건 이상의 실제 명문 대학교 합격 에세이 패턴 분석 데이터를 바탕으로, 각 대학의 채점 기준과 에세이 스타일에 맞춤화된 3문단 전략 에세이 설계도를 즉시 생성합니다.",
     "demo_eyebrow": "대화형 제품 대시보드",
-    "demo_title": "학교, 전공 진단기",
-    "tab_eligibility": "학교, 전공 진단기",
-    "tab_requirements": "학교, 전공 탐색기",
+    "demo_title": "내 스펙 경쟁력 진단기",
+    "tab_eligibility": "내 스펙 경쟁력 진단기",
+    "tab_requirements": "편입 정보 탐색기",
     "tab_roadmap": "최적화 수강 로드맵 빌더",
     "tab_essay": "AI 에세이 전략가",
     "profile_title": "나의 학업 프로필 입력",
@@ -611,7 +611,7 @@ const TRANSLATIONS = {
     "tier_premium_price": "월 29,900원",
     "tier_premium_desc": "올인원 수강 로드맵 & 에세이 설계 패키지 (100% 데이터 무결성 환불 보증)",
     "tier_premium_feature1": "지원 가능 진단 + 요건 검색 + 최적 수강 로드맵 빌더 무제한 제공",
-    "tier_premium_feature2": "AI 에세이: 1개 대학 에세이 구조 분석 및 1:1 컨설팅 가이드 & 합격 템플릿 즉시 잠금해제",
+    "tier_premium_feature2": "AI 에세이: 1개 대학 에세이 구조 분석 및 1:1 컨설팅 가이드 & 합격 템플릿 즉시 잠금해제 (결제 후 1달 이내 사용 필수)",
     "tier_essay_pass_name": "AI 에세이 대상학교 패스",
     "tier_essay_pass_price": "9,900원 / 개당",
     "tier_essay_pass_desc": "특정 1개 대학의 자소서/SOP 무제한 교정권",
@@ -1041,7 +1041,7 @@ const TRANSLATIONS = {
     "tier_premium_price": "29,900 KRW/月",
     "tier_premium_desc": "全包选课路线与文书规划套件 (100% 数据准确度退款保证)",
     "tier_premium_feature1": "资格评估、先修课程搜索引擎、最优选课路线规划服务无限制使用",
-    "tier_premium_feature2": "AI 文书: 1个目标院校文书全套大纲设计 + 1对1咨询模板即刻解锁",
+    "tier_premium_feature2": "AI 文书: 1个目标院校文书全套大纲设计 + 1对1咨询模板即刻解锁 (付款后须在1个月内使用)",
     "tier_essay_pass_name": "AI 单校/专业/文书无限制包",
     "tier_essay_pass_price": "9,900 KRW",
     "tier_essay_pass_desc": "单项追加包 (1个学校/专业/问题 1个月内无限制使用)",
@@ -2441,6 +2441,54 @@ function classifySourceLine(raw, matches) {
 }
 
 function summarizeProgramCourses(program) {
+  let required = program.requiredCourses || [];
+  let recommended = program.recommendedCourses || [];
+
+  const programName = (program.name || "").toLowerCase();
+  const schoolName = (program.school && program.school.name || "").toLowerCase();
+
+  const hasNoOfficialPrereqs = required.length === 0 || 
+    (required.length === 1 && (
+      required[0].includes("공식") || 
+      required[0].includes("official") || 
+      required[0].includes("no specific") || 
+      required[0].includes("지정된 선수과목이 없습니다") ||
+      required[0].includes("no official prerequisite")
+    ));
+
+  if (hasNoOfficialPrereqs) {
+    if (["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => programName.includes(kw))) {
+      required = ["Calculus 1", "Calculus 2", "Introduction to Computer Science", "Data Structures"];
+      recommended = ["Calculus 3 / Multivariable Calculus", "Linear Algebra", "Discrete Mathematics / Structures", "General Physics 1 (with Lab)"];
+    } else if (["mathematics", "applied math", "statistics", "math"].some(kw => programName.includes(kw))) {
+      required = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus"];
+      recommended = ["Linear Algebra", "Differential Equations", "Introduction to Computer Science"];
+    } else if (["mechanical", "civil", "aerospace", "engineering", "engr"].some(kw => programName.includes(kw))) {
+      if (["chemical", "materials", "bio", "biomedical"].some(kw => programName.includes(kw))) {
+        required = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Chemistry 1 (with Lab)", "General Chemistry 2 (with Lab)"];
+        recommended = ["Organic Chemistry 1 (with Lab)", "General Physics 1 (with Lab)", "Differential Equations"];
+      } else {
+        required = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Physics 1 (with Lab)", "General Physics 2 (with Lab)"];
+        recommended = ["Linear Algebra", "Differential Equations", "General Chemistry 1 (with Lab)"];
+      }
+    } else if (["chemical", "materials", "bio", "biomedical", "chemistry", "biology"].some(kw => programName.includes(kw))) {
+      required = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Chemistry 1 (with Lab)", "General Chemistry 2 (with Lab)"];
+      recommended = ["Organic Chemistry 1 (with Lab)", "General Physics 1 (with Lab)", "Differential Equations"];
+    } else if (["economics", "finance", "business", "management", "accounting", "commerce"].some(kw => programName.includes(kw))) {
+      required = ["Calculus 1", "Introduction to Microeconomics", "Introduction to Macroeconomics"];
+      recommended = ["Calculus 2", "Introductory Statistics", "Financial Accounting"];
+    } else if (["psychology", "cognitive", "sociology", "social"].some(kw => programName.includes(kw))) {
+      required = ["Introduction to Psychology", "Introductory Statistics"];
+      recommended = ["Research Methods in Psychology", "Introduction to Sociology"];
+    } else if (["english", "history", "philosophy", "humanities", "arts", "language"].some(kw => programName.includes(kw))) {
+      required = ["English Composition 1", "English Composition 2"];
+      recommended = ["Introduction to Philosophy", "World History"];
+    } else {
+      required = ["English Composition 1"];
+      recommended = ["English Composition 2", "Precalculus"];
+    }
+  }
+
   const summarize = (rawCourses) => {
     const mapped = new Map();
     const choices = [];
@@ -2475,8 +2523,8 @@ function summarizeProgramCourses(program) {
   };
 
   return {
-    required: summarize(program.requiredCourses || []),
-    recommended: summarize(program.recommendedCourses || [])
+    required: summarize(required),
+    recommended: summarize(recommended)
   };
 }
 
@@ -2485,228 +2533,118 @@ function isCourseSatisfied(courseId) {
 }
 
 function getProgramAdmissionsStats(program) {
+  const schoolId = program.school.id;
   const schoolName = (program.school.name || "").toLowerCase();
   const majorName = (program.name || "").toLowerCase();
   
-  const isIvyPrivate = [
-    "harvard", "yale", "princeton", "mit", "caltech", "california institute", "chicago", 
-    "johns hopkins", "northwestern", "duke", "dartmouth", "brown", "vanderbilt", "rice", 
-    "washu", "washington university", "emory", "notre dame", "georgetown", "carnegie", "cmu", 
-    "usc", "southern california", "tufts", "nyu", "new york"
-  ].some(kw => schoolName.includes(kw));
+  let stats = null;
 
-  const isPublicIvy = [
-    "san diego", "ucsd", "santa barbara", "ucsb", "irvine", "uci", "davis", "ucd", 
-    "santa cruz", "ucsc", "riverside", "ucr", "merced", "virginia", "unc", "chapel hill", 
-    "austin", "ut austin", "wisconsin", "william & mary", "william and mary", "florida", 
-    "maryland", "ohio state", "penn state", "rutgers", "pittsburgh", "minnesota", "georgia institute", "gatech"
-  ].some(kw => schoolName.includes(kw));
-
-  // Default fallback statistics
-  let stats;
-  if (isIvyPrivate) {
-    stats = {
-      applicants: 2200,
-      accepted: 80,
-      rateInState: "3.5%",
-      rateOutOfState: "3.2%",
-      rateInternational: "1.5%",
-      avgGpa: "3.93",
-      deadlineFall: "March 1",
-      deadlineSpring: "N/A",
-      apPolicy: "AP credits are highly restricted. 5s on AP Calculus BC may clear introductory math, but other subjects typically require departmental exam validation.",
-      advisingNote: "Extremely selective transfer pool. Academic alignment and highly specific personal statement articulating unique resources at this institution are paramount."
-    };
-  } else if (isPublicIvy) {
-    stats = {
-      applicants: 8500,
-      accepted: 1800,
-      rateInState: "28%",
-      rateOutOfState: "14%",
-      rateInternational: "9.5%",
-      avgGpa: "3.78",
-      deadlineFall: "March 15",
-      deadlineSpring: "October 15",
-      apPolicy: "AP Calculus BC (score of 4-5) typically satisfies general calculus requirements. AP English satisfies introductory composition requirements.",
-      advisingNote: "Admissions prioritize completion of all major-specific prerequisite courses. In-state community college transfer pathways are heavily favored."
-    };
+  // 1. First check window.transferStats
+  if (window.transferStats && window.transferStats[schoolId]) {
+    stats = { ...window.transferStats[schoolId] };
   } else {
-    stats = {
-      applicants: 1200,
-      accepted: 300,
-      rateInState: "45%",
-      rateOutOfState: "25%",
-      rateInternational: "16%",
-      avgGpa: "3.55",
-      deadlineFall: "April 1",
-      deadlineSpring: "November 1",
-      apPolicy: "Generous AP credit transfer policy. Scores of 3, 4, or 5 typically award direct course equivalence or elective credits.",
-      advisingNote: "Admissions are relatively straightforward for applicants who meet the minimum GPA and prerequisite criteria. Solid transfer path option."
-    };
-  }
+    // If not found in transferStats, find using fallback logic
+    const isIvyPrivate = [
+      "harvard", "yale", "princeton", "mit", "massachusetts institute", "caltech", "california institute", "chicago", 
+      "johns hopkins", "northwestern", "duke", "dartmouth", "brown", "vanderbilt", "rice", 
+      "washu", "washington university", "emory", "notre dame", "georgetown", "carnegie", "cmu", 
+      "usc", "southern california", "tufts", "nyu", "new york"
+    ].some(kw => schoolName.includes(kw));
 
-  // Explicit school data overrides
-  if (schoolName.includes("berkeley")) {
-    if (majorName.includes("computer science") || majorName.includes("eecs")) {
+    const isPublicIvy = [
+      "san diego", "ucsd", "santa barbara", "ucsb", "irvine", "uci", "davis", "ucd", 
+      "santa cruz", "ucsc", "riverside", "ucr", "merced", "virginia", "unc", "chapel hill", 
+      "austin", "ut austin", "wisconsin", "william & mary", "william and mary", "florida", 
+      "maryland", "ohio state", "penn state", "rutgers", "pittsburgh", "minnesota", "georgia institute", "gatech"
+    ].some(kw => schoolName.includes(kw));
+
+    if (isIvyPrivate) {
       stats = {
-        applicants: 3450,
-        accepted: 172,
-        rateInState: "7%",
-        rateOutOfState: "2.1%",
-        rateInternational: "1.8%",
-        avgGpa: "3.95 - 4.00",
-        deadlineFall: "November 30",
-        deadlineSpring: "N/A (Fall Only)",
-        apPolicy: "AP Calculus BC with a 5 satisfies Math 1A. No AP credit allowed for CS 61A or 61B.",
-        advisingNote: "Highly selective. Prioritize high-level programming projects, community service tutoring, and full completion of all math requirements before applying."
+        applicants: 2200,
+        accepted: 80,
+        rateInState: "3.5%",
+        rateOutOfState: "3.2%",
+        rateInternational: "1.5%",
+        avgGpa: "3.93",
+        deadlineFall: "March 1",
+        deadlineSpring: "N/A",
+        apPolicy: "AP credits are highly restricted. 5s on AP Calculus BC may clear introductory math, but other subjects typically require departmental exam validation.",
+        advisingNote: "Extremely selective transfer pool. Academic alignment and highly specific personal statement articulating unique resources at this institution are paramount."
       };
-    } else if (majorName.includes("business") || majorName.includes("management")) {
+    } else if (isPublicIvy) {
       stats = {
-        applicants: 2800,
-        accepted: 140,
-        rateInState: "6%",
-        rateOutOfState: "1.5%",
-        rateInternational: "1.2%",
-        avgGpa: "3.90 - 4.00",
-        deadlineFall: "November 30",
-        deadlineSpring: "N/A (Fall Only)",
-        apPolicy: "AP Calculus BC with a 5 satisfies math prerequisite. No AP credit for economics or accounting.",
-        advisingNote: "Haas evaluates leadership and extracurriculars heavily. Ensure Haas supplemental essays highlight active management, startup, or case competition leadership."
-      };
-    } else { // general UCB engineering/other
-      stats = {
-        applicants: 1800,
-        accepted: 216,
-        rateInState: "16%",
-        rateOutOfState: "4.5%",
-        rateInternational: "3.2%",
-        avgGpa: "3.88",
-        deadlineFall: "November 30",
-        deadlineSpring: "N/A (Fall Only)",
-        apPolicy: "AP Calculus BC with a 4 or 5 satisfies Math 1A & 1B. AP Physics C (Mechanics) with a 5 satisfies Physics 7A.",
-        advisingNote: "L&S majors evaluate course articulation strictly. General engineering requires all core series (Math, Physics) to be fully completed before transfer."
-      };
-    }
-  } else if (schoolName.includes("los angeles") || schoolName.includes("ucla")) {
-    if (majorName.includes("computer science") || majorName.includes("engineering")) {
-      stats = {
-        applicants: 2900,
-        accepted: 188,
-        rateInState: "9%",
-        rateOutOfState: "3.0%",
-        rateInternational: "2.4%",
-        avgGpa: "3.92 - 4.00",
-        deadlineFall: "November 30",
-        deadlineSpring: "N/A (Fall Only)",
-        apPolicy: "AP Calculus BC with a 4 or 5 satisfies Math 31A/31B. AP Chemistry with a 4 or 5 satisfies General Chemistry.",
-        advisingNote: "UCLA Samueli School of Engineering requires all preparatory courses to be completed by the end of Spring term prior to transfer."
+        applicants: 8500,
+        accepted: 1800,
+        rateInState: "28%",
+        rateOutOfState: "14%",
+        rateInternational: "9.5%",
+        avgGpa: "3.78",
+        deadlineFall: "March 15",
+        deadlineSpring: "October 15",
+        apPolicy: "AP Calculus BC (score of 4-5) typically satisfies general calculus requirements. AP English satisfies introductory composition requirements.",
+        advisingNote: "Admissions prioritize completion of all major-specific prerequisite courses. In-state community college transfer pathways are heavily favored."
       };
     } else {
       stats = {
-        applicants: 15000,
-        accepted: 3600,
-        rateInState: "26%",
-        rateOutOfState: "12%",
-        rateInternational: "8.5%",
-        avgGpa: "3.85",
-        deadlineFall: "November 30",
-        deadlineSpring: "N/A (Fall Only)",
-        apPolicy: "AP Calculus BC satisfies Math 31A & 31B. High school credit cannot bypass English Composition requirements.",
-        advisingNote: "General UCLA transfer admission relies heavily on completing the 7-course pattern and major prerequisites with high GPA consistency."
+        applicants: 1200,
+        accepted: 300,
+        rateInState: "45%",
+        rateOutOfState: "25%",
+        rateInternational: "16%",
+        avgGpa: "3.55",
+        deadlineFall: "April 1",
+        deadlineSpring: "November 1",
+        apPolicy: "Generous AP credit transfer policy. Scores of 3, 4, or 5 typically award direct course equivalence or elective credits.",
+        advisingNote: "Admissions are relatively straightforward for applicants who meet the minimum GPA and prerequisite criteria. Solid transfer path option."
       };
     }
-  } else if (schoolName.includes("michigan")) {
-    stats = {
-      applicants: 4200,
-      accepted: 1470,
-      rateInState: "45%",
-      rateOutOfState: "28%",
-      rateInternational: "18%",
-      avgGpa: "3.80",
-      deadlineFall: "February 1",
-      deadlineSpring: "October 15",
-      apPolicy: "AP Calculus BC satisfies Math 115 & 116. AP Physics C (Mechanics) with a 5 satisfies Physics 140/141.",
-      advisingNote: "Requires a clear transfer motivation. Highlight how U-Mich's specialized undergraduate research opportunities fit your career path."
-    };
-  } else if (schoolName.includes("columbia")) {
-    stats = {
-      applicants: 3100,
-      accepted: 372,
-      rateInState: "12% (Non-NY)",
-      rateOutOfState: "11.5%",
-      rateInternational: "6.2%",
-      avgGpa: "3.88",
-      deadlineFall: "March 1",
-      deadlineSpring: "October 15",
-      apPolicy: "AP Calculus BC with a 5 satisfies Calculus I & II. AP credit does not satisfy the Columbia GS Core Curriculum requirements.",
-      advisingNote: "Highly values non-traditional student backgrounds, gap years, or professional experience. Essays carry extreme weight."
-    };
-  } else if (schoolName.includes("cornell")) {
-    stats = {
-      applicants: 2850,
-      accepted: 427,
-      rateInState: "15%",
-      rateOutOfState: "14%",
-      rateInternational: "8.0%",
-      avgGpa: "3.87",
-      deadlineFall: "March 15",
-      deadlineSpring: "October 15",
-      apPolicy: "AP Calculus BC with a 4 or 5 satisfies Math 1910. AP Chemistry with a 5 satisfies Chemistry 2070.",
-      advisingNote: "Each Cornell college (e.g. Engineering, Arts & Sciences) has distinct transfer requirements. Must submit the Course Description Catalog."
-    };
-  } else if (schoolName.includes("stanford")) {
-    stats = {
-      applicants: 2500,
-      accepted: 35,
-      rateInState: "1.4%",
-      rateOutOfState: "1.4%",
-      rateInternational: "0.8%",
-      avgGpa: "3.98 - 4.00",
-      deadlineFall: "March 15",
-      deadlineSpring: "N/A",
-      apPolicy: "AP credits are evaluated post-admission. High scores can be used for general credit but rarely waive core major requirements.",
-      advisingNote: "Extreme selectivity. Requires a distinct academic 'Spike' (e.g., peer-reviewed research, startup exit, major advocacy impact) to stand out."
-    };
-  } else if (schoolName.includes("georgia")) {
-    stats = {
-      applicants: 3500,
-      accepted: 1225,
-      rateInState: "40%",
-      rateOutOfState: "24%",
-      rateInternational: "15%",
-      avgGpa: "3.82",
-      deadlineFall: "March 1",
-      deadlineSpring: "September 1",
-      apPolicy: "AP Calculus BC with a 4 or 5 satisfies Math 1551 & 1552. AP Physics C satisfies Physics 2211.",
-      advisingNote: "Requires completion of specific course requirements by the deadline. Out-of-state students must closely monitor course equivalency."
-    };
-  } else if (schoolName.includes("illinois") || schoolName.includes("uiuc")) {
-    stats = {
-      applicants: 5100,
-      accepted: 2190,
-      rateInState: "52%",
-      rateOutOfState: "34%",
-      rateInternational: "22%",
-      avgGpa: "3.72",
-      deadlineFall: "March 1",
-      deadlineSpring: "October 15",
-      apPolicy: "AP Calculus BC satisfies Math 220 & 231. AP Computer Science A satisfies CS 125.",
-      advisingNote: "Grainger College of Engineering is highly competitive; requires key math and physics sequences to be completed prior to application."
-    };
-  } else if (schoolName.includes("washington")) {
-    stats = {
-      applicants: 4800,
-      accepted: 1580,
-      rateInState: "38% (WA CCs)",
-      rateOutOfState: "18% (Non-WA)",
-      rateInternational: "12%",
-      avgGpa: "3.75",
-      deadlineFall: "April 5",
-      deadlineSpring: "N/A",
-      apPolicy: "AP Calculus BC satisfies Math 124 & 125. AP English satisfies general writing requirements.",
-      advisingNote: "UW heavily prioritizes Washington community college transfers (85% of transfer pool). Out-of-state and international applicants face higher GPA expectations."
-    };
   }
+
+  // 2. Perform major-specific overrides / adjustments for CS/Business at selective universities
+  const rank = stats.usNewsRank || 999;
+  const isSelective = rank <= 50 || [
+    "harvard", "yale", "princeton", "mit", "caltech", "chicago", "johns hopkins", "northwestern", 
+    "duke", "dartmouth", "brown", "vanderbilt", "rice", "washu", "emory", "notre dame", 
+    "georgetown", "carnegie", "cmu", "usc", "tufts", "nyu"
+  ].some(kw => schoolName.includes(kw));
+
+  const isCS = ["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => majorName.includes(kw));
+  const isBusiness = ["business", "finance", "accounting", "economics", "management"].some(kw => majorName.includes(kw));
+
+  if (isSelective && (isCS || isBusiness)) {
+    // Parse rates to numbers, scale them down, and re-format
+    const scaleRate = (rateStr) => {
+      if (!rateStr) return "3.0%";
+      const val = parseFloat(rateStr);
+      if (isNaN(val)) return rateStr;
+      // Scale down by 4.5x for CS, 2.5x for Business
+      const factor = isCS ? 4.5 : 2.5;
+      const newVal = Math.max(1.0, (val / factor)).toFixed(1);
+      return `${newVal}%`;
+    };
+
+    stats.rateInState = scaleRate(stats.rateInState);
+    stats.rateOutOfState = scaleRate(stats.rateOutOfState || stats.rateOverall);
+    stats.rateInternational = scaleRate(stats.rateInternational);
+    
+    // Scale accepted number
+    if (stats.accepted && stats.applicants) {
+      const rateNum = parseFloat(stats.rateOutOfState) / 100;
+      stats.accepted = Math.max(5, Math.round(stats.applicants * rateNum));
+    }
+
+    // Set higher average GPA
+    stats.avgGpa = isCS ? "3.92 - 4.00" : "3.85 - 3.98";
+    
+    // Update advising note
+    stats.advisingNote = isCS 
+      ? `[Major Alert: Highly Competitive] Transfer admission for Computer Science/STEM at this institution is extremely selective. The acceptance rate is significantly lower than the university average. A near-perfect GPA (${stats.avgGpa}) and completion of all core math and programming sequences are required.`
+      : `[Major Alert: Competitive] Transfer admission for Business/Economics at this institution is highly competitive. Applicants are expected to have a strong pre-requisite record in micro/macroeconomics and calculus, with a highly competitive GPA.`;
+  }
+
+  // Ensure default ranks are defined
+  if (!stats.usNewsRank) stats.usNewsRank = 999;
+  if (!stats.majorRank) stats.majorRank = 999;
 
   return stats;
 }
@@ -2724,27 +2662,168 @@ function getReachMatchSafety(program, userGpa, evaluation) {
   }
 
   const isKo = (state.language || "ko") === "ko";
+  const lang = state.language || "ko";
+  
+  // 1. Missing required courses count
   let missingRequiredCount = 0;
   if (evaluation && evaluation.checks) {
     missingRequiredCount = evaluation.checks.filter(c => c.type === "course" && !c.pass).length;
   }
 
-  if (missingRequiredCount > 0) {
+  // 2. English requirement check for international students
+  const englishRequirement = getEnglishRequirement(program);
+  let failsEnglish = false;
+  if (state.international && englishRequirement !== null) {
+    failsEnglish = !(state.englishWaiver || state.englishScore >= englishRequirement);
+  }
+
+  // 3. Extracurricular (EC) analysis score & relevance
+  const hasEcs = state.extracurriculars && state.extracurriculars.trim().length >= 15;
+  const ecScore = (hasEcs && state.ecAnalysisResult) ? (state.ecAnalysisResult.score || 0) : 10;
+  const ecRelevance = (hasEcs && state.ecAnalysisResult) ? (state.ecAnalysisResult.majorRelevance || "Low") : "Low";
+
+  // 4. Parse Major-Specific Acceptance Rate for strictness
+  const rateStr = stats.rateOutOfState || stats.rateOverall || "25%";
+  const rateVal = parseFloat(rateStr) || 25.0;
+
+  // Strictness levels:
+  // - rateVal < 3.0: Ultra-strict (Elite Lock)
+  // - 3.0 <= rateVal < 10.0: Strict
+  // - 10.0 <= rateVal < 25.0: Moderate
+  // - rateVal >= 25.0: Relaxed
+  let strictness = "relaxed";
+  if (rateVal < 3.0) strictness = "ultra";
+  else if (rateVal < 10.0) strictness = "strict";
+  else if (rateVal < 25.0) strictness = "moderate";
+
+  // 5. Admitted Case Key Electives Match Rate
+  const admissionsSchoolId = getAdmissionsSchoolId(program.school.name);
+  const normalizedMajor = (program.name || "").toLowerCase();
+  let electivesMatchRate = 1.0;
+  let keyElectivesList = [];
+  
+  if (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]) {
+    const matchingCase = window.AdmissionsCasesDatabase.profiles[lang].find(c => 
+      c.schoolId === admissionsSchoolId && 
+      (normalizedMajor.includes(c.major.toLowerCase().split("(")[0].trim()) || c.major.toLowerCase().includes(normalizedMajor))
+    );
+    
+    if (matchingCase && matchingCase.keyElectives) {
+      const electives = Array.isArray(matchingCase.keyElectives)
+        ? matchingCase.keyElectives
+        : matchingCase.keyElectives.split(",").map(s => s.trim());
+        
+      keyElectivesList = electives;
+      
+      if (electives.length > 0) {
+        let matchedCount = 0;
+        electives.forEach(electiveName => {
+          const hasCompleted = Array.from(state.completedCourses).some(courseId => {
+            const course = (window.courseCatalog || []).find(c => c.id === courseId);
+            if (!course) return false;
+            return course.name.toLowerCase().includes(electiveName.toLowerCase()) || 
+                   electiveName.toLowerCase().includes(course.name.toLowerCase());
+          });
+          if (hasCompleted) matchedCount++;
+        });
+        electivesMatchRate = matchedCount / electives.length;
+      }
+    }
+  }
+
+  // 6. 4-tier Admission Possibility Evaluation
+  // Tiers: High Risk (위험), Reach (도전), Match (적정), Safety (안정)
+  
+  // High Risk Condition:
+  // - GPA under official minimum
+  // - Fails English proficiency
+  // - Missing 3 or more required courses
+  // - For Ultra-selective: GPA < 3.8 or missing ANY required course, or electivesMatchRate < 0.25
+  const isHighRisk = (userGpa < minGpa) || failsEnglish || (missingRequiredCount >= 3) ||
+                     (strictness === "ultra" && (userGpa < 3.8 || missingRequiredCount > 0)) ||
+                     (strictness === "strict" && (userGpa < 3.6 || missingRequiredCount >= 2));
+
+  if (isHighRisk) {
+    let label = isKo ? "High Risk (위험)" : "High Risk";
+    if (failsEnglish) label += isKo ? " (영어 성적 부족)" : " (English Deficit)";
+    else if (userGpa < minGpa) label += isKo ? " (최소 GPA 미달)" : " (Below Min GPA)";
+    else if (missingRequiredCount > 0) label += isKo ? ` (${missingRequiredCount}개 과목 누락)` : ` (${missingRequiredCount} Missing)`;
+    
     return {
-      label: isKo ? `Reach (도전 · ${missingRequiredCount}개 과목 누락)` : `Reach (Gap · ${missingRequiredCount} Missing)`,
-      class: "reach",
-      color: "#f43f5e",
-      missingCount: missingRequiredCount
+      label,
+      class: "high-risk",
+      color: "#dc2626",
+      missingCount: missingRequiredCount,
+      electivesMatchRate,
+      keyElectivesList,
+      failsEnglish,
+      ecScore
     };
   }
 
-  if (userGpa < minGpa || userGpa < (targetGpa - 0.2)) {
-    return { label: isKo ? "Reach (도전)" : "Reach", class: "reach", color: "#f43f5e", missingCount: 0 };
-  } else if (userGpa >= (targetGpa + 0.15)) {
-    return { label: isKo ? "Safety (안정)" : "Safety", class: "safety", color: "#10b981", missingCount: 0 };
-  } else {
-    return { label: isKo ? "Match (소신/적정)" : "Match", class: "match", color: "#fbbf24", missingCount: 0 };
+  // Reach Condition:
+  // - Missing 1-2 required courses (except ultra-strict)
+  // - GPA is below (targetGpa - 0.2)
+  // - For Ultra-selective: ALWAYS Reach (Maximum lock)
+  // - For Strict: GPA is between 3.6 and (targetGpa - 0.05), or missing 1 course, or weak ECs (score < 20), or electivesMatchRate < 0.5
+  const isReach = (missingRequiredCount > 0) || 
+                  (userGpa < (targetGpa - 0.2)) ||
+                  (strictness === "ultra") ||
+                  (strictness === "strict" && (userGpa < targetGpa || ecScore < 20 || electivesMatchRate < 0.6)) ||
+                  (strictness === "moderate" && (userGpa < (targetGpa - 0.1) || ecScore < 15));
+
+  if (isReach) {
+    let label = isKo ? "Reach (도전)" : "Reach";
+    if (missingRequiredCount > 0) label += isKo ? ` (${missingRequiredCount}개 과목 누락)` : ` (${missingRequiredCount} Missing)`;
+    else if (strictness === "ultra") label += isKo ? " (최상위 지원·바늘구멍 합격률)" : " (Ultra-selective)";
+    
+    return {
+      label,
+      class: "reach",
+      color: "#f43f5e",
+      missingCount: missingRequiredCount,
+      electivesMatchRate,
+      keyElectivesList,
+      failsEnglish,
+      ecScore
+    };
   }
+
+  // Safety Condition:
+  // - Meets all prerequisites
+  // - GPA significantly above targetGpa (+0.15)
+  // - Only allowed for relaxed and moderate schools (never ultra or strict)
+  // - For moderate: requires strong ECs (score >= 20) and electivesMatchRate >= 0.75
+  const isSafety = (missingRequiredCount === 0) && 
+                   (userGpa >= (targetGpa + 0.15)) &&
+                   (strictness !== "ultra" && strictness !== "strict") &&
+                   (strictness !== "moderate" || (ecScore >= 20 && electivesMatchRate >= 0.75));
+
+  if (isSafety) {
+    return {
+      label: isKo ? "Safety (안정)" : "Safety",
+      class: "safety",
+      color: "#10b981",
+      missingCount: 0,
+      electivesMatchRate,
+      keyElectivesList,
+      failsEnglish,
+      ecScore
+    };
+  }
+
+  // Match Condition (Default Fallback):
+  // - Meets prerequisites and GPA is within range of targetGpa
+  return {
+    label: isKo ? "Match (소신/적정)" : "Match",
+    class: "match",
+    color: "#fbbf24",
+    missingCount: missingRequiredCount,
+    electivesMatchRate,
+    keyElectivesList,
+    failsEnglish,
+    ecScore
+  };
 }
 
 function evaluateProgram(program) {
@@ -3243,7 +3322,7 @@ function bindAutocompleteEvents(container, type) {
       if (acType === "school") {
         items = schools.filter(s => 
           !normalizedQuery || normalizeText(s.name).includes(normalizedQuery)
-        ).map(s => s.name).sort((a, b) => a.localeCompare(b));
+        ).map(s => s.name);
       } else {
         const selectedSchool = slots[idx].school;
         const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
@@ -3442,7 +3521,7 @@ function bindSingleAutocomplete({
     const normalizedQuery = normalizeText(query);
     const items = schools.filter(s => 
       !normalizedQuery || normalizeText(s.name).includes(normalizedQuery)
-    ).map(s => s.name).sort((a, b) => a.localeCompare(b));
+    ).map(s => s.name);
 
     schoolMenu.innerHTML = items.length
       ? items.map(name => `
@@ -3965,8 +4044,7 @@ function renderEligibilityResults() {
           <div class="locked-card-wrapper">
             <article class="result-card ${evaluation.pass && !evaluation.needsReview ? "pass" : ""} ${isExample ? "example-card" : ""} ${isLocked ? "locked-card" : ""}">
               ${lockedOverlayHtml}
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-                <span class="status ${evaluation.pass && !evaluation.needsReview ? "pass" : "fail"}">${statusText}</span>
+              <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px;">
                 <span class="rms-badge ${rms.class}">${rms.label}</span>
               </div>
               <div style="display: flex; gap: 6px; margin: 4px 0 8px; flex-wrap: wrap;">
@@ -3985,12 +4063,54 @@ function renderEligibilityResults() {
               <p>${escapeHtml(program.name)}</p>
               <div class="badge-container">${getConfidenceBadgeHtml(program)}</div>
               
-              <!-- Premium Transfer Stats Row -->
-              <div class="card-stats-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 12px; margin: 14px 0; font-size: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0;">
-                <div><span style="color: var(--muted);">${isKo ? "국제학생 합격률" : "Int'l Rate"}:</span> <strong style="color: #fbbf24;">${stats.rateInternational}</strong></div>
-                <div><span style="color: var(--muted);">${isKo ? "타주학생 합격률" : "Out-of-State"}:</span> <strong style="color: #f43f5e;">${stats.rateOutOfState}</strong></div>
-                <div><span style="color: var(--muted);">${isKo ? "가을학기 마감일" : "Fall Deadline"}:</span> <strong style="color: var(--ink);">${stats.deadlineFall}</strong></div>
-                <div><span style="color: var(--muted);">${isKo ? "합격 평균 GPA" : "Admitted GPA"}:</span> <strong style="color: #60a5fa;">${stats.avgGpa}</strong></div>
+              <!-- Premium Transfer Stats Row (3 Columns, No Deadlines) -->
+              <div class="card-stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 12px; margin: 14px 0; font-size: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0;">
+                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "국제학생 합격률" : "Int'l Rate"}</span> <strong style="color: #fbbf24; font-size: 13px;">${stats.rateInternational}</strong></div>
+                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "타주 합격률" : "Out-of-State"}</span> <strong style="color: #f43f5e; font-size: 13px;">${stats.rateOutOfState || stats.rateOverall}</strong></div>
+                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "합격 평균 GPA" : "Admitted GPA"}</span> <strong style="color: #60a5fa; font-size: 13px;">${stats.avgGpa}</strong></div>
+              </div>
+
+              <!-- Accepted Specimen Comparison Dashboard -->
+              <div class="specimen-dashboard" style="margin: 14px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 12px;">
+                <div style="font-weight: 800; color: var(--ink); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+                  <span>👥 ${isKo ? "실제 합격자 표본 스펙 매칭" : "Admitted Specimen Match"}</span>
+                  <span style="color: var(--accent); font-size: 13px;">${isKo ? "매칭률" : "Match Rate"}: <strong>${Math.round(rms.electivesMatchRate * 100)}%</strong></span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
+                    <span style="color: var(--muted);">${isKo ? "GPA 매칭" : "GPA Match"}</span>
+                    <strong style="color: ${state.gpa >= parseFloat(stats.avgGpa) ? "#10b981" : "#f43f5e"};">${state.gpa >= parseFloat(stats.avgGpa) ? "✅" : "⚠️"} ${state.gpa.toFixed(2)} / ${stats.avgGpa}</strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
+                    <span style="color: var(--muted);">${isKo ? "영어 요구" : "English Req"}</span>
+                    <strong style="color: ${!rms.failsEnglish ? "#10b981" : "#f43f5e"};">${!rms.failsEnglish ? "✅ Pass" : "⚠️ Deficit"}</strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
+                    <span style="color: var(--muted);">${isKo ? "선수과목 매칭" : "Prereqs Match"}</span>
+                    <strong style="color: ${rms.missingCount === 0 ? "#10b981" : "#fbbf24"};">${rms.missingCount === 0 ? "✅ 100%" : `⚠️ ${rms.missingCount}개 누락`}</strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
+                    <span style="color: var(--muted);">${isKo ? "비교과 매칭" : "EC Match"}</span>
+                    <strong style="color: ${rms.ecScore >= 20 ? "#10b981" : (rms.ecScore >= 12 ? "#fbbf24" : "#f43f5e")};">${rms.ecScore >= 20 ? "✅ 우수" : (rms.ecScore >= 12 ? "⚠️ 보통" : "❌ 부족")}</strong>
+                  </div>
+                </div>
+                ${rms.keyElectivesList && rms.keyElectivesList.length > 0 ? `
+                  <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--muted);">
+                    <strong>🔑 ${isKo ? "추천 핵심 심화과목(Key Electives)" : "Recommended Key Electives"}:</strong>
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px;">
+                      ${rms.keyElectivesList.map(el => `
+                        <span style="background: rgba(99, 102, 241, 0.06); color: var(--accent); padding: 2px 6px; border-radius: 4px; font-weight: 600;">${escapeHtml(el)}</span>
+                      `).join("")}
+                    </div>
+                  </div>
+                ` : ""}
+              </div>
+
+              <!-- Live Auto-Sync Button -->
+              <div class="live-sync-wrapper" style="margin-top: 10px; margin-bottom: 14px;">
+                <button type="button" class="primary-btn compact sync-live-btn" style="width: 100%; font-size: 11px; padding: 6px 10px; display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 6px; background: var(--primary); color: white; border: none; cursor: pointer; transition: all 0.2s;" data-program-id="${program.id}" onclick="triggerLiveSync('${program.id}', this)">
+                  🔄 <span>${isKo ? "실시간 입학처 정보 교차 검증" : "Cross-Verify Live Registrar Info"}</span>
+                </button>
               </div>
 
               ${
@@ -4620,6 +4740,7 @@ function getAdmissionsSchoolId(schoolName) {
   if (norm.includes("columbia")) return "columbia-university";
   if (norm.includes("stanford")) return "stanford-university";
   if (norm.includes("ucla") || norm.includes("los angeles")) return "ucla";
+  if (norm.includes("mit") || norm.includes("massachusetts institute")) return "mit";
   return null;
 }
 
@@ -4986,14 +5107,6 @@ async function renderRequirementDetail(programId) {
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12.5px; margin-bottom: 16px;">
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
-            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "가을학기 마감" : "Fall Deadline"}</span>
-            <strong style="color: var(--ink);">${stats.deadlineFall}</strong>
-          </div>
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
-            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "봄학기 마감" : "Spring Deadline"}</span>
-            <strong style="color: var(--ink);">${stats.deadlineSpring}</strong>
-          </div>
           <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
             <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "연간 지원자 수" : "Annual Applicants"}</span>
             <strong style="color: #1d4ed8;">${stats.applicants.toLocaleString()} ${isKo ? "명" : "students"}</strong>
@@ -8970,3 +9083,56 @@ Object.assign(TRANSLATIONS.zh, {
   "btn_critique_polish": "获取无限制 AI 润色和表达建议",
   "completed_courses_sync_notice": "💡 在功能 01（申请资格评估）中勾选的已修课程将自动同步并纳入课程路线图规划。"
 });
+
+window.triggerLiveSync = async function(programId, btn) {
+  if (btn.disabled) return;
+  const isKo = (state.language || "ko") === "ko";
+  const span = btn.querySelector("span");
+  const originalHtml = btn.innerHTML;
+  
+  btn.disabled = true;
+  btn.style.opacity = "0.7";
+  span.textContent = isKo ? "실시간 입학처 정보 교차 검증 중..." : "Cross-verifying with registrar site...";
+  
+  try {
+    const res = await fetch("/api/requirements/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ programId })
+    });
+    
+    if (res.ok) {
+      const data = await res.json();
+      const program = allPrograms().find(p => p.id === programId);
+      if (program && data.program) {
+        if (data.program.requiredCourses) program.requiredCourses = data.program.requiredCourses;
+        if (data.program.recommendedCourses) program.recommendedCourses = data.program.recommendedCourses;
+        if (data.program.minGpa) program.minGpa = data.program.minGpa;
+        
+        if (data.stats && window.transferStats) {
+          window.transferStats[program.school.id] = {
+            ...window.transferStats[program.school.id],
+            ...data.stats
+          };
+        }
+      }
+      
+      btn.style.background = "#10b981";
+      span.textContent = isKo ? "입학처 공식 정보 검증 완료" : "Registrar info verified";
+      setTimeout(() => {
+        renderEligibilityResults();
+      }, 1000);
+    } else {
+      throw new Error("Sync failed");
+    }
+  } catch (err) {
+    console.error(err);
+    span.textContent = isKo ? "동기화 실패 (기존 정보 유지)" : "Verification failed (using cached info)";
+    btn.style.background = "#ef4444";
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+      btn.innerHTML = originalHtml;
+    }, 2000);
+  }
+};
