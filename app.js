@@ -20,8 +20,8 @@ const TRANSLATIONS = {
     "mobile_nav_roadmap": "Roadmap",
     "mobile_nav_essay": "EssayAI",
     "mobile_nav_pricing": "Pricing",
-    "nav_statcompass": "01. Eligibility Diagnostics",
-    "ad_eligibility_title": "01. Eligibility Diagnostics (StatCompass)",
+    "nav_statcompass": "01. Target Eligibility Diagnostician",
+    "ad_eligibility_title": "01. Target Eligibility Diagnostician (StatCompass)",
     "ad_eligibility_headline": "Stop wasting tuition. Map your college credentials to elite transfer paths in 1 second.",
     "ad_eligibility_b1": "Instantly audits your current GPA and coursework against all target U.S. universities.",
     "ad_eligibility_b2": "Flags prerequisite gaps, international transcript risks, and credit transfer limits.",
@@ -45,7 +45,7 @@ const TRANSLATIONS = {
     "ad_essay_b2": "Generates custom 3-paragraph outlines mapped to specific university prompt rubrics.",
     "ad_essay_b3": "Provides real-time DOs & DON'Ts and model prose examples for your target major.",
     "ad_essay_btn": "Design My Transfer Essay",
-    "nav_reqradar": "02. Prerequisite Finder",
+    "nav_reqradar": "02. University & Major Explorer",
     "nav_pathfinder": "03. Prerequisite Roadmap",
     "nav_essayai": "04. EssayAI",
     "nav_feedback": "Feedback",
@@ -92,8 +92,8 @@ const TRANSLATIONS = {
     "feature4_title": "04. AI Essay Planner",
     "feature4_body": "Build structured personal statement guides aligned with university-specific rubrics.",
     "demo_eyebrow": "Interactive Product Dashboard",
-    "demo_title": "Eligibility Diagnostics",
-    "tab_eligibility": "Eligibility Diagnostics",
+    "demo_title": "Target Eligibility Diagnostician",
+    "tab_eligibility": "Target Eligibility Diagnostician",
     "tab_requirements": "University & Major Explorer",
     "tab_roadmap": "Prerequisite Roadmap",
     "tab_essay": "AI Essay Planner",
@@ -107,7 +107,7 @@ const TRANSLATIONS = {
     "label_completed_courses": "Completed Core Coursework",
     "label_english_waiver": "English Exam Waiver (U.S. College / SAT / ACT)",
     "target_title": "Select Target Programs",
-    "target_desc": "Analyze unlimited target programs on the Free Plan. Premium unlocks advanced metrics.",
+    "target_desc": "Search and select target programs (Free Plan: max 3 targets).",
     "btn_check_eligibility": "Analyze Eligibility Score",
     "btn_recommend": "View Recommended Targets",
     "recommend_title": "Smart Target Recommendations",
@@ -157,8 +157,9 @@ const TRANSLATIONS = {
     "tier_free_name": "Free Plan",
     "tier_free_price": "0 KRW",
     "tier_free_desc": "For initial feasibility mapping",
-    "tier_free_feature1": "Analyze up to 5 target programs in StatCompass",
-    "tier_free_feature2": "View basic prerequisite mapping list",
+    "tier_free_feature1": "Analyze up to 3 target programs in StatCompass",
+    "tier_free_feature2": "Unlimited access to University & Major Explorer (No Roadmap/EssayAI)",
+    "slot_locked_placeholder": "🔒 Locked (Premium Plan)",
     "tier_pro_name": "Pro Pass",
     "tier_pro_price": "9,900 KRW/mo",
     "tier_pro_desc": "Unlimited university feasibility mappers",
@@ -322,11 +323,11 @@ const TRANSLATIONS = {
     "label_new_password": "New Password",
     "btn_update_password": "Update Password",
     "locked_card_title": "Premium Plan Required",
-    "locked_card_desc": "Detailed GPA and specimen explorer info is Premium-only. Upgrade to unlock.",
+    "locked_card_desc": "From the 4th university, Premium Plan is required for analysis.",
     "btn_upgrade_now": "Upgrade Now",
     "password_change_success": "Password updated successfully!",
     "password_change_invalid": "Current password does not match.",
-    "statcompass_limit_help": "Eligibility Diagnostics is Free and Unlimited for all users. Explore university criteria without bounds.",
+    "statcompass_limit_help": "Free Plan maintains a limit of 3 target schools. Upgrade to Premium for unlimited analyses.",
     "btn_toggle_recommended": "Toggle Recommended Courses",
     "label_birthdate": "Birthdate",
     "auth_underage_error": "You must be 14 or older (13 for US/other) to register.",
@@ -461,14 +462,14 @@ const TRANSLATIONS = {
     "mobile_nav_roadmap": "로드맵",
     "mobile_nav_essay": "에세이",
     "mobile_nav_pricing": "요금제",
-    "nav_statcompass": "01. 지원 자격 진단",
-    "ad_eligibility_title": "01. 지원 자격 진단 (StatCompass)",
+    "nav_statcompass": "01. 학교, 전공 진단기",
+    "ad_eligibility_title": "01. 학교, 전공 진단기 (StatCompass)",
     "ad_eligibility_headline": "학비와 시간 낭비는 이제 그만. 내 학점과 수강 과목으로 지원 가능한 명문대 풀을 1초 만에 확인하세요.",
     "ad_eligibility_b1": "클릭 한 번으로 미국 내 모든 대학의 편입 자격을 즉시 진단합니다.",
     "ad_eligibility_b2": "이수 학점 제한, 유학생 영어 미니멈, 선수과목 누락 리스크를 자동으로 적출합니다.",
     "ad_eligibility_b3": "합격 확률을 극대화할 수 있는 계열별 최적의 대체 전공과 대학을 추천합니다.",
     "ad_eligibility_btn": "무료 지원 자격 진단하기",
-    "ad_requirements_title": "02. 선수과목 통합 검색 (ReqRadar)",
+    "ad_requirements_title": "02. 학교, 전공 탐색기 (ReqRadar)",
     "ad_requirements_headline": "대학 입학처 홈페이지와 해마다 바뀌는 PDF 요강 속에서 헤매지 마세요.",
     "ad_requirements_b1": "공식 Common Data Set (CDS) 및 대학 정보에 정렬된 검증된 선수과목 DB를 직접 조회합니다.",
     "ad_requirements_b2": "이수 과목별 최소 성적 기준(최소 B 또는 C) 및 필수 렉처/랩 분리 기준을 제공합니다.",
@@ -486,7 +487,7 @@ const TRANSLATIONS = {
     "ad_essay_b2": "대학 입학처가 에세이 심사 시 실제 활용하는 루브릭(채점 기준)에 최적화된 3문단 설계도를 빌드합니다.",
     "ad_essay_b3": "문단별 강력한 서술 공식(DOs & DON'Ts) 및 검증된 고품질 우수 영문 예시를 즉시 제공합니다.",
     "ad_essay_btn": "에세이 스토리라인 설계하기",
-    "nav_reqradar": "02. 선수과목 검색",
+    "nav_reqradar": "02. 학교, 전공 탐색기",
     "nav_pathfinder": "03. 수강 로드맵",
     "nav_essayai": "04. 에세이AI",
     "nav_feedback": "피드백",
@@ -524,7 +525,7 @@ const TRANSLATIONS = {
     "coverage_desc": "데이터베이스에 포함된 각 대학/학과별 요건 커버리지 점수, 수강 로드맵, 필요 영어 시험 점수 등을 입체적으로 비교 분석합니다.",
     "feature_eyebrow": "왜 TransferChek인가?",
     "feature_heading": "편입 준비에서 가장 치명적인 실수는, 편입에 인정되지 않는 과목을 수강하는 것입니다.",
-    "feature1_title": "지원 자격 충족 진단기",
+    "feature1_title": "학교, 전공 진단기",
     "feature1_body": "내 스펙으로 지원 가능한 대학을 즉시 발굴하세요. '이 학교도 이수 요건을 채웠었구나!'라는 후회가 남지 않도록, 현재 GPA와 이수 과목을 공식 대학 요강과 대조하여 충족 자격을 진단해 줍니다.",
     "feature2_title": "02. 학교, 전공 탐색기",
     "feature2_body": "대학과 전공만 입력하면 실제 합격률, 합격생들의 5년치 GPA 분포, 경쟁력 있는 어학 성적 컷, 추천 선수 과목, 그리고 합격자 실제 스펙 샘플까지 한눈에 보여줍니다.",
@@ -533,8 +534,8 @@ const TRANSLATIONS = {
     "feature4_title": "AI 에세이 전략가",
     "feature4_body": "교내 동아리, 전공 프로젝트, 학술 연구 활동 등의 경험을 명문대 편입 양식에 맞추어 하나의 전공 스토리로 연결합니다. 12만 건 이상의 실제 명문 대학교 합격 에세이 패턴 분석 데이터를 바탕으로, 각 대학의 채점 기준과 에세이 스타일에 맞춤화된 3문단 전략 에세이 설계도를 즉시 생성합니다.",
     "demo_eyebrow": "대화형 제품 대시보드",
-    "demo_title": "지원 자격 충족 진단기",
-    "tab_eligibility": "지원 자격 충족 진단기",
+    "demo_title": "학교, 전공 진단기",
+    "tab_eligibility": "학교, 전공 진단기",
     "tab_requirements": "학교, 전공 탐색기",
     "tab_roadmap": "최적화 수강 로드맵 빌더",
     "tab_essay": "AI 에세이 전략가",
@@ -548,7 +549,7 @@ const TRANSLATIONS = {
     "label_completed_courses": "이미 수강 완료한 핵심 과목 목록",
     "label_english_waiver": "영어 시험 면제 대상 (미국 대학 이수 / SAT 등)",
     "target_title": "목표 대학 및 학과 선택",
-    "target_desc": "지원하는 타겟 학교를 검색해 추가하세요. (무료 플랜: 무제한 진단 제공)",
+    "target_desc": "지원하는 타겟 학교를 검색해 추가하세요. (무료 플랜: 최대 3개)",
     "btn_check_eligibility": "전략 리스크 분석",
     "btn_recommend": "추천 타겟 대학 보기",
     "recommend_title": "프로필 기반 스마트 추천 대학",
@@ -598,8 +599,9 @@ const TRANSLATIONS = {
     "tier_free_name": "무료 플랜 (Free Plan)",
     "tier_free_price": "0원",
     "tier_free_desc": "기본 지원 가능 대학 탐색용",
-    "tier_free_feature1": "지원 가능 판단 기능 내 대학 분석 최대 5개 한도 제공",
-    "tier_free_feature2": "이수 완료 과목 기본 데이터 매핑 제공",
+    "tier_free_feature1": "학교, 전공 진단기 내 대학 분석 최대 3개 한도 제공",
+    "tier_free_feature2": "학교, 전공 탐색기(선수과목 조건) 무제한 무료 제공",
+    "slot_locked_placeholder": "🔒 잠김 (Premium 플랜 전용)",
     "tier_pro_name": "Pro 패스",
     "tier_pro_price": "월 9,900원",
     "tier_pro_desc": "지원 가능 전공 무제한 탐색용",
@@ -763,11 +765,11 @@ const TRANSLATIONS = {
     "label_new_password": "새로운 비밀번호",
     "btn_update_password": "비밀번호 변경",
     "locked_card_title": "Premium 플랜 전용",
-    "locked_card_desc": "최근 합격생 스펙 및 구체적 합격자 표본은 Premium 플랜에서 열람 가능합니다.",
+    "locked_card_desc": "4번째 대학부터는 Premium 플랜 이상에서 분석 가능합니다.",
     "btn_upgrade_now": "지금 업그레이드",
     "password_change_success": "비밀번호가 성공적으로 변경되었습니다!",
     "password_change_invalid": "현재 비밀번호가 올바르지 않습니다.",
-    "statcompass_limit_help": "지원 자격 진단기(Eligibility Diagnostics)는 무료로 무제한 사용하실 수 있습니다. 가고자 하는 대학교를 한계 없이 진단해 보세요.",
+    "statcompass_limit_help": "무료 플랜에서는 최대 3개의 목표 대학만 검색 및 진단할 수 있습니다. Premium 플랜으로 업그레이드하여 한계 없이 진단해 보세요.",
     "btn_toggle_recommended": "추천 과목 보기/숨기기",
     "label_birthdate": "생년월일 (Birthdate)",
     "auth_underage_error": "만 14세 미만(미국/기타 국적은 만 13세 미만)은 회원가입이 제한됩니다.",
@@ -965,9 +967,9 @@ const TRANSLATIONS = {
     "feature4_title": "AI转学文书策略家",
     "feature4_body": "将您的个人项目、社团或学术成果转化为富有逻辑的学术故事。基于对 120,000+ 篇成功转学文书的模式分析，瞬间生成与名校录取偏好契合的3段式策略性文书大纲指南。",
     "demo_eyebrow": "交互式产品仪表盘",
-    "demo_title": "转学先修资格评估仪",
-    "tab_eligibility": "转学先修资格评估仪",
-    "tab_requirements": "先修课程搜索引擎",
+    "demo_title": "院校与专业诊断器",
+    "tab_eligibility": "院校与专业诊断器",
+    "tab_requirements": "院校与专业探索器",
     "tab_roadmap": "最优选课路线规划",
     "tab_essay": "AI转学文书策略家",
     "profile_title": "输入您的学术档案",
@@ -980,7 +982,7 @@ const TRANSLATIONS = {
     "label_completed_courses": "已修完的核心课程列表",
     "label_english_waiver": "免除英语考试 (美高美本学分 / SAT / ACT)",
     "target_title": "选择目标大学及专业",
-    "target_desc": "搜索并选择您的目标院校和专业。(免费方案：最多评估5所)",
+    "target_desc": "搜索并选择您的目标院校和专业。(免费方案：最多评估3所)",
     "btn_check_eligibility": "评估课程覆盖率",
     "btn_recommend": "查看智能推荐大学",
     "recommend_title": "基于学术档案的智能推荐",
@@ -1027,8 +1029,9 @@ const TRANSLATIONS = {
     "tier_free_name": "免费方案 (Free Plan)",
     "tier_free_price": "0 KRW",
     "tier_free_desc": "基础功能体验",
-    "tier_free_feature1": "转学可行性分析仪 (服务1) 可评估最多5个目标专业",
-    "tier_free_feature2": "限制访问先修课程搜索引擎、最优选课路线规划以及AI转学文书策略家所有功能",
+    "tier_free_feature1": "院校与专业诊断器 (服务1) 可评估最多3个目标专业",
+    "tier_free_feature2": "院校与专业探索器无限制免费使用",
+    "slot_locked_placeholder": "🔒 已锁定 (Premium 会员专享)",
     "tier_pro_name": "Pro 方案 (Pro Plan)",
     "tier_pro_price": "9,900 KRW/月",
     "tier_pro_desc": "无限制先修资格诊断",
@@ -1186,11 +1189,11 @@ const TRANSLATIONS = {
     "label_new_password": "新密码",
     "btn_update_password": "更新密码",
     "locked_card_title": "仅限 Pro / Premium 方案",
-    "locked_card_desc": "第 6 个目标及以上需要订阅 Pro 或更高方案以进行资格评估。",
+    "locked_card_desc": "从第4所大学起，需订阅 Premium 计划方可进行评估分析。",
     "btn_upgrade_now": "立即升级",
     "password_change_success": "密码更新成功！",
     "password_change_invalid": "当前密码输入不正确。",
-    "statcompass_limit_help": "免费计划限制累计分析最多5所大学。升级到 Pro/Premium 计划以解锁无限分析。",
+    "statcompass_limit_help": "免费计划限制最多分析3所大学。升级到 Premium 计划以解锁无限分析。",
     "btn_toggle_recommended": "切换推荐课程",
     "label_birthdate": "出生日期",
     "auth_underage_error": "未满 14 周岁（美国/其他国家未满 13 周岁）无法注册。",
@@ -1770,7 +1773,11 @@ function updateActivePlanLabel() {
 function updatePlanNoticeVisibility() {
   const notice = qs("#statCompassLimitNotice");
   if (notice) {
-    notice.style.display = "none";
+    if (state.plan === "Free") {
+      notice.style.display = "flex";
+    } else {
+      notice.style.display = "none";
+    }
   }
 }
 
@@ -2976,6 +2983,11 @@ function programsForSchoolName(schoolName) {
 function syncSelectedTargetsFromSlots() {
   const seen = new Set();
   state.targetSlots.forEach((slot, index) => {
+    if (state.plan === "Free" && index >= 3) {
+      slot.school = "";
+      slot.major = "";
+      return;
+    }
     const sName = slot.school?.trim();
     const mName = slot.major?.trim();
     if (sName && mName) {
@@ -2998,8 +3010,11 @@ function syncSelectedTargetsFromSlots() {
   
   const uniqueIds = [...new Set(ids)];
   
-  // Keep all selected targets up to 10 regardless of the Free/Pro plan tier
-  state.selectedTargets = uniqueIds.slice(0, 10);
+  if (state.plan === "Free") {
+    state.selectedTargets = uniqueIds.slice(0, 3);
+  } else {
+    state.selectedTargets = uniqueIds.slice(0, 10);
+  }
 
   saveProfileToLocalStorage();
 }
@@ -3093,23 +3108,26 @@ function renderTargetPicker() {
   
   container.innerHTML = state.targetSlots
     .map((slot, index) => {
+      const isDisabled = state.plan === "Free" && index >= 3;
+      const schoolPlaceholder = isDisabled ? t("slot_locked_placeholder", "🔒 Locked (Premium Plan)") : t("select_school_placeholder", "Select School");
+      const majorPlaceholder = isDisabled ? t("slot_locked_placeholder", "🔒 Locked (Premium Plan)") : (slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First"));
       return `
-        <div class="target-search-row">
+        <div class="target-search-row ${isDisabled ? 'locked-slot' : ''}" style="${isDisabled ? 'opacity: 0.6; pointer-events: none;' : ''}">
           <span class="target-index">${index + 1}</span>
           <div class="target-inputs-group">
             <div class="form-row search-field autocomplete-container" data-autocomplete-type="school" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="targetSchool${index}">${t("label_school", "School")}</label>
               <div style="position: relative; display: flex; align-items: center;">
-                <input type="text" id="targetSchool${index}" class="autocomplete-input school-input" placeholder="${t("select_school_placeholder", "Select School")}" autocomplete="off" value="${escapeHtml(slot.school || '')}" style="width: 100%; padding-right: 30px;" />
-                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;">▼</button>
+                <input type="text" id="targetSchool${index}" class="autocomplete-input school-input" placeholder="${escapeHtml(schoolPlaceholder)}" autocomplete="off" value="${escapeHtml(slot.school || '')}" ${isDisabled ? 'disabled' : ''} style="width: 100%; padding-right: 30px;" />
+                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" ${isDisabled ? 'disabled' : ''}>▼</button>
               </div>
               <div class="search-menu autocomplete-menu hidden" id="targetSchoolMenu${index}"></div>
             </div>
             <div class="form-row search-field autocomplete-container" data-autocomplete-type="major" data-index="${index}" style="position: relative; margin-bottom: 0;">
               <label for="targetMajor${index}">${t("label_major", "Major")}</label>
               <div style="position: relative; display: flex; align-items: center;">
-                <input type="text" id="targetMajor${index}" class="autocomplete-input major-input" placeholder="${slot.school ? t("select_major_placeholder", "Select Major") : t("select_school_first_placeholder", "Select School First")}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${!slot.school ? 'disabled' : ''} style="width: 100%; padding-right: 30px;" />
-                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" ${!slot.school ? 'disabled' : ''}>▼</button>
+                <input type="text" id="targetMajor${index}" class="autocomplete-input major-input" placeholder="${escapeHtml(majorPlaceholder)}" autocomplete="off" value="${escapeHtml(slot.major || '')}" ${isDisabled || !slot.school ? 'disabled' : ''} style="width: 100%; padding-right: 30px;" />
+                <button type="button" class="autocomplete-toggle-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 4px; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5;" ${isDisabled || !slot.school ? 'disabled' : ''}>▼</button>
               </div>
               <div class="search-menu autocomplete-menu hidden" id="targetMajorMenu${index}"></div>
             </div>
@@ -3818,8 +3836,7 @@ function renderEligibilityResults() {
           }))
         ];
 
-        let isLocked = false;
-        // Eligibility Diagnostics is free and unlimited now
+        let isLocked = state.plan === "Free" && idx >= 3 && !isExample;
 
         const lockedOverlayHtml = isLocked ? `
           <div class="locked-overlay">
