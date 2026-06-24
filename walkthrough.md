@@ -194,3 +194,29 @@ We replaced the old placeholders in the video with the following high-fidelity m
   - The mockups are perfectly centered with beautiful blurred edges.
   - The custom drawn Korean subtitles are fully visible, aligned, and have zero spelling errors.
   - Audio and H.264 video format profiles are preserved matching the original parameters.
+
+---
+
+## 🛠️ US News Rankings & 63+ AI Coverage Integration (June 2026)
+
+### 1️⃣ Git Push & Vercel Auto-Deployment
+* Successfully resolved PowerShell script restrictions and pushed all updated code files to the remote repository (`transfercheck-advisory/transfercheck`).
+* Vercel automatic build succeeded and has been deployed to production:
+  - **Live URL**: [https://transfercheck-3jhzdzqxt-hamingim651-5564s-projects.vercel.app](https://transfercheck-3jhzdzqxt-hamingim651-5564s-projects.vercel.app)
+
+### 2️⃣ Database & Stats Integrity Check (63/63 Schools)
+* Executed programmatic verification scripts to audit the transfer database:
+  - Checked `transfer-stats.js` containing real stats keys.
+  - Checked `transfer-data.js` containing school IDs.
+  - **Result**: All 63 schools (including UCLA, Columbia, Washington, NYU, etc.) are 100% matched with zero data loss or mismatch between the diagnostic database and admissions stats.
+
+### 3️⃣ US News Rankings & Ranking Sort
+* Injected US News National Rankings and Major Rankings into `transfer-stats.js` for all 63 schools.
+* Updated `app.js` to automatically sort search results in ascending order based on their US News National Rank.
+* Embedded Rank Badges (e.g., "US News #12 (Major #10)") directly at the top of diagnostic result cards.
+
+### 4️⃣ AI Coverage for Outside Schools
+* Expanded the Target Picker selection dynamically with ~420 additional universities from `all-universities.js`.
+* Configured blur event handlers to prevent user custom inputs from being cleared.
+* Bound the backend endpoint `/api/requirements/generate` powered by Google Search Grounding to automatically fetch CDS statistics, US News rankings, and prerequisite checklists for outside schools in real-time, inserting them dynamically into the active UI state.
+
