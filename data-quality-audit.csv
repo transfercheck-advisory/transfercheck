@@ -44,7 +44,6 @@ University of Michigan,Materials Science and Engineering,verified,true,official_
 University of Michigan,Naval Architecture and Marine Engineering,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Climate and Meteorology,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Business Administration,verified,true,official_site,false,false,false,false,false,false,None
-University of Michigan,Economics,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Psychology,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Biochemistry,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Biology,verified,true,official_site,false,false,false,false,false,false,None
@@ -58,7 +57,7 @@ University of Michigan,Industrial & Operations Eng.,verified,true,official_site,
 University of Michigan,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Naval Architecture & Marine Eng.,verified,true,official_site,false,false,false,false,false,false,None
 University of Michigan,Nuclear Eng. & Radiological Sci.,verified,true,official_site,false,false,false,false,false,false,None
-University of Michigan,Economics (LSA),verified,true,official_site,false,false,false,false,false,false,None
+University of Michigan,Economics,verified,true,official_site,false,false,false,false,false,false,None
 Columbia University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
 Columbia University,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
 Columbia University,Electrical Engineering,verified,true,official_site,false,false,false,false,false,false,None
@@ -224,6 +223,7 @@ New York University,"Integrated Design & Media, B.S.",verified,true,official_sit
 New York University,"Mathematics, B.S.",verified,true,official_site,false,false,false,false,false,false,None
 New York University,"Mathematics & Physics, B.S.",verified,true,official_site,false,false,false,false,false,false,None
 New York University,"Mechanical Engineering, B.S.",verified,true,official_site,false,false,false,false,false,false,None
+New York University,Applied Mathematics,high_risk,false,none,false,false,false,false,false,true,No official required courses listed; Missing verification note or source
 Texas A&M University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
 Texas A&M University,Data Science,verified,true,official_site,false,false,false,false,false,false,None
 Texas A&M University,Information Technology,verified,true,official_site,false,false,false,false,false,false,None
@@ -538,6 +538,16 @@ UC Berkeley,Data Science,verified,true,official_site,false,false,false,false,fal
 UC Berkeley,Business Administration,verified,true,official_site,false,false,false,false,false,false,None
 UC Berkeley,Economics,verified,true,official_site,false,false,false,false,false,false,None
 UC Berkeley,Materials Science & Engineering,verified,true,official_site,false,false,false,false,false,false,None
+UC Berkeley,Political Science,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Sociology,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Psychology,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Statistics,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Mathematics,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Integrative Biology,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Molecular & Cell Biology,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,Media Studies,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,English,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UC Berkeley,History,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
 Pennsylvania State University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
 Pennsylvania State University,Data Science,verified,true,official_site,false,false,false,false,false,false,None
 Pennsylvania State University,Information Technology,verified,true,official_site,false,false,false,false,false,false,None
@@ -1877,7 +1887,6 @@ University at Buffalo,Environmental Engineering (BS),verified,true,official_site
 University at Buffalo,Industrial Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
 University at Buffalo,Materials Science and Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
 University at Buffalo,Mechanical Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
-North Carolina State University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Data Science,verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Information Technology,verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None
@@ -1916,7 +1925,7 @@ North Carolina State University,Biomedical Engineering (BS),verified,true,offici
 North Carolina State University,Chemical Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Civil Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Computer Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
-North Carolina State University,Computer Science (BS),verified,true,official_site,false,false,false,false,false,false,None
+North Carolina State University,Computer Science,verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Construction Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Electrical Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
 North Carolina State University,Environmental Engineering (BS),verified,true,official_site,false,false,false,false,false,false,None
@@ -2104,6 +2113,16 @@ UCLA,Bioengineering,verified,true,official_site,false,false,false,false,false,fa
 UCLA,Business Economics,verified,true,official_site,false,false,false,false,false,false,None
 UCLA,Economics,verified,true,official_site,false,false,false,false,false,false,None
 UCLA,Psychology,verified,true,official_site,false,false,false,false,false,false,None
+UCLA,Political Science,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Sociology,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Mathematics,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Statistics,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Biology,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Chemistry,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Communication,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,History,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,English,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
+UCLA,Neuroscience,high_risk,false,none,false,false,false,false,true,true,No official required courses listed; Same required courses shared by 10 majors in this school; Missing verification note or source
 UC Davis,Computer Science,verified,true,assist,false,false,false,false,false,false,None
 UC Davis,Computer Science and Engineering,verified,true,assist,false,false,false,false,false,false,None
 UC Davis,Computer Engineering,verified,true,official_site,false,false,false,false,false,false,None

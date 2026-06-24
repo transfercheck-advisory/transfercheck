@@ -87,6 +87,27 @@ function saveStats(stats) {
   }
 }
 
+function saveSchoolStatsToDisk(schoolId, statsPayload) {
+  const statsFilePath = path.join(__dirname, 'transfer-stats.js');
+  try {
+    if (fs.existsSync(statsFilePath)) {
+      const statsFileContent = fs.readFileSync(statsFilePath, 'utf8');
+      const statsSandbox = { window: {} };
+      vm.createContext(statsSandbox);
+      vm.runInContext(statsFileContent, statsSandbox);
+      const transferStats = statsSandbox.window.transferStats || {};
+      
+      transferStats[schoolId] = statsPayload;
+      
+      const outputStatsContent = `window.transferStats = ${JSON.stringify(transferStats, null, 2)};\n`;
+      fs.writeFileSync(statsFilePath, outputStatsContent, 'utf8');
+      console.log(`Saved generated stats for school ${schoolId} to transfer-stats.js`);
+    }
+  } catch (e) {
+    console.error("Failed to save generated school stats to transfer-stats.js:", e.message);
+  }
+}
+
 // Auth helper functions
 function verifyAdmin(req) {
   const adminSecret = process.env.ADMIN_SECRET_KEY || "temp-admin-secret-key-12345";
@@ -162,22 +183,30 @@ const server = http.createServer((req, res) => {
                   // PayPal USD — amounts in cents
                   if (plan === 'Essay Pass' || plan === 'Essay') {
                     expectedAmount = 800; // $8.00 in cents
+                  } else if (plan === 'Premium') {
+                    expectedAmount = 2200; // $22.00 in cents
                   } else {
-                    expectedAmount = plan === 'Premium' ? 2200 : 800;
+                    verified = false;
+                    console.error(`Invalid USD payment plan: ${plan}`);
                   }
                 } else {
                   // KRW — amounts in raw won (not cents)
                   if (plan === 'Essay Pass' || plan === 'Essay') {
                     expectedAmount = 9900;
+                  } else if (plan === 'Premium') {
+                    expectedAmount = 29900;
                   } else {
-                    expectedAmount = plan === 'Premium' ? 29900 : 9900;
+                    verified = false;
+                    console.error(`Invalid KRW payment plan: ${plan}`);
                   }
                 }
                 
-                const actualAmount = paymentResult.amount?.total ?? paymentResult.amount;
-                if (actualAmount !== expectedAmount) {
-                  verified = false;
-                  console.error(`V2 Amount mismatch: expected ${expectedAmount} ${currency}, got ${actualAmount} ${paymentResult.currency}`);
+                if (verified) {
+                  const actualAmount = paymentResult.amount?.total ?? paymentResult.amount;
+                  if (actualAmount !== expectedAmount) {
+                    verified = false;
+                    console.error(`V2 Amount mismatch: expected ${expectedAmount} ${currency}, got ${actualAmount} ${paymentResult.currency}`);
+                  }
                 }
               } else {
                 verified = false;
@@ -412,6 +441,54 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+async function upsertMajorToSupabase(dbSchool, newMajor) {
+  if (!supabaseAdmin) return;
+  try {
+    const { error: schoolErr } = await supabaseAdmin
+      .from('schools')
+      .upsert({
+        id: dbSchool.id,
+        name: dbSchool.name,
+        short_name: dbSchool.shortName || dbSchool.name
+      });
+    if (schoolErr) {
+      console.error("⚠️ Failed to upsert school to Supabase:", schoolErr);
+      return;
+    }
+    console.log("✅ Successfully upserted school to Supabase:", dbSchool.name);
+
+    const { error: majorErr } = await supabaseAdmin
+      .from('majors')
+      .upsert({
+        id: newMajor.id,
+        school_id: dbSchool.id,
+        name: newMajor.name,
+        min_gpa: newMajor.minGpa,
+        raw_min_gpa: newMajor.rawMinGpa,
+        min_credits: newMajor.minCredits,
+        raw_min_credits: newMajor.rawMinCredits,
+        required_courses: newMajor.requiredCourses,
+        recommended_courses: newMajor.recommendedCourses,
+        raw_required: newMajor.rawRequired,
+        raw_recommended: newMajor.rawRecommended,
+        english_reqs: newMajor.english,
+        english_exemption: newMajor.englishExemption,
+        note: newMajor.note,
+        source_file: newMajor.sourceFile,
+        confidence: newMajor.confidence,
+        raw_official_text: newMajor.rawOfficialText,
+        official_source_url: newMajor.officialSourceUrl
+      });
+    if (majorErr) {
+      console.error("⚠️ Failed to upsert major to Supabase:", majorErr);
+    } else {
+      console.log("✅ Successfully upserted major to Supabase:", newMajor.name);
+    }
+  } catch (dbErr) {
+    console.error("⚠️ Database operations error in upsertMajorToSupabase:", dbErr);
+  }
+}
+
   // API Route: Generate transfer requirements dynamically using Gemini 2.0
   if (req.method === 'POST' && safeUrl === '/api/requirements/generate') {
     let body = '';
@@ -425,13 +502,36 @@ const server = http.createServer((req, res) => {
       }
       let schoolName = '';
       let majorName = '';
+      let programId = '';
       try {
         const parsed = JSON.parse(body);
         schoolName = parsed.schoolName;
         majorName = parsed.majorName;
+        programId = parsed.programId;
+
+        if (programId && (!schoolName || !majorName)) {
+          try {
+            const fileContent = fs.readFileSync(path.join(__dirname, 'transfer-data.js'), 'utf8');
+            const sandbox = { window: {} };
+            vm.createContext(sandbox);
+            vm.runInContext(fileContent, sandbox);
+            const database = sandbox.window.transferDatabase;
+            for (const school of database.schools) {
+              const major = school.majors.find(m => m.id === programId);
+              if (major) {
+                schoolName = school.name;
+                majorName = major.name;
+                break;
+              }
+            }
+          } catch (err) {
+            console.error("Failed to load school/major from local transfer-data.js:", err);
+          }
+        }
+
         if (!schoolName || !majorName) {
           res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
-          res.end(JSON.stringify({ success: false, message: 'schoolName and majorName are required' }));
+          res.end(JSON.stringify({ success: false, message: 'schoolName and majorName (or programId) are required' }));
           return;
         }
 
@@ -470,6 +570,7 @@ const server = http.createServer((req, res) => {
             prerequisiteCompletionTimeline: { type: "string" },
             apIbEquivalency: { type: "string" },
             selectiveMajorStatus: { type: "boolean" },
+            nonExistent: { type: "boolean" },
             officialSourceUrl: { type: "string" },
             usNewsRank: { type: "number" },
             majorRank: { type: "number" },
@@ -491,7 +592,7 @@ const server = http.createServer((req, res) => {
           required: [
             "schoolName", "majorName", "rawMinGpa", "rawMinCredits", 
             "requiredCourses", "recommendedCourses", "englishRequirements", 
-            "englishCourseWaiver", "officialSourceUrl", "usNewsRank", "majorRank", "transferStats"
+            "englishCourseWaiver", "officialSourceUrl", "usNewsRank", "majorRank", "transferStats", "nonExistent"
           ]
         };
 
@@ -501,10 +602,11 @@ Generate the precise transfer prerequisite requirements for the specified major 
 Ensure the output conforms exactly to the provided JSON schema.
 
 Perform real-time Google Search Grounding to extract:
-1. Prerequisite coursework requirements.
-2. The latest official US News National University Ranking (종합 대학 순위) as usNewsRank (integer).
-3. The latest official US News Department/Program Major Ranking (학과 순위, e.g., CS major rank, Undergraduate Business rank) as majorRank (integer). If major-specific rank is unavailable, estimate based on similar programs or general engineering/humanities rankings.
-4. Total transfer applicants, accepted transfer students, overall transfer rate, average GPA, deadlines, AP policies, and advising notes based on recent Common Data Set (CDS) Section D (specifically years 2024 or 2025).
+1. Verify if the specified major exists and is offered at the specified university. If the major does NOT exist (e.g. "Yale University - Nursing" which Yale doesn't offer, or "Stanford University - Business Administration" which Stanford doesn't offer as an undergraduate major), set "nonExistent" to true. Otherwise, set "nonExistent" to false.
+2. Prerequisite coursework requirements.
+3. The latest official US News National University Ranking (종합 대학 순위) as usNewsRank (integer).
+4. The latest official US News Department/Program Major Ranking (학과 순위, e.g., CS major rank, Undergraduate Business rank) as majorRank (integer). If major-specific rank is unavailable, estimate based on similar programs or general engineering/humanities rankings.
+5. Total transfer applicants, accepted transfer students, overall transfer rate, average GPA, deadlines, AP policies, and advising notes based on recent Common Data Set (CDS) Section D (specifically years 2024 or 2025).
 
 Ensure all texts are in English.
 `;
@@ -571,6 +673,26 @@ Ensure all texts are in English.
 
         const geminiResult = await callGemini();
 
+        if (geminiResult.nonExistent) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: '존재하지 않는 전공입니다.' }));
+          return;
+        }
+
+        // Parse and resolve stats payload
+        const statsPayload = {
+          applicants: geminiResult.transferStats?.applicants || 1500,
+          accepted: geminiResult.transferStats?.accepted || 400,
+          rateOverall: geminiResult.transferStats?.rateOverall || "25%",
+          avgGpa: geminiResult.transferStats?.avgGpa || "3.60",
+          deadlineFall: geminiResult.transferStats?.deadlineFall || "March 1",
+          deadlineSpring: geminiResult.transferStats?.deadlineSpring || "N/A",
+          apPolicy: geminiResult.transferStats?.apPolicy || "AP credit evaluated post-admission.",
+          advisingNote: geminiResult.transferStats?.advisingNote || "Admissions are holistically reviewed.",
+          usNewsRank: geminiResult.usNewsRank || 999,
+          majorRank: geminiResult.majorRank || 999
+        };
+
         // Now save to transfer-data.js on disk
         const fileContent = fs.readFileSync(path.join(__dirname, 'transfer-data.js'), 'utf8');
         const sandbox = { window: {} };
@@ -590,7 +712,15 @@ Ensure all texts are in English.
           database.schools.push(dbSchool);
         }
 
-        const newMajorId = `${dbSchool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${majorName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Math.random().toString(36).substring(2, 10)}`;
+        let newMajorId = programId;
+        if (!newMajorId) {
+          const existingLocalMajor = dbSchool.majors.find(m => m.name.toLowerCase() === majorName.toLowerCase());
+          if (existingLocalMajor) {
+            newMajorId = existingLocalMajor.id;
+          } else {
+            newMajorId = `${dbSchool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${majorName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Math.random().toString(36).substring(2, 10)}`;
+          }
+        }
         
         // Construct the new major object matching the schema in transfer-data.js
         const eng = geminiResult.englishRequirements || {};
@@ -610,7 +740,8 @@ Ensure all texts are in English.
             TOEFL: eng.TOEFL !== undefined ? eng.TOEFL : null,
             TOEFL_2026: eng.TOEFL_2026 !== undefined ? eng.TOEFL_2026 : null,
             IELTS: eng.IELTS !== undefined ? eng.IELTS : null,
-            Duolingo: eng.Duolingo !== undefined ? eng.Duolingo : null
+            Duolingo: eng.Duolingo !== undefined ? eng.Duolingo : null,
+            stats: statsPayload
           },
           englishExemption: geminiResult.englishCourseWaiver ? "Waivable with English Composition 1 & 2 courses" : "Standard english test scores required",
           note: `✅ AI On-Demand Generated via Gemini on ${new Date().toISOString().split('T')[0]}\nSource: ${geminiResult.officialSourceUrl || 'Estimated'}\n\n[AI Extraction Details]\n• Course Grade Min: ${geminiResult.gradeMinimumsPerCourse || 'None'}\n• Completion Timeline: ${geminiResult.prerequisiteCompletionTimeline || 'None'}\n• AP/IB Rule: ${geminiResult.apIbEquivalency || 'None'}`,
@@ -639,19 +770,11 @@ Ensure all texts are in English.
           console.warn("⚠️ Failed to write transfer-data.js to disk (likely read-only environment):", writeErr.message);
         }
 
-        // Parse and resolve stats payload
-        const statsPayload = {
-          applicants: geminiResult.transferStats?.applicants || 1500,
-          accepted: geminiResult.transferStats?.accepted || 400,
-          rateOverall: geminiResult.transferStats?.rateOverall || "25%",
-          avgGpa: geminiResult.transferStats?.avgGpa || "3.60",
-          deadlineFall: geminiResult.transferStats?.deadlineFall || "March 1",
-          deadlineSpring: geminiResult.transferStats?.deadlineSpring || "N/A",
-          apPolicy: geminiResult.transferStats?.apPolicy || "AP credit evaluated post-admission.",
-          advisingNote: geminiResult.transferStats?.advisingNote || "Admissions are holistically reviewed.",
-          usNewsRank: geminiResult.usNewsRank || 999,
-          majorRank: geminiResult.majorRank || 999
-        };
+        // Save school stats back to disk
+        saveSchoolStatsToDisk(dbSchool.id, statsPayload);
+
+        // Upsert to Supabase database
+        await upsertMajorToSupabase(dbSchool, newMajor);
 
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ 
@@ -781,7 +904,28 @@ Ensure all texts are in English.
             database.schools.push(dbSchool);
           }
 
-          const newMajorId = `${dbSchool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${majorName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Math.random().toString(36).substring(2, 10)}`;
+          const statsPayload = {
+            applicants: 1500,
+            accepted: 400,
+            rateOverall: "25%",
+            avgGpa: "3.60",
+            deadlineFall: "March 1",
+            deadlineSpring: "N/A",
+            apPolicy: "AP credit evaluated post-admission.",
+            advisingNote: "Admissions are holistically reviewed.",
+            usNewsRank: 999,
+            majorRank: 999
+          };
+
+          let newMajorId = programId;
+          if (!newMajorId) {
+            const existingLocalMajor = dbSchool.majors.find(m => m.name.toLowerCase() === majorName.toLowerCase());
+            if (existingLocalMajor) {
+              newMajorId = existingLocalMajor.id;
+            } else {
+              newMajorId = `${dbSchool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${majorName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Math.random().toString(36).substring(2, 10)}`;
+            }
+          }
           
           const eng = geminiResult.englishRequirements || {};
           const newMajor = {
@@ -800,7 +944,8 @@ Ensure all texts are in English.
               TOEFL: eng.TOEFL !== undefined ? eng.TOEFL : null,
               TOEFL_2026: eng.TOEFL_2026 !== undefined ? eng.TOEFL_2026 : null,
               IELTS: eng.IELTS !== undefined ? eng.IELTS : null,
-              Duolingo: eng.Duolingo !== undefined ? eng.Duolingo : null
+              Duolingo: eng.Duolingo !== undefined ? eng.Duolingo : null,
+              stats: statsPayload
             },
             englishExemption: geminiResult.englishCourseWaiver ? "Waivable with English Composition 1 & 2 courses" : "Standard english test scores required",
             note: `✅ AI Fallback Generated on ${new Date().toISOString().split('T')[0]}\nSource: ${geminiResult.officialSourceUrl}\n\n[Heuristic Profile Details]\n• Course Grade Min: ${geminiResult.gradeMinimumsPerCourse || 'None'}\n• Completion Timeline: ${geminiResult.prerequisiteCompletionTimeline || 'None'}\n• AP/IB Rule: ${geminiResult.apIbEquivalency || 'None'}`,
@@ -828,11 +973,18 @@ Ensure all texts are in English.
             console.warn("⚠️ Failed to write transfer-data.js to disk (likely read-only environment):", writeErr.message);
           }
 
+          // Save school stats back to disk
+          saveSchoolStatsToDisk(dbSchool.id, statsPayload);
+
+          // Upsert to Supabase database
+          await upsertMajorToSupabase(dbSchool, newMajor);
+
           res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
           res.end(JSON.stringify({ 
             success: true, 
             school: { id: dbSchool.id, name: dbSchool.name, shortName: dbSchool.shortName },
-            major: newMajor 
+            major: newMajor,
+            stats: statsPayload
           }));
 
         } catch (fallbackErr) {
@@ -900,15 +1052,25 @@ Ensure all texts are in English.
         }
 
         if (isMajorRelated) score += 5;
+        
+        // Calibrate: standard community college / local school club leadership is Tier 3 (cap score at 17)
+        const isCCorClub = ecLower.includes('community college') || ecLower.includes('cc') || ecLower.includes('동아리') || ecLower.includes('학회') || ecLower.includes('club');
+        const hasInternshipOrResearch = ecLower.includes('intern') || ecLower.includes('research') || ecLower.includes('lab') || ecLower.includes('인턴') || ecLower.includes('연구');
+        if (isCCorClub && !hasInternshipOrResearch) {
+          if (score >= 18) {
+            score = 17;
+          }
+        }
+
         if (score > 30) score = 30;
 
-        let tier = isKo ? 'Tier 4: 기본 참여 활동' : 'Tier 4: Basic Participation';
-        if (score >= 24) {
+        let tier = isKo ? 'Tier 4: 일반 참여 및 봉사 활동' : 'Tier 4: Basic Participation';
+        if (score >= 25) {
           tier = isKo ? 'Tier 1-2: 전국구 및 고영향력 리더십' : 'Tier 1-2: National/High-Impact Leadership';
-        } else if (score >= 17) {
-          tier = isKo ? 'Tier 2-3: 지역 및 교내 리더십' : 'Tier 2-3: Regional/School Leadership';
-        } else if (score >= 12) {
-          tier = isKo ? 'Tier 3-4: 교내 동아리 활동' : 'Tier 3-4: School/Local Club Activities';
+        } else if (score >= 18) {
+          tier = isKo ? 'Tier 2-3: 지역 및 주 단위 리더십' : 'Tier 2-3: State/Regional Leadership';
+        } else if (score >= 11) {
+          tier = isKo ? 'Tier 3: 교내 동아리 회장 및 리더십' : 'Tier 3: School/Local Leadership';
         }
 
         const majorRelevance = isMajorRelated ? 'High' : (score > 12 ? 'Medium' : 'Low');
@@ -944,14 +1106,18 @@ Your job is to analyze and evaluate a transfer applicant's raw extracurricular a
 
 You must evaluate the activities based on:
 1. Leadership and Impact (Scale of impact: international, national, state, regional, school-wide, or minimal).
-2. Major-Relatedness / Depth of alignment with the target academic track (${majorArea || 'General'}).
+2. Major-Relatedness / Depth of alignment with the target academic track (\${majorArea || 'General'}).
 3. Professionalism and achievements (internships, research, publications, contests).
+
+CRITICAL CALIBRATION FOR TIER CLASSIFICATION:
+- A standard community college (CC) club president, founder of a local campus interest group, student government senator, or minor officer MUST be classified as "Tier 3: School/Local" (score range 10-17).
+- Do NOT award Tier 2 or Tier 1 for standard campus club leadership (e.g. CC Math Club President, CC Coding Club Founder) unless there is verified national-level recognition, research published in peer-reviewed journals, or significant external venture-backed funding/incubation.
 
 You must return a JSON response with the following keys:
 - score: an integer between 0 and 30 representing the EC strength.
   - 25-30: Exceptional (Tier 1/2: national recognition, published research, founder, tech-lead/intern at top firms, state champion).
-  - 18-24: Strong (Tier 2/3: club president, research assistant, startup intern, state/school contest winner).
-  - 10-17: Moderate (Tier 3/4: club officer, member of multiple organizations, some personal projects).
+  - 18-24: Strong (Tier 2/3: high-impact state/regional recognition, startup intern with major achievements, published author in regional journals).
+  - 10-17: Moderate (Tier 3: standard campus club president/officer, member of multiple organizations, some personal projects).
   - 0-9: Basic (Tier 4: participant, no leadership roles, minimal relevance).
 - tier: a string indicating the estimated activity tier (e.g. "Tier 1: International/National", "Tier 2: State/Regional", "Tier 3: School/Local", "Tier 4: Basic Participation").
 - majorRelevance: a string (either "High", "Medium", or "Low").

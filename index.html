@@ -62,8 +62,8 @@
       <nav class="site-nav" aria-label="Website Menu">
         <a href="javascript:void(0)" id="openPricingBtn" data-i18n="nav_pricing">Subscription Plans</a>
         <a href="#solution" data-i18n="nav_solution">Features</a>
-        <a href="javascript:void(0)" onclick="handleDrawerNavigation('eligibility')" data-i18n="nav_statcompass">01. 지원 가능 판단</a>
-        <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" data-i18n="nav_reqradar">02. 학교, 전공 탐색기</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('eligibility')" data-i18n="nav_statcompass">01. 합격 진단기</a>
+        <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" data-i18n="nav_reqradar">02. 편입 정보 탐색기</a>
         <a href="javascript:void(0)" onclick="handleDrawerNavigation('roadmap')" data-i18n="nav_pathfinder">03. 수강 로드맵 생성</a>
         <a href="javascript:void(0)" onclick="handleDrawerNavigation('essay')" data-i18n="nav_essayai">04. EssayAI</a>
         <a href="#feedback" data-i18n="nav_feedback">Feedback</a>
@@ -212,62 +212,7 @@
         </div>
       </section>
 
-      <!-- Admitted Cases Marketing Showcase -->
-      <section class="section" id="cases-showcase" style="border-top: 1px solid var(--line); padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 64px); background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.02) 50%, transparent 100%);">
-        <div class="section-heading" style="text-align: center; margin-bottom: 48px;">
-          <p class="eyebrow" data-i18n="cases_showcase_eyebrow" style="color: #10b981; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Admissions Specimen Database</p>
-          <h2 data-i18n="cases_showcase_heading" style="font-size: clamp(24px, 4vw, 36px); font-weight: 900; color: var(--primary-dark); margin-top: 10px;">Analyze Admission Specimen Database Compiled from Public Datasets</h2>
-          <p data-i18n="cases_showcase_desc" style="font-size: 15px; color: var(--muted); max-width: 700px; margin: 12px auto 0 auto; line-height: 1.6;">
-            Explore anonymized historical transfer profiles compiled from public university datasets and community reports. This reference database represents external admitted statistics to help you benchmark your transfer candidacy, not direct client results of this service.
-          </p>
-        </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto;">
-          <!-- Case 1: CS -->
-          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-soft);">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px;">
-              <span style="font-weight: 800; color: #10b981; font-size: 15px;" data-i18n="case_showcase_c1_title">STEM: CS Transfer</span>
-              <span style="font-size: 11px; background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 3px 8px; border-radius: 6px; font-weight: 700;" data-i18n="case_showcase_status">Admitted Sample</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13.5px;">
-              <div><span style="color: var(--muted);" data-i18n="label_case_gpa">GPA:</span> <strong style="color: var(--ink);">3.94</strong></div>
-              <div><span style="color: var(--muted);" data-i18n="label_case_origin">Origin:</span> <strong style="color: var(--ink);" data-i18n="case_showcase_c1_origin">De Anza (CC)</strong></div>
-              <div style="grid-column: span 2;"><span style="color: var(--muted);" data-i18n="label_case_extra">Key Extracurriculars:</span> <p style="margin: 4px 0 0 0; color: var(--muted); line-height: 1.4;" data-i18n="case_showcase_c1_extra">Built a React scheduling app, tutored calculus, joined Robotics Club.</p></div>
-            </div>
-          </div>
-          
-          <!-- Case 2: Business -->
-          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-soft);">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px;">
-              <span style="font-weight: 800; color: #fbbf24; font-size: 15px;" data-i18n="case_showcase_c2_title">Business Transfer</span>
-              <span style="font-size: 11px; background: rgba(251, 191, 36, 0.1); color: #fbbf24; padding: 3px 8px; border-radius: 6px; font-weight: 700;" data-i18n="case_showcase_status_haas">Admitted Sample (Haas)</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13.5px;">
-              <div><span style="color: var(--muted);" data-i18n="label_case_gpa">GPA:</span> <strong style="color: var(--ink);">3.92</strong></div>
-              <div><span style="color: var(--muted);" data-i18n="label_case_origin">Origin:</span> <strong style="color: var(--ink);" data-i18n="case_showcase_c2_origin">Diablo Valley (CC)</strong></div>
-              <div style="grid-column: span 2;"><span style="color: var(--muted);" data-i18n="label_case_extra">Key Extracurriculars:</span> <p style="margin: 4px 0 0 0; color: var(--muted); line-height: 1.4;" data-i18n="case_showcase_c2_extra">Summer audit internship, President of CC Finance & Investment Society.</p></div>
-            </div>
-          </div>
-
-          <!-- Case 3: Humanities -->
-          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-soft);">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px;">
-              <span style="font-weight: 800; color: #3b82f6; font-size: 15px;" data-i18n="case_showcase_c3_title">Humanities: Psych Transfer</span>
-              <span style="font-size: 11px; background: rgba(59, 130, 246, 0.1); color: #3b82f6; padding: 3px 8px; border-radius: 6px; font-weight: 700;" data-i18n="case_showcase_status_ucla">Admitted Sample (UCLA)</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13.5px;">
-              <div><span style="color: var(--muted);" data-i18n="label_case_gpa">GPA:</span> <strong style="color: var(--ink);">3.87</strong></div>
-              <div><span style="color: var(--muted);" data-i18n="label_case_origin">Origin:</span> <strong style="color: var(--ink);" data-i18n="case_showcase_c3_origin">Santa Monica (CC)</strong></div>
-              <div style="grid-column: span 2;"><span style="color: var(--muted);" data-i18n="label_case_extra">Key Extracurriculars:</span> <p style="margin: 4px 0 0 0; color: var(--muted); line-height: 1.4;" data-i18n="case_showcase_c3_extra">Crisis text line counselor, volunteer research assistant in cognitive lab.</p></div>
-            </div>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-          <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px;" data-i18n="cases_showcase_cta_note">Explore all 58 target universities and unlock complete success profiles. *Note: Specimen data are reference examples compiled from public statistics, not direct client admissions.</p>
-          <a href="#demo" class="primary-btn" onclick="activateProductTab('requirements')" data-i18n="btn_cases_showcase">Explore Database in ReqRadar</a>
-        </div>
-      </section>
 
       <!-- 5-Step Transfer Guide Section -->
       <section class="section" id="transfer-guide" style="background: rgba(197, 168, 128, 0.04); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 64px); margin: 40px 0; overflow: hidden;">
@@ -342,8 +287,8 @@
               <p style="font-size: 13px; color: var(--muted); margin: 0 0 24px 0; line-height: 1.5;" data-i18n="tier_free_desc">기본 지원 가능 대학 탐색용</p>
               <hr style="border: none; border-top: 1px solid var(--line); margin-bottom: 24px;">
               <ul style="padding-left: 18px; font-size: 13.5px; color: var(--muted); margin: 0; display: grid; gap: 12px; line-height: 1.5; list-style-type: disc;">
-                <li data-i18n="tier_free_feature1">학교, 전공 진단기 내 대학 분석 최대 3개 한도 제공</li>
-                <li data-i18n="tier_free_feature2">학교·전공 탐색기, 수강 로드맵 빌더, AI 에세이 이용 불가 (잠금)</li>
+                <li data-i18n="tier_free_feature1">합격 진단기 내 대학 분석 최대 3개 한도 제공</li>
+                <li data-i18n="tier_free_feature2">편입 정보 탐색기, 수강 로드맵 빌더, AI 에세이 이용 불가 (잠금)</li>
               </ul>
             </div>
             <button class="secondary-btn full" style="margin-top: 36px; min-height: 48px; border-radius: 10px; font-weight: 800;" onclick="selectUserPlan('Free')" data-i18n="btn_free_action">무료 선택</button>
@@ -1038,7 +983,7 @@
         <p class="eyebrow" id="authModeLabel">Account</p>
         <h2 id="authTitle">Log in</h2>
         <p class="auth-note" data-i18n="auth_note">
-          Demo accounts are simulated in this browser session. Official security configurations require secure database sync.
+          Your account credentials and application details are securely synchronized with the database.
         </p>
         <form class="auth-form" id="authForm">
           <div class="form-row">
@@ -1265,7 +1210,7 @@
 
     <!-- AI Prerequisite Generator Modal -->
     <div class="auth-modal hidden" id="generateReqModal" role="dialog" aria-modal="true" aria-labelledby="generateReqTitle">
-      <div class="auth-card" style="width: min(500px, 100%);">
+      <div class="auth-card" style="width: min(500px, 100%); max-height: 90vh; overflow-y: auto;">
         <button class="auth-close" onclick="closeOnDemandScrapeModal()" type="button" aria-label="Close">x</button>
         <span style="font-size: 11px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;" data-i18n="gen_modal_subtitle">100% Major Coverage</span>
         <h2 id="generateReqTitle" style="font-size: 22px; font-weight: 800; color: var(--ink); line-height: 1.4; margin-bottom: 12px;" data-i18n="gen_modal_title">AI Real-Time Prerequisite Generator</h2>
@@ -1327,14 +1272,14 @@
           <a href="javascript:void(0)" onclick="handleDrawerNavigation('eligibility')" class="drawer-nav-item">
             <span class="num">01</span>
             <div class="txt">
-              <span class="title" data-i18n="drawer_nav1_title">01. 지원 가능 판단</span>
+              <span class="title" data-i18n="drawer_nav1_title">01. 합격 진단기</span>
               <span class="desc" data-i18n="drawer_nav1_desc">현재 내 스펙으로 지원 가능한 대학 진단</span>
             </div>
           </a>
           <a href="javascript:void(0)" onclick="handleDrawerNavigation('requirements')" class="drawer-nav-item">
             <span class="num">02</span>
             <div class="txt">
-              <span class="title" data-i18n="drawer_nav2_title">02. 학교, 전공 탐색기</span>
+              <span class="title" data-i18n="drawer_nav2_title">02. 편입 정보 탐색기</span>
               <span class="desc" data-i18n="drawer_nav2_desc">합격률, 최근 5년치 GPA 및 스펙 예시 조회</span>
             </div>
           </a>
@@ -1380,11 +1325,11 @@
     <nav class="mobile-bottom-nav" aria-label="Mobile Bottom Menu">
       <button onclick="handleMobileBottomNav('eligibility')" id="btnMobileNavEligibility" class="mobile-nav-item active">
         <span class="icon">📊</span>
-        <span class="label" data-i18n="mobile_nav_eligibility">자격진단</span>
+        <span class="label" data-i18n="mobile_nav_eligibility">합격진단</span>
       </button>
       <button onclick="handleMobileBottomNav('requirements')" id="btnMobileNavRequirements" class="mobile-nav-item">
         <span class="icon">🔍</span>
-        <span class="label" data-i18n="mobile_nav_requirements">전공 탐색기</span>
+        <span class="label" data-i18n="mobile_nav_requirements">정보 탐색기</span>
       </button>
       <button onclick="handleMobileBottomNav('roadmap')" id="btnMobileNavRoadmap" class="mobile-nav-item">
         <span class="icon">📅</span>
@@ -1404,6 +1349,7 @@
     <script>
       const ts = Date.now();
       document.write('<script src="./all-universities.js?v=' + ts + '"><\/script>');
+      document.write('<script src="./transfer-data.js?v=' + ts + '"><\/script>');
       document.write('<script src="./course-catalog.js?v=' + ts + '"><\/script>');
       document.write('<script src="./admissions-cases.js?v=' + ts + '"><\/script>');
       document.write('<script src="./transfer-stats.js?v=' + ts + '"><\/script>');

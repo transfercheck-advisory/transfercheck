@@ -146,7 +146,7 @@ const TRANSLATIONS = {
     "feedback_sending": "Sending feedback...",
     "feedback_success": "Thank you! Your feedback has been sent successfully.",
     "feedback_failed": "Feedback submission failed:",
-    "auth_note": "Demo accounts are simulated in this browser session. Official security configurations require secure database sync.",
+    "auth_note": "Your account credentials and application details are securely synchronized with the database.",
     "label_email": "Email",
     "label_password": "Password",
     "pricing_modal_title": "Membership Pricing",
@@ -157,8 +157,8 @@ const TRANSLATIONS = {
     "tier_free_name": "Free Plan",
     "tier_free_price": "0 KRW",
     "tier_free_desc": "For initial feasibility mapping",
-    "tier_free_feature1": "Analyze up to 3 target programs in StatCompass",
-    "tier_free_feature2": "No access to University Explorer, Roadmap Builder, or EssayAI (Locked)",
+    "tier_free_feature1": "Analyze up to 3 target programs in Acceptance Diagnostics",
+    "tier_free_feature2": "Explore up to 3 target programs in Transfer Information Explorer (Pathfinder & EssayAI are Locked)",
     "slot_locked_placeholder": "🔒 Locked (Premium Plan)",
     "tier_pro_name": "Pro Pass",
     "tier_pro_price": "9,900 KRW/mo",
@@ -168,7 +168,7 @@ const TRANSLATIONS = {
     "tier_premium_name": "Premium Planner",
     "tier_premium_price": "29,900 KRW/mo",
     "tier_premium_desc": "All-in-one roadmap & essay suite + 100% Data Integrity Refund Pledge",
-    "tier_premium_feature1": "Unlimited access to StatCompass, ReqRadar & Pathfinder",
+    "tier_premium_feature1": "Unlimited access to Acceptance Diagnostics, Transfer Information Explorer & Pathfinder",
     "tier_premium_feature2": "AI Essay: 1 active target school outline (Must be used within 1 month of purchase)",
     "tier_premium_feature3": "★ AI-driven essay blueprints & custom admitted templates unlocked instantly",
     "tier_essay_pass_name": "AI Target Essay Pass",
@@ -458,19 +458,19 @@ const TRANSLATIONS = {
     "refer_to_catalog_wording": "아래 공식 요강 안내를 참조하세요",
     "nav_pricing": "멤버십 요금제",
     "nav_solution": "서비스 안내",
-    "mobile_nav_eligibility": "자격진단",
-    "mobile_nav_requirements": "선수과목",
+    "mobile_nav_eligibility": "합격진단",
+    "mobile_nav_requirements": "정보 탐색기",
     "mobile_nav_roadmap": "로드맵",
     "mobile_nav_essay": "에세이",
     "mobile_nav_pricing": "요금제",
-    "nav_statcompass": "01. 학교, 전공 진단기",
-    "ad_eligibility_title": "01. 학교, 전공 진단기 (StatCompass)",
+    "nav_statcompass": "01. 합격 진단기",
+    "ad_eligibility_title": "01. 합격 진단기 (StatCompass)",
     "ad_eligibility_headline": "학비와 시간 낭비는 이제 그만. 내 학점과 수강 과목으로 지원 가능한 명문대 풀을 1초 만에 확인하세요.",
     "ad_eligibility_b1": "클릭 한 번으로 미국 내 모든 대학의 편입 자격을 즉시 진단합니다.",
     "ad_eligibility_b2": "이수 학점 제한, 유학생 영어 미니멈, 선수과목 누락 리스크를 자동으로 적출합니다.",
     "ad_eligibility_b3": "합격 확률을 극대화할 수 있는 계열별 최적의 대체 전공과 대학을 추천합니다.",
     "ad_eligibility_btn": "무료 지원 자격 진단하기",
-    "ad_requirements_title": "02. 학교, 전공 탐색기 (ReqRadar)",
+    "ad_requirements_title": "02. 편입 정보 탐색기 (ReqRadar)",
     "ad_requirements_headline": "대학 입학처 홈페이지와 해마다 바뀌는 PDF 요강 속에서 헤매지 마세요.",
     "ad_requirements_b1": "공식 Common Data Set (CDS) 및 대학 정보에 정렬된 검증된 선수과목 DB를 직접 조회합니다.",
     "ad_requirements_b2": "이수 과목별 최소 성적 기준(최소 B 또는 C) 및 필수 렉처/랩 분리 기준을 제공합니다.",
@@ -488,7 +488,7 @@ const TRANSLATIONS = {
     "ad_essay_b2": "대학 입학처가 에세이 심사 시 실제 활용하는 루브릭(채점 기준)에 최적화된 3문단 설계도를 빌드합니다.",
     "ad_essay_b3": "문단별 강력한 서술 공식(DOs & DON'Ts) 및 검증된 고품질 우수 영문 예시를 즉시 제공합니다.",
     "ad_essay_btn": "에세이 스토리라인 설계하기",
-    "nav_reqradar": "02. 학교, 전공 탐색기",
+    "nav_reqradar": "02. 편입 정보 탐색기",
     "nav_pathfinder": "03. 수강 로드맵",
     "nav_essayai": "04. 에세이AI",
     "nav_feedback": "피드백",
@@ -500,7 +500,7 @@ const TRANSLATIONS = {
     "hero_lead": "TransferChek은 미국 대학 입학처의 공식 가이드라인을 정밀 파싱하여 편입에 필요한 모든 핵심 전략(지원 자격 진단, 선수과목 매핑, 수강 로드맵, 에세이 설계)을 실시간 자동화 엔진으로 설계합니다.",
     "hero_cta_demo": "전략 엔진 시작하기",
     "hero_cta_solution": "서비스 핵심 기능 보기",
-    "hero_proof_regret": "01. 내 스펙 경쟁력 진단기 (StatCompass)",
+    "hero_proof_regret": "01. 합격 진단기 (StatCompass)",
     "hero_proof_regret_desc": "나의 대학 GPA, 이수 과목, 영어 성적, 비교과 활동 점수를 실제 합격자 표본 스펙 및 합격률과 매칭하여 합격 경쟁력을 판단합니다.",
     "hero_proof_time": "02. 편입 정보 탐색기 (Explorer)",
     "hero_proof_time_desc": "선택한 대학교/학과 편입에 필요한 모든 정보(합격률, 평균 GPA, AP 정책, 실제 합격자 스펙 예시 등)를 한 페이지로 제공합니다.",
@@ -526,7 +526,7 @@ const TRANSLATIONS = {
     "coverage_desc": "데이터베이스에 포함된 각 대학/학과별 요건 커버리지 점수, 수강 로드맵, 필요 영어 시험 점수 등을 입체적으로 비교 분석합니다.",
     "feature_eyebrow": "왜 TransferChek인가?",
     "feature_heading": "편입 준비에서 가장 치명적인 실수는, 편입에 인정되지 않는 과목을 수강하는 것입니다.",
-    "feature1_title": "01. 내 스펙 경쟁력 진단기 (StatCompass)",
+    "feature1_title": "01. 합격 진단기 (StatCompass)",
     "feature1_body": "나의 대학 GPA, 이수 학점, 수강 과목, 영어 성적, 비교과 활동 점수를 기반으로, 실제 합격자 표본 스펙 및 합격률과 실시간 매칭하여 종합 합격 경쟁력(위험/도전/적정/안정)을 판단합니다.",
     "feature2_title": "02. 편입 정보 탐색기 (Explorer)",
     "feature2_body": "선택한 대학교/학과 편입에 필요한 모든 정보(전체 및 국제학생 합격률, 평균 GPA, AP 정책, 실제 합격자 스펙)를 한 페이지에 완벽히 제공합니다.",
@@ -535,8 +535,8 @@ const TRANSLATIONS = {
     "feature4_title": "AI 에세이 전략가",
     "feature4_body": "교내 동아리, 전공 프로젝트, 학술 연구 활동 등의 경험을 명문대 편입 양식에 맞추어 하나의 전공 스토리로 연결합니다. 12만 건 이상의 실제 명문 대학교 합격 에세이 패턴 분석 데이터를 바탕으로, 각 대학의 채점 기준과 에세이 스타일에 맞춤화된 3문단 전략 에세이 설계도를 즉시 생성합니다.",
     "demo_eyebrow": "대화형 제품 대시보드",
-    "demo_title": "내 스펙 경쟁력 진단기",
-    "tab_eligibility": "내 스펙 경쟁력 진단기",
+    "demo_title": "합격 진단기",
+    "tab_eligibility": "합격 진단기",
     "tab_requirements": "편입 정보 탐색기",
     "tab_roadmap": "최적화 수강 로드맵 빌더",
     "tab_essay": "AI 에세이 전략가",
@@ -555,7 +555,7 @@ const TRANSLATIONS = {
     "btn_recommend": "추천 타겟 대학 보기",
     "recommend_title": "프로필 기반 스마트 추천 대학",
     "recommend_desc": "현재까지 입력한 이수 과목 기준으로 가장 자격 요건 충족률(Coverage)이 높은 대학 목록입니다. 지원 전 최종 대조는 필수입니다.",
-    "req_title": "학교, 전공 탐색기",
+    "req_title": "편입 정보 탐색기",
     "req_desc": "목표 대학과 학과를 검색하여 합격률, GPA 분포, 합격자 스펙 예시 등 실제 합격 정보를 확인하세요.",
     "label_search_school": "대학 또는 학과 이름 검색",
     "roadmap_title": "최적화 수강 로드맵 빌더 플래너",
@@ -589,7 +589,7 @@ const TRANSLATIONS = {
     "feedback_sending": "피드백을 전송하는 중입니다...",
     "feedback_success": "감사합니다! 피드백이 정상적으로 전송되었습니다.",
     "feedback_failed": "피드백 전송에 실패했습니다:",
-    "auth_note": "데모용 계정 정보는 브라우저 로컬 저장소에 보관됩니다. 상용 제품 출시 시에는 안전한 DB 동기화가 적용됩니다.",
+    "auth_note": "계정 정보 및 진단 기록은 Supabase 클라우드 데이터베이스를 통해 안전하게 동기화됩니다.",
     "label_email": "이메일 주소",
     "label_password": "비밀번호",
     "pricing_modal_title": "멤버십 요금제 안내",
@@ -600,8 +600,8 @@ const TRANSLATIONS = {
     "tier_free_name": "무료 플랜 (Free Plan)",
     "tier_free_price": "0원",
     "tier_free_desc": "기본 지원 가능 대학 탐색용",
-    "tier_free_feature1": "학교, 전공 진단기 내 대학 분석 최대 3개 한도 제공",
-    "tier_free_feature2": "학교·전공 탐색기, 수강 로드맵 빌더, AI 에세이 이용 불가 (잠금)",
+    "tier_free_feature1": "합격 진단기 내 대학 분석 최대 3개 제공",
+    "tier_free_feature2": "편입 정보 탐색기 내 대학/학과 요건 탐색 최대 3개 제공 (수강 로드맵 빌더 및 AI 에세이는 잠금)",
     "slot_locked_placeholder": "🔒 잠김 (Premium 플랜 전용)",
     "tier_pro_name": "Pro 패스",
     "tier_pro_price": "월 9,900원",
@@ -611,7 +611,7 @@ const TRANSLATIONS = {
     "tier_premium_name": "Premium 플래너",
     "tier_premium_price": "월 29,900원",
     "tier_premium_desc": "올인원 수강 로드맵 & 에세이 설계 패키지 (100% 데이터 무결성 환불 보증)",
-    "tier_premium_feature1": "지원 가능 진단 + 요건 검색 + 최적 수강 로드맵 빌더 무제한 제공",
+    "tier_premium_feature1": "합격 진단기 + 편입 정보 탐색기 + 수강 로드맵 빌더 무제한 제공",
     "tier_premium_feature2": "AI 에세이: 1개 대학 에세이 구조 분석 (결제 후 1달 이내 사용 필수)",
     "tier_premium_feature3": "★ 1:1 AI 에세이 설계 가이드 & 맞춤형 합격 템플릿 즉시 잠금해제",
     "tier_essay_pass_name": "AI 에세이 대상학교 패스",
@@ -804,10 +804,10 @@ const TRANSLATIONS = {
     "label_gen_major": "학과 / 전공 영문 이름",
     "gen_loading_text": "AI가 웹상의 대학 공식 요강을 검색 및 분석하여 편입 선수과목 정보를 생성하고 있습니다... (약 3~5초 소요)",
     "btn_gen_req": "전공 편입 요건 프로필 생성하기",
-    "drawer_nav1_title": "01. 지원 가능 판단",
-    "drawer_nav1_desc": "현재 내 스펙으로 지원 가능한 대학 진단",
-    "drawer_nav2_title": "02. 편입 요건 검색",
-    "drawer_nav2_desc": "목표 대학/학과별 학점 및 과목 요건 조회",
+    "drawer_nav1_title": "01. 합격 진단기",
+    "drawer_nav1_desc": "내 GPA 및 이수 과목 기반 합격 가능 대학 진단",
+    "drawer_nav2_title": "02. 편입 정보 탐색기",
+    "drawer_nav2_desc": "목표 대학/학과별 합격 통계 및 권장 스펙 조회",
     "drawer_nav3_title": "03. 수강 로드맵 빌더",
     "drawer_nav3_desc": "선수과목 이수를 위한 학기별 최적 계획표 생성",
     "drawer_nav4_title": "04. 에세이 AI 설계",
@@ -1020,7 +1020,7 @@ const TRANSLATIONS = {
     "feedback_sending": "正在发送反馈...",
     "feedback_success": "谢谢！您的反馈已成功发送。",
     "feedback_failed": "反馈提交失败：",
-    "auth_note": "演示用账户数据保存在本浏览器的本地缓存中。未来正式版将使用安全的云端数据库存储。",
+    "auth_note": "您的账户凭证与申请信息已通过 Supabase 安全数据库实时同步。",
     "label_email": "电子邮箱地址",
     "label_password": "账户密码",
     "pricing_modal_title": "订阅计划方案",
@@ -1031,8 +1031,8 @@ const TRANSLATIONS = {
     "tier_free_name": "免费方案 (Free Plan)",
     "tier_free_price": "0 KRW",
     "tier_free_desc": "基础功能体验",
-    "tier_free_feature1": "院校与专业诊断器 (服务1) 可评估最多3个目标专业",
-    "tier_free_feature2": "无法使用学校与专业探索、修课路线图、AI文书（已锁定）",
+    "tier_free_feature1": "合资格诊断器最多可评估3个目标院校专业",
+    "tier_free_feature2": "转学信息探索器最多可探查3个目标院校专业（修课路线图与AI文书锁定）",
     "slot_locked_placeholder": "🔒 已锁定 (Premium 会员专享)",
     "tier_pro_name": "Pro 方案 (Pro Plan)",
     "tier_pro_price": "9,900 KRW/月",
@@ -1042,7 +1042,7 @@ const TRANSLATIONS = {
     "tier_premium_name": "Premium 方案 (Premium Plan)",
     "tier_premium_price": "29,900 KRW/月",
     "tier_premium_desc": "全包选课路线与文书规划套件 (100% 数据准确度退款保证)",
-    "tier_premium_feature1": "资格评估、先修课程搜索引擎、最优选课路线规划服务无限制使用",
+    "tier_premium_feature1": "合资格诊断器、转学信息探索器、修课路线图无限制使用",
     "tier_premium_feature2": "AI 文书: 1个目标院校文书全套大纲设计 (付款后须在1个月内使用)",
     "tier_premium_feature3": "★ 1对1 AI 文书设计指南 & 定制录取模板即刻解锁",
     "tier_essay_pass_name": "AI 单校/专业/文书无限制包",
@@ -1732,7 +1732,7 @@ function updateTabLockStates() {
   const essayLock = qs("#essayLockOverlay");
   
   if (reqLock) {
-    reqLock.classList.toggle("hidden", isPremium);
+    reqLock.classList.add("hidden");
   }
   if (roadLock) {
     roadLock.classList.toggle("hidden", isPremium);
@@ -2998,10 +2998,11 @@ function programsForSchoolName(schoolName) {
     const sShortName = normalizeText(program?.school?.shortName);
     const sId = normalizeText(program?.school?.id);
     
-    // Exact match or partial match (one contains another)
-    return (sName && (sName === normalized || sName.includes(normalized) || normalized.includes(sName))) ||
-           (sShortName && (sShortName === normalized || sShortName.includes(normalized) || normalized.includes(sShortName))) ||
-           (sId && sId.replace(/-/g, "").includes(normalized.replace(/[^a-z0-9]/g, "")));
+    // Exact match to prevent branch campus overlaps
+    return (sName && sName === normalized) ||
+           (sShortName && sShortName === normalized) ||
+           (sId && sId === normalized) ||
+           (sId && sId.replace(/-/g, "") === normalized.replace(/[^a-z0-9]/g, ""));
   });
   
   if (matchedPrograms.length > 0) {
@@ -3334,15 +3335,45 @@ function bindAutocompleteEvents(container, type) {
         items = majors.filter(p =>
           !normalizedQuery || normalizeText(p.name).includes(normalizedQuery)
         ).map(p => p.name).sort((a, b) => a.localeCompare(b));
+
+        if (selectedSchool && normalizedQuery) {
+          const globalMajorNames = Array.from(new Set(
+            database.schools.flatMap(s => s.majors.map(m => m.name))
+          ));
+          const globalMatches = globalMajorNames.filter(name => 
+            normalizeText(name).includes(normalizedQuery) && 
+            !items.some(item => item.toLowerCase() === name.toLowerCase())
+          ).sort((a, b) => a.localeCompare(b));
+
+          items = [...items, ...globalMatches];
+
+          const customValue = query.trim();
+          const exists = items.some(name => name.toLowerCase() === customValue.toLowerCase());
+          if (!exists && customValue !== "") {
+            items.push(customValue);
+          }
+        }
       }
 
-      menu.innerHTML = items.length
-        ? items.map(name => `
-            <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
-              <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
+      let listHtml = "";
+      if (items.length) {
+        const selectedSchool = slots[idx] ? slots[idx].school : "";
+        const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
+        const localMajorNames = new Set(majors.map(m => m.name.toLowerCase()));
+
+        listHtml = items.map(name => {
+          const isLocal = acType === "school" || localMajorNames.has(name.toLowerCase());
+          const isKo = (state.language || "ko") === "ko";
+          const displayLabel = isLocal ? escapeHtml(name) : `✨ ${escapeHtml(name)} (${isKo ? "AI 실시간 생성" : "AI Live Gen"})`;
+          const textColor = isLocal ? "var(--ink)" : "var(--accent)";
+          return `
+            <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: ${textColor}; cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
+              <span style="font-weight: 600; font-size: 13.5px; display: block; color: ${textColor};">${displayLabel}</span>
             </button>
-          `).join("")
-        : `
+          `;
+        }).join("");
+      } else {
+        listHtml = `
           <div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">
             <div>${t("search_empty", "No results found")}</div>
             <a href="#" class="fallback-mapping-link" style="color: var(--accent); text-decoration: underline; font-size: 12px; display: block; margin-top: 8px; font-weight: 700;">
@@ -3350,7 +3381,9 @@ function bindAutocompleteEvents(container, type) {
             </a>
           </div>
         `;
-      
+      }
+
+      menu.innerHTML = listHtml;
       menu.classList.remove("hidden");
     };
 
@@ -3501,6 +3534,25 @@ function bindAutocompleteEvents(container, type) {
           slots[idx].major = "";
         } else {
           slots[idx].major = val;
+          const selectedSchool = slots[idx].school;
+          if (selectedSchool) {
+            const schoolObj = database.schools.find(s => s.name.toLowerCase() === selectedSchool.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === selectedSchool.toLowerCase()));
+            if (schoolObj) {
+              const exists = schoolObj.majors.some(m => m.name.toLowerCase() === val.toLowerCase());
+              if (!exists) {
+                const cleanSchoolName = schoolObj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                const cleanMajorName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                const tempMajorId = `${cleanSchoolName}-${cleanMajorName}-${Math.random().toString(36).substring(2, 8)}`;
+                const newMajorShell = {
+                  id: tempMajorId,
+                  name: val,
+                  confidence: "needs_source_check"
+                };
+                schoolObj.majors.push(newMajorShell);
+                updateSortedPrograms(); // Rebuild allPrograms()
+              }
+            }
+          }
         }
       }
 
@@ -3550,17 +3602,44 @@ function bindSingleAutocomplete({
     const selectedSchool = schoolInput.value.trim();
     const majors = selectedSchool ? programsForSchoolName(selectedSchool) : [];
     const normalizedQuery = normalizeText(query);
-    const items = majors.filter(p =>
+    let items = majors.filter(p =>
       !normalizedQuery || normalizeText(p.name).includes(normalizedQuery)
     ).map(p => p.name).sort((a, b) => a.localeCompare(b));
 
-    majorMenu.innerHTML = items.length
-      ? items.map(name => `
-          <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: var(--ink); cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
-            <span style="font-weight: 600; font-size: 13.5px; display: block; color: var(--ink);">${escapeHtml(name)}</span>
+    if (selectedSchool && normalizedQuery) {
+      const globalMajorNames = Array.from(new Set(
+        database.schools.flatMap(s => s.majors.map(m => m.name))
+      ));
+      const globalMatches = globalMajorNames.filter(name => 
+        normalizeText(name).includes(normalizedQuery) && 
+        !items.some(item => item.toLowerCase() === name.toLowerCase())
+      ).sort((a, b) => a.localeCompare(b));
+
+      items = [...items, ...globalMatches];
+
+      const customValue = query.trim();
+      const exists = items.some(name => name.toLowerCase() === customValue.toLowerCase());
+      if (!exists && customValue !== "") {
+        items.push(customValue);
+      }
+    }
+
+    let listHtml = "";
+    if (items.length) {
+      const localMajorNames = new Set(majors.map(m => m.name.toLowerCase()));
+      listHtml = items.map(name => {
+        const isLocal = localMajorNames.has(name.toLowerCase());
+        const isKo = (state.language || "ko") === "ko";
+        const displayLabel = isLocal ? escapeHtml(name) : `✨ ${escapeHtml(name)} (${isKo ? "AI 실시간 생성" : "AI Live Gen"})`;
+        const textColor = isLocal ? "var(--ink)" : "var(--accent)";
+        return `
+          <button type="button" class="autocomplete-item-btn" data-value="${escapeHtml(name)}" style="width: 100%; text-align: left; background: none; border: none; padding: 10px 12px; color: ${textColor}; cursor: pointer; display: block; border-bottom: 1px solid var(--line);">
+            <span style="font-weight: 600; font-size: 13.5px; display: block; color: ${textColor};">${displayLabel}</span>
           </button>
-        `).join("")
-      : `
+        `;
+      }).join("");
+    } else {
+      listHtml = `
         <div class="search-empty" style="padding: 12px; text-align: center; color: var(--muted); font-size: 13px;">
           <div>${t("search_empty", "No results found")}</div>
           <a href="#" class="fallback-mapping-link-major" style="color: var(--accent); text-decoration: underline; font-size: 12px; display: block; margin-top: 8px; font-weight: 700;">
@@ -3568,7 +3647,9 @@ function bindSingleAutocomplete({
           </a>
         </div>
       `;
-    
+    }
+
+    majorMenu.innerHTML = listHtml;
     majorMenu.classList.remove("hidden");
   };
 
@@ -3788,6 +3869,26 @@ function bindSingleAutocomplete({
     majorInput.value = val;
     majorMenu.classList.add("hidden");
 
+    const selectedSchool = schoolInput.value.trim();
+    if (selectedSchool) {
+      const schoolObj = database.schools.find(s => s.name.toLowerCase() === selectedSchool.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === selectedSchool.toLowerCase()));
+      if (schoolObj) {
+        const exists = schoolObj.majors.some(m => m.name.toLowerCase() === val.toLowerCase());
+        if (!exists) {
+          const cleanSchoolName = schoolObj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          const cleanMajorName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          const tempMajorId = `${cleanSchoolName}-${cleanMajorName}-${Math.random().toString(36).substring(2, 8)}`;
+          const newMajorShell = {
+            id: tempMajorId,
+            name: val,
+            confidence: "needs_source_check"
+          };
+          schoolObj.majors.push(newMajorShell);
+          updateSortedPrograms(); // Rebuild allPrograms()
+        }
+      }
+    }
+
     onSelected(schoolInput.value, val);
   });
 }
@@ -3966,7 +4067,7 @@ function renderEligibilityResults() {
               <div>📝 <strong>${isKo ? "교수 추천서 공략" : "Rec Letters Guide"}:</strong> ${isKo ? "학문적 호기심과 성실성을 강력히 보증해줄 수 있는 기초 이공/전공 교수 2인에게서 '최상위 평가(Top 1-2%)' 추천서 확보 필수." : "Obtain strong letters from 2 professors testifying to your intellectual curiosity."}</div>
               <div>🏆 <strong>${isKo ? "에세이 차별화 테마" : "Essay Theme"}:</strong> ${isKo ? "이전 대학의 환경적 한계를 넘어서 스탠포드/아이비리그의 연구 자원과 교사진이 본인에게 왜 절실히 필요한가 논리적 타당성 입증." : "Explain why you need target university resources to achieve your academic mission."}</div>
               <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(99, 102, 241, 0.25); font-size: 11.5px; color: #4f46e5; font-weight: 700; line-height: 1.5;">
-                📢 ${isKo ? "종합평가로 나오는 학교 전공에서도 공식 필수 조건은 매우 적으나 실제 합격을 위해선 여러 활동들이 필요합니다. 실제 합격을 위한 정보는 <strong>전공 탐색기</strong>에서 확인하세요." : "Even in holistic evaluations, official prerequisites are minimal, but actual transfer success requires various activities. Please check spec specimens in the <strong>University & Major Explorer</strong>."}
+                📢 ${isKo ? "종합평가로 나오는 학교 전공에서도 공식 필수 조건은 매우 적으나 실제 합격을 위해선 여러 활동들이 필요합니다. 실제 합격을 위한 정보는 <strong>편입 정보 탐색기</strong>에서 확인하세요." : "Even in holistic evaluations, official prerequisites are minimal, but actual transfer success requires various activities. Please check spec specimens in the <strong>University & Major Explorer</strong>."}
               </div>
             </div>
           </div>
@@ -4045,6 +4146,24 @@ function renderEligibilityResults() {
           </div>
         ` : "";
 
+        const isEstimated = isGpaEstimated(program, stats);
+        const gpaLabel = isEstimated 
+          ? (isKo ? "예상 합격 평균 GPA" : "Est. Admitted GPA")
+          : (isKo ? "합격 평균 GPA" : "Admitted GPA");
+        const overallRate = stats.rateOverall || stats.rateOutOfState || stats.rateInState || "N/A";
+        
+        const schoolNameLower = (program.school.name || "").toLowerCase();
+        const isUcSchool = schoolNameLower.includes("university of california") || schoolNameLower.startsWith("uc ") || schoolNameLower.includes(" ucla") || schoolNameLower.includes(" ucb");
+        
+        const ucNoticeHtml = isUcSchool ? `
+          <div style="background: rgba(245, 158, 11, 0.05); border-left: 3px solid #d97706; padding: 8px 10px; border-radius: 4px; font-size: 11px; color: #d97706; line-height: 1.4; margin: 10px 0;">
+            ⚠️ <strong>${isKo ? "UC 계열 편입 특별 유의사항" : "UC CCC Priority Notice"}:</strong> 
+            ${isKo 
+              ? "UC 계열은 편입 합격자의 약 90%를 캘리포니아 주내 커뮤니티 칼리지(CCC) 출신으로 선발합니다. 타주 대학이나 일반 4년제 대학에서 지원 시 체감 난이도가 공식 합격률보다 훨씬 높습니다." 
+              : "UC campuses admit ~90% of transfer students from California Community Colleges (CCC). Transferring from out-of-state or 4-year institutions is significantly more competitive than the official rate suggests."}
+          </div>
+        ` : "";
+
         return `
           <div class="locked-card-wrapper">
             <article class="result-card ${evaluation.pass && !evaluation.needsReview ? "pass" : ""} ${isExample ? "example-card" : ""} ${isLocked ? "locked-card" : ""}">
@@ -4068,18 +4187,18 @@ function renderEligibilityResults() {
               <p>${escapeHtml(program.name)}</p>
               <div class="badge-container">${getConfidenceBadgeHtml(program)}</div>
               
-              <!-- Premium Transfer Stats Row (3 Columns, No Deadlines) -->
-              <div class="card-stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 12px; margin: 14px 0; font-size: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0;">
-                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "국제학생 합격률" : "Int'l Rate"}</span> <strong style="color: #fbbf24; font-size: 13px;">${stats.rateInternational}</strong></div>
-                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "타주 합격률" : "Out-of-State"}</span> <strong style="color: #f43f5e; font-size: 13px;">${stats.rateOutOfState || stats.rateOverall}</strong></div>
-                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "합격 평균 GPA" : "Admitted GPA"}</span> <strong style="color: #60a5fa; font-size: 13px;">${stats.avgGpa}</strong></div>
+              <!-- Premium Transfer Stats Row (2 Columns) -->
+              <div class="card-stats-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 12px; margin: 14px 0; font-size: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0;">
+                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "전체 편입 합격률" : "Overall Transfer Rate"}</span> <strong style="color: #f43f5e; font-size: 13px;">${overallRate}</strong></div>
+                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${gpaLabel}</span> <strong style="color: #60a5fa; font-size: 13px;">${stats.avgGpa}</strong></div>
               </div>
+              
+              ${ucNoticeHtml}
 
               <!-- Accepted Specimen Comparison Dashboard -->
               <div class="specimen-dashboard" style="margin: 14px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 12px;">
                 <div style="font-weight: 800; color: var(--ink); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
                   <span>👥 ${isKo ? "실제 합격자 표본 스펙 매칭" : "Admitted Specimen Match"}</span>
-                  <span style="color: var(--accent); font-size: 13px;">${isKo ? "매칭률" : "Match Rate"}: <strong>${Math.round(rms.electivesMatchRate * 100)}%</strong></span>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
@@ -4109,13 +4228,6 @@ function renderEligibilityResults() {
                     </div>
                   </div>
                 ` : ""}
-              </div>
-
-              <!-- Live Auto-Sync Button -->
-              <div class="live-sync-wrapper" style="margin-top: 10px; margin-bottom: 14px;">
-                <button type="button" class="primary-btn compact sync-live-btn" style="width: 100%; font-size: 11px; padding: 6px 10px; display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 6px; background: var(--primary); color: white; border: none; cursor: pointer; transition: all 0.2s;" data-program-id="${program.id}" onclick="triggerLiveSync('${program.id}', this)">
-                  🔄 <span>${isKo ? "실시간 입학처 정보 교차 검증" : "Cross-Verify Live Registrar Info"}</span>
-                </button>
               </div>
 
               ${
@@ -4219,10 +4331,10 @@ function renderEligibilityResults() {
               <!-- Prompt A & Subtle Disclaimer -->
               <div class="strategy-explorer-prompt" style="margin-top: 14px; padding: 12px; background: rgba(16, 185, 129, 0.03); border: 1px dashed rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; line-height: 1.5; color: var(--ink);">
                 📢 <strong>${isKo ? "경쟁력 가이드" : "Competitiveness Guide"}:</strong> 
-                ${isKo ? "이 조건들은 편입 지원을 위한 필수 조건입니다. 실제 합격 경쟁력을 파악하려면 <strong>전공 탐색기</strong>를 이용하세요." : "These criteria are minimum prerequisites. To analyze your actual admissions competitiveness, please use the <strong>University & Major Explorer</strong>."}
+                ${isKo ? "이 조건들은 편입 지원을 위한 필수 조건입니다. 실제 합격 경쟁력을 파악하려면 <strong>편입 정보 탐색기</strong>를 이용하세요." : "These criteria are minimum prerequisites. To analyze your actual admissions competitiveness, please use the <strong>University & Major Explorer</strong>."}
                 <div style="margin-top: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                   <button type="button" class="primary-btn compact" style="font-size: 11px; padding: 4px 10px; min-height: 24px; border-radius: 6px; background: #10b981;" onclick="activateProductTab('requirements')">
-                    ${isKo ? "전공 탐색기 바로가기 →" : "Go to Explorer →"}
+                    ${isKo ? "편입 정보 탐색기 바로가기 →" : "Go to Explorer →"}
                   </button>
                   <span style="font-size: 10.5px; color: var(--muted); font-weight: 500;">
                     ${isKo ? "* 참고용 데이터로, 최종 지원 전 입학처 공식 요강 재확인을 권장합니다." : "* Reference only; verify on official registrar site."}
@@ -4297,40 +4409,44 @@ async function handleAnalyzeCoverage() {
     return;
   }
 
-  // 1. 실시간 생성(AI generation)이 필요한 슬롯 찾기
-  const pendingGenerations = [];
-  slots.forEach(slot => {
-    const existing = allPrograms().find(p => 
+  // 1. Find program IDs for selected slots
+  const programIds = slots.map(slot => {
+    const match = allPrograms().find(p => 
       (normalizeText(p.school.name) === normalizeText(slot.school) || normalizeText(p.school.shortName) === normalizeText(slot.school)) &&
       normalizeText(p.name) === normalizeText(slot.major)
     );
+    return match?.id;
+  }).filter(Boolean);
 
-    if (!existing || existing.confidence === "ai_generated") {
-      pendingGenerations.push(slot);
-    }
+  // 2. Identify which of these programs need loading (requiredCourses is undefined)
+  const pendingLoads = programIds.filter(id => {
+    const prog = allPrograms().find(p => p.id === id);
+    return prog && prog.requiredCourses === undefined;
   });
 
-  if (pendingGenerations.length === 0) {
+  if (pendingLoads.length === 0) {
+    syncSelectedTargetsFromSlots();
+    updateSortedPrograms();
     renderEligibilityResults();
     scrollToSection("#eligibilityResults");
     return;
   }
 
-  // 2. AI 분석 진행 중임을 화려하고 모던하게 알리는 로딩 렌더링
+  // 3. Render a clean, professional loading spinner while loading/generating
   scrollToSection("#eligibilityResults");
   container.innerHTML = `
     <div class="panel" style="text-align: center; padding: 40px 20px; border: 1px dashed var(--accent); background: rgba(99, 102, 241, 0.03); border-radius: 12px; margin-top: 20px;">
       <div class="spinner" style="margin: 0 auto 20px; width: 45px; height: 45px; border: 4px solid rgba(99, 102, 241, 0.1); border-top: 4px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite;"></div>
       <h3 style="color: var(--accent); font-weight: 800; font-size: 16px; margin-bottom: 8px;">
-        🔮 ${isKo ? "실시간 검색 증강 AI 요강 분석 및 크롤링 중..." : "Real-time AI Prerequisite Crawling..."}
+        🔮 ${isKo ? "대학 및 전공 요구 조건 로드 중..." : "Loading Major Requirements..."}
       </h3>
       <p style="font-size: 13px; color: var(--muted); max-width: 500px; margin: 0 auto 16px; line-height: 1.5;">
         ${isKo 
-          ? "공식 Common Data Set(CDS) 및 대학 입학 요강(.edu)을 실시간으로 검색하여 필수 이수 과목과 합격 통계를 수집하고 있습니다. 약 10~20초 소요됩니다." 
-          : "Searching official Common Data Set (CDS) and university admissions guides in real-time. This may take 10-20 seconds."}
+          ? "선택하신 전공의 이수 과목과 통계 데이터를 데이터베이스에서 불러오거나 실시간으로 분석하고 있습니다. 첫 조회인 경우 약 15초가 소요될 수 있습니다." 
+          : "Retrieving prerequisite courses and admissions stats from the database or analyzing in real-time. May take up to 15 seconds for new majors."}
       </p>
       <div style="font-size: 12.5px; font-weight: 700; color: var(--ink); background: rgba(0,0,0,0.03); padding: 8px 16px; border-radius: 6px; display: inline-block;">
-        ${pendingGenerations.map(g => `📍 ${escapeHtml(g.school)} - ${escapeHtml(g.major)}`).join("<br/>")}
+        ${slots.map(g => `📍 ${escapeHtml(g.school)} - ${escapeHtml(g.major)}`).join("<br/>")}
       </div>
     </div>
     <style>
@@ -4341,57 +4457,16 @@ async function handleAnalyzeCoverage() {
     </style>
   `;
 
-  // 3. 차례로 실시간 API 호출하여 로컬 DB 업데이트
-  for (const gen of pendingGenerations) {
+  // 4. Load them sequentially using ensureMajorLoaded
+  for (const id of pendingLoads) {
     try {
-      const reqHeaders = { "Content-Type": "application/json" };
-      if (typeof supabaseUserSession !== 'undefined' && supabaseUserSession && supabaseUserSession.access_token) {
-        reqHeaders["Authorization"] = `Bearer ${supabaseUserSession.access_token}`;
-      }
-      
-      const response = await fetch("/api/requirements/generate", {
-        method: "POST",
-        headers: reqHeaders,
-        body: JSON.stringify({ schoolName: gen.school, majorName: gen.major })
-      });
-      const result = await response.json();
-      
-      if (result.success) {
-        // 로컬 메모리 DB에 주입
-        let localSchool = database.schools.find(s => s.name.toLowerCase() === gen.school.toLowerCase() || s.shortName.toLowerCase() === gen.school.toLowerCase());
-        if (!localSchool) {
-          localSchool = {
-            id: result.school.id,
-            name: result.school.name,
-            shortName: result.school.shortName,
-            majors: []
-          };
-          database.schools.push(localSchool);
-        }
-        
-        const newMajor = result.major;
-        const existingMajorIdx = localSchool.majors.findIndex(m => m.name.toLowerCase() === gen.major.toLowerCase());
-        if (existingMajorIdx >= 0) {
-          localSchool.majors[existingMajorIdx] = newMajor;
-        } else {
-          localSchool.majors.push(newMajor);
-        }
-        
-        database.schoolCount = database.schools.length;
-        database.programCount = database.schools.flatMap(s => s.majors).length;
-
-        // stats 정보 주입
-        if (result.stats) {
-          if (!window.transferStats) window.transferStats = {};
-          window.transferStats[result.school.id] = result.stats;
-        }
-      }
+      await ensureMajorLoaded(id);
     } catch (e) {
-      console.error("AI generation failed for:", gen.school, gen.major, e);
+      console.error("Failed to ensure major loaded:", id, e);
     }
   }
 
-  // 4. 완료 후 갱신
+  // 5. 완료 후 갱신
   syncSelectedTargetsFromSlots();
   updateSortedPrograms();
   renderEligibilityResults();
@@ -4926,6 +5001,7 @@ async function ensureMajorLoaded(programId) {
     const major = school.majors.find(m => m.id === programId);
     if (major) {
       foundMajor = major;
+      foundMajor.school = school; // Ensure school reference is attached
       break;
     }
   }
@@ -4934,7 +5010,33 @@ async function ensureMajorLoaded(programId) {
     return foundMajor;
   }
   try {
+    const reqHeaders = { "Content-Type": "application/json" };
+    if (typeof supabaseUserSession !== 'undefined' && supabaseUserSession && supabaseUserSession.access_token) {
+      reqHeaders["Authorization"] = `Bearer ${supabaseUserSession.access_token}`;
+    }
+
     const response = await fetch(`/api/majors/${encodeURIComponent(programId)}`);
+    if (response.status === 404) {
+      console.log(`Major ${programId} not found in database. Triggering automatic AI generation...`);
+      const genResponse = await fetch('/api/requirements/generate', {
+        method: 'POST',
+        headers: reqHeaders,
+        body: JSON.stringify({
+          schoolName: foundMajor.school.name,
+          majorName: foundMajor.name,
+          programId: programId
+        })
+      });
+      const genResult = await genResponse.json();
+      if (genResult.success && genResult.major) {
+        Object.assign(foundMajor, genResult.major);
+        if (genResult.major.english && genResult.major.english.stats) {
+          if (!window.transferStats) window.transferStats = {};
+          window.transferStats[foundMajor.school.id] = genResult.major.english.stats;
+        }
+        return foundMajor;
+      }
+    }
     const result = await response.json();
     if (result.success && result.major) {
       Object.assign(foundMajor, result.major);
@@ -5090,11 +5192,64 @@ async function renderRequirementDetail(programId) {
     return;
   }
 
-  // Show inline loading spinner
+  const isKo = (state.language || "ko") === "ko";
+
+  // Free plan limit: only 3 unique programs can be viewed in the explorer
+  if ((state.plan || "Free") === "Free") {
+    state.explorerViewedPrograms = state.explorerViewedPrograms || [];
+    if (!state.explorerViewedPrograms.includes(programId)) {
+      if (state.explorerViewedPrograms.length >= 3) {
+        // Show premium lock overlay for Tab 2
+        const reqLock = qs("#requirementsLockOverlay");
+        if (reqLock) {
+          reqLock.classList.remove("hidden");
+          const lockTitle = reqLock.querySelector(".premium-lock-title");
+          const lockDesc = reqLock.querySelector(".premium-lock-desc");
+          if (lockTitle) {
+            lockTitle.textContent = isKo 
+              ? "무료 플랜 조회 한도 초과" 
+              : "Free Plan Limit Reached";
+          }
+          if (lockDesc) {
+            lockDesc.textContent = isKo 
+              ? "무료 플랜에서는 편입 정보 탐색기에서 최대 3개의 프로그램만 탐색할 수 있습니다. 프리미엄 플랜으로 업그레이드하여 63개 전 대학/학과의 모든 수강 요건과 통계를 제한 없이 확인해 보세요!" 
+              : "On the Free Plan, you can only explore up to 3 programs in the Transfer Information Explorer. Upgrade to Premium to search all 63 universities and programs without limit!";
+          }
+        }
+        container.innerHTML = `
+          <div class="placeholder-view" style="text-align: center; padding: 60px 20px;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🔒</div>
+            <h3 style="color: var(--danger); margin-bottom: 8px;">${isKo ? "조회 한도 초과" : "View Limit Exceeded"}</h3>
+            <p style="color: var(--muted); font-size: 14px; max-width: 400px; margin: 0 auto 20px auto;">
+              ${isKo 
+                ? "무료 요금제에서는 최대 3개의 전공 탐색 정보만 열람할 수 있습니다." 
+                : "You can only view up to 3 programs under the Free Plan."}
+            </p>
+            <button class="primary-btn" onclick="openPricingModal()">${isKo ? "프리미엄 업그레이드" : "Upgrade to Premium"}</button>
+          </div>
+        `;
+        return;
+      } else {
+        state.explorerViewedPrograms.push(programId);
+      }
+    }
+  }
+
+  const reqLock = qs("#requirementsLockOverlay");
+  if (reqLock) {
+    reqLock.classList.add("hidden");
+  }
+
+  // Show professional loading spinner
   container.innerHTML = `
     <div style="text-align: center; padding: 60px 20px;">
       <div style="width: 40px; height: 40px; border: 4px solid var(--line); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px auto;"></div>
-      <p style="color: var(--muted); font-size: 14px;">데이터베이스에서 전공 요건을 불러오는 중...</p>
+      <p style="color: var(--muted); font-size: 14.5px; font-weight: 600;">
+        ${isKo ? "데이터베이스에서 전공 요건을 분석 중입니다..." : "Retrieving major requirement profiles..."}
+      </p>
+      <p style="color: var(--muted); font-size: 12.5px; margin-top: 6px;">
+        ${isKo ? "대학 공식 입학 요강을 로드하거나 실시간 검색 증강 AI 요약본을 조회하고 있습니다." : "Loading official admissions guidelines or fetching real-time search-grounded summaries."}
+      </p>
       <style>
         @keyframes spin {
           0% { transform: rotate(0deg); }
@@ -5151,8 +5306,6 @@ async function renderRequirementDetail(programId) {
     summary.recommended.review.length === 0;
 
   const compProfile = getCompetitiveProfile(program);
-  const isKo = (state.language || "ko") === "ko";
-  
   const lang = state.language || "en";
   
   // Find schoolId for admissions cases
@@ -5305,6 +5458,23 @@ async function renderRequirementDetail(programId) {
   `;
 
   const stats = getProgramAdmissionsStats(program);
+  const isEstimated = isGpaEstimated(program, stats);
+  const gpaLabel = isEstimated 
+    ? (isKo ? "예상 합격 평균 GPA" : "Est. Admitted GPA")
+    : (isKo ? "합격 평균 GPA" : "Admitted GPA");
+  const overallRate = stats.rateOverall || stats.rateOutOfState || stats.rateInState || "N/A";
+  
+  const schoolNameLower = (program.school.name || "").toLowerCase();
+  const isUcSchool = schoolNameLower.includes("university of california") || schoolNameLower.startsWith("uc ") || schoolNameLower.includes(" ucla") || schoolNameLower.includes(" ucb");
+  
+  const ucNoticeHtml = isUcSchool ? `
+    <div style="background: rgba(245, 158, 11, 0.05); border-left: 3px solid #d97706; padding: 8px 10px; border-radius: 4px; font-size: 11px; color: #d97706; line-height: 1.4; margin: 10px 0;">
+      ⚠️ <strong>${isKo ? "UC 계열 편입 특별 유의사항" : "UC CCC Priority Notice"}:</strong> 
+      ${isKo 
+        ? "UC 계열은 편입 합격자의 약 90%를 캘리포니아 주내 커뮤니티 칼리지(CCC) 출신으로 선발합니다. 타주 대학이나 일반 4년제 대학에서 지원 시 체감 난이도가 공식 합격률보다 훨씬 높습니다." 
+        : "UC campuses admit ~90% of transfer students from California Community Colleges (CCC). Transferring from out-of-state or 4-year institutions is significantly more competitive than the official rate suggests."}
+    </div>
+  ` : "";
   const basicInfoAndStatsHtml = `
     <article class="requirement-card" style="border-left: 4px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between;">
       <div>
@@ -5331,6 +5501,16 @@ async function renderRequirementDetail(programId) {
           ${escapeHtml(program.note || t("note_fallback"))}
         </p>
 
+        <!-- Live Sync Cross-Verify Prompt & Button -->
+        <div style="margin-top: 14px; padding: 12px; background: rgba(16, 185, 129, 0.03); border: 1px dashed rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; line-height: 1.5; color: var(--ink); margin-bottom: 20px;">
+          <span style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--muted);">
+            ${isKo ? "💡 가장 최신의 실시간 정보를 원하시면 이 버튼을 눌러 확인하세요. (실시간 검색 및 AI 분석에 약 45초~1분이 소요될 수 있습니다.)" : "💡 If you want the most up-to-date real-time information, click this button to check. (It may take about 45 seconds to 1 minute for real-time search and AI analysis.)"}
+          </span>
+          <button type="button" class="primary-btn compact" style="font-size: 11px; padding: 6px 12px; min-height: 28px; border-radius: 6px; background: #10b981; color: white; border: none; cursor: pointer; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;" onclick="window.triggerLiveSync('${escapeHtml(program.id)}', this)">
+            <span>${isKo ? "🔄 실시간 입학처 정보 교차 검증" : "🔄 Cross-Verify with Registrar Site"}</span>
+          </button>
+        </div>
+
         ${requirementRows ? `<div class="check-list" style="margin-bottom: 24px;">${requirementRows}</div>` : ""}
       </div>
 
@@ -5343,30 +5523,21 @@ async function renderRequirementDetail(programId) {
         </p>
         
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;">
-          <div style="background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
-            <span style="font-size: 10px; color: #047857; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "주내 학생" : "In-State"}</span>
-            <strong style="color: #10b981; font-size: 15px; font-weight: 800;">${stats.rateInState}</strong>
-          </div>
           <div style="background: rgba(244, 63, 94, 0.04); border: 1px solid rgba(244, 63, 94, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
-            <span style="font-size: 10px; color: #be123c; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "타주 학생" : "Out-of-State"}</span>
-            <strong style="color: #f43f5e; font-size: 15px; font-weight: 800;">${stats.rateOutOfState}</strong>
+            <span style="font-size: 10px; color: #be123c; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "전체 편입 합격률" : "Overall Rate"}</span>
+            <strong style="color: #f43f5e; font-size: 14px; font-weight: 800;">${overallRate}</strong>
           </div>
-          <div style="background: rgba(251, 191, 36, 0.04); border: 1px solid rgba(251, 191, 36, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
-            <span style="font-size: 10px; color: #b45309; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "국제학생" : "Int'l"}</span>
-            <strong style="color: #fbbf24; font-size: 15px; font-weight: 800;">${stats.rateInternational}</strong>
+          <div style="background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
+            <span style="font-size: 10px; color: #047857; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "연간 지원자 수" : "Applicants"}</span>
+            <strong style="color: #10b981; font-size: 14px; font-weight: 800;">${stats.applicants ? stats.applicants.toLocaleString() : "N/A"}</strong>
           </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12.5px; margin-bottom: 16px;">
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
-            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "연간 지원자 수" : "Annual Applicants"}</span>
-            <strong style="color: #1d4ed8;">${stats.applicants.toLocaleString()} ${isKo ? "명" : "students"}</strong>
-          </div>
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
-            <span style="color: var(--muted); display: block; font-size: 10px; font-weight: 700; margin-bottom: 2px;">${isKo ? "합격자 평균 GPA" : "Admitted Avg GPA"}</span>
-            <strong style="color: #4f46e5;">${stats.avgGpa}</strong>
+          <div style="background: rgba(99, 102, 241, 0.04); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
+            <span style="font-size: 10px; color: #4f46e5; font-weight: 700; display: block; margin-bottom: 2px;">${gpaLabel}</span>
+            <strong style="color: #6366f1; font-size: 14px; font-weight: 800;">${stats.avgGpa}</strong>
           </div>
         </div>
+        
+        ${ucNoticeHtml}
 
         <div style="font-size: 12px; line-height: 1.5; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 10px; border-radius: 6px; margin-bottom: 12px;">
           <strong style="color: #4f46e5; display: block; margin-bottom: 4px;">📐 AP / IB 학점 인정 정책 (AP/IB Waiver Policy)</strong>
@@ -5715,10 +5886,10 @@ function getAdvisoryMilestones(termStr, track, isInternational) {
       });
     }
     milestones.push({
-      title: isKo ? "교수 추천서(Letter of Rec) 미리 확보" : "Secure Letters of Recommendation",
+      title: isKo ? "교수 추천서(Letter of Rec) 학술 분야 선제 확보" : "Secure Academic Letters of Recommendation",
       desc: isKo 
-        ? "학기 초 교수님 오피스 아워를 주기적으로 방문하여 강력한 추천서 1-2부를 선제적으로 부탁드리세요." 
-        : "Visit professor office hours early this semester to secure strong letters of recommendation for your transfer file.",
+        ? "학기 초 교수님 오피스 아워를 적극 활용해 수학, 과학, 영어/인문학 등 핵심 기초 학술 분야(Core Disciplines) 교수님 위주로 추천서 1-2부를 선제적으로 부탁드리세요. 직무/실습 강사보다 학술 역량을 증명해줄 핵심 학과 교수님 추천서가 명문대 편입에서 훨씬 경쟁력 있습니다." 
+        : "Visit professor office hours early this semester to secure strong academic references. Prioritize core disciplines (Math, Science, English, etc.) over vocational or physical education instructors to strongly validate your academic capabilities.",
       badge: "DOCUMENTS",
       color: "#3b82f6"
     });
@@ -6294,18 +6465,18 @@ function buildRoadmap(explicit = false) {
     const estimatedCredits = totalUnitsPlanted * 3; // 3 credits per course
 
     let creditWarningHtml = "";
-    if (estimatedCredits < 30) {
+    if (estimatedCredits < 30 || buckets.length <= 2) {
       creditWarningHtml = `
         <div class="credit-threshold-warning" style="margin-top: 16px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.35); border-left: 4px solid #ef4444; border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-soft); width: 100%;">
           <h4 style="color: #ef4444; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 800; margin: 0 0 8px 0;">
-            ⚠️ ${isKo ? "경고: 단기 편입 위험 감지 (Credit-Threshold Trap)" : "Warning: Credit-Threshold Trap"}
+            ⚠️ ${isKo ? "경고: 단기/과소 학점 편입 위험 감지 (Credit-Threshold Trap)" : "Warning: Credit-Threshold Trap"}
           </h4>
           <p style="font-size: 12.5px; color: var(--ink); line-height: 1.55; margin: 0;">
             ${isKo 
-              ? `현재 계획된 총 이수 예정 학점은 약 <strong>${estimatedCredits}학점</strong>(총 ${totalUnitsPlanted}과목)으로, 미국 대학 편입의 최소 안전선인 <strong>30학점 미만</strong>입니다.<br>
-                 30학점 미만으로 원서를 접수하면 거의 모든 명문대에서 <strong>고등학교 성적표(High School Transcript) 및 SAT/ACT 공식 성적표 연동을 강제</strong>합니다. 고교 내신이 만족스럽지 않다면 이는 매우 치명적인 불이익이 될 수 있으므로, 추천 교양 과목을 로드맵 빈자리에 추가하여 반드시 30학점 이상으로 로드맵을 설계할 것을 강력히 권장합니다.`
-              : `Your planned transfer credits total approximately <strong>${estimatedCredits} credits</strong> (${totalUnitsPlanted} courses), which is <strong>below the 30-credit safety threshold</strong>.<br>
-                 Applying with under 30 credits triggers a requirement at most selective universities to submit your <strong>High School Transcript and SAT/ACT official scores</strong>. If your high school record is sub-optimal, this can seriously harm your chances. We highly recommend adding general education or elective courses to satisfy the 30-credit mark before transfer application submission.`
+              ? `현재 계획된 총 이수 예정 학점은 약 <strong>${estimatedCredits}학점</strong>(총 ${totalUnitsPlanted}과목)이며, 로드맵이 <strong>2학기 이하</strong>(단기 편입) 혹은 <strong>30학점 미만</strong>으로 구성되었습니다.<br>
+                 30학점 미만이거나 1년 단기 과정으로 원서를 접수하면 거의 모든 미국 명문대에서 <strong>고등학교 성적표(High School Transcript) 및 SAT/ACT 공식 성적표 제출을 강제 연동</strong>합니다. 고등학교 내신 성적이 최상위권이 아니라면 이는 극도로 치명적인 심사 불이익을 초래할 수 있습니다. 수강 과목을 추가하여 반드시 30학점 이상으로 로드맵을 구성하시기를 강력히 권장합니다.`
+              : `Your planned transfer credits total approximately <strong>${estimatedCredits} credits</strong> (${totalUnitsPlanted} courses) or your roadmap is <strong>2 semesters or fewer</strong> (short-term transfer below the 30-credit safety threshold).<br>
+                 Applying with under 30 credits or as a 1-year transfer triggers a requirement at most selective universities to submit your <strong>High School Transcript and SAT/ACT official scores</strong>. If your secondary school record is sub-optimal, this will seriously disadvantage your application. We highly recommend extending your plan or adding elective courses to satisfy the 30-credit mark before submitting your transfer applications.`
             }
           </p>
         </div>
@@ -6451,7 +6622,12 @@ function bindEvents() {
   });
 
   qs("#checkEligibilityBtn")?.addEventListener("click", async () => {
-    await handleAnalyzeCoverage();
+    console.log("[DEBUG] Eligibility button clicked");
+    try {
+      await handleAnalyzeCoverage();
+    } catch (e) {
+      console.error("[DEBUG] Error in handleAnalyzeCoverage", e);
+    }
   });
 
   qs("#buildRoadmapBtn")?.addEventListener("click", () => {
@@ -9168,7 +9344,7 @@ async function handleOnDemandScrape(event) {
     
     if (result.success) {
       // 1. Add to the local in-memory database
-      let localSchool = database.schools.find(s => s.name.toLowerCase() === schoolName.toLowerCase() || s.shortName.toLowerCase() === schoolName.toLowerCase());
+      let localSchool = database.schools.find(s => s.name.toLowerCase() === schoolName.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === schoolName.toLowerCase()));
       if (!localSchool) {
         localSchool = {
           id: result.school.id,
@@ -9346,9 +9522,13 @@ window.triggerLiveSync = async function(programId, btn) {
   span.textContent = isKo ? "실시간 입학처 정보 교차 검증 중..." : "Cross-verifying with registrar site...";
   
   try {
+    const reqHeaders = { "Content-Type": "application/json" };
+    if (typeof supabaseUserSession !== 'undefined' && supabaseUserSession && supabaseUserSession.access_token) {
+      reqHeaders["Authorization"] = `Bearer ${supabaseUserSession.access_token}`;
+    }
     const res = await fetch("/api/requirements/generate", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: reqHeaders,
       body: JSON.stringify({ programId })
     });
     
@@ -9371,7 +9551,7 @@ window.triggerLiveSync = async function(programId, btn) {
       btn.style.background = "#10b981";
       span.textContent = isKo ? "입학처 공식 정보 검증 완료" : "Registrar info verified";
       setTimeout(() => {
-        renderEligibilityResults();
+        renderRequirementDetail(programId);
       }, 1000);
     } else {
       throw new Error("Sync failed");

@@ -2717,21 +2717,6 @@ textarea:focus {
   line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .site-footer .footer-container {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .site-footer .footer-links {
-    align-items: flex-start;
-  }
-
-  .hamburger-menu {
-    display: flex;
-  }
-}
-
 /* Hamburger Menu Button */
 .hamburger-menu {
   display: none;
@@ -2764,6 +2749,21 @@ textarea:focus {
 }
 .hamburger-menu.open span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .site-footer .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .site-footer .footer-links {
+    align-items: flex-start;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+  }
 }
 
 /* Side Drawer Overlay/Backdrop */
@@ -3881,6 +3881,12 @@ textarea:focus {
   .pricing-grid-modal {
     grid-template-columns: 1fr;
   }
+  .auth-card {
+    padding: 20px !important;
+  }
+  .auth-modal {
+    padding: 10px !important;
+  }
 }
 
 /* Pricing Grid Landing Responsiveness */
@@ -3917,4 +3923,30 @@ textarea:focus {
 
 .sync-live-btn:active {
   transform: translateY(0);
+}
+
+/* Mobile responsive padding and target slots stack fixes */
+@media (max-width: 680px) {
+  #eligibility.tab-panel.active,
+  #requirements.tab-panel.active,
+  #roadmap.tab-panel.active,
+  #essay.tab-panel.active {
+    padding: 12px !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .target-search-row {
+    padding: 8px !important;
+    gap: 8px !important;
+  }
+  .target-inputs-group {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .target-inputs-group .form-row {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+  }
 }
