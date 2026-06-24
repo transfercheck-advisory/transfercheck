@@ -4620,6 +4620,7 @@ function renderLaterList(items) {
 function getCompetitiveProfile(program) {
   const schoolName = (program.school.name || "").toLowerCase();
   const majorName = (program.name || "").toLowerCase();
+  const schoolId = getAdmissionsSchoolId(program.school.name) || "";
   
   let tier = "Mid";
   let gpaRange = "3.50 - 3.75";
@@ -4642,7 +4643,8 @@ function getCompetitiveProfile(program) {
                     schoolName.includes("yale") ||
                     schoolName.includes("harvard") ||
                     schoolName.includes("princeton") ||
-                    schoolName.includes("northwestern");
+                    schoolName.includes("northwestern") ||
+                    schoolName.includes("massachusetts institute");
                     
   if (isTopTier) {
     tier = "Top";
@@ -4681,34 +4683,230 @@ function getCompetitiveProfile(program) {
   }
 
   let track = "STEM";
-  let electives = ["General Chemistry", "Calculus III", "Linear Algebra", "Differential Equations", "Physics (Mechanics/Electromagnetism)"];
+  let electives = [];
   let activities = [];
-  
   const isKo = (state.language || "ko") === "ko";
-  
-  if (majorName.includes("business") || majorName.includes("manage") || majorName.includes("finance") || majorName.includes("accounting") || majorName.includes("econ")) {
+
+  // 1. Resolve Major-Specific Recommended Electives
+  if (majorName.includes("computer science") || majorName.includes("computer engineering") || majorName.includes("software") || majorName.includes("data science")) {
+    track = "CS";
+    electives = ["Intro to CS (Python/Java)", "Data Structures", "Discrete Mathematics", "Linear Algebra", "Calculus III"];
+  } else if (majorName.includes("mathematics") || majorName.includes("statistics") || majorName.includes("math")) {
+    track = "Math";
+    electives = ["Calculus III", "Linear Algebra", "Intro to Probability", "Mathematical Statistics", "Real Analysis"];
+  } else if (majorName.includes("mechanical") || majorName.includes("aerospace") || majorName.includes("civil") || majorName.includes("engineering")) {
+    track = "Engineering";
+    electives = ["Calculus III", "Physics (Mechanics)", "Differential Equations", "Statics & Dynamics", "CAD & 3D Modeling"];
+  } else if (majorName.includes("chemical") || majorName.includes("bio") || majorName.includes("biomedical") || majorName.includes("material") || majorName.includes("chemistry")) {
+    track = "BioChem";
+    electives = ["General Chemistry II", "Organic Chemistry", "Biology I & II", "Calculus III", "Physics (Mechanics/EM)"];
+  } else if (majorName.includes("business") || majorName.includes("manage") || majorName.includes("finance") || majorName.includes("accounting")) {
     track = "Business";
-    electives = ["Macroeconomics", "Microeconomics", "Business Statistics", "Financial Accounting", "Managerial Accounting"];
-    activities = isKo
-      ? ["경영 케이스 공모전 참여 및 입상", "경영/금융 학회 리더십", "기업 인턴십 체험 (마케팅/재무 분석)", "비즈니스 영어 디베이트 클럽"]
-      : ["Business case competition participation and award", "Business/Finance academic society leadership", "Corporate internship experience (Marketing/Financial analysis)", "Business English debate club"];
-  } else if (majorName.includes("english") || majorName.includes("history") || majorName.includes("philosophy") || majorName.includes("political") || majorName.includes("sociology") || majorName.includes("art") || majorName.includes("literature") || majorName.includes("humanities") || majorName.includes("psych") || majorName.includes("comm") || majorName.includes("relations") || majorName.includes("anthro") || majorName.includes("ling") || majorName.includes("global") || majorName.includes("gov") || majorName.includes("social studies")) {
-    track = "Humanities";
-    electives = ["Introduction to Sociology", "World History", "Ethics", "Critical Writing", "Political Theory"];
-    activities = isKo
-      ? ["인문/사회과학 학생 저널 투고", "시민단체(NGO) 및 봉사단체 프로젝트 리드", "사회적 이슈 관련 에세이 공모전", "교내 영자신문사 에디터 활동"]
-      : ["Submission to human/social sciences student journals", "NGO & volunteer organization project leadership", "Essay competition on social issues", "Campus English newspaper editor activity"];
+    electives = ["Microeconomics", "Macroeconomics", "Business Statistics", "Financial Accounting", "Managerial Accounting"];
+  } else if (majorName.includes("economics") || majorName.includes("econ")) {
+    track = "Economics";
+    electives = ["Microeconomics", "Macroeconomics", "Calculus III", "Intro to Econometrics", "Statistics"];
+  } else if (majorName.includes("psychology") || majorName.includes("psych")) {
+    track = "Psychology";
+    electives = ["General Psychology", "Research Methods", "Psychological Statistics", "Cognitive Psychology", "Intro to Sociology"];
   } else {
-    track = "STEM";
-    electives = ["General Chemistry", "Calculus III", "Linear Algebra", "Differential Equations", "Physics (Mechanics/Electromagnetism)"];
-    activities = isKo 
-      ? ["경진대회(Robotics/Hackathon) 참여", "학술 및 전공 동아리 리더십", "Github 오픈소스 기여 및 독자 프로젝트 개발", "Calculus/Physics 과목 피어 튜터링"]
-      : ["Participation in competitions (Robotics/Hackathon)", "Academic & major club leadership", "Github open-source contribution & independent project development", "Calculus/Physics peer tutoring"];
+    // Humanities & Social Sciences default
+    track = "Humanities";
+    electives = ["Intro to Sociology", "World History", "Ethics & Writing", "Critical Writing", "Political Theory"];
+  }
+
+  // 2. Resolve School & Major Matching Extracurricular Milestones
+  const isIvyOrElite = (tier === "Top") || schoolName.includes("mit") || schoolName.includes("stanford") || schoolName.includes("columbia") || schoolName.includes("cornell") || schoolName.includes("harvard") || schoolName.includes("yale") || schoolName.includes("princeton");
+
+  if (track === "CS" || track === "Data Science") {
+    if (isIvyOrElite) {
+      activities = isKo
+        ? [
+            `입학처 지향 인재상: 학문적 경계를 부수는 파괴적 혁신가 및 실천가 (Mens et Manus)`,
+            "MIT/Stanford AI 랩 연구 보조원(RA) 경력 또는 공동 저술 논문 기여",
+            "글로벌 해커톤(MLH, Google Solution Challenge) 우승 또는 대기업 기술 프로젝트 기여",
+            "유명 오픈소스 프로젝트(React, TensorFlow 등) 핵심 컨트리뷰터 참여",
+            "실제 상용화된 웹/앱 프로덕트 런칭 및 액티브 유저 지표 확보"
+          ]
+        : [
+            "Admissions Persona: Disruptive innovator and builder pushing academic boundaries",
+            "Research assistant (RA) experience in top AI/Systems Lab with co-authored publications",
+            "Winning global hackathons (MLH, Google Solution Challenge) or contributing to enterprise tech codebases",
+            "Core contributor to notable open-source repositories (React, TensorFlow, etc.)",
+            "Launched a live commercial web/mobile product with verified active user metrics"
+          ];
+    } else {
+      activities = isKo
+        ? [
+            `입학처 지향 인재상: 성실한 학업 관리와 협업 능력을 지닌 실용형 엔지니어`,
+            "교내 해커톤(Hackathon) 참가 및 독자 전공 토이 프로젝트 개발",
+            "GitHub 오픈소스 간단한 기여 및 독자 레포지토리 운영 (100+ Star)",
+            "IT 스타트업 인턴십 3개월 체험 또는 기술 블로그 운영",
+            "알고리즘 문제풀이(LeetCode/BOJ 500제 이상) 학내 스터디 리더"
+          ]
+        : [
+            "Admissions Persona: Practical engineer showing steady academic rigor and collaboration",
+            "Participation in campus hackathons and development of independent toy projects",
+            "GitHub open-source contributions and active personal repositories (100+ Stars)",
+            "IT startup internship (3+ months) or technical development blog writing",
+            "Leading a campus study group for algorithm problem solving (LeetCode/BOJ 500+ solved)"
+          ];
+    }
+  } else if (track === "Math") {
+    activities = isKo
+      ? [
+          `입학처 지향 인재상: 수학적 엄밀성과 논리적 사고력을 극대화한 이론가`,
+          "수학/통계 피어 튜터링(Peer Tutoring) 활동 및 우수 강사 표창",
+          "Kaggle 글로벌 머신러닝 경쟁대회 참여 및 Silver 등급 이상 획득",
+          "대학 수학 학술 세미나/학회 주최 및 연구 초록 작성 참여",
+          isIvyOrElite ? "고급 해석학/대수학 리서치 프로젝트 기여" : "수학 논문 번역 및 학술 블로그 운영"
+        ]
+      : [
+          "Admissions Persona: Pure theorist maximizing mathematical rigor and logical deduction",
+          "Peer tutoring activities in advanced calculus with tutoring center awards",
+          "Kaggle machine learning competition participation with Silver tier or higher",
+          "Organizing undergraduate math seminars and co-writing research abstracts",
+          isIvyOrElite ? "Contributing to advanced Real Analysis / Abstract Algebra research projects" : "Translating advanced math journals and writing summaries on academic blogs"
+        ];
+  } else if (track === "Engineering") {
+    activities = isKo
+      ? [
+          `입학처 지향 인재상: 설계 도면을 실제 프로토타입으로 완성시키는 물리적 해결사`,
+          "학내 메이커스페이스 장비 마스터 튜터 및 설계 워크숍 주최",
+          "FSAE(자작자동차) 또는 로보틱스 소모임 소속 실제 차량/로봇 프레임 모델링 및 제어부 설계",
+          "기계 설계 분야 공모전(CAD Design Contest) 참여 및 입상",
+          isIvyOrElite ? "미국 기계학회(ASME) 학생 포럼 공동 발표 경력" : "CAD 자격증(CSWP 등) 취득 및 기계 기구 조립 포트폴리오 제작"
+        ]
+      : [
+          "Admissions Persona: Practical problem solver converting design blueprints into live prototypes",
+          "Makerspace master tutor and mechanical workshop organizer",
+          "Modeling and control system design of FSAE race cars or competitive robotics frames",
+          "Participation and placements in competitive CAD design contests",
+          isIvyOrElite ? "Co-presenting at U.S. ASME student forums" : "Obtaining certified CAD credentials (CSWP) and drafting a mechanism portfolio"
+        ];
+  } else if (track === "BioChem") {
+    activities = isKo
+      ? [
+          `입학처 지향 인재상: 안전 규정을 준수하며 끈기 있게 가설을 검증하는 실험가`,
+          "대학 기초화학/생명공학 연구실 풀타임 연구 보조원(RA) 6개월 경력",
+          "분석화학 기기(HPLC, NMR 등) 실제 사용 및 분석 포트폴리오 구축",
+          "학내 의생명/화공 학술 저널 편집위원 또는 학생 논문 게재",
+          isIvyOrElite ? "국제 합성생물학 대회(iGEM) 팀원으로 참가 및 입상" : "지역 과학관 청소년 생명과학 실험 교육 멘토링 주최"
+        ]
+      : [
+          "Admissions Persona: Patient experimentalist verifying hypotheses under safety protocols",
+          "Full-time research assistant (RA) in a bio/chemistry lab (6+ months)",
+          "Building an analytical chemistry equipment portfolio (HPLC, NMR, etc.)",
+          "Serving as student editor for campus life sciences journal or submitting student review articles",
+          isIvyOrElite ? "iGEM (International Genetically Engineered Machine) competition placement" : "Organizing biology experiments and mentoring high school students at science museums"
+        ];
+  } else if (track === "Business") {
+    if (isIvyOrElite) {
+      activities = isKo
+        ? [
+            `입학처 지향 인재상: 글로벌 마켓에서 트렌드를 주도하고 자본을 움직이는 전략적 경제 리더`,
+            "글로벌 컨설팅/투자은행 연계 비즈니스 케이스 공모전 우승",
+            "대학 대표 금융/투자 학회 대표 회장 및 실제 펀드 시뮬레이션 포트폴리오 리드",
+            "핀테크/이커머스 스타트업 공동 창업 경력 및 실제 VC 투자 유치 피칭 피드백 경험",
+            "글로벌 기업(Big 4, 전략 컨설팅) 인턴십 3개월 이상 경력"
+          ]
+        : [
+            "Admissions Persona: Strategic business leader driving capital and market trends globally",
+            "Winning global consulting/IB business case competitions",
+            "President of university finance/investment society leading simulated fund portfolios",
+            "Co-founding a Fintech/E-commerce startup with verified pitch deck presentations to VCs",
+            "3+ months internship experience at global firms (Big 4, Management Consulting)"
+          ];
+    } else {
+      activities = isKo
+        ? [
+            `입학처 지향 인재상: 탄탄한 기업 분석 능력과 조직 친화력을 갖춘 실무형 비즈니스 맨`,
+            "교내 창업 동아리 리더 및 모의 창업 마켓 운영",
+            "기업 연계 마케팅 공모전 참여 및 우수 제안서 선정",
+            "스타트업 마케팅/재무 부서 인턴십 2개월 경력",
+            "영어 토론(Debate) 클럽 회원 및 대외 세미나 참가"
+          ]
+        : [
+            "Admissions Persona: Practical business analyst showing firm corporate finance skills and leadership",
+            "Leading startup clubs and organizing simulated campus markets",
+            "Participation in marketing contests with recognized corporate proposals",
+            "Corporate internship experience in startup marketing/accounting departments (2+ months)",
+            "Active membership in debate clubs and presenting at external seminars"
+          ];
+    }
+  } else if (track === "Economics") {
+    activities = isKo
+      ? [
+          `입학처 지향 인재상: 계량 데이터로 사회적 선택과 자원 배분을 모델링하는 정량적 분석가`,
+          "R/Python 기반 계량경제 데이터 분석 프로젝트 진행 및 리포트 작성",
+          "교내 경제학회 우수 연구 논문 발표",
+          "금융감독원 또는 공공기관 청년 인턴 및 서포터즈 리더",
+          isIvyOrElite ? "정부 정책 연구소(KDI 등) 경제 통계 모니터링 보조 경력" : "학내 경제 시사 토론 동호회 회장 및 격주 간행물 발행"
+        ]
+      : [
+          "Admissions Persona: Quantitative analyst modeling social choice and resource allocation via data",
+          "Drafting econometric data reports utilizing R/Python statistical packages",
+          "Presenting student economics research paper at academic symposiums",
+          "Youth supporter leader / intern at national financial regulatory bodies",
+          isIvyOrElite ? "Assisting in economic statistic modeling at government research institutes" : "President of campus economics forum publishing bi-weekly columns"
+        ];
+  } else if (track === "Psychology") {
+    activities = isKo
+      ? [
+          `입학처 지향 인재상: 과학적 통계 분석과 인간에 대한 연민을 균형 있게 다루는 관찰자`,
+          "학내 임상/인지 심리학 연구 보조(Lab Assistant) 및 IRB 승인 절차 경험",
+          "종합사회복지관/상담센터 심리 상담 보조 봉사활동 100시간 이상",
+          "행동 데이터 수집 및 분석을 통한 심리학 연구 포스터 학회 발표",
+          isIvyOrElite ? "미국 심리학회(APA) 학생 회원 및 국제 컨퍼런스 참관" : "학내 청소년 자살 예방 및 심리 건강 캠페인 대표"
+        ]
+      : [
+          "Admissions Persona: Scientific observer balancing clinical statistics with human empathy",
+          "Research assistant in clinical psychology lab with experience in IRB protocols",
+          "Volunteer service (100+ hours) assisting counselors at community counseling centers",
+          "Presenting a research poster utilizing behavioral data collection and analysis",
+          isIvyOrElite ? "Student member of American Psychological Association (APA) with conference attendance" : "Leader of mental health awareness and suicide prevention campaigns on campus"
+        ];
+  } else {
+    // Humanities & Social Sciences default
+    if (isIvyOrElite) {
+      activities = isKo
+        ? [
+            `입학처 지향 인재상: 역사적 통찰과 텍스트 분석으로 문명적 아젠다를 이끄는 인문 지성`,
+            "인문/사회과학 분야 해외 저널(A&HCI/SSCI 등) 보조 번역 및 주석 기여",
+            "글로벌 NGO 단체 인턴십 리더 및 UN 산하 학생 세미나 한국 대표 발표",
+            "인류 문화 유산 또는 사회 소수자 담론 에세이 공모전 대상 수상",
+            "교내 영자 신문사 편집국장 및 시사 평론 고정 칼럼 집필"
+          ]
+        : [
+            "Admissions Persona: Intellectual leader driving cultural agendas via historical insight and text analysis",
+            "Assisting translations/annotations for notable humanities and social science journals",
+            "Student representative presenting at UN-sponsored youth summits / Global NGO internship leaders",
+            "Grand prize in national essay contests discussing social minorities or cultural heritage",
+            "Editor-in-chief of campus English newspaper writing bi-weekly political columns"
+          ];
+    } else {
+      activities = isKo
+        ? [
+            `입학처 지향 인재상: 깊은 공감 능력과 텍스트 독해력을 지닌 실천적 지식인`,
+            "지방 시민 단체(NGO) 교육 기부 프로젝트 자원봉사 리드",
+            "교내 사회 이슈 연대 소모임 개설 및 정기 학술지 출판",
+            "인문학 독서 평론 공모전 입상 및 교내 도서관 서평 위원",
+            "다문화 가정 아동 한국어/영어 멘토링 활동 50시간 이상"
+          ]
+        : [
+            "Admissions Persona: Social intellectual showing critical reading skills and public service",
+            "Leading educational donation projects at local NGOs",
+            "Founding a social issue discussion group and publishing a campus review",
+            "Placements in humanities book review contests and serving as library reviewer",
+            "50+ hours mentoring children from multicultural families in English/Korean language"
+          ];
+    }
   }
 
   return {
     tier,
     gpaRange,
+    styleTier: tier,
     essayWeight,
     essayWeightEn,
     recLetters,
@@ -4794,27 +4992,63 @@ function generateMockCases(program, compProfile, lang) {
   
   let extra1 = "";
   let extra2 = "";
-  if (compProfile.track === "Business") {
+  if (compProfile.track === "CS") {
+    extra1 = isKo 
+      ? "풀스택 React 웹 어플리케이션 개발 프로젝트 (GitHub 50+ stars), 해커톤 머신러닝 모델 부문 수상."
+      : "Full-stack React web application development project (GitHub 50+ stars), won hackathon ML model award.";
+    extra2 = isKo
+      ? "IT 스타트업 백엔드 인턴 3개월, 알고리즘 튜터 및 자료구조 피어 가이드 참여."
+      : "Backend developer intern at IT startup for 3 months, CS peer tutor.";
+  } else if (compProfile.track === "Math") {
+    extra1 = isKo 
+      ? "대학 수학 서적 번역 기여, Kaggle 글로벌 머신러닝 경진대회 상위 10% 랭킹."
+      : "Contributed to math textbook translations, Kaggle ML competition top 10%.";
+    extra2 = isKo
+      ? "선형대수학 및 미적분학 피어 튜터 2학기, 금융 데이터 분석 소모임 리더."
+      : "Calculus & Linear Algebra tutor for 2 semesters, led quantitative finance study group.";
+  } else if (compProfile.track === "Engineering") {
+    extra1 = isKo 
+      ? "드론 자율주행 프레임 3D 모델링 설계 공모전 우수작 선정, CAD 자격증 취득."
+      : "Excellent prize in UAV frame 3D CAD modeling design contest, certified CSWP.";
+    extra2 = isKo
+      ? "자작 자동차 동아리(FSAE) 파워트레인 파트 설계 부원, 기초 물리학 피어 튜터."
+      : "Powertrain design engineer in FSAE team, physics peer tutor.";
+  } else if (compProfile.track === "BioChem") {
+    extra1 = isKo 
+      ? "유기화학 기초 실험실 학부연구생 6개월, HPLC 장비 분석 실습 포트폴리오 구축."
+      : "Undergrad researcher in Organic Chem lab for 6 months, built HPLC analytics portfolio.";
+    extra2 = isKo
+      ? "생명과학 분야 동아리 학술지 리뷰 논문 게재, 병원 내 환자 심폐 기능 모니터링 보조 봉사."
+      : "Life sciences review article publisher, volunteered at clinical cardiology department.";
+  } else if (compProfile.track === "Business") {
     extra1 = isKo 
       ? "교내 경영 투자 학회장, 소상공인 대상 디지털 마케팅 컨설팅 프로젝트 리드."
       : "President of CC Business Club, led digital marketing consulting for local small businesses.";
     extra2 = isKo
       ? "스타트업 재무 기획 인턴 3개월, 주식 피칭 대회 본선 진출."
       : "Startup finance intern for 3 months, finalist in stock pitching competition.";
-  } else if (compProfile.track === "Humanities") {
+  } else if (compProfile.track === "Economics") {
+    extra1 = isKo 
+      ? "R/Python 활용 계량경제 데이터 회귀분석 프로젝트, 경제 시사 칼럼 정기 기고."
+      : "Econometric regression analysis on macroeconomics using R/Python, published economic columns.";
+    extra2 = isKo
+      ? "국가 금융 규제 기구 경제지표 모니터링 청년 대표, 교내 경제 토론 학회장."
+      : "Representative of national financial regulatory monitoring team, debate club lead.";
+  } else if (compProfile.track === "Psychology") {
+    extra1 = isKo 
+      ? "아동 임상 심리학 연구 보조(Lab Assistant) 및 통계 코딩 참여, 상담 봉사 80시간."
+      : "Assisted in clinical child psychology data coding, volunteered 80 hours at counseling center.";
+    extra2 = isKo
+      ? "학내 심리 건강 캠페인 홍보 팀장, 인지 신경과학 전공 스터디 그룹 리드."
+      : "Leader of campus mental health campaign, led study group in cognitive neuroscience.";
+  } else {
+    // Humanities
     extra1 = isKo
       ? "비영리 사회적 기업 인턴, 지역 청소년 자서전 대필 프로젝트 봉사 60시간."
       : "Non-profit social enterprise intern, volunteered 60 hours in local youth biography project.";
     extra2 = isKo
       ? "교내 영문 저널 편집장, 이민자 대상 한글/영어 튜터링 활동."
       : "Editor-in-chief of campus journal, English tutoring for immigrants.";
-  } else {
-    extra1 = isKo
-      ? "풀스택 React 웹 어플리케이션 개발 프로젝트 (GitHub 50+ stars), 수학 피어 튜터."
-      : "Full-stack React web application development project (GitHub 50+ stars), math peer tutor.";
-    extra2 = isKo
-      ? "교내 로보틱스 클럽 팀장, 해커톤 데이터 분석 부문 수상."
-      : "Robotics club team lead, won hackathon data analysis category.";
   }
 
   return [
