@@ -57,14 +57,14 @@ const TRANSLATIONS = {
     "hero_lead": "TransferChek directly parses official university admissions portals to design all core transfer strategies (eligibility scanner, prerequisite mapping, roadmap, essay guide) via our real-time automated engine.",
     "hero_cta_demo": "Launch Strategy Engine",
     "hero_cta_solution": "See How It Works",
-    "hero_proof_regret": "01. Eligibility Diagnostics",
-    "hero_proof_regret_desc": "Instantly scan target U.S. universities and majors matchable to your current GPA and completed coursework.",
-    "hero_proof_time": "02. Custom Prerequisite Roadmaps",
-    "hero_proof_time_desc": "Build optimal, error-free term schedules that guarantee prerequisite compliance and prevent tuition waste.",
-    "hero_proof_cost": "03. Data-Driven AI Essay",
-    "hero_proof_cost_desc": "Structure competitive personal narratives mapped to successful rubric patterns and transfer archives.",
-    "hero_proof_search": "04. ReqRadar Search",
-    "hero_proof_search_desc": "Real-time query and cross-analysis of transfer guidelines for 4,000+ U.S. colleges.",
+    "hero_proof_regret": "01. Feasibility & Competitiveness Diagnostics (StatCompass)",
+    "hero_proof_regret_desc": "Compare your GPA, coursework, and EC score with historical admitted specimens to evaluate your real transfer competitiveness.",
+    "hero_proof_time": "02. All-in-One Transfer Explorer (Explorer)",
+    "hero_proof_time_desc": "Search transfer rates, GPA ranges, AP policies, and real transfer specimen profiles all on a single page.",
+    "hero_proof_cost": "03. Prerequisite Roadmap Builder (Pathfinder)",
+    "hero_proof_cost_desc": "Build error-free, term-by-term course schedules to guarantee prerequisite compliance and avoid credit overlap.",
+    "hero_proof_search": "04. AI Essay Strategist (EssayAI)",
+    "hero_proof_search_desc": "Generate personalized personal statement structures based on pattern analysis of 120,000+ successful admissions essays.",
     "fallback_mapping_request": "Can't find your target school/major? Request real-time AI mapping for all 4,000+ U.S. colleges →",
     "more_colleges_chip": "+ 4,000+ More Colleges via AI mapping",
     "value_eyebrow": "Premium Strategy Partner",
@@ -499,14 +499,14 @@ const TRANSLATIONS = {
     "hero_lead": "TransferChek은 미국 대학 입학처의 공식 가이드라인을 정밀 파싱하여 편입에 필요한 모든 핵심 전략(지원 자격 진단, 선수과목 매핑, 수강 로드맵, 에세이 설계)을 실시간 자동화 엔진으로 설계합니다.",
     "hero_cta_demo": "전략 엔진 시작하기",
     "hero_cta_solution": "서비스 핵심 기능 보기",
-    "hero_proof_regret": "01. 지원 자격 정밀 진단",
-    "hero_proof_regret_desc": "내 현재 GPA와 이수한 과목 데이터를 기반으로 편입 합격 가능한 대학교와 전공을 1초 만에 자가진단합니다.",
-    "hero_proof_time": "02. 선수과목 로드맵 빌더",
-    "hero_proof_time_desc": "목표 대학들의 복잡한 선수과목 이수 조건을 자동 매핑하여, 학기가 지연되거나 불필요한 수업을 듣지 않도록 수강 계획을 설계합니다.",
-    "hero_proof_cost": "03. AI 에세이 전략 설계",
-    "hero_proof_cost_desc": "실제 합격생 12만 명의 에세이 데이터 패턴을 기반으로 내 강점이 돋보이는 경쟁력 있는 에세이 구조와 개요를 구성합니다.",
-    "hero_proof_search": "04. 실시간 편입 데이터 검색 (ReqRadar)",
-    "hero_proof_search_desc": "미국 4,000+ 대학교의 편입 요강과 이수 과목, 어학 성적 등 입학 정보를 실시간으로 조회하고 교차 분석합니다.",
+    "hero_proof_regret": "01. 내 스펙 경쟁력 진단기 (StatCompass)",
+    "hero_proof_regret_desc": "나의 대학 GPA, 이수 과목, 영어 성적, 비교과 활동 점수를 실제 합격자 표본 스펙 및 합격률과 매칭하여 합격 경쟁력을 판단합니다.",
+    "hero_proof_time": "02. 편입 정보 탐색기 (Explorer)",
+    "hero_proof_time_desc": "선택한 대학교/학과 편입에 필요한 모든 정보(합격률, 평균 GPA, AP 정책, 실제 합격자 스펙 예시 등)를 한 페이지로 제공합니다.",
+    "hero_proof_cost": "03. 최적화 수강 로드맵 빌더 (Pathfinder)",
+    "hero_proof_cost_desc": "목표 대학들의 필수/권장 선수과목을 자동 매핑하여 학기가 지연되거나 불필요한 과목 수강 없이 효율적인 수강 스케줄을 설계합니다.",
+    "hero_proof_search": "04. AI 에세이 전략가 (EssayAI)",
+    "hero_proof_search_desc": "실제 합격생 12만 명의 에세이 데이터 패턴을 기반으로 내 강점이 부각되는 최적의 에세이 구조와 개요 가이드를 생성합니다.",
     "fallback_mapping_request": "원하는 대학/학과가 없으신가요? 미국의 4,000+ 모든 대학 대상 실시간 AI 매핑 신청하기 →",
     "more_colleges_chip": "+ 4,000+개 이상 전체 대학 AI 매핑 지원",
     "value_eyebrow": "프리미엄 전략 파트너",
@@ -932,14 +932,14 @@ const TRANSLATIONS = {
     "hero_lead": "TransferChek 直接解析各大学官方招生简章，通过实时自动化引擎设计转学所需的全部核心策略（资格评估、先修课对齐、课程规划及文书大纲）。",
     "hero_cta_demo": "启动策略分析",
     "hero_cta_solution": "了解服务特色",
-    "hero_proof_regret": "01. 转学资格评估",
-    "hero_proof_regret_desc": "根据您目前的 GPA 和已修读课程，在一秒钟内精确评估您可以转入的美国大学和专业。",
-    "hero_proof_time": "02. 先修课程路线图",
-    "hero_proof_time_desc": "自动匹配目标大学的先修课程条件，为您量身定制学习计划，避免学期延误。",
-    "hero_proof_cost": "03. AI 文书架构规划",
-    "hero_proof_cost_desc": "基于 12 万份真实转学录取数据，立即生成能完美展现您个人优势的文书结构大纲。",
-    "hero_proof_search": "04. 实时数据检索 (ReqRadar)",
-    "hero_proof_search_desc": "实时查询并交叉分析全美 4,000+ 所高校的转学先修课与录取要求。",
+    "hero_proof_regret": "01. 转学竞争力评估 (StatCompass)",
+    "hero_proof_regret_desc": "将您的 GPA、先修课程和课外活动与真实录取案例进行匹配，评估您的转学竞争力。",
+    "hero_proof_time": "02. 全方位转学探索器 (Explorer)",
+    "hero_proof_time_desc": "在单个页面中，轻松检索目标大学的转学率、录取 GPA 范围、AP 政策以及录取标本。",
+    "hero_proof_cost": "03. 先修课路线图规划器 (Pathfinder)",
+    "hero_proof_cost_desc": "自动对齐目标大学先修课，规划无冲突的每学期选课计划，防止学分重叠或课程遗漏。",
+    "hero_proof_search": "04. AI 文书架构规划器 (EssayAI)",
+    "hero_proof_search_desc": "基于 12 万份名校成功录取文书的模式分析，即刻生成能展现您个人优势的文书结构导图。",
     "fallback_mapping_request": "没找到您的目标大学/专业？申请全美 4,000+ 高校的实时 AI 映射 →",
     "more_colleges_chip": "+ 4,000+ 所全美高校 AI 实时映射",
     "value_eyebrow": "高端转学战略伙伴",
@@ -2853,7 +2853,8 @@ function evaluateProgram(program) {
       label: course.name,
       pass: isCourseSatisfied(course.id),
       status: "normal",
-      type: "course"
+      type: "course",
+      isRequired: true
     });
   });
 
@@ -2862,7 +2863,8 @@ function evaluateProgram(program) {
       label: `${t("choice_label_pref")} ${choice.options.map((course) => course.name).join(" / ")}`,
       pass: choice.options.some((course) => isCourseSatisfied(course.id)),
       status: "normal",
-      type: "course"
+      type: "course",
+      isRequired: true
     });
   });
 
@@ -4128,8 +4130,14 @@ function renderEligibilityResults() {
                 ${primaryChecks
                   .map(
                     (check) => `
-                      <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}">
-                        <span>${escapeHtml(check.label)}</span>
+                      <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}" style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                          ${check.isRequired ? `<span style="background: rgba(239, 68, 68, 0.08); color: #ef4444; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(239, 68, 68, 0.15);">${isKo ? "필수" : "Required"}</span>` : ""}
+                          ${check.type === "gpa" ? `<span style="background: rgba(99, 102, 241, 0.08); color: #6366f1; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(99, 102, 241, 0.15);">${isKo ? "성적" : "GPA"}</span>` : ""}
+                          ${check.type === "credits" ? `<span style="background: rgba(14, 165, 233, 0.08); color: #0ea5e9; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(14, 165, 233, 0.15);">${isKo ? "학점" : "Credits"}</span>` : ""}
+                          ${check.type === "english" ? `<span style="background: rgba(245, 158, 11, 0.08); color: #d97706; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(245, 158, 11, 0.15);">${isKo ? "영어" : "English"}</span>` : ""}
+                          <span>${escapeHtml(check.label)}</span>
+                        </span>
                         <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
                       </div>
                     `
@@ -4145,8 +4153,14 @@ function renderEligibilityResults() {
                         ${extraChecks
                           .map(
                             (check) => `
-                              <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}">
-                                <span>${escapeHtml(check.label)}</span>
+                              <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}" style="display: flex; align-items: center; justify-content: space-between;">
+                                <span style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                                  ${check.isRequired ? `<span style="background: rgba(239, 68, 68, 0.08); color: #ef4444; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(239, 68, 68, 0.15);">${isKo ? "필수" : "Required"}</span>` : ""}
+                                  ${check.type === "gpa" ? `<span style="background: rgba(99, 102, 241, 0.08); color: #6366f1; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(99, 102, 241, 0.15);">${isKo ? "성적" : "GPA"}</span>` : ""}
+                                  ${check.type === "credits" ? `<span style="background: rgba(14, 165, 233, 0.08); color: #0ea5e9; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(14, 165, 233, 0.15);">${isKo ? "학점" : "Credits"}</span>` : ""}
+                                  ${check.type === "english" ? `<span style="background: rgba(245, 158, 11, 0.08); color: #d97706; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(245, 158, 11, 0.15);">${isKo ? "영어" : "English"}</span>` : ""}
+                                  <span>${escapeHtml(check.label)}</span>
+                                </span>
                                 <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
                               </div>
                             `
