@@ -2723,11 +2723,15 @@ textarea:focus {
   .site-footer .footer-links {
     align-items: flex-start;
   }
+
+  .hamburger-menu {
+    display: flex;
+  }
 }
 
 /* Hamburger Menu Button */
 .hamburger-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 20px;
@@ -3861,4 +3865,17 @@ textarea:focus {
   font-style: italic;
   line-height: 1.5;
   opacity: 0.8;
+}
+
+/* Pricing Grid Modal Responsiveness */
+.pricing-grid-modal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 580px) {
+  .pricing-grid-modal {
+    grid-template-columns: 1fr;
+  }
 }

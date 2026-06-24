@@ -158,7 +158,7 @@ const TRANSLATIONS = {
     "tier_free_price": "0 KRW",
     "tier_free_desc": "For initial feasibility mapping",
     "tier_free_feature1": "Analyze up to 3 target programs in StatCompass",
-    "tier_free_feature2": "Unlimited access to University & Major Explorer (No Roadmap/EssayAI)",
+    "tier_free_feature2": "No access to University Explorer, Roadmap Builder, or EssayAI (Locked)",
     "slot_locked_placeholder": "🔒 Locked (Premium Plan)",
     "tier_pro_name": "Pro Pass",
     "tier_pro_price": "9,900 KRW/mo",
@@ -169,7 +169,7 @@ const TRANSLATIONS = {
     "tier_premium_price": "29,900 KRW/mo",
     "tier_premium_desc": "All-in-one roadmap & essay suite + 100% Data Integrity Refund Pledge",
     "tier_premium_feature1": "Unlimited access to StatCompass, ReqRadar & Pathfinder",
-    "tier_premium_feature2": "AI Essay: 1 active target school outline + 1:1 consultation outline templates",
+    "tier_premium_feature2": "AI Essay Assistant: Unlimited target school essay reviews & outlines",
     "tier_essay_pass_name": "AI Target Essay Pass",
     "tier_essay_pass_price": "9,900 KRW",
     "tier_essay_pass_desc": "Bespoke SOP outline clinic for one target university",
@@ -600,7 +600,7 @@ const TRANSLATIONS = {
     "tier_free_price": "0원",
     "tier_free_desc": "기본 지원 가능 대학 탐색용",
     "tier_free_feature1": "학교, 전공 진단기 내 대학 분석 최대 3개 한도 제공",
-    "tier_free_feature2": "학교, 전공 탐색기(선수과목 조건) 무제한 무료 제공",
+    "tier_free_feature2": "학교·전공 탐색기, 수강 로드맵 빌더, AI 에세이 이용 불가 (잠금)",
     "slot_locked_placeholder": "🔒 잠김 (Premium 플랜 전용)",
     "tier_pro_name": "Pro 패스",
     "tier_pro_price": "월 9,900원",
@@ -609,9 +609,9 @@ const TRANSLATIONS = {
     "tier_pro_feature2": "안정(Safety) · 적정(Match) · 소신(Reach) 진단 필터링",
     "tier_premium_name": "Premium 플래너",
     "tier_premium_price": "월 29,900원",
-    "tier_premium_desc": "올인원 수강 로드맵 & 에세이 설계 패키지 (100% 데이터 무결성 환불 보증)",
-    "tier_premium_feature1": "지원 가능 진단 + 요건 검색 + 최적 수강 로드맵 빌더 무제한 제공",
-    "tier_premium_feature2": "AI 에세이: 1개 대학 에세이 구조 분석 및 1:1 컨설팅 가이드 & 합격 템플릿 즉시 잠금해제",
+    "tier_premium_desc": "올인원 수강 로드맵, 학교 탐색기 & 에세이 설계 패키지",
+    "tier_premium_feature1": "학교·전공 진단기, 탐색기 및 최적 수강 로드맵 빌더 무제한 제공",
+    "tier_premium_feature2": "AI 에세이 피드백 및 목표 대학 에세이 무제한 작성 및 검토 지원",
     "tier_essay_pass_name": "AI 에세이 대상학교 패스",
     "tier_essay_pass_price": "9,900원 / 개당",
     "tier_essay_pass_desc": "특정 1개 대학의 자소서/SOP 무제한 교정권",
@@ -1030,7 +1030,7 @@ const TRANSLATIONS = {
     "tier_free_price": "0 KRW",
     "tier_free_desc": "基础功能体验",
     "tier_free_feature1": "院校与专业诊断器 (服务1) 可评估最多3个目标专业",
-    "tier_free_feature2": "院校与专业探索器无限制免费使用",
+    "tier_free_feature2": "无法使用学校与专业探索、修课路线图、AI文书（已锁定）",
     "slot_locked_placeholder": "🔒 已锁定 (Premium 会员专享)",
     "tier_pro_name": "Pro 方案 (Pro Plan)",
     "tier_pro_price": "9,900 KRW/月",
@@ -1039,9 +1039,9 @@ const TRANSLATIONS = {
     "tier_pro_feature2": "限制访问先修课程搜索引擎、最优选课路线规划以及AI转学文书策略家所有功能",
     "tier_premium_name": "Premium 方案 (Premium Plan)",
     "tier_premium_price": "29,900 KRW/月",
-    "tier_premium_desc": "全包选课路线与文书规划套件 (100% 数据准确度退款保证)",
-    "tier_premium_feature1": "资格评估、先修课程搜索引擎、最优选课路线规划服务无限制使用",
-    "tier_premium_feature2": "AI 文书: 1个目标院校文书全套大纲设计 + 1对1咨询模板即刻解锁",
+    "tier_premium_desc": "全功能修课路线、学校探索与AI文书无限包",
+    "tier_premium_feature1": "资格评估、学校与专业探索、修课路线图规划服务无限制使用",
+    "tier_premium_feature2": "AI文书修改与目标院校文书全套大纲生成月度无限制使用",
     "tier_essay_pass_name": "AI 单校/专业/文书无限制包",
     "tier_essay_pass_price": "9,900 KRW",
     "tier_essay_pass_desc": "单项追加包 (1个学校/专业/问题 1个月内无限制使用)",
@@ -5269,106 +5269,152 @@ function getStudentTrack(selectedPrograms) {
 }
 
 function getAdvisoryMilestones(termStr, track, isInternational) {
-  const isFall = termStr.includes("Fall");
-  const isSpring = termStr.includes("Spring");
-  const isSummer = termStr.includes("Summer");
+  const parts = termStr.split(" ");
+  if (parts.length < 2) return [];
+  const currentYear = parseInt(parts[0], 10);
+  const currentSeason = parts[1];
+
+  const admissionYearInput = document.querySelector("#admissionYear");
+  const admissionTermInput = document.querySelector("#admissionTerm");
+  const targetYear = admissionYearInput ? parseInt(admissionYearInput.value, 10) : 2027;
+  const targetSeason = admissionTermInput ? admissionTermInput.value : "Fall";
+
+  const seasonMap = { "Spring": 0, "Summer": 1, "Fall": 2 };
+  const currentSeasonVal = seasonMap[currentSeason] !== undefined ? seasonMap[currentSeason] : 0;
+  const targetSeasonVal = seasonMap[targetSeason] !== undefined ? seasonMap[targetSeason] : 2;
+
+  const currentScore = currentYear * 3 + currentSeasonVal;
+  const targetScore = targetYear * 3 + targetSeasonVal;
+  const diff = targetScore - currentScore; // T-Minus semesters
 
   const milestones = [];
   const isKo = (state.language || "ko") === "ko";
 
-  if (isFall) {
+  // T-Minus dynamic milestones
+  if (diff >= 3) {
+    // 3 or more semesters away - Early Prep / EC Spike Building
+    milestones.push({
+      title: isKo ? "기본 비교과(EC) 스파이크 형성 전략 설계" : "Design Core Extra-Curriculars (EC) Spike",
+      desc: isKo 
+        ? "목표 전공 트랙에 부합하는 장기 비교과 주제를 선정하세요. 에세이 작성 시 고유한 스파이크를 보여줄 수 있는 핵심 프로젝트를 이 학기부터 시작해야 합니다." 
+        : "Select a long-term EC theme aligned with your target major. Start a signature project now to demonstrate a unique spike in future essays.",
+      badge: "EC BUILDING",
+      color: "#8b5cf6"
+    });
     if (isInternational) {
       milestones.push({
-        title: isKo ? "TOEFL / IELTS 공식 점수 확보" : "Secure TOEFL / IELTS Score",
+        title: isKo ? "어학 자격 기초 설계 (TOEFL/IELTS)" : "Foundational English Test Prep",
         desc: isKo 
-          ? "대다수 대학의 원서 마감일 전 성적표 발송을 위해 10-11월 중 최종 어학 점수를 확보해 두세요." 
-          : "Secure your final English proficiency exam score by October/November to ensure timely submission to universities before deadlines.",
+          ? "지원에 필요한 어학 점수의 목표치(예: 100점 이상)를 확인하고 기초 실력을 다져 두세요. 편입 1년 전 통과를 목표로 준비합니다." 
+          : "Check the language score requirements (e.g. 100+ TOEFL) of target schools and start foundational study to clear the exam early.",
         badge: "TEST PREP",
         color: "#f59e0b"
       });
     }
     milestones.push({
-      title: isKo ? "교수 추천서(Letter of Rec) 요청" : "Request Letters of Recommendation",
+      title: isKo ? "핵심 선수과목 GPA 완벽 방어" : "Secure GPA in Core Prerequisites",
       desc: isKo 
-        ? "학기 초 교수진 오피스 아워를 방문하여 편입에 필수적인 추천서 1-2부를 미리 요청해 두세요." 
-        : "Visit professors during office hours early in the term to request 1-2 letters of recommendation required for transfer.",
+        ? "가장 중요한 기본 선수 과목(Calculus 1/2, English Comp 등)에서 반드시 A 학점을 획득하여 학업 역량을 일찍이 입증해야 합니다." 
+        : "Ensure you earn straight A's in foundational prerequisites like Calculus or English Composition to build a strong early GPA.",
+      badge: "GPA KEEP",
+      color: "#3b82f6"
+    });
+  } else if (diff === 2) {
+    // 2 semesters away - App Prep Term
+    if (isInternational) {
+      milestones.push({
+        title: isKo ? "TOEFL / IELTS 공식 점수 최종 확보" : "Finalize TOEFL / IELTS Score",
+        desc: isKo 
+          ? "대다수 대학의 원서 접수 전 성적표 연동을 위해 이번 학기 중 최종 어학 점수를 제출 가능한 수준으로 반드시 통과해 두어야 합니다." 
+          : "Secure your final English proficiency score this term to ensure proper university reporting prior to application deadlines.",
+        badge: "TEST PREP",
+        color: "#f59e0b"
+      });
+    }
+    milestones.push({
+      title: isKo ? "교수 추천서(Letter of Rec) 미리 확보" : "Secure Letters of Recommendation",
+      desc: isKo 
+        ? "학기 초 교수님 오피스 아워를 주기적으로 방문하여 강력한 추천서 1-2부를 선제적으로 부탁드리세요." 
+        : "Visit professor office hours early this semester to secure strong letters of recommendation for your transfer file.",
       badge: "DOCUMENTS",
       color: "#3b82f6"
     });
     milestones.push({
-      title: isKo ? "에세이 초안 작성 및 검토 시작" : "Draft & Review Transfer Essays",
+      title: isKo ? "목표 에세이 초안 완성 및 윤문" : "Complete & Refine Essay Drafts",
       desc: isKo 
-        ? "지원 대학별 에세이 질문과 학업계획서(SOP) 초안을 설계하고, 에세이 탭에서 3회 이상 분석 및 윤문 받으세요." 
-        : "Start drafting statement of purpose (SOP) and personal statements, and use the EssayAI tab to optimize and review your writing.",
+        ? "대학별 에세이 프롬프트에 맞춰 학업계획서(SOP) 초안을 도출하고, AI 에세이 탭을 적극 가동해 강점 중심의 스토리를 빌딩하세요." 
+        : "Draft major-specific SOPs and supplemental statements, then leverage the EssayAI tab to tailor your narratives.",
       badge: "ESSAY",
       color: "#10b981"
     });
-  }
-
-  if (isSpring) {
+  } else if (diff === 1) {
+    // 1 semester away - Submission & Final check
     milestones.push({
-      title: isKo ? "편입 원서 최종 접수 (Submission)" : "Final Application Submission",
+      title: isKo ? "편입 원서 최종 접수 및 제출" : "Final Application Submission",
       desc: isKo 
-        ? "대학별 원서 포털(Common App, UC Application 등) 최종 마감 전 필요한 모든 서류와 에세이를 업로드하고 마감 기한 내 접수하세요." 
-        : "Upload all required documents, transcript copies, and finalized essays to portals (Common App, UC App, etc.) before the deadline.",
+        ? "Common App, UC App 등 지원 포털 마감 시점에 맞춰 완성된 에세이와 각종 서류를 최종 업로드하고 원서를 제출하세요." 
+        : "Finalize and submit your applications through Common App or UC portals, ensuring all required materials are uploaded.",
       badge: "DEADLINE",
       color: "#ef4444"
     });
     milestones.push({
-      title: isKo ? "학업 중간 상황 보고 (Mid-Term Report)" : "Academic Mid-Term Report",
+      title: isKo ? "학업 중간 상황 보고 (Mid-Term Report)" : "Academic Mid-Term Report Submission",
       desc: isKo 
-        ? "이번 학기 학업성취도가 합격 여부에 중대하게 작용합니다. 높은 GPA를 유지하고 필요시 중간 리포트를 신속히 보고하세요." 
-        : "Mid-term performance is vital for admissions. Maintain a high GPA and submit mid-term grade reports promptly if requested.",
+        ? "학기 중 중간 성적(Mid-term grades)을 요청하는 대학에 성적표를 전송해야 합니다. 막판 학점 하락이 없도록 GPA를 지켜내세요." 
+        : "Submit your mid-term grade reports to universities if requested, and make sure there is no late-semester GPA drop.",
       badge: "GPA KEEP",
       color: "#8b5cf6"
     });
     milestones.push({
-      title: isKo ? "최종 성적표 발송 및 학점 이전 절차" : "Official Transcript Evaluation & Transfer",
+      title: isKo ? "최종 성적표 송부 및 학점 평가 연동" : "Send Official Transcript & Articulation",
       desc: isKo 
-        ? "합격 통지 이후 최종 이수 학점을 정상 인정받을 수 있도록 전적대학교 최종 성적표를 신속히 목표 대학으로 공식 송부하세요." 
-        : "Send your official final transcripts from your current college to the target university to complete transfer credit articulation.",
+        ? "합격 통부 후 최종 학점 이정을 위해 전적대학의 최종 성적표를 신속히 공식 발송하여 이수 과목 학점 인정 절차를 조속히 마쳐야 합니다." 
+        : "Send final official transcripts post-admission to complete course articulation and verify transfer credit approvals.",
       badge: "TRANSCRIPT",
       color: "#ec4899"
     });
+  } else {
+    // Current semester or past the target semester
+    milestones.push({
+      title: isKo ? "전공 심화 선수과목 예습 및 학점 전송 완료" : "Pre-study Major Courses & Final Check",
+      desc: isKo 
+        ? "가을/봄 편입 대상 학교 입학 전, 난도 높은 전공 강의(예: 자료구조, 유기화학 등)를 예습하고 전적대 최종 성적 이전을 최종 확인하세요." 
+        : "Pre-study advanced coursework (e.g. Data Structures, Organic Chemistry) and confirm final transcript evaluation results.",
+      badge: "PRE-STUDY",
+      color: "#6366f1"
+    });
   }
 
-  if (isSummer) {
+  // Vacation semester bonus content (Summer)
+  if (currentSeason === "Summer") {
     if (track === "STEM") {
       milestones.push({
-        title: isKo ? "연구 인턴십 또는 전공 관련 프로젝트" : "Research Internship or Major-Related Project",
+        title: isKo ? "연구실 인턴십 또는 오픈소스 기여" : "STEM Research or Open-Source Contribution",
         desc: isKo 
-          ? "여름 방학을 이용해 관련 연구실 학부 인턴에 참가하거나 Github에 기여할 오픈소스 소프트웨어/하드웨어 설계 또는 학술 탐구를 추진하여 실무 역량을 입증하세요." 
-          : "Participate in undergraduate research lab internships or build independent research or technical projects to prove practical skills.",
+          ? "여름 방학을 이용해 교수 연구에 참여하거나 Github에 오픈소스 소프트웨어/하드웨어 프로토타입을 빌드해 실전 STEM 역량을 입증해 보이세요." 
+          : "Work on professor-led research projects or construct an open-source software/hardware project to strengthen your technical profile.",
         badge: "STEM LAB",
         color: "#10b981"
       });
     } else if (track === "Business") {
       milestones.push({
-        title: isKo ? "기업 실무 인턴십 및 공모전 도전" : "Corporate Internship & Case Competitions",
+        title: isKo ? "기업 인턴십 또는 경영학적 공모전 참여" : "Business Internship & Case Competitions",
         desc: isKo 
-          ? "스타트업 인턴십, 비즈니스 케이스 컴피티션, 혹은 재무/경영 학회 참여를 통해 실전 비즈니스 포트폴리오를 구성해 보세요." 
-          : "Engage in startup internships, business case competitions, or finance/management association projects to build your resume.",
+          ? "스타트업 인턴십, 마케팅/파이낸스 경진대회, 혹은 학회 참여를 통해 실질적인 실무 경험을 에세이에 녹일 소재로 획득하세요." 
+          : "Secure a summer startup internship or participate in case competitions to gather real-world business context for your essays.",
         badge: "BIZ INTERN",
         color: "#f59e0b"
       });
     } else {
       milestones.push({
-        title: isKo ? "NGO 공헌 활동 및 인문 저널 에세이 기고" : "NGO Project or Journal Essay Submission",
+        title: isKo ? "NGO 연계 임팩트 프로젝트 기획" : "NGO Social Impact & Leadership Project",
         desc: isKo 
-          ? "사회 혁신 기획, 독자 인문학 에세이 집필, NGO 봉사 단체와의 협업 실적을 빌드해 학문적 잠재성과 리더십을 증명해 보이세요." 
-          : "Initiate social impact projects, draft independent essays, or collaborate with volunteer groups to demonstrate academic potential.",
+          ? "NGO 연계 활동, 저널 투고, 독립 인문 서평 연작 등 개인의 학술적 자질과 커뮤니티 리더십을 입증할 자체 프로젝트를 완수하세요." 
+          : "Launch social innovation initiatives, publish essays in journals, or lead community service projects to showcase unique leadership.",
         badge: "HUMANITIES",
-        color: "#8b5cf6"
+        color: "#ec4899"
       });
     }
-    milestones.push({
-      title: isKo ? "전공 고난도 선수 과목 미리 예습" : "Pre-study Advanced Prerequisite Courses",
-      desc: isKo 
-        ? "가을 학기에 들을 난도 높은 핵심 전공 강의(수학/과학/코딩)를 MOOC나 온라인 튜터링을 활용해 예습해 두어 GPA 하락을 선제 방어하세요." 
-        : "Pre-study challenging math/science/coding courses using MOOCs or textbooks to defend your GPA in the upcoming term.",
-      badge: "PRE-STUDY",
-      color: "#6366f1"
-    });
   }
 
   return milestones;
@@ -5861,6 +5907,28 @@ function buildRoadmap(explicit = false) {
         `;
     }
 
+    const totalUnitsPlanted = buckets.reduce((sum, b) => sum + bucketUnits(b), 0);
+    const estimatedCredits = totalUnitsPlanted * 3; // 3 credits per course
+
+    let creditWarningHtml = "";
+    if (estimatedCredits < 30) {
+      creditWarningHtml = `
+        <div class="credit-threshold-warning" style="margin-top: 16px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.35); border-left: 4px solid #ef4444; border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-soft); width: 100%;">
+          <h4 style="color: #ef4444; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 800; margin: 0 0 8px 0;">
+            ⚠️ ${isKo ? "경고: 단기 편입 위험 감지 (Credit-Threshold Trap)" : "Warning: Credit-Threshold Trap"}
+          </h4>
+          <p style="font-size: 12.5px; color: var(--ink); line-height: 1.55; margin: 0;">
+            ${isKo 
+              ? `현재 계획된 총 이수 예정 학점은 약 <strong>${estimatedCredits}학점</strong>(총 ${totalUnitsPlanted}과목)으로, 미국 대학 편입의 최소 안전선인 <strong>30학점 미만</strong>입니다.<br>
+                 30학점 미만으로 원서를 접수하면 거의 모든 명문대에서 <strong>고등학교 성적표(High School Transcript) 및 SAT/ACT 공식 성적표 연동을 강제</strong>합니다. 고교 내신이 만족스럽지 않다면 이는 매우 치명적인 불이익이 될 수 있으므로, 추천 교양 과목을 로드맵 빈자리에 추가하여 반드시 30학점 이상으로 로드맵을 설계할 것을 강력히 권장합니다.`
+              : `Your planned transfer credits total approximately <strong>${estimatedCredits} credits</strong> (${totalUnitsPlanted} courses), which is <strong>below the 30-credit safety threshold</strong>.<br>
+                 Applying with under 30 credits triggers a requirement at most selective universities to submit your <strong>High School Transcript and SAT/ACT official scores</strong>. If your high school record is sub-optimal, this can seriously harm your chances. We highly recommend adding general education or elective courses to satisfy the 30-credit mark before transfer application submission.`
+            }
+          </p>
+        </div>
+      `;
+    }
+
     strategicAdviceHtml = `
       <div class="requirement-card" style="margin-top: 24px; border-left: 4px solid var(--accent); background: rgba(197, 168, 128, 0.04); padding: 20px; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow-soft); width: 100%;">
         <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 15.5px; font-weight: 800; margin-bottom: 6px;">
@@ -5871,6 +5939,7 @@ function buildRoadmap(explicit = false) {
           ${adviceContent}
         </div>
       </div>
+      ${creditWarningHtml}
     `;
   }
 

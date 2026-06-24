@@ -420,5 +420,8 @@ window.AllUSUniversities = [
   "St. Catherine University",
   "Concordia College",
   "Saint John's University",
-  "College of Saint Benedict"
+  "College of Saint Benedict",
+  "Worcester Polytechnic Institute",
+  "Cal Poly San Luis Obispo",
+  "Stony Brook University"
 ];
