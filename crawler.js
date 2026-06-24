@@ -1,5 +1,5 @@
 /**
- * TransferChek - Automated College Crawler & Data Builder
+ * TransferCheck - Automated College Crawler & Data Builder
  * ---------------------------------------------------------
  * 이 스크립트는 등록된 대학 공식 URL에 접속하여 정보를 긁어오고
  * Gemini API를 사용해 데이터를 자동으로 갱신 및 데이터베이스에 기입합니다.

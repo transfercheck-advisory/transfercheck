@@ -157,3 +157,40 @@ We have successfully integrated a self-expanding, on-demand AI prerequisite gene
 ### 5️⃣ Autocomplete Expansion
 * Bound `all-universities.js` list of ~500 common U.S. universities and community colleges to the search autocomplete system, enabling on-demand AI modeling and fallback prerequisite generation.
 
+---
+
+## 🎥 TransferChek Marketing Video Overlay & Subtitles Enhancement (June 2026)
+
+We have successfully processed and updated the official TransferChek marketing video located on the desktop to display the new, premium product interface screens while keeping the Korean subtitles intact and clean.
+
+### 1️⃣ Overlay Time Mapping & Screens
+We replaced the old placeholders in the video with the following high-fidelity mockups:
+* **Step 1: Eligibility Diagnostics (42s – 53s)**
+  * Image: [eligibility_diagnostics.png](file:///C:/Users/user/OneDrive/바탕 화면/transfer app/eligibility_diagnostics.png) (Square 1024x1024 mockup showing dynamic student compatibility score and performance trends)
+* **Step 2: University & Major Explorer (53s – 69s)**
+  * Image: [prerequisite_finder.png](file:///C:/Users/user/OneDrive/바탕 화면/transfer app/prerequisite_finder.png) (Square 1024x1024 articulation graph mapping prerequisites and course codes)
+* **Step 3: Roadmap Builder (69s – 80s)**
+  * Image: [roadmap_builder.png](file:///C:/Users/user/OneDrive/바탕 화면/transfer app/roadmap_builder.png) (Square 1024x1024 roadmap showing semester flow and articulation links)
+* **Step 4: AI Essay Strategist (80s – 90s)**
+  * Image: [essay_strategist.png](file:///C:/Users/user/OneDrive/바탕 화면/transfer app/essay_strategist.png) (Square 1024x1024 workspace demonstrating outlines, planner details, and real-time edits)
+
+### 2️⃣ Pillarbox Blur Background
+* The screenshots are square (1:1), while the video is standard 16:9 widescreen (1920x1080).
+* To prevent distortion, we applied a **pillarbox blur** effect: the background is dynamically scaled to `1920x1920`, cropped to `1920x1080`, heavily blurred using `boxblur=20:10`, and the original screenshot is placed sharply in the center scaled to `1080x1080`.
+* This yields a modern, professional, and visually stunning aesthetic for social media platforms like YouTube and Instagram.
+
+### 3️⃣ Subtitle Re-rendering & Syncing
+* Since overlaying full-height screenshots covers the original video's burned-in subtitles, we utilized FFmpeg's `drawtext` filter to burn clean, high-resolution Korean subtitles directly on top of the modified sections.
+* **Font**: Malgun Gothic Bold (`malgunbd.ttf`) for premium readability.
+* **Styling**: White text, size `48px`–`54px`, with a thick `4px` black outline to match the video's original typography.
+* **Multiline wrap**: Split longer descriptions into centered two-line subtitles to avoid screen clipping.
+* **Timings**: Synchronized precisely with the original narration.
+
+### 4️⃣ Verification & Delivery
+* The final video has been successfully compiled and saved to the desktop:
+  * File name: `tc마케팅 영상 final_updated.mp4`
+  * Path: [tc마케팅 영상 final_updated.mp4](file:///C:/Users/user/OneDrive/바탕 화면/tc마케팅 영상 final_updated.mp4)
+* We extracted individual verification frames (Step 1 at 44s, Step 2 at 56s, Step 3 at 72s, Step 4 at 86s) and confirmed that:
+  - The mockups are perfectly centered with beautiful blurred edges.
+  - The custom drawn Korean subtitles are fully visible, aligned, and have zero spelling errors.
+  - Audio and H.264 video format profiles are preserved matching the original parameters.

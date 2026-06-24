@@ -1,5 +1,5 @@
 /**
- * TransferChek - Automated Gemini Micro-Extractor Template
+ * TransferCheck - Automated Gemini Micro-Extractor Template
  * -----------------------------------------------------------
  * 이 스크립트는 단일 전공의 공식 요약/텍스트를 입력받아
  * 13가지 핵심 전공 요건 필드를 추출하는 템플릿입니다.

@@ -1,4 +1,4 @@
-// TransferChek - Admitted Cases, Extracurricular Milestones & Essay Patterns Database
+// TransferCheck - Admitted Cases, Extracurricular Milestones & Essay Patterns Database
 window.AdmissionsCasesDatabase = {
   // Profiles mapped strictly by schoolId to prevent cross-school contamination
   profiles: {

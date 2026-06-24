@@ -5,7 +5,7 @@ window.AllUSUniversities = [
   "Columbia University",
   "Ohio State University",
   "University of Illinois Urbana-Champaign",
-  "NYU Tandon School of Engineering",
+  "New York University",
   "Texas A&M University",
   "UC San Diego",
   "UC Irvine",

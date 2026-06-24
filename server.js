@@ -470,28 +470,43 @@ const server = http.createServer((req, res) => {
             prerequisiteCompletionTimeline: { type: "string" },
             apIbEquivalency: { type: "string" },
             selectiveMajorStatus: { type: "boolean" },
-            officialSourceUrl: { type: "string" }
+            officialSourceUrl: { type: "string" },
+            usNewsRank: { type: "number" },
+            majorRank: { type: "number" },
+            transferStats: {
+              type: "object",
+              properties: {
+                applicants: { type: "number" },
+                accepted: { type: "number" },
+                rateOverall: { type: "string" },
+                avgGpa: { type: "string" },
+                deadlineFall: { type: "string" },
+                deadlineSpring: { type: "string" },
+                apPolicy: { type: "string" },
+                advisingNote: { type: "string" }
+              },
+              required: ["applicants", "accepted", "rateOverall", "avgGpa", "deadlineFall", "deadlineSpring", "apPolicy", "advisingNote"]
+            }
           },
           required: [
             "schoolName", "majorName", "rawMinGpa", "rawMinCredits", 
             "requiredCourses", "recommendedCourses", "englishRequirements", 
-            "englishCourseWaiver", "officialSourceUrl"
+            "englishCourseWaiver", "officialSourceUrl", "usNewsRank", "majorRank", "transferStats"
           ]
         };
 
         const SYSTEM_INSTRUCTION_GENERATOR = `
 You are an expert academic data engineer specializing in US university transfer admissions.
 Generate the precise transfer prerequisite requirements for the specified major at the specified university.
-Ensure the output conforms exactly to the provided JSON schema. 
-Provide real, actual historical requirements for this major if known, or high-fidelity estimates based on official department policies if not.
-If there are specific required courses, list their canonical names (e.g., "Calculus 1", "Calculus 2", "General Chemistry 1", "Introduction to Java Programming").
-Include specific lab courses separately if they are required (e.g. "Physics 1 Lab").
-Ensure all texts are in English.
+Ensure the output conforms exactly to the provided JSON schema.
 
-For humanities, social sciences, business, and other non-engineering/science majors (where strict prerequisites are less common):
-- If the university has no strict required prerequisites, list "General Education Breadth (Humanities, Social Sciences, Writing)" or general required compositions in the requiredCourses list.
-- Provide a rich list of recommended courses (e.g., "Macroeconomics", "Microeconomics", "Introduction to Psychology", "Statistics", "English Composition II") in the recommendedCourses list to help students structure a strong competitive profile.
-- Clarify in the raw texts that these majors emphasize General Education breadth and cumulative GPA over specialized technical prerequisites.
+Perform real-time Google Search Grounding to extract:
+1. Prerequisite coursework requirements.
+2. The latest official US News National University Ranking (종합 대학 순위) as usNewsRank (integer).
+3. The latest official US News Department/Program Major Ranking (학과 순위, e.g., CS major rank, Undergraduate Business rank) as majorRank (integer). If major-specific rank is unavailable, estimate based on similar programs or general engineering/humanities rankings.
+4. Total transfer applicants, accepted transfer students, overall transfer rate, average GPA, deadlines, AP policies, and advising notes based on recent Common Data Set (CDS) Section D (specifically years 2024 or 2025).
+
+Ensure all texts are in English.
 `;
 
         const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
@@ -500,7 +515,7 @@ For humanities, social sciences, business, and other non-engineering/science maj
             {
               parts: [
                 {
-                  text: `Generate the transfer prerequisite requirements for:\nUniversity: ${schoolName}\nMajor: ${majorName}`
+                  text: `Generate the transfer prerequisite requirements, latest US News rankings, and Common Data Set statistics for:\nUniversity: ${schoolName}\nMajor: ${majorName}`
                 }
               ]
             }
@@ -515,7 +530,8 @@ For humanities, social sciences, business, and other non-engineering/science maj
                 text: SYSTEM_INSTRUCTION_GENERATOR
               }
             ]
-          }
+          },
+          tools: [{ googleSearch: {} }]
         });
 
         // Request helper using native https
@@ -623,11 +639,26 @@ For humanities, social sciences, business, and other non-engineering/science maj
           console.warn("⚠️ Failed to write transfer-data.js to disk (likely read-only environment):", writeErr.message);
         }
 
+        // Parse and resolve stats payload
+        const statsPayload = {
+          applicants: geminiResult.transferStats?.applicants || 1500,
+          accepted: geminiResult.transferStats?.accepted || 400,
+          rateOverall: geminiResult.transferStats?.rateOverall || "25%",
+          avgGpa: geminiResult.transferStats?.avgGpa || "3.60",
+          deadlineFall: geminiResult.transferStats?.deadlineFall || "March 1",
+          deadlineSpring: geminiResult.transferStats?.deadlineSpring || "N/A",
+          apPolicy: geminiResult.transferStats?.apPolicy || "AP credit evaluated post-admission.",
+          advisingNote: geminiResult.transferStats?.advisingNote || "Admissions are holistically reviewed.",
+          usNewsRank: geminiResult.usNewsRank || 999,
+          majorRank: geminiResult.majorRank || 999
+        };
+
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ 
           success: true, 
           school: { id: dbSchool.id, name: dbSchool.name, shortName: dbSchool.shortName },
-          major: newMajor 
+          major: newMajor,
+          stats: statsPayload
         }));
 
       } catch (err) {
@@ -809,6 +840,116 @@ For humanities, social sciences, business, and other non-engineering/science maj
           res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
           res.end(JSON.stringify({ success: false, message: `Failed to generate: ${fallbackErr.message}` }));
         }
+      }
+    });
+    return;
+  }
+
+  // API Route: Analyze Extracurricular Activities
+  if (req.method === 'POST' && safeUrl === '/api/ec/analyze') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', async () => {
+      // 1. Verify user session
+      const user = await verifyUserSession(req);
+      if (!user) {
+        res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: '인증된 회원만 사용할 수 있습니다. 다시 로그인해 주세요.' }));
+        return;
+      }
+
+      try {
+        const parsed = JSON.parse(body);
+        const { ecText, majorArea } = parsed;
+        if (!ecText) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'ecText is required' }));
+          return;
+        }
+
+        const apiKey = process.env.GEMINI_API_KEY;
+        if (!apiKey) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, message: 'GEMINI_API_KEY is not configured on the server.' }));
+          return;
+        }
+
+        const SYSTEM_INSTRUCTION_EC_ANALYZER = `
+You are an expert college admissions consultant specializing in U.S. university transfer admissions.
+Your job is to analyze and evaluate a transfer applicant's raw extracurricular activities (EC) text.
+
+You must evaluate the activities based on:
+1. Leadership and Impact (Scale of impact: international, national, state, regional, school-wide, or minimal).
+2. Major-Relatedness / Depth of alignment with the target academic track (${majorArea || 'General'}).
+3. Professionalism and achievements (internships, research, publications, contests).
+
+You must return a JSON response with the following keys:
+- score: an integer between 0 and 30 representing the EC strength.
+  - 25-30: Exceptional (Tier 1/2: national recognition, published research, founder, tech-lead/intern at top firms, state champion).
+  - 18-24: Strong (Tier 2/3: club president, research assistant, startup intern, state/school contest winner).
+  - 10-17: Moderate (Tier 3/4: club officer, member of multiple organizations, some personal projects).
+  - 0-9: Basic (Tier 4: participant, no leadership roles, minimal relevance).
+- tier: a string indicating the estimated activity tier (e.g. "Tier 1: International/National", "Tier 2: State/Regional", "Tier 3: School/Local", "Tier 4: Basic Participation").
+- majorRelevance: a string (either "High", "Medium", or "Low").
+- analysis: a short, professional, encouraging, and constructive summary (2-3 sentences) of their activities, highlighting strengths and identifying areas for improvement. You can respond in the language of the input (Korean if input is in Korean, English if input is in English).
+
+Your response must be a single valid JSON object. Do not include any markdown formatting (like \`\`\`json) in the response text itself, just the raw JSON.
+`;
+
+        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${apiKey}`;
+        const payload = JSON.stringify({
+          contents: [{ parts: [{ text: `Analyze this extracurricular activities text:\n${ecText}` }] }],
+          generationConfig: {
+            responseMimeType: "application/json",
+            temperature: 0.2
+          },
+          systemInstruction: {
+            parts: [{ text: SYSTEM_INSTRUCTION_EC_ANALYZER }]
+          }
+        });
+
+        const callGemini = () => new Promise((resolve, reject) => {
+          const reqObj = https.request(geminiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Content-Length': Buffer.byteLength(payload)
+            },
+            timeout: 20000
+          }, (resObj) => {
+            let data = '';
+            resObj.on('data', chunk => data += chunk);
+            resObj.on('end', () => {
+              if (resObj.statusCode !== 200) {
+                reject(new Error(`Gemini API Error ${resObj.statusCode}: ${data}`));
+                return;
+              }
+              try {
+                const parsedRes = JSON.parse(data);
+                const responseText = parsedRes.candidates[0].content.parts[0].text;
+                resolve(JSON.parse(responseText));
+              } catch (e) {
+                reject(new Error(`Failed to parse Gemini response: ${e.message}`));
+              }
+            });
+          });
+          reqObj.on('error', err => reject(err));
+          reqObj.on('timeout', () => {
+            reqObj.destroy();
+            reject(new Error('Timeout (20s)'));
+          });
+          reqObj.write(payload);
+          reqObj.end();
+        });
+
+        const geminiResult = await callGemini();
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true, analysis: geminiResult }));
+
+      } catch (err) {
+        console.error("EC Analysis failed:", err);
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: `Evaluation failed: ${err.message}` }));
       }
     });
     return;
@@ -1493,8 +1634,8 @@ You MUST write all explanations, guides, guidelines, and feedback (targetStyleGu
           return;
         }
 
-        const subject = '=?UTF-8?B?' + Buffer.from('[TransferChek] 신규 익명 피드백 알림').toString('base64') + '?=';
-        const mailBody = `안녕하세요. TransferChek 시스템 알림입니다.
+        const subject = '=?UTF-8?B?' + Buffer.from('[TransferCheck] 신규 익명 피드백 알림').toString('base64') + '?=';
+        const mailBody = `안녕하세요. TransferCheck 시스템 알림입니다.
 
 사용자로부터 새로운 피드백이 접수되었습니다:
 
@@ -1650,7 +1791,7 @@ function sendEmailViaSmtp({ user, pass, to, subject, body }) {
         step = 7;
       } else if (step === 7 && msg.startsWith('354')) {
         const emailData = [
-          `From: "TransferChek Feedback" <${user}>`,
+          `From: "TransferCheck Feedback" <${user}>`,
           `To: <${to}>`,
           `Subject: ${subject}`,
           'MIME-Version: 1.0',

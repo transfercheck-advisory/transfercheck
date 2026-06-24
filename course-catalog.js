@@ -1476,242 +1476,242 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "nyu-tandon-4665a194",
+      "id": "new-york-university-4665a194",
       "name": "New York University",
       "shortName": "New York University",
       "majors": [
         {
-          "id": "nyu-tandon-4665a194-computer-science-genuine",
+          "id": "new-york-university-4665a194-computer-science-genuine",
           "name": "Computer Science",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-data-science-genuine",
+          "id": "new-york-university-4665a194-data-science-genuine",
           "name": "Data Science",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-information-technology-genuine",
+          "id": "new-york-university-4665a194-information-technology-genuine",
           "name": "Information Technology",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-computer-engineering-genuine",
+          "id": "new-york-university-4665a194-computer-engineering-genuine",
           "name": "Computer Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-electrical-engineering-genuine",
+          "id": "new-york-university-4665a194-electrical-engineering-genuine",
           "name": "Electrical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-mechanical-engineering-genuine",
+          "id": "new-york-university-4665a194-mechanical-engineering-genuine",
           "name": "Mechanical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-civil-engineering-genuine",
+          "id": "new-york-university-4665a194-civil-engineering-genuine",
           "name": "Civil Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-chemical-engineering-genuine",
+          "id": "new-york-university-4665a194-chemical-engineering-genuine",
           "name": "Chemical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-biomedical-engineering-genuine",
+          "id": "new-york-university-4665a194-biomedical-engineering-genuine",
           "name": "Biomedical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-industrial-engineering-genuine",
+          "id": "new-york-university-4665a194-industrial-engineering-genuine",
           "name": "Industrial Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-aerospace-engineering-genuine",
+          "id": "new-york-university-4665a194-aerospace-engineering-genuine",
           "name": "Aerospace Engineering",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-business-administration-genuine",
+          "id": "new-york-university-4665a194-business-administration-genuine",
           "name": "Business Administration",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-finance-genuine",
+          "id": "new-york-university-4665a194-finance-genuine",
           "name": "Finance",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-accounting-genuine",
+          "id": "new-york-university-4665a194-accounting-genuine",
           "name": "Accounting",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-marketing-genuine",
+          "id": "new-york-university-4665a194-marketing-genuine",
           "name": "Marketing",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-management-genuine",
+          "id": "new-york-university-4665a194-management-genuine",
           "name": "Management",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-economics-genuine",
+          "id": "new-york-university-4665a194-economics-genuine",
           "name": "Economics",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-psychology-genuine",
+          "id": "new-york-university-4665a194-psychology-genuine",
           "name": "Psychology",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-political-science-genuine",
+          "id": "new-york-university-4665a194-political-science-genuine",
           "name": "Political Science",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-sociology-genuine",
+          "id": "new-york-university-4665a194-sociology-genuine",
           "name": "Sociology",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-history-genuine",
+          "id": "new-york-university-4665a194-history-genuine",
           "name": "History",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-english-genuine",
+          "id": "new-york-university-4665a194-english-genuine",
           "name": "English",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-communications-genuine",
+          "id": "new-york-university-4665a194-communications-genuine",
           "name": "Communications",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-biology-genuine",
+          "id": "new-york-university-4665a194-biology-genuine",
           "name": "Biology",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-biochemistry-genuine",
+          "id": "new-york-university-4665a194-biochemistry-genuine",
           "name": "Biochemistry",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-chemistry-genuine",
+          "id": "new-york-university-4665a194-chemistry-genuine",
           "name": "Chemistry",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-physics-genuine",
+          "id": "new-york-university-4665a194-physics-genuine",
           "name": "Physics",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-mathematics-genuine",
+          "id": "new-york-university-4665a194-mathematics-genuine",
           "name": "Mathematics",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-statistics-genuine",
+          "id": "new-york-university-4665a194-statistics-genuine",
           "name": "Statistics",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-public-health-genuine",
+          "id": "new-york-university-4665a194-public-health-genuine",
           "name": "Public Health",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-nursing-genuine",
+          "id": "new-york-university-4665a194-nursing-genuine",
           "name": "Nursing",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-international-relations-genuine",
+          "id": "new-york-university-4665a194-international-relations-genuine",
           "name": "International Relations",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-philosophy-genuine",
+          "id": "new-york-university-4665a194-philosophy-genuine",
           "name": "Philosophy",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-applied-physics-b-s-09d89f6e",
+          "id": "new-york-university-applied-physics-b-s-09d89f6e",
           "name": "Applied Physics, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-biomolecular-science-b-s-0efa4abe",
+          "id": "new-york-university-biomolecular-science-b-s-0efa4abe",
           "name": "Biomolecular Science, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-business-technology-management-b-s-16e26765",
+          "id": "new-york-university-business-technology-management-b-s-16e26765",
           "name": "Business & Technology Management, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-chemical-biomolecular-engineering-b-s-cc71227b",
+          "id": "new-york-university-chemical-biomolecular-engineering-b-s-cc71227b",
           "name": "Chemical & Biomolecular Engineering, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-civil-engineering-b-s-8de46960",
+          "id": "new-york-university-civil-engineering-b-s-8de46960",
           "name": "Civil Engineering, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-computer-engineering-b-s-79ae595b",
+          "id": "new-york-university-computer-engineering-b-s-79ae595b",
           "name": "Computer Engineering, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-computer-science-b-s-84682d50",
+          "id": "new-york-university-computer-science-b-s-84682d50",
           "name": "Computer Science, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-electrical-engineering-b-s-6a914556",
+          "id": "new-york-university-electrical-engineering-b-s-6a914556",
           "name": "Electrical Engineering, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-electrical-computer-engineering-b-s-52a481ac",
+          "id": "new-york-university-electrical-computer-engineering-b-s-52a481ac",
           "name": "Electrical & Computer Engineering, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-environmental-engineering-b-s-9fad8591",
+          "id": "new-york-university-environmental-engineering-b-s-9fad8591",
           "name": "Environmental Engineering, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-integrated-design-media-b-s-7a006fa8",
+          "id": "new-york-university-integrated-design-media-b-s-7a006fa8",
           "name": "Integrated Design & Media, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-mathematics-b-s-f719fe5f",
+          "id": "new-york-university-mathematics-b-s-f719fe5f",
           "name": "Mathematics, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-mathematics-physics-b-s-65b30815",
+          "id": "new-york-university-mathematics-physics-b-s-65b30815",
           "name": "Mathematics & Physics, B.S.",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-mechanical-engineering-b-s-a19c5e19",
+          "id": "new-york-university-mechanical-engineering-b-s-a19c5e19",
           "name": "Mechanical Engineering, B.S.",
           "confidence": "verified"
         }
@@ -2389,207 +2389,207 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "cornell-duffield-30aa90f4",
+      "id": "cornell-university-30aa90f4",
       "name": "Cornell University",
       "shortName": "Cornell University",
       "majors": [
         {
-          "id": "cornell-duffield-30aa90f4-computer-science-genuine",
+          "id": "cornell-university-30aa90f4-computer-science-genuine",
           "name": "Computer Science",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-data-science-genuine",
+          "id": "cornell-university-30aa90f4-data-science-genuine",
           "name": "Data Science",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-information-technology-genuine",
+          "id": "cornell-university-30aa90f4-information-technology-genuine",
           "name": "Information Technology",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-computer-engineering-genuine",
+          "id": "cornell-university-30aa90f4-computer-engineering-genuine",
           "name": "Computer Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-electrical-engineering-genuine",
+          "id": "cornell-university-30aa90f4-electrical-engineering-genuine",
           "name": "Electrical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-mechanical-engineering-09ba9556",
+          "id": "cornell-university-mechanical-engineering-09ba9556",
           "name": "Mechanical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-civil-engineering-ac557962",
+          "id": "cornell-university-civil-engineering-ac557962",
           "name": "Civil Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-chemical-engineering-6196dc8b",
+          "id": "cornell-university-chemical-engineering-6196dc8b",
           "name": "Chemical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-biomedical-engineering-43aa9eec",
+          "id": "cornell-university-biomedical-engineering-43aa9eec",
           "name": "Biomedical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-industrial-engineering-genuine",
+          "id": "cornell-university-30aa90f4-industrial-engineering-genuine",
           "name": "Industrial Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-aerospace-engineering-genuine",
+          "id": "cornell-university-30aa90f4-aerospace-engineering-genuine",
           "name": "Aerospace Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-business-administration-genuine",
+          "id": "cornell-university-30aa90f4-business-administration-genuine",
           "name": "Business Administration",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-finance-genuine",
+          "id": "cornell-university-30aa90f4-finance-genuine",
           "name": "Finance",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-accounting-genuine",
+          "id": "cornell-university-30aa90f4-accounting-genuine",
           "name": "Accounting",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-marketing-genuine",
+          "id": "cornell-university-30aa90f4-marketing-genuine",
           "name": "Marketing",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-management-genuine",
+          "id": "cornell-university-30aa90f4-management-genuine",
           "name": "Management",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-economics-genuine",
+          "id": "cornell-university-30aa90f4-economics-genuine",
           "name": "Economics",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-psychology-genuine",
+          "id": "cornell-university-30aa90f4-psychology-genuine",
           "name": "Psychology",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-political-science-genuine",
+          "id": "cornell-university-30aa90f4-political-science-genuine",
           "name": "Political Science",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-sociology-genuine",
+          "id": "cornell-university-30aa90f4-sociology-genuine",
           "name": "Sociology",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-history-genuine",
+          "id": "cornell-university-30aa90f4-history-genuine",
           "name": "History",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-english-genuine",
+          "id": "cornell-university-30aa90f4-english-genuine",
           "name": "English",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-communications-genuine",
+          "id": "cornell-university-30aa90f4-communications-genuine",
           "name": "Communications",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-biology-genuine",
+          "id": "cornell-university-30aa90f4-biology-genuine",
           "name": "Biology",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-biochemistry-genuine",
+          "id": "cornell-university-30aa90f4-biochemistry-genuine",
           "name": "Biochemistry",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-chemistry-genuine",
+          "id": "cornell-university-30aa90f4-chemistry-genuine",
           "name": "Chemistry",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-physics-genuine",
+          "id": "cornell-university-30aa90f4-physics-genuine",
           "name": "Physics",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-mathematics-genuine",
+          "id": "cornell-university-30aa90f4-mathematics-genuine",
           "name": "Mathematics",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-statistics-genuine",
+          "id": "cornell-university-30aa90f4-statistics-genuine",
           "name": "Statistics",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-public-health-genuine",
+          "id": "cornell-university-30aa90f4-public-health-genuine",
           "name": "Public Health",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-nursing-genuine",
+          "id": "cornell-university-30aa90f4-nursing-genuine",
           "name": "Nursing",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-international-relations-genuine",
+          "id": "cornell-university-30aa90f4-international-relations-genuine",
           "name": "International Relations",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-philosophy-genuine",
+          "id": "cornell-university-30aa90f4-philosophy-genuine",
           "name": "Philosophy",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-biological-engineering-1d397033",
+          "id": "cornell-university-biological-engineering-1d397033",
           "name": "Biological Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-earth-and-atmospheric-sciences-e6ae3f8c",
+          "id": "cornell-university-earth-and-atmospheric-sciences-e6ae3f8c",
           "name": "Earth and Atmospheric Sciences",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-electrical-computer-engineering-0bf88e92",
+          "id": "cornell-university-electrical-computer-engineering-0bf88e92",
           "name": "Electrical & Computer Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-engineering-physics-2717d2bf",
+          "id": "cornell-university-engineering-physics-2717d2bf",
           "name": "Engineering Physics",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-environmental-engineering-b73f45eb",
+          "id": "cornell-university-environmental-engineering-b73f45eb",
           "name": "Environmental Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-materials-science-engineering-746b6079",
+          "id": "cornell-university-materials-science-engineering-746b6079",
           "name": "Materials Science & Engineering",
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-operations-research-engineering-70892a2d",
+          "id": "cornell-university-operations-research-engineering-70892a2d",
           "name": "Operations Research & Engineering",
           "confidence": "verified"
         }
@@ -2798,122 +2798,122 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "ut-austin-cockrell-ed8d09cf",
+      "id": "university-of-texas-at-austin-ed8d09cf",
       "name": "University of Texas at Austin",
       "shortName": "University of Texas at Austin",
       "majors": [
         {
-          "id": "ut-austin-cockrell-ed8d09cf-computer-science-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-computer-science-genuine",
           "name": "Computer Science",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-computer-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-computer-engineering-genuine",
           "name": "Computer Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-data-science-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-data-science-genuine",
           "name": "Data Science",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-electrical-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-electrical-engineering-genuine",
           "name": "Electrical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-mechanical-engineering-09a7bda0",
+          "id": "university-of-texas-at-austin-mechanical-engineering-09a7bda0",
           "name": "Mechanical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-chemical-engineering-8b9ee702",
+          "id": "university-of-texas-at-austin-chemical-engineering-8b9ee702",
           "name": "Chemical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-civil-engineering-2ec63e81",
+          "id": "university-of-texas-at-austin-civil-engineering-2ec63e81",
           "name": "Civil Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-biomedical-engineering-77ff8307",
+          "id": "university-of-texas-at-austin-biomedical-engineering-77ff8307",
           "name": "Biomedical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-aerospace-engineering-55aa0ca1",
+          "id": "university-of-texas-at-austin-aerospace-engineering-55aa0ca1",
           "name": "Aerospace Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-industrial-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-industrial-engineering-genuine",
           "name": "Industrial Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-materials-science-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-materials-science-engineering-genuine",
           "name": "Materials Science & Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-environmental-engineering-862ab928",
+          "id": "university-of-texas-at-austin-environmental-engineering-862ab928",
           "name": "Environmental Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-applied-mathematics-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-applied-mathematics-genuine",
           "name": "Applied Mathematics",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-physics-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-physics-genuine",
           "name": "Physics",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-chemistry-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-chemistry-genuine",
           "name": "Chemistry",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-business-administration-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-business-administration-genuine",
           "name": "Business Administration",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-economics-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-economics-genuine",
           "name": "Economics",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-technical-communication-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-technical-communication-genuine",
           "name": "Technical Communication",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-architectural-engineering-4114bbd4",
+          "id": "university-of-texas-at-austin-architectural-engineering-4114bbd4",
           "name": "Architectural Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-computational-engineering-b9584233",
+          "id": "university-of-texas-at-austin-computational-engineering-b9584233",
           "name": "Computational Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-electrical-computer-engineering-17058445",
+          "id": "university-of-texas-at-austin-electrical-computer-engineering-17058445",
           "name": "Electrical & Computer Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-geosystems-engineering-dd2edee4",
+          "id": "university-of-texas-at-austin-geosystems-engineering-dd2edee4",
           "name": "Geosystems Engineering",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-petroleum-engineering-ee1e984d",
+          "id": "university-of-texas-at-austin-petroleum-engineering-ee1e984d",
           "name": "Petroleum Engineering",
           "confidence": "verified"
         }
@@ -3249,102 +3249,102 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "uc-berkeley-coe-362f972e",
+      "id": "uc-berkeley-362f972e",
       "name": "UC Berkeley",
       "shortName": "UC Berkeley",
       "majors": [
         {
-          "id": "uc-berkeley-coe-362f972e-energy-engineering-genuine",
+          "id": "uc-berkeley-362f972e-energy-engineering-genuine",
           "name": "Energy Engineering",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-engineering-math-statistics-genuine",
+          "id": "uc-berkeley-362f972e-engineering-math-statistics-genuine",
           "name": "Engineering Math & Statistics",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-engineering-physics-genuine",
+          "id": "uc-berkeley-362f972e-engineering-physics-genuine",
           "name": "Engineering Physics",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-environmental-engineering-science-genuine",
+          "id": "uc-berkeley-362f972e-environmental-engineering-science-genuine",
           "name": "Environmental Engineering Science",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-nuclear-engineering-genuine",
+          "id": "uc-berkeley-362f972e-nuclear-engineering-genuine",
           "name": "Nuclear Engineering",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-bioengineering-bioe-56bb6ad7",
+          "id": "uc-berkeley-bioengineering-bioe-56bb6ad7",
           "name": "Bioengineering",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-civil-environmental-engineering-ebc6a105",
+          "id": "uc-berkeley-civil-environmental-engineering-ebc6a105",
           "name": "Civil Engineering",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-eecs-electrical-engineering-computer-science-2f080f00",
+          "id": "uc-berkeley-eecs-electrical-engineering-computer-science-2f080f00",
           "name": "Electrical Engineering & Computer Sciences (EECS)",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-industrial-engineering-operations-research-i-12efac92",
+          "id": "uc-berkeley-industrial-engineering-operations-research-i-12efac92",
           "name": "Industrial Engineering & Operations Research",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-materials-science-engineering-mse-3eedb31b",
+          "id": "uc-berkeley-materials-science-engineering-mse-3eedb31b",
           "name": "Materials Science & Engineering (MSE)",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-mechanical-engineering-me-ebf17b9d",
+          "id": "uc-berkeley-mechanical-engineering-me-ebf17b9d",
           "name": "Mechanical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-nuclear-engineering-ne-394e0458",
+          "id": "uc-berkeley-nuclear-engineering-ne-394e0458",
           "name": "Nuclear Engineering (NE)",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-chemical-engineering-college-of-chemistry-co-77c6c7ad",
+          "id": "uc-berkeley-chemical-engineering-college-of-chemistry-co-77c6c7ad",
           "name": "Chemical Engineering",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-computer-science",
+          "id": "uc-berkeley-362f972e-computer-science",
           "name": "Computer Science",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-cognitive-science",
+          "id": "uc-berkeley-362f972e-cognitive-science",
           "name": "Cognitive Science",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-data-science",
+          "id": "uc-berkeley-362f972e-data-science",
           "name": "Data Science",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-business-administration",
+          "id": "uc-berkeley-362f972e-business-administration",
           "name": "Business Administration",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-economics",
+          "id": "uc-berkeley-362f972e-economics",
           "name": "Economics",
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-materials-science-engineering",
+          "id": "uc-berkeley-362f972e-materials-science-engineering",
           "name": "Materials Science & Engineering",
           "confidence": "verified"
         }

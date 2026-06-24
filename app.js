@@ -3697,6 +3697,68 @@ function renderEligibilityResults() {
   const container = qs("#eligibilityResults");
   if (!container) return;
   let selectedPrograms = allPrograms().filter((program) => state.selectedTargets.includes(program.id));
+  
+  const getSchoolRank = (school) => {
+    const id = (school.id || "").toLowerCase();
+    const name = (school.name || "").toLowerCase();
+    
+    if (id.includes("princeton")) return 1;
+    if (id.includes("mit") || name.includes("massachusetts institute")) return 2;
+    if (id.includes("harvard")) return 3;
+    if (id.includes("stanford")) return 4;
+    if (id.includes("yale")) return 5;
+    if (id.includes("caltech") || id.includes("california-institute-of-technology")) return 6;
+    if (id.includes("duke")) return 7;
+    if (id.includes("johns-hopkins")) return 8;
+    if (id.includes("northwestern")) return 9;
+    if (id.includes("upenn") || name.includes("pennsylvania")) return 10;
+    if (id.includes("cornell")) return 11;
+    if (id.includes("chicago")) return 12;
+    if (id.includes("brown")) return 13;
+    if (id.includes("columbia")) return 14;
+    if (id.includes("dartmouth")) return 15;
+    if (id.includes("ucla") || name.includes("los angeles")) return 16;
+    if (id.includes("berkeley") || name.includes("berkeley")) return 17;
+    if (id.includes("rice")) return 18;
+    if (id.includes("notre-dame") || name.includes("notre dame")) return 19;
+    if (id.includes("vanderbilt")) return 20;
+    if (id.includes("carnegie") || id.includes("cmu") || name.includes("carnegie mellon")) return 21;
+    if (id.includes("washu") || name.includes("washington university in st")) return 22;
+    if (id.includes("emory")) return 23;
+    if (id.includes("georgetown")) return 24;
+    if (id.includes("virginia")) return 25;
+    if (id.includes("michigan")) return 26;
+    if (id.includes("usc") || name.includes("southern california")) return 27;
+    if (id.includes("ucsd") || name.includes("san diego")) return 28;
+    if (id.includes("nyu") || name.includes("new york university")) return 29;
+    if (id.includes("rochester")) return 30;
+    if (id.includes("florida")) return 31;
+    if (id.includes("davis") || name.includes("davis")) return 32;
+    if (id.includes("irvine") || name.includes("irvine")) return 33;
+    if (id.includes("boston-college") || name.includes("boston college")) return 34;
+    if (id.includes("tufts")) return 35;
+    if (id.includes("barbara") || name.includes("santa barbara")) return 36;
+    if (id.includes("wisconsin")) return 37;
+    if (id.includes("uiuc") || name.includes("urbana")) return 38;
+    if (id.includes("austin") || name.includes("austin")) return 39;
+    if (id.includes("boston-university") || name.includes("boston university")) return 40;
+    if (id.includes("rutgers")) return 41;
+    if (id.includes("ohio-state") || name.includes("ohio state")) return 42;
+    if (id.includes("purdue")) return 43;
+    if (id.includes("maryland")) return 44;
+    if (id.includes("texas-a-m") || name.includes("texas a&m")) return 45;
+    if (id.includes("georgia")) return 46;
+    if (id.includes("virginia-tech") || name.includes("virginia tech")) return 47;
+    if (id.includes("stony-brook") || name.includes("stony brook")) return 48;
+    if (id.includes("nc-state") || name.includes("north carolina state")) return 49;
+    if (id.includes("buffalo")) return 50;
+    if (id.includes("arizona-state") || name.includes("arizona state")) return 51;
+    
+    return 999;
+  };
+
+  selectedPrograms.sort((a, b) => getSchoolRank(a.school) - getSchoolRank(b.school));
+  
   let isExample = false;
   if (selectedPrograms.length === 0) {
     const exampleId = "university-of-washington-computer-engineering-allen-school-347f00d7";
@@ -3796,7 +3858,19 @@ function renderEligibilityResults() {
               ${lockedOverlayHtml}
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
                 <span class="status ${evaluation.pass && !evaluation.needsReview ? "pass" : "fail"}">${statusText}</span>
-                <span class="rms-badge" style="background: ${rms.color}15; color: ${rms.color}; border: 1px solid ${rms.color}35; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 800;">${rms.label}</span>
+                <span class="rms-badge ${rms.class}">${rms.label}</span>
+              </div>
+              <div style="display: flex; gap: 6px; margin: 4px 0 8px; flex-wrap: wrap;">
+                ${stats.usNewsRank && stats.usNewsRank < 999 ? `
+                  <span class="rank-badge national" style="background: rgba(99, 102, 241, 0.08); color: var(--accent); border: 1px solid rgba(99, 102, 241, 0.25); padding: 3px 8px; border-radius: 4px; font-size: 10.5px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">
+                    🏛️ US News: #${stats.usNewsRank}
+                  </span>
+                ` : ""}
+                ${stats.majorRank && stats.majorRank < 999 ? `
+                  <span class="rank-badge major" style="background: rgba(251, 191, 36, 0.08); color: #d97706; border: 1px solid rgba(251, 191, 36, 0.25); padding: 3px 8px; border-radius: 4px; font-size: 10.5px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">
+                    🎯 Major Rank: #${stats.majorRank}
+                  </span>
+                ` : ""}
               </div>
               <h3>${escapeHtml(program.school.shortName)}</h3>
               <p>${escapeHtml(program.name)}</p>
@@ -3913,6 +3987,118 @@ function renderEligibilityResults() {
         `;
       })
       .join("") || `<div class="panel"><strong>${t("no_targets_selected")}</strong></div>`;
+}
+
+async function handleAnalyzeCoverage() {
+  const container = qs("#eligibilityResults");
+  if (!container) return;
+
+  const isKo = (state.language || "ko") === "ko";
+  const slots = state.targetSlots.filter(s => s.school && s.major);
+  if (slots.length === 0) {
+    renderEligibilityResults();
+    scrollToSection("#eligibilityResults");
+    return;
+  }
+
+  // 1. 실시간 생성(AI generation)이 필요한 슬롯 찾기
+  const pendingGenerations = [];
+  slots.forEach(slot => {
+    const existing = allPrograms().find(p => 
+      (normalizeText(p.school.name) === normalizeText(slot.school) || normalizeText(p.school.shortName) === normalizeText(slot.school)) &&
+      normalizeText(p.name) === normalizeText(slot.major)
+    );
+
+    if (!existing || existing.confidence === "ai_generated") {
+      pendingGenerations.push(slot);
+    }
+  });
+
+  if (pendingGenerations.length === 0) {
+    renderEligibilityResults();
+    scrollToSection("#eligibilityResults");
+    return;
+  }
+
+  // 2. AI 분석 진행 중임을 화려하고 모던하게 알리는 로딩 렌더링
+  scrollToSection("#eligibilityResults");
+  container.innerHTML = `
+    <div class="panel" style="text-align: center; padding: 40px 20px; border: 1px dashed var(--accent); background: rgba(99, 102, 241, 0.03); border-radius: 12px; margin-top: 20px;">
+      <div class="spinner" style="margin: 0 auto 20px; width: 45px; height: 45px; border: 4px solid rgba(99, 102, 241, 0.1); border-top: 4px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+      <h3 style="color: var(--accent); font-weight: 800; font-size: 16px; margin-bottom: 8px;">
+        🔮 ${isKo ? "실시간 검색 증강 AI 요강 분석 및 크롤링 중..." : "Real-time AI Prerequisite Crawling..."}
+      </h3>
+      <p style="font-size: 13px; color: var(--muted); max-width: 500px; margin: 0 auto 16px; line-height: 1.5;">
+        ${isKo 
+          ? "공식 Common Data Set(CDS) 및 대학 입학 요강(.edu)을 실시간으로 검색하여 필수 이수 과목과 합격 통계를 수집하고 있습니다. 약 10~20초 소요됩니다." 
+          : "Searching official Common Data Set (CDS) and university admissions guides in real-time. This may take 10-20 seconds."}
+      </p>
+      <div style="font-size: 12.5px; font-weight: 700; color: var(--ink); background: rgba(0,0,0,0.03); padding: 8px 16px; border-radius: 6px; display: inline-block;">
+        ${pendingGenerations.map(g => `📍 ${escapeHtml(g.school)} - ${escapeHtml(g.major)}`).join("<br/>")}
+      </div>
+    </div>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  `;
+
+  // 3. 차례로 실시간 API 호출하여 로컬 DB 업데이트
+  for (const gen of pendingGenerations) {
+    try {
+      const reqHeaders = { "Content-Type": "application/json" };
+      if (typeof supabaseUserSession !== 'undefined' && supabaseUserSession && supabaseUserSession.access_token) {
+        reqHeaders["Authorization"] = `Bearer ${supabaseUserSession.access_token}`;
+      }
+      
+      const response = await fetch("/api/requirements/generate", {
+        method: "POST",
+        headers: reqHeaders,
+        body: JSON.stringify({ schoolName: gen.school, majorName: gen.major })
+      });
+      const result = await response.json();
+      
+      if (result.success) {
+        // 로컬 메모리 DB에 주입
+        let localSchool = database.schools.find(s => s.name.toLowerCase() === gen.school.toLowerCase() || s.shortName.toLowerCase() === gen.school.toLowerCase());
+        if (!localSchool) {
+          localSchool = {
+            id: result.school.id,
+            name: result.school.name,
+            shortName: result.school.shortName,
+            majors: []
+          };
+          database.schools.push(localSchool);
+        }
+        
+        const newMajor = result.major;
+        const existingMajorIdx = localSchool.majors.findIndex(m => m.name.toLowerCase() === gen.major.toLowerCase());
+        if (existingMajorIdx >= 0) {
+          localSchool.majors[existingMajorIdx] = newMajor;
+        } else {
+          localSchool.majors.push(newMajor);
+        }
+        
+        database.schoolCount = database.schools.length;
+        database.programCount = database.schools.flatMap(s => s.majors).length;
+
+        // stats 정보 주입
+        if (result.stats) {
+          if (!window.transferStats) window.transferStats = {};
+          window.transferStats[result.school.id] = result.stats;
+        }
+      }
+    } catch (e) {
+      console.error("AI generation failed for:", gen.school, gen.major, e);
+    }
+  }
+
+  // 4. 완료 후 갱신
+  syncSelectedTargetsFromSlots();
+  updateSortedPrograms();
+  renderEligibilityResults();
 }
 
 function scrollToSection(selector) {
@@ -5668,9 +5854,8 @@ function bindEvents() {
     renderEligibilityResults();
   });
 
-  qs("#checkEligibilityBtn")?.addEventListener("click", () => {
-    renderEligibilityResults();
-    scrollToSection("#eligibilityResults");
+  qs("#checkEligibilityBtn")?.addEventListener("click", async () => {
+    await handleAnalyzeCoverage();
   });
 
   qs("#buildRoadmapBtn")?.addEventListener("click", () => {

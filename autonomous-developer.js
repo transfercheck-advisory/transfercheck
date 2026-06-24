@@ -1,5 +1,5 @@
 /**
- * TransferChek - Autonomous Developer Engine (자율 개선 엔진)
+ * TransferCheck - Autonomous Developer Engine (자율 개선 엔진)
  * -----------------------------------------------------------
  * 이 엔진은 백그라운드에서 주기적으로 작동하며 다음과 같은 업무를 수행합니다:
  * 1. server.err.log 모니터링 → 에러 감지 시 Gemini API로 자율 복구(Self-Healing) 코드 패치 적용

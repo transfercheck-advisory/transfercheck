@@ -42,3 +42,6 @@ server.out.log
 *.sw?
 .DS_Store
 Thumbs.db
+scratch/
+*.mp4
+

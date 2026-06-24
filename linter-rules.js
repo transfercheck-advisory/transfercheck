@@ -1,5 +1,5 @@
 /**
- * TransferChek Data Validation Linter Engine
+ * TransferCheck Data Validation Linter Engine
  */
 
 const LinterRules = {

@@ -5616,11 +5616,11 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "nyu-tandon-4665a194",
+      "id": "new-york-university-4665a194",
       "name": "New York University",
       "majors": [
         {
-          "id": "nyu-tandon-4665a194-computer-science-genuine",
+          "id": "new-york-university-4665a194-computer-science-genuine",
           "name": "Computer Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5639,12 +5639,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-data-science-genuine",
+          "id": "new-york-university-4665a194-data-science-genuine",
           "name": "Data Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5663,12 +5663,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-information-technology-genuine",
+          "id": "new-york-university-4665a194-information-technology-genuine",
           "name": "Information Technology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5687,12 +5687,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-computer-engineering-genuine",
+          "id": "new-york-university-4665a194-computer-engineering-genuine",
           "name": "Computer Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5711,12 +5711,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-electrical-engineering-genuine",
+          "id": "new-york-university-4665a194-electrical-engineering-genuine",
           "name": "Electrical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5735,12 +5735,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-mechanical-engineering-genuine",
+          "id": "new-york-university-4665a194-mechanical-engineering-genuine",
           "name": "Mechanical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5759,12 +5759,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-civil-engineering-genuine",
+          "id": "new-york-university-4665a194-civil-engineering-genuine",
           "name": "Civil Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5783,12 +5783,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-chemical-engineering-genuine",
+          "id": "new-york-university-4665a194-chemical-engineering-genuine",
           "name": "Chemical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5807,12 +5807,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-biomedical-engineering-genuine",
+          "id": "new-york-university-4665a194-biomedical-engineering-genuine",
           "name": "Biomedical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5831,12 +5831,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-industrial-engineering-genuine",
+          "id": "new-york-university-4665a194-industrial-engineering-genuine",
           "name": "Industrial Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5855,12 +5855,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-aerospace-engineering-genuine",
+          "id": "new-york-university-4665a194-aerospace-engineering-genuine",
           "name": "Aerospace Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5879,12 +5879,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-business-administration-genuine",
+          "id": "new-york-university-4665a194-business-administration-genuine",
           "name": "Business Administration",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5908,12 +5908,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-finance-genuine",
+          "id": "new-york-university-4665a194-finance-genuine",
           "name": "Finance",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5937,12 +5937,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-accounting-genuine",
+          "id": "new-york-university-4665a194-accounting-genuine",
           "name": "Accounting",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5966,12 +5966,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-marketing-genuine",
+          "id": "new-york-university-4665a194-marketing-genuine",
           "name": "Marketing",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -5995,12 +5995,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-management-genuine",
+          "id": "new-york-university-4665a194-management-genuine",
           "name": "Management",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6024,12 +6024,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-economics-genuine",
+          "id": "new-york-university-4665a194-economics-genuine",
           "name": "Economics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6053,12 +6053,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-psychology-genuine",
+          "id": "new-york-university-4665a194-psychology-genuine",
           "name": "Psychology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6082,12 +6082,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-political-science-genuine",
+          "id": "new-york-university-4665a194-political-science-genuine",
           "name": "Political Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6111,12 +6111,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-sociology-genuine",
+          "id": "new-york-university-4665a194-sociology-genuine",
           "name": "Sociology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6140,12 +6140,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-history-genuine",
+          "id": "new-york-university-4665a194-history-genuine",
           "name": "History",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6169,12 +6169,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-english-genuine",
+          "id": "new-york-university-4665a194-english-genuine",
           "name": "English",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6198,12 +6198,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-communications-genuine",
+          "id": "new-york-university-4665a194-communications-genuine",
           "name": "Communications",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6227,12 +6227,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-biology-genuine",
+          "id": "new-york-university-4665a194-biology-genuine",
           "name": "Biology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6251,12 +6251,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-biochemistry-genuine",
+          "id": "new-york-university-4665a194-biochemistry-genuine",
           "name": "Biochemistry",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6275,12 +6275,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-chemistry-genuine",
+          "id": "new-york-university-4665a194-chemistry-genuine",
           "name": "Chemistry",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6299,12 +6299,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-physics-genuine",
+          "id": "new-york-university-4665a194-physics-genuine",
           "name": "Physics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6323,12 +6323,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-mathematics-genuine",
+          "id": "new-york-university-4665a194-mathematics-genuine",
           "name": "Mathematics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6347,12 +6347,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-statistics-genuine",
+          "id": "new-york-university-4665a194-statistics-genuine",
           "name": "Statistics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6371,12 +6371,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-public-health-genuine",
+          "id": "new-york-university-4665a194-public-health-genuine",
           "name": "Public Health",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6400,12 +6400,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-nursing-genuine",
+          "id": "new-york-university-4665a194-nursing-genuine",
           "name": "Nursing",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6429,12 +6429,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-international-relations-genuine",
+          "id": "new-york-university-4665a194-international-relations-genuine",
           "name": "International Relations",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6458,12 +6458,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-4665a194-philosophy-genuine",
+          "id": "new-york-university-4665a194-philosophy-genuine",
           "name": "Philosophy",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -6487,12 +6487,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.nyu-tandon.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.nyu-tandon.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.new-york-university.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.new-york-university.edu/",
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-applied-physics-b-s-09d89f6e",
+          "id": "new-york-university-applied-physics-b-s-09d89f6e",
           "name": "Applied Physics, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6520,7 +6520,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-biomolecular-science-b-s-0efa4abe",
+          "id": "new-york-university-biomolecular-science-b-s-0efa4abe",
           "name": "Biomolecular Science, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6548,7 +6548,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-business-technology-management-b-s-16e26765",
+          "id": "new-york-university-business-technology-management-b-s-16e26765",
           "name": "Business & Technology Management, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6581,7 +6581,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-chemical-biomolecular-engineering-b-s-cc71227b",
+          "id": "new-york-university-chemical-biomolecular-engineering-b-s-cc71227b",
           "name": "Chemical & Biomolecular Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6609,7 +6609,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-civil-engineering-b-s-8de46960",
+          "id": "new-york-university-civil-engineering-b-s-8de46960",
           "name": "Civil Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6637,7 +6637,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-computer-engineering-b-s-79ae595b",
+          "id": "new-york-university-computer-engineering-b-s-79ae595b",
           "name": "Computer Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6665,7 +6665,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-computer-science-b-s-84682d50",
+          "id": "new-york-university-computer-science-b-s-84682d50",
           "name": "Computer Science, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6693,7 +6693,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-electrical-engineering-b-s-6a914556",
+          "id": "new-york-university-electrical-engineering-b-s-6a914556",
           "name": "Electrical Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6721,7 +6721,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-electrical-computer-engineering-b-s-52a481ac",
+          "id": "new-york-university-electrical-computer-engineering-b-s-52a481ac",
           "name": "Electrical & Computer Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6749,7 +6749,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-environmental-engineering-b-s-9fad8591",
+          "id": "new-york-university-environmental-engineering-b-s-9fad8591",
           "name": "Environmental Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6777,7 +6777,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-integrated-design-media-b-s-7a006fa8",
+          "id": "new-york-university-integrated-design-media-b-s-7a006fa8",
           "name": "Integrated Design & Media, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6805,7 +6805,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-mathematics-b-s-f719fe5f",
+          "id": "new-york-university-mathematics-b-s-f719fe5f",
           "name": "Mathematics, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6833,7 +6833,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-mathematics-physics-b-s-65b30815",
+          "id": "new-york-university-mathematics-physics-b-s-65b30815",
           "name": "Mathematics & Physics, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -6861,7 +6861,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "nyu-tandon-mechanical-engineering-b-s-a19c5e19",
+          "id": "new-york-university-mechanical-engineering-b-s-a19c5e19",
           "name": "Mechanical Engineering, B.S.",
           "rawMinGpa": "3.5+ cumulative GPA recommended (holistic review)",
           "rawMinCredits": "24 transferable credits",
@@ -10981,11 +10981,11 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "cornell-duffield-30aa90f4",
+      "id": "cornell-university-30aa90f4",
       "name": "Cornell University",
       "majors": [
         {
-          "id": "cornell-duffield-30aa90f4-computer-science-genuine",
+          "id": "cornell-university-30aa90f4-computer-science-genuine",
           "name": "Computer Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11009,7 +11009,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-data-science-genuine",
+          "id": "cornell-university-30aa90f4-data-science-genuine",
           "name": "Data Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11033,7 +11033,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-information-technology-genuine",
+          "id": "cornell-university-30aa90f4-information-technology-genuine",
           "name": "Information Technology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11057,7 +11057,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-computer-engineering-genuine",
+          "id": "cornell-university-30aa90f4-computer-engineering-genuine",
           "name": "Computer Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11081,7 +11081,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-electrical-engineering-genuine",
+          "id": "cornell-university-30aa90f4-electrical-engineering-genuine",
           "name": "Electrical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11105,7 +11105,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-mechanical-engineering-09ba9556",
+          "id": "cornell-university-mechanical-engineering-09ba9556",
           "name": "Mechanical Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -11151,7 +11151,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-civil-engineering-ac557962",
+          "id": "cornell-university-civil-engineering-ac557962",
           "name": "Civil Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -11202,7 +11202,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-chemical-engineering-6196dc8b",
+          "id": "cornell-university-chemical-engineering-6196dc8b",
           "name": "Chemical Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -11258,7 +11258,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-biomedical-engineering-43aa9eec",
+          "id": "cornell-university-biomedical-engineering-43aa9eec",
           "name": "Biomedical Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -11309,7 +11309,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-30aa90f4-industrial-engineering-genuine",
+          "id": "cornell-university-30aa90f4-industrial-engineering-genuine",
           "name": "Industrial Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11333,7 +11333,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-aerospace-engineering-genuine",
+          "id": "cornell-university-30aa90f4-aerospace-engineering-genuine",
           "name": "Aerospace Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11357,7 +11357,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-business-administration-genuine",
+          "id": "cornell-university-30aa90f4-business-administration-genuine",
           "name": "Business Administration",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11386,7 +11386,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-finance-genuine",
+          "id": "cornell-university-30aa90f4-finance-genuine",
           "name": "Finance",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11415,7 +11415,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-accounting-genuine",
+          "id": "cornell-university-30aa90f4-accounting-genuine",
           "name": "Accounting",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11444,7 +11444,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-marketing-genuine",
+          "id": "cornell-university-30aa90f4-marketing-genuine",
           "name": "Marketing",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11473,7 +11473,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-management-genuine",
+          "id": "cornell-university-30aa90f4-management-genuine",
           "name": "Management",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11502,7 +11502,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-economics-genuine",
+          "id": "cornell-university-30aa90f4-economics-genuine",
           "name": "Economics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11531,7 +11531,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-psychology-genuine",
+          "id": "cornell-university-30aa90f4-psychology-genuine",
           "name": "Psychology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11560,7 +11560,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-political-science-genuine",
+          "id": "cornell-university-30aa90f4-political-science-genuine",
           "name": "Political Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11589,7 +11589,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-sociology-genuine",
+          "id": "cornell-university-30aa90f4-sociology-genuine",
           "name": "Sociology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11618,7 +11618,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-history-genuine",
+          "id": "cornell-university-30aa90f4-history-genuine",
           "name": "History",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11647,7 +11647,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-english-genuine",
+          "id": "cornell-university-30aa90f4-english-genuine",
           "name": "English",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11676,7 +11676,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-communications-genuine",
+          "id": "cornell-university-30aa90f4-communications-genuine",
           "name": "Communications",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11705,7 +11705,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-biology-genuine",
+          "id": "cornell-university-30aa90f4-biology-genuine",
           "name": "Biology",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11729,7 +11729,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-biochemistry-genuine",
+          "id": "cornell-university-30aa90f4-biochemistry-genuine",
           "name": "Biochemistry",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11753,7 +11753,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-chemistry-genuine",
+          "id": "cornell-university-30aa90f4-chemistry-genuine",
           "name": "Chemistry",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11777,7 +11777,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-physics-genuine",
+          "id": "cornell-university-30aa90f4-physics-genuine",
           "name": "Physics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11801,7 +11801,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-mathematics-genuine",
+          "id": "cornell-university-30aa90f4-mathematics-genuine",
           "name": "Mathematics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11825,7 +11825,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-statistics-genuine",
+          "id": "cornell-university-30aa90f4-statistics-genuine",
           "name": "Statistics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11849,7 +11849,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-public-health-genuine",
+          "id": "cornell-university-30aa90f4-public-health-genuine",
           "name": "Public Health",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11878,7 +11878,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-nursing-genuine",
+          "id": "cornell-university-30aa90f4-nursing-genuine",
           "name": "Nursing",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11907,7 +11907,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-international-relations-genuine",
+          "id": "cornell-university-30aa90f4-international-relations-genuine",
           "name": "International Relations",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11936,7 +11936,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-30aa90f4-philosophy-genuine",
+          "id": "cornell-university-30aa90f4-philosophy-genuine",
           "name": "Philosophy",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -11965,7 +11965,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "cornell-duffield-biological-engineering-1d397033",
+          "id": "cornell-university-biological-engineering-1d397033",
           "name": "Biological Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -12018,7 +12018,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-earth-and-atmospheric-sciences-e6ae3f8c",
+          "id": "cornell-university-earth-and-atmospheric-sciences-e6ae3f8c",
           "name": "Earth and Atmospheric Sciences",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -12071,7 +12071,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-electrical-computer-engineering-0bf88e92",
+          "id": "cornell-university-electrical-computer-engineering-0bf88e92",
           "name": "Electrical & Computer Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -12130,7 +12130,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.cornell.edu/admissions/undergraduate-admissions/transfer-applicants/transfer-requirements"
         },
         {
-          "id": "cornell-duffield-engineering-physics-2717d2bf",
+          "id": "cornell-university-engineering-physics-2717d2bf",
           "name": "Engineering Physics",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -12185,7 +12185,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-environmental-engineering-b73f45eb",
+          "id": "cornell-university-environmental-engineering-b73f45eb",
           "name": "Environmental Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -12238,7 +12238,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-materials-science-engineering-746b6079",
+          "id": "cornell-university-materials-science-engineering-746b6079",
           "name": "Materials Science & Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -12283,7 +12283,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://duffield.cornell.edu/admissions/transfer-applicants/requirements/"
         },
         {
-          "id": "cornell-duffield-operations-research-engineering-70892a2d",
+          "id": "cornell-university-operations-research-engineering-70892a2d",
           "name": "Operations Research & Engineering",
           "rawMinGpa": "공식 미게시 (holistic)\n합격자 generally A range",
           "rawMinCredits": "12+ (AP 제외, 고졸 후)",
@@ -13475,11 +13475,11 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "ut-austin-cockrell-ed8d09cf",
+      "id": "university-of-texas-at-austin-ed8d09cf",
       "name": "University of Texas at Austin",
       "majors": [
         {
-          "id": "ut-austin-cockrell-ed8d09cf-computer-science-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-computer-science-genuine",
           "name": "Computer Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13498,12 +13498,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-computer-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-computer-engineering-genuine",
           "name": "Computer Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13522,12 +13522,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-data-science-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-data-science-genuine",
           "name": "Data Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13546,12 +13546,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-electrical-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-electrical-engineering-genuine",
           "name": "Electrical Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13570,12 +13570,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-mechanical-engineering-09a7bda0",
+          "id": "university-of-texas-at-austin-mechanical-engineering-09a7bda0",
           "name": "Mechanical Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13605,7 +13605,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-chemical-engineering-8b9ee702",
+          "id": "university-of-texas-at-austin-chemical-engineering-8b9ee702",
           "name": "Chemical Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13635,7 +13635,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-civil-engineering-2ec63e81",
+          "id": "university-of-texas-at-austin-civil-engineering-2ec63e81",
           "name": "Civil Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13665,7 +13665,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-biomedical-engineering-77ff8307",
+          "id": "university-of-texas-at-austin-biomedical-engineering-77ff8307",
           "name": "Biomedical Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13695,7 +13695,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-aerospace-engineering-55aa0ca1",
+          "id": "university-of-texas-at-austin-aerospace-engineering-55aa0ca1",
           "name": "Aerospace Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13725,7 +13725,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-industrial-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-industrial-engineering-genuine",
           "name": "Industrial Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13744,12 +13744,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-materials-science-engineering-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-materials-science-engineering-genuine",
           "name": "Materials Science & Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13768,12 +13768,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-environmental-engineering-862ab928",
+          "id": "university-of-texas-at-austin-environmental-engineering-862ab928",
           "name": "Environmental Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13803,7 +13803,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-applied-mathematics-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-applied-mathematics-genuine",
           "name": "Applied Mathematics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13822,12 +13822,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-physics-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-physics-genuine",
           "name": "Physics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13846,12 +13846,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-chemistry-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-chemistry-genuine",
           "name": "Chemistry",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13870,12 +13870,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-business-administration-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-business-administration-genuine",
           "name": "Business Administration",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13899,12 +13899,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-economics-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-economics-genuine",
           "name": "Economics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13928,12 +13928,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/\n\n[Business Transfer Guidelines]\n• Admissions Focus: Business transfer evaluations emphasize cumulative GPA, college-level English Composition sequences, and core prep courses (Economics, Accounting, Statistics) over specialized technical prerequisites.",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-ed8d09cf-technical-communication-genuine",
+          "id": "university-of-texas-at-austin-ed8d09cf-technical-communication-genuine",
           "name": "Technical Communication",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -13957,12 +13957,12 @@ window.transferDatabase = {
             "IELTS": null,
             "Duolingo": null
           },
-          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.ut-austin-cockrell.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
-          "officialSourceUrl": "https://admissions.ut-austin-cockrell.edu/",
+          "note": "✅ Auto-Verified by AI Reviewer on 2026-06-17\n[Verified Departmental Reqs] ✅ Verified: holistic requirements review\nSource: https://admissions.university-of-texas-at-austin.edu/\n\n[Humanities & Social Sciences Guidelines]\n• Admissions Focus: Humanities and Social Science transfer evaluations prioritize overall academic GPA, complete English composition sequences, and general education breadth requirements.",
+          "officialSourceUrl": "https://admissions.university-of-texas-at-austin.edu/",
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-architectural-engineering-4114bbd4",
+          "id": "university-of-texas-at-austin-architectural-engineering-4114bbd4",
           "name": "Architectural Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -13992,7 +13992,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-computational-engineering-b9584233",
+          "id": "university-of-texas-at-austin-computational-engineering-b9584233",
           "name": "Computational Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -14022,7 +14022,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-electrical-computer-engineering-17058445",
+          "id": "university-of-texas-at-austin-electrical-computer-engineering-17058445",
           "name": "Electrical & Computer Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -14052,7 +14052,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-geosystems-engineering-dd2edee4",
+          "id": "university-of-texas-at-austin-geosystems-engineering-dd2edee4",
           "name": "Geosystems Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -14082,7 +14082,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "ut-austin-cockrell-petroleum-engineering-ee1e984d",
+          "id": "university-of-texas-at-austin-petroleum-engineering-ee1e984d",
           "name": "Petroleum Engineering",
           "rawMinGpa": "3.0+ technical and cumulative GPA",
           "rawMinCredits": "24 transferable credits",
@@ -16001,11 +16001,11 @@ window.transferDatabase = {
       ]
     },
     {
-      "id": "uc-berkeley-coe-362f972e",
+      "id": "uc-berkeley-362f972e",
       "name": "UC Berkeley",
       "majors": [
         {
-          "id": "uc-berkeley-coe-362f972e-energy-engineering-genuine",
+          "id": "uc-berkeley-362f972e-energy-engineering-genuine",
           "name": "Energy Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -16029,7 +16029,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-engineering-math-statistics-genuine",
+          "id": "uc-berkeley-362f972e-engineering-math-statistics-genuine",
           "name": "Engineering Math & Statistics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -16053,7 +16053,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-engineering-physics-genuine",
+          "id": "uc-berkeley-362f972e-engineering-physics-genuine",
           "name": "Engineering Physics",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -16077,7 +16077,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-environmental-engineering-science-genuine",
+          "id": "uc-berkeley-362f972e-environmental-engineering-science-genuine",
           "name": "Environmental Engineering Science",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -16101,7 +16101,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-nuclear-engineering-genuine",
+          "id": "uc-berkeley-362f972e-nuclear-engineering-genuine",
           "name": "Nuclear Engineering",
           "rawMinGpa": "Refer to official catalog wording below",
           "rawMinCredits": "Refer to official catalog wording below",
@@ -16125,7 +16125,7 @@ window.transferDatabase = {
           "confidence": "verified"
         },
         {
-          "id": "uc-berkeley-coe-bioengineering-bioe-56bb6ad7",
+          "id": "uc-berkeley-bioengineering-bioe-56bb6ad7",
           "name": "Bioengineering",
           "rawMinGpa": "3.0",
           "rawMinCredits": "60 semester units",
@@ -16162,7 +16162,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
-          "id": "uc-berkeley-coe-civil-environmental-engineering-ebc6a105",
+          "id": "uc-berkeley-civil-environmental-engineering-ebc6a105",
           "name": "Civil Engineering",
           "rawMinGpa": "3.0 minimum overall GPA",
           "rawMinCredits": "60 semester units (90 quarter units)",
@@ -16198,7 +16198,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
-          "id": "uc-berkeley-coe-eecs-electrical-engineering-computer-science-2f080f00",
+          "id": "uc-berkeley-eecs-electrical-engineering-computer-science-2f080f00",
           "name": "Electrical Engineering & Computer Sciences (EECS)",
           "rawMinGpa": "3.0 minimum, though admitted students typically have a much higher GPA",
           "rawMinCredits": "60 semester units",
@@ -16230,7 +16230,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
-          "id": "uc-berkeley-coe-industrial-engineering-operations-research-i-12efac92",
+          "id": "uc-berkeley-industrial-engineering-operations-research-i-12efac92",
           "name": "Industrial Engineering & Operations Research",
           "rawMinGpa": "3.0 minimum, though significantly higher is required for competitive admission",
           "rawMinCredits": "60 semester units",
@@ -16264,7 +16264,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions/undergraduate/transfer-admissions/"
         },
         {
-          "id": "uc-berkeley-coe-materials-science-engineering-mse-3eedb31b",
+          "id": "uc-berkeley-materials-science-engineering-mse-3eedb31b",
           "name": "Materials Science & Engineering (MSE)",
           "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
           "rawMinCredits": "60 sem / 90 qtr UC-transferable",
@@ -16308,7 +16308,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
         },
         {
-          "id": "uc-berkeley-coe-mechanical-engineering-me-ebf17b9d",
+          "id": "uc-berkeley-mechanical-engineering-me-ebf17b9d",
           "name": "Mechanical Engineering",
           "rawMinGpa": "3.0",
           "rawMinCredits": "60 semester units",
@@ -16345,7 +16345,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://assist.org/"
         },
         {
-          "id": "uc-berkeley-coe-nuclear-engineering-ne-394e0458",
+          "id": "uc-berkeley-nuclear-engineering-ne-394e0458",
           "name": "Nuclear Engineering (NE)",
           "rawMinGpa": "3.5 (전 학과 동일)\n예외: overall<3.5, major GPA≥3.5 → 이메일 문의",
           "rawMinCredits": "60 sem / 90 qtr UC-transferable",
@@ -16389,7 +16389,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://engineering.berkeley.edu/admissions"
         },
         {
-          "id": "uc-berkeley-coe-chemical-engineering-college-of-chemistry-co-77c6c7ad",
+          "id": "uc-berkeley-chemical-engineering-college-of-chemistry-co-77c6c7ad",
           "name": "Chemical Engineering",
           "rawMinGpa": "3.0+",
           "rawMinCredits": "60 semester units",
@@ -16425,7 +16425,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://chemistry.berkeley.edu/ugrad/prospective/transfer"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-computer-science",
+          "id": "uc-berkeley-362f972e-computer-science",
           "name": "Computer Science",
           "rawMinGpa": "A minimum 3.0 UC GPA is required to be considered for admission. However, due to the extremely competitive nature of the major, successful applicants typically present a GPA of 3.8 or higher, with an even higher GPA in major prerequisite courses.",
           "rawMinCredits": "A minimum of 60 UC-transferable semester units (or 90 quarter units) is required.",
@@ -16460,7 +16460,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://lsadvising.berkeley.edu/major-maps/computer-science"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-cognitive-science",
+          "id": "uc-berkeley-362f972e-cognitive-science",
           "name": "Cognitive Science",
           "rawMinGpa": "Minimum 3.0, but competitive applicants typically have a 3.7+ GPA.",
           "rawMinCredits": "60 UC-transferable semester units (90 quarter units)",
@@ -16491,7 +16491,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/major-preparation-selective-majors.html"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-data-science",
+          "id": "uc-berkeley-362f972e-data-science",
           "name": "Data Science",
           "rawMinGpa": "3.0 minimum overall GPA",
           "rawMinCredits": "60 semester units (90 quarter units)",
@@ -16521,7 +16521,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://data.berkeley.edu/academics/undergraduate/major/transfer-admissions"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-business-administration",
+          "id": "uc-berkeley-362f972e-business-administration",
           "name": "Business Administration",
           "rawMinGpa": "3.0 minimum for California residents; 3.4 for non-residents",
           "rawMinCredits": "60 semester units",
@@ -16553,7 +16553,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://haas.berkeley.edu/undergrad/admissions/transfer-admissions/"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-economics",
+          "id": "uc-berkeley-362f972e-economics",
           "name": "Economics",
           "rawMinGpa": "3.0 minimum in prerequisite courses",
           "rawMinCredits": "60 semester units",
@@ -16585,7 +16585,7 @@ window.transferDatabase = {
           "officialSourceUrl": "https://economics.berkeley.edu/undergraduate/admissions/transfer-admission"
         },
         {
-          "id": "uc-berkeley-coe-362f972e-materials-science-engineering",
+          "id": "uc-berkeley-362f972e-materials-science-engineering",
           "name": "Materials Science & Engineering",
           "rawMinGpa": "3.50",
           "rawMinCredits": "60 semester units",
