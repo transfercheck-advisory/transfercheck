@@ -1478,7 +1478,8 @@ const state = {
   admissionTerm: "Fall",
   track: "stem",
   strategyTrack: "stem",
-  roadmapGenerated: false
+  roadmapGenerated: false,
+  extracurriculars: localStorage.getItem("transferCompassExtracurriculars") || ""
 };
 
 function saveAnalyzedSchoolsToLocalStorage() {
@@ -1498,9 +1499,11 @@ function saveProfileToLocalStorage() {
     roadmapTargetSlots: state.roadmapTargetSlots,
     admissionYear: state.admissionYear,
     admissionTerm: state.admissionTerm,
-    track: state.track
+    track: state.track,
+    extracurriculars: state.extracurriculars
   };
   localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profileData));
+  localStorage.setItem("transferCompassExtracurriculars", state.extracurriculars);
   saveProfileToSupabase();
 }
 
@@ -1559,6 +1562,9 @@ function loadProfileFromLocalStorage() {
     }
     if (Array.isArray(profile.roadmapTargetSlots)) {
       state.roadmapTargetSlots = normalizeSlots(profile.roadmapTargetSlots, 7);
+    }
+    if (profile.extracurriculars !== undefined) {
+      state.extracurriculars = profile.extracurriculars;
     }
   } catch (e) {
     console.error("Failed to load profile from localStorage:", e);
@@ -2830,11 +2836,16 @@ function programsForSchoolName(schoolName) {
   const normalized = normalizeText(schoolName);
   if (!normalized) return [];
   
-  // 1. Check if the school already has programs in database
+  // 1. Check if the school already has programs in database (using flexible matching)
   const matchedPrograms = allPrograms().filter((program) => {
-    const sName = program?.school?.name;
-    const sShortName = program?.school?.shortName;
-    return (sName && normalizeText(sName) === normalized) || (sShortName && normalizeText(sShortName) === normalized);
+    const sName = normalizeText(program?.school?.name);
+    const sShortName = normalizeText(program?.school?.shortName);
+    const sId = normalizeText(program?.school?.id);
+    
+    // Exact match or partial match (one contains another)
+    return (sName && (sName === normalized || sName.includes(normalized) || normalized.includes(sName))) ||
+           (sShortName && (sShortName === normalized || sShortName.includes(normalized) || normalized.includes(sShortName))) ||
+           (sId && sId.replace(/-/g, "").includes(normalized.replace(/[^a-z0-9]/g, "")));
   });
   
   if (matchedPrograms.length > 0) {
@@ -3841,6 +3852,68 @@ function renderEligibilityResults() {
           </div>
         ` : "";
 
+        const ecAnalysis = state.ecAnalysisResult;
+        let ecAnalysisHtml = "";
+        
+        if (ecAnalysis && state.extracurriculars && state.extracurriculars.trim().length >= 15) {
+          const relevanceColor = ecAnalysis.majorRelevance === "High" ? "#10b981" : (ecAnalysis.majorRelevance === "Medium" ? "#fbbf24" : "#f43f5e");
+          const relevanceText = isKo 
+            ? (ecAnalysis.majorRelevance === "High" ? "높음 (High)" : (ecAnalysis.majorRelevance === "Medium" ? "보통 (Medium)" : "낮음 (Low)"))
+            : ecAnalysis.majorRelevance;
+
+          const scorePercent = Math.round((ecAnalysis.score / 30) * 100);
+          
+          ecAnalysisHtml = `
+            <div class="ec-analysis-block" style="margin: 14px 0; background: rgba(99, 102, 241, 0.03); border: 1px solid var(--line); padding: 14px; border-radius: 8px; font-size: 12.5px; line-height: 1.55;">
+              <strong style="color: var(--accent); display: flex; align-items: center; gap: 6px; margin-bottom: 10px; font-size: 13.5px; font-weight: 800;">
+                🔮 ${isKo ? "AI 비교과 스펙 및 전공 연계 진단 리포트" : "AI Extracurricular Spec Analysis"}
+              </strong>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;">
+                <div style="background: var(--surface); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line);">
+                  <div style="color: var(--muted); font-size: 11px; margin-bottom: 2px;">${isKo ? "비교과 활동 등급" : "Activity Tier"}</div>
+                  <span class="rms-badge" style="background: rgba(99, 102, 241, 0.1); color: var(--accent); font-weight: 700; font-size: 11.5px; padding: 2px 6px; border-radius: 4px; display: inline-block;">
+                    ${escapeHtml(ecAnalysis.tier || "Tier 3: School/Local")}
+                  </span>
+                </div>
+                <div style="background: var(--surface); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line);">
+                  <div style="color: var(--muted); font-size: 11px; margin-bottom: 2px;">${isKo ? "희망 전공 연계성" : "Major Relevance"}</div>
+                  <span class="rms-badge" style="background: ${relevanceColor}22; color: ${relevanceColor}; font-weight: 700; font-size: 11.5px; padding: 2px 6px; border-radius: 4px; display: inline-block;">
+                    ● ${escapeHtml(relevanceText)}
+                  </span>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; font-weight: 700;">
+                  <span>${isKo ? "비교과 스펙 강도 점수" : "EC Spec Score"}</span>
+                  <span style="color: var(--accent);">${ecAnalysis.score} / 30점 (${scorePercent}%)</span>
+                </div>
+                <div style="width: 100%; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
+                  <div style="width: ${scorePercent}%; height: 100%; background: linear-gradient(90deg, #818cf8, #6366f1); border-radius: 3px;"></div>
+                </div>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.01); border-top: 1px dashed var(--line); padding-top: 10px; font-weight: 500; color: var(--ink);">
+                <strong>💡 ${isKo ? "AI 멘토 분석" : "AI Mentor Feedback"}:</strong> ${escapeHtml(ecAnalysis.analysis)}
+              </div>
+            </div>
+          `;
+        } else if (state.extracurriculars && state.extracurriculars.trim().length > 0) {
+          ecAnalysisHtml = `
+            <div style="margin: 14px 0; background: rgba(244, 63, 94, 0.03); border: 1px dashed rgba(244, 63, 94, 0.3); padding: 12px; border-radius: 8px; font-size: 12px; color: #e11d48; line-height: 1.5; font-weight: 500;">
+              ℹ️ ${isKo ? "비교과 활동 설명이 너무 짧습니다. (최소 15자 이상 입력해 주세요)." : "Extracurricular description is too short (min 15 characters)."}
+            </div>
+          `;
+        } else {
+          ecAnalysisHtml = `
+            <div style="margin: 14px 0; background: rgba(0,0,0,0.02); border: 1px dashed var(--line); padding: 12px; border-radius: 8px; font-size: 12px; color: var(--muted); line-height: 1.5; font-weight: 500;">
+              💡 ${isKo 
+                ? "프로필 탭에서 <strong>비교과 활동(인턴십, 연구, 수상 경력 등)을 상세히 입력</strong>하시면, 이 영역에서 해당 전공과의 AI 연계 적합성 및 멘토링 피드백을 실시간으로 보여드립니다." 
+                : "Enter your extracurricular details in the profile tab to see real-time AI relevance diagnostics and mentoring here."}
+            </div>
+          `;
+        }
+
         const prereqGapWarningHtml = (rms.missingCount > 0) ? `
           <div class="prereq-gap-warning" style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 8px; padding: 12px; margin: 12px 0; color: #f43f5e; font-size: 12.5px; line-height: 1.5;">
             <div style="font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
@@ -3894,6 +3967,7 @@ function renderEligibilityResults() {
               }
               ${prereqGapWarningHtml}
               ${holisticStrategyHtml}
+              ${ecAnalysisHtml}
               <div class="check-list">
                 ${primaryChecks
                   .map(
@@ -3989,11 +4063,60 @@ function renderEligibilityResults() {
       .join("") || `<div class="panel"><strong>${t("no_targets_selected")}</strong></div>`;
 }
 
+async function analyzeExtracurriculars(force = false) {
+  if (!state.extracurriculars || state.extracurriculars.trim().length < 15) {
+    state.ecAnalysisResult = null;
+    localStorage.removeItem("transferCompassEcAnalysisResult");
+    return;
+  }
+
+  const cached = localStorage.getItem("transferCompassEcAnalysisResult");
+  if (!force && cached) {
+    try {
+      const parsed = JSON.parse(cached);
+      if (parsed.ecText === state.extracurriculars && parsed.track === state.track) {
+        state.ecAnalysisResult = parsed.result;
+        return;
+      }
+    } catch (e) {
+      // Ignore cache error
+    }
+  }
+
+  try {
+    const reqHeaders = { "Content-Type": "application/json" };
+    if (typeof supabaseUserSession !== 'undefined' && supabaseUserSession && supabaseUserSession.access_token) {
+      reqHeaders["Authorization"] = `Bearer ${supabaseUserSession.access_token}`;
+    }
+
+    const response = await fetch("/api/ec/analyze", {
+      method: "POST",
+      headers: reqHeaders,
+      body: JSON.stringify({
+        ecText: state.extracurriculars,
+        majorArea: state.track || "stem"
+      })
+    });
+    const data = await response.json();
+    if (data.success && data.analysis) {
+      state.ecAnalysisResult = data.analysis;
+      localStorage.setItem("transferCompassEcAnalysisResult", JSON.stringify({
+        ecText: state.extracurriculars,
+        track: state.track || "stem",
+        result: data.analysis
+      }));
+    }
+  } catch (e) {
+    console.error("Failed to analyze EC:", e);
+  }
+}
+
 async function handleAnalyzeCoverage() {
   const container = qs("#eligibilityResults");
   if (!container) return;
 
   const isKo = (state.language || "ko") === "ko";
+  await analyzeExtracurriculars();
   const slots = state.targetSlots.filter(s => s.school && s.major);
   if (slots.length === 0) {
     renderEligibilityResults();
@@ -5853,6 +5976,10 @@ function bindEvents() {
     saveProfileToLocalStorage();
     renderEligibilityResults();
   });
+  qs("#profileEcInput")?.addEventListener("input", (event) => {
+    state.extracurriculars = event.target.value;
+    saveProfileToLocalStorage();
+  });
 
   qs("#checkEligibilityBtn")?.addEventListener("click", async () => {
     await handleAnalyzeCoverage();
@@ -6123,6 +6250,7 @@ async function saveProfileToSupabase() {
         admissionYear: state.admissionYear,
         admissionTerm: state.admissionTerm,
         track: state.track,
+        extracurriculars: state.extracurriculars,
         activeEssaySlots: getActiveEssaySlots()
       },
       updated_at: new Date().toISOString()
@@ -6157,6 +6285,9 @@ async function loadProfileFromSupabase() {
       state.track = history.track;
       state.strategyTrack = history.track;
     }
+    if (history.extracurriculars !== undefined) {
+      state.extracurriculars = history.extracurriculars;
+    }
     if (Array.isArray(history.completedCourses)) {
       state.completedCourses = new Set(history.completedCourses);
     }
@@ -6166,6 +6297,9 @@ async function loadProfileFromSupabase() {
     if (Array.isArray(roadmap.target_slots)) {
       state.targetSlots = normalizeSlots(roadmap.target_slots, 10);
     }
+    
+    const profileEcInput = qs("#profileEcInput");
+    if (profileEcInput) profileEcInput.value = state.extracurriculars || "";
     
     saveProfileToLocalStorage();
   } catch (e) {
@@ -8151,6 +8285,9 @@ async function init() {
   if (englishTypeInput) englishTypeInput.value = state.englishType;
   const englishScoreInput = qs("#englishScoreInput");
   if (englishScoreInput) englishScoreInput.value = state.englishScore;
+
+  const profileEcInput = qs("#profileEcInput");
+  if (profileEcInput) profileEcInput.value = state.extracurriculars || "";
 
   const admissionYearInput = qs("#admissionYear");
   if (admissionYearInput) admissionYearInput.value = state.admissionYear;
