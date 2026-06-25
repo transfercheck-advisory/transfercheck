@@ -1485,6 +1485,8 @@ const state = {
   track: "stem",
   strategyTrack: "stem",
   roadmapGenerated: false,
+  ecAnalysisPending: false,
+  ecAnalysisError: false,
   extracurriculars: localStorage.getItem("transferCompassExtracurriculars") || ""
 };
 
@@ -2652,6 +2654,11 @@ function getProgramAdmissionsStats(program) {
   return stats;
 }
 
+function isGpaEstimated(program, stats) {
+  if (!program) return true;
+  return program.confidence === "needs_source_check" || !program.confidence;
+}
+
 function getReachMatchSafety(program, userGpa, evaluation) {
   const minGpa = program.minGpa !== null ? program.minGpa : 3.0;
   const stats = getProgramAdmissionsStats(program);
@@ -2707,7 +2714,7 @@ function getReachMatchSafety(program, userGpa, evaluation) {
   
   if (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]) {
     const matchingCase = window.AdmissionsCasesDatabase.profiles[lang].find(c => 
-      c.schoolId === admissionsSchoolId && 
+      c && c.schoolId === admissionsSchoolId && c.major &&
       (normalizedMajor.includes(c.major.toLowerCase().split("(")[0].trim()) || c.major.toLowerCase().includes(normalizedMajor))
     );
     
@@ -3428,10 +3435,21 @@ function bindAutocompleteEvents(container, type) {
               resultsFunc();
             }
           } else {
-            input.value = "";
-            if (slots[idx] && slots[idx].school !== "") {
-              slots[idx].school = "";
+            if (slots[idx] && slots[idx].school !== val) {
+              slots[idx].school = val;
               slots[idx].major = "";
+              
+              const exists = database.schools.some(s => s.name.toLowerCase() === val.toLowerCase());
+              if (!exists) {
+                const cleanName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                database.schools.push({
+                  id: cleanName,
+                  name: val,
+                  shortName: val,
+                  majors: []
+                });
+              }
+              
               syncFunc();
               renderFunc();
               resultsFunc();
@@ -3459,9 +3477,27 @@ function bindAutocompleteEvents(container, type) {
               resultsFunc();
             }
           } else {
-            input.value = "";
-            if (slots[idx] && slots[idx].major !== "") {
-              slots[idx].major = "";
+            if (slots[idx] && slots[idx].major !== val) {
+              slots[idx].major = val;
+              
+              if (selectedSchool) {
+                const schoolObj = database.schools.find(s => s.name.toLowerCase() === selectedSchool.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === selectedSchool.toLowerCase()));
+                if (schoolObj) {
+                  const exists = schoolObj.majors.some(m => m.name.toLowerCase() === val.toLowerCase());
+                  if (!exists) {
+                    const cleanSchoolName = schoolObj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                    const cleanMajorName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                    const tempMajorId = `${cleanSchoolName}-${cleanMajorName}-${Math.random().toString(36).substring(2, 8)}`;
+                    schoolObj.majors.push({
+                      id: tempMajorId,
+                      name: val,
+                      confidence: "needs_source_check"
+                    });
+                    updateSortedPrograms();
+                  }
+                }
+              }
+              
               syncFunc();
               renderFunc();
               resultsFunc();
@@ -4076,7 +4112,24 @@ function renderEligibilityResults() {
         const ecAnalysis = state.ecAnalysisResult;
         let ecAnalysisHtml = "";
         
-        if (ecAnalysis && state.extracurriculars && state.extracurriculars.trim().length >= 15) {
+        if (state.ecAnalysisPending) {
+          ecAnalysisHtml = `
+            <div class="ec-analysis-block-placeholder" style="margin: 14px 0; background: rgba(99, 102, 241, 0.03); border: 1px dashed var(--accent); padding: 14px; border-radius: 8px; font-size: 12.5px; line-height: 1.55; text-align: center;">
+              <div class="spinner" style="margin: 0 auto 10px; width: 25px; height: 25px; border: 3px solid rgba(99, 102, 241, 0.1); border-top: 3px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+              <span style="color: var(--accent); font-weight: 700;">
+                🔮 ${isKo ? "AI 비교과 활동 분석 중..." : "Analyzing Extracurriculars..."}
+              </span>
+            </div>
+          `;
+        } else if (state.ecAnalysisError) {
+          ecAnalysisHtml = `
+            <div class="ec-analysis-block" style="margin: 14px 0; background: rgba(244, 63, 94, 0.03); border: 1px dashed rgba(244, 63, 94, 0.3); padding: 14px; border-radius: 8px; font-size: 12.5px; color: #e11d48; line-height: 1.55; text-align: center; font-weight: 700;">
+              ⚠️ ${isKo 
+                ? "AI 비교과 분석 실패: 로그인이 필요하거나 서버 통신 오류가 발생했습니다.<br/><small style='font-weight:500;color:var(--muted);'>비회원 또는 세션이 만료된 경우 분석을 이용할 수 없습니다.</small>" 
+                : "AI EC Analysis failed: Login required or server communication error.<br/><small style='font-weight:500;color:var(--muted);'>Analysis is unavailable for guests or expired sessions.</small>"}
+            </div>
+          `;
+        } else if (ecAnalysis && state.extracurriculars && state.extracurriculars.trim().length >= 15) {
           const relevanceColor = ecAnalysis.majorRelevance === "High" ? "#10b981" : (ecAnalysis.majorRelevance === "Medium" ? "#fbbf24" : "#f43f5e");
           const relevanceText = isKo 
             ? (ecAnalysis.majorRelevance === "High" ? "높음 (High)" : (ecAnalysis.majorRelevance === "Medium" ? "보통 (Medium)" : "낮음 (Low)"))
@@ -4368,6 +4421,10 @@ async function analyzeExtracurriculars(force = false) {
     }
   }
 
+  state.ecAnalysisPending = true;
+  state.ecAnalysisError = false;
+  renderEligibilityResults();
+
   try {
     const reqHeaders = { "Content-Type": "application/json" };
     if (typeof supabaseUserSession !== 'undefined' && supabaseUserSession && supabaseUserSession.access_token) {
@@ -4382,17 +4439,33 @@ async function analyzeExtracurriculars(force = false) {
         majorArea: state.track || "stem"
       })
     });
+    
+    if (!response.ok) {
+      state.ecAnalysisError = true;
+      state.ecAnalysisResult = null;
+      return;
+    }
+    
     const data = await response.json();
     if (data.success && data.analysis) {
       state.ecAnalysisResult = data.analysis;
+      state.ecAnalysisError = false;
       localStorage.setItem("transferCompassEcAnalysisResult", JSON.stringify({
         ecText: state.extracurriculars,
         track: state.track || "stem",
         result: data.analysis
       }));
+    } else {
+      state.ecAnalysisError = true;
+      state.ecAnalysisResult = null;
     }
   } catch (e) {
     console.error("Failed to analyze EC:", e);
+    state.ecAnalysisError = true;
+    state.ecAnalysisResult = null;
+  } finally {
+    state.ecAnalysisPending = false;
+    renderEligibilityResults();
   }
 }
 
@@ -4401,7 +4474,7 @@ async function handleAnalyzeCoverage() {
   if (!container) return;
 
   const isKo = (state.language || "ko") === "ko";
-  await analyzeExtracurriculars();
+  analyzeExtracurriculars();
   const slots = state.targetSlots.filter(s => s.school && s.major);
   if (slots.length === 0) {
     renderEligibilityResults();
@@ -5316,7 +5389,7 @@ async function renderRequirementDetail(programId) {
   if (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]) {
     if (admissionsSchoolId) {
       targetCases = window.AdmissionsCasesDatabase.profiles[lang].filter(
-        c => c.schoolId === admissionsSchoolId
+        c => c && c.schoolId === admissionsSchoolId
       );
     }
   }
@@ -5825,13 +5898,19 @@ function getStudentTrack(selectedPrograms) {
 function getAdvisoryMilestones(termStr, track, isInternational) {
   const parts = termStr.split(" ");
   if (parts.length < 2) return [];
-  const currentYear = parseInt(parts[0], 10);
+  let currentYear = parseInt(parts[0], 10);
+  if (isNaN(currentYear)) {
+    currentYear = new Date().getFullYear();
+  }
   const currentSeason = parts[1];
 
   const admissionYearInput = document.querySelector("#admissionYear");
   const admissionTermInput = document.querySelector("#admissionTerm");
-  const targetYear = admissionYearInput ? parseInt(admissionYearInput.value, 10) : 2027;
-  const targetSeason = admissionTermInput ? admissionTermInput.value : "Fall";
+  let targetYear = admissionYearInput && admissionYearInput.value ? parseInt(admissionYearInput.value, 10) : (new Date().getFullYear() + 1);
+  if (isNaN(targetYear) || targetYear <= 0) {
+    targetYear = new Date().getFullYear() + 1;
+  }
+  const targetSeason = admissionTermInput && admissionTermInput.value ? admissionTermInput.value : "Fall";
 
   const seasonMap = { "Spring": 0, "Summer": 1, "Fall": 2 };
   const currentSeasonVal = seasonMap[currentSeason] !== undefined ? seasonMap[currentSeason] : 0;
@@ -6167,17 +6246,26 @@ function buildRoadmap(explicit = false) {
   // 2. Topological sort with required priority
   const queue = topologicalSort(uniqueQueue);
 
-  const admissionYear = Number(qs("#admissionYear").value);
+  const admissionYearVal = qs("#admissionYear")?.value;
+  let admissionYear = Number(admissionYearVal);
+  if (!admissionYearVal || isNaN(admissionYear) || admissionYear <= 0) {
+    admissionYear = new Date().getFullYear() + 1;
+  }
+  const admissionTermEl = qs("#admissionTerm");
+  const admissionTermVal = admissionTermEl ? admissionTermEl.value : "Fall";
   const terms =
-    qs("#admissionTerm").value === "Fall"
+    admissionTermVal === "Fall"
       ? [`${admissionYear - 1} Fall`, `${admissionYear} Spring`, `${admissionYear} Summer`]
       : [`${admissionYear - 1} Spring`, `${admissionYear - 1} Summer`, `${admissionYear - 1} Fall`];
   const buckets = terms.map((term) => ({ term, courses: [] }));
 
   function getNextTerm(term) {
     const parts = term.split(" ");
-    const year = parseInt(parts[0], 10);
-    const season = parts[1];
+    let year = parseInt(parts[0], 10);
+    if (isNaN(year)) {
+      year = new Date().getFullYear();
+    }
+    const season = parts[1] || "Fall";
     if (season === "Fall") {
       return `${year + 1} Spring`;
     } else if (season === "Spring") {
