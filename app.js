@@ -4235,6 +4235,7 @@ function renderEligibilityResults() {
     selectedPrograms
       .map((program, idx) => {
         const evaluation = evaluateProgram(program);
+        const hasEcs = state.extracurriculars && state.extracurriculars.trim().length >= 15;
         const verificationNotice = verificationNoticeForProgram(program);
         const statusText = evaluation.pass ? (evaluation.needsReview ? t("status_pass_review") : t("status_pass")) : t("status_fail");
         const visibleChecks = evaluation.checks.filter((check) => check.status !== "review");
@@ -5667,9 +5668,47 @@ async function renderRequirementDetail(programId) {
   }
 
   let finalGpaRange = compProfile.gpaRange;
-  let finalAdmissionRate = compProfile.admissionRate;
   let finalEnglish = compProfile.competitiveEnglish;
   let finalElectives = compProfile.electives;
+
+  let rateLabel = isKo ? "전체 평균" : "Overall";
+  let rateValStr = "";
+
+  if (state.international && stats.rateInternational) {
+    rateValStr = stats.rateInternational;
+    rateLabel = isKo ? "국제학생" : "International";
+  } else if (state.international && stats.rateOutOfState) {
+    rateValStr = stats.rateOutOfState;
+    rateLabel = isKo ? "타 주 거주자(유학생)" : "Out-of-State (Int'l)";
+  } else if (stats.rateOverall) {
+    rateValStr = stats.rateOverall;
+    rateLabel = isKo ? "전체 평균" : "Overall";
+  } else if (stats.rateOutOfState) {
+    rateValStr = stats.rateOutOfState;
+    rateLabel = isKo ? "타 주 거주자" : "Out-of-State";
+  } else if (stats.rateInState) {
+    rateValStr = stats.rateInState;
+    rateLabel = isKo ? "주 내 거주자" : "In-State";
+  } else {
+    rateValStr = compProfile.admissionRate;
+    rateLabel = isKo ? "예상 합격률" : "Estimated Rate";
+  }
+
+  let finalAdmissionRate = "";
+  if (rateValStr.includes("%")) {
+    const val = parseFloat(rateValStr);
+    if (!isNaN(val)) {
+      if (val < 2.0) {
+        finalAdmissionRate = `${(val * 0.8).toFixed(2)}% - ${(val * 1.2).toFixed(2)}% (${rateLabel})`;
+      } else {
+        finalAdmissionRate = `${Math.round(val * 0.8)}% - ${Math.round(val * 1.2)}% (${rateLabel})`;
+      }
+    } else {
+      finalAdmissionRate = `${rateValStr} (${rateLabel})`;
+    }
+  } else {
+    finalAdmissionRate = `${rateValStr} (${rateLabel})`;
+  }
 
   if (targetCases.length > 0) {
     const firstCase = targetCases[0];
@@ -5803,7 +5842,36 @@ async function renderRequirementDetail(programId) {
   const gpaLabel = isEstimated 
     ? (isKo ? "예상 합격 평균 GPA" : "Est. Admitted GPA")
     : (isKo ? "합격 평균 GPA" : "Admitted GPA");
-  const overallRate = stats.rateOverall || stats.rateOutOfState || stats.rateInState || "N/A";
+
+  let selectedRateVal = "N/A";
+  let selectedRateLabel = isKo ? "전체 평균" : "Overall";
+
+  if (state.international && stats.rateInternational) {
+    selectedRateVal = stats.rateInternational;
+    selectedRateLabel = isKo ? "국제학생" : "International";
+  } else if (state.international && stats.rateOutOfState) {
+    selectedRateVal = stats.rateOutOfState;
+    selectedRateLabel = isKo ? "타 주 거주자" : "Out-of-State";
+  } else if (stats.rateOverall) {
+    selectedRateVal = stats.rateOverall;
+    selectedRateLabel = isKo ? "전체 평균" : "Overall";
+  } else if (stats.rateOutOfState) {
+    selectedRateVal = stats.rateOutOfState;
+    selectedRateLabel = isKo ? "타 주 거주자" : "Out-of-State";
+  } else if (stats.rateInState) {
+    selectedRateVal = stats.rateInState;
+    selectedRateLabel = isKo ? "주 내 거주자" : "In-State";
+  }
+
+  const residencyRates = [];
+  if (stats.rateOverall) residencyRates.push(`${isKo ? "전체" : "Overall"}: ${stats.rateOverall}`);
+  if (stats.rateInState) residencyRates.push(`${isKo ? "주내" : "In-State"}: ${stats.rateInState}`);
+  if (stats.rateOutOfState) residencyRates.push(`${isKo ? "타주" : "Out-of-State"}: ${stats.rateOutOfState}`);
+  if (stats.rateInternational) residencyRates.push(`${isKo ? "국제" : "Int'l"}: ${stats.rateInternational}`);
+
+  const residencyBreakdownHtml = residencyRates.length > 0
+    ? `<div style="font-size: 7.5px; color: rgba(244, 63, 94, 0.7); margin-top: 3px; line-height: 1.15; font-weight: 500; word-break: keep-all;">${residencyRates.join(" | ")}</div>`
+    : "";
   
   const schoolNameLower = (program.school.name || "").toLowerCase();
   const isUcSchool = schoolNameLower.includes("university of california") || schoolNameLower.startsWith("uc ") || schoolNameLower.includes(" ucla") || schoolNameLower.includes(" ucb");
@@ -5874,9 +5942,12 @@ async function renderRequirementDetail(programId) {
         </p>
         
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;">
-          <div style="background: rgba(244, 63, 94, 0.04); border: 1px solid rgba(244, 63, 94, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
-            <span style="font-size: 10px; color: #be123c; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "전체 편입 합격률" : "Overall Rate"}</span>
-            <strong style="color: #f43f5e; font-size: 14px; font-weight: 800;">${overallRate}</strong>
+          <div style="background: rgba(244, 63, 94, 0.04); border: 1px solid rgba(244, 63, 94, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <span style="font-size: 9.5px; color: #be123c; font-weight: 700; display: block; margin-bottom: 2px;">
+              ${isKo ? "합격률" : "Admissions Rate"} (${selectedRateLabel})
+            </span>
+            <strong style="color: #f43f5e; font-size: 14px; font-weight: 800; display: block;">${selectedRateVal}</strong>
+            ${residencyBreakdownHtml}
           </div>
           <div style="background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 8px; padding: 10px 8px; text-align: center;">
             <span style="font-size: 10px; color: #047857; font-weight: 700; display: block; margin-bottom: 2px;">${isKo ? "연간 지원자 수" : "Applicants"}</span>
