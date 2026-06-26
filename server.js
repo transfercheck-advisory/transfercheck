@@ -1894,6 +1894,29 @@ ${message}
     });
     return;
   }
+  // API Route: Get College Scorecard data dynamically
+  if (req.method === 'GET' && safeUrl.startsWith('/api/scorecard/')) {
+    const schoolName = decodeURIComponent(safeUrl.substring('/api/scorecard/'.length));
+    if (!schoolName) {
+      res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ success: false, message: 'School name is required' }));
+      return;
+    }
+    (async () => {
+      try {
+        const { fetchSchoolData } = require('./collegeScorecard');
+        const data = await fetchSchoolData(schoolName);
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true, data }));
+      } catch (err) {
+        console.error('Scorecard API fetch failed:', err);
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, message: err.message }));
+      }
+    })();
+    return;
+  }
+
   // API Route: Get specific Major Requirements dynamically from Supabase
   if (req.method === 'GET' && safeUrl.startsWith('/api/majors/')) {
     const majorId = decodeURIComponent(safeUrl.substring('/api/majors/'.length));

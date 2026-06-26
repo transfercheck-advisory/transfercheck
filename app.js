@@ -2468,26 +2468,29 @@ function summarizeProgramCourses(program) {
   if (hasNoOfficialPrereqs) {
     // Keep required empty to show "No official prerequisites (Holistic)", but move to recommended courses
     required = [];
-    if (["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => programName.includes(kw))) {
+    const track = getMajorTrack(programName);
+    if (track === "CS") {
       recommended = ["Calculus 1", "Calculus 2", "Introduction to Computer Science", "Data Structures", "Calculus 3 / Multivariable Calculus", "Linear Algebra", "Discrete Mathematics / Structures", "General Physics 1 (with Lab)"];
-    } else if (["mathematics", "applied math", "statistics", "math"].some(kw => programName.includes(kw))) {
+    } else if (track === "Math") {
       recommended = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "Linear Algebra", "Differential Equations", "Introduction to Computer Science"];
-    } else if (["mechanical", "civil", "aerospace", "engineering", "engr"].some(kw => programName.includes(kw))) {
-      if (["chemical", "materials", "bio", "biomedical"].some(kw => programName.includes(kw))) {
-        recommended = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Chemistry 1 (with Lab)", "General Chemistry 2 (with Lab)", "Organic Chemistry 1 (with Lab)", "General Physics 1 (with Lab)", "Differential Equations"];
-      } else {
-        recommended = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Physics 1 (with Lab)", "General Physics 2 (with Lab)", "Linear Algebra", "Differential Equations", "General Chemistry 1 (with Lab)"];
-      }
-    } else if (["chemical", "materials", "bio", "biomedical", "chemistry", "biology"].some(kw => programName.includes(kw))) {
+    } else if (track === "Physics") {
+      recommended = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Physics 1 (with Lab)", "General Physics 2 (with Lab)", "Linear Algebra", "Differential Equations"];
+    } else if (track === "Engineering") {
+      recommended = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Physics 1 (with Lab)", "General Physics 2 (with Lab)", "Linear Algebra", "Differential Equations", "General Chemistry 1 (with Lab)"];
+    } else if (track === "BioChem") {
       recommended = ["Calculus 1", "Calculus 2", "Calculus 3 / Multivariable Calculus", "General Chemistry 1 (with Lab)", "General Chemistry 2 (with Lab)", "Organic Chemistry 1 (with Lab)", "General Physics 1 (with Lab)", "Differential Equations"];
-    } else if (["economics", "finance", "business", "management", "accounting", "commerce"].some(kw => programName.includes(kw))) {
+    } else if (track === "Economics") {
+      recommended = ["Calculus 1", "Introduction to Microeconomics", "Introduction to Macroeconomics", "Calculus 2", "Introductory Statistics"];
+    } else if (track === "Business") {
       recommended = ["Calculus 1", "Introduction to Microeconomics", "Introduction to Macroeconomics", "Calculus 2", "Introductory Statistics", "Financial Accounting"];
-    } else if (["psychology", "cognitive", "sociology", "social"].some(kw => programName.includes(kw))) {
+    } else if (track === "Psychology") {
       recommended = ["Introduction to Psychology", "Introductory Statistics", "Research Methods in Psychology", "Introduction to Sociology"];
-    } else if (["english", "history", "philosophy", "humanities", "arts", "language"].some(kw => programName.includes(kw))) {
-      recommended = ["English Composition 1", "English Composition 2", "Introduction to Philosophy", "World History"];
     } else {
-      recommended = ["English Composition 1", "English Composition 2", "Precalculus"];
+      if (["english", "history", "philosophy", "humanities", "arts", "language", "sociology", "social"].some(kw => programName.includes(kw))) {
+        recommended = ["English Composition 1", "English Composition 2", "Introduction to Philosophy", "World History"];
+      } else {
+        recommended = ["English Composition 1", "English Composition 2", "Precalculus"];
+      }
     }
   }
 
@@ -2532,6 +2535,40 @@ function summarizeProgramCourses(program) {
 
 function isCourseSatisfied(courseId) {
   return state.completedCourses.has(courseId);
+}
+
+function getMajorTrack(majorName) {
+  const norm = (majorName || "").toLowerCase();
+  if (["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => norm.includes(kw))) return "CS";
+  if (["mathematics", "applied math", "statistics", "math"].some(kw => norm.includes(kw))) return "Math";
+  if (["physics", "astronomy", "astrophysics"].some(kw => norm.includes(kw))) return "Physics";
+  if (["mechanical", "civil", "aerospace", "engineering", "engr"].some(kw => norm.includes(kw))) {
+    if (["chemical", "materials", "bio", "biomedical"].some(kw => norm.includes(kw))) return "BioChem";
+    return "Engineering";
+  }
+  if (["chemical", "materials", "bio", "biomedical", "chemistry", "biology"].some(kw => norm.includes(kw))) return "BioChem";
+  if (["economics", "econ"].some(kw => norm.includes(kw))) return "Economics";
+  if (["business", "finance", "accounting", "management", "commerce"].some(kw => norm.includes(kw))) return "Business";
+  if (["psychology", "cognitive"].some(kw => norm.includes(kw))) return "Psychology";
+  return "Humanities";
+}
+
+function isMajorMatching(progMajorName, caseMajorName) {
+  if (!progMajorName || !caseMajorName) return false;
+  const p = progMajorName.toLowerCase().replace(/\([^)]+\)/g, "").trim();
+  const c = caseMajorName.toLowerCase().replace(/\([^)]+\)/g, "").trim();
+  if (p === c) return true;
+  if (p.includes(c) || c.includes(p)) return true;
+  
+  // Split words and check if there's significant overlap
+  const getTokens = (s) => s.split(/[\s,/-]+/).filter(w => w.length > 2);
+  const pTokens = getTokens(p);
+  const cTokens = getTokens(c);
+  if (pTokens.length > 0 && cTokens.length > 0) {
+    const common = pTokens.filter(t => cTokens.includes(t));
+    if (common.length > 0) return true;
+  }
+  return false;
 }
 
 function getProgramAdmissionsStats(program) {
@@ -2617,7 +2654,11 @@ function getProgramAdmissionsStats(program) {
     }
   }
 
-  // 2. Perform major-specific overrides / adjustments for CS/Business at selective universities
+  // Ensure default ranks are defined
+  if (!stats.usNewsRank) stats.usNewsRank = 999;
+  if (!stats.majorRank) stats.majorRank = 999;
+
+  // Mark if competitive major (CS/Business) at selective university
   const rank = stats.usNewsRank || 999;
   const isSelective = rank <= 50 || [
     "harvard", "yale", "princeton", "mit", "caltech", "chicago", "johns hopkins", "northwestern", 
@@ -2626,42 +2667,16 @@ function getProgramAdmissionsStats(program) {
   ].some(kw => schoolName.includes(kw));
 
   const isCS = ["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => majorName.includes(kw));
-  const isBusiness = ["business", "finance", "accounting", "economics", "management"].some(kw => majorName.includes(kw));
+  const isBusiness = ["business", "finance", "accounting", "economics", "management", "commerce"].some(kw => majorName.includes(kw));
 
-  if (isSelective && (isCS || isBusiness)) {
-    // Parse rates to numbers, scale them down, and re-format
-    const scaleRate = (rateStr) => {
-      if (!rateStr) return "3.0%";
-      const val = parseFloat(rateStr);
-      if (isNaN(val)) return rateStr;
-      // Scale down by 4.5x for CS, 2.5x for Business
-      const factor = isCS ? 4.5 : 2.5;
-      const newVal = Math.max(0.8, (val / factor)).toFixed(1);
-      return `${newVal}%`;
-    };
+  stats.isMajorCompetitive = isSelective && (isCS || isBusiness);
+  stats.hasActualMajorStats = false; // We strictly use CDS overall stats, so major-specific stats are false for UI display.
 
-    stats.rateInState = scaleRate(stats.rateInState);
-    stats.rateOutOfState = scaleRate(stats.rateOutOfState || stats.rateOverall);
-    stats.rateInternational = scaleRate(stats.rateInternational);
-    
-    // Scale accepted number
-    if (stats.accepted && stats.applicants) {
-      const rateNum = parseFloat(stats.rateOutOfState) / 100;
-      stats.accepted = Math.max(5, Math.round(stats.applicants * rateNum));
-    }
-
-    // Set higher average GPA
-    stats.avgGpa = isCS ? "3.92 - 4.00" : "3.85 - 3.98";
-    
-    // Update advising note
+  if (stats.isMajorCompetitive) {
     stats.advisingNote = isCS 
-      ? `[Major Alert: Highly Competitive] Transfer admission for Computer Science/STEM at this institution is extremely selective. The acceptance rate is significantly lower than the university average. A near-perfect GPA (${stats.avgGpa}) and completion of all core math and programming sequences are required.`
+      ? `[Major Alert: Highly Competitive] Transfer admission for Computer Science/STEM at this institution is extremely selective. The acceptance rate is significantly lower than the university average. A near-perfect GPA and completion of all core math and programming sequences are required.`
       : `[Major Alert: Competitive] Transfer admission for Business/Economics at this institution is highly competitive. Applicants are expected to have a strong pre-requisite record in micro/macroeconomics and calculus, with a highly competitive GPA.`;
   }
-
-  // Ensure default ranks are defined
-  if (!stats.usNewsRank) stats.usNewsRank = 999;
-  if (!stats.majorRank) stats.majorRank = 999;
 
   return stats;
 }
@@ -2669,6 +2684,115 @@ function getProgramAdmissionsStats(program) {
 function isGpaEstimated(program, stats) {
   if (!program) return true;
   return program.confidence === "needs_source_check" || !program.confidence;
+}
+
+function getLocalECHeuristic(text, area) {
+  const ecLower = (text || "").toLowerCase();
+  const areaLower = (area || "").toLowerCase();
+  const isKo = (state.language || "ko") === "ko";
+
+  let score = 8;
+  let matchedCategories = [];
+
+  // Research / Internship
+  if (ecLower.includes("intern") || ecLower.includes("research") || ecLower.includes("lab") || 
+      ecLower.includes("paper") || ecLower.includes("publication") || ecLower.includes("journal") || 
+      ecLower.includes("인턴") || ecLower.includes("연구") || ecLower.includes("논문") || ecLower.includes("학술") ||
+      ecLower.includes("실무")) {
+    score += 8;
+    matchedCategories.push(isKo ? "연구/인턴십" : "Research/Internship");
+  }
+
+  // Leadership / Founder
+  if (ecLower.includes("president") || ecLower.includes("founder") || ecLower.includes("lead") || 
+      ecLower.includes("director") || ecLower.includes("officer") || ecLower.includes("captain") || 
+      ecLower.includes("chair") || ecLower.includes("co-founder") || ecLower.includes("회장") || 
+      ecLower.includes("창립") || ecLower.includes("대표") || ecLower.includes("팀장") || ecLower.includes("임원") || 
+      ecLower.includes("부회장") || ecLower.includes("창업")) {
+    score += 6;
+    matchedCategories.push(isKo ? "리더십/창립자" : "Leadership/Founder");
+  }
+
+  // Projects / Competitions / Awards / Volunteer
+  if (ecLower.includes("project") || ecLower.includes("competition") || ecLower.includes("contest") || 
+      ecLower.includes("award") || ecLower.includes("volunteer") || ecLower.includes("hackathon") || 
+      ecLower.includes("prize") || ecLower.includes("won") || ecLower.includes("프로젝트") || 
+      ecLower.includes("경진대회") || ecLower.includes("수상") || ecLower.includes("봉사") || 
+      ecLower.includes("해커톤") || ecLower.includes("대회") || ecLower.includes("기여")) {
+    score += 4;
+    matchedCategories.push(isKo ? "프로젝트/경진대회" : "Projects/Competitions");
+  }
+
+  // Major relevance check
+  let isMajorRelated = false;
+  if (areaLower.includes("stem") || areaLower.includes("science") || areaLower.includes("computer") || areaLower.includes("engineering") || areaLower.includes("physics")) {
+    if (ecLower.includes("code") || ecLower.includes("programming") || ecLower.includes("github") || 
+        ecLower.includes("app") || ecLower.includes("data") || ecLower.includes("software") || 
+        ecLower.includes("physics") || ecLower.includes("math") || ecLower.includes("science") || 
+        ecLower.includes("engineering") || ecLower.includes("lab") || ecLower.includes("developer") || 
+        ecLower.includes("nvidia") || ecLower.includes("intel") || ecLower.includes("google") || 
+        ecLower.includes("tech") || ecLower.includes("robotics") || ecLower.includes("chemistry") || 
+        ecLower.includes("biology") || ecLower.includes("코딩") || ecLower.includes("개발") || 
+        ecLower.includes("알고리즘") || ecLower.includes("물리") || ecLower.includes("수학") || 
+        ecLower.includes("과학") || ecLower.includes("공학") || ecLower.includes("실험실") || 
+        ecLower.includes("연구소") || ecLower.includes("테크")) {
+      isMajorRelated = true;
+    }
+  } else if (areaLower.includes("business") || areaLower.includes("econ")) {
+    if (ecLower.includes("business") || ecLower.includes("finance") || ecLower.includes("marketing") || 
+        ecLower.includes("startup") || ecLower.includes("economics") || ecLower.includes("accounting") || 
+        ecLower.includes("consulting") || ecLower.includes("invest") || ecLower.includes("stock") || 
+        ecLower.includes("management") || ecLower.includes("경영") || ecLower.includes("투자") || 
+        ecLower.includes("창업") || ecLower.includes("경제") || ecLower.includes("마케팅") || 
+        ecLower.includes("회계") || ecLower.includes("컨설팅") || ecLower.includes("스타트업") || 
+        ecLower.includes("주식")) {
+      isMajorRelated = true;
+    }
+  } else {
+    // Humanities / Social Sciences
+    if (ecLower.includes("write") || ecLower.includes("essay") || ecLower.includes("ngo") || 
+        ecLower.includes("social") || ecLower.includes("debate") || ecLower.includes("history") || 
+        ecLower.includes("literature") || ecLower.includes("translation") || ecLower.includes("art") || 
+        ecLower.includes("music") || ecLower.includes("journalism") || ecLower.includes("politics") || 
+        ecLower.includes("humanities") || ecLower.includes("english") || ecLower.includes("philosophy") || 
+        ecLower.includes("글쓰기") || ecLower.includes("사회") || ecLower.includes("토론") || 
+        ecLower.includes("역사") || ecLower.includes("문학") || ecLower.includes("번역") || 
+        ecLower.includes("에세이") || ecLower.includes("인문") || ecLower.includes("예술") || 
+        ecLower.includes("정치") || ecLower.includes("영어") || ecLower.includes("철학") || 
+        ecLower.includes("언론")) {
+      isMajorRelated = true;
+    }
+  }
+
+  if (isMajorRelated) score += 5;
+
+  // Calibrate: standard community college / local school club leadership is Tier 3 (cap score at 17)
+  const isCCorClub = ecLower.includes("community college") || ecLower.includes("cc") || 
+                     ecLower.includes("동아리") || ecLower.includes("학회") || ecLower.includes("club") || 
+                     ecLower.includes("동호회") || ecLower.includes("협회") || ecLower.includes("단체");
+  const hasInternshipOrResearch = ecLower.includes("intern") || ecLower.includes("research") || ecLower.includes("lab") || 
+                                  ecLower.includes("인턴") || ecLower.includes("연구") || ecLower.includes("실무") ||
+                                  ecLower.includes("회사") || ecLower.includes("기업");
+  if (isCCorClub && !hasInternshipOrResearch) {
+    if (score >= 18) {
+      score = 17;
+    }
+  }
+
+  if (score > 30) score = 30;
+
+  let tier = isKo ? "Tier 4: 일반 참여 및 봉사 활동" : "Tier 4: Basic Participation";
+  if (score >= 25) {
+    tier = isKo ? "Tier 1-2: 전국구 및 고영향력 리더십" : "Tier 1-2: National/High-Impact Leadership";
+  } else if (score >= 18) {
+    tier = isKo ? "Tier 2-3: 지역 및 주 단위 리더십" : "Tier 2-3: State/Regional Leadership";
+  } else if (score >= 11) {
+    tier = isKo ? "Tier 3: 교내 동아리 회장 및 리더십" : "Tier 3: School/Local Leadership";
+  }
+
+  const majorRelevance = isMajorRelated ? "High" : (score > 12 ? "Medium" : "Low");
+
+  return { score, tier, majorRelevance };
 }
 
 function getReachMatchSafety(program, userGpa, evaluation) {
@@ -2701,12 +2825,38 @@ function getReachMatchSafety(program, userGpa, evaluation) {
 
   // 3. Extracurricular (EC) analysis score & relevance
   const hasEcs = state.extracurriculars && state.extracurriculars.trim().length >= 15;
-  const ecScore = (hasEcs && state.ecAnalysisResult) ? (state.ecAnalysisResult.score || 0) : 10;
-  const ecRelevance = (hasEcs && state.ecAnalysisResult) ? (state.ecAnalysisResult.majorRelevance || "Low") : "Low";
+  let ecScore = 10;
+  let ecRelevance = "Low";
+  let ecTier = "Tier 4: Basic Participation";
 
-  // 4. Parse Major-Specific Acceptance Rate for strictness
+  if (hasEcs) {
+    if (state.ecAnalysisResult) {
+      ecScore = state.ecAnalysisResult.score || 10;
+      ecRelevance = state.ecAnalysisResult.majorRelevance || "Low";
+      ecTier = state.ecAnalysisResult.tier || "Tier 4: Basic Participation";
+    } else {
+      const localResult = getLocalECHeuristic(state.extracurriculars, state.track || "stem");
+      ecScore = localResult.score;
+      ecRelevance = localResult.majorRelevance;
+      ecTier = localResult.tier;
+    }
+  } else {
+    ecScore = 5;
+    ecRelevance = "Low";
+    ecTier = "Tier 4: Basic Participation";
+  }
+
+  // 4. Parse Acceptance Rate for strictness
   const rateStr = stats.rateOutOfState || stats.rateOverall || "25%";
-  const rateVal = parseFloat(rateStr) || 25.0;
+  let rateVal = parseFloat(rateStr) || 25.0;
+
+  // Apply strict internal criteria override for competitive majors
+  if (stats.isMajorCompetitive) {
+    const majorName = (program.name || "").toLowerCase();
+    const isCS = ["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => majorName.includes(kw));
+    targetGpa = isCS ? 3.85 : 3.75;
+    rateVal = 5.0; // Place in Strict/Ultra category internally
+  }
 
   // Strictness levels:
   // - rateVal < 3.0: Ultra-strict (Elite Lock)
@@ -2720,14 +2870,12 @@ function getReachMatchSafety(program, userGpa, evaluation) {
 
   // 5. Admitted Case Key Electives Match Rate
   const admissionsSchoolId = getAdmissionsSchoolId(program.school.name);
-  const normalizedMajor = (program.name || "").toLowerCase();
   let electivesMatchRate = 1.0;
   let keyElectivesList = [];
   
   if (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]) {
     const matchingCase = window.AdmissionsCasesDatabase.profiles[lang].find(c => 
-      c && c.schoolId === admissionsSchoolId && c.major &&
-      (normalizedMajor.includes(c.major.toLowerCase().split("(")[0].trim()) || c.major.toLowerCase().includes(normalizedMajor))
+      c && c.schoolId === admissionsSchoolId && isMajorMatching(program.name, c.major)
     );
     
     if (matchingCase && matchingCase.keyElectives) {
@@ -2755,15 +2903,28 @@ function getReachMatchSafety(program, userGpa, evaluation) {
 
   // 6. 4-tier Admission Possibility Evaluation
   // Tiers: High Risk (위험), Reach (도전), Match (적정), Safety (안정)
-  
-  // High Risk Condition:
+
+  // 6.1. High Risk Condition:
   // - GPA under official minimum
   // - Fails English proficiency
-  // - Missing 3 or more required courses
-  // - For Ultra-selective: GPA < 3.8 or missing ANY required course, or electivesMatchRate < 0.25
-  const isHighRisk = (userGpa < minGpa) || failsEnglish || (missingRequiredCount >= 3) ||
-                     (strictness === "ultra" && (userGpa < 3.8 || missingRequiredCount > 0)) ||
-                     (strictness === "strict" && (userGpa < 3.6 || missingRequiredCount >= 2));
+  // - Missing too many required courses:
+  //   * ultra: missing > 0 courses (must be perfect)
+  //   * strict: missing > 0 courses
+  //   * moderate: missing >= 2 courses
+  //   * relaxed: missing >= 3 courses
+  // - GPA extremely below average/target GPA:
+  //   * ultra: GPA < 3.85
+  //   * strict: GPA < 3.75
+  //   * moderate: GPA < 3.50
+  //   * relaxed: GPA < 3.00
+  // - Extremely low EC score or Electives Match Rate for selective schools:
+  //   * ultra: electivesMatchRate < 0.4 or ecScore < 15
+  //   * strict: electivesMatchRate < 0.3 or ecScore < 12
+  const isHighRisk = (userGpa < minGpa) || failsEnglish ||
+                     (strictness === "ultra" && (userGpa < 3.85 || missingRequiredCount > 0 || electivesMatchRate < 0.4 || ecScore < 15)) ||
+                     (strictness === "strict" && (userGpa < 3.75 || missingRequiredCount > 0 || electivesMatchRate < 0.3 || ecScore < 12)) ||
+                     (strictness === "moderate" && (userGpa < 3.50 || missingRequiredCount >= 2)) ||
+                     (strictness === "relaxed" && (userGpa < 3.00 || missingRequiredCount >= 3));
 
   if (isHighRisk) {
     let label = isKo ? "High Risk (위험)" : "High Risk";
@@ -2783,43 +2944,19 @@ function getReachMatchSafety(program, userGpa, evaluation) {
     };
   }
 
-  // Reach Condition:
-  // - Missing 1-2 required courses (except ultra-strict)
-  // - GPA is below (targetGpa - 0.2)
-  // - For Ultra-selective: ALWAYS Reach (Maximum lock)
-  // - For Strict: GPA is between 3.6 and (targetGpa - 0.05), or missing 1 course, or weak ECs (score < 20), or electivesMatchRate < 0.5
-  const isReach = (missingRequiredCount > 0) || 
-                  (userGpa < (targetGpa - 0.2)) ||
-                  (strictness === "ultra") ||
-                  (strictness === "strict" && (userGpa < targetGpa || ecScore < 20 || electivesMatchRate < 0.6)) ||
-                  (strictness === "moderate" && (userGpa < (targetGpa - 0.1) || ecScore < 15));
-
-  if (isReach) {
-    let label = isKo ? "Reach (도전)" : "Reach";
-    if (missingRequiredCount > 0) label += isKo ? ` (${missingRequiredCount}개 과목 누락)` : ` (${missingRequiredCount} Missing)`;
-    else if (strictness === "ultra") label += isKo ? " (최상위 지원·바늘구멍 합격률)" : " (Ultra-selective)";
-    
-    return {
-      label,
-      class: "reach",
-      color: "#f43f5e",
-      missingCount: missingRequiredCount,
-      electivesMatchRate,
-      keyElectivesList,
-      failsEnglish,
-      ecScore
-    };
-  }
-
-  // Safety Condition:
-  // - Meets all prerequisites
-  // - GPA significantly above targetGpa (+0.15)
-  // - Only allowed for relaxed and moderate schools (never ultra or strict)
-  // - For moderate: requires strong ECs (score >= 20) and electivesMatchRate >= 0.75
-  const isSafety = (missingRequiredCount === 0) && 
-                   (userGpa >= (targetGpa + 0.15)) &&
-                   (strictness !== "ultra" && strictness !== "strict") &&
-                   (strictness !== "moderate" || (ecScore >= 20 && electivesMatchRate >= 0.75));
+  // 6.2. Safety Condition:
+  // - Only allowed for relaxed schools (acceptance rate >= 25%). Elite/competitive schools are never safety.
+  // - Must meet all prerequisites (missingRequiredCount === 0)
+  // - GPA significantly above target GPA: userGpa >= Math.max(targetGpa + 0.30, 3.80)
+  // - Requires strong ECs: ecScore >= 22
+  // - Requires strong electives match: electivesMatchRate >= 0.85
+  // - English is satisfied: !failsEnglish
+  const isSafety = (strictness === "relaxed") &&
+                   (missingRequiredCount === 0) &&
+                   (userGpa >= Math.max(targetGpa + 0.30, 3.80)) &&
+                   (ecScore >= 22) &&
+                   (electivesMatchRate >= 0.85) &&
+                   (!failsEnglish);
 
   if (isSafety) {
     return {
@@ -2834,12 +2971,56 @@ function getReachMatchSafety(program, userGpa, evaluation) {
     };
   }
 
-  // Match Condition (Default Fallback):
-  // - Meets prerequisites and GPA is within range of targetGpa
+  // 6.3. Match Condition:
+  // - NEVER allowed for ultra-strict schools (acceptance rate < 3% like Harvard/Yale/Stanford). They are always Reach or High Risk.
+  // - For strict schools (rate 3%-10%):
+  //   * Must meet all prerequisites (missingRequiredCount === 0)
+  //   * GPA must be very high: userGpa >= Math.max(targetGpa + 0.15, 3.90)
+  //   * EC score must be elite: ecScore >= 26
+  //   * Electives match rate must be very high: electivesMatchRate >= 0.90
+  // - For moderate schools (rate 10%-25% like UCB/UCLA):
+  //   * Must meet all prerequisites (missingRequiredCount === 0)
+  //   * GPA must be high: userGpa >= Math.max(targetGpa + 0.10, 3.80)
+  //   * EC score must be strong: ecScore >= 22
+  //   * Electives match rate must be strong: electivesMatchRate >= 0.80
+  // - For relaxed schools (rate >= 25%):
+  //   * Must meet all prerequisites (missingRequiredCount === 0)
+  //   * GPA must be solid: userGpa >= Math.max(targetGpa - 0.05, 3.50)
+  //   * EC score must be moderate: ecScore >= 15
+  //   * Electives match rate must be moderate: electivesMatchRate >= 0.60
+  const isMatch = (
+                    (strictness === "strict" && missingRequiredCount === 0 && userGpa >= Math.max(targetGpa + 0.15, 3.90) && ecScore >= 26 && electivesMatchRate >= 0.90) ||
+                    (strictness === "moderate" && missingRequiredCount === 0 && userGpa >= Math.max(targetGpa + 0.10, 3.80) && ecScore >= 22 && electivesMatchRate >= 0.80) ||
+                    (strictness === "relaxed" && missingRequiredCount === 0 && userGpa >= Math.max(targetGpa - 0.05, 3.50) && ecScore >= 15 && electivesMatchRate >= 0.60)
+                  );
+
+  if (isMatch) {
+    return {
+      label: isKo ? "Match (적정)" : "Match",
+      class: "match",
+      color: "#fbbf24",
+      missingCount: missingRequiredCount,
+      electivesMatchRate,
+      keyElectivesList,
+      failsEnglish,
+      ecScore
+    };
+  }
+
+  // Reach (도전) - Default Fallback for all other non-High Risk cases
+  let reachLabel = isKo ? "Reach (도전)" : "Reach";
+  if (missingRequiredCount > 0) {
+    reachLabel += isKo ? ` (${missingRequiredCount}개 과목 누락)` : ` (${missingRequiredCount} Missing)`;
+  } else if (strictness === "ultra") {
+    reachLabel += isKo ? " (최상위 지원·바늘구멍 합격률)" : " (Ultra-selective)";
+  } else if (strictness === "strict") {
+    reachLabel += isKo ? " (상위권 지원·높은 경쟁률)" : " (Highly Selective)";
+  }
+
   return {
-    label: isKo ? "Match (소신/적정)" : "Match",
-    class: "match",
-    color: "#fbbf24",
+    label: reachLabel,
+    class: "reach",
+    color: "#f43f5e",
     missingCount: missingRequiredCount,
     electivesMatchRate,
     keyElectivesList,
@@ -4133,15 +4314,7 @@ function renderEligibilityResults() {
               </span>
             </div>
           `;
-        } else if (state.ecAnalysisError) {
-          ecAnalysisHtml = `
-            <div class="ec-analysis-block" style="margin: 14px 0; background: rgba(244, 63, 94, 0.03); border: 1px dashed rgba(244, 63, 94, 0.3); padding: 14px; border-radius: 8px; font-size: 12.5px; color: #e11d48; line-height: 1.55; text-align: center; font-weight: 700;">
-              ⚠️ ${isKo 
-                ? "AI 비교과 분석 실패: 로그인이 필요하거나 서버 통신 오류가 발생했습니다.<br/><small style='font-weight:500;color:var(--muted);'>비회원 또는 세션이 만료된 경우 분석을 이용할 수 없습니다.</small>" 
-                : "AI EC Analysis failed: Login required or server communication error.<br/><small style='font-weight:500;color:var(--muted);'>Analysis is unavailable for guests or expired sessions.</small>"}
-            </div>
-          `;
-        } else if (ecAnalysis && state.extracurriculars && state.extracurriculars.trim().length >= 15) {
+        } else if (ecAnalysis && hasEcs) {
           const relevanceColor = ecAnalysis.majorRelevance === "High" ? "#10b981" : (ecAnalysis.majorRelevance === "Medium" ? "#fbbf24" : "#f43f5e");
           const relevanceText = isKo 
             ? (ecAnalysis.majorRelevance === "High" ? "높음 (High)" : (ecAnalysis.majorRelevance === "Medium" ? "보통 (Medium)" : "낮음 (Low)"))
@@ -4184,6 +4357,54 @@ function renderEligibilityResults() {
               </div>
             </div>
           `;
+        } else if (hasEcs) {
+          const localResult = getLocalECHeuristic(state.extracurriculars, state.track || "stem");
+          const relevanceColor = localResult.majorRelevance === "High" ? "#10b981" : (localResult.majorRelevance === "Medium" ? "#fbbf24" : "#f43f5e");
+          const relevanceText = isKo 
+            ? (localResult.majorRelevance === "High" ? "높음 (High)" : (localResult.majorRelevance === "Medium" ? "보통 (Medium)" : "낮음 (Low)"))
+            : localResult.majorRelevance;
+
+          const scorePercent = Math.round((localResult.score / 30) * 100);
+          
+          ecAnalysisHtml = `
+            <div class="ec-analysis-block" style="margin: 14px 0; background: rgba(99, 102, 241, 0.03); border: 1px solid var(--line); padding: 14px; border-radius: 8px; font-size: 12.5px; line-height: 1.55;">
+              <strong style="color: var(--accent); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; font-size: 13.5px; font-weight: 800;">
+                <span>🔮 ${isKo ? "비교과 스펙 예비 판정 리포트" : "Preliminary EC Spec Analysis"}</span>
+                <span style="font-size: 10px; font-weight: 700; background: rgba(245, 158, 11, 0.08); color: #d97706; padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.2);">${isKo ? "로컬 간이 진단" : "Local Heuristic"}</span>
+              </strong>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;">
+                <div style="background: var(--surface); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line);">
+                  <div style="color: var(--muted); font-size: 11px; margin-bottom: 2px;">${isKo ? "예상 활동 등급" : "Activity Tier"}</div>
+                  <span class="rms-badge" style="background: rgba(99, 102, 241, 0.1); color: var(--accent); font-weight: 700; font-size: 11.5px; padding: 2px 6px; border-radius: 4px; display: inline-block;">
+                    ${escapeHtml(localResult.tier)}
+                  </span>
+                </div>
+                <div style="background: var(--surface); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line);">
+                  <div style="color: var(--muted); font-size: 11px; margin-bottom: 2px;">${isKo ? "희망 전공 연계성" : "Major Relevance"}</div>
+                  <span class="rms-badge" style="background: ${relevanceColor}22; color: ${relevanceColor}; font-weight: 700; font-size: 11.5px; padding: 2px 6px; border-radius: 4px; display: inline-block;">
+                    ● ${escapeHtml(relevanceText)}
+                  </span>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; font-weight: 700;">
+                  <span>${isKo ? "비교과 예상 강도 점수" : "EC Spec Score"}</span>
+                  <span style="color: var(--accent);">${localResult.score} / 30점 (${scorePercent}%)</span>
+                </div>
+                <div style="width: 100%; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
+                  <div style="width: ${scorePercent}%; height: 100%; background: linear-gradient(90deg, #818cf8, #6366f1); border-radius: 3px;"></div>
+                </div>
+              </div>
+
+              <div style="background: rgba(245, 158, 11, 0.03); border: 1px dashed rgba(245, 158, 11, 0.25); padding: 10px; border-radius: 6px; font-size: 11.5px; line-height: 1.5; color: #b45309; font-weight: 500;">
+                📢 <strong>${isKo ? "로그인 유도 안내" : "AI Deep Analysis Recommendation"}:</strong>
+                ${isKo 
+                  ? "로그인을 하시면 OpenAI/Gemini 기반의 정교한 AI 심층 분석 리포트 및 맞춤형 멘토링 피드백을 실시간으로 받아보실 수 있습니다." 
+                  : "Please log in to receive a full AI analysis report and deep personalized mentor feedback."}
+              </div>
+            </div>
+          `;
         } else if (state.extracurriculars && state.extracurriculars.trim().length > 0) {
           ecAnalysisHtml = `
             <div style="margin: 14px 0; background: rgba(244, 63, 94, 0.03); border: 1px dashed rgba(244, 63, 94, 0.3); padding: 12px; border-radius: 8px; font-size: 12px; color: #e11d48; line-height: 1.5; font-weight: 500;">
@@ -4211,23 +4432,107 @@ function renderEligibilityResults() {
           </div>
         ` : "";
 
-        const isEstimated = isGpaEstimated(program, stats);
-        const gpaLabel = isEstimated 
-          ? (isKo ? "예상 합격 평균 GPA" : "Est. Admitted GPA")
-          : (isKo ? "합격 평균 GPA" : "Admitted GPA");
-        const overallRate = stats.rateOverall || stats.rateOutOfState || stats.rateInState || "N/A";
+        let targetGpaVal = 3.6;
+        if (stats.avgGpa.includes("-")) {
+          targetGpaVal = parseFloat(stats.avgGpa.split("-")[0].trim()) || 3.6;
+        } else {
+          targetGpaVal = parseFloat(stats.avgGpa) || 3.6;
+        }
+        if (stats.isMajorCompetitive) {
+          const majorNameLower = (program.name || "").toLowerCase();
+          const isCS = ["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => majorNameLower.includes(kw));
+          targetGpaVal = isCS ? 3.85 : 3.75;
+        }
+
+        const gpaGap = state.gpa - targetGpaVal;
+        const gpaGapStr = (gpaGap >= 0 ? "+" : "") + gpaGap.toFixed(2);
         
-        const schoolNameLower = (program.school.name || "").toLowerCase();
-        const isUcSchool = schoolNameLower.includes("university of california") || schoolNameLower.startsWith("uc ") || schoolNameLower.includes(" ucla") || schoolNameLower.includes(" ucb");
-        
-        const ucNoticeHtml = isUcSchool ? `
-          <div style="background: rgba(245, 158, 11, 0.05); border-left: 3px solid #d97706; padding: 8px 10px; border-radius: 4px; font-size: 11px; color: #d97706; line-height: 1.4; margin: 10px 0;">
-            ⚠️ <strong>${isKo ? "UC 계열 편입 특별 유의사항" : "UC CCC Priority Notice"}:</strong> 
-            ${isKo 
-              ? "UC 계열은 편입 합격자의 약 90%를 캘리포니아 주내 커뮤니티 칼리지(CCC) 출신으로 선발합니다. 타주 대학이나 일반 4년제 대학에서 지원 시 체감 난이도가 공식 합격률보다 훨씬 높습니다." 
-              : "UC campuses admit ~90% of transfer students from California Community Colleges (CCC). Transferring from out-of-state or 4-year institutions is significantly more competitive than the official rate suggests."}
-          </div>
-        ` : "";
+        const prereqCompletedCount = evaluation.checks.filter(c => c.type === "course" && c.pass).length;
+        const prereqTotalCount = evaluation.checks.filter(c => c.type === "course").length;
+        const prereqRate = prereqTotalCount > 0 ? Math.round((prereqCompletedCount / prereqTotalCount) * 100) : 100;
+
+        let actionPlansHtml = "";
+        if (isKo) {
+          if (state.gpa < targetGpaVal) {
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                📈 <strong>GPA 학점 관리 경고</strong>: 목표 전공 합격자 평균 학점 대비 약 <strong style="color: #ef4444;">${Math.abs(gpaGap).toFixed(2)}점</strong> 부족합니다. 다음 학기에 A 학점을 최대한 확보하여 누적 GPA를 보완해야 합니다.
+              </div>
+            `;
+          }
+          if (rms.missingCount > 0) {
+            const missingNames = evaluation.checks.filter(c => c.type === "course" && !c.pass).map(c => c.label).join(", ");
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                📚 <strong>필수 선수과목 미이수 경고</strong>: 지원에 필수적인 과목 중 <strong>${rms.missingCount}개</strong>가 누락되었습니다.<br/>
+                <span style="color: #b91c1c;">(누락 과목: ${escapeHtml(missingNames)})</span><br/>
+                원서 제출 전 학기까지 이 과목들을 완료하도록 Pathfinder 로드맵에 우선 배치하세요.
+              </div>
+            `;
+          }
+          if (rms.failsEnglish) {
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                ✍️ <strong>영어 요구사항 미달 경고</strong>: 유학생 영어 면제 조건을 만족하지 못했으며 최저 점수(TOEFL ${englishRequirement}점)보다 낮습니다. 공인 영어 성적 취득이 원서 접수 전까지 완료되어야 합니다.
+              </div>
+            `;
+          }
+          if (rms.ecScore < 15) {
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(245, 158, 11, 0.04); border-left: 3px solid #f59e0b; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                🏆 <strong>비교과(EC) 보완 권장</strong>: 희망 전공과 연계된 비교과 스펙(연구 보조, 프로젝트, 동아리 리더 등)의 보완이 적극 권장됩니다.
+              </div>
+            `;
+          }
+          if (actionPlansHtml === "") {
+            actionPlansHtml = `
+              <div style="padding: 10px; background: rgba(16, 185, 129, 0.04); border-left: 3px solid #10b981; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: #047857;">
+                ✨ <strong>모든 주요 지원 조건을 충족했습니다!</strong><br/>
+                현재 GPA와 과목 이수 상태가 안정적입니다. 에세이(Personal Statement) 작성과 심화 권장 과목 수강을 통해 서류 완성도를 높이세요.
+              </div>
+            `;
+          }
+        } else {
+          if (state.gpa < targetGpaVal) {
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                📈 <strong>GPA Boost Required</strong>: You are <strong style="color: #ef4444;">${Math.abs(gpaGap).toFixed(2)}</strong> below the target admitted GPA. Maximize your upcoming term grades to raise your cumulative GPA.
+              </div>
+            `;
+          }
+          if (rms.missingCount > 0) {
+            const missingNames = evaluation.checks.filter(c => c.type === "course" && !c.pass).map(c => c.label).join(", ");
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                📚 <strong>Prerequisite Gap Warning</strong>: You are missing <strong>${rms.missingCount}</strong> required courses.<br/>
+                <span style="color: #b91c1c;">(Missing: ${escapeHtml(missingNames)})</span><br/>
+                Prioritize registering for these courses in Pathfinder before submitting your application.
+              </div>
+            `;
+          }
+          if (rms.failsEnglish) {
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(239, 68, 68, 0.04); border-left: 3px solid #ef4444; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                ✍️ <strong>English Requirement Deficit</strong>: You do not satisfy the English waiver and score below the minimum requirement (TOEFL ${englishRequirement}). Plan to take TOEFL/IELTS soon.
+              </div>
+            `;
+          }
+          if (rms.ecScore < 15) {
+            actionPlansHtml += `
+              <div style="padding: 10px; background: rgba(245, 158, 11, 0.04); border-left: 3px solid #f59e0b; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                🏆 <strong>Extracurricular Boost Recommended</strong>: Your EC profile and major relevance score are low. Seek research assistant, robotics clubs, or project lead roles.
+              </div>
+            `;
+          }
+          if (actionPlansHtml === "") {
+            actionPlansHtml = `
+              <div style="padding: 10px; background: rgba(16, 185, 129, 0.04); border-left: 3px solid #10b981; border-radius: 6px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; color: #047857;">
+                ✨ <strong>All Core Requirements Satisfied!</strong><br/>
+                Your GPA and prerequisites are on track. Focus now on writing outstanding transfer essays (Personal Statement) and taking advanced recommended electives to stand out.
+              </div>
+            `;
+          }
+        }
 
         return `
           <div class="locked-card-wrapper">
@@ -4252,158 +4557,65 @@ function renderEligibilityResults() {
               <p>${escapeHtml(program.name)}</p>
               <div class="badge-container">${getConfidenceBadgeHtml(program)}</div>
               
-              <!-- Premium Transfer Stats Row (2 Columns) -->
-              <div class="card-stats-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 12px; margin: 14px 0; font-size: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0;">
-                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${isKo ? "전체 편입 합격률" : "Overall Transfer Rate"}</span> <strong style="color: #f43f5e; font-size: 13px;">${overallRate}</strong></div>
-                <div><span style="color: var(--muted); font-size: 10.5px; display: block; margin-bottom: 2px;">${gpaLabel}</span> <strong style="color: #60a5fa; font-size: 13px;">${stats.avgGpa}</strong></div>
-              </div>
-              
-              ${ucNoticeHtml}
-
-              <!-- Accepted Specimen Comparison Dashboard -->
-              <div class="specimen-dashboard" style="margin: 14px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 12px;">
-                <div style="font-weight: 800; color: var(--ink); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
-                  <span>👥 ${isKo ? "실제 합격자 표본 스펙 매칭" : "Admitted Specimen Match"}</span>
+              <!-- Personalized Spec Diagnosis Table -->
+              <div style="margin: 14px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 12px;">
+                <h4 style="font-weight: 800; color: var(--ink); margin: 0 0 10px 0; display: flex; align-items: center; gap: 6px;">
+                  <span>🎯</span> ${isKo ? "개인 맞춤형 스펙 합격 진단" : "Personalized Spec Diagnosis"}
+                </h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 8px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.03); border-radius: 6px;">
+                    <span style="color: var(--muted); font-weight: 600;">${isKo ? "내 GPA vs 합격자선" : "My GPA vs Target Admitted"}</span>
+                    <strong style="color: ${state.gpa >= targetGpaVal ? "#10b981" : "#f43f5e"}; font-size: 12.5px;">
+                      ${state.gpa.toFixed(2)} / ${targetGpaVal.toFixed(2)} (${gpaGapStr})
+                    </strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.03); border-radius: 6px;">
+                    <span style="color: var(--muted); font-weight: 600;">${isKo ? "선수과목 이수율" : "Prerequisites Completion"}</span>
+                    <strong style="color: ${rms.missingCount === 0 ? "#10b981" : "#f59e0b"}; font-size: 12.5px;">
+                      ${prereqCompletedCount} / ${prereqTotalCount} 이수 (${prereqRate}%)
+                    </strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.03); border-radius: 6px;">
+                    <span style="color: var(--muted); font-weight: 600;">${isKo ? "영어 요구사항 충족" : "English Requirement"}</span>
+                    <strong style="color: ${!rms.failsEnglish ? "#10b981" : "#f43f5e"}; font-size: 12.5px;">
+                      ${!rms.failsEnglish ? (state.international ? "✅ Pass" : "✅ Waiver") : "⚠️ 미충족 (Deficit)"}
+                    </strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.03); border-radius: 6px;">
+                    <span style="color: var(--muted); font-weight: 600;">${isKo ? "AI 비교과 매칭 성숙도" : "AI EC Spec Score"}</span>
+                    <strong style="color: ${rms.ecScore >= 20 ? "#10b981" : (rms.ecScore >= 12 ? "#f59e0b" : "#f43f5e")}; font-size: 12.5px;">
+                      ${rms.ecScore} / 30점 (${rms.ecScore >= 20 ? (isKo ? "우수" : "Excellent") : (rms.ecScore >= 12 ? (isKo ? "보통" : "Moderate") : (isKo ? "부족" : "Needs Boost"))})
+                    </strong>
+                  </div>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
-                    <span style="color: var(--muted);">${isKo ? "GPA 매칭" : "GPA Match"}</span>
-                    <strong style="color: ${state.gpa >= parseFloat(stats.avgGpa) ? "#10b981" : "#f43f5e"};">${state.gpa >= parseFloat(stats.avgGpa) ? "✅" : "⚠️"} ${state.gpa.toFixed(2)} / ${stats.avgGpa}</strong>
-                  </div>
-                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
-                    <span style="color: var(--muted);">${isKo ? "영어 요구" : "English Req"}</span>
-                    <strong style="color: ${!rms.failsEnglish ? "#10b981" : "#f43f5e"};">${!rms.failsEnglish ? "✅ Pass" : "⚠️ Deficit"}</strong>
-                  </div>
-                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
-                    <span style="color: var(--muted);">${isKo ? "선수과목 매칭" : "Prereqs Match"}</span>
-                    <strong style="color: ${rms.missingCount === 0 ? "#10b981" : "#fbbf24"};">${rms.missingCount === 0 ? "✅ 100%" : `⚠️ ${rms.missingCount}개 누락`}</strong>
-                  </div>
-                  <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: rgba(0,0,0,0.02); border-radius: 4px;">
-                    <span style="color: var(--muted);">${isKo ? "비교과 매칭" : "EC Match"}</span>
-                    <strong style="color: ${rms.ecScore >= 20 ? "#10b981" : (rms.ecScore >= 12 ? "#fbbf24" : "#f43f5e")};">${rms.ecScore >= 20 ? "✅ 우수" : (rms.ecScore >= 12 ? "⚠️ 보통" : "❌ 부족")}</strong>
-                  </div>
-                </div>
-                ${rms.keyElectivesList && rms.keyElectivesList.length > 0 ? `
-                  <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--muted);">
-                    <strong>🔑 ${isKo ? "추천 핵심 심화과목(Key Electives)" : "Recommended Key Electives"}:</strong>
-                    <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px;">
-                      ${rms.keyElectivesList.map(el => `
-                        <span style="background: rgba(99, 102, 241, 0.06); color: var(--accent); padding: 2px 6px; border-radius: 4px; font-weight: 600;">${escapeHtml(el)}</span>
-                      `).join("")}
-                    </div>
-                  </div>
-                ` : ""}
               </div>
 
+              <!-- Action Plan & Gaps Panel -->
+              <div style="margin: 14px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px;">
+                <h4 style="font-weight: 800; color: var(--ink); margin: 0 0 10px 0; display: flex; align-items: center; gap: 6px; font-size: 12px;">
+                  <span>📋</span> ${isKo ? "개인화 격차 분석 및 액션 플랜" : "Personalized Gap Analysis & Action Plan"}
+                </h4>
+                ${actionPlansHtml}
+              </div>
+
+              ${ecAnalysisHtml}
               ${
                 verificationNotice
-                  ? `<div class="verification-alert">
+                  ? `<div class="verification-alert" style="margin-top: 10px;">
                       <strong>${escapeHtml(verificationNotice.label)}</strong>
                       <span>${escapeHtml(verificationNotice.detail)}</span>
                     </div>`
                   : ""
               }
-              ${prereqGapWarningHtml}
-              ${holisticStrategyHtml}
-              ${ecAnalysisHtml}
-              <div class="check-list">
-                ${primaryChecks
-                  .map(
-                    (check) => `
-                      <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}" style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-                          ${check.isRequired ? `<span style="background: rgba(239, 68, 68, 0.08); color: #ef4444; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(239, 68, 68, 0.15);">${isKo ? "필수" : "Required"}</span>` : ""}
-                          ${check.type === "gpa" ? `<span style="background: rgba(99, 102, 241, 0.08); color: #6366f1; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(99, 102, 241, 0.15);">${isKo ? "성적" : "GPA"}</span>` : ""}
-                          ${check.type === "credits" ? `<span style="background: rgba(14, 165, 233, 0.08); color: #0ea5e9; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(14, 165, 233, 0.15);">${isKo ? "학점" : "Credits"}</span>` : ""}
-                          ${check.type === "english" ? `<span style="background: rgba(245, 158, 11, 0.08); color: #d97706; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(245, 158, 11, 0.15);">${isKo ? "영어" : "English"}</span>` : ""}
-                          <span>${escapeHtml(check.label)}</span>
-                        </span>
-                        <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
-                      </div>
-                    `
-                  )
-                  .join("")}
-              </div>
-              ${
-                extraChecks.length
-                  ? `<details class="result-details">
-                      <summary>${t("roadmap_extra_summary").replace("{count}", extraChecks.length)}</summary>
-                      <p class="result-detail-note">${t("roadmap_extra_note")}</p>
-                      <div class="check-list">
-                        ${extraChecks
-                          .map(
-                            (check) => `
-                              <div class="check-item ${check.pass ? "pass" : "fail"} ${check.type ? 'check-' + check.type : ''}" style="display: flex; align-items: center; justify-content: space-between;">
-                                <span style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-                                  ${check.isRequired ? `<span style="background: rgba(239, 68, 68, 0.08); color: #ef4444; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(239, 68, 68, 0.15);">${isKo ? "필수" : "Required"}</span>` : ""}
-                                  ${check.type === "gpa" ? `<span style="background: rgba(99, 102, 241, 0.08); color: #6366f1; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(99, 102, 241, 0.15);">${isKo ? "성적" : "GPA"}</span>` : ""}
-                                  ${check.type === "credits" ? `<span style="background: rgba(14, 165, 233, 0.08); color: #0ea5e9; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(14, 165, 233, 0.15);">${isKo ? "학점" : "Credits"}</span>` : ""}
-                                  ${check.type === "english" ? `<span style="background: rgba(245, 158, 11, 0.08); color: #d97706; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; border: 1px solid rgba(245, 158, 11, 0.15);">${isKo ? "영어" : "English"}</span>` : ""}
-                                  <span>${escapeHtml(check.label)}</span>
-                                </span>
-                                <strong>${check.pass ? t("tag_pass") : t("tag_fail")}</strong>
-                              </div>
-                            `
-                          )
-                          .join("")}
-                      </div>
-                    </details>`
-                  : ""
-              }
-              ${
-                recommendedItems.length
-                  ? `<details class="result-details recommended-details">
-                      <summary>${t("roadmap_recommended_summary").replace("{count}", recommendedItems.length)}</summary>
-                      <ul>
-                        ${recommendedItems
-                          .map(
-                            (item) => `
-                              <li>
-                                <strong>${escapeHtml(item.label)}</strong>
-                                <span>${escapeHtml(item.detail || t("rec_course_detail"))}</span>
-                              </li>
-                            `
-                          )
-                          .join("")}
-                      </ul>
-                    </details>`
-                  : ""
-              }
-              ${
-                reviewItems.length
-                  ? `<details class="result-details review-details">
-                      <summary>${t("roadmap_review_summary").replace("{count}", reviewItems.length)}</summary>
-                      <ul>
-                        ${reviewItems
-                          .map(
-                            (item) => `
-                              <li>
-                                <strong>${escapeHtml(reviewFocus(item))}</strong>
-                                <span>${escapeHtml(item.raw || item)}</span>
-                              </li>
-                            `
-                          )
-                          .join("")}
-                      </ul>
-                    </details>`
-                  : ""
-              }
-              ${
-                evaluation.additionalInfo.length
-                  ? `<p class="result-note">${evaluation.additionalInfo.map((item) => escapeHtml(item)).join("<br />")}</p>`
-                  : ""
-              }
-              <!-- Prompt A & Subtle Disclaimer -->
-              <div class="strategy-explorer-prompt" style="margin-top: 14px; padding: 12px; background: rgba(16, 185, 129, 0.03); border: 1px dashed rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; line-height: 1.5; color: var(--ink);">
-                📢 <strong>${isKo ? "경쟁력 가이드" : "Competitiveness Guide"}:</strong> 
-                ${isKo ? "이 조건들은 편입 지원을 위한 필수 조건입니다. 실제 합격 경쟁력을 파악하려면 <strong>편입 정보 탐색기</strong>를 이용하세요." : "These criteria are minimum prerequisites. To analyze your actual admissions competitiveness, please use the <strong>University & Major Explorer</strong>."}
-                <div style="margin-top: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                  <button type="button" class="primary-btn compact" style="font-size: 11px; padding: 4px 10px; min-height: 24px; border-radius: 6px; background: #10b981;" onclick="activateProductTab('requirements')">
-                    ${isKo ? "편입 정보 탐색기 바로가기 →" : "Go to Explorer →"}
+
+              <!-- Exploration Button linking directly to Function 2 Explorer -->
+              <div style="margin-top: 14px; padding: 12px; background: rgba(99, 102, 241, 0.03); border: 1px dashed rgba(99, 102, 241, 0.2); border-radius: 8px; font-size: 12px; line-height: 1.5; color: var(--ink);">
+                📢 <strong>${isKo ? "상세 모집요강 및 합격자 사례 확인" : "Official Requirements & Cases"}:</strong>
+                ${isKo ? "이 대학의 공식 편입 합격률 데이터와 실제 합격생들의 스펙 포트폴리오를 확인해 보세요." : "Check official transfer statistics and detailed portfolios of accepted transfer students."}
+                <div style="margin-top: 8px;">
+                  <button type="button" class="primary-btn compact" style="font-size: 11px; padding: 6px 12px; min-height: 28px; border-radius: 6px; background: #6366f1; width: 100%; font-weight: 700; color: white;" onclick="activateProductTab('requirements'); setTimeout(() => { window.searchProgramDetail('${program.school.name}', '${program.name}'); }, 150);">
+                    🔍 ${isKo ? "모집 요강 및 합격 사례(Explorer) 보러가기 →" : "View Explorer & Spec Cases →"}
                   </button>
-                  <span style="font-size: 10.5px; color: var(--muted); font-weight: 500;">
-                    ${isKo ? "* 참고용 데이터로, 최종 지원 전 입학처 공식 요강 재확인을 권장합니다." : "* Reference only; verify on official registrar site."}
-                  </span>
                 </div>
               </div>
             </article>
@@ -4877,42 +5089,35 @@ function getCompetitiveProfile(program) {
     competitiveEnglish = "TOEFL 80 - 90 / IELTS 6.5";
   }
 
-  let track = "STEM";
+  const track = getMajorTrack(majorName);
   let electives = [];
   let activities = [];
 
   // 1. Resolve Major-Specific Recommended Electives
-  if (majorName.includes("computer science") || majorName.includes("computer engineering") || majorName.includes("software") || majorName.includes("data science")) {
-    track = "CS";
+  if (track === "CS") {
     electives = ["Intro to CS (Python/Java)", "Data Structures", "Discrete Mathematics", "Linear Algebra", "Calculus III"];
-  } else if (majorName.includes("mathematics") || majorName.includes("statistics") || majorName.includes("math")) {
-    track = "Math";
+  } else if (track === "Math") {
     electives = ["Calculus III", "Linear Algebra", "Intro to Probability", "Mathematical Statistics", "Real Analysis"];
-  } else if (majorName.includes("mechanical") || majorName.includes("aerospace") || majorName.includes("civil") || majorName.includes("engineering")) {
-    track = "Engineering";
+  } else if (track === "Physics") {
+    electives = ["Calculus III", "Linear Algebra", "Differential Equations", "General Physics I (Mechanics)", "General Physics II (Electricity & Magnetism)"];
+  } else if (track === "Engineering") {
     electives = ["Calculus III", "Physics (Mechanics)", "Differential Equations", "Statics & Dynamics", "CAD & 3D Modeling"];
-  } else if (majorName.includes("chemical") || majorName.includes("bio") || majorName.includes("biomedical") || majorName.includes("material") || majorName.includes("chemistry")) {
-    track = "BioChem";
+  } else if (track === "BioChem") {
     electives = ["General Chemistry II", "Organic Chemistry", "Biology I & II", "Calculus III", "Physics (Mechanics/EM)"];
-  } else if (majorName.includes("business") || majorName.includes("manage") || majorName.includes("finance") || majorName.includes("accounting")) {
-    track = "Business";
+  } else if (track === "Business") {
     electives = ["Microeconomics", "Macroeconomics", "Business Statistics", "Financial Accounting", "Managerial Accounting"];
-  } else if (majorName.includes("economics") || majorName.includes("econ")) {
-    track = "Economics";
+  } else if (track === "Economics") {
     electives = ["Microeconomics", "Macroeconomics", "Calculus III", "Intro to Econometrics", "Statistics"];
-  } else if (majorName.includes("psychology") || majorName.includes("psych")) {
-    track = "Psychology";
+  } else if (track === "Psychology") {
     electives = ["General Psychology", "Research Methods", "Psychological Statistics", "Cognitive Psychology", "Intro to Sociology"];
   } else {
-    // Humanities & Social Sciences default
-    track = "Humanities";
     electives = ["Intro to Sociology", "World History", "Ethics & Writing", "Critical Writing", "Political Theory"];
   }
 
   // 2. Resolve School & Major Matching Extracurricular Milestones
   const isIvyOrElite = (tier === "Top") || schoolName.includes("mit") || schoolName.includes("stanford") || schoolName.includes("columbia") || schoolName.includes("cornell") || schoolName.includes("harvard") || schoolName.includes("yale") || schoolName.includes("princeton");
 
-  if (track === "CS" || track === "Data Science") {
+  if (track === "CS") {
     if (isIvyOrElite) {
       activities = isKo
         ? [
@@ -4961,6 +5166,22 @@ function getCompetitiveProfile(program) {
           "Kaggle machine learning competition participation with Silver tier or higher",
           "Organizing undergraduate math seminars and co-writing research abstracts",
           isIvyOrElite ? "Contributing to advanced Real Analysis / Abstract Algebra research projects" : "Translating advanced math journals and writing summaries on academic blogs"
+        ];
+  } else if (track === "Physics") {
+    activities = isKo
+      ? [
+          `입학처 지향 인재상: 자연계의 근본 법칙을 수학적으로 모델링하고 실험으로 검증하는 탐구자`,
+          "대학 물리학 연구실 학부 연구 보조원(RA) 및 실험 장비 교정 기여",
+          "물리학 학술 동아리 회장 및 현대 물리학 세미나 주최",
+          "물리학 관련 튜터링(일반물리, 미적분학) 활동 및 성적 향상 기여",
+          isIvyOrElite ? "고급 전자기학/양자역학 리서치 프로젝트 또는 학술 포스터 공동 게재" : "물리 실험 포트폴리오 구축 및 학술 블로그 운영"
+        ]
+      : [
+          "Admissions Persona: Scientific investigator modeling fundamental physical laws and verifying them experimentally",
+          "Research assistant (RA) in physics laboratory calibrating advanced experimental apparatus",
+          "President of student physics club organizing seminars on modern physics topics",
+          "Peer tutoring in general physics and calculus at the student academic success center",
+          isIvyOrElite ? "Contributing to electromagnetism or quantum mechanics research projects with co-authored posters" : "Building a physics laboratory report portfolio and writing on scientific blogs"
         ];
   } else if (track === "Engineering") {
     activities = isKo
@@ -5435,7 +5656,7 @@ async function renderRequirementDetail(programId) {
   if (window.AdmissionsCasesDatabase && window.AdmissionsCasesDatabase.profiles[lang]) {
     if (admissionsSchoolId) {
       targetCases = window.AdmissionsCasesDatabase.profiles[lang].filter(
-        c => c && c.schoolId === admissionsSchoolId
+        c => c && c.schoolId === admissionsSchoolId && isMajorMatching(program.name, c.major)
       );
     }
   }
@@ -5453,7 +5674,6 @@ async function renderRequirementDetail(programId) {
   if (targetCases.length > 0) {
     const firstCase = targetCases[0];
     if (firstCase.gpa5YearRange) finalGpaRange = firstCase.gpa5YearRange;
-    if (firstCase.admissionRate) finalAdmissionRate = firstCase.admissionRate;
     if (firstCase.competitiveEnglish) finalEnglish = firstCase.competitiveEnglish;
     if (firstCase.keyElectives) {
       if (Array.isArray(firstCase.keyElectives)) {
@@ -5506,6 +5726,8 @@ async function renderRequirementDetail(programId) {
     `;
   }
   
+  const stats = getProgramAdmissionsStats(program);
+
   const compProfileHtml = `
     <article class="requirement-card" style="border-left: 4px solid var(--accent); background: rgba(255, 255, 255, 0.01);">
       <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 800; margin-bottom: 12px;">
@@ -5521,6 +5743,7 @@ async function renderRequirementDetail(programId) {
             ${isKo ? "실제 합격률" : "Actual Admission Rate"}
           </span>
           <strong style="color: #10b981; font-size: 14.5px;">${finalAdmissionRate}</strong>
+          ${(stats.isMajorCompetitive && !stats.hasActualMajorStats) ? `<span style="font-size: 10px; color: #ef4444; display: block; margin-top: 2px;">* ${isKo ? "실제 합격률 더 낮을 수 있음" : "Actual rate may be lower"}</span>` : ""}
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;">
           <span style="font-size: 10.5px; color: var(--muted); font-weight: 700; display: block; margin-bottom: 2px;">
@@ -5576,7 +5799,6 @@ async function renderRequirementDetail(programId) {
     </article>
   `;
 
-  const stats = getProgramAdmissionsStats(program);
   const isEstimated = isGpaEstimated(program, stats);
   const gpaLabel = isEstimated 
     ? (isKo ? "예상 합격 평균 GPA" : "Est. Admitted GPA")
@@ -5594,6 +5816,16 @@ async function renderRequirementDetail(programId) {
         : "UC campuses admit ~90% of transfer students from California Community Colleges (CCC). Transferring from out-of-state or 4-year institutions is significantly more competitive than the official rate suggests."}
     </div>
   ` : "";
+
+  const competitiveMajorWarningHtml = (stats.isMajorCompetitive && !stats.hasActualMajorStats) ? `
+    <div style="background: rgba(239, 68, 68, 0.05); border-left: 3px solid #ef4444; padding: 8px 10px; border-radius: 4px; font-size: 11px; color: #ef4444; line-height: 1.4; margin: 10px 0;">
+      ⚠️ <strong>${isKo ? "경쟁 전공 유의사항" : "Competitive Major Notice"}:</strong> 
+      ${isKo 
+        ? "이 전공은 경쟁이 강한 전공이므로 실제 합격률은 더 낮을 수 있습니다." 
+        : "This major is highly competitive, so the actual acceptance rate may be lower."}
+    </div>
+  ` : "";
+
   const basicInfoAndStatsHtml = `
     <article class="requirement-card" style="border-left: 4px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between;">
       <div>
@@ -5657,6 +5889,7 @@ async function renderRequirementDetail(programId) {
         </div>
         
         ${ucNoticeHtml}
+        ${competitiveMajorWarningHtml}
 
         <div style="font-size: 12px; line-height: 1.5; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 10px; border-radius: 6px; margin-bottom: 12px;">
           <strong style="color: #4f46e5; display: block; margin-bottom: 4px;">📐 AP / IB 학점 인정 정책 (AP/IB Waiver Policy)</strong>
