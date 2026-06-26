@@ -1,3 +1,15 @@
+window.onerror = function(message, source, lineno, colno, error) {
+  const errMsg = `[Global Error] ${message}\nSource: ${source}\nLine: ${lineno}:${colno}\nStack: ${error ? error.stack : ""}`;
+  console.error(errMsg);
+  alert(errMsg);
+};
+
+window.onunhandledrejection = function(event) {
+  const errMsg = `[Unhandled Promise Rejection] ${event.reason}`;
+  console.error(errMsg);
+  alert(errMsg);
+};
+
 const TRANSLATIONS = {
   "en": {
     "drawer_lang_label": "Language",
