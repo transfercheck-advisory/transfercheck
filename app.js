@@ -2807,6 +2807,13 @@ function getReachMatchSafety(program, userGpa, evaluation) {
     targetGpa = parseFloat(stats.avgGpa) || 3.6;
   }
 
+  const schoolNameLower = (program.school.name || "").toLowerCase();
+  const isUltraSchool = ["harvard", "yale", "princeton", "mit", "stanford", "caltech", "massachusetts institute"].some(kw => schoolNameLower.includes(kw));
+
+  if (isUltraSchool) {
+    targetGpa = Math.max(targetGpa, 3.90);
+  }
+
   const isKo = (state.language || "ko") === "ko";
   const lang = state.language || "ko";
   
@@ -2904,23 +2911,20 @@ function getReachMatchSafety(program, userGpa, evaluation) {
   // 6. 4-tier Admission Possibility Evaluation
   // Tiers: High Risk (위험), Reach (도전), Match (적정), Safety (안정)
 
-  // 6.1. High Risk Condition:
-  // - GPA under official minimum
-  // - Fails English proficiency
-  // - Missing too many required courses:
-  //   * ultra: missing > 0 courses (must be perfect)
-  //   * strict: missing > 0 courses
-  //   * moderate: missing >= 2 courses
-  //   * relaxed: missing >= 3 courses
-  // - GPA extremely below average/target GPA:
-  //   * ultra: GPA < 3.85
-  //   * strict: GPA < 3.75
-  //   * moderate: GPA < 3.50
-  //   * relaxed: GPA < 3.00
-  // - Extremely low EC score or Electives Match Rate for selective schools:
-  //   * ultra: electivesMatchRate < 0.4 or ecScore < 15
-  //   * strict: electivesMatchRate < 0.3 or ecScore < 12
-  const isHighRisk = (userGpa < minGpa) || failsEnglish ||
+  if (isUltraSchool) {
+    strictness = "ultra";
+  }
+
+  let failsEnglishUltra = false;
+  if (isUltraSchool && state.international && !state.englishWaiver) {
+    if (state.englishType === "TOEFL" && (state.englishScore === undefined || state.englishScore < 100)) failsEnglishUltra = true;
+    else if (state.englishType === "IELTS" && (state.englishScore === undefined || state.englishScore < 7.5)) failsEnglishUltra = true;
+    else if (state.englishType === "Duolingo" && (state.englishScore === undefined || state.englishScore < 125)) failsEnglishUltra = true;
+    else if (!state.englishScore) failsEnglishUltra = true;
+  }
+
+  const isHighRisk = (userGpa < minGpa) || failsEnglish || failsEnglishUltra ||
+                     (isUltraSchool && (userGpa < 3.80 || missingRequiredCount > 0 || electivesMatchRate < 0.50 || ecScore < 22)) ||
                      (strictness === "ultra" && (userGpa < 3.85 || missingRequiredCount > 0 || electivesMatchRate < 0.4 || ecScore < 15)) ||
                      (strictness === "strict" && (userGpa < 3.75 || missingRequiredCount > 0 || electivesMatchRate < 0.3 || ecScore < 12)) ||
                      (strictness === "moderate" && (userGpa < 3.50 || missingRequiredCount >= 2)) ||
@@ -2928,8 +2932,11 @@ function getReachMatchSafety(program, userGpa, evaluation) {
 
   if (isHighRisk) {
     let label = isKo ? "High Risk (위험)" : "High Risk";
-    if (failsEnglish) label += isKo ? " (영어 성적 부족)" : " (English Deficit)";
+    if (failsEnglish || failsEnglishUltra) label += isKo ? " (영어 성적 부족)" : " (English Deficit)";
     else if (userGpa < minGpa) label += isKo ? " (최소 GPA 미달)" : " (Below Min GPA)";
+    else if (isUltraSchool && userGpa < 3.80) label += isKo ? " (GPA 3.8 미달)" : " (Below GPA 3.8)";
+    else if (isUltraSchool && ecScore < 22) label += isKo ? " (비교과 스펙 부족)" : " (EC Spec Deficit)";
+    else if (isUltraSchool && electivesMatchRate < 0.50) label += isKo ? " (전공 적합성 이수율 부족)" : " (Low Electives Match)";
     else if (missingRequiredCount > 0) label += isKo ? ` (${missingRequiredCount}개 과목 누락)` : ` (${missingRequiredCount} Missing)`;
     
     return {
@@ -2939,7 +2946,7 @@ function getReachMatchSafety(program, userGpa, evaluation) {
       missingCount: missingRequiredCount,
       electivesMatchRate,
       keyElectivesList,
-      failsEnglish,
+      failsEnglish: failsEnglish || failsEnglishUltra,
       ecScore
     };
   }
@@ -4343,15 +4350,7 @@ function renderEligibilityResults() {
                 </div>
               </div>
               
-              <div style="margin-bottom: 12px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; font-weight: 700;">
-                  <span>${isKo ? "비교과 스펙 강도 점수" : "EC Spec Score"}</span>
-                  <span style="color: var(--accent);">${ecAnalysis.score} / 30점 (${scorePercent}%)</span>
-                </div>
-                <div style="width: 100%; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
-                  <div style="width: ${scorePercent}%; height: 100%; background: linear-gradient(90deg, #818cf8, #6366f1); border-radius: 3px;"></div>
-                </div>
-              </div>
+
 
               <div style="background: rgba(0,0,0,0.01); border-top: 1px dashed var(--line); padding-top: 10px; font-weight: 500; color: var(--ink);">
                 <strong>💡 ${isKo ? "AI 멘토 분석" : "AI Mentor Feedback"}:</strong> ${escapeHtml(ecAnalysis.analysis)}
@@ -4388,15 +4387,7 @@ function renderEligibilityResults() {
                 </div>
               </div>
               
-              <div style="margin-bottom: 12px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; font-weight: 700;">
-                  <span>${isKo ? "비교과 예상 강도 점수" : "EC Spec Score"}</span>
-                  <span style="color: var(--accent);">${localResult.score} / 30점 (${scorePercent}%)</span>
-                </div>
-                <div style="width: 100%; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
-                  <div style="width: ${scorePercent}%; height: 100%; background: linear-gradient(90deg, #818cf8, #6366f1); border-radius: 3px;"></div>
-                </div>
-              </div>
+
 
               <div style="background: rgba(245, 158, 11, 0.03); border: 1px dashed rgba(245, 158, 11, 0.25); padding: 10px; border-radius: 6px; font-size: 11.5px; line-height: 1.5; color: #b45309; font-weight: 500;">
                 📢 <strong>${isKo ? "로그인 유도 안내" : "AI Deep Analysis Recommendation"}:</strong>
@@ -4439,6 +4430,13 @@ function renderEligibilityResults() {
         } else {
           targetGpaVal = parseFloat(stats.avgGpa) || 3.6;
         }
+
+        const schoolNameLowerForGpa = (program.school.name || "").toLowerCase();
+        const isUltraSchoolForGpa = ["harvard", "yale", "princeton", "mit", "stanford", "caltech", "massachusetts institute"].some(kw => schoolNameLowerForGpa.includes(kw));
+        if (isUltraSchoolForGpa) {
+          targetGpaVal = Math.max(targetGpaVal, 3.90);
+        }
+
         if (stats.isMajorCompetitive) {
           const majorNameLower = (program.name || "").toLowerCase();
           const isCS = ["computer science", "computer engineering", "eecs", "data science", "software engineering"].some(kw => majorNameLower.includes(kw));
@@ -4585,7 +4583,7 @@ function renderEligibilityResults() {
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.03); border-radius: 6px;">
                     <span style="color: var(--muted); font-weight: 600;">${isKo ? "AI 비교과 매칭 성숙도" : "AI EC Spec Score"}</span>
                     <strong style="color: ${rms.ecScore >= 20 ? "#10b981" : (rms.ecScore >= 12 ? "#f59e0b" : "#f43f5e")}; font-size: 12.5px;">
-                      ${rms.ecScore} / 30점 (${rms.ecScore >= 20 ? (isKo ? "우수" : "Excellent") : (rms.ecScore >= 12 ? (isKo ? "보통" : "Moderate") : (isKo ? "부족" : "Needs Boost"))})
+                      ${rms.ecScore >= 20 ? (isKo ? "우수" : "Excellent") : (rms.ecScore >= 12 ? (isKo ? "보통" : "Moderate") : (isKo ? "부족" : "Needs Boost"))}
                     </strong>
                   </div>
                 </div>
