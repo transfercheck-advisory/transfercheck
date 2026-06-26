@@ -4317,6 +4317,7 @@ function renderEligibilityResults() {
 
         const rms = getReachMatchSafety(program, state.gpa, evaluation);
         const stats = getProgramAdmissionsStats(program);
+        const englishRequirement = getEnglishRequirement(program) || 100;
         const isKo = (state.language || "ko") === "ko";
 
         const holisticStrategyHtml = isHolistic ? `
