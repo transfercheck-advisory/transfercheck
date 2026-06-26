@@ -2825,10 +2825,10 @@ function getReachMatchSafety(program, userGpa, evaluation) {
   const stats = getProgramAdmissionsStats(program);
   
   let targetGpa = 3.6;
-  if (stats.avgGpa.includes("-")) {
+  if (stats && stats.avgGpa && typeof stats.avgGpa === "string" && stats.avgGpa.includes("-")) {
     const parts = stats.avgGpa.split("-").map(p => parseFloat(p.trim()));
     targetGpa = parts[0];
-  } else {
+  } else if (stats && stats.avgGpa) {
     targetGpa = parseFloat(stats.avgGpa) || 3.6;
   }
 
@@ -4450,9 +4450,9 @@ function renderEligibilityResults() {
         ` : "";
 
         let targetGpaVal = 3.6;
-        if (stats.avgGpa.includes("-")) {
+        if (stats && stats.avgGpa && typeof stats.avgGpa === "string" && stats.avgGpa.includes("-")) {
           targetGpaVal = parseFloat(stats.avgGpa.split("-")[0].trim()) || 3.6;
-        } else {
+        } else if (stats && stats.avgGpa) {
           targetGpaVal = parseFloat(stats.avgGpa) || 3.6;
         }
 
