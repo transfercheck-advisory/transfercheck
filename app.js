@@ -5622,6 +5622,7 @@ async function renderRequirementDetail(programId) {
 
   const program = allPrograms().find((item) => item.id === programId);
   if (!program) return;
+  const stats = getProgramAdmissionsStats(program);
   const summary = summarizeProgramCourses(program);
   const additionalInfo = additionalInfoForProgram(program);
   const verificationNotice = verificationNoticeForProgram(program);
@@ -5775,8 +5776,6 @@ async function renderRequirementDetail(programId) {
     `;
   }
   
-  const stats = getProgramAdmissionsStats(program);
-
   const compProfileHtml = `
     <article class="requirement-card" style="border-left: 4px solid var(--accent); background: rgba(255, 255, 255, 0.01);">
       <h3 style="color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 800; margin-bottom: 12px;">
