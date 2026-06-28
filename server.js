@@ -1977,6 +1977,234 @@ ${message}
     return;
   }
 
+  // SSR for /schools/:schoolId for SEO purposes
+  if (req.method === 'GET' && (safeUrl.startsWith('/schools/') || safeUrl.includes('/schools/'))) {
+    const parts = safeUrl.split('/');
+    const schoolId = parts[parts.indexOf('schools') + 1];
+    
+    // Read transfer-stats.js to get university details
+    const statsFilePath = path.join(__dirname, 'transfer-stats.js');
+    let schoolData = null;
+    let schoolNameFormatted = "University";
+    
+    if (fs.existsSync(statsFilePath)) {
+      try {
+        const statsFileContent = fs.readFileSync(statsFilePath, 'utf8');
+        const statsSandbox = { window: {} };
+        vm.createContext(statsSandbox);
+        vm.runInContext(statsFileContent, statsSandbox);
+        const transferStats = statsSandbox.window.transferStats || {};
+        schoolData = transferStats[schoolId];
+      } catch (e) {
+        console.error("Failed to parse school data on server:", e);
+      }
+    }
+    
+    if (schoolData) {
+      // Create a nice human-readable name from schoolId
+      // e.g. georgia-tech-776cb90e -> Georgia Tech
+      schoolNameFormatted = schoolId
+        .split('-')
+        .slice(0, -1) // remove hash suffix
+        .map(word => {
+          if (word.toLowerCase() === 'of' || word.toLowerCase() === 'at' || word.toLowerCase() === 'the') {
+            return word.toLowerCase();
+          }
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(' ');
+        
+      // Quick fix for UIUC name formatting
+      if (schoolId.startsWith('uiuc-')) {
+        schoolNameFormatted = 'UIUC (University of Illinois Urbana-Champaign)';
+      } else if (schoolId.startsWith('texas-a-m-')) {
+        schoolNameFormatted = 'Texas A&M University';
+      }
+      
+      const htmlResponse = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${schoolNameFormatted} 편입 입학 요건 및 합격 통계 | TransferCheck</title>
+  <meta name="description" content="${schoolNameFormatted} 편입 합격률, 평균 GPA, AP 정책 및 편입 지원 가이드를 제공합니다. 미국 명문대 편입 전략 엔진 TransferCheck에서 확인해 보세요.">
+  <meta name="keywords" content="${schoolNameFormatted}, 편입 요건, 편입 합격률, 편입 GPA, TransferCheck, 미국 대학 편입, college transfer">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="${schoolNameFormatted} 편입 입학 요건 및 합격 통계 | TransferCheck" />
+  <meta property="og:description" content="${schoolNameFormatted} 편입 합격률, 평균 GPA, AP 정책 및 가이드." />
+  <meta property="og:image" content="https://transfercheck.vercel.app/preview.png" />
+  <meta property="og:url" content="https://transfercheck.vercel.app/schools/${schoolId}" />
+  
+  <!-- CSS 및 글꼴 설정 -->
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .school-seo-container {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 32px;
+      background: #1e1b4b; /* Deep background matching dark-mode */
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #818cf8;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .school-title {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .stat-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: #818cf8;
+      margin-top: 6px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 8px;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+    .content-text {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #cbd5e1;
+    }
+    .content-text ul {
+      padding-left: 20px;
+    }
+    .content-text li {
+      margin-bottom: 8px;
+    }
+    .cta-box {
+      margin-top: 48px;
+      padding: 32px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(30, 27, 75, 0.8));
+      border-radius: 16px;
+      border: 1px solid rgba(129, 140, 248, 0.3);
+      text-align: center;
+    }
+    .cta-box h3 {
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .cta-box p {
+      font-size: 14.5px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #4f46e5;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover {
+      background: #4338ca;
+    }
+  </style>
+</head>
+<body style="background: #0f0c29; color: #cbd5e1; font-family: 'Inter', 'Noto Sans KR', sans-serif; padding: 20px; margin: 0;">
+  <div class="school-seo-container">
+    <a href="/" class="back-btn">← 메인 페이지로 돌아가기</a>
+    <h1 class="school-title">${schoolNameFormatted} 편입 입학 요건 및 합격 통계</h1>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">US News 대학 순위</div>
+        <div class="stat-value">#${schoolData.usNewsRank || 'N/A'}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">평균 합격 GPA</div>
+        <div class="stat-value">${schoolData.avgGpa || 'N/A'}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">연간 편입 지원자 수</div>
+        <div class="stat-value">${schoolData.applicants ? schoolData.applicants.toLocaleString() + '명' : 'N/A'}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">편입 합격자 수</div>
+        <div class="stat-value">${schoolData.accepted ? schoolData.accepted.toLocaleString() + '명' : 'N/A'}</div>
+      </div>
+    </div>
+    
+    <h2 class="section-title">편입 합격 요건 세부 통계</h2>
+    <div class="content-text">
+      <ul>
+        <li><strong>In-State 합격률:</strong> ${schoolData.rateInState || 'N/A'}</li>
+        <li><strong>Out-of-State 합격률:</strong> ${schoolData.rateOutOfState || 'N/A'}</li>
+        <li><strong>국제학생(International) 합격률:</strong> ${schoolData.rateInternational || 'N/A'}</li>
+        <li><strong>가을학기 마감일:</strong> ${schoolData.deadlineFall || 'N/A'}</li>
+        <li><strong>봄학기 마감일:</strong> ${schoolData.deadlineSpring || 'N/A'}</li>
+      </ul>
+    </div>
+    
+    <h2 class="section-title">AP Credit 정책</h2>
+    <p class="content-text">${schoolData.apPolicy || 'N/A'}</p>
+    
+    <h2 class="section-title">편입 지원 권장사항 및 주의사항 (Advising Note)</h2>
+    <p class="content-text" style="white-space: pre-line;">${schoolData.advisingNote || 'N/A'}</p>
+    
+    <div class="cta-box">
+      <h3>나의 합격 가능성은 얼마나 될까?</h3>
+      <p>TransferCheck 전략 엔진을 사용하면 본인의 GPA, 취득 학점, 이수 과목 정보를 입력하여 실제 합격 가능성을 즉시 진단하고, 1대1 수강 로드맵을 자동으로 생성할 수 있습니다.</p>
+      <a href="/#demo" class="cta-btn">무료 합격 진단기 실행하기</a>
+    </div>
+  </div>
+</body>
+</html>`;
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      res.end(htmlResponse);
+      return;
+    } else {
+      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end('404 대학교 정보를 찾을 수 없습니다.');
+      return;
+    }
+  }
+
   const filePath = path.join(__dirname, safeUrl);
 
   const ext = path.extname(filePath).toLowerCase();

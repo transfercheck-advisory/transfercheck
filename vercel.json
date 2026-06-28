@@ -22,6 +22,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.js" },
+    { "src": "/schools/(.*)", "dest": "server.js" },
     { "src": "/(.*)", "dest": "/$1" }
   ],
   "headers": [

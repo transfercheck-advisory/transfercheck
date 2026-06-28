@@ -1473,7 +1473,20 @@ const state = {
   roadmapTargetSlots: Array.from({ length: 7 }, () => ({ school: "", major: "" })),
   selectedRoadmapTargets: [],
   plan: localStorage.getItem("transferCompassPlan") || "Free",
-  language: localStorage.getItem("transferCompassLang") || "ko",
+  language: (() => {
+    try {
+      if (typeof window !== "undefined" && window.location) {
+        const params = new URLSearchParams(window.location.search);
+        const langParam = params.get("lang");
+        if (langParam && ["en", "ko", "zh"].includes(langParam)) {
+          return langParam;
+        }
+      }
+    } catch (e) {
+      console.warn("Failed to parse language from URL:", e);
+    }
+    return localStorage.getItem("transferCompassLang") || "ko";
+  })(),
   essayCredits: parseInt(localStorage.getItem("transferCompassEssayCredits") || (localStorage.getItem("transferCompassPlan") === "Premium" ? "1" : "0"), 10),
   pendingPasses: parseInt(localStorage.getItem("transferCompassPendingPasses") || "0", 10),
   unlockedSchools: (() => {
