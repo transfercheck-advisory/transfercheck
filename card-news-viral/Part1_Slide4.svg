@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Inter:wght@400;700;900&amp;display=swap');
+      .background { fill: url(#bgGrad); }
+      .accent-glow { fill: url(#radialGlow); opacity: 0.15; }
+      .brand-mark { font-family: 'Inter', sans-serif; font-weight: 900; fill: #c5a880; font-size: 26px; letter-spacing: 0.15em; }
+      .slide-num { font-family: 'Inter', sans-serif; font-weight: 700; fill: #94a3b8; font-size: 22px; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 56px; letter-spacing: -0.02em; }
+      .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 30px; letter-spacing: -0.01em; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #cbd5e1; font-size: 34px; line-height: 1.6; }
+      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #64748b; font-size: 22px; }
+      .box { fill: rgba(255,255,255,0.02); stroke: rgba(197, 168, 128, 0.15); stroke-width: 1.5; rx: 20px; }
+      .bullet { fill: #c5a880; font-weight: 900; }
+    </style>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#070a13;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0c1122;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#04060d;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c5a880;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c5a880;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" class="background" />
+  <circle cx="540" cy="540" r="500" class="accent-glow" />
+  
+  <!-- Border Box -->
+  <rect x="80" y="80" width="920" height="920" class="box" />
+  
+  <!-- Header -->
+  <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
+  <text x="910" y="150" text-anchor="end" class="slide-num">4 / 5</text>
+  
+  <!-- Footer -->
+  <text x="540" y="940" text-anchor="middle" class="footer-text">Transfer Timeline Safety</text>
+  <!-- Content Layout -->
+  <text x="140" y="260" font-family="'Noto Sans KR', sans-serif" font-weight="900" fill="#ffffff" font-size="44px">3. 수강 순서가 꼬이면 유학비 7천만 원 공중분해</text>
+  <circle cx="150" cy="350" r="6" fill="#c5a880" />
+  <text x="180" y="360" class="card-body">선수과목의 선수과목(Chain) 순서</text>
+  <text x="180" y="416" class="card-body">를 하나라도 잘못 배치하면 지원</text>
+  <text x="180" y="472" class="card-body"> 타이밍이 통째로 1년 날아갑니다</text>
+  <text x="180" y="528" class="card-body">.</text>
+  <circle cx="150" cy="598" r="6" fill="#c5a880" />
+  <text x="180" y="608" class="card-body">엑셀로 일일이 대조하지 말고, 정</text>
+  <text x="180" y="664" class="card-body">교한 분석 도구를 통해 미리 타임</text>
+  <text x="180" y="720" class="card-body">라인을 검증해야 돈과 시간을 아</text>
+  <text x="180" y="776" class="card-body">낍니다.</text>
+</svg>

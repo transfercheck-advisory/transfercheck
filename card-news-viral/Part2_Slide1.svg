@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Inter:wght@400;700;900&amp;display=swap');
+      .background { fill: url(#bgGrad); }
+      .accent-glow { fill: url(#radialGlow); opacity: 0.15; }
+      .brand-mark { font-family: 'Inter', sans-serif; font-weight: 900; fill: #c5a880; font-size: 26px; letter-spacing: 0.15em; }
+      .slide-num { font-family: 'Inter', sans-serif; font-weight: 700; fill: #94a3b8; font-size: 22px; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 56px; letter-spacing: -0.02em; }
+      .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 30px; letter-spacing: -0.01em; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #cbd5e1; font-size: 34px; line-height: 1.6; }
+      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #64748b; font-size: 22px; }
+      .box { fill: rgba(255,255,255,0.02); stroke: rgba(197, 168, 128, 0.15); stroke-width: 1.5; rx: 20px; }
+      .bullet { fill: #c5a880; font-weight: 900; }
+    </style>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#070a13;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0c1122;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#04060d;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c5a880;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c5a880;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" class="background" />
+  <circle cx="540" cy="540" r="500" class="accent-glow" />
+  
+  <!-- Border Box -->
+  <rect x="80" y="80" width="920" height="920" class="box" />
+  
+  <!-- Header -->
+  <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
+  <text x="910" y="150" text-anchor="end" class="slide-num">1 / 5</text>
+  
+  <!-- Footer -->
+  <text x="540" y="940" text-anchor="middle" class="footer-text">미국 명문대 편입 공략집</text>
+  <!-- Cover Layout -->
+  <text x="140" y="310" class="card-subtitle">PART 2. THE EC ILLUSION</text>
+  <text x="140" y="390" class="card-title">유학원에서도 알려주지 않</text>
+  <text x="140" y="465" class="card-title">는 진짜 명문대 합격생의 </text>
+  <text x="140" y="540" class="card-title">EC 리스트</text>
+  <rect x="140" y="645" width="280" height="8" fill="#c5a880" />
+</svg>
