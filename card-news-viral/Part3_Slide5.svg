@@ -3,31 +3,24 @@
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Inter:wght@400;700;900&amp;display=swap');
-      .background { fill: url(#bgGrad); }
-      .accent-glow { fill: url(#radialGlow); opacity: 0.15; }
+      .background { fill: #070a13; }
       .brand-mark { font-family: 'Inter', sans-serif; font-weight: 900; fill: #c5a880; font-size: 26px; letter-spacing: 0.15em; }
       .slide-num { font-family: 'Inter', sans-serif; font-weight: 700; fill: #94a3b8; font-size: 22px; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 56px; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 54px; letter-spacing: -0.02em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 30px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #cbd5e1; font-size: 34px; line-height: 1.6; }
-      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #64748b; font-size: 22px; }
-      .box { fill: rgba(255,255,255,0.02); stroke: rgba(197, 168, 128, 0.15); stroke-width: 1.5; rx: 20px; }
-      .bullet { fill: #c5a880; font-weight: 900; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 34px; line-height: 1.65; }
+      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
+      .overlay { fill: rgba(7, 10, 19, 0.82); } /* Slightly dark tint overlay for superior text contrast */
+      .box { fill: none; stroke: rgba(197, 168, 128, 0.25); stroke-width: 1.5; rx: 20px; }
+      .bullet-dot { fill: #c5a880; }
     </style>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#070a13;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0c1122;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#04060d;stop-opacity:1" />
-    </linearGradient>
-    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#c5a880;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#c5a880;stop-opacity:0" />
-    </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="1080" height="1080" class="background" />
-  <circle cx="540" cy="540" r="500" class="accent-glow" />
+  <!-- Background Image with candidate sizing -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_writing_student.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  
+  <!-- Overlay tint -->
+  <rect width="1080" height="1080" class="overlay" />
   
   <!-- Border Box -->
   <rect x="80" y="80" width="920" height="920" class="box" />
@@ -40,13 +33,13 @@
   <text x="540" y="940" text-anchor="middle" class="footer-text">상세 정보는 본문 캡션 및 프로필 링크 확인 👇</text>
   <!-- Content Layout -->
   <text x="140" y="260" font-family="'Noto Sans KR', sans-serif" font-weight="900" fill="#ffffff" font-size="44px">합격생 에세이 뼈대를 자동으로 잡으려면?</text>
-  <circle cx="150" cy="350" r="6" fill="#c5a880" />
+  <circle cx="150" cy="350" r="6" class="bullet-dot" />
   <text x="180" y="360" class="card-body">편입 합격 에세이의 공식을 기반</text>
   <text x="180" y="416" class="card-body">으로 내 스토리에 어울리는 논리</text>
   <text x="180" y="472" class="card-body"> 흐름과 키워드를 완벽하게 잡아</text>
   <text x="180" y="528" class="card-body">주는 인공지능 보조 툴이 있습니</text>
   <text x="180" y="584" class="card-body">다.</text>
-  <circle cx="150" cy="654" r="6" fill="#c5a880" />
+  <circle cx="150" cy="654" r="6" class="bullet-dot" />
   <text x="180" y="664" class="card-body">상세 내용과 사이트 주소는 본문</text>
   <text x="180" y="720" class="card-body"> 캡션 및 프로필 링크에서 지금 </text>
   <text x="180" y="776" class="card-body">바로 확인해 보세요!</text>

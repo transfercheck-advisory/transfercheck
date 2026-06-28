@@ -3,31 +3,24 @@
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Inter:wght@400;700;900&amp;display=swap');
-      .background { fill: url(#bgGrad); }
-      .accent-glow { fill: url(#radialGlow); opacity: 0.15; }
+      .background { fill: #070a13; }
       .brand-mark { font-family: 'Inter', sans-serif; font-weight: 900; fill: #c5a880; font-size: 26px; letter-spacing: 0.15em; }
       .slide-num { font-family: 'Inter', sans-serif; font-weight: 700; fill: #94a3b8; font-size: 22px; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 56px; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 54px; letter-spacing: -0.02em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 30px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #cbd5e1; font-size: 34px; line-height: 1.6; }
-      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #64748b; font-size: 22px; }
-      .box { fill: rgba(255,255,255,0.02); stroke: rgba(197, 168, 128, 0.15); stroke-width: 1.5; rx: 20px; }
-      .bullet { fill: #c5a880; font-weight: 900; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 34px; line-height: 1.65; }
+      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
+      .overlay { fill: rgba(7, 10, 19, 0.82); } /* Slightly dark tint overlay for superior text contrast */
+      .box { fill: none; stroke: rgba(197, 168, 128, 0.25); stroke-width: 1.5; rx: 20px; }
+      .bullet-dot { fill: #c5a880; }
     </style>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#070a13;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0c1122;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#04060d;stop-opacity:1" />
-    </linearGradient>
-    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#c5a880;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#c5a880;stop-opacity:0" />
-    </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="1080" height="1080" class="background" />
-  <circle cx="540" cy="540" r="500" class="accent-glow" />
+  <!-- Background Image with candidate sizing -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_campus_life.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  
+  <!-- Overlay tint -->
+  <rect width="1080" height="1080" class="overlay" />
   
   <!-- Border Box -->
   <rect x="80" y="80" width="920" height="920" class="box" />
@@ -40,13 +33,14 @@
   <text x="540" y="940" text-anchor="middle" class="footer-text">CS Transfer Killer EC</text>
   <!-- Content Layout -->
   <text x="140" y="260" font-family="'Noto Sans KR', sans-serif" font-weight="900" fill="#ffffff" font-size="44px">1. Computer Science (컴퓨터공학) 킬러 EC</text>
-  <circle cx="150" cy="350" r="6" fill="#c5a880" />
+  <circle cx="150" cy="350" r="6" class="bullet-dot" />
   <text x="180" y="360" class="card-body">오픈소스 컨트리뷰션 또는 2개 이</text>
   <text x="180" y="416" class="card-body">상의 실제 배포 및 작동 가능한 </text>
   <text x="180" y="472" class="card-body">풀스택 웹/앱 토이프로젝트.</text>
-  <circle cx="150" cy="542" r="6" fill="#c5a880" />
+  <circle cx="150" cy="542" r="6" class="bullet-dot" />
   <text x="180" y="552" class="card-body">CC 학내 코딩 클럽 창설 또는 지</text>
   <text x="180" y="608" class="card-body">역 자영업자들을 위해 무료로 웹</text>
   <text x="180" y="664" class="card-body">사이트를 제작해 주는 IT 봉사활</text>
   <text x="180" y="720" class="card-body">동.</text>
+  <text x="140" y="840" font-family="'Noto Sans KR', sans-serif" font-weight="700" fill="#64748b" font-size="20px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>
 </svg>

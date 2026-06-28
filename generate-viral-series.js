@@ -27,37 +27,30 @@ function wrapText(text, maxChars = 20) {
   return lines;
 }
 
-function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, footerText) {
+function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, footerText, bgImagePath) {
   let svg = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Inter:wght@400;700;900&amp;display=swap');
-      .background { fill: url(#bgGrad); }
-      .accent-glow { fill: url(#radialGlow); opacity: 0.15; }
+      .background { fill: #070a13; }
       .brand-mark { font-family: 'Inter', sans-serif; font-weight: 900; fill: #c5a880; font-size: 26px; letter-spacing: 0.15em; }
       .slide-num { font-family: 'Inter', sans-serif; font-weight: 700; fill: #94a3b8; font-size: 22px; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 56px; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 54px; letter-spacing: -0.02em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 30px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #cbd5e1; font-size: 34px; line-height: 1.6; }
-      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #64748b; font-size: 22px; }
-      .box { fill: rgba(255,255,255,0.02); stroke: rgba(197, 168, 128, 0.15); stroke-width: 1.5; rx: 20px; }
-      .bullet { fill: #c5a880; font-weight: 900; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 34px; line-height: 1.65; }
+      .footer-text { font-family: 'Noto Sans KR', 'Inter', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
+      .overlay { fill: rgba(7, 10, 19, 0.82); } /* Slightly dark tint overlay for superior text contrast */
+      .box { fill: none; stroke: rgba(197, 168, 128, 0.25); stroke-width: 1.5; rx: 20px; }
+      .bullet-dot { fill: #c5a880; }
     </style>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#070a13;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0c1122;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#04060d;stop-opacity:1" />
-    </linearGradient>
-    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#c5a880;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#c5a880;stop-opacity:0" />
-    </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="1080" height="1080" class="background" />
-  <circle cx="540" cy="540" r="500" class="accent-glow" />
+  <!-- Background Image with candidate sizing -->
+  ${bgImagePath ? `<image href="${bgImagePath}" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />` : `<rect width="1080" height="1080" class="background" />`}
+  
+  <!-- Overlay tint -->
+  <rect width="1080" height="1080" class="overlay" />
   
   <!-- Border Box -->
   <rect x="80" y="80" width="920" height="920" class="box" />
@@ -71,7 +64,7 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
 `;
 
   if (slideNum === 1) {
-    // Cover Slide
+    // Cover Slide (With "편입 전이라면 반드시 저장하세요! 📌" slogan at bottom)
     const titleLines = wrapText(title, 16);
     let titleY = 460 - (titleLines.length - 1) * 35;
     
@@ -82,7 +75,9 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
       svg += `  <text x="140" y="${titleY + idx * 75}" class="card-title">${line}</text>\n`;
     });
     
-    svg += `  <rect x="140" y="${titleY + (titleLines.length) * 75 + 30}" width="280" height="8" fill="#c5a880" />\n`;
+    svg += `  <rect x="140" y="${titleY + (titleLines.length) * 75 + 20}" width="280" height="6" fill="#c5a880" />\n`;
+    svg += `  <rect x="140" y="720" width="520" height="50" fill="rgba(197, 168, 128, 0.15)" rx="8" />\n`;
+    svg += `  <text x="160" y="753" font-family="'Noto Sans KR', sans-serif" font-weight="900" fill="#c5a880" font-size="20px">📌 미국 편입 전이라면 반드시 저장하세요!</text>\n`;
   } else {
     // Content Slides
     svg += `  <!-- Content Layout -->\n`;
@@ -96,7 +91,7 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
       
       if (isBullet) {
         cleanPara = para.substring(1).trim();
-        svg += `  <circle cx="150" cy="${textY - 10}" r="6" fill="#c5a880" />\n`;
+        svg += `  <circle cx="150" cy="${textY - 10}" r="6" class="bullet-dot" />\n`;
         startX = 180;
       }
       
@@ -105,15 +100,24 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
         svg += `  <text x="${startX}" y="${textY}" class="card-body">${line}</text>\n`;
         textY += 56;
       });
-      textY += 24; // spacing between paragraphs
+      textY += 24;
     });
+    
+    // Add "Keep and Save" advice to intermediate content slides subtly
+    if (slideNum > 1 && slideNum < totalSlides) {
+      svg += `  <text x="140" y="840" font-family="'Noto Sans KR', sans-serif" font-weight="700" fill="#64748b" font-size="20px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>\n`;
+    }
   }
 
   svg += `</svg>`;
   return svg;
 }
 
-// 3-part content configurations
+// Global Image Paths mapped to User Desktop Assets (Bakes correctly in Chrome)
+const bg1 = 'file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_beautiful_campus.png';
+const bg2 = 'file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_campus_life.png';
+const bg3 = 'file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_writing_student.png';
+
 const part1 = [
   {
     title: "학점 4.0 만점도 탈락시키는 미국 편입의 무서운 비밀",
@@ -149,11 +153,11 @@ const part1 = [
     footer: "Transfer Timeline Safety"
   },
   {
-    title: "더 정교한 분석 툴이 필요하다면?",
+    title: "이 모든 정보 자동 분석기를 알아보고 싶다면?",
     subtitle: "",
     body: [
       "• 내 이수 과목과 GPA 정보를 대학교 공식 데이터와 대조해 선수과목 매핑 상태를 3초 만에 판별해 주는 정밀 엔진이 있습니다.",
-      "• 이 똑똑한 자가 진단 도구와 웹사이트 주소는 본문 캡션 및 프로필 링크에서 바로 확인하실 수 있습니다!"
+      "• 상세 내용과 자가 진단 사이트 주소는 본문 캡션 및 프로필 링크를 확인해 보세요!"
     ],
     footer: "상세 정보는 본문 캡션 및 프로필 링크 확인 👇"
   }
@@ -250,22 +254,22 @@ const part3 = [
   }
 ];
 
-// Generate Part 1
+// Generate Part 1 (with bg1)
 part1.forEach((card, idx) => {
-  const svgContent = generateSvgCard(card.title, card.subtitle, card.body, idx + 1, part1.length, card.footer);
+  const svgContent = generateSvgCard(card.title, card.subtitle, card.body, idx + 1, part1.length, card.footer, bg1);
   fs.writeFileSync(path.join(outputDir, `Part1_Slide${idx + 1}.svg`), svgContent, 'utf8');
 });
 
-// Generate Part 2
+// Generate Part 2 (with bg2)
 part2.forEach((card, idx) => {
-  const svgContent = generateSvgCard(card.title, card.subtitle, card.body, idx + 1, part2.length, card.footer);
+  const svgContent = generateSvgCard(card.title, card.subtitle, card.body, idx + 1, part2.length, card.footer, bg2);
   fs.writeFileSync(path.join(outputDir, `Part2_Slide${idx + 1}.svg`), svgContent, 'utf8');
 });
 
-// Generate Part 3
+// Generate Part 3 (with bg3)
 part3.forEach((card, idx) => {
-  const svgContent = generateSvgCard(card.title, card.subtitle, card.body, idx + 1, part3.length, card.footer);
+  const svgContent = generateSvgCard(card.title, card.subtitle, card.body, idx + 1, part3.length, card.footer, bg3);
   fs.writeFileSync(path.join(outputDir, `Part3_Slide${idx + 1}.svg`), svgContent, 'utf8');
 });
 
-console.log("Successfully generated all 15 high-quality viral card news SVG files!");
+console.log("Successfully generated all 15 high-quality viral card news SVG files with real backgrounds!");
