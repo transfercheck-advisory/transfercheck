@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&amp;display=swap');
+      .background { fill: url(#bgGrad); }
+      .accent-glow { fill: url(#radialGlow); opacity: 0.18; }
+      .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #818cf8; font-size: 32px; letter-spacing: 0.1em; }
+      .slide-num { font-family: 'Outfit', sans-serif; font-weight: 700; fill: #94a3b8; font-size: 24px; }
+      .card-title { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #ffffff; font-size: 58px; letter-spacing: -0.02em; }
+      .card-subtitle { font-family: 'Outfit', sans-serif; font-weight: 700; fill: #f43f5e; font-size: 32px; text-transform: uppercase; letter-spacing: 0.05em; }
+      .card-body { font-family: 'Outfit', sans-serif; font-weight: 500; fill: #cbd5e1; font-size: 34px; line-height: 1.6; }
+      .footer-url { font-family: 'Outfit', sans-serif; font-weight: 700; fill: #64748b; font-size: 24px; }
+      .box { fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.08); stroke-width: 1.5; rx: 16px; }
+    </style>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0826;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d0b34;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#070518;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1080" class="background" />
+  <circle cx="540" cy="540" r="600" class="accent-glow" />
+  <rect x="80" y="80" width="920" height="920" class="box" />
+  
+  <text x="140" y="160" class="brand-mark">TRANSFERCHECK</text>
+  <text x="910" y="160" text-anchor="end" class="slide-num">2 / 4</text>
+  <text x="540" y="930" text-anchor="middle" class="footer-url">https://transfercheck.vercel.app/schools</text>
+  <!-- Body Layout -->
+  <text x="140" y="270" font-family="'Outfit', sans-serif" font-weight="900" fill="#ffffff" font-size="44px">1. Admission GPA & Stats</text>
+  <text x="140" y="380" class="card-body">Admitted Average GPA:</text>
+  <text x="140" y="438" class="card-body">3.7-3.9</text>
+  <text x="140" y="526" class="card-body">US News Rank: #999</text>
+  <text x="140" y="614" class="card-body">Even with a 4.0 GPA, you</text>
+  <text x="140" y="672" class="card-body">will face automatic</text>
+  <text x="140" y="730" class="card-body">rejection if you miss</text>
+  <text x="140" y="788" class="card-body">just one prerequisite</text>
+  <text x="140" y="846" class="card-body">course.</text>
+</svg>
