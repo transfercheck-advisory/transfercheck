@@ -4,40 +4,42 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">Prerequisite Auto-Reject</text>
-  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="36px">1. 입학처 요강의 &apos;필수(Required)&apos; 과목은 최하위 조건입니다</text>
-  <circle cx="150" cy="311" r="5" class="bullet-dot" />
-  <text x="180" y="320" class="card-body">대학 요강에 적힌 공식 필수</text>
-  <text x="180" y="364" class="card-body">과목만 이수한 학생의 합격률은</text>
-  <text x="180" y="408" class="card-body">극히 낮습니다.</text>
-  <circle cx="150" cy="459" r="5" class="bullet-dot" />
-  <text x="180" y="468" class="card-body">실제 합격생들은 대학이</text>
-  <text x="180" y="512" class="card-body">홈페이지 구석에 숨겨둔 &apos;암묵적</text>
-  <text x="180" y="556" class="card-body">권장(Recommended)&apos; 과목과 전공</text>
-  <text x="180" y="600" class="card-body">기초(Lower-division major</text>
-  <text x="180" y="644" class="card-body">prep) 과목을 100% 이수하고</text>
-  <text x="180" y="688" class="card-body">지원합니다.</text>
-  <circle cx="150" cy="739" r="5" class="bullet-dot" />
-  <text x="180" y="748" class="card-body">편입 전 대학에서 전공 기초</text>
-  <text x="180" y="792" class="card-body">과목을 최대한으로 선이수해야</text>
-  <text x="180" y="836" class="card-body">합격 안정권에 진입할 수</text>
-  <text x="180" y="880" class="card-body">있습니다.</text>
-  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>
+  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">1. 입학처 요강의 &apos;필수</text>
+  <text x="140" y="286" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">(Required)&apos; 과목은 최하</text>
+  <text x="140" y="332" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">위 조건입니다</text>
+  <circle cx="150" cy="384" r="5" class="bullet-dot" />
+  <text x="180" y="393" class="card-body">대학 요강에 적힌 공식 필</text>
+  <text x="180" y="439" class="card-body">수 과목만 이수한 학생의</text>
+  <text x="180" y="485" class="card-body">합격률은 극히 낮습니다.</text>
+  <circle cx="150" cy="538" r="5" class="bullet-dot" />
+  <text x="180" y="547" class="card-body">실제 합격생들은 대학이 홈</text>
+  <text x="180" y="593" class="card-body">페이지 구석에 숨겨둔 &apos;암</text>
+  <text x="180" y="639" class="card-body">묵적 권장(Recommended)&apos;</text>
+  <text x="180" y="685" class="card-body">과목과 전공 기초(Lower-d</text>
+  <text x="180" y="731" class="card-body">ivision major prep) 과목</text>
+  <text x="180" y="777" class="card-body">을 100% 이수하고 지원합니</text>
+  <text x="180" y="823" class="card-body">다.</text>
+  <circle cx="150" cy="876" r="5" class="bullet-dot" />
+  <text x="180" y="885" class="card-body">편입 전 대학에서 전공 기</text>
+  <text x="180" y="931" class="card-body">초 과목을 최대한으로 선이</text>
+  <text x="180" y="977" class="card-body">수해야 합격 안정권에 진입</text>
+  <text x="180" y="1023" class="card-body">할 수 있습니다.</text>
 </svg>

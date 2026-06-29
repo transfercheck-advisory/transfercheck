@@ -4,40 +4,43 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">Save Time and Save Money</text>
-  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="36px">3. 아무리 쉬운 A학점 과목을 들어도 편입처에선 &apos;0학점&apos; 처리됩니다</text>
-  <circle cx="150" cy="311" r="5" class="bullet-dot" />
-  <text x="180" y="320" class="card-body">목표 대학교와 공식 학점</text>
-  <text x="180" y="364" class="card-body">협정(Articulation Agreement)이</text>
-  <text x="180" y="408" class="card-body">맺어지지 않은 일반 교양이나</text>
-  <text x="180" y="452" class="card-body">불필요한 과목은 편입 시 학점</text>
-  <text x="180" y="496" class="card-body">인정이 거부됩니다.</text>
-  <circle cx="150" cy="547" r="5" class="bullet-dot" />
-  <text x="180" y="556" class="card-body">꿀과목으로 평점만 채우는</text>
-  <text x="180" y="600" class="card-body">꼼수는 사정관들에게 바로</text>
-  <text x="180" y="644" class="card-body">필터링됩니다.</text>
-  <circle cx="150" cy="695" r="5" class="bullet-dot" />
-  <text x="180" y="704" class="card-body">아까운 시간과 학비를 낭비하지</text>
-  <text x="180" y="748" class="card-body">말고, 실제 편입 시 가산점을</text>
-  <text x="180" y="792" class="card-body">받고 학점을 인정받을 수 있는</text>
-  <text x="180" y="836" class="card-body">핵심 전공 기초 과목으로</text>
-  <text x="180" y="880" class="card-body">시간표를 채워야 합니다.</text>
-  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>
+  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">3. 아무리 쉬운 A학점 과</text>
+  <text x="140" y="286" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">목을 들어도 편입처에선</text>
+  <text x="140" y="332" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">&apos;0학점&apos; 처리됩니다</text>
+  <circle cx="150" cy="384" r="5" class="bullet-dot" />
+  <text x="180" y="393" class="card-body">목표 대학교와 공식 학점</text>
+  <text x="180" y="439" class="card-body">협정(Articulation Agreem</text>
+  <text x="180" y="485" class="card-body">ent)이 맺어지지 않은 일반</text>
+  <text x="180" y="531" class="card-body">교양이나 불필요한 과목은</text>
+  <text x="180" y="577" class="card-body">편입 시 학점 인정이 거부</text>
+  <text x="180" y="623" class="card-body">됩니다.</text>
+  <circle cx="150" cy="676" r="5" class="bullet-dot" />
+  <text x="180" y="685" class="card-body">꿀과목으로 평점만 채우는</text>
+  <text x="180" y="731" class="card-body">꼼수는 사정관들에게 바로</text>
+  <text x="180" y="777" class="card-body">필터링됩니다.</text>
+  <circle cx="150" cy="830" r="5" class="bullet-dot" />
+  <text x="180" y="839" class="card-body">아까운 시간과 학비를 낭비</text>
+  <text x="180" y="885" class="card-body">하지 말고, 실제 편입 시</text>
+  <text x="180" y="931" class="card-body">가산점을 받고 학점을 인정</text>
+  <text x="180" y="977" class="card-body">받을 수 있는 핵심 전공 기</text>
+  <text x="180" y="1023" class="card-body">초 과목으로 시간표를 채워</text>
+  <text x="180" y="1069" class="card-body">야 합니다.</text>
 </svg>

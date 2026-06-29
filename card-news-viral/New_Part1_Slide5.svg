@@ -4,33 +4,37 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Outfit', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Outfit', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Outfit', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">Transfer Timeline Safety</text>
-  <text x="140" y="240" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="36px">4. The Prerequisite Chain Failure - 1-Year Forced Delay</text>
-  <circle cx="150" cy="311" r="5" class="bullet-dot" />
-  <text x="180" y="320" class="card-body">Missing one prerequisite course sequence</text>
-  <text x="180" y="364" class="card-body">(like Calc I -&gt; Physics I -&gt; Physics II)</text>
-  <text x="180" y="408" class="card-body">pushes back your application timeline by a</text>
-  <text x="180" y="452" class="card-body">whole year.</text>
-  <circle cx="150" cy="503" r="5" class="bullet-dot" />
-  <text x="180" y="512" class="card-body">This single scheduling mistake can cost</text>
-  <text x="180" y="556" class="card-body">you over $70,000 in tuition and living</text>
-  <text x="180" y="600" class="card-body">expenses. Audit your timeline early.</text>
-  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 Save this slide to protect your future</text>
+  <text x="140" y="240" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="34px">4. The Prerequisite Chain</text>
+  <text x="140" y="286" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="34px">Failure - 1-Year Forced</text>
+  <text x="140" y="332" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="34px">Delay</text>
+  <circle cx="150" cy="384" r="5" class="bullet-dot" />
+  <text x="180" y="393" class="card-body">Missing one prerequisite</text>
+  <text x="180" y="439" class="card-body">course sequence (like Calc I</text>
+  <text x="180" y="485" class="card-body">-&gt; Physics I -&gt; Physics II)</text>
+  <text x="180" y="531" class="card-body">pushes back your application</text>
+  <text x="180" y="577" class="card-body">timeline by a whole year.</text>
+  <circle cx="150" cy="630" r="5" class="bullet-dot" />
+  <text x="180" y="639" class="card-body">This single scheduling</text>
+  <text x="180" y="685" class="card-body">mistake can cost you over</text>
+  <text x="180" y="731" class="card-body">$70,000 in tuition and</text>
+  <text x="180" y="777" class="card-body">living expenses. Audit your</text>
+  <text x="180" y="823" class="card-body">timeline early.</text>
 </svg>

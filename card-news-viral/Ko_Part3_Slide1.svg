@@ -4,28 +4,29 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_writing_student.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_writing_student.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">미국 명문대 편입 공략집</text>
-  <text x="140" y="348" class="card-subtitle">PART 3. WHY ESSAY TEMPLATES FAIL</text>
-  <text x="140" y="428" class="card-title">당신의 에세이가 3초 만에</text>
-  <text x="140" y="490" class="card-title">버려지는 이유</text>
-  <rect x="140" y="572" width="280" height="6" fill="#c5a880" />
+  <text x="140" y="310" class="card-subtitle">PART 3. WHY ESSAY TEMPLATES FAIL</text>
+  <text x="140" y="390" class="card-title">당신의 에세이가</text>
+  <text x="140" y="462" class="card-title">3초 만에 버려지는</text>
+  <text x="140" y="534" class="card-title">이유</text>
+  <rect x="140" y="626" width="280" height="6" fill="#c5a880" />
   <rect x="140" y="730" width="550" height="50" fill="rgba(197, 168, 128, 0.15)" rx="8" />
   <text x="160" y="762" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="900" fill="#c5a880" font-size="20px">📌 미국 대학 편입 준비 중이라면 무조건 저장해 두세요!</text>
 </svg>

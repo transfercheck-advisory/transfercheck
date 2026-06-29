@@ -4,37 +4,39 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_writing_student.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_writing_student.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">Integrate EC into Your Story</text>
-  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="36px">2. 에세이 뼈대에 전공 EC를 녹여내는 합격 공식</text>
-  <circle cx="150" cy="311" r="5" class="bullet-dot" />
-  <text x="180" y="320" class="card-body">❌ &apos;이러이러한 활동을 했다&apos;는</text>
-  <text x="180" y="364" class="card-body">이력서 나열식 서술은 최악의</text>
-  <text x="180" y="408" class="card-body">평가를 받습니다.</text>
-  <circle cx="150" cy="459" r="5" class="bullet-dot" />
-  <text x="180" y="468" class="card-body">⭕ 정답: &apos;편입 전 대학에서</text>
-  <text x="180" y="512" class="card-body">진행한 EC 프로젝트를 통해 어떤</text>
-  <text x="180" y="556" class="card-body">학술적 한계나 호기심을</text>
-  <text x="180" y="600" class="card-body">마주했고, 이를 극복하기 위해</text>
-  <text x="180" y="644" class="card-body">목표 대학의 특정 학과 연구실이</text>
-  <text x="180" y="688" class="card-body">왜 필요한지&apos; 에세이의 논리</text>
-  <text x="180" y="732" class="card-body">구조 속에 유기적으로</text>
-  <text x="180" y="776" class="card-body">빌드업해야 합니다.</text>
-  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>
+  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">2. 에세이 뼈대에 전공</text>
+  <text x="140" y="286" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">EC를 녹여내는 합격 공식</text>
+  <circle cx="150" cy="338" r="5" class="bullet-dot" />
+  <text x="180" y="347" class="card-body">❌ &apos;이러이러한 활동을 했</text>
+  <text x="180" y="393" class="card-body">다&apos;는 이력서 나열식 서술</text>
+  <text x="180" y="439" class="card-body">은 최악의 평가를 받습니다</text>
+  <text x="180" y="485" class="card-body">.</text>
+  <circle cx="150" cy="538" r="5" class="bullet-dot" />
+  <text x="180" y="547" class="card-body">⭕ 정답: &apos;편입 전 대학에</text>
+  <text x="180" y="593" class="card-body">서 진행한 EC 프로젝트를</text>
+  <text x="180" y="639" class="card-body">통해 어떤 학술적 한계나</text>
+  <text x="180" y="685" class="card-body">호기심을 마주했고, 이를</text>
+  <text x="180" y="731" class="card-body">극복하기 위해 목표 대학의</text>
+  <text x="180" y="777" class="card-body">특정 학과 연구실이 왜 필</text>
+  <text x="180" y="823" class="card-body">요한지&apos; 에세이의 논리 구</text>
+  <text x="180" y="869" class="card-body">조 속에 유기적으로 빌드업</text>
+  <text x="180" y="915" class="card-body">해야 합니다.</text>
 </svg>

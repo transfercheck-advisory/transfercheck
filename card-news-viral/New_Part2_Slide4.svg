@@ -4,37 +4,42 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Outfit', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Outfit', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Outfit', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_campus_life.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_campus_life.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">Engineering and Bio Transfer Killer EC</text>
-  <text x="140" y="240" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="36px">3. Engineering and Biology - Research and Prototypes</text>
-  <circle cx="150" cy="311" r="5" class="bullet-dot" />
-  <text x="180" y="320" class="card-body">❌ Standard hospital greeting desk</text>
-  <text x="180" y="364" class="card-body">volunteering is a waste of time.</text>
-  <circle cx="150" cy="415" r="5" class="bullet-dot" />
-  <text x="180" y="424" class="card-body">⭕ Secure a Co-author or Acknowledgement</text>
-  <text x="180" y="468" class="card-body">tag in published medical/clinical papers.</text>
-  <circle cx="150" cy="519" r="5" class="bullet-dot" />
-  <text x="180" y="528" class="card-body">⭕ Author a weekly research newsletter</text>
-  <text x="180" y="572" class="card-body">reviewing scholarly science journals.</text>
-  <circle cx="150" cy="623" r="5" class="bullet-dot" />
-  <text x="180" y="632" class="card-body">⭕ Design 3D-printed</text>
-  <text x="180" y="676" class="card-body">rehabilitation/prosthetic equipment</text>
-  <text x="180" y="720" class="card-body">prototypes for local clinics.</text>
-  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 Save this slide to protect your future</text>
+  <text x="140" y="240" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="34px">3. Engineering and Biology -</text>
+  <text x="140" y="286" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="34px">Research and Prototypes</text>
+  <circle cx="150" cy="338" r="5" class="bullet-dot" />
+  <text x="180" y="347" class="card-body">❌ Standard hospital greeting</text>
+  <text x="180" y="393" class="card-body">desk volunteering is a waste</text>
+  <text x="180" y="439" class="card-body">of time.</text>
+  <circle cx="150" cy="492" r="5" class="bullet-dot" />
+  <text x="180" y="501" class="card-body">⭕ Secure a Co-author or</text>
+  <text x="180" y="547" class="card-body">Acknowledgement tag in</text>
+  <text x="180" y="593" class="card-body">published medical/clinical</text>
+  <text x="180" y="639" class="card-body">papers.</text>
+  <circle cx="150" cy="692" r="5" class="bullet-dot" />
+  <text x="180" y="701" class="card-body">⭕ Author a weekly research</text>
+  <text x="180" y="747" class="card-body">newsletter reviewing</text>
+  <text x="180" y="793" class="card-body">scholarly science journals.</text>
+  <circle cx="150" cy="846" r="5" class="bullet-dot" />
+  <text x="180" y="855" class="card-body">⭕ Design 3D-printed</text>
+  <text x="180" y="901" class="card-body">rehabilitation/prosthetic</text>
+  <text x="180" y="947" class="card-body">equipment prototypes for</text>
+  <text x="180" y="993" class="card-body">local clinics.</text>
 </svg>

@@ -4,33 +4,35 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  <!-- Background Base64 Image -->
+  <image href="file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
   
   <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
   <text x="540" y="940" text-anchor="middle" class="footer-text">상세 정보는 본문 캡션 및 프로필 링크 확인 👇</text>
-  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="36px">이 모든 필수/권장 과목을 자동으로 검증하고 싶다면?</text>
-  <circle cx="150" cy="311" r="5" class="bullet-dot" />
-  <text x="180" y="320" class="card-body">내 이수 과목과 학점을 목표</text>
-  <text x="180" y="364" class="card-body">대학의 공식 최신 데이터와</text>
-  <text x="180" y="408" class="card-body">대조해 선수과목 매핑 상태를</text>
-  <text x="180" y="452" class="card-body">즉시 판별해 주는 정밀 엔진이</text>
-  <text x="180" y="496" class="card-body">있습니다.</text>
-  <circle cx="150" cy="547" r="5" class="bullet-dot" />
-  <text x="180" y="556" class="card-body">상세 내용과 웹사이트 주소는</text>
-  <text x="180" y="600" class="card-body">본문 캡션 및 프로필 링크를</text>
-  <text x="180" y="644" class="card-body">확인해 보세요!</text>
+  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">이 모든 필수/권장 과목</text>
+  <text x="140" y="286" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">을 자동으로 검증하고 싶</text>
+  <text x="140" y="332" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="34px">다면?</text>
+  <circle cx="150" cy="384" r="5" class="bullet-dot" />
+  <text x="180" y="393" class="card-body">내 이수 과목과 학점을 목</text>
+  <text x="180" y="439" class="card-body">표 대학의 공식 최신 데이</text>
+  <text x="180" y="485" class="card-body">터와 대조해 선수과목 매핑</text>
+  <text x="180" y="531" class="card-body">상태를 즉시 판별해 주는</text>
+  <text x="180" y="577" class="card-body">정밀 엔진이 있습니다.</text>
+  <circle cx="150" cy="630" r="5" class="bullet-dot" />
+  <text x="180" y="639" class="card-body">상세 내용과 웹사이트 주소</text>
+  <text x="180" y="685" class="card-body">는 본문 캡션 및 프로필 링</text>
+  <text x="180" y="731" class="card-body">크를 확인해 보세요!</text>
 </svg>

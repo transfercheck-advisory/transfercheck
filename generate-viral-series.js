@@ -6,35 +6,53 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
 
-// Word-wrap helper to prevent text from cutting off at edges
-function wrapText(text, maxChars = 24) {
-  const words = text.split(' ');
-  let lines = [];
-  let currentLine = "";
-  let currentLength = 0;
-
-  for (let word of words) {
-    const wordLength = word.split('').reduce((acc, char) => {
-      return acc + (char.charCodeAt(0) > 127 ? 2 : 1); // Korean = 2, Eng = 1
-    }, 0);
-
-    if (currentLength + wordLength > maxChars * 1.5) {
-      lines.push(currentLine.trim());
-      currentLine = word + " ";
-      currentLength = wordLength + 1;
-    } else {
-      currentLine += word + " ";
-      currentLength += wordLength + 1;
+// Sophisticated character-based wrap for Korean and word-based wrap for English to ensure natural line breaks
+function wrapText(text, maxChars = 26, isEnglish = false) {
+  if (!isEnglish) {
+    // Korean: Character-based natural wrapping to avoid short awkward lines
+    let lines = [];
+    let currentLine = "";
+    let currentLen = 0;
+    
+    for (let char of text) {
+      currentLine += char;
+      currentLen += (char.charCodeAt(0) > 127 ? 2 : 1);
+      if (currentLen >= maxChars) {
+        lines.push(currentLine.trim());
+        currentLine = "";
+        currentLen = 0;
+      }
     }
+    if (currentLine.trim()) {
+      lines.push(currentLine.trim());
+    }
+    return lines;
+  } else {
+    // English: Word-based wrapping
+    const words = text.split(' ');
+    let lines = [];
+    let currentLine = "";
+    let currentLen = 0;
+    
+    for (let word of words) {
+      const wordLen = word.length;
+      if (currentLen + wordLen > maxChars) {
+        lines.push(currentLine.trim());
+        currentLine = word + " ";
+        currentLen = wordLen + 1;
+      } else {
+        currentLine += word + " ";
+        currentLen += wordLen + 1;
+      }
+    }
+    if (currentLine.trim()) {
+      lines.push(currentLine.trim());
+    }
+    return lines;
   }
-  if (currentLine.trim()) {
-    lines.push(currentLine.trim());
-  }
-  return lines;
 }
 
-function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, footerText, bgImagePath, isEnglish = false) {
-  // XML Escape for ampersands and angle brackets to avoid XML Parsing Errors (Red Screens)
+function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, footerText, base64BgUri, isEnglish = false) {
   const escapeXml = (str) => {
     if (!str) return '';
     return str
@@ -45,7 +63,6 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
       .replace(/'/g, '&apos;');
   };
 
-  const cleanTitle = escapeXml(title);
   const cleanSubtitle = escapeXml(subtitle);
   const cleanFooterText = escapeXml(footerText);
 
@@ -55,18 +72,18 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
       .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
-      .card-title { font-family: ${isEnglish ? "'Outfit'" : "'Noto Sans KR'"}, sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-title { font-family: ${isEnglish ? "'Outfit'" : "'Noto Sans KR'"}, sans-serif; font-weight: 900; fill: #ffffff; font-size: 34px; line-height: 1.45; letter-spacing: -0.01em; }
       .card-subtitle { font-family: ${isEnglish ? "'Outfit'" : "'Noto Sans KR'"}, sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
-      .card-body { font-family: ${isEnglish ? "'Outfit'" : "'Noto Sans KR'"}, sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .card-body { font-family: ${isEnglish ? "'Outfit'" : "'Noto Sans KR'"}, sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.65; }
       .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
-      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .overlay { fill: rgba(7, 10, 19, 0.88); }
       .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
       .bullet-dot { fill: #c5a880; }
     </style>
   </defs>
 
-  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
-  ${bgImagePath ? `<image href="${escapeXml(bgImagePath)}" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />` : `<rect width="1080" height="1080" fill="#070a13" />`}
+  <!-- Background Base64 Image -->
+  ${base64BgUri ? `<image href="${base64BgUri}" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />` : `<rect width="1080" height="1080" fill="#070a13" />`}
   
   <rect width="1080" height="1080" class="overlay" />
   <rect x="80" y="80" width="920" height="920" class="box" />
@@ -76,22 +93,28 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
 `;
 
   if (slideNum === 1) {
-    const titleLines = wrapText(title, isEnglish ? 22 : 16);
-    let titleY = 460 - (titleLines.length - 1) * 32;
+    // Cover Layout
+    const titleLines = wrapText(title, isEnglish ? 22 : 16, isEnglish);
+    let titleY = 460 - (titleLines.length - 1) * 35;
     
     svg += `  <text x="140" y="${titleY - 80}" class="card-subtitle">${cleanSubtitle}</text>\n`;
     titleLines.forEach((line, idx) => {
-      svg += `  <text x="140" y="${titleY + idx * 62}" class="card-title">${escapeXml(line)}</text>\n`;
+      svg += `  <text x="140" y="${titleY + idx * 72}" class="card-title">${escapeXml(line)}</text>\n`;
     });
     
-    svg += `  <rect x="140" y="${titleY + (titleLines.length) * 62 + 20}" width="280" height="6" fill="#c5a880" />\n`;
+    svg += `  <rect x="140" y="${titleY + (titleLines.length) * 72 + 20}" width="280" height="6" fill="#c5a880" />\n`;
     svg += `  <rect x="140" y="730" width="550" height="50" fill="rgba(197, 168, 128, 0.15)" rx="8" />\n`;
     svg += `  <text x="160" y="762" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="900" fill="#c5a880" font-size="20px">${isEnglish ? '📌 Save this post before you apply!' : '📌 미국 대학 편입 준비 중이라면 무조건 저장해 두세요!'}</text>\n`;
   } else {
-    const titleLines = wrapText(title, isEnglish ? 25 : 18);
-    svg += `  <text x="140" y="240" font-family=${isEnglish ? "'Outfit'" : "'Noto Sans KR'"} font-weight="900" fill="#ffffff" font-size="36px">${escapeXml(title)}</text>\n`;
+    // Title with wrapText to avoid any line cutoff
+    const titleLines = wrapText(title, isEnglish ? 28 : 22, isEnglish);
+    let titleY = 240;
+    titleLines.forEach((line, idx) => {
+      svg += `  <text x="140" y="${titleY}" font-family=${isEnglish ? "'Outfit'" : "'Noto Sans KR'"} font-weight="900" fill="#ffffff" font-size="34px">${escapeXml(line)}</text>\n`;
+      titleY += 46;
+    });
     
-    let textY = 320;
+    let textY = titleY + 15; // Dynamically calculated text start offset to avoid overlapping
     bodyTextList.forEach((para, idx) => {
       const isBullet = para.startsWith('•');
       let cleanPara = para;
@@ -103,28 +126,23 @@ function generateSvgCard(title, subtitle, bodyTextList, slideNum, totalSlides, f
         startX = 180;
       }
       
-      // Strict wrap length to prevent cutting off at borders (max width 760px)
-      const paraLines = wrapText(cleanPara, isEnglish ? (isBullet ? 28 : 31) : (isBullet ? 20 : 22));
+      const paraLines = wrapText(cleanPara, isEnglish ? (isBullet ? 28 : 31) : (isBullet ? 24 : 26), isEnglish);
       paraLines.forEach((line, lIdx) => {
         svg += `  <text x="${startX}" y="${textY}" class="card-body">${escapeXml(line)}</text>\n`;
-        textY += 44;
+        textY += 46;
       });
       textY += 16;
     });
-    
-    if (slideNum > 1 && slideNum < totalSlides) {
-      svg += `  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">${isEnglish ? '📌 Save this slide to protect your future' : '📌 잊어버리기 전에 이 카드뉴스 저장하기'}</text>\n`;
-    }
   }
 
   svg += `</svg>`;
   return svg;
 }
 
-// Local image paths (Bakes safely in Chrome using file:// path with allow-file-access flag)
-const bg1 = 'file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_beautiful_campus.png';
-const bg2 = 'file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_campus_life.png';
-const bg3 = 'file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_writing_student.png';
+// Global Image Paths mapped to User Desktop Assets
+const bg1 = 'file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_beautiful_campus.png';
+const bg2 = 'file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_campus_life.png';
+const bg3 = 'file:///C:/Users/user/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/marketing_asset_writing_student.png';
 
 // 1. KOREAN CONTENT
 const ko_part1 = [
@@ -168,7 +186,7 @@ const ko_part1 = [
     title: "4. 선수과목 체인(Prerequisite Chain)이 꼬이면 강제 1년 지연",
     subtitle: "",
     body: [
-      "• 예컨대 [Calculus I -> Physics I -> Physics II]로 연결되는 연계 구조에서 미적분학 한 과목 수강이 밀리면, 물리학 시리즈를 제때 끝낼 수 없습니다.",
+      "• [Calculus I -> Physics I -> Physics II]로 연결되는 연계 구조에서 미적분학 한 과목 수강이 밀리면, 물리학 시리즈를 제때 끝낼 수 없습니다.",
       "• 대부분의 대학은 지원 학기 직전까지 필수 과목 완수를 엄격하게 요구하므로, 이 순서 하나 때문에 편입 지원이 통째로 1년 밀려 약 7,000만 원의 학비와 생활비가 낭비됩니다."
     ],
     footer: "Transfer Timeline Safety"
@@ -466,4 +484,4 @@ en_part3.forEach((card, idx) => {
   fs.writeFileSync(path.join(outputDir, `New_Part3_Slide${idx + 1}.svg`), svgContent, 'utf8');
 });
 
-console.log("Successfully generated all 32 (Ko + En) high-quality viral card news SVG files with strict XML escaping and layout safeguards!");
+console.log("Successfully generated all 32 (Ko + En) high-quality viral card news SVG files with strict XML escaping, title wrap, and layout safeguards!");
