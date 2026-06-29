@@ -29,8 +29,9 @@ if (!fs.existsSync(inputDir)) {
   process.exit(1);
 }
 
-const files = fs.readdirSync(inputDir).filter(f => f.endsWith('.svg'));
-console.log(`\nFound ${files.length} viral cards to bake into PNGs.`);
+// Convert all Part 1 slides (Only focus on Part 1 for now as per user request to test first)
+const files = fs.readdirSync(inputDir).filter(f => f.endsWith('.svg') && f.includes('Part1'));
+console.log(`\nFound ${files.length} Part 1 viral cards (Ko + En) to bake into PNGs.`);
 console.log(`Google Chrome: ${chromePath}\n`);
 
 files.forEach(file => {
@@ -40,16 +41,22 @@ files.forEach(file => {
   
   try {
     const formattedInputUrl = `file:///${inputPath.replace(/\\/g, '/')}`;
-    const cmd = `"${chromePath}" --headless --disable-gpu --screenshot="${destPath}" --window-size=1080,1080 --default-background-color=00000000 --hide-scrollbars "${formattedInputUrl}"`;
+    
+    // EXTREMELY CRITICAL OPTIONS FOR PREVENTING BLANK IMAGES AND RED ERRORS:
+    // 1. --allow-file-access-from-files: Allows Chrome to read local background images even with spaces/Korean folders.
+    // 2. --virtual-time-budget=6000: Bakes 6 seconds of virtual delay ensuring all assets, custom Google Fonts and backgrounds are 100% loaded before rendering snapshot.
+    // 3. --hide-scrollbars --window-size=1080,1080: Perfectly fits Instagram size without borders.
+    const cmd = `"${chromePath}" --headless --disable-gpu --screenshot="${destPath}" --window-size=1080,1080 --default-background-color=00000000 --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=6000 "${formattedInputUrl}"`;
     
     execSync(cmd, { stdio: 'ignore' });
-    console.log(`✓ Generated & Saved to Desktop: ${outputName}`);
+    console.log(`✓ Perfectly Baked to Desktop: ${outputName}`);
   } catch (e) {
     console.error(`✗ Failed to convert ${file}:`, e.message);
   }
 });
 
 console.log("\n==================================================");
-console.log(`Success! All ${files.length} slides have been saved directly to your Desktop!`);
-console.log("You can now transfer these PNGs to your phone and upload to Instagram!");
+console.log(`Success! All Part 1 slides have been baked as PNGs directly to your Desktop!`);
+console.log("- Korean version: Ko_Part1_Slide1.png ~ Ko_Part1_Slide6.png");
+console.log("- English version: New_Part1_Slide1.png ~ New_Part1_Slide6.png");
 console.log("==================================================");

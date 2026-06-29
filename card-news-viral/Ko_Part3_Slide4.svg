@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
+      .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
+      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
+      .bullet-dot { fill: #c5a880; }
+    </style>
+  </defs>
+
+  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
+  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_writing_student.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  
+  <rect width="1080" height="1080" class="overlay" />
+  <rect x="80" y="80" width="920" height="920" class="box" />
+  
+  <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
+  <text x="540" y="940" text-anchor="middle" class="footer-text">The 3 Pillars of Transfer Essay</text>
+  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="36px">3. 합격하는 편입 에세이의 3대 핵심 뼈대 공식</text>
+  <circle cx="150" cy="311" r="5" class="bullet-dot" />
+  <text x="180" y="320" class="card-body">1) 현재 성취: 열악한 전적대</text>
+  <text x="180" y="364" class="card-body">환경 속에서도 내 전공 분야에서</text>
+  <text x="180" y="408" class="card-body">일궈낸 최고의 학업적 노력.</text>
+  <circle cx="150" cy="459" r="5" class="bullet-dot" />
+  <text x="180" y="468" class="card-body">2) 오직 이 대학인 이유: 현</text>
+  <text x="180" y="512" class="card-body">대학에서 더 이상 해결할 수</text>
+  <text x="180" y="556" class="card-body">없는 학문적 갈증을 목표 대학의</text>
+  <text x="180" y="600" class="card-body">어떤 리소스로 풀 것인가.</text>
+  <circle cx="150" cy="651" r="5" class="bullet-dot" />
+  <text x="180" y="660" class="card-body">3) 상호 기여: 내가 입학하여</text>
+  <text x="180" y="704" class="card-body">대학 공동체와 토론에 기여할 수</text>
+  <text x="180" y="748" class="card-body">있는 고유한 배경.</text>
+  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>
+</svg>

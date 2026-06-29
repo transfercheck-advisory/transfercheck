@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
+      .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
+      .card-title { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-subtitle { font-family: 'Outfit', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
+      .card-body { font-family: 'Outfit', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
+      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
+      .bullet-dot { fill: #c5a880; }
+    </style>
+  </defs>
+
+  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
+  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_beautiful_campus.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  
+  <rect width="1080" height="1080" class="overlay" />
+  <rect x="80" y="80" width="920" height="920" class="box" />
+  
+  <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
+  <text x="540" y="940" text-anchor="middle" class="footer-text">Prerequisite Auto-Reject</text>
+  <text x="140" y="240" font-family='Outfit' font-weight="900" fill="#ffffff" font-size="36px">1. Official Prerequisites Are Just the Bare Minimum</text>
+  <circle cx="150" cy="311" r="5" class="bullet-dot" />
+  <text x="180" y="320" class="card-body">Taking only the &apos;officially required&apos;</text>
+  <text x="180" y="364" class="card-body">courses on the transfer site is just a</text>
+  <text x="180" y="408" class="card-body">baseline for screening.</text>
+  <circle cx="150" cy="459" r="5" class="bullet-dot" />
+  <text x="180" y="468" class="card-body">To stand out, you must complete highly</text>
+  <text x="180" y="512" class="card-body">recommended courses and upper-division</text>
+  <text x="180" y="556" class="card-body">introductory major requirements.</text>
+  <circle cx="150" cy="607" r="5" class="bullet-dot" />
+  <text x="180" y="616" class="card-body">Complete as many major prep courses as</text>
+  <text x="180" y="660" class="card-body">possible at your current institution to</text>
+  <text x="180" y="704" class="card-body">stay within the admission zone.</text>
+  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 Save this slide to protect your future</text>
+</svg>

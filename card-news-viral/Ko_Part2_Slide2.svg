@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;family=Outfit:wght@400;700;900&amp;display=swap');
+      .brand-mark { font-family: 'Outfit', sans-serif; font-weight: 900; fill: #c5a880; font-size: 24px; letter-spacing: 0.15em; }
+      .card-title { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; fill: #ffffff; font-size: 42px; line-height: 1.35; letter-spacing: -0.02em; }
+      .card-subtitle { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; fill: #c5a880; font-size: 26px; letter-spacing: -0.01em; }
+      .card-body { font-family: 'Noto Sans KR', sans-serif; font-weight: 500; fill: #e2e8f0; font-size: 26px; line-height: 1.6; }
+      .footer-text { font-family: 'Noto Sans KR', 'Outfit', sans-serif; font-weight: 700; fill: #cbd5e1; font-size: 22px; }
+      .overlay { fill: rgba(7, 10, 19, 0.88); } /* Heavy tint overlay for maximum contrast */
+      .box { fill: none; stroke: rgba(197, 168, 128, 0.35); stroke-width: 1.5; rx: 20px; }
+      .bullet-dot { fill: #c5a880; }
+    </style>
+  </defs>
+
+  <!-- Local Background Image Link (Using allow-file-access-from-files to bypass Chrome security) -->
+  <image href="file:///C:/Users/user/OneDrive/바탕 화면/marketing_asset_campus_life.png" x="0" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice" />
+  
+  <rect width="1080" height="1080" class="overlay" />
+  <rect x="80" y="80" width="920" height="920" class="box" />
+  
+  <text x="140" y="150" class="brand-mark">US COLLEGE TRANSFER COMPASS</text>
+  <text x="540" y="940" text-anchor="middle" class="footer-text">CS Transfer Killer EC</text>
+  <text x="140" y="240" font-family='Noto Sans KR' font-weight="900" fill="#ffffff" font-size="36px">1. Computer Science (컴퓨터공학) 킬러 EC</text>
+  <circle cx="150" cy="311" r="5" class="bullet-dot" />
+  <text x="180" y="320" class="card-body">❌ 단순 깃허브 잔디 심기, 뻔한</text>
+  <text x="180" y="364" class="card-body">계산기 코딩은 탈락 대상.</text>
+  <circle cx="150" cy="415" r="5" class="bullet-dot" />
+  <text x="180" y="424" class="card-body">⭕ 1,000명 이상이 실제로</text>
+  <text x="180" y="468" class="card-body">사용하는 유명 오픈소스</text>
+  <text x="180" y="512" class="card-body">라이브러리에 Pull Request 기여</text>
+  <text x="180" y="556" class="card-body">및 병합 완료.</text>
+  <circle cx="150" cy="607" r="5" class="bullet-dot" />
+  <text x="180" y="616" class="card-body">⭕ 크롬 익스텐션 또는 모바일</text>
+  <text x="180" y="660" class="card-body">앱을 실제로 런칭하여 사용자</text>
+  <text x="180" y="704" class="card-body">유입 지표 증명.</text>
+  <circle cx="150" cy="755" r="5" class="bullet-dot" />
+  <text x="180" y="764" class="card-body">⭕ 편입 전 대학 학내 알고리즘</text>
+  <text x="180" y="808" class="card-body">동아리(ACM Chapter)를 창설하고</text>
+  <text x="180" y="852" class="card-body">자체 코딩 캠프 리드.</text>
+  <text x="140" y="860" font-family="'Noto Sans KR', 'Outfit', sans-serif" font-weight="700" fill="#64748b" font-size="19px">📌 잊어버리기 전에 이 카드뉴스 저장하기</text>
+</svg>
