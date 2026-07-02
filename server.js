@@ -53,8 +53,7 @@ function getStatsPath() {
   return path.join(__dirname, 'admin-stats.json');
 }
 
-function getStats() {
-  const statsPath = getStatsPath();
+async function getStats() {
   const defaultStats = {
     totalVisits: 0,
     dailyVisits: {},
@@ -62,6 +61,32 @@ function getStats() {
     planCounts: { "Free": 0, "Pro": 0, "Premium": 0 },
     usersCount: 0
   };
+
+  // Try to load from Supabase database first
+  if (supabaseAdmin) {
+    try {
+      const { data, error } = await supabaseAdmin
+        .from('schools')
+        .select('short_name')
+        .eq('id', 'telemetry_stats')
+        .single();
+      
+      if (!error && data && data.short_name) {
+        try {
+          return JSON.parse(data.short_name);
+        } catch (pe) {
+          console.error("Failed to parse telemetry stats JSON from Supabase:", pe);
+        }
+      } else if (error && error.code !== 'PGRST116') { // PGRST116 is single row not found
+        console.error("Supabase stats load error:", error);
+      }
+    } catch (e) {
+      console.error("Supabase stats fetch exception:", e);
+    }
+  }
+
+  // Local file fallback
+  const statsPath = getStatsPath();
   if (!fs.existsSync(statsPath)) {
     try {
       fs.writeFileSync(statsPath, JSON.stringify(defaultStats, null, 2), 'utf8');
@@ -78,7 +103,28 @@ function getStats() {
   }
 }
 
-function saveStats(stats) {
+async function saveStats(stats) {
+  // Try to save to Supabase
+  if (supabaseAdmin) {
+    try {
+      const { error } = await supabaseAdmin
+        .from('schools')
+        .upsert({
+          id: 'telemetry_stats',
+          name: 'Telemetry Stats Database Record',
+          short_name: JSON.stringify(stats)
+        });
+      if (error) {
+        console.error("Failed to upsert telemetry stats to Supabase:", error);
+      } else {
+        console.log("✅ Telemetry stats successfully persisted to Supabase");
+      }
+    } catch (e) {
+      console.error("Supabase stats save exception:", e);
+    }
+  }
+
+  // Save to local file as backup
   const statsPath = getStatsPath();
   try {
     fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2), 'utf8');
@@ -131,7 +177,7 @@ async function verifyUserSession(req) {
   }
 }
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
 
   // Prevent path traversal
   const rawUrl = req.url || "";
@@ -277,14 +323,14 @@ const server = http.createServer((req, res) => {
         }
 
         // Update local stats config
-        const stats = getStats();
+        const stats = await getStats();
         stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
         if (plan === 'Premium' || plan === 'Pro' || plan === 'Free') {
           stats.planCounts[plan] = (stats.planCounts[plan] || 0) + 1;
         } else {
           stats.essayPassCounts = (stats.essayPassCounts || 0) + 1;
         }
-        saveStats(stats);
+        await saveStats(stats);
 
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ success: true, plan: updateFields.plan || profile.plan, essayCredits: newCredits }));
@@ -303,7 +349,49 @@ const server = http.createServer((req, res) => {
       res.end(JSON.stringify({ success: false, message: 'Unauthorized' }));
       return;
     }
-    const stats = getStats();
+    const stats = await getStats();
+    
+    // Fetch live data from Supabase to overwrite local/ephemeral values
+    if (supabaseAdmin) {
+      try {
+        const { data: profiles, error } = await supabaseAdmin
+          .from('profiles')
+          .select('plan, nationality');
+          
+        if (!error && profiles) {
+          stats.usersCount = profiles.length;
+          
+          // Count plan distribution
+          const plans = { "Free": 0, "Pro": 0, "Premium": 0 };
+          profiles.forEach(p => {
+            const plan = p.plan || 'Free';
+            if (plans[plan] !== undefined) {
+              plans[plan]++;
+            } else {
+              plans['Free']++;
+            }
+          });
+          stats.planCounts = plans;
+
+          // Count nationality distribution
+          const nationalities = { "Korea": 0, "USA": 0, "China": 0, "Other": 0 };
+          profiles.forEach(p => {
+            const nat = p.nationality || 'Other';
+            if (nationalities[nat] !== undefined) {
+              nationalities[nat]++;
+            } else {
+              nationalities['Other']++;
+            }
+          });
+          stats.nationalityAccess = nationalities;
+        } else if (error) {
+          console.error("Supabase stats query error:", error);
+        }
+      } catch (dbErr) {
+        console.error("Database query exception in admin-stats:", dbErr);
+      }
+    }
+    
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
     res.end(JSON.stringify(stats));
     return;
@@ -311,14 +399,14 @@ const server = http.createServer((req, res) => {
 
   // API Route: Track Visit
   if (req.method === 'POST' && safeUrl === '/api/track-visit') {
-    const stats = getStats();
+    const stats = await getStats();
     stats.totalVisits = (stats.totalVisits || 0) + 1;
     
     const today = new Date().toISOString().split('T')[0];
     stats.dailyVisits = stats.dailyVisits || {};
     stats.dailyVisits[today] = (stats.dailyVisits[today] || 0) + 1;
     
-    saveStats(stats);
+    await saveStats(stats);
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
     res.end(JSON.stringify({ success: true, totalVisits: stats.totalVisits }));
     return;
@@ -328,11 +416,11 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && safeUrl === '/api/track-signup') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         const parsed = JSON.parse(body);
         const nationality = parsed.nationality || 'Other';
-        const stats = getStats();
+        const stats = await getStats();
         
         stats.usersCount = (stats.usersCount || 0) + 1;
         stats.nationalityAccess = stats.nationalityAccess || { "Korea": 0, "USA": 0, "China": 0, "Other": 0 };
@@ -341,7 +429,7 @@ const server = http.createServer((req, res) => {
         stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
         stats.planCounts["Free"] = (stats.planCounts["Free"] || 0) + 1;
         
-        saveStats(stats);
+        await saveStats(stats);
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ success: true }));
       } catch (err) {
@@ -356,16 +444,16 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && safeUrl === '/api/track-login') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         const parsed = JSON.parse(body);
         const nationality = parsed.nationality || 'Other';
-        const stats = getStats();
+        const stats = await getStats();
         
         stats.nationalityAccess = stats.nationalityAccess || { "Korea": 0, "USA": 0, "China": 0, "Other": 0 };
         stats.nationalityAccess[nationality] = (stats.nationalityAccess[nationality] || 0) + 1;
         
-        saveStats(stats);
+        await saveStats(stats);
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ success: true }));
       } catch (err) {
@@ -380,11 +468,11 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && safeUrl === '/api/track-subscription') {
     let body = '';
     req.on('data', chunk => { body += chunk; });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         const parsed = JSON.parse(body);
         const { oldPlan, newPlan } = parsed;
-        const stats = getStats();
+        const stats = await getStats();
         
         stats.planCounts = stats.planCounts || { "Free": 0, "Pro": 0, "Premium": 0 };
         if (stats.planCounts[oldPlan] !== undefined && stats.planCounts[oldPlan] > 0) {
@@ -396,7 +484,7 @@ const server = http.createServer((req, res) => {
           stats.planCounts[newPlan] = 1;
         }
         
-        saveStats(stats);
+        await saveStats(stats);
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ success: true }));
       } catch (err) {

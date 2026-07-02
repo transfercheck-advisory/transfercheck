@@ -220,3 +220,39 @@ We replaced the old placeholders in the video with the following high-fidelity m
 * Configured blur event handlers to prevent user custom inputs from being cleared.
 * Bound the backend endpoint `/api/requirements/generate` powered by Google Search Grounding to automatically fetch CDS statistics, US News rankings, and prerequisite checklists for outside schools in real-time, inserting them dynamically into the active UI state.
 
+---
+
+## 🛠️ Supabase Telemetry Persistence & Admin Auth Fix (July 2026)
+
+### 1️⃣ Supabase-Based Telemetry Stats Persistence
+* **Problem**: Vercel's serverless environment restarts dynamically, causing local memory and local file statistics (`admin-stats.json`) to reset to zero. This prevented accurate visitor, registration, and subscription tracking.
+* **Solution**: Refactored `server.js`'s helper functions `getStats()` and `saveStats(stats)` to load and persist statistics asynchronously inside the Supabase database.
+* **Mechanism**: Leveraged the existing `schools` database table to save the telemetry stats as a stringified JSON under the ID `'telemetry_stats'`. This utilizes the service role key and completely bypasses local ephemeral storage on Vercel. Added a local disk fallback so development remains robust without internet access.
+* **Router Async Flow**: Updated telemetry routing endpoints (`/api/payments/verify`, `/api/admin-stats`, `/api/track-visit`, `/api/track-signup`, `/api/track-login`, `/api/track-subscription`) to asynchronously resolve statistics queries and writes.
+
+### 2️⃣ Dashboard Authentication & 401 Unauthorized Bug Fix
+* **Problem**: The admin dashboard (`admin.html`) did not supply an `Authorization` header when querying stats (`/api/admin-stats`) or writing changes (`/api/save`), causing the server's `verifyAdmin` security guard to throw `401 Unauthorized` errors.
+* **Solution**: Integrated a clean token retrieval workflow in `admin.html`. The page dynamically fetches the token from:
+  1. URL query parameters (`?token=...`)
+  2. Persistent browser memory (`localStorage` key `transferCompassAdminToken`)
+  3. Interactive user prompt (`prompt()`) if not already present.
+* **Clean State Invalidation**: If the server returns a `401` status, the invalid cached token is automatically purged from the browser's storage, ensuring secure re-prompting.
+
+### 3️⃣ Integration Testing & Syntax Audit
+* Created and executed an automated test script (`scratch/test-telemetry.js`) which verified that:
+  - Fetching new/non-existent telemetry stats handles empty states gracefully.
+  - Mock telemetry stats object is correctly converted, saved, and updated in Supabase.
+  - Retrieving and parsing the payload matches the exact original data structure.
+* Ran syntax compilation checks (`node --check server.js`) to confirm 100% syntax compliance.
+
+### 4️⃣ Autocomplete Fallback Direct Modal Link Fix
+* **Problem**: When a user searched for a university/major not present in the pre-crawled database (like *Lehigh* or *Emory University*), the autocomplete menu's fallback link routed them to the manual feedback form at the bottom of the page, leading them to believe they had to submit a feedback email to request mapping data.
+* **Solution**: Refactored the click event handlers in `app.js` (`.fallback-mapping-link`, `.fallback-mapping-link-school`, `.fallback-mapping-link-major`) to directly open the **AI 실시간 요건 생성 (Real-time AI Prerequisite Generator)** modal (`#generateReqModal`) and auto-populate their search query. This delivers instant prerequisite generation on-screen without requiring manual feedback submissions.
+* Verified correct javascript compilation using `node --check app.js`.
+
+### 5️⃣ Direct Autocomplete Entry & Dynamic Generation Support
+* **Enhancement**: Configured the target picker autocomplete so that users can select any custom U.S. university (e.g., from the 420+ list in `all-universities.js`) and type custom major names directly in the input boxes.
+* **Database Shell Registration**: Corrected a bug where selecting a school/major via click did not register it in the in-memory database (`database.schools`). Now, selecting any custom/unmapped target via click or blur instantly creates the necessary shell object in memory.
+* **Page Load Preservation**: Implemented a startup restoration loop in `initializeTargetSlots()`. This restores custom/unmapped targets loaded from `localStorage` directly back into the in-memory database on page load, preventing the slots from being wiped out or failing to match.
+* **Seamless Background AI Generation**: Once the user types/selects any custom university/major in the target slots, clicking the main **"전략 커버리지 보기"** (View Strategy Coverage) CTA button automatically triggers the background AI generator. It shows a beautiful loading spinner and automatically crawls and updates the database, displaying the diagnostics on-the-fly without needing any popup modal interactions!
+

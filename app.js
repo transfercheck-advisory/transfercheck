@@ -1485,7 +1485,18 @@ const state = {
     } catch (e) {
       console.warn("Failed to parse language from URL:", e);
     }
-    return localStorage.getItem("transferCompassLang") || "ko";
+    const saved = localStorage.getItem("transferCompassLang");
+    if (saved && ["en", "ko", "zh"].includes(saved)) {
+      return saved;
+    }
+    // Auto-detect from browser language
+    if (typeof navigator !== "undefined" && navigator.language) {
+      const navLang = navigator.language.toLowerCase();
+      if (navLang.startsWith("ko")) return "ko";
+      if (navLang.startsWith("zh")) return "zh";
+      return "en"; // Default to English for all other international visitors
+    }
+    return "ko"; // Fallback to Korean if navigator is undefined
   })(),
   essayCredits: parseInt(localStorage.getItem("transferCompassEssayCredits") || (localStorage.getItem("transferCompassPlan") === "Premium" ? "1" : "0"), 10),
   pendingPasses: parseInt(localStorage.getItem("transferCompassPendingPasses") || "0", 10),
@@ -3428,6 +3439,44 @@ function syncSelectedTargetsFromSlots() {
 }
 
 function initializeTargetSlots() {
+  const registerCustomSlot = (slot) => {
+    const sName = slot.school?.trim();
+    const mName = slot.major?.trim();
+    if (sName && mName) {
+      let schoolObj = database.schools.find(s => s.name.toLowerCase() === sName.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === sName.toLowerCase()));
+      if (!schoolObj) {
+        const cleanSchoolName = sName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        schoolObj = {
+          id: cleanSchoolName,
+          name: sName,
+          shortName: sName,
+          majors: []
+        };
+        database.schools.push(schoolObj);
+      }
+      
+      const exists = schoolObj.majors.some(m => m.name.toLowerCase() === mName.toLowerCase());
+      if (!exists) {
+        const cleanSchoolName = schoolObj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const cleanMajorName = mName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const tempMajorId = `${cleanSchoolName}-${cleanMajorName}-${Math.random().toString(36).substring(2, 8)}`;
+        schoolObj.majors.push({
+          id: tempMajorId,
+          name: mName,
+          confidence: "needs_source_check"
+        });
+      }
+    }
+  };
+
+  if (Array.isArray(state.targetSlots)) {
+    state.targetSlots.forEach(registerCustomSlot);
+  }
+  if (Array.isArray(state.roadmapTargetSlots)) {
+    state.roadmapTargetSlots.forEach(registerCustomSlot);
+  }
+  updateSortedPrograms(); // Rebuild allPrograms()
+
   syncSelectedTargetsFromSlots();
   syncSelectedRoadmapTargetsFromSlots();
 }
@@ -3773,21 +3822,7 @@ function bindAutocompleteEvents(container, type) {
       if (fallbackLink) {
         e.preventDefault();
         const queryVal = input.value;
-        const feedbackTextarea = qs("#feedbackInput");
-        if (feedbackTextarea) {
-          const isKo = (state.lang || "en") === "ko";
-          const isZh = (state.lang || "en") === "zh";
-          let requestPrefix = "[실시간 AI 매핑 요청]";
-          if (isZh) requestPrefix = "[实时 AI 映射请求]";
-          else if (!isKo) requestPrefix = "[Real-time AI Mapping Request]";
-          
-          feedbackTextarea.value = `${requestPrefix} 대학/학과: ${queryVal}\n`;
-          feedbackTextarea.focus();
-        }
-        const feedbackSection = qs("#feedback");
-        if (feedbackSection) {
-          feedbackSection.scrollIntoView({ behavior: "smooth" });
-        }
+        openOnDemandScrapeWithQuery(queryVal);
         menu.classList.add("hidden");
         return;
       }
@@ -3806,25 +3841,45 @@ function bindAutocompleteEvents(container, type) {
         if (acType === "school") {
           slots[idx].school = val;
           slots[idx].major = "";
+          
+          const exists = database.schools.some(s => s.name.toLowerCase() === val.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === val.toLowerCase()));
+          if (!exists) {
+            const cleanName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            database.schools.push({
+              id: cleanName,
+              name: val,
+              shortName: val,
+              majors: []
+            });
+          }
         } else {
           slots[idx].major = val;
           const selectedSchool = slots[idx].school;
           if (selectedSchool) {
-            const schoolObj = database.schools.find(s => s.name.toLowerCase() === selectedSchool.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === selectedSchool.toLowerCase()));
-            if (schoolObj) {
-              const exists = schoolObj.majors.some(m => m.name.toLowerCase() === val.toLowerCase());
-              if (!exists) {
-                const cleanSchoolName = schoolObj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                const cleanMajorName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                const tempMajorId = `${cleanSchoolName}-${cleanMajorName}-${Math.random().toString(36).substring(2, 8)}`;
-                const newMajorShell = {
-                  id: tempMajorId,
-                  name: val,
-                  confidence: "needs_source_check"
-                };
-                schoolObj.majors.push(newMajorShell);
-                updateSortedPrograms(); // Rebuild allPrograms()
-              }
+            let schoolObj = database.schools.find(s => s.name.toLowerCase() === selectedSchool.toLowerCase() || (s.shortName && s.shortName.toLowerCase() === selectedSchool.toLowerCase()));
+            if (!schoolObj) {
+              const cleanSchoolName = selectedSchool.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+              schoolObj = {
+                id: cleanSchoolName,
+                name: selectedSchool,
+                shortName: selectedSchool,
+                majors: []
+              };
+              database.schools.push(schoolObj);
+            }
+            
+            const exists = schoolObj.majors.some(m => m.name.toLowerCase() === val.toLowerCase());
+            if (!exists) {
+              const cleanSchoolName = schoolObj.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+              const cleanMajorName = val.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+              const tempMajorId = `${cleanSchoolName}-${cleanMajorName}-${Math.random().toString(36).substring(2, 8)}`;
+              const newMajorShell = {
+                id: tempMajorId,
+                name: val,
+                confidence: "needs_source_check"
+              };
+              schoolObj.majors.push(newMajorShell);
+              updateSortedPrograms(); // Rebuild allPrograms()
             }
           }
         }
@@ -4013,21 +4068,7 @@ function bindSingleAutocomplete({
     if (fallbackLink) {
       e.preventDefault();
       const queryVal = schoolInput.value;
-      const feedbackTextarea = qs("#feedbackInput");
-      if (feedbackTextarea) {
-        const isKo = (state.lang || "en") === "ko";
-        const isZh = (state.lang || "en") === "zh";
-        let requestPrefix = "[실시간 AI 매핑 요청]";
-        if (isZh) requestPrefix = "[实时 AI 映射请求]";
-        else if (!isKo) requestPrefix = "[Real-time AI Mapping Request]";
-        
-        feedbackTextarea.value = `${requestPrefix} 대학: ${queryVal}\n`;
-        feedbackTextarea.focus();
-      }
-      const feedbackSection = qs("#feedback");
-      if (feedbackSection) {
-        feedbackSection.scrollIntoView({ behavior: "smooth" });
-      }
+      openOnDemandScrapeModal(queryVal, "");
       schoolMenu.classList.add("hidden");
       return;
     }
@@ -4114,22 +4155,9 @@ function bindSingleAutocomplete({
     const fallbackLink = e.target.closest(".fallback-mapping-link-major");
     if (fallbackLink) {
       e.preventDefault();
-      const queryVal = `${schoolInput.value} - ${majorInput.value}`;
-      const feedbackTextarea = qs("#feedbackInput");
-      if (feedbackTextarea) {
-        const isKo = (state.lang || "en") === "ko";
-        const isZh = (state.lang || "en") === "zh";
-        let requestPrefix = "[실시간 AI 매핑 요청]";
-        if (isZh) requestPrefix = "[实时 AI 映射请求]";
-        else if (!isKo) requestPrefix = "[Real-time AI Mapping Request]";
-        
-        feedbackTextarea.value = `${requestPrefix} 대학/전공: ${queryVal}\n`;
-        feedbackTextarea.focus();
-      }
-      const feedbackSection = qs("#feedback");
-      if (feedbackSection) {
-        feedbackSection.scrollIntoView({ behavior: "smooth" });
-      }
+      const sVal = schoolInput.value;
+      const mVal = majorInput.value;
+      openOnDemandScrapeModal(sVal, mVal);
       majorMenu.classList.add("hidden");
       return;
     }

@@ -738,18 +738,52 @@
       renderSidebarList();
     }
 
+    function getAdminToken() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let token = urlParams.get('token');
+      if (token) {
+        localStorage.setItem('transferCompassAdminToken', token);
+        const newUrl = window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
+        return token;
+      }
+      
+      token = localStorage.getItem('transferCompassAdminToken');
+      if (token) {
+        return token;
+      }
+      
+      token = prompt("어드민 보안 키(Admin Secret Key)를 입력해 주세요:");
+      if (token) {
+        localStorage.setItem('transferCompassAdminToken', token);
+        return token;
+      }
+      return "";
+    }
+
     function saveDatabaseToDisk() {
+      const token = getAdminToken();
       fetch('/api/save', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        },
         body: JSON.stringify(window.transferDatabase)
       })
-      .then(res => res.json())
+      .then(res => {
+        if (res.status === 401) {
+          localStorage.removeItem('transferCompassAdminToken');
+          alert('❌ 인증 실패: 올바르지 않은 어드민 보안 키입니다.');
+          return { success: false, message: 'Unauthorized' };
+        }
+        return res.json();
+      })
       .then(data => {
         if (data.success) {
           alert('✅ 성공: 로컬 디스크 파일(transfer-data.js)에 데이터가 완전히 저장되었습니다!');
           document.getElementById('saveStatus').textContent = '서버 디스크 저장 완료';
-        } else {
+        } else if (data.message !== 'Unauthorized') {
           alert('❌ 실패: ' + data.message);
         }
       })
@@ -786,8 +820,21 @@
     }
 
     function loadAdminStats() {
-      fetch('/api/admin-stats', { cache: 'no-store' })
-        .then(res => res.json())
+      const token = getAdminToken();
+      fetch('/api/admin-stats', { 
+        cache: 'no-store',
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      })
+        .then(res => {
+          if (res.status === 401) {
+            localStorage.removeItem('transferCompassAdminToken');
+            alert('❌ 인증 실패: 올바르지 않은 어드민 보안 키입니다.');
+            throw new Error('Unauthorized');
+          }
+          return res.json();
+        })
         .then(data => {
           // Update cards
           document.getElementById('statTotalVisits').textContent = (data.totalVisits || 0).toLocaleString();
@@ -852,7 +899,9 @@
           document.getElementById('statsDailyList').innerHTML = dailyHtml;
         })
         .catch(err => {
-          console.error("Failed to load admin telemetry stats:", err);
+          if (err.message !== 'Unauthorized') {
+            console.error("Failed to load admin telemetry stats:", err);
+          }
         });
     }
 

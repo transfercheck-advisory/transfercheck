@@ -1,0 +1,37 @@
+[
+  {
+    "index": 1,
+    "date": "6/29/2026, 12:57:47 PM",
+    "message": "[Real-time AI Mapping Request] 대학/학과: Lehigh"
+  },
+  {
+    "index": 2,
+    "date": "6/29/2026, 6:34:09 PM",
+    "message": "[Real-time AI Mapping Request] 대학/학과: Emory University"
+  },
+  {
+    "index": 3,
+    "date": "6/29/2026, 6:41:47 PM",
+    "message": "QA 테스트 피드백: 합격 진단기 결과 화면이 매우 유용합니다. 데이터셋 업데이트 주기를 표시해 주세요."
+  },
+  {
+    "index": 4,
+    "date": "6/30/2026, 12:40:32 PM",
+    "message": "QA-UNIQUE-FEEDBACK-7Z3K9Q: Please add a dark mode toggle and fix the Stanford filter dataset typo. (test-run-mr0m3o07)"
+  },
+  {
+    "index": 5,
+    "date": "6/30/2026, 12:43:16 PM",
+    "message": "QA test feedback entry for archive clearing journey"
+  },
+  {
+    "index": 6,
+    "date": "6/30/2026, 1:40:48 PM",
+    "message": "QA test feedback: Please add a dark mode toggle and fix the dataset typo for Stanford GPA cutoff."
+  },
+  {
+    "index": 7,
+    "date": "6/30/2026, 1:42:59 PM",
+    "message": "QA test feedback message - dataset error sample for archive clearing test."
+  }
+]
